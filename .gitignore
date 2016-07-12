@@ -1,5 +1,5 @@
 */[Ss]ample[s]/*
-*/[Eexample[s]/*
+*/[Ee]xample[s]/*
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
@@ -30,3 +30,11 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+Assets/2DPlatformerPro/Samples/
+Assets/2DPlatformerPro/Tutorials/
+Assets/TK2DROOT/tk2dTileMap_demo/
+Assets/TK2DROOT/tk2dUI_demo/
+Assets/TK2DROOT/tk2d_demo/
+Assets/Explosions/TexturePacker Packing/
+Assets/2DLightAsset/Examples/
+*.pdf
