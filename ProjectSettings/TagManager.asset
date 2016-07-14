@@ -6,13 +6,14 @@ TagManager:
   tags:
   - Actor
   - DeathTrigger
-  - Ground
+  - Geometry
   - SpawnPoint
   - ExplosionFX
   - Item
   - GUI
   - Rabbit
   - _HITPOINT
+  - Projectile
   layers:
   - Default
   - TransparentFX
@@ -25,8 +26,8 @@ TagManager:
   - Menu Items
   - Environment
   - Character
-  - 
-  - Obstacle
+  - Projectile
+  - Geometry
   - Actor
   - Items
   - 
@@ -50,10 +51,16 @@ TagManager:
   - name: Background
     uniqueID: 1093696345
     locked: 0
+  - name: ParalaxLayerTwo
+    uniqueID: 4293450287
+    locked: 0
+  - name: ParalaxLayerOne
+    uniqueID: 3825685883
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Ground
+  - name: Geometry
     uniqueID: 3251578445
     locked: 0
   - name: Characters
