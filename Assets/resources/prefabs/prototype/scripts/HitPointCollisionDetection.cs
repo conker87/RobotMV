@@ -30,33 +30,39 @@ public class HitPointCollisionDetection : MonoBehaviour
 		circle = Physics2D.OverlapCircle(gameObject.transform.position, .1f, collisionMask);
 		RaycastHit2D hit;
 
-		if (circle != PlayerAbilities.previousCircleCollider)
+		if (circle != PlayerAbilities.Current.previousCircleCollider)
 		{
-			PlayerAbilities.previousCircleCollider = circle;
-			PlayerAbilities.timer = PlayerAbilities.PossessSpeed;
+			PlayerAbilities.Current.previousCircleCollider = circle;
+			PlayerAbilities.Current.timer = PlayerAbilities.Current.PossessSpeed;
 		}
 
 		if (circle != null)
 		{
-			if (RaycastFromGameObject.RaycastToGameObject(player, gameObject, collisionMask, out hit, PlayerAbilities.PossessionMaximumDistance, true))
+			if (RaycastFromGameObject.RaycastToGameObject(player, gameObject, collisionMask, out hit, PlayerAbilities.Current.PossessionMaximumDistance, true))
 			{
-				if (hit.collider.gameObject.tag == "Item")
+				GameObject hitCollider = hit.collider.gameObject;
+
+				if (hitCollider.tag == "Item")
 				{
-					hit.collider.gameObject.SendMessage("GiveItem");
+					Item colliderItem = hitCollider.GetComponent<Item> ();
+
+					colliderItem.GiveItem ();
+					ThePlayer.ErrorMessage = "You have collected: " + colliderItem.ItemName;
+					return;
 
 				}
 				else if (hit.collider.gameObject.tag == "Actor")
 				{
-					PlayerAbilitiesFromActors possessionAbilities = hit.collider.gameObject.GetComponent<PlayerAbilitiesFromActors>();
+					PlayerAbilitiesFromActors possessionAbilities = hitCollider.GetComponent<PlayerAbilitiesFromActors>();
 					
-					if (PlayerAbilities.PossessionLevel >= possessionAbilities.possessionLevel)
+					if (PlayerAbilities.Current.PossessionLevel >= possessionAbilities.possessionLevel)
 					{
-						if (circle == PlayerAbilities.previousCircleCollider && PlayerAbilities.timer >= 0)
+						if (circle == PlayerAbilities.Current.previousCircleCollider && PlayerAbilities.Current.timer >= 0)
 						{
-							PlayerAbilities.timer -= Time.deltaTime;
+							PlayerAbilities.Current.timer -= Time.deltaTime;
 						}
 					
-						if (PlayerAbilities.timer < 0)
+						if (PlayerAbilities.Current.timer < 0)
 						{
 							GameObject playerReplace = Instantiate(Resources.Load(PREFAB_LOC + possessionAbilities.prefabName + "Possession", typeof(GameObject)),
 							                                       hit.collider.transform.position, Quaternion.identity) as GameObject;
@@ -80,15 +86,15 @@ public class HitPointCollisionDetection : MonoBehaviour
 							Destroy(player);
 							Destroy(gameObject);
 
-							PlayerAbilities.timer = 0;
-							PlayerAbilities.previousCircleCollider = null;
+							PlayerAbilities.Current.timer = 0;
+							PlayerAbilities.Current.previousCircleCollider = null;
 						}
 					}
 					else
 					{
 						ThePlayer.ErrorMessage = "Your possession level is too low.";
 
-						Debug.Log ("Possession level too low (" + PlayerAbilities.PossessionLevel + ", " + possessionAbilities.possessionLevel + ").");
+						Debug.Log ("Possession level too low (" + PlayerAbilities.Current.PossessionLevel + ", " + possessionAbilities.possessionLevel + ").");
 					}
 				}
 			}

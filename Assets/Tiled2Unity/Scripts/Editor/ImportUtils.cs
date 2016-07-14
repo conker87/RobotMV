@@ -1,4 +1,7 @@
-﻿using System;
+﻿#if !UNITY_WEBPLAYER
+// Note: This parital class is not compiled in for WebPlayer builds.
+// The Unity Webplayer is deprecated. If you *must* use it then make sure Tiled2Unity assets are imported via another build target first.
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
@@ -14,36 +17,6 @@ namespace Tiled2Unity
 {
     class ImportUtils
     {
-        public static string GetMaterialPath(string texName)
-        {
-            return String.Format("Assets/Tiled2Unity/Materials/{0}.mat", Path.GetFileNameWithoutExtension(texName));
-        }
-
-        public static string GetTexturePath(string filename)
-        {
-            return Path.Combine("Assets/Tiled2Unity/Textures", filename);
-        }
-
-        public static string GetMeshPath(string filename)
-        {
-            return String.Format("Assets/Tiled2Unity/Meshes/{0}.obj", Path.GetFileNameWithoutExtension(filename));
-        }
-
-        public static string GetXmlPathFromFile(string objFile)
-        {
-            return String.Format("Assets/Tiled2Unity/Imported/{0}.tiled2unity.xml", Path.GetFileNameWithoutExtension(objFile));
-        }
-
-        public static string GetXmlPathFromName(string objName)
-        {
-            return String.Format("Assets/Tiled2Unity/Imported/{0}.tiled2unity.xml", objName);
-        }
-
-        public static string GetPrefabPathFromName(string objName)
-        {
-            return String.Format("Assets/Tiled2Unity/Prefabs/{0}.prefab", objName);
-        }
-
         public static string GetAttributeAsString(XElement elem, string attrName)
         {
             return elem.Attribute(attrName).Value;
@@ -104,6 +77,38 @@ namespace Tiled2Unity
             return GetAttributeAsBoolean(elem, attrName);
         }
 
+        public static T GetStringAsEnum<T>(string enumString)
+        {
+            enumString = enumString.Replace("-", "_");
+
+            T value = default(T);
+            try
+            {
+                value = (T)Enum.Parse(typeof(T), enumString, true);
+            }
+            catch
+            {
+                StringBuilder msg = new StringBuilder();
+                msg.AppendFormat("Could not convert '{0}' to enum of type '{1}'\n", enumString, typeof(T).ToString());
+                msg.AppendFormat("Choices are:\n");
+
+                foreach (T t in Enum.GetValues(typeof(T)))
+                {
+                    msg.AppendFormat("  {0}\n", t.ToString());
+                }
+                Debug.LogError(msg.ToString());
+            }
+
+            return value;
+        }
+
+        public static T GetAttributeAsEnum<T>(XElement elem, string attrName)
+        {
+            string enumString = elem.Attribute(attrName).Value.Replace("-", "_");
+            return GetStringAsEnum<T>(enumString);
+        }
+
+
         public static string GetAttributeAsFullPath(XElement elem, string attrName)
         {
             return Path.GetFullPath(elem.Attribute(attrName).Value);
@@ -120,6 +125,24 @@ namespace Tiled2Unity
             {
                 throw new UnityException(String.Format("{0} is read-only", path));
             }
+        }
+
+        // From: http://answers.unity3d.com/questions/24929/assetdatabase-replacing-an-asset-but-leaving-refer.html
+        public static T CreateOrReplaceAsset<T>(T asset, string path) where T : UnityEngine.Object
+        {
+            T existingAsset = (T)AssetDatabase.LoadAssetAtPath(path, typeof(T));
+
+            if (existingAsset == null)
+            {
+                AssetDatabase.CreateAsset(asset, path);
+                existingAsset = asset;
+            }
+            else
+            {
+                EditorUtility.CopySerialized(asset, existingAsset);
+            }
+
+            return existingAsset;
         }
 
         public static byte[] Base64ToBytes(string base64)
@@ -168,3 +191,4 @@ namespace Tiled2Unity
         //}
     }
 }
+#endif

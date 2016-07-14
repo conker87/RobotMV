@@ -26,21 +26,6 @@ public class Controller2D : MonoBehaviour
 	void Start ()
 	{
 		_collider = GetComponent<BoxCollider2D>();
-//		switch (colliderType)
-//		{
-//			case ColliderType.BoxCollider2D:
-//				collider = GetComponent<BoxCollider2D>();
-//				break;
-//			case ColliderType.CircleCollider2D:
-//				collider = GetComponent<CircleCollider2D>();
-//				break;
-//			case ColliderType.PolygonCollider2D:
-//				collider = GetComponent<PolygonCollider2D>();
-//				break;
-//			default:
-//				collider = GetComponent<BoxCollider2D>();
-//				break;
-//		}
 
 		CalculateRaySpacing();
 	}

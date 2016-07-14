@@ -21,33 +21,33 @@ public class _DEBUG_DEV_TOOLS : MonoBehaviour
 
 	public void _DEBUG_TOGGLE_JUMP()
 	{
-		PlayerAbilities.Jump = !PlayerAbilities.Jump;
+		PlayerAbilities.Current.Jump = !PlayerAbilities.Current.Jump;
 	}
 
 	public void _DEBUG_TOGGLE_DOUBLE_JUMP()
 	{
-		PlayerAbilities.DoubleJump = !PlayerAbilities.DoubleJump;
+		PlayerAbilities.Current.DoubleJump = !PlayerAbilities.Current.DoubleJump;
 	}
 
 	public void _DEBUG_TOGGLE_TRIPLE_JUMP()
 	{
-		PlayerAbilities.TripleJump = !PlayerAbilities.TripleJump;
+		PlayerAbilities.Current.TripleJump = !PlayerAbilities.Current.TripleJump;
 	}
 	
 	public void _DEBUG_POSSESSION_LEVEL_DECREASE()
 	{
 		if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
 		{
-			PlayerAbilities.PossessionLevel = PlayerAbilities.PossessionLevel - 10;
+			PlayerAbilities.Current.PossessionLevel = PlayerAbilities.Current.PossessionLevel - 10;
 		}
 		else
 		{
-			PlayerAbilities.PossessionLevel--;
+			PlayerAbilities.Current.PossessionLevel--;
 		}
 
-		if (PlayerAbilities.PossessionLevel < 0)
+		if (PlayerAbilities.Current.PossessionLevel < 0)
 		{
-			PlayerAbilities.PossessionLevel = 0;
+			PlayerAbilities.Current.PossessionLevel = 0;
 		}
 	}
 	
@@ -55,16 +55,16 @@ public class _DEBUG_DEV_TOOLS : MonoBehaviour
 	{
 		if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
 		{
-			PlayerAbilities.PossessionLevel = PlayerAbilities.PossessionLevel + 10;
+			PlayerAbilities.Current.PossessionLevel = PlayerAbilities.Current.PossessionLevel + 10;
 		}
 		else
 		{
-			PlayerAbilities.PossessionLevel++;
+			PlayerAbilities.Current.PossessionLevel++;
 		}
 
-		if (PlayerAbilities.PossessionLevel > 5)
+		if (PlayerAbilities.Current.PossessionLevel > 5)
 		{
-			PlayerAbilities.PossessionLevel = 5;
+			PlayerAbilities.Current.PossessionLevel = 5;
 		}
 	}
 	
@@ -72,16 +72,16 @@ public class _DEBUG_DEV_TOOLS : MonoBehaviour
 	{
 		if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
 		{
-			PlayerAbilities.PossessionMaximumDistance = PlayerAbilities.PossessionMaximumDistance - 10;
+			PlayerAbilities.Current.PossessionMaximumDistance = PlayerAbilities.Current.PossessionMaximumDistance - 10;
 		}
 		else
 		{
-			PlayerAbilities.PossessionMaximumDistance--;
+			PlayerAbilities.Current.PossessionMaximumDistance--;
 		}
 
-		if (PlayerAbilities.PossessionMaximumDistance < 1)
+		if (PlayerAbilities.Current.PossessionMaximumDistance < 1)
 		{
-			PlayerAbilities.PossessionMaximumDistance = 1;
+			PlayerAbilities.Current.PossessionMaximumDistance = 1;
 		}
 	}
 	
@@ -89,16 +89,16 @@ public class _DEBUG_DEV_TOOLS : MonoBehaviour
 	{
 		if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
 		{
-			PlayerAbilities.PossessionMaximumDistance = PlayerAbilities.PossessionMaximumDistance + 10;
+			PlayerAbilities.Current.PossessionMaximumDistance = PlayerAbilities.Current.PossessionMaximumDistance + 10;
 		}
 		else
 		{
-			PlayerAbilities.PossessionMaximumDistance++;
+			PlayerAbilities.Current.PossessionMaximumDistance++;
 		}
 
-		if (PlayerAbilities.PossessionMaximumDistance > 25)
+		if (PlayerAbilities.Current.PossessionMaximumDistance > 25)
 		{
-			PlayerAbilities.PossessionMaximumDistance = 25;
+			PlayerAbilities.Current.PossessionMaximumDistance = 25;
 		}
 	}
 
@@ -162,21 +162,21 @@ public class _DEBUG_DEV_TOOLS : MonoBehaviour
 
 	public void _DEBUG_POSSESSION_CAST_TIME_DECREASE()
 	{
-		PlayerAbilities.PossessSpeed--;
+		PlayerAbilities.Current.PossessSpeed--;
 	
-		if (PlayerAbilities.PossessSpeed < 0)
+		if (PlayerAbilities.Current.PossessSpeed < 0)
 		{
-			PlayerAbilities.PossessSpeed = 0;
+			PlayerAbilities.Current.PossessSpeed = 0;
 		}
 	}
 
 	public void _DEBUG_POSSESSION_CAST_TIME_INCREASE()
 	{
-		PlayerAbilities.PossessSpeed++;
+		PlayerAbilities.Current.PossessSpeed++;
 		
-		if (PlayerAbilities.PossessSpeed > 10)
+		if (PlayerAbilities.Current.PossessSpeed > 10)
 		{
-			PlayerAbilities.PossessSpeed = 10;
+			PlayerAbilities.Current.PossessSpeed = 10;
 		}
 	}
 }
