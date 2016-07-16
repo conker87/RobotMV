@@ -33,6 +33,18 @@ public class _DEBUG_DEV_TOOLS : MonoBehaviour
 	{
 		PlayerAbilities.Current.TripleJump = !PlayerAbilities.Current.TripleJump;
 	}
+
+	public void _DEBUG_TOGGLE_BASIC_BLASTER()
+	{
+		PlayerAbilities.Current.BasicBlaster = !PlayerAbilities.Current.BasicBlaster;
+	}
+
+	public void _DEBUG_TOGGLE_MISSILE_LAUNCHER()
+	{
+		PlayerAbilities.Current.MissileLauncher = !PlayerAbilities.Current.MissileLauncher;
+	}
+
+
 	
 	public void _DEBUG_POSSESSION_LEVEL_DECREASE()
 	{

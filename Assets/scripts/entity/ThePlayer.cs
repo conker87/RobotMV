@@ -100,7 +100,7 @@ public class ThePlayer : MonoBehaviour
 
 		GUI.Label(new Rect(10, 10, 500, 20), ErrorMessage, style);
 		GUI.Label(new Rect(10, 30, 500, 20), "Jump/D/T: " + PlayerAbilities.Current.Jump + "/" + PlayerAbilities.Current.DoubleJump + "/" + PlayerAbilities.Current.TripleJump, style);
-		GUI.Label(new Rect(10, 50, 500, 20), "", style);
+		GUI.Label(new Rect(10, 50, 500, 20), "BB/ML: " + PlayerAbilities.Current.BasicBlaster + "/" + PlayerAbilities.Current.MissileLauncher, style);
 		GUI.Label(new Rect(10, 90, 500, 20), "moveSpeed: " + moveSpeed, style);
 	}
 
