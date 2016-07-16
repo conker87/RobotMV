@@ -9,27 +9,31 @@ public class PlayerAbilities : MonoBehaviour
 
 	public static PlayerAbilities Current { get; protected set; }
 
-	// Usable abilities
-		// Jumping
-		public bool Jump = false, DoubleJump = false, TripleJump = false;
-		// Hookshot
-		public bool EctoplasmPull = false;
+	// Usable Abilities
+	// Jumping
+	public bool Jump = false, DoubleJump = false, TripleJump = false;
 
+	// Bombs
+	public bool Bomb = false, MegaBomb = false;
+	public int CurrentBombs = 0, CurrentMegaBombs = 0, MaximumBombs = 0, MaximumMegaBombs = 0;
+
+	// Weapons
+	public bool BasicBlaster = false;
+
+	// Items
+	public Item CurrentItem = null;
+
+	// Weapon
+	 public Weapon CurrentWeapon = null;
+
+	// Probably keep this in, but wont use it.
 	// Possession
 	public float PossessSpeed = 5f;
 	public int PossessionLevel = 0, PossessionMaximumDistance = 1;
-
-	// Spells (items)
-	public Item currentItem = null;
 	
 	// -- //
 	public Collider2D previousCircleCollider;
 	public float timer = 0.0f;
-
-	public static void LoadFromFile()
-	{
-		// TODO: this.script
-	}
 
 	void Start() {
 

@@ -11,14 +11,14 @@ namespace UnitySampleAssets._2D
         public float lookAheadMoveThreshold = 0.1f;
 
 		public float nextTimeToSearch = 0;
-		public float numberofTimesToSearchForPlayer = 2;
+		public float numberOfTimesToSearchForPlayer = 2;
 
         private float offsetZ;
         private Vector3 lastTargetPosition;
         private Vector3 currentVelocity;
         private Vector3 lookAheadPos;
 
-		public float cameraClampMin = -5;
+		public Vector3 cameraClampMin, cameraClampMax;
 
         // Use this for initialization
         private void Start()
@@ -57,7 +57,9 @@ namespace UnitySampleAssets._2D
             Vector3 aheadTargetPos = target.position + lookAheadPos + Vector3.forward*offsetZ;
             Vector3 newPos = Vector3.SmoothDamp(transform.position, aheadTargetPos, ref currentVelocity, damping);
 
-			newPos = new Vector3(newPos.x, Mathf.Clamp(newPos.y, cameraClampMin, Mathf.Infinity), newPos.z);
+			newPos = new Vector3(Mathf.Clamp(newPos.x, cameraClampMin.x, cameraClampMax.x),
+									Mathf.Clamp(newPos.y, cameraClampMin.y, cameraClampMax.y),
+									Mathf.Clamp(newPos.z, cameraClampMin.z, cameraClampMax.z));
 
             transform.position = newPos;
 
@@ -66,14 +68,17 @@ namespace UnitySampleAssets._2D
 
 		void FindPlayer()
 		{
+			
 			if (nextTimeToSearch <= Time.time)
 			{
 				GameObject searchResult = GameObject.FindGameObjectWithTag("Player");
 
 				target = searchResult.transform;
 
-				nextTimeToSearch = Time.time + (1f / numberofTimesToSearchForPlayer);
+				nextTimeToSearch = Time.time + (1f / numberOfTimesToSearchForPlayer);
 			}
+
 		}
+
     }
 }

@@ -10,6 +10,8 @@ public class ThePlayer : MonoBehaviour
 
 	public Projectile projectile;
 	public GameObject shootLocation;
+
+	public GameObject CollectionRadius;
 	
 	GUIStyle style;
 
@@ -150,30 +152,28 @@ public class ThePlayer : MonoBehaviour
 
 	void Shoot() {
 
-		Vector2 mousePositionToWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-		Vector2 direction = mousePositionToWorld - (Vector2) gameObject.transform.position;
+		if (PlayerAbilities.Current.CurrentWeapon != null) {
 
-		Vector2 newPosition = (Vector2) gameObject.transform.position + Vector2.ClampMagnitude(direction, PlayerAbilities.Current.PossessionMaximumDistance);
+			Vector2 mousePositionToWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+			Vector2 direction = mousePositionToWorld - (Vector2) gameObject.transform.position;
 
-		if (Time.time > nextShotTime && Input.GetMouseButton(0)) {
+			if (Input.GetMouseButton (0)) {
 
-			//currentlySelectedWeapon.Shoot ();
+				Debug.Log ("CurrentWeapon != null");
 
-			//Quaternion fireRotation = loc.rotation;
-
-			Projectile theProjectile = Instantiate (projectile, shootLocation.transform.position, Quaternion.identity) as Projectile;
-
-			theProjectile.Direction = direction;
-
-			nextShotTime = Time.time + attackSpeed; //currentlySelectedWeapon.AttackSpeed;
+				PlayerAbilities.Current.CurrentWeapon.Shoot (shootLocation, direction);
 
 			}
+
+		}
 
 	}
 
 	void Jumping(Vector2 input) {
 
-		if (Input.GetButtonDown("Jump") && PlayerAbilities.Current.TripleJump	&& !hasTripleJumped && hasDoubleJumped && hasJumped )
+		if (Input.GetButtonDown("Jump") &&
+			(PlayerAbilities.Current.TripleJump&& !hasTripleJumped && hasDoubleJumped) &&
+			(hasJumped || !controller.collisions.below) )
 		{
 			
 			velocity.y = jumpVelocity;
@@ -182,8 +182,9 @@ public class ThePlayer : MonoBehaviour
 
 		}
 
-		if (Input.GetButtonDown("Jump") && PlayerAbilities.Current.DoubleJump 	&& !hasDoubleJumped && hasJumped )
-		{
+		if (Input.GetButtonDown ("Jump") &&
+			(PlayerAbilities.Current.DoubleJump && !hasDoubleJumped) &&
+			(hasJumped || !controller.collisions.below)) {
 			
 			velocity.y = jumpVelocity;
 
@@ -191,7 +192,9 @@ public class ThePlayer : MonoBehaviour
 
 		}
 
-		if (Input.GetButton("Jump") 	&& PlayerAbilities.Current.Jump 		&& controller.collisions.below)
+		if (Input.GetButton("Jump") &&
+			PlayerAbilities.Current.Jump &&
+			controller.collisions.below)
 		{
 			
 			velocity.y = jumpVelocity;
