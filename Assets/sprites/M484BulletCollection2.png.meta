@@ -1,0 +1,5721 @@
+fileFormatVersion: 2
+guid: 3225f7f8689448d48ad188146e8b237d
+timeCreated: 1468694139
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: M484BulletCollection2_0
+    21300002: M484BulletCollection2_1
+    21300004: M484BulletCollection2_2
+    21300006: M484BulletCollection2_3
+    21300008: M484BulletCollection2_4
+    21300010: M484BulletCollection2_5
+    21300012: M484BulletCollection2_6
+    21300014: M484BulletCollection2_7
+    21300016: M484BulletCollection2_8
+    21300018: M484BulletCollection2_9
+    21300020: M484BulletCollection2_10
+    21300022: M484BulletCollection2_11
+    21300024: M484BulletCollection2_12
+    21300026: M484BulletCollection2_13
+    21300028: M484BulletCollection2_14
+    21300030: M484BulletCollection2_15
+    21300032: M484BulletCollection2_16
+    21300034: M484BulletCollection2_17
+    21300036: M484BulletCollection2_18
+    21300038: M484BulletCollection2_19
+    21300040: M484BulletCollection2_20
+    21300042: M484BulletCollection2_21
+    21300044: M484BulletCollection2_22
+    21300046: M484BulletCollection2_23
+    21300048: M484BulletCollection2_24
+    21300050: M484BulletCollection2_25
+    21300052: M484BulletCollection2_26
+    21300054: M484BulletCollection2_27
+    21300056: M484BulletCollection2_28
+    21300058: M484BulletCollection2_29
+    21300060: M484BulletCollection2_30
+    21300062: M484BulletCollection2_31
+    21300064: M484BulletCollection2_32
+    21300066: M484BulletCollection2_33
+    21300068: M484BulletCollection2_34
+    21300070: M484BulletCollection2_35
+    21300072: _missileTest
+    21300074: M484BulletCollection2_37
+    21300076: M484BulletCollection2_38
+    21300078: M484BulletCollection2_39
+    21300080: M484BulletCollection2_40
+    21300082: M484BulletCollection2_41
+    21300084: M484BulletCollection2_42
+    21300086: M484BulletCollection2_43
+    21300088: M484BulletCollection2_44
+    21300090: M484BulletCollection2_45
+    21300092: M484BulletCollection2_46
+    21300094: M484BulletCollection2_47
+    21300096: M484BulletCollection2_48
+    21300098: M484BulletCollection2_49
+    21300100: M484BulletCollection2_50
+    21300102: M484BulletCollection2_51
+    21300104: M484BulletCollection2_52
+    21300106: M484BulletCollection2_53
+    21300108: M484BulletCollection2_54
+    21300110: M484BulletCollection2_55
+    21300112: M484BulletCollection2_56
+    21300114: M484BulletCollection2_57
+    21300116: M484BulletCollection2_58
+    21300118: M484BulletCollection2_59
+    21300120: M484BulletCollection2_60
+    21300122: M484BulletCollection2_61
+    21300124: M484BulletCollection2_62
+    21300126: M484BulletCollection2_63
+    21300128: M484BulletCollection2_64
+    21300130: M484BulletCollection2_65
+    21300132: M484BulletCollection2_66
+    21300134: M484BulletCollection2_67
+    21300136: M484BulletCollection2_68
+    21300138: M484BulletCollection2_69
+    21300140: M484BulletCollection2_70
+    21300142: M484BulletCollection2_71
+    21300144: M484BulletCollection2_72
+    21300146: M484BulletCollection2_73
+    21300148: M484BulletCollection2_74
+    21300150: M484BulletCollection2_75
+    21300152: M484BulletCollection2_76
+    21300154: M484BulletCollection2_77
+    21300156: M484BulletCollection2_78
+    21300158: M484BulletCollection2_79
+    21300160: M484BulletCollection2_80
+    21300162: M484BulletCollection2_81
+    21300164: M484BulletCollection2_82
+    21300166: M484BulletCollection2_83
+    21300168: M484BulletCollection2_84
+    21300170: M484BulletCollection2_85
+    21300172: M484BulletCollection2_86
+    21300174: M484BulletCollection2_87
+    21300176: M484BulletCollection2_88
+    21300178: M484BulletCollection2_89
+    21300180: M484BulletCollection2_90
+    21300182: M484BulletCollection2_91
+    21300184: M484BulletCollection2_92
+    21300186: M484BulletCollection2_93
+    21300188: M484BulletCollection2_94
+    21300190: M484BulletCollection2_95
+    21300192: M484BulletCollection2_96
+    21300194: M484BulletCollection2_97
+    21300196: M484BulletCollection2_98
+    21300198: M484BulletCollection2_99
+    21300200: M484BulletCollection2_100
+    21300202: M484BulletCollection2_101
+    21300204: M484BulletCollection2_102
+    21300206: M484BulletCollection2_103
+    21300208: M484BulletCollection2_104
+    21300210: M484BulletCollection2_105
+    21300212: M484BulletCollection2_106
+    21300214: M484BulletCollection2_107
+    21300216: M484BulletCollection2_108
+    21300218: M484BulletCollection2_109
+    21300220: M484BulletCollection2_110
+    21300222: M484BulletCollection2_111
+    21300224: M484BulletCollection2_112
+    21300226: M484BulletCollection2_113
+    21300228: M484BulletCollection2_114
+    21300230: M484BulletCollection2_115
+    21300232: M484BulletCollection2_116
+    21300234: M484BulletCollection2_117
+    21300236: M484BulletCollection2_118
+    21300238: M484BulletCollection2_119
+    21300240: M484BulletCollection2_120
+    21300242: M484BulletCollection2_121
+    21300244: M484BulletCollection2_122
+    21300246: M484BulletCollection2_123
+    21300248: M484BulletCollection2_124
+    21300250: M484BulletCollection2_125
+    21300252: M484BulletCollection2_126
+    21300254: M484BulletCollection2_127
+    21300256: M484BulletCollection2_128
+    21300258: M484BulletCollection2_129
+    21300260: M484BulletCollection2_130
+    21300262: M484BulletCollection2_131
+    21300264: M484BulletCollection2_132
+    21300266: M484BulletCollection2_133
+    21300268: M484BulletCollection2_134
+    21300270: M484BulletCollection2_135
+    21300272: M484BulletCollection2_136
+    21300274: M484BulletCollection2_137
+    21300276: M484BulletCollection2_138
+    21300278: M484BulletCollection2_139
+    21300280: M484BulletCollection2_140
+    21300282: M484BulletCollection2_141
+    21300284: M484BulletCollection2_142
+    21300286: M484BulletCollection2_143
+    21300288: M484BulletCollection2_144
+    21300290: M484BulletCollection2_145
+    21300292: M484BulletCollection2_146
+    21300294: M484BulletCollection2_147
+    21300296: M484BulletCollection2_148
+    21300298: M484BulletCollection2_149
+    21300300: M484BulletCollection2_150
+    21300302: M484BulletCollection2_151
+    21300304: M484BulletCollection2_152
+    21300306: M484BulletCollection2_153
+    21300308: M484BulletCollection2_154
+    21300310: M484BulletCollection2_155
+    21300312: M484BulletCollection2_156
+    21300314: M484BulletCollection2_157
+    21300316: M484BulletCollection2_158
+    21300318: M484BulletCollection2_159
+    21300320: M484BulletCollection2_160
+    21300322: M484BulletCollection2_161
+    21300324: M484BulletCollection2_162
+    21300326: M484BulletCollection2_163
+    21300328: M484BulletCollection2_164
+    21300330: M484BulletCollection2_165
+    21300332: M484BulletCollection2_166
+    21300334: M484BulletCollection2_167
+    21300336: M484BulletCollection2_168
+    21300338: M484BulletCollection2_169
+    21300340: M484BulletCollection2_170
+    21300342: M484BulletCollection2_171
+    21300344: M484BulletCollection2_172
+    21300346: M484BulletCollection2_173
+    21300348: M484BulletCollection2_174
+    21300350: M484BulletCollection2_175
+    21300352: M484BulletCollection2_176
+    21300354: _blasterTest
+    21300356: M484BulletCollection2_178
+    21300358: M484BulletCollection2_179
+    21300360: M484BulletCollection2_180
+    21300362: M484BulletCollection2_181
+    21300364: M484BulletCollection2_182
+    21300366: M484BulletCollection2_183
+    21300368: M484BulletCollection2_184
+    21300370: M484BulletCollection2_185
+    21300372: M484BulletCollection2_186
+    21300374: M484BulletCollection2_187
+    21300376: M484BulletCollection2_188
+    21300378: M484BulletCollection2_189
+    21300380: M484BulletCollection2_190
+    21300382: M484BulletCollection2_191
+    21300384: M484BulletCollection2_192
+    21300386: M484BulletCollection2_193
+    21300388: M484BulletCollection2_194
+    21300390: M484BulletCollection2_195
+    21300392: M484BulletCollection2_196
+    21300394: M484BulletCollection2_197
+    21300396: M484BulletCollection2_198
+    21300398: M484BulletCollection2_199
+    21300400: M484BulletCollection2_200
+    21300402: M484BulletCollection2_201
+    21300404: M484BulletCollection2_202
+    21300406: M484BulletCollection2_203
+    21300408: M484BulletCollection2_204
+    21300410: M484BulletCollection2_205
+    21300412: M484BulletCollection2_206
+    21300414: M484BulletCollection2_207
+    21300416: M484BulletCollection2_208
+    21300418: M484BulletCollection2_209
+    21300420: M484BulletCollection2_210
+    21300422: M484BulletCollection2_211
+    21300424: M484BulletCollection2_212
+    21300426: M484BulletCollection2_213
+    21300428: M484BulletCollection2_214
+    21300430: M484BulletCollection2_215
+    21300432: M484BulletCollection2_216
+    21300434: M484BulletCollection2_217
+    21300436: M484BulletCollection2_218
+    21300438: M484BulletCollection2_219
+    21300440: M484BulletCollection2_220
+    21300442: M484BulletCollection2_221
+    21300444: M484BulletCollection2_222
+    21300446: M484BulletCollection2_223
+    21300448: M484BulletCollection2_224
+    21300450: M484BulletCollection2_225
+    21300452: M484BulletCollection2_226
+    21300454: M484BulletCollection2_227
+    21300456: M484BulletCollection2_228
+    21300458: M484BulletCollection2_229
+    21300460: M484BulletCollection2_230
+    21300462: M484BulletCollection2_231
+    21300464: M484BulletCollection2_232
+    21300466: M484BulletCollection2_233
+    21300468: M484BulletCollection2_234
+    21300470: M484BulletCollection2_235
+    21300472: M484BulletCollection2_236
+    21300474: M484BulletCollection2_237
+    21300476: M484BulletCollection2_238
+    21300478: M484BulletCollection2_239
+    21300480: M484BulletCollection2_240
+    21300482: M484BulletCollection2_241
+    21300484: M484BulletCollection2_242
+    21300486: M484BulletCollection2_243
+    21300488: M484BulletCollection2_244
+    21300490: M484BulletCollection2_245
+    21300492: M484BulletCollection2_246
+    21300494: M484BulletCollection2_247
+    21300496: M484BulletCollection2_248
+    21300498: M484BulletCollection2_249
+    21300500: M484BulletCollection2_250
+    21300502: M484BulletCollection2_251
+    21300504: M484BulletCollection2_252
+    21300506: M484BulletCollection2_253
+    21300508: M484BulletCollection2_254
+    21300510: M484BulletCollection2_255
+    21300512: M484BulletCollection2_256
+    21300514: M484BulletCollection2_257
+    21300516: M484BulletCollection2_258
+    21300518: M484BulletCollection2_259
+    21300520: M484BulletCollection2_260
+    21300522: M484BulletCollection2_261
+    21300524: M484BulletCollection2_262
+    21300526: M484BulletCollection2_263
+    21300528: M484BulletCollection2_264
+    21300530: M484BulletCollection2_265
+    21300532: M484BulletCollection2_266
+    21300534: M484BulletCollection2_267
+    21300536: M484BulletCollection2_268
+    21300538: M484BulletCollection2_269
+    21300540: M484BulletCollection2_270
+    21300542: M484BulletCollection2_271
+    21300544: M484BulletCollection2_272
+    21300546: M484BulletCollection2_273
+    21300548: M484BulletCollection2_274
+    21300550: M484BulletCollection2_275
+    21300552: M484BulletCollection2_276
+    21300554: M484BulletCollection2_277
+    21300556: M484BulletCollection2_278
+    21300558: M484BulletCollection2_279
+    21300560: M484BulletCollection2_280
+    21300562: M484BulletCollection2_281
+    21300564: M484BulletCollection2_282
+    21300566: M484BulletCollection2_283
+    21300568: M484BulletCollection2_284
+    21300570: M484BulletCollection2_285
+    21300572: M484BulletCollection2_286
+    21300574: M484BulletCollection2_287
+    21300576: M484BulletCollection2_288
+    21300578: M484BulletCollection2_289
+    21300580: M484BulletCollection2_290
+    21300582: M484BulletCollection2_291
+    21300584: M484BulletCollection2_292
+    21300586: M484BulletCollection2_293
+    21300588: M484BulletCollection2_294
+    21300590: M484BulletCollection2_295
+    21300592: M484BulletCollection2_296
+    21300594: M484BulletCollection2_297
+    21300596: M484BulletCollection2_298
+    21300598: M484BulletCollection2_299
+    21300600: M484BulletCollection2_300
+    21300602: M484BulletCollection2_301
+    21300604: M484BulletCollection2_302
+    21300606: M484BulletCollection2_303
+    21300608: M484BulletCollection2_304
+    21300610: M484BulletCollection2_305
+    21300612: M484BulletCollection2_306
+    21300614: M484BulletCollection2_307
+    21300616: M484BulletCollection2_308
+    21300618: M484BulletCollection2_309
+    21300620: M484BulletCollection2_310
+    21300622: M484BulletCollection2_311
+    21300624: M484BulletCollection2_312
+    21300626: M484BulletCollection2_313
+    21300628: M484BulletCollection2_314
+    21300630: M484BulletCollection2_315
+    21300632: M484BulletCollection2_316
+    21300634: M484BulletCollection2_317
+    21300636: M484BulletCollection2_318
+    21300638: M484BulletCollection2_319
+    21300640: M484BulletCollection2_320
+    21300642: M484BulletCollection2_321
+    21300644: M484BulletCollection2_322
+    21300646: M484BulletCollection2_323
+    21300648: M484BulletCollection2_324
+    21300650: M484BulletCollection2_325
+    21300652: M484BulletCollection2_326
+    21300654: M484BulletCollection2_327
+    21300656: M484BulletCollection2_328
+    21300658: M484BulletCollection2_329
+    21300660: M484BulletCollection2_330
+    21300662: M484BulletCollection2_331
+    21300664: M484BulletCollection2_332
+    21300666: M484BulletCollection2_333
+    21300668: M484BulletCollection2_334
+    21300670: M484BulletCollection2_335
+    21300672: M484BulletCollection2_336
+    21300674: M484BulletCollection2_337
+    21300676: M484BulletCollection2_338
+    21300678: M484BulletCollection2_339
+    21300680: M484BulletCollection2_340
+    21300682: M484BulletCollection2_341
+    21300684: M484BulletCollection2_342
+    21300686: M484BulletCollection2_343
+    21300688: M484BulletCollection2_344
+    21300690: M484BulletCollection2_345
+    21300692: M484BulletCollection2_346
+    21300694: M484BulletCollection2_347
+    21300696: M484BulletCollection2_348
+    21300698: M484BulletCollection2_349
+    21300700: M484BulletCollection2_350
+    21300702: M484BulletCollection2_351
+    21300704: M484BulletCollection2_352
+    21300706: M484BulletCollection2_353
+    21300708: M484BulletCollection2_354
+    21300710: M484BulletCollection2_355
+    21300712: M484BulletCollection2_356
+    21300714: M484BulletCollection2_357
+    21300716: M484BulletCollection2_358
+    21300718: M484BulletCollection2_359
+    21300720: M484BulletCollection2_360
+    21300722: M484BulletCollection2_361
+    21300724: M484BulletCollection2_362
+    21300726: M484BulletCollection2_363
+    21300728: M484BulletCollection2_364
+    21300730: M484BulletCollection2_365
+    21300732: M484BulletCollection2_366
+    21300734: M484BulletCollection2_367
+    21300736: M484BulletCollection2_368
+    21300738: M484BulletCollection2_369
+    21300740: M484BulletCollection2_370
+    21300742: M484BulletCollection2_371
+    21300744: M484BulletCollection2_372
+    21300746: M484BulletCollection2_373
+    21300748: M484BulletCollection2_374
+    21300750: M484BulletCollection2_375
+    21300752: M484BulletCollection2_376
+    21300754: M484BulletCollection2_377
+    21300756: M484BulletCollection2_378
+    21300758: M484BulletCollection2_379
+    21300760: M484BulletCollection2_380
+    21300762: M484BulletCollection2_381
+    21300764: M484BulletCollection2_382
+    21300766: M484BulletCollection2_383
+    21300768: M484BulletCollection2_384
+    21300770: M484BulletCollection2_385
+    21300772: M484BulletCollection2_386
+    21300774: M484BulletCollection2_387
+    21300776: M484BulletCollection2_388
+    21300778: M484BulletCollection2_389
+    21300780: M484BulletCollection2_390
+    21300782: M484BulletCollection2_391
+    21300784: M484BulletCollection2_392
+    21300786: M484BulletCollection2_393
+    21300788: M484BulletCollection2_394
+    21300790: M484BulletCollection2_395
+    21300792: M484BulletCollection2_396
+    21300794: M484BulletCollection2_397
+    21300796: M484BulletCollection2_398
+    21300798: M484BulletCollection2_399
+    21300800: M484BulletCollection2_400
+    21300802: M484BulletCollection2_401
+    21300804: M484BulletCollection2_402
+    21300806: M484BulletCollection2_403
+    21300808: M484BulletCollection2_404
+    21300810: M484BulletCollection2_405
+    21300812: M484BulletCollection2_406
+    21300814: M484BulletCollection2_407
+    21300816: M484BulletCollection2_408
+    21300818: M484BulletCollection2_409
+    21300820: M484BulletCollection2_410
+    21300822: M484BulletCollection2_411
+    21300824: M484BulletCollection2_412
+    21300826: M484BulletCollection2_413
+    21300828: M484BulletCollection2_414
+    21300830: M484BulletCollection2_415
+    21300832: M484BulletCollection2_416
+    21300834: M484BulletCollection2_417
+    21300836: M484BulletCollection2_418
+    21300838: M484BulletCollection2_419
+    21300840: M484BulletCollection2_420
+    21300842: M484BulletCollection2_421
+    21300844: M484BulletCollection2_422
+    21300846: M484BulletCollection2_423
+    21300848: M484BulletCollection2_424
+    21300850: M484BulletCollection2_425
+    21300852: M484BulletCollection2_426
+    21300854: M484BulletCollection2_427
+    21300856: M484BulletCollection2_428
+    21300858: M484BulletCollection2_429
+    21300860: M484BulletCollection2_430
+    21300862: M484BulletCollection2_431
+    21300864: M484BulletCollection2_432
+    21300866: M484BulletCollection2_433
+    21300868: M484BulletCollection2_434
+    21300870: M484BulletCollection2_435
+    21300872: M484BulletCollection2_436
+    21300874: M484BulletCollection2_437
+    21300876: M484BulletCollection2_438
+    21300878: M484BulletCollection2_439
+    21300880: M484BulletCollection2_440
+    21300882: M484BulletCollection2_441
+    21300884: M484BulletCollection2_442
+    21300886: M484BulletCollection2_443
+    21300888: M484BulletCollection2_444
+    21300890: M484BulletCollection2_445
+    21300892: M484BulletCollection2_446
+    21300894: M484BulletCollection2_447
+    21300896: M484BulletCollection2_448
+    21300898: M484BulletCollection2_449
+    21300900: M484BulletCollection2_450
+    21300902: M484BulletCollection2_451
+    21300904: M484BulletCollection2_452
+    21300906: M484BulletCollection2_453
+    21300908: M484BulletCollection2_454
+    21300910: M484BulletCollection2_455
+    21300912: M484BulletCollection2_456
+    21300914: M484BulletCollection2_457
+    21300916: M484BulletCollection2_458
+    21300918: M484BulletCollection2_459
+    21300920: M484BulletCollection2_460
+    21300922: M484BulletCollection2_461
+    21300924: M484BulletCollection2_462
+    21300926: M484BulletCollection2_463
+    21300928: M484BulletCollection2_464
+    21300930: M484BulletCollection2_465
+    21300932: M484BulletCollection2_466
+    21300934: M484BulletCollection2_467
+    21300936: M484BulletCollection2_468
+    21300938: M484BulletCollection2_469
+    21300940: M484BulletCollection2_470
+    21300942: M484BulletCollection2_471
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 16
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: M484BulletCollection2_0
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 716
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_1
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 716
+        width: 6
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_2
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 716
+        width: 7
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_3
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 716
+        width: 8
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_4
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 734
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_5
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 734
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_6
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 733
+        width: 5
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_7
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 734
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_8
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 734
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_9
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 695
+        width: 14
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_10
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 716
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_11
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 716
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_12
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 716
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_13
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 716
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_14
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 716
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_15
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 716
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_16
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 723
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_17
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 723
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_18
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 728
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_19
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 728
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_20
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 728
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_21
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 728
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_22
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 728
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_23
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 728
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_24
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 728
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_25
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 695
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_26
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 716
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_27
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 716
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_28
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 721
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_29
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 721
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_30
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 721
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_31
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 721
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_32
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 721
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_33
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 721
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_34
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 721
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_35
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 713
+        width: 13
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: _missileTest
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 713
+        width: 13
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_37
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 714
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_38
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 714
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_39
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 714
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_40
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 714
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_41
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 714
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_42
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 714
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_43
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 695
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_44
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 695
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_45
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 695
+        width: 6
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_46
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 695
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_47
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 695
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_48
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 701
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_49
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 701
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_50
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 707
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_51
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 707
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_52
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 707
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_53
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 707
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_54
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 707
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_55
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 707
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_56
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 695
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_57
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 695
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_58
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 695
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_59
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 695
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_60
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 695
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_61
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 695
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_62
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 695
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_63
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 695
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_64
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 695
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_65
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 700
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_66
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 688
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_67
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 686
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_68
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 686
+        width: 5
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_69
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 686
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_70
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 688
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_71
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 693
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_72
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 642
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_73
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 642
+        width: 14
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_74
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 663
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_75
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 663
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_76
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 663
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_77
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 663
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_78
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 663
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_79
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 663
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_80
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 663
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_81
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 663
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_82
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 663
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_83
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 663
+        width: 6
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_84
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 663
+        width: 7
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_85
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 663
+        width: 8
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_86
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 661
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_87
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 661
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_88
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 661
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_89
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 661
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_90
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 661
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_91
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 642
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_92
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 642
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_93
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 642
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_94
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 642
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_95
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 642
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_96
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 642
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_97
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 642
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_98
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 642
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_99
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 642
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_100
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 642
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_101
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 642
+        width: 6
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_102
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 642
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_103
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 642
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_104
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 649
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_105
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 649
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_106
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 642
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_107
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 638
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_108
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 638
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_109
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 608
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_110
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 608
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_111
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 608
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_112
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 608
+        width: 6
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_113
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 608
+        width: 7
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_114
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 608
+        width: 8
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_115
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 625
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_116
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 625
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_117
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 587
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_118
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 587
+        width: 14
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_119
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 608
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_120
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 608
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_121
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 608
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_122
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 608
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_123
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 608
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_124
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 608
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_125
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 611
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_126
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 609
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_127
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 608
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_128
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 609
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_129
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 611
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_130
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 587
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_131
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 587
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_132
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 587
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_133
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 587
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_134
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 587
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_135
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 587
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_136
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 587
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_137
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 587
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_138
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 587
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_139
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 587
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_140
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 587
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_141
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 587
+        width: 6
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_142
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 587
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_143
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 587
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_144
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 580
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_145
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 580
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_146
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 580
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_147
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 580
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_148
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 580
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_149
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 534
+        width: 14
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_150
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 555
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_151
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 555
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_152
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 555
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_153
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 555
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_154
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 555
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_155
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 555
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_156
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 555
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_157
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 555
+        width: 6
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_158
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 555
+        width: 7
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_159
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 555
+        width: 8
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_160
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 567
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_161
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 567
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_162
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 534
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_163
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 555
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_164
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 555
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_165
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 553
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_166
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 553
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_167
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 534
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_168
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 534
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_169
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 534
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_170
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 534
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_171
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 534
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_172
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 534
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_173
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 534
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_174
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 534
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_175
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 534
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_176
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 534
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: _blasterTest
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 534
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_178
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 534
+        width: 6
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_179
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 534
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_180
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 534
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_181
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 538
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_182
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 538
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_183
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 521
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_184
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 518
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_185
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 517
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_186
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 518
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_187
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 521
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_188
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 482
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_189
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 482
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_190
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 482
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_191
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 482
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_192
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 474
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_193
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 479
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_194
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 474
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_195
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 476
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_196
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 474
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_197
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 474
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_198
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 480
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_199
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 474
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_200
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 474
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_201
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 479
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_202
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 474
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_203
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 476
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_204
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 474
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_205
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 474
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_206
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 480
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_207
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 474
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_208
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 474
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_209
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 479
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_210
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 474
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_211
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 476
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_212
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 474
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_213
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 474
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_214
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 480
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_215
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 474
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_216
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 456
+        width: 11
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_217
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 456
+        width: 11
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_218
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 456
+        width: 11
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_219
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 456
+        width: 11
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_220
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 456
+        width: 11
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_221
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 456
+        width: 11
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_222
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 456
+        width: 11
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_223
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 456
+        width: 11
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_224
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 464
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_225
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 464
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_226
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 464
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_227
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 464
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_228
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 460
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_229
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 455
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_230
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 457
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_231
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 455
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_232
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 455
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_233
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 461
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_234
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 460
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_235
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 455
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_236
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 457
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_237
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 455
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_238
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 455
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_239
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 461
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_240
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 460
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_241
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 455
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_242
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 457
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_243
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 455
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_244
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 455
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_245
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 461
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_246
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 446
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_247
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 446
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_248
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 446
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_249
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 446
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_250
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 455
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_251
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 455
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_252
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 455
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_253
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 455
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_254
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 455
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_255
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 455
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_256
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 436
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_257
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 441
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_258
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 436
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_259
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 438
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_260
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 436
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_261
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 436
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_262
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 442
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_263
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 436
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_264
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 436
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_265
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 441
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_266
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 436
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_267
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 438
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_268
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 436
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_269
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 436
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_270
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 442
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_271
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 436
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_272
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 436
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_273
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 441
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_274
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 436
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_275
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 438
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_276
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 436
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_277
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 436
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_278
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 442
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_279
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 436
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_280
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 419
+        width: 11
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_281
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 419
+        width: 11
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_282
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 419
+        width: 11
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_283
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 419
+        width: 11
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_284
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 418
+        width: 11
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_285
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 418
+        width: 11
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_286
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 418
+        width: 11
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_287
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 418
+        width: 11
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_288
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 428
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_289
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 428
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_290
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 428
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_291
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 428
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_292
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 421
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_293
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 418
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_294
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 416
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_295
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 416
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_296
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 422
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_297
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 421
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_298
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 418
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_299
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 416
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_300
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 416
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_301
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 422
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_302
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 422
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_303
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 417
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_304
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 419
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_305
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 417
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_306
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 417
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_307
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 423
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_308
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 410
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_309
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 410
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_310
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 410
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_311
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 410
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_312
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 416
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_313
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 416
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_314
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 416
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_315
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 416
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_316
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 416
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_317
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 416
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_318
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 417
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_319
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 417
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_320
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 361
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_321
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 363
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_322
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 361
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_323
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 361
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_324
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 363
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_325
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 361
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_326
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 361
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_327
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 363
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_328
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 361
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_329
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 361
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_330
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 363
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_331
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 361
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_332
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 364
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_333
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 364
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_334
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 364
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_335
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 364
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_336
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 364
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_337
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 364
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_338
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 364
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_339
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 364
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_340
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 347
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_341
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 347
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_342
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 347
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_343
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 347
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_344
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 347
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_345
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 347
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_346
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 347
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_347
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 347
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_348
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 348
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_349
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 348
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_350
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 348
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_351
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 348
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_352
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 348
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_353
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 348
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_354
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 348
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_355
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 348
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_356
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 332
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_357
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 328
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_358
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 332
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_359
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 332
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_360
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 328
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_361
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 332
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_362
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 332
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_363
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 328
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_364
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 332
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_365
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 332
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_366
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 328
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_367
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 332
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_368
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 329
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_369
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 329
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_370
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 329
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_371
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 329
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_372
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 329
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_373
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 329
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_374
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 329
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_375
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 329
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_376
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 304
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_377
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 306
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_378
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 304
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_379
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 304
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_380
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 306
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_381
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 304
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_382
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 304
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_383
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 306
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_384
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 304
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_385
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 304
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_386
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 306
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_387
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 304
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_388
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 307
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_389
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 307
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_390
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 307
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_391
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 307
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_392
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 307
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_393
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 307
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_394
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 307
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_395
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 307
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_396
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 290
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_397
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 290
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_398
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 290
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_399
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 290
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_400
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 290
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_401
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 290
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_402
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 290
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_403
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 290
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_404
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 280
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_405
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 280
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_406
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 280
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_407
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 280
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_408
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 280
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_409
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 280
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_410
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 280
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_411
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 280
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_412
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 275
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_413
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 271
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_414
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 275
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_415
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 275
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_416
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 271
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_417
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 275
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_418
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 275
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_419
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 271
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_420
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 275
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_421
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 275
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_422
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 271
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_423
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 275
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_424
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 208
+        width: 8
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_425
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 205
+        width: 8
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_426
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 200
+        width: 9
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_427
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 196
+        width: 12
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_428
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 192
+        width: 17
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_429
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 208
+        width: 8
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_430
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 205
+        width: 8
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_431
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 200
+        width: 9
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_432
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 196
+        width: 12
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_433
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 192
+        width: 17
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_434
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 208
+        width: 8
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_435
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 205
+        width: 8
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_436
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 200
+        width: 9
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_437
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 196
+        width: 12
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_438
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 192
+        width: 17
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_439
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 208
+        width: 8
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_440
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 205
+        width: 8
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_441
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 200
+        width: 9
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_442
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 196
+        width: 12
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_443
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 192
+        width: 17
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_444
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 207
+        width: 6
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_445
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 207
+        width: 6
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_446
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 207
+        width: 6
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_447
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 207
+        width: 6
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_448
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 207
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_449
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 207
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_450
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 207
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_451
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 207
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_452
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 139
+        width: 8
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_453
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 136
+        width: 8
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_454
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 131
+        width: 9
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_455
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 127
+        width: 12
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_456
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 123
+        width: 17
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_457
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 139
+        width: 8
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_458
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 136
+        width: 8
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_459
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 131
+        width: 9
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_460
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 127
+        width: 12
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_461
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 123
+        width: 17
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_462
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 139
+        width: 8
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_463
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 136
+        width: 8
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_464
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 131
+        width: 9
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_465
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 127
+        width: 12
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_466
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 123
+        width: 17
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_467
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 139
+        width: 8
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_468
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 136
+        width: 8
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_469
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 131
+        width: 9
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_470
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 127
+        width: 12
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: M484BulletCollection2_471
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 123
+        width: 17
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

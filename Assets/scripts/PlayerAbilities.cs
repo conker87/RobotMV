@@ -18,7 +18,7 @@ public class PlayerAbilities : MonoBehaviour
 	public int CurrentBombs = 0, CurrentMegaBombs = 0, MaximumBombs = 0, MaximumMegaBombs = 0;
 
 	// Weapons
-	public bool BasicBlaster = false;
+	public bool BasicBlaster = false, MissileLauncher = false;
 
 	// Items
 	public Item CurrentItem = null;

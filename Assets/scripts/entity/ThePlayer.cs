@@ -99,18 +99,9 @@ public class ThePlayer : MonoBehaviour
 		style.normal.textColor = Color.red;
 
 		GUI.Label(new Rect(10, 10, 500, 20), ErrorMessage, style);
-		GUI.Label(new Rect(10, 30, 500, 20), "Jump: " + PlayerAbilities.Current.Jump, style);
-		GUI.Label(new Rect(10, 50, 500, 20), "DoubleJump: " + PlayerAbilities.Current.DoubleJump, style);
-		GUI.Label(new Rect(10, 70, 500, 20), "TripleJump: " + PlayerAbilities.Current.TripleJump, style);
+		GUI.Label(new Rect(10, 30, 500, 20), "Jump/D/T: " + PlayerAbilities.Current.Jump + "/" + PlayerAbilities.Current.DoubleJump + "/" + PlayerAbilities.Current.TripleJump, style);
+		GUI.Label(new Rect(10, 50, 500, 20), "", style);
 		GUI.Label(new Rect(10, 90, 500, 20), "moveSpeed: " + moveSpeed, style);
-		GUI.Label(new Rect(10, 110, 500, 20), "PossessionLevel: " + PlayerAbilities.Current.PossessionLevel, style);
-		GUI.Label(new Rect(10, 130, 500, 20), "MaxPossessionDistance: " + PlayerAbilities.Current.PossessionMaximumDistance, style);
-		GUI.Label(new Rect(10, 150, 500, 20), "PossessionCastingSpeed (sec): " + PlayerAbilities.Current.PossessSpeed, style);
-		GUI.Label(new Rect(10, 170, 500, 20), "PossessionTimer: " + PlayerAbilities.Current.timer.ToString("0.0#"), style);
-		if (PlayerAbilities.Current.previousCircleCollider != null)
-		{
-			GUI.Label(new Rect(10, 970, 500, 20), "PreviousCircleCollider: " + PlayerAbilities.Current.previousCircleCollider.name, style);
-		}
 	}
 
 	void ReloadLevelWithKey(KeyCode key) {
