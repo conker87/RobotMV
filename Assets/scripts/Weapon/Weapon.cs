@@ -5,7 +5,9 @@ public abstract class Weapon : MonoBehaviour {
 
 	public GameObject	Projectile;
 	public string		WeaponName = "";
-	public float		AttackSpeed = 0.3f;				// This is attack per second
+	protected float		AttackSpeed = 0.05f;	// This is attack per second
+
+	public float		EnergyCost = 10f;
 
 	public float 		nextShotTime = 0f;
 

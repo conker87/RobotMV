@@ -10,7 +10,7 @@ public class CollectItemOnColliderHit : MonoBehaviour {
 			Item colliderItem = coll.gameObject.GetComponent<Item> ();
 
 			colliderItem.GiveItem ();
-			ThePlayer.ErrorMessage = "You have collected: " + colliderItem.ItemName;
+			PlayerAbilities.ErrorMessage = "You have collected: " + colliderItem.ItemName;
 			return;
 
 		}

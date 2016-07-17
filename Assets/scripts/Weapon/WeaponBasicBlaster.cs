@@ -11,9 +11,7 @@ public class WeaponBasicBlaster : Weapon {
 		
 	public override void Shoot(GameObject shootLocation, Vector3 direction) {
 
-		Debug.Log (Time.time + (1 / AttackSpeed));
-
-		if (Time.time > nextShotTime) {
+		if (Time.time > nextShotTime && PlayerAbilities.Current.Energy > EnergyCost) {
 
 			GameObject projectile = Instantiate (Projectile, shootLocation.transform.position, Quaternion.identity) as GameObject;
 
@@ -26,6 +24,7 @@ public class WeaponBasicBlaster : Weapon {
 			}
 
 			nextShotTime = Time.time + AttackSpeed;
+			PlayerAbilities.Current.Energy -= EnergyCost;
 
 		}
 

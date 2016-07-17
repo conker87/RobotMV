@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PickUpItemsOnTriggerEnter : MonoBehaviour
 {
-	ThePlayer instance;
+	PlayerController instance;
 
 	void Update()
 	{

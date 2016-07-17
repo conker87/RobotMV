@@ -45,7 +45,7 @@ GameObject:
   m_Layer: 10
   m_Name: ShootLocation
   m_TagString: Player
-  m_Icon: {fileID: -3114416830163030229, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -77,6 +77,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 431366}
   m_RootOrder: 2
@@ -87,8 +88,9 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 186462}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.64, y: -14.06, z: 0}
+  m_LocalPosition: {x: 30.5, y: 2.5, z: 0}
   m_LocalScale: {x: 0.5, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 497946}
   - {fileID: 476404}
@@ -104,6 +106,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071067}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 431366}
   m_RootOrder: 1
@@ -116,6 +119,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 431366}
   m_RootOrder: 0
@@ -175,6 +179,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d846980c2c869f4f9afbd82e2f85809, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Health: 100
+  MaximumHealth: 100
+  Energy: 50
+  MaximumEnergy: 50
+  MoveSpeed: 6
+  MaximumMoveSpeed: 6
   Jump: 0
   DoubleJump: 0
   TripleJump: 0
@@ -185,6 +195,7 @@ MonoBehaviour:
   MaximumBombs: 0
   MaximumMegaBombs: 0
   BasicBlaster: 0
+  MissileLauncher: 0
   CurrentItem: {fileID: 0}
   CurrentWeapon: {fileID: 0}
   PossessSpeed: 5
@@ -203,19 +214,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5c64e43c5b5da640923f0413f615d9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isCurrentlyPossessing: 0
   projectile: {fileID: 11475610, guid: 9f111114f9292184b9f38fe5c9b6e60a, type: 2}
-  shootLocation: {fileID: 169950}
+  ShootLocation: {fileID: 169950}
   CollectionRadius: {fileID: 135198}
-  moveSpeed: 5
   jumpHeight: 3
   timeToJumpApex: 0.3
   accelerationTimeAirbourne: 0.2
   accelerationTimeGrounded: 0.1
   currentPossessionLevel: 0
-  canJump: 1
-  canDoubleJump: 1
-  canTripleJump: 1
   raycastLayerMask:
     serializedVersion: 2
     m_Bits: 28672
@@ -242,8 +248,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54c1249eff151864d9e0ed270a5212a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalRayCount: 4
-  verticalRayCount: 4
+  horizontalRayCount: 6
+  verticalRayCount: 6
   colliderType: 0
   maxSlopeAngle: 80
   maxDecendAngle: 70

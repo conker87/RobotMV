@@ -25,6 +25,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -39,9 +40,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5a564f28255f54439027384c69e28d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Projectile: {fileID: 139484, guid: 9f111114f9292184b9f38fe5c9b6e60a, type: 2}
+  Projectile: {fileID: 139484, guid: ef660bded5ebd2949821fa7a321b06a8, type: 2}
   WeaponName: Missile Launcher
-  AttackSpeed: 1
+  EnergyCost: 10
   nextShotTime: 0
 --- !u!1001 &100100000
 Prefab:
