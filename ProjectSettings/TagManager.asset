@@ -28,7 +28,7 @@ TagManager:
   - Character
   - Projectile
   - Geometry
-  - Actor
+  - Enemy
   - Items
   - 
   - 

@@ -88,7 +88,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 186462}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 30.5, y: 2.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -180,9 +180,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 100
-  MaximumHealth: 100
+  HealthMaximum: 100
+  HealthRegenPerTick: 1
   Energy: 50
-  MaximumEnergy: 50
+  EnergyMaximum: 50
+  EnergyRegenPerTick: 5
+  HealthRegenOn: 0
+  EnergyRegenOn: 1
   MoveSpeed: 6
   MaximumMoveSpeed: 6
   Jump: 0
@@ -190,19 +194,15 @@ MonoBehaviour:
   TripleJump: 0
   Bomb: 0
   MegaBomb: 0
-  CurrentBombs: 0
-  CurrentMegaBombs: 0
-  MaximumBombs: 0
-  MaximumMegaBombs: 0
+  Bombs: 0
+  MegaBombs: 0
+  BombsMaximum: 0
+  MegaBombsMaximum: 0
   BasicBlaster: 0
   MissileLauncher: 0
+  Laser: 0
   CurrentItem: {fileID: 0}
   CurrentWeapon: {fileID: 0}
-  PossessSpeed: 5
-  PossessionLevel: 0
-  PossessionMaximumDistance: 1
-  previousCircleCollider: {fileID: 0}
-  timer: 0
 --- !u!114 &11475602
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -221,11 +221,6 @@ MonoBehaviour:
   timeToJumpApex: 0.3
   accelerationTimeAirbourne: 0.2
   accelerationTimeGrounded: 0.1
-  currentPossessionLevel: 0
-  raycastLayerMask:
-    serializedVersion: 2
-    m_Bits: 28672
-  attackSpeed: 0.2
 --- !u!114 &11490134
 MonoBehaviour:
   m_ObjectHideFlags: 1
