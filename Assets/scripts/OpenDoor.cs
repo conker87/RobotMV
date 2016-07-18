@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class OpenDoorOnProjectileHit : MonoBehaviour {
+public class OpenDoor : MonoBehaviour {
 
 	[Range(0, 10)]
 	public int doorLevel;
@@ -13,14 +13,21 @@ public class OpenDoorOnProjectileHit : MonoBehaviour {
 
 	public List<GameObject> anims;
 
-	float timeToNextCheck, checkEverySeconds = 1f;
+	[SerializeField]
+	float timeToNextCheck, checkEverySeconds = 1f, timeToClose;
 	Collider2D circle;
 
-
+	[SerializeField]
 	bool doOpening = false, doClosing = false, isClosed = true, isOpen = false;
 	int i = 0;
 
 	Projectile hit;
+
+	void OnDrawGizmos() {
+
+		Gizmos.DrawWireSphere (transform.position, doorCheckDistance);
+
+	}
 
 	void Update() {
 
@@ -30,14 +37,25 @@ public class OpenDoorOnProjectileHit : MonoBehaviour {
 
 			if (circle == null) {
 
-				isOpen = false;
-				Invoke ("DoClose", timeUntilNextFrame);
+				if (Time.time > timeToClose) {
+					
+					isOpen = false;
+					Invoke ("DoClose", 1f);
+
+				}
 
 			}
 
 			timeToNextCheck = Time.time + checkEverySeconds;
 
-		} 
+		}
+
+		if (circle != null && isOpen) {
+
+			timeToClose = Time.time + 2f;
+			Debug.Log (timeToClose);
+
+		}
 
 		if (doOpening) {
 
