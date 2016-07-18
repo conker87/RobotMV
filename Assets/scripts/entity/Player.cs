@@ -26,6 +26,8 @@ public class Player : Entity
 	void EnergyRegen()	{	Energy += EnergyRegenPerTick;						}
 	void EnergyClamp()	{	Energy = Mathf.Clamp (Energy, 0, EnergyMaximum);	}
 
+	public bool _DEBUG_INFINITE_ENERGY = false, _DEBUG_INFINITE_HEALTH = false;
+
 	public bool HealthRegenOn = false, EnergyRegenOn = true;
 
 	// Movement

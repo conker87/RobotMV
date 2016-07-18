@@ -4,16 +4,15 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Actor
   - DeathTrigger
   - Geometry
   - SpawnPoint
   - ExplosionFX
   - Item
   - GUI
-  - Rabbit
-  - _HITPOINT
+  - System
   - Projectile
+  - Enemy
   layers:
   - Default
   - TransparentFX

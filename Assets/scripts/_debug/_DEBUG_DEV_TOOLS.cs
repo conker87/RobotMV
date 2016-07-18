@@ -51,6 +51,12 @@ public class _DEBUG_DEV_TOOLS : MonoBehaviour
 
 	}
 
+	public void _DEBUG_TOGGLE_ENERGY_CONSUMPTION() {
+
+		Player.Current._DEBUG_INFINITE_ENERGY = !Player.Current._DEBUG_INFINITE_ENERGY;
+
+	}
+
 	public void _DEBUG_DAMAGE_PLAYER() {
 
 		Player.Current.Health -= 10;

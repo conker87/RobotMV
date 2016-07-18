@@ -27,7 +27,12 @@ public abstract class Weapon : MonoBehaviour {
 	public void ShootEnd() {
 
 		nextShotTime = Time.time + AttackSpeed;
-		Player.Current.Energy -= EnergyCost;
+
+		if (!Player.Current._DEBUG_INFINITE_ENERGY) {
+			
+			Player.Current.Energy -= EnergyCost;
+
+		}
 
 	}
 

@@ -30,10 +30,11 @@ public class WeaponLaser : Weapon {
 
 			if (hit.collider != null) {
 
-				line.SetVertexCount (2);
+				line.SetVertexCount (3);
 
 				line.SetPosition (0, ShootLocationPosition);
 				line.SetPosition (1, hit.point);
+				line.SetPosition (2, hit.point + (directionToMousePositionInWorld.normalized * .1f));
 
 				//Debug.Log ("hit: " + hit.collider.gameObject.ToString() + ", at point: " + hit.point + ", layer: " + LayerMask.LayerToName(hit.collider.gameObject.layer));
 
