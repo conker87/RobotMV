@@ -13,7 +13,7 @@ public class ItemWeaponMissileLauncher : Item
 	public override bool GiveItem()
 	{
 		
-		PlayerAbilities.Current.MissileLauncher = true;
+		Player.Current.MissileLauncher = true;
 
 		return base.GiveItem ();
 

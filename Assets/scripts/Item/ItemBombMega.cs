@@ -12,7 +12,7 @@ public class ItemBombMega : Item {
 	public override bool GiveItem()
 	{
 
-		PlayerAbilities.Current.MegaBomb = true;
+		Player.Current.MegaBomb = true;
 
 		return base.GiveItem ();
 

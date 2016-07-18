@@ -13,7 +13,7 @@ public class ItemWeaponBasicBlaster : Item
 	public override bool GiveItem()
 	{
 		
-		PlayerAbilities.Current.BasicBlaster = true;
+		Player.Current.BasicBlaster = true;
 
 		return base.GiveItem ();
 

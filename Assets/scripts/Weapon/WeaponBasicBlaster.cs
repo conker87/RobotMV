@@ -9,22 +9,26 @@ public class WeaponBasicBlaster : Weapon {
 
 	}
 		
-	public override void Shoot(GameObject shootLocation, Vector3 direction) {
+	public override void Shoot(Vector3 ShootLocationPosition) {
 
-		if (Time.time > nextShotTime && PlayerAbilities.Current.Energy > EnergyCost) {
+		if (Input.GetMouseButton (0)) {
 
-			GameObject projectile = Instantiate (Projectile, shootLocation.transform.position, Quaternion.identity) as GameObject;
+			mousePositionToWorld = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+			directionToMousePositionInWorld = mousePositionToWorld - (Vector2) ShootLocationPosition;
 
-			Debug.Log ("shootLocation: " + shootLocation.transform.position.ToString() + ", direction: " + direction.ToString());
+			if (Time.time > nextShotTime && Player.Current.Energy > EnergyCost) {
 
-			if (projectile != null) {
+				GameObject projectile = Instantiate (Projectile, ShootLocationPosition, Quaternion.identity) as GameObject;
 
-				projectile.GetComponent<Projectile>().Direction = direction.normalized;
+				if (projectile != null) {
+
+					projectile.GetComponent<Projectile> ().Direction = directionToMousePositionInWorld.normalized;
+
+				}
+
+				ShootEnd ();
 
 			}
-
-			nextShotTime = Time.time + AttackSpeed;
-			PlayerAbilities.Current.Energy -= EnergyCost;
 
 		}
 

@@ -10,12 +10,12 @@ public class ItemPossessionLevel : Item
 //	{
 //		// You SHOULD check whether the player is allowed to have the ability, but fuck that, sequence breaking!
 //
-//		if (level > PlayerAbilities.Current.PossessionLevel)
+//		if (level > Player.Current.PossessionLevel)
 //		{
 //			
-//			PlayerAbilities.Current.PossessionLevel = level;
+//			Player.Current.PossessionLevel = level;
 //
-//			PlayerAbilities.ErrorMessage = "You acquired the PossessionLevel " + level.ToString() + "!";
+//			Player.ErrorMessage = "You acquired the PossessionLevel " + level.ToString() + "!";
 //			Debug.Log("You acquired the PossessionLevel " + level + "!");
 //
 //			return base.GiveItem ();
@@ -25,7 +25,7 @@ public class ItemPossessionLevel : Item
 //		{
 //
 //			// TODO: This should be an error message displayed on screen.
-//			PlayerAbilities.ErrorMessage = "Current Possession Level of '" + PlayerAbilities.Current.PossessionLevel + "' is more than the item's level of '" + level.ToString() + "'!";
+//			Player.ErrorMessage = "Current Possession Level of '" + Player.Current.PossessionLevel + "' is more than the item's level of '" + level.ToString() + "'!";
 //
 //			return false;
 //		}

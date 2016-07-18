@@ -6,7 +6,7 @@ public class UI_EnergyBar : MonoBehaviour {
 
 	void Update () {
 	
-		float percentageClamped = Mathf.Clamp01 (PlayerAbilities.Current.Energy / PlayerAbilities.Current.EnergyMaximum);
+		float percentageClamped = Mathf.Clamp01 (Player.Current.Energy / Player.Current.EnergyMaximum);
 		Vector3 percentageScale = new Vector3 (percentageClamped, 1, 1);
 
 		transform.localScale = percentageScale;

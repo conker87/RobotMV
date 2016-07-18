@@ -13,7 +13,7 @@ public class ItemJumpDouble : Item
 	public override bool GiveItem()
 	{
 		
-		PlayerAbilities.Current.DoubleJump = true;
+		Player.Current.DoubleJump = true;
 
 		return base.GiveItem ();
 

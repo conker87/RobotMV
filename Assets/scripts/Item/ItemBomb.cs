@@ -12,7 +12,7 @@ public class ItemBomb : Item {
 	public override bool GiveItem()
 	{
 
-		PlayerAbilities.Current.Bomb = true;
+		Player.Current.Bomb = true;
 
 		return base.GiveItem ();
 

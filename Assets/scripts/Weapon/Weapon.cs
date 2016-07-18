@@ -5,11 +5,13 @@ public abstract class Weapon : MonoBehaviour {
 
 	public GameObject	Projectile;
 	public string		WeaponName = "";
-	protected float		AttackSpeed = 0.05f;	// This is attack per second
+	public float		AttackSpeed = 0.05f;	// This is attack per second
 
 	public float		EnergyCost = 10f;
 
 	public float 		nextShotTime = 0f;
+
+	protected Vector2 mousePositionToWorld, directionToMousePositionInWorld;
 
 	// Use this for initialization
 	public virtual void Awake () {
@@ -18,7 +20,14 @@ public abstract class Weapon : MonoBehaviour {
 
 	}
 
-	public virtual void Shoot (GameObject shootLocation, Vector3 direction) {
+	public virtual void Shoot (Vector3 ShootLocationPosition) {
+
+	}
+
+	public void ShootEnd() {
+
+		nextShotTime = Time.time + AttackSpeed;
+		Player.Current.Energy -= EnergyCost;
 
 	}
 

@@ -8,7 +8,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 476066}
-  - 114: {fileID: 11439292}
+  - 114: {fileID: 11400196}
   m_Layer: 10
   m_Name: WeaponMissileLauncher
   m_TagString: Item
@@ -29,7 +29,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &11439292
+--- !u!114 &11400196
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -42,7 +42,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Projectile: {fileID: 139484, guid: ef660bded5ebd2949821fa7a321b06a8, type: 2}
   WeaponName: Missile Launcher
-  EnergyCost: 10
+  AttackSpeed: 0.05
+  EnergyCost: 20
   nextShotTime: 0
 --- !u!1001 &100100000
 Prefab:

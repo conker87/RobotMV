@@ -68,7 +68,7 @@ public class PlayerController : MonoBehaviour
 	void Jumping(Vector2 input) {
 
 		if (Input.GetButtonDown("Jump") &&
-			(PlayerAbilities.Current.TripleJump&& !hasTripleJumped && hasDoubleJumped) &&
+			(Player.Current.TripleJump&& !hasTripleJumped && hasDoubleJumped) &&
 			(hasJumped || !controller.collisions.below) )
 		{
 
@@ -79,7 +79,7 @@ public class PlayerController : MonoBehaviour
 		}
 
 		if (Input.GetButtonDown ("Jump") &&
-			(PlayerAbilities.Current.DoubleJump && !hasDoubleJumped) &&
+			(Player.Current.DoubleJump && !hasDoubleJumped) &&
 			(hasJumped || !controller.collisions.below)) {
 
 			velocity.y = jumpVelocity;
@@ -89,7 +89,7 @@ public class PlayerController : MonoBehaviour
 		}
 
 		if (Input.GetButton("Jump") &&
-			PlayerAbilities.Current.Jump &&
+			Player.Current.Jump &&
 			controller.collisions.below)
 		{
 
@@ -99,7 +99,7 @@ public class PlayerController : MonoBehaviour
 
 		}
 
-		float targetVelocityX = input.x * PlayerAbilities.Current.MoveSpeed;
+		float targetVelocityX = input.x * Player.Current.MoveSpeed;
 
 		velocity.x = Mathf.SmoothDamp(velocity.x, targetVelocityX, ref velocityXSmoothing,
 			(controller.collisions.below) ? accelerationTimeGrounded : accelerationTimeAirbourne);
@@ -110,16 +110,9 @@ public class PlayerController : MonoBehaviour
 
 	void Shoot() {
 
-		if (PlayerAbilities.Current.CurrentWeapon != null) {
+		if (Player.Current.CurrentWeapon != null) {
 
-			Vector2 mousePositionToWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-			Vector2 direction = mousePositionToWorld - (Vector2) gameObject.transform.position;
-
-			if (Input.GetMouseButton (0)) {
-
-				PlayerAbilities.Current.CurrentWeapon.Shoot (ShootLocation, direction);
-
-			}
+			Player.Current.CurrentWeapon.Shoot (ShootLocation.transform.position);
 
 		}
 

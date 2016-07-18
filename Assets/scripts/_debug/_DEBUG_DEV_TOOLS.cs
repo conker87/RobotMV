@@ -16,40 +16,44 @@ public class _DEBUG_DEV_TOOLS : MonoBehaviour
 	}
 
 	public void _DEBUG_TOGGLE_JUMP() {
-		PlayerAbilities.Current.Jump = !PlayerAbilities.Current.Jump;
+		Player.Current.Jump = !Player.Current.Jump;
 	}
 
 	public void _DEBUG_TOGGLE_DOUBLE_JUMP() {
-		PlayerAbilities.Current.DoubleJump = !PlayerAbilities.Current.DoubleJump;
+		Player.Current.DoubleJump = !Player.Current.DoubleJump;
 	}
 
 	public void _DEBUG_TOGGLE_TRIPLE_JUMP() {
-		PlayerAbilities.Current.TripleJump = !PlayerAbilities.Current.TripleJump;
+		Player.Current.TripleJump = !Player.Current.TripleJump;
 	}
 
 	public void _DEBUG_TOGGLE_BASIC_BLASTER() {
-		PlayerAbilities.Current.BasicBlaster = !PlayerAbilities.Current.BasicBlaster;
+		Player.Current.BasicBlaster = !Player.Current.BasicBlaster;
 	}
 
 	public void _DEBUG_TOGGLE_MISSILE_LAUNCHER() {
-		PlayerAbilities.Current.MissileLauncher = !PlayerAbilities.Current.MissileLauncher;
+		Player.Current.MissileLauncher = !Player.Current.MissileLauncher;
+	}
+
+	public void _DEBUG_TOGGLE_LASER() {
+		Player.Current.Laser = !Player.Current.Laser;
 	}
 
 	public void _DEBUG_TOGGLE_HEALTH_REGEN() {
 
-		PlayerAbilities.Current.HealthRegenOn = !PlayerAbilities.Current.HealthRegenOn;
+		Player.Current.HealthRegenOn = !Player.Current.HealthRegenOn;
 
 	}
 
 	public void _DEBUG_TOGGLE_ENERGY_REGEN() {
 
-		PlayerAbilities.Current.EnergyRegenOn = !PlayerAbilities.Current.EnergyRegenOn;
+		Player.Current.EnergyRegenOn = !Player.Current.EnergyRegenOn;
 
 	}
 
 	public void _DEBUG_DAMAGE_PLAYER() {
 
-		PlayerAbilities.Current.Health -= 10;
+		Player.Current.Health -= 10;
 
 	}
 
@@ -64,16 +68,16 @@ public class _DEBUG_DEV_TOOLS : MonoBehaviour
 
 			if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
 			{
-				PlayerAbilities.Current.MoveSpeed = PlayerAbilities.Current.MoveSpeed - 10;
+				Player.Current.MoveSpeed = Player.Current.MoveSpeed - 10;
 			}
 			else
 			{
-				PlayerAbilities.Current.MoveSpeed--;
+				Player.Current.MoveSpeed--;
 			}
 
-			if (PlayerAbilities.Current.MoveSpeed < 0)
+			if (Player.Current.MoveSpeed < 0)
 			{
-				PlayerAbilities.Current.MoveSpeed = 0;
+				Player.Current.MoveSpeed = 0;
 			}
 		}
 		else
@@ -94,16 +98,16 @@ public class _DEBUG_DEV_TOOLS : MonoBehaviour
 
 			if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
 			{
-				PlayerAbilities.Current.MoveSpeed = PlayerAbilities.Current.MoveSpeed + 10;
+				Player.Current.MoveSpeed = Player.Current.MoveSpeed + 10;
 			}
 			else
 			{
-				PlayerAbilities.Current.MoveSpeed++;
+				Player.Current.MoveSpeed++;
 			}
 
-			if (PlayerAbilities.Current.MoveSpeed > 200)
+			if (Player.Current.MoveSpeed > 200)
 			{
-				PlayerAbilities.Current.MoveSpeed = 200;
+				Player.Current.MoveSpeed = 200;
 			}
 		}
 		else

@@ -16,19 +16,15 @@ public class _DEBUG_GiveWeapon : MonoBehaviour {
 	
 		if (Input.GetKey (KeyCode.Alpha1)) {
 
-			if (PlayerAbilities.Current.BasicBlaster) {
-			
-				PlayerAbilities.Current.CurrentWeapon = weapons [0];
-
-			}
+			Player.Current.CurrentWeapon = weapons [0];
 
 		} else if (Input.GetKey (KeyCode.Alpha2)) {
 
-			if (PlayerAbilities.Current.MissileLauncher) {
+			Player.Current.CurrentWeapon = weapons [1];
 
-				PlayerAbilities.Current.CurrentWeapon = weapons [1];
-
-			}
+		} else if (Input.GetKey (KeyCode.Alpha3)) {
+			
+			Player.Current.CurrentWeapon = weapons [2];
 
 		}
 

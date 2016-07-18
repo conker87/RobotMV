@@ -9,23 +9,26 @@ public class WeaponMissileLauncher : Weapon {
 
 	}
 		
-	public override void Shoot(GameObject shootLocation, Vector3 direction) {
+	public override void Shoot(Vector3 ShootLocationPosition) {
 
-		Debug.Log (Time.time + (1 / AttackSpeed));
+		if (Input.GetMouseButton (0)) {
+			
+			mousePositionToWorld = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+			directionToMousePositionInWorld = mousePositionToWorld - (Vector2) ShootLocationPosition;
 
-		if (Time.time > nextShotTime) {
+			if (Time.time > nextShotTime && Player.Current.Energy > EnergyCost) {
 
-			GameObject projectile = Instantiate (Projectile, shootLocation.transform.position, Quaternion.identity) as GameObject;
+				GameObject projectile = Instantiate (Projectile, ShootLocationPosition, Quaternion.identity) as GameObject;
 
-			Debug.Log ("shootLocation: " + shootLocation.transform.position.ToString() + ", direction: " + direction.ToString());
+				if (projectile != null) {
+				
+					projectile.GetComponent<Projectile> ().Direction = directionToMousePositionInWorld.normalized;
 
-			if (projectile != null) {
+				}
 
-				projectile.GetComponent<Projectile>().Direction = direction.normalized;
+				ShootEnd ();
 
 			}
-
-			nextShotTime = Time.time + AttackSpeed;
 
 		}
 
