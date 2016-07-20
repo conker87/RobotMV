@@ -6,6 +6,8 @@ public class WeaponLaser : Weapon {
 	public LayerMask geometryLayer;
 	LineRenderer line;
 
+	public float laserLength = 7f;
+
 	public override void Awake() {
 
 		base.Awake ();
@@ -24,21 +26,27 @@ public class WeaponLaser : Weapon {
 			mousePositionToWorld = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 			directionToMousePositionInWorld = mousePositionToWorld - (Vector2) ShootLocationPosition;
 
-			RaycastHit2D hit = Physics2D.Raycast (ShootLocationPosition, directionToMousePositionInWorld, Mathf.Infinity, geometryLayer);
+			RaycastHit2D hit = Physics2D.Raycast (ShootLocationPosition, directionToMousePositionInWorld, laserLength, geometryLayer);
 
 			Debug.DrawRay (ShootLocationPosition, directionToMousePositionInWorld);
+
+			line.SetPosition (0, ShootLocationPosition);
 
 			if (hit.collider != null) {
 
 				line.SetVertexCount (3);
 
-				line.SetPosition (0, ShootLocationPosition);
 				line.SetPosition (1, hit.point);
 				line.SetPosition (2, hit.point + (directionToMousePositionInWorld.normalized * .1f));
 
-				//Debug.Log ("hit: " + hit.collider.gameObject.ToString() + ", at point: " + hit.point + ", layer: " + LayerMask.LayerToName(hit.collider.gameObject.layer));
+			} else {
+
+				line.SetVertexCount (2);
+
+				line.SetPosition (1, (Vector3) (ShootLocationPosition + (Vector3) (directionToMousePositionInWorld.normalized * laserLength)));
 
 			}
+
 
 			if (Time.time > nextShotTime) {
 
@@ -48,6 +56,16 @@ public class WeaponLaser : Weapon {
 			}
 
 		} else {
+
+			line.enabled = false;
+
+		}
+
+	}
+
+	public override void ShootAfter() {
+
+		if (!Input.GetMouseButton (0)) {
 
 			line.enabled = false;
 

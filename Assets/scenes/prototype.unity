@@ -2106,10 +2106,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 177196, guid: 4a46590917ba21a4cb820023256af6c1, type: 2}
-      propertyPath: m_Name
-      value: doorBlaster256
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4a46590917ba21a4cb820023256af6c1, type: 2}
   m_IsPrefabParent: 0

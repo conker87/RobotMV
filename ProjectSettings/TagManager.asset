@@ -13,6 +13,7 @@ TagManager:
   - System
   - Projectile
   - Enemy
+  - Door
   layers:
   - Default
   - TransparentFX

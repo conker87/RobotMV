@@ -24,6 +24,10 @@ public abstract class Weapon : MonoBehaviour {
 
 	}
 
+	public virtual void ShootAfter () {
+
+	}
+
 	public void ShootEnd() {
 
 		nextShotTime = Time.time + AttackSpeed;

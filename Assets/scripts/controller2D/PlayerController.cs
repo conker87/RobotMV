@@ -113,6 +113,7 @@ public class PlayerController : MonoBehaviour
 		if (Player.Current.CurrentWeapon != null) {
 
 			Player.Current.CurrentWeapon.Shoot (ShootLocation.transform.position);
+			Player.Current.CurrentWeapon.ShootAfter ();
 
 		}
 
