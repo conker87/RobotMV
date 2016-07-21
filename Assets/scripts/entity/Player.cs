@@ -35,6 +35,18 @@ public class Player : Entity
 
 	}
 
+	public override void DamageHealth(float damage) {
+
+		if (!isCurrentlyInInvulnerabilityFrames) {
+
+			base.DamageHealth (damage);
+			isCurrentlyInInvulnerabilityFrames = true;
+
+			iFramesRemoveTime = Time.time + invincibilityFramesLength;
+		}
+
+	}
+
 	void OnGUI()
 	{
 		style = new GUIStyle(GUI.skin.label);

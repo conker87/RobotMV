@@ -11,6 +11,8 @@ public abstract class Weapon : MonoBehaviour {
 
 	public float 		nextShotTime = 0f;
 
+	public float 		damagePerTick = 2f;
+
 	protected Vector2 mousePositionToWorld, directionToMousePositionInWorld;
 
 	// Use this for initialization

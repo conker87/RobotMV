@@ -57,10 +57,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 431366}
-  - 61: {fileID: 6176158}
+  - 114: {fileID: 11421016}
   - 114: {fileID: 11496000}
   - 114: {fileID: 11475602}
-  - 114: {fileID: 11421016}
+  - 61: {fileID: 6176158}
   m_Layer: 10
   m_Name: Player.Orginal
   m_TagString: Player
@@ -88,7 +88,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 186462}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 30.5, y: 2.5, z: 0}
   m_LocalScale: {x: 0.5, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -153,7 +153,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.94, y: 0.94}
+  m_Size: {x: 0.925, y: 0.925}
 --- !u!61 &6194886
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -163,11 +163,11 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 2, y: 1}
+  m_Size: {x: 0.95, y: 0.95}
 --- !u!114 &11421016
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -179,12 +179,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d846980c2c869f4f9afbd82e2f85809, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  layers: []
+  invincibilityFramesLength: 1
   Health: 100
   HealthMaximum: 100
   HealthRegenPerTick: 1
   Energy: 50
   EnergyMaximum: 50
   EnergyRegenPerTick: 5
+  isCurrentlyInInvulnerabilityFrames: 0
+  _DEBUG_INFINITE_ENERGY: 0
+  _DEBUG_INFINITE_HEALTH: 0
   HealthRegenOn: 0
   EnergyRegenOn: 1
   MoveSpeed: 6
@@ -214,7 +219,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5c64e43c5b5da640923f0413f615d9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 11475610, guid: 9f111114f9292184b9f38fe5c9b6e60a, type: 2}
   ShootLocation: {fileID: 169950}
   CollectionRadius: {fileID: 135198}
   jumpHeight: 3

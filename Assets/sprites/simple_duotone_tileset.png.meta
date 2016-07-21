@@ -1,10 +1,10 @@
 fileFormatVersion: 2
 guid: 4639e29ba3db5fc4e92715962430fa64
-timeCreated: 1468346778
+timeCreated: 1469061394
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: simple_duotone_tileset_0
+    21300000: JESUS CHRIST A CAT
     21300002: prototypePlayer
     21300004: player
     21300006: simple_duotone_tileset_3
@@ -85,7 +85,7 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: simple_duotone_tileset_0
+    - name: JESUS CHRIST A CAT
       rect:
         serializedVersion: 2
         x: 0

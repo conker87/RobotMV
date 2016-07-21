@@ -11,6 +11,7 @@ GameObject:
   - 212: {fileID: 21299378}
   - 61: {fileID: 6104060}
   - 61: {fileID: 6181444}
+  - 114: {fileID: 11490694}
   m_Layer: 12
   m_Name: doorBlaster13
   m_TagString: Geometry
@@ -29,6 +30,7 @@ GameObject:
   - 212: {fileID: 21276570}
   - 61: {fileID: 6197380}
   - 61: {fileID: 6112686}
+  - 114: {fileID: 11400596}
   m_Layer: 12
   m_Name: doorBlaster5
   m_TagString: Geometry
@@ -47,6 +49,7 @@ GameObject:
   - 212: {fileID: 21245194}
   - 61: {fileID: 6196220}
   - 61: {fileID: 6138820}
+  - 114: {fileID: 11456962}
   m_Layer: 12
   m_Name: doorBlaster2
   m_TagString: Geometry
@@ -65,6 +68,7 @@ GameObject:
   - 212: {fileID: 21214118}
   - 61: {fileID: 6159098}
   - 61: {fileID: 6136564}
+  - 114: {fileID: 11411384}
   m_Layer: 12
   m_Name: doorBlaster15
   m_TagString: Geometry
@@ -83,6 +87,7 @@ GameObject:
   - 212: {fileID: 21230264}
   - 61: {fileID: 6134414}
   - 61: {fileID: 6141592}
+  - 114: {fileID: 11435978}
   m_Layer: 12
   m_Name: doorBlaster14
   m_TagString: Geometry
@@ -101,6 +106,7 @@ GameObject:
   - 212: {fileID: 21257380}
   - 61: {fileID: 6123804}
   - 61: {fileID: 6110346}
+  - 114: {fileID: 11464092}
   m_Layer: 12
   m_Name: doorBlaster12
   m_TagString: Geometry
@@ -119,6 +125,7 @@ GameObject:
   - 212: {fileID: 21265712}
   - 61: {fileID: 6137056}
   - 61: {fileID: 6191302}
+  - 114: {fileID: 11406768}
   m_Layer: 12
   m_Name: doorBlaster11
   m_TagString: Geometry
@@ -137,6 +144,7 @@ GameObject:
   - 212: {fileID: 21273402}
   - 61: {fileID: 6140678}
   - 61: {fileID: 6117518}
+  - 114: {fileID: 11410086}
   m_Layer: 12
   m_Name: doorBlaster9
   m_TagString: Geometry
@@ -155,6 +163,7 @@ GameObject:
   - 212: {fileID: 21217808}
   - 61: {fileID: 6167722}
   - 61: {fileID: 6101690}
+  - 114: {fileID: 11496784}
   m_Layer: 12
   m_Name: doorBlaster8
   m_TagString: Geometry
@@ -173,6 +182,7 @@ GameObject:
   - 212: {fileID: 21250018}
   - 61: {fileID: 6193860}
   - 61: {fileID: 6187928}
+  - 114: {fileID: 11421762}
   m_Layer: 12
   m_Name: doorBlaster3
   m_TagString: Geometry
@@ -191,6 +201,7 @@ GameObject:
   - 212: {fileID: 21235648}
   - 61: {fileID: 6111244}
   - 61: {fileID: 6110742}
+  - 114: {fileID: 11476430}
   m_Layer: 12
   m_Name: doorBlaster6
   m_TagString: Geometry
@@ -209,6 +220,7 @@ GameObject:
   - 212: {fileID: 21209326}
   - 61: {fileID: 6168880}
   - 61: {fileID: 6147578}
+  - 114: {fileID: 11490100}
   m_Layer: 12
   m_Name: doorBlaster10
   m_TagString: Geometry
@@ -226,9 +238,10 @@ GameObject:
   - 4: {fileID: 411918}
   - 114: {fileID: 11400410}
   - 61: {fileID: 6153096}
+  - 114: {fileID: 11414532}
   m_Layer: 12
   m_Name: doorBlaster256
-  m_TagString: Untagged
+  m_TagString: Geometry
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -244,6 +257,7 @@ GameObject:
   - 212: {fileID: 21225184}
   - 61: {fileID: 6143078}
   - 61: {fileID: 6193386}
+  - 114: {fileID: 11427268}
   m_Layer: 12
   m_Name: doorBlaster1
   m_TagString: Geometry
@@ -262,6 +276,7 @@ GameObject:
   - 212: {fileID: 21204674}
   - 61: {fileID: 6101700}
   - 61: {fileID: 6181482}
+  - 114: {fileID: 11439032}
   m_Layer: 12
   m_Name: doorBlaster7
   m_TagString: Geometry
@@ -279,6 +294,7 @@ GameObject:
   - 4: {fileID: 443936}
   - 212: {fileID: 21283692}
   - 61: {fileID: 6132016}
+  - 114: {fileID: 11437780}
   m_Layer: 12
   m_Name: doorBlaster0
   m_TagString: Geometry
@@ -297,6 +313,7 @@ GameObject:
   - 212: {fileID: 21254738}
   - 61: {fileID: 6166930}
   - 61: {fileID: 6171280}
+  - 114: {fileID: 11449716}
   m_Layer: 12
   m_Name: doorBlaster4
   m_TagString: Geometry
@@ -311,7 +328,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 177196}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.5, y: 2, z: 0}
+  m_LocalPosition: {x: 19.5, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -1030,6 +1047,227 @@ MonoBehaviour:
   doClosing: 0
   isClosed: 1
   isOpen: 0
+--- !u!114 &11400596
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 114910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9b0f59d3e8ab3546bb07ce0777d0294, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layers:
+  - Projectile
+--- !u!114 &11406768
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9b0f59d3e8ab3546bb07ce0777d0294, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layers:
+  - Projectile
+--- !u!114 &11410086
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 152768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9b0f59d3e8ab3546bb07ce0777d0294, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layers:
+  - Projectile
+--- !u!114 &11411384
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 126628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9b0f59d3e8ab3546bb07ce0777d0294, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layers:
+  - Projectile
+--- !u!114 &11414532
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 177196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9b0f59d3e8ab3546bb07ce0777d0294, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layers:
+  - Projectile
+--- !u!114 &11421762
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 164020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9b0f59d3e8ab3546bb07ce0777d0294, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layers:
+  - Projectile
+--- !u!114 &11427268
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 185030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9b0f59d3e8ab3546bb07ce0777d0294, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layers:
+  - Projectile
+--- !u!114 &11435978
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 131578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9b0f59d3e8ab3546bb07ce0777d0294, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layers:
+  - Projectile
+--- !u!114 &11437780
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 193180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9b0f59d3e8ab3546bb07ce0777d0294, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layers:
+  - Projectile
+--- !u!114 &11439032
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 189012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9b0f59d3e8ab3546bb07ce0777d0294, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layers:
+  - Projectile
+--- !u!114 &11449716
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 197074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9b0f59d3e8ab3546bb07ce0777d0294, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layers:
+  - Projectile
+--- !u!114 &11456962
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 121514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9b0f59d3e8ab3546bb07ce0777d0294, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layers:
+  - Projectile
+--- !u!114 &11464092
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 140122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9b0f59d3e8ab3546bb07ce0777d0294, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layers:
+  - Projectile
+--- !u!114 &11476430
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 172372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9b0f59d3e8ab3546bb07ce0777d0294, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layers:
+  - Projectile
+--- !u!114 &11490100
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 176962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9b0f59d3e8ab3546bb07ce0777d0294, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layers:
+  - Projectile
+--- !u!114 &11490694
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 109650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9b0f59d3e8ab3546bb07ce0777d0294, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layers:
+  - Projectile
+--- !u!114 &11496784
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 162826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9b0f59d3e8ab3546bb07ce0777d0294, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layers:
+  - Projectile
 --- !u!212 &21204674
 SpriteRenderer:
   m_ObjectHideFlags: 1

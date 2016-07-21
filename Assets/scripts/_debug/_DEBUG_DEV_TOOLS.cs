@@ -59,18 +59,22 @@ public class _DEBUG_DEV_TOOLS : MonoBehaviour
 
 	public void _DEBUG_DAMAGE_PLAYER() {
 
+		Player.Current.DamageHealth (10);
+
+	}
+
+	public void _DEBUG_DAMAGE_PLAYER_IGNORE_iFRAMES() {
+
 		Player.Current.Health -= 10;
 
 	}
 
 	public void _DEBUG_MOVEMENT_SPEED_DECREASE() {
 		
-		GameObject player;
-		player = GameObject.FindGameObjectWithTag("Player");
+		Player player = Player.Current;
 
 		if (player != null)
 		{
-			PlayerController thePlayer = player.GetComponent<PlayerController>();
 
 			if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
 			{
@@ -100,7 +104,6 @@ public class _DEBUG_DEV_TOOLS : MonoBehaviour
 
 		if (player != null)
 		{
-			PlayerController thePlayer = player.GetComponent<PlayerController>();
 
 			if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
 			{
@@ -115,6 +118,7 @@ public class _DEBUG_DEV_TOOLS : MonoBehaviour
 			{
 				Player.Current.MoveSpeed = 200;
 			}
+
 		}
 		else
 		{

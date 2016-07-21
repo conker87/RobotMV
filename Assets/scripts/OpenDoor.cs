@@ -18,7 +18,7 @@ public class OpenDoor : MonoBehaviour {
 	Collider2D circle;
 
 	[SerializeField]
-	bool doOpening = false, doClosing = false, isClosed = true, isOpen = false;
+	bool doOpening = false, isClosed = true, isOpen = false;
 	int i = 0;
 
 	Projectile hit;
@@ -53,7 +53,6 @@ public class OpenDoor : MonoBehaviour {
 		if (circle != null && isOpen) {
 
 			timeToClose = Time.time + 2f;
-			Debug.Log (timeToClose);
 
 		}
 

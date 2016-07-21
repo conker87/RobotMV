@@ -65,7 +65,7 @@ public class WeaponLaser : Weapon {
 
 	public override void ShootAfter() {
 
-		if (!Input.GetMouseButton (0)) {
+		if (!Input.GetMouseButton (0) || Player.Current.CurrentWeapon != this) {
 
 			line.enabled = false;
 
