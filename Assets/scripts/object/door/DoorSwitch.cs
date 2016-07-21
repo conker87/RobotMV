@@ -14,6 +14,8 @@ public class DoorSwitch : Door {
 
 	}
 
+	Perhaps add the ability to have an 'and' gate that requires the ON state of 2 or more switches?
+
 	// Update is called once per frame
 	public override void Update () {
 		
