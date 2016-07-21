@@ -586,7 +586,6 @@ MonoBehaviour:
   checkEverySeconds: 1
   timeToClose: 0
   doOpening: 0
-  doClosing: 0
   isClosed: 1
   isOpen: 0
 --- !u!114 &11441654

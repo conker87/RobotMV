@@ -236,8 +236,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 411918}
-  - 114: {fileID: 11400410}
   - 61: {fileID: 6153096}
+  - 114: {fileID: 11443660}
   - 114: {fileID: 11414532}
   m_Layer: 12
   m_Name: doorBlaster256
@@ -328,7 +328,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 177196}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.5, y: 2, z: 0}
+  m_LocalPosition: {x: 11.5, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -1006,46 +1006,6 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0.625}
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.75}
---- !u!114 &11400410
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 177196}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ff685805b98e644f96bc92317ef636a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doorLevel: 0
-  doorCheckDistance: 3
-  timeUntilNextFrame: 0.04
-  circleLayerMask:
-    serializedVersion: 2
-    m_Bits: 1024
-  anims:
-  - {fileID: 193180}
-  - {fileID: 185030}
-  - {fileID: 121514}
-  - {fileID: 164020}
-  - {fileID: 197074}
-  - {fileID: 114910}
-  - {fileID: 172372}
-  - {fileID: 189012}
-  - {fileID: 162826}
-  - {fileID: 152768}
-  - {fileID: 176962}
-  - {fileID: 147002}
-  - {fileID: 140122}
-  - {fileID: 109650}
-  - {fileID: 131578}
-  - {fileID: 126628}
-  timeToNextCheck: 0
-  checkEverySeconds: 1
-  timeToClose: 0
-  doOpening: 0
-  isClosed: 1
-  isOpen: 0
 --- !u!114 &11400596
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1176,6 +1136,45 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layers:
   - Projectile
+--- !u!114 &11443660
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 177196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5df67d1d97c3c1c4487cde559d421c44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorLevel: 0
+  doorCheckDistance: 2
+  timeUntilNextFrame: 0.04
+  doorState: 0
+  circleLayerMask:
+    serializedVersion: 2
+    m_Bits: 1024
+  anims:
+  - {fileID: 193180}
+  - {fileID: 185030}
+  - {fileID: 121514}
+  - {fileID: 164020}
+  - {fileID: 197074}
+  - {fileID: 114910}
+  - {fileID: 172372}
+  - {fileID: 189012}
+  - {fileID: 162826}
+  - {fileID: 152768}
+  - {fileID: 176962}
+  - {fileID: 147002}
+  - {fileID: 140122}
+  - {fileID: 109650}
+  - {fileID: 131578}
+  - {fileID: 126628}
+  timeToNextCheck: 0
+  checkEverySeconds: 1
+  timeToClose: 5
+  i: 0
 --- !u!114 &11449716
 MonoBehaviour:
   m_ObjectHideFlags: 1

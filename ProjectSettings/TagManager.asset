@@ -14,6 +14,7 @@ TagManager:
   - Projectile
   - Enemy
   - Door
+  - Switch
   layers:
   - Default
   - TransparentFX
@@ -30,7 +31,7 @@ TagManager:
   - Geometry
   - Enemy
   - Items
-  - 
+  - Object
   - 
   - 
   - 

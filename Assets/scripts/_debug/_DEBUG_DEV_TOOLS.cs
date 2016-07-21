@@ -126,5 +126,15 @@ public class _DEBUG_DEV_TOOLS : MonoBehaviour
 		}
 
 	}
+
+	void Update() {
+
+		if (Input.GetKeyUp (KeyCode.J)) {
+
+			_DEBUG_TOGGLE_JUMP ();
+
+		}
+
+	}
 		
 }

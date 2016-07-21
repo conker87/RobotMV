@@ -12,15 +12,18 @@ public class DoorProjectileFire : Door {
 
 	void OnTriggerEnter2D(Collider2D other) {
 
-		if ((hit = other.gameObject.GetComponent<Projectile>()) != null) {
+		hit = other.gameObject.GetComponent<Projectile> ();
 
-			if (hit.weaponDoorLevel >= doorLevel  && isClosed) {
+		if (hit != null && hit.projectileType == ProjectileType.PLAYER) {
 
-				doOpening = true;
+			if (hit.weaponDoorLevel >= doorLevel && doorState == DoorState.CLOSED) {
+
+				doorState = DoorState.OPEN_BEGIN;
 
 			}
 
 		}
 
 	}
+
 }
