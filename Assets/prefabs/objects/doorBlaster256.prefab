@@ -1019,7 +1019,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorLevel: 0
   doorCheckDistance: 3
-  timeUntilNextFrame: 0.05
+  timeUntilNextFrame: 0.04
   circleLayerMask:
     serializedVersion: 2
     m_Bits: 1024
@@ -1044,7 +1044,6 @@ MonoBehaviour:
   checkEverySeconds: 1
   timeToClose: 0
   doOpening: 0
-  doClosing: 0
   isClosed: 1
   isOpen: 0
 --- !u!114 &11400596
