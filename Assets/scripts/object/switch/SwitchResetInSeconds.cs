@@ -23,7 +23,7 @@ public class SwitchResetInSeconds : Switch {
 
 		hit = other.gameObject.GetComponent<Projectile> ();
 
-		if (hit != null && hit.projectileType == ProjectileType.PLAYER && switchState == SwitchState.OFF) {
+		if (hit != null && hit.weaponLevel >= weaponLevel && hit.projectileType == ProjectileType.PLAYER && switchState == SwitchState.OFF) {
 
 			switchState = SwitchState.ON;
 			resetTime = Time.time + resetInSeconds;
@@ -32,4 +32,18 @@ public class SwitchResetInSeconds : Switch {
 
 	}
 
+	public override void TriggerSwitch() {
+
+		if (Player.Current.CurrentWeapon.weaponLevel >= weaponLevel && Player.Current.CurrentWeapon.projectileType == ProjectileType.PLAYER) {
+
+			if (switchState == SwitchState.OFF) {
+
+				switchState = SwitchState.ON;
+				resetTime = Time.time + resetInSeconds;
+
+			}
+
+		}
+
+	}
 }

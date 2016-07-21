@@ -16,7 +16,7 @@ public class DoorProjectileFire : Door {
 
 		if (hit != null && hit.projectileType == ProjectileType.PLAYER) {
 
-			if (hit.weaponDoorLevel >= doorLevel && doorState == DoorState.CLOSED) {
+			if (hit.weaponLevel >= doorLevel && doorState == DoorState.CLOSED) {
 
 				doorState = DoorState.OPEN_BEGIN;
 

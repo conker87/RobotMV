@@ -43,12 +43,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Projectile: {fileID: 0}
   WeaponName: Laser
-  AttackSpeed: 1
-  EnergyCost: 10
+  AttackSpeed: 0.1
+  projectileType: 0
+  weaponLevel: 2
+  EnergyCost: 3
   nextShotTime: 0
+  damagePerTick: 0.4
   geometryLayer:
     serializedVersion: 2
-    m_Bits: 4096
+    m_Bits: 45056
+  laserLength: 7
 --- !u!120 &12005336
 LineRenderer:
   m_ObjectHideFlags: 1

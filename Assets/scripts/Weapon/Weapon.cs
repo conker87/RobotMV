@@ -6,6 +6,8 @@ public abstract class Weapon : MonoBehaviour {
 	public GameObject	Projectile;
 	public string		WeaponName = "";
 	public float		AttackSpeed = 0.05f;	// This is attack per second
+	public ProjectileType projectileType;
+	public int			weaponLevel;
 
 	public float		EnergyCost = 10f;
 
@@ -26,20 +28,19 @@ public abstract class Weapon : MonoBehaviour {
 
 	}
 
-	public virtual void ShootAfter () {
-
-	}
-
 	public void ShootEnd() {
 
-		nextShotTime = Time.time + AttackSpeed;
-
-		if (!Player.Current._DEBUG_INFINITE_ENERGY) {
+		if (Time.time > nextShotTime) {
 			
-			Player.Current.Energy -= EnergyCost;
+			if (!Player.Current._DEBUG_INFINITE_ENERGY) {
+				Player.Current.Energy -= EnergyCost;
+			}
+			nextShotTime = Time.time + AttackSpeed;
 
 		}
 
 	}
 
 }
+
+public enum ProjectileType { PLAYER, ENEMY };

@@ -131,7 +131,25 @@ public class _DEBUG_DEV_TOOLS : MonoBehaviour
 
 		if (Input.GetKeyUp (KeyCode.J)) {
 
-			_DEBUG_TOGGLE_JUMP ();
+			if (!Player.Current.Jump) {
+
+				_DEBUG_TOGGLE_JUMP ();
+
+			} else if (!Player.Current.DoubleJump) {
+
+				_DEBUG_TOGGLE_DOUBLE_JUMP ();
+
+			} else if (!Player.Current.TripleJump) {
+
+				_DEBUG_TOGGLE_TRIPLE_JUMP ();
+
+			} else {
+
+				_DEBUG_TOGGLE_JUMP ();
+				_DEBUG_TOGGLE_DOUBLE_JUMP ();
+				_DEBUG_TOGGLE_TRIPLE_JUMP ();
+
+			}
 
 		}
 

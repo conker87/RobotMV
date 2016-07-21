@@ -14,17 +14,21 @@ public class _DEBUG_GiveWeapon : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
-		if (Input.GetKey (KeyCode.Alpha1)) {
+		if (Player.Current.CanChangeWeapon) {
 
-			Player.Current.CurrentWeapon = weapons [0];
+			if (Input.GetKey (KeyCode.Alpha1)) {
 
-		} else if (Input.GetKey (KeyCode.Alpha2)) {
+				Player.Current.CurrentWeapon = weapons [0];
 
-			Player.Current.CurrentWeapon = weapons [1];
+			} else if (Input.GetKey (KeyCode.Alpha2)) {
 
-		} else if (Input.GetKey (KeyCode.Alpha3)) {
+				Player.Current.CurrentWeapon = weapons [1];
+
+			} else if (Input.GetKey (KeyCode.Alpha3)) {
 			
-			Player.Current.CurrentWeapon = weapons [2];
+				Player.Current.CurrentWeapon = weapons [2];
+
+			}
 
 		}
 

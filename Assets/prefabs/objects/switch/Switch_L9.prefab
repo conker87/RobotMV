@@ -11,7 +11,7 @@ GameObject:
   - 61: {fileID: 6139546}
   - 114: {fileID: 11466622}
   m_Layer: 15
-  m_Name: Switch
+  m_Name: Switch_L9
   m_TagString: Switch
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -115,6 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e3a17d48049e16438c02dce4bab2ddb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponLevel: 9
   defaultState: {fileID: 152540}
   offState: {fileID: 147874}
   switchState: 0
@@ -130,7 +131,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5028263afa6af6642af47b337c6c05af, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -160,7 +161,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5028263afa6af6642af47b337c6c05af, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0

@@ -29,6 +29,8 @@ public class Player : Entity
 	// Weapon
 	 public Weapon CurrentWeapon = null;
 
+	public bool CanChangeWeapon = true;
+
 	void Start() {
 
 		Current = this;

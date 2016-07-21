@@ -43,8 +43,10 @@ MonoBehaviour:
   Projectile: {fileID: 139484, guid: 67a5760b2e37c4d4bb07867a7c716c77, type: 2}
   WeaponName: Basic Blaster
   AttackSpeed: 0.1
+  weaponLevel: 0
   EnergyCost: 2
   nextShotTime: 0
+  damagePerTick: 2
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -6,6 +6,10 @@ public class WeaponLaser : Weapon {
 	public LayerMask geometryLayer;
 	LineRenderer line;
 
+	Switch s;
+	Entity e;
+	Door d;
+
 	public float laserLength = 7f;
 
 	public override void Awake() {
@@ -23,6 +27,8 @@ public class WeaponLaser : Weapon {
 
 			line.enabled = true;
 
+			Player.Current.CanChangeWeapon = false;
+
 			mousePositionToWorld = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 			directionToMousePositionInWorld = mousePositionToWorld - (Vector2) ShootLocationPosition;
 
@@ -39,6 +45,34 @@ public class WeaponLaser : Weapon {
 				line.SetPosition (1, hit.point);
 				line.SetPosition (2, hit.point + (directionToMousePositionInWorld.normalized * .1f));
 
+
+
+				if ((s = hit.collider.gameObject.GetComponent<Switch> ()) != null) {
+
+					s.TriggerSwitch ();
+
+				}
+
+				if ((e = hit.collider.gameObject.GetComponent<Entity> ()) != null && (Time.time > nextShotTime)) {
+
+					e.DamageHealth(damagePerTick);
+
+				}
+
+				if ((d = hit.collider.gameObject.GetComponent<DoorProjectileFire> ()) != null) {
+
+					if (Player.Current.CurrentWeapon.projectileType == ProjectileType.PLAYER) {
+
+						if (Player.Current.CurrentWeapon.weaponLevel >= d.doorLevel && d.doorState == DoorState.CLOSED) {
+
+							d.doorState = DoorState.OPEN_BEGIN;
+
+						}
+
+					}
+
+				}
+
 			} else {
 
 				line.SetVertexCount (2);
@@ -47,27 +81,12 @@ public class WeaponLaser : Weapon {
 
 			}
 
-
-			if (Time.time > nextShotTime) {
-
-				ShootEnd ();
-
-
-			}
+			ShootEnd ();
 
 		} else {
 
 			line.enabled = false;
-
-		}
-
-	}
-
-	public override void ShootAfter() {
-
-		if (!Input.GetMouseButton (0) || Player.Current.CurrentWeapon != this) {
-
-			line.enabled = false;
+			Player.Current.CanChangeWeapon = true;
 
 		}
 

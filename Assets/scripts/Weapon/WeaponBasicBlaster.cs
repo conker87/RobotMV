@@ -26,6 +26,8 @@ public class WeaponBasicBlaster : Weapon {
 
 					projectileComp.Direction = directionToMousePositionInWorld;
 					projectileComp.projectileDamage = damagePerTick;
+					projectileComp.weaponLevel = weaponLevel;
+					projectileComp.projectileType = projectileType;
 
 				}
 

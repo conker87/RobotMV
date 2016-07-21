@@ -8,7 +8,7 @@ public class DoorSwitch : Door {
 
 	float timeInbetweenNextCheck = 0.5f, timeUntilNextCheck;
 
-	void Start() {
+	protected override void Start() {
 
 		disableCircleCheck = false;
 
@@ -24,8 +24,6 @@ public class DoorSwitch : Door {
 		if (switches != null) {
 
 			for (int i = 0; i < switches.Length; i++) {
-
-				Debug.Log (switches[i].switchState);
 
 				if (switches[i].switchState == SwitchState.ON && doorState == DoorState.CLOSED) {
 

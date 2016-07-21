@@ -10,7 +10,7 @@ public class Door : MonoBehaviour {
 
 	[Header("Door Details")]
 	[Range(0, 20)] public float doorOpenLength = 5f;
-	public int doorLevel;
+	[Range(0, 20)] public int doorLevel = 0;
 	public bool willDoorStayOpen = false;
 
 	[Header("Door/Player Interaction")]
@@ -18,7 +18,7 @@ public class Door : MonoBehaviour {
 	public LayerMask circleLayerMask;
 
 	[Header("System")]
-	[SerializeField] protected DoorState doorState;
+	[SerializeField] public DoorState doorState;
 
 	protected float timeToNextCheck, tick = .5f, timeToClose;
 	protected Collider2D circle;

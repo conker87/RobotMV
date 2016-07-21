@@ -566,12 +566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ff685805b98e644f96bc92317ef636a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorLevel: 1
-  doorCheckDistance: 2
   timeUntilNextFrame: 0.5
-  circleLayerMask:
-    serializedVersion: 2
-    m_Bits: 1024
   anims:
   - {fileID: 193180}
   - {fileID: 185030}
@@ -582,12 +577,14 @@ MonoBehaviour:
   - {fileID: 126628}
   - {fileID: 120398}
   - {fileID: 153210}
-  timeToNextCheck: 0
-  checkEverySeconds: 1
-  timeToClose: 0
-  doOpening: 0
-  isClosed: 1
-  isOpen: 0
+  doorOpenLength: 5
+  doorLevel: 1
+  willDoorStayOpen: 0
+  doorCheckDistance: 2
+  circleLayerMask:
+    serializedVersion: 2
+    m_Bits: 1024
+  doorState: 0
 --- !u!114 &11441654
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -611,7 +608,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5028263afa6af6642af47b337c6c05af, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -641,7 +638,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5028263afa6af6642af47b337c6c05af, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -671,7 +668,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5028263afa6af6642af47b337c6c05af, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -701,7 +698,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5028263afa6af6642af47b337c6c05af, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -731,7 +728,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5028263afa6af6642af47b337c6c05af, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -761,7 +758,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5028263afa6af6642af47b337c6c05af, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -791,7 +788,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5028263afa6af6642af47b337c6c05af, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -821,7 +818,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5028263afa6af6642af47b337c6c05af, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -851,7 +848,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5028263afa6af6642af47b337c6c05af, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0

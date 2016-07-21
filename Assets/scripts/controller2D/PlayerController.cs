@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections;
 
@@ -112,7 +113,7 @@ public class PlayerController : MonoBehaviour
 		if (Player.Current.CurrentWeapon != null) {
 
 			Player.Current.CurrentWeapon.Shoot (ShootLocation.transform.position);
-			Player.Current.CurrentWeapon.ShootAfter ();
+			//Player.Current.CurrentWeapon.ShootAfter ();
 
 		}
 
@@ -122,7 +123,7 @@ public class PlayerController : MonoBehaviour
 
 		if (Input.GetKeyUp(KeyCode.P))
 		{
-			Application.LoadLevel(Application.loadedLevel);
+			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 		}
 
 	}

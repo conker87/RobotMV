@@ -35,7 +35,7 @@ public class Entity : MonoBehaviour {
 
 		if (!dead && Health == 0) {
 			dead = true;
-			Debug.LogWarning (this + " has hit 0 health and should be removed, if this is the player it should be removed cleanly.");
+			Debug.Log (this + " has hit 0 health and should be removed, if this is the player it should be removed cleanly.");
 		}
 
 		if (Time.time > nextTickTime) {
@@ -66,7 +66,7 @@ public class Entity : MonoBehaviour {
 
 		Health -= damage;
 
-		OverlayCanvasController.instance.ShowCombatText(gameObject, CombatTextType.Hit, damage.ToString());
+		//OverlayCanvasController.instance.ShowCombatText(gameObject, CombatTextType.Hit, damage.ToString());
 
 	}
 

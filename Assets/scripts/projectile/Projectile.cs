@@ -4,8 +4,7 @@ using System.Collections;
 public class Projectile : MonoBehaviour {
 
 	public float	movementSpeed = 1f;
-	[Range(0, 10)]
-	public int		weaponDoorLevel;
+	public  int		weaponLevel;
 	public string	sourceWeapon = "";
 
 	public ProjectileType projectileType;
@@ -48,5 +47,3 @@ public class Projectile : MonoBehaviour {
 	}
 
 }
-
-public enum ProjectileType { PLAYER, ENEMY };

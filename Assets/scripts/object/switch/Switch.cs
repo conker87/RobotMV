@@ -3,12 +3,16 @@ using System.Collections;
 
 public class Switch : MonoBehaviour {
 
+	[Header("Switch Details")]
+	[Range(0, 10)]
+	public int		weaponLevel;
+
+	[Header("Animations")]
 	public GameObject defaultState, offState;
 
 	public SwitchState switchState;
 
 	protected Projectile hit;
-
 
 	protected virtual void Start() {
 
@@ -40,7 +44,7 @@ public class Switch : MonoBehaviour {
 
 		if (hit != null) {
 
-			if (hit.projectileType == ProjectileType.PLAYER) {
+			if (hit.weaponLevel >= weaponLevel && hit.projectileType == ProjectileType.PLAYER) {
 
 				if (switchState == SwitchState.OFF) {
 
@@ -51,6 +55,10 @@ public class Switch : MonoBehaviour {
 			}
 
 		}
+
+	}
+
+	public virtual void TriggerSwitch() {
 
 	}
 

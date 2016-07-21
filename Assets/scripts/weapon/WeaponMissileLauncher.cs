@@ -22,7 +22,12 @@ public class WeaponMissileLauncher : Weapon {
 
 				if (projectile != null) {
 				
-					projectile.GetComponent<Projectile> ().Direction = directionToMousePositionInWorld.normalized;
+					Projectile projectileComp = projectile.GetComponent<Projectile> ();
+
+					projectileComp.Direction = directionToMousePositionInWorld;
+					projectileComp.projectileDamage = damagePerTick;
+					projectileComp.weaponLevel = weaponLevel;
+					projectileComp.projectileType = projectileType;
 
 				}
 

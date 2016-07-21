@@ -88,8 +88,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 8.5
-  weaponDoorLevel: 0
+  weaponLevel: 0
   sourceWeapon: BasicBlaster
+  projectileType: 0
   projectileDamage: 0
   Direction: {x: 0, y: 0, z: 0}
 --- !u!212 &21213448
@@ -102,7 +103,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5028263afa6af6642af47b337c6c05af, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0

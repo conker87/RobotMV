@@ -43,8 +43,10 @@ MonoBehaviour:
   Projectile: {fileID: 139484, guid: ef660bded5ebd2949821fa7a321b06a8, type: 2}
   WeaponName: Missile Launcher
   AttackSpeed: 0.05
+  weaponLevel: 1
   EnergyCost: 20
   nextShotTime: 0
+  damagePerTick: 2
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
