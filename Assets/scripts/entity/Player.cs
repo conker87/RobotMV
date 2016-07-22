@@ -13,21 +13,25 @@ public class Player : Entity
 
 	public static Player Current { get; protected set; }
 
-	// Jumping
-	public bool Jump = false, DoubleJump = false, TripleJump = false;
+	[Header("Jumping")]
+	public bool Jump = false;
+	public bool DoubleJump = false, TripleJump = false;
 
-	// Bombs
-	public bool Bomb = false,	MegaBomb = false;
-	public int	Bombs = 0,		MegaBombs = 0,		BombsMaximum = 0,		MegaBombsMaximum = 0;
+	[Header("Items")]
+	[Header("Weapons")]
+	public bool BasicBlaster = false;
+	public bool BasicBlasterChargeShot = true;		// FIXME
+	public bool MissileLauncher = false, Laser = false;
+	[Header("Bombs")]
+	public bool Bomb = false;
+	public bool MegaBomb = false;
+	[Header("Bombs Count")]
+	public int	Bombs = 0;
+	public int MegaBombs = 0,		BombsMaximum = 0,		MegaBombsMaximum = 0;
 
-	// Weapons
-	public bool BasicBlaster = false, MissileLauncher = false, Laser = false;
-
-	// Items
+	[Header("Currently Equipped Items")]
 	public Item CurrentItem = null;
-
-	// Weapon
-	 public Weapon CurrentWeapon = null;
+	public Weapon CurrentWeapon = null;
 
 	public bool CanChangeWeapon = true;
 
@@ -39,7 +43,7 @@ public class Player : Entity
 
 	public override void DamageHealth(float damage) {
 
-		if (!isCurrentlyInInvulnerabilityFrames) {
+		if (hasInvincibilityFrames && !isCurrentlyInInvulnerabilityFrames) {
 
 			base.DamageHealth (damage);
 			isCurrentlyInInvulnerabilityFrames = true;
@@ -49,16 +53,30 @@ public class Player : Entity
 
 	}
 
+	//void OnCollisionEnter(Collision2D col) {
+	void OnTriggerStay2D(Collider2D col) {
+
+		Enemy e;
+
+		if ((e = col.gameObject.GetComponentInParent<Enemy> ()) != null) {
+
+			// TODO: Add a push back.
+			DamageHealth (e.DamageOnTouch);
+
+		}
+
+	}
+
 	void OnGUI()
 	{
 		style = new GUIStyle(GUI.skin.label);
-		style.normal.textColor = Color.red;
+		style.normal.textColor = Color.magenta;
 
 		GUI.Label(new Rect(10, 90, 500, 20), ErrorMessage, style);
 		GUI.Label(new Rect(10, 110, 500, 20), "H: " + Health + "/" + HealthMaximum + " (" + HealthRegenOn + "), E: " + Energy + "/" + EnergyMaximum + "(" + EnergyRegenOn + ")", style);
-		GUI.Label(new Rect(10, 130, 500, 20), "J/D/T: " + Jump + "/" + DoubleJump + "/" + TripleJump, style);
-		GUI.Label(new Rect(10, 150, 500, 20), "BB/ML: " + BasicBlaster + "/" + MissileLauncher, style);
-		GUI.Label(new Rect(10, 170, 500, 20), "Currently Equiped: " + (CurrentWeapon == null ? "None" : CurrentWeapon.WeaponName), style);
+		GUI.Label(new Rect(10, 130, 500, 20), "Jumps: " + Jump + "/" + DoubleJump + "/" + TripleJump, style);
+		GUI.Label(new Rect(10, 150, 500, 20), "Weaps: " + BasicBlaster + "/" + MissileLauncher + "/" + Laser, style);
+		GUI.Label(new Rect(10, 170, 500, 20), "ATM: " + (CurrentWeapon == null ? "None" : CurrentWeapon.WeaponName), style);
 		GUI.Label(new Rect(10, 190, 500, 20), "Speed: " + MoveSpeed, style);
 	}
 }

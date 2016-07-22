@@ -47,15 +47,13 @@ public class WeaponLaser : Weapon {
 				line.SetPosition (1, hit.point);
 				line.SetPosition (2, hit.point + (directionToMousePositionInWorld.normalized * .1f));
 
-
-
-				if ((s = hit.collider.gameObject.GetComponent<Switch> ()) != null) {
+				if ((s = hit.collider.gameObject.GetComponentInParent<Switch> ()) != null) {
 
 					s.TriggerSwitch ();
 
 				}
 
-				if ((e = hit.collider.gameObject.GetComponent<Entity> ()) != null && (Time.time > nextShotTime)) {
+				if ((e = hit.collider.gameObject.GetComponentInParent<Entity> ()) != null && (Time.time > nextShotTime)) {
 
 					e.DamageHealth(damagePerTick);
 

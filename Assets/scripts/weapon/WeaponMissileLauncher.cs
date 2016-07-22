@@ -11,7 +11,7 @@ public class WeaponMissileLauncher : Weapon {
 		
 	public override void Shoot(Vector3 ShootLocationPosition) {
 
-		if (Input.GetMouseButton (0)) {
+		if (Input.GetMouseButtonDown (0)) {
 			
 			mousePositionToWorld = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 			directionToMousePositionInWorld = mousePositionToWorld - (Vector2) ShootLocationPosition;

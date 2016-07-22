@@ -12,7 +12,7 @@ public class DoorSwitch : Door {
 	int j = 0;
 	Switch lastSwitch;
 
-	float tick = 0.5f, timeUntilNextCheck, timeUntilSwitchesReset;
+	float timeUntilNextCheck, timeUntilSwitchesReset;
 	SwitchResetInSeconds sR;
 	bool addToReset = false;
 

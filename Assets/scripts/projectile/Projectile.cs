@@ -29,7 +29,9 @@ public class Projectile : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other) {
 
-		if ((other.gameObject.tag == "Player" && projectileType == ProjectileType.PLAYER) || other.gameObject.tag == "Enemy" && projectileType == ProjectileType.ENEMY) {
+		if ((other.gameObject.tag == "Player" && projectileType == ProjectileType.PLAYER) ||
+				(other.gameObject.tag == "Enemy" && projectileType == ProjectileType.ENEMY) || 
+				other.gameObject.tag == "IgnoreCollision") {
 			
 			return;
 
@@ -37,7 +39,7 @@ public class Projectile : MonoBehaviour {
 
 		Entity e;
 
-		if ((e = other.gameObject.GetComponent<Entity> ()) != null) {
+		if ((e = other.gameObject.GetComponentInParent<Entity> ()) != null) {
 
 			Destroy (gameObject);
 			e.DamageHealth(projectileDamage);
