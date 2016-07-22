@@ -3,17 +3,20 @@ using System.Collections;
 
 public abstract class Weapon : MonoBehaviour {
 
-	public GameObject	Projectile;
+	[Header("Weapon Settings")]
 	public string		WeaponName = "";
 	public float		AttackSpeed = 0.05f;	// This is attack per second
-	public ProjectileType projectileType;
-	public int			weaponLevel;
-
 	public float		EnergyCost = 10f;
-
-	public float 		nextShotTime = 0f;
-
+	public int			weaponLevel;
 	public float 		damagePerTick = 2f;
+
+	[Header("Projectile settings")]
+	public GameObject	Projectile;
+	public ProjectileType projectileType;
+
+	[Header("_DEBUG_")]
+	[SerializeField] protected float 	nextShotTime = 0f;
+
 
 	protected Vector2 mousePositionToWorld, directionToMousePositionInWorld;
 

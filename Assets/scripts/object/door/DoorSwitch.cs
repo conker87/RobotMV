@@ -4,9 +4,17 @@ using System.Collections.Generic;
 
 public class DoorSwitch : Door {
 
+	[Header("Door Switches")]
 	public Switch[] switches;
 
-	float timeInbetweenNextCheck = 0.5f, timeUntilNextCheck;
+	[Header("Switch Settings")]
+	public bool andGate = false;
+	int j = 0;
+	Switch lastSwitch;
+
+	float tick = 0.5f, timeUntilNextCheck, timeUntilSwitchesReset;
+	SwitchResetInSeconds sR;
+	bool addToReset = false;
 
 	protected override void Start() {
 
@@ -14,7 +22,7 @@ public class DoorSwitch : Door {
 
 	}
 
-	Perhaps add the ability to have an 'and' gate that requires the ON state of 2 or more switches?
+	//Perhaps add the ability to have an 'and' gate that requires the ON state of 2 or more switches?
 
 	// Update is called once per frame
 	public override void Update () {
@@ -23,19 +31,57 @@ public class DoorSwitch : Door {
 
 		UpdateEnd ();
 
-		if (switches != null) {
+		if (switches != null && Time.time > timeUntilNextCheck) {
 
 			for (int i = 0; i < switches.Length; i++) {
 
-				if (switches[i].switchState == SwitchState.ON && doorState == DoorState.CLOSED) {
+				if (Time.time > timeUntilSwitchesReset) {
 
-					doorState = DoorState.OPEN_BEGIN;
-	
-					return;
+					j = 0;
 
 				}
 
-				timeUntilNextCheck = Time.time + timeInbetweenNextCheck;
+				if (switches [i].switchState == SwitchState.ON && doorState == DoorState.CLOSED) {
+
+					if (andGate) {
+
+						if (lastSwitch != switches [i]) {
+
+							lastSwitch = switches [i];
+							j++;
+
+							addToReset = true;
+
+						}
+
+						if ((sR = switches [i].GetComponent<SwitchResetInSeconds> ()) != null && addToReset) {
+
+							timeUntilSwitchesReset = Time.time + sR.resetInSeconds;
+
+							addToReset = false;
+
+						}
+
+						if (j > switches.Length - 1) {
+
+							doorState = DoorState.OPEN_BEGIN;
+							lastSwitch = null;
+							j = 0;
+
+							return;
+
+						}
+
+					} else {
+						
+						doorState = DoorState.OPEN_BEGIN;
+						return;
+
+					}
+
+				}
+
+				timeUntilNextCheck = Time.time + tick;
 
 			}
 

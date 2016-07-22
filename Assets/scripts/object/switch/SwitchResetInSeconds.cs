@@ -3,6 +3,7 @@ using System.Collections;
 
 public class SwitchResetInSeconds : Switch {
 
+	[Header("Reset Details")]
 	public float resetInSeconds = 5f;
 	[SerializeField]
 	float resetTime;

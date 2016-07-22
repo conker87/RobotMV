@@ -8,8 +8,10 @@ public class Switch : MonoBehaviour {
 	public int		weaponLevel;
 
 	[Header("Animations")]
-	public GameObject defaultState, offState;
+	public GameObject defaultState;
+	public GameObject offState;
 
+	[Header("System")]
 	public SwitchState switchState;
 
 	protected Projectile hit;

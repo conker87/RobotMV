@@ -3,14 +3,16 @@ using System.Collections;
 
 public class WeaponLaser : Weapon {
 
+	[Header("Laser Settings")]
 	public LayerMask geometryLayer;
+	public float laserLength = 7f;
+
 	LineRenderer line;
 
-	Switch s;
-	Entity e;
-	Door d;
-
-	public float laserLength = 7f;
+	[Header("_DEBUG_EXTENDED")]
+	[SerializeField] Switch s;
+	[SerializeField] Entity e;
+	[SerializeField] Door d;
 
 	public override void Awake() {
 
