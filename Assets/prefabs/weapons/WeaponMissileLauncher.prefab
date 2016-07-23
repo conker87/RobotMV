@@ -40,13 +40,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5a564f28255f54439027384c69e28d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Projectile: {fileID: 139484, guid: ef660bded5ebd2949821fa7a321b06a8, type: 2}
   WeaponName: Missile Launcher
   AttackSpeed: 0.05
-  weaponLevel: 1
   EnergyCost: 20
+  weaponLevel: 1
+  damagePerTick: 5
+  Projectile: {fileID: 139484, guid: ef660bded5ebd2949821fa7a321b06a8, type: 2}
+  projectileType: 0
   nextShotTime: 0
-  damagePerTick: 2
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

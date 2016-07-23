@@ -24,6 +24,7 @@ public class WeaponMissileLauncher : Weapon {
 				
 					Projectile projectileComp = projectile.GetComponent<Projectile> ();
 
+					//projectileComp.transform.LookAt (new Vector3(mousePositionToWorld.x, 0f, 0f));
 					projectileComp.Direction = directionToMousePositionInWorld;
 					projectileComp.projectileDamage = damagePerTick;
 					projectileComp.weaponLevel = weaponLevel;
