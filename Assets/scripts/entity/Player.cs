@@ -20,7 +20,7 @@ public class Player : Entity
 	[Header("Items")]
 	[Header("Weapons")]
 	public bool BasicBlaster = false;
-	public bool BasicBlasterChargeShot = true;		// FIXME
+	public bool BasicBlasterChargeShot = false;
 	public bool MissileLauncher = false, Laser = false;
 	[Header("Bombs")]
 	public bool Bomb = false;
@@ -59,8 +59,7 @@ public class Player : Entity
 		Enemy e;
 
 		if ((e = col.gameObject.GetComponentInParent<Enemy> ()) != null) {
-
-			// TODO: Add a push back.
+			
 			DamageHealth (e.DamageOnTouch);
 
 		}

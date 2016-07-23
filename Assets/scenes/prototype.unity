@@ -1126,7 +1126,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 453318, guid: 4e50ffbed503c7f4c8193f551cb451da, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442826, guid: 4e50ffbed503c7f4c8193f551cb451da, type: 2}
+      propertyPath: HealthRegenPerTick
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442826, guid: 4e50ffbed503c7f4c8193f551cb451da, type: 2}
+      propertyPath: EnergyRegenPerTick
+      value: 0.05
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4e50ffbed503c7f4c8193f551cb451da, type: 2}
@@ -1667,6 +1675,14 @@ Prefab:
     - target: {fileID: 436370, guid: e641c3bb16fe0294f8e94c6ffeb7e296, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11452408, guid: e641c3bb16fe0294f8e94c6ffeb7e296, type: 2}
+      propertyPath: HealthRegenPerTick
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 11452408, guid: e641c3bb16fe0294f8e94c6ffeb7e296, type: 2}
+      propertyPath: EnergyRegenPerTick
+      value: 0.05
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e641c3bb16fe0294f8e94c6ffeb7e296, type: 2}
@@ -2433,8 +2449,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 256653925}
   - {fileID: 339995786}
+  - {fileID: 256653925}
   - {fileID: 1852298764}
   m_Father: {fileID: 989830388}
   m_RootOrder: 3
@@ -4269,7 +4285,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.40625
+  orthographic size: 5.875
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -4311,18 +4327,18 @@ MonoBehaviour:
   maxCameraHalfHeightEnabled: 0
   maxCameraHalfWidth: 3
   maxCameraHalfHeight: 2
-  targetDimension: 0
-  targetCameraHalfWidth: 8
-  targetCameraHalfHeight: 6
+  targetDimension: 1
+  targetCameraHalfWidth: 6.5
+  targetCameraHalfHeight: 6.5
   pixelPerfect: 1
   assetsPixelsPerUnit: 16
   showHUD: 0
-  cameraSize: {x: 7.046875, y: 4.40625}
+  cameraSize: {x: 9.395833, y: 5.875}
   contraintUsed: 0
-  cameraPixelsPerUnit: 64
-  ratio: 4
-  nativeAssetResolution: {x: 225.5, y: 141}
-  fovCoverage: 0.8808594
+  cameraPixelsPerUnit: 48
+  ratio: 3
+  nativeAssetResolution: {x: 300.66666, y: 188}
+  fovCoverage: 0.9038462
 --- !u!114 &1538936282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5998,14 +6014,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 431366, guid: 6d19e8eb38e26ad40afee1219920c204, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 186462, guid: 6d19e8eb38e26ad40afee1219920c204, type: 2}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 6176158, guid: 6d19e8eb38e26ad40afee1219920c204, type: 2}
-      propertyPath: m_IsTrigger
+    - target: {fileID: 11421016, guid: 6d19e8eb38e26ad40afee1219920c204, type: 2}
+      propertyPath: _DEBUG_INFINITE_ENERGY
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

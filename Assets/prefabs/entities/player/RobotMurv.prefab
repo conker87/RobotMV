@@ -62,7 +62,7 @@ GameObject:
   - 114: {fileID: 11468434}
   - 61: {fileID: 6176158}
   m_Layer: 10
-  m_Name: Player.Orginal
+  m_Name: RobotMurv
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -149,7 +149,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
@@ -183,7 +183,7 @@ MonoBehaviour:
   _DEBUG_INFINITE_HEALTH: 0
   Health: 100
   HealthMaximum: 100
-  HealthRegenPerTick: 1
+  HealthRegenPerTick: 0.1
   HealthTanks: 1
   HealthTanksMax: 1
   HealthRegenOn: 0
@@ -191,7 +191,7 @@ MonoBehaviour:
   _DEBUG_INFINITE_ENERGY: 1
   Energy: 50
   EnergyMaximum: 50
-  EnergyRegenPerTick: 5
+  EnergyRegenPerTick: 0.5
   EnergyTanks: 1
   EnergyTanksMax: 1
   EnergyRegenOn: 1
@@ -255,14 +255,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54c1249eff151864d9e0ed270a5212a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalRayCount: 6
-  verticalRayCount: 6
-  colliderType: 0
+  horizontalRayCount: 5
+  verticalRayCount: 5
   maxSlopeAngle: 80
   maxDecendAngle: 70
   collisionMask:
     serializedVersion: 2
-    m_Bits: 12288
+    m_Bits: 4096
   rayCastColor: {r: 1, g: 0, b: 1, a: 0}
 --- !u!212 &21218034
 SpriteRenderer:

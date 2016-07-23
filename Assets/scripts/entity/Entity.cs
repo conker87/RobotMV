@@ -6,7 +6,7 @@ using EckTechGames.FloatingCombatText;
 public class Entity : MonoBehaviour {
 
 	// System
-	protected float tick = .5f, nextTickTime, iFramesRemoveTime;		// Shouldn't tick be global?
+	protected float tick = .5f, resourceTick = 0.05f, nextTickTime, iFramesRemoveTime;		// Shouldn't tick be global?
 
 	public string EntityName = "";
 
@@ -55,7 +55,7 @@ public class Entity : MonoBehaviour {
 
 		}
 
-		if (Time.time > nextTickTime) {
+		if (Time.time > resourceTick) {
 
 			if (HealthRegenOn)	{	HealthRegen ();	}
 			if (EnergyRegenOn)	{	EnergyRegen ();	}

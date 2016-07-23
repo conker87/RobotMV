@@ -8,15 +8,11 @@ public class Controller2D : MonoBehaviour
 	public int horizontalRayCount = 4, verticalRayCount = 4;
 	float horizontalRaySpacing, verticalRaySpacing;
 
-	public enum ColliderType { BoxCollider2D, CircleCollider2D, PolygonCollider2D };
-	public ColliderType colliderType;
-
 	public float maxSlopeAngle = 80, maxDecendAngle = 70;
 
 	public LayerMask collisionMask;
 
 	BoxCollider2D _collider;
-	//Collider2D _collider;
 
 	RaycastOrigins raycastOrigins;
 	public CollisionInfo collisions;
