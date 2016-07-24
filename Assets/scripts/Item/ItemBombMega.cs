@@ -9,12 +9,12 @@ public class ItemBombMega : Item {
 
 	}
 
-	public override bool GiveItem()
+	public override void GiveItem()
 	{
 
 		Player.Current.MegaBomb = true;
 
-		return base.GiveItem ();
+		base.GiveItem ();
 
 	}
 

@@ -8,9 +8,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 490944}
-  - 61: {fileID: 6104446}
   - 114: {fileID: 11429068}
+  - 61: {fileID: 6104446}
   - 212: {fileID: 21238886}
+  - 50: {fileID: 5067096}
   m_Layer: 14
   m_Name: ItemJump3
   m_TagString: Item
@@ -31,6 +32,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!50 &5067096
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 143852}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!61 &6104446
 BoxCollider2D:
   m_ObjectHideFlags: 1

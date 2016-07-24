@@ -238,9 +238,8 @@ GameObject:
   - 4: {fileID: 411918}
   - 114: {fileID: 11443660}
   - 61: {fileID: 6153096}
-  - 114: {fileID: 11414532}
   m_Layer: 12
-  m_Name: doorBlaster256
+  m_Name: doorBlaster256_Projectile
   m_TagString: Geometry
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1058,19 +1057,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layers:
   - Projectile
---- !u!114 &11414532
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 177196}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9b0f59d3e8ab3546bb07ce0777d0294, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  layers:
-  - Projectile
 --- !u!114 &11421762
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1173,6 +1159,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   doorState: 0
+  timeToNextCheck: 0
+  tick: 0.5
+  timeToClose: 0
+  circle: {fileID: 0}
 --- !u!114 &11449716
 MonoBehaviour:
   m_ObjectHideFlags: 1

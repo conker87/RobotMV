@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class Door : MonoBehaviour {
 
 	[Header("Animations")]
-	public float timeUntilNextFrame = 0.5f;
+	public float timeUntilNextFrame = 0.04f;
 	public List<GameObject> anims;
 
 	[Header("Door Details")]
@@ -20,7 +20,10 @@ public class Door : MonoBehaviour {
 	[Header("System")]
 	[SerializeField] public DoorState doorState;
 
-	protected float timeToNextCheck, tick = .5f, timeToClose;
+	[Header("_DEBUG_")]
+
+	[SerializeField] protected float timeToNextCheck;
+	[SerializeField] protected float tick = .5f, timeToClose;
 	protected Collider2D circle;
 
 	protected bool disableCircleCheck = false;

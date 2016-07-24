@@ -10,12 +10,12 @@ public class ItemWeaponBasicBlaster : Item
 
 	}
 
-	public override bool GiveItem()
+	public override void GiveItem()
 	{
 		
 		Player.Current.BasicBlaster = true;
 
-		return base.GiveItem ();
+		base.GiveItem ();
 
 	}
 

@@ -7,11 +7,10 @@ public class CollectItemOnColliderHit : MonoBehaviour {
 
 		if (coll.gameObject.tag == "Item")
 		{
-			Item colliderItem = coll.gameObject.GetComponent<Item> ();
+			Item i = coll.gameObject.GetComponent<Item> ();
 
-			colliderItem.GiveItem ();
-			Player.ErrorMessage = "You have collected: " + colliderItem.ItemName;
-			return;
+			i.GiveItem ();
+			Player.ErrorMessage = "You have collected: " + i.ItemName;
 
 		}
 

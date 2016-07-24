@@ -37,6 +37,14 @@ public class Projectile : MonoBehaviour {
 
 		}
 
+		if (other.gameObject.tag == "Geometry") {
+
+			Destroy (gameObject);
+
+			return;
+
+		}
+
 		Entity e;
 
 		if ((e = other.gameObject.GetComponentInParent<Entity> ()) != null) {

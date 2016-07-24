@@ -143,7 +143,6 @@ GameObject:
   - 4: {fileID: 429998}
   - 114: {fileID: 11495046}
   - 61: {fileID: 6125152}
-  - 114: {fileID: 11410146}
   m_Layer: 12
   m_Name: doorBlaster256_Switch
   m_TagString: Geometry
@@ -1019,19 +1018,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layers:
   - Projectile
---- !u!114 &11410146
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 148358}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9b0f59d3e8ab3546bb07ce0777d0294, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  layers:
-  - Projectile
 --- !u!114 &11413302
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1258,12 +1244,15 @@ MonoBehaviour:
   - {fileID: 182402}
   doorOpenLength: 5
   doorLevel: 0
-  willDoorStayOpen: 1
+  willDoorStayOpen: 0
   doorCheckDistance: 2
   circleLayerMask:
     serializedVersion: 2
     m_Bits: 1024
   doorState: 0
+  timeToNextCheck: 0
+  tick: 0.5
+  timeToClose: 0
   switches:
   - {fileID: 0}
   - {fileID: 0}
@@ -1277,6 +1266,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   andGate: 0
+  timeUntilNextCheck: 0
+  timeUntilSwitchesReset: 0
 --- !u!212 &21201376
 SpriteRenderer:
   m_ObjectHideFlags: 1

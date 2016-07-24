@@ -40,13 +40,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33f12de8136a58e4990d74774e3dd91f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Projectile: {fileID: 139484, guid: 67a5760b2e37c4d4bb07867a7c716c77, type: 2}
   WeaponName: Basic Blaster
-  AttackSpeed: 0.1
-  weaponLevel: 0
+  AttackSpeed: 0.08
   EnergyCost: 2
-  nextShotTime: 0
+  weaponLevel: 0
   damagePerTick: 2
+  Projectile: {fileID: 139484, guid: 67a5760b2e37c4d4bb07867a7c716c77, type: 2}
+  projectileType: 0
+  nextShotTime: 0
+  chargedShotMultiplier: 3
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

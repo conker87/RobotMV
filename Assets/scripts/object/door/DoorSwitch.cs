@@ -12,7 +12,10 @@ public class DoorSwitch : Door {
 	int j = 0;
 	Switch lastSwitch;
 
-	float timeUntilNextCheck, timeUntilSwitchesReset;
+	[Header("_DEBUG_")]
+	[SerializeField] float timeUntilNextCheck;
+	[SerializeField] float timeUntilSwitchesReset;
+
 	SwitchResetInSeconds sR;
 	bool addToReset = false;
 
@@ -41,47 +44,51 @@ public class DoorSwitch : Door {
 
 				}
 
-				if (switches [i].switchState == SwitchState.ON && doorState == DoorState.CLOSED) {
+				if (switches [i] != null) {
 
-					if (andGate) {
+					if (switches [i].switchState == SwitchState.ON && doorState == DoorState.CLOSED) {
 
-						if (lastSwitch != switches [i]) {
+						if (andGate) {
 
-							lastSwitch = switches [i];
-							j++;
+							if (lastSwitch != switches [i]) {
 
-							addToReset = true;
+								lastSwitch = switches [i];
+								j++;
 
-						}
+								addToReset = true;
 
-						if ((sR = switches [i].GetComponent<SwitchResetInSeconds> ()) != null && addToReset) {
+							}
 
-							timeUntilSwitchesReset = Time.time + sR.resetInSeconds;
+							if ((sR = switches [i].GetComponent<SwitchResetInSeconds> ()) != null && addToReset) {
 
-							addToReset = false;
+								timeUntilSwitchesReset = Time.time + sR.resetInSeconds;
 
-						}
+								addToReset = false;
 
-						if (j > switches.Length - 1) {
+							}
+
+							if (j > switches.Length - 1) {
+
+								doorState = DoorState.OPEN_BEGIN;
+								lastSwitch = null;
+								j = 0;
+
+								return;
+
+							}
+
+						} else {
 
 							doorState = DoorState.OPEN_BEGIN;
-							lastSwitch = null;
-							j = 0;
-
 							return;
 
 						}
 
-					} else {
-						
-						doorState = DoorState.OPEN_BEGIN;
-						return;
-
 					}
 
-				}
+					timeUntilNextCheck = Time.time + tick;
 
-				timeUntilNextCheck = Time.time + tick;
+				}
 
 			}
 

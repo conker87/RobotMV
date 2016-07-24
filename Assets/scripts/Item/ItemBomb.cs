@@ -9,12 +9,12 @@ public class ItemBomb : Item {
 
 	}
 
-	public override bool GiveItem()
+	public override void GiveItem()
 	{
 
 		Player.Current.Bomb = true;
 
-		return base.GiveItem ();
+		base.GiveItem ();
 
 	}
 

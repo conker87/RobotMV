@@ -10,12 +10,12 @@ public class ItemJumpDouble : Item
 
 	}
 
-	public override bool GiveItem()
+	public override void GiveItem()
 	{
 		
 		Player.Current.DoubleJump = true;
 
-		return base.GiveItem ();
+		base.GiveItem ();
 
 	}
 

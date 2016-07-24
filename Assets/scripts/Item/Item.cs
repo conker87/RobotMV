@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent (typeof (Rigidbody2D))]
 public class Item : MonoBehaviour {
 
 	protected string itemName;
@@ -10,11 +11,9 @@ public class Item : MonoBehaviour {
 
 	}
 
-	public virtual bool GiveItem() {
+	public virtual void GiveItem() {
 
 		Destroy(gameObject);
-
-		return true;
 
 	}
 
