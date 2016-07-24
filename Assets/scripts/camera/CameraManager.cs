@@ -87,7 +87,7 @@ public class CameraManager : MonoBehaviour {
                 if (previousArea == currentArea) { return; }
                 currentArea = previousArea;
 
-                Debug.Log("new area: " + currentArea.ToString());
+				Debug.Log("new area: " + listAreaNodes[currentArea].gameObject.name + " " + currentArea.ToString());
 
 				// HERE WE COULD SEND A MESSAGE TO A UI ELEMENT THAT SHOWS THE NAME OF THE GAMEOBJECT
             }

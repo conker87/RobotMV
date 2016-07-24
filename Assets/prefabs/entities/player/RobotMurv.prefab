@@ -88,7 +88,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 186462}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.5, y: 4.5, z: 0}
+  m_LocalPosition: {x: 25.5, y: 4.5, z: 0}
   m_LocalScale: {x: 0.5, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -214,10 +214,10 @@ MonoBehaviour:
   Jump: 0
   DoubleJump: 0
   TripleJump: 0
-  BasicBlaster: 1
-  BasicBlasterChargeShot: 1
-  MissileLauncher: 1
-  Laser: 1
+  BasicBlaster: 0
+  BasicBlasterChargeShot: 0
+  MissileLauncher: 0
+  Laser: 0
   Bomb: 0
   MegaBomb: 0
   Bombs: 0

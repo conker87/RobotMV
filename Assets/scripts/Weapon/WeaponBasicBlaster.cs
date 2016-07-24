@@ -4,6 +4,7 @@ using System.Collections;
 public class WeaponBasicBlaster : Weapon {
 
 	public float chargedShotMultiplier = 3f;
+	public int chargedShotLevel = 4;
 
 	float chargedShotTimer = 0f, chargedShotTime = .5f;
 	bool fireChargedShot = false;
@@ -85,14 +86,15 @@ public class WeaponBasicBlaster : Weapon {
 					projectileComp.projectileDamage = damagePerTick * chargedShotMultiplier;
 					projectileComp.weaponLevel = weaponLevel;
 					projectileComp.projectileType = projectileType;
+					projectileComp.weaponLevel = chargedShotLevel;
 
 				}
 
 				ShootEnd ();
 
-			}
+				fireChargedShot = false;
 
-			fireChargedShot = false;
+			}
 
 		}
 
