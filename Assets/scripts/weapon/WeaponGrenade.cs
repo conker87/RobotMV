@@ -24,8 +24,10 @@ public class WeaponGrenade : Weapon {
 				
 					Projectile projectileComp = projectile.GetComponent<Projectile> ();
 
-					//projectileComp.transform.LookAt (new Vector3(mousePositionToWorld.x, 0f, 0f));
-					projectileComp.GetComponent<Rigidbody2D>().AddForce(projectileComp.transform.forward * -500f);
+					Debug.Log (mousePositionToWorld.ToString());
+
+					projectileComp.transform.LookAt (mousePositionToWorld);
+					//projectileComp.GetComponent<Rigidbody2D>().AddRelativeForce(
 					//projectileComp.Direction = directionToMousePositionInWorld;
 					projectileComp.projectileDamage = damagePerTick;
 					projectileComp.weaponLevel = weaponLevel;

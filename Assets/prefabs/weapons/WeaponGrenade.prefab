@@ -11,7 +11,7 @@ GameObject:
   - 114: {fileID: 11483992}
   - 212: {fileID: 21239710}
   m_Layer: 10
-  m_Name: WeaponGenade
+  m_Name: WeaponGrenade
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,7 +46,7 @@ MonoBehaviour:
   EnergyCost: 40
   weaponLevel: 3
   damagePerTick: 75
-  Projectile: {fileID: 194682, guid: 884fa1778994967459b1e9ceb3e57ffe, type: 2}
+  Projectile: {fileID: 139484, guid: 1dc6877158e44ea40b7c6a9f007c3c53, type: 2}
   projectileType: 0
   nextShotTime: 0
 --- !u!212 &21239710
