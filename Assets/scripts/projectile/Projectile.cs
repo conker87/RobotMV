@@ -7,6 +7,10 @@ public class Projectile : MonoBehaviour {
 	public  int		weaponLevel;
 	public string	sourceWeapon = "";
 
+	public bool		doNotDestroyGeometry = false;
+
+	public bool 	doNotMoveForward = false;
+
 	public ProjectileType projectileType;
 
 	public float projectileDamage;
@@ -23,8 +27,11 @@ public class Projectile : MonoBehaviour {
 
 		}
 
-		transform.position += Direction * Time.deltaTime * movementSpeed;
+		if (!doNotMoveForward) {
+			
+			transform.position += Direction * Time.deltaTime * movementSpeed;
 
+		}
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
@@ -37,7 +44,7 @@ public class Projectile : MonoBehaviour {
 
 		}
 
-		if (other.gameObject.tag == "Geometry") {
+		if (other.gameObject.tag == "Geometry" && !doNotDestroyGeometry) {
 
 			Destroy (gameObject);
 

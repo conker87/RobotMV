@@ -21,7 +21,8 @@ public class Player : Entity
 	[Header("Weapons")]
 	public bool BasicBlaster = false;
 	public bool BasicBlasterChargeShot = false;
-	public bool MissileLauncher = false, Laser = false;
+	public bool MissileLauncher = false, Grenade = false;
+	public bool Laser = false;
 	[Header("Bombs")]
 	public bool Bomb = false;
 	public bool MegaBomb = false;

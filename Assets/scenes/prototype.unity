@@ -444,6 +444,7 @@ Transform:
   - {fileID: 924975252}
   - {fileID: 83027290}
   - {fileID: 284591960}
+  - {fileID: 666097197}
   m_Father: {fileID: 989830388}
   m_RootOrder: 2
 --- !u!1 &160089429
@@ -1299,6 +1300,10 @@ Prefab:
     - target: {fileID: 2363532, guid: 9f1d4e34d0f0bd24c92e8eb3a00907ba, type: 2}
       propertyPath: m_SortingLayerID
       value: -1043388851
+      objectReference: {fileID: 0}
+    - target: {fileID: 108166, guid: 9f1d4e34d0f0bd24c92e8eb3a00907ba, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
@@ -2303,6 +2308,10 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 651850118}
+--- !u!4 &666097197 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 402556, guid: b0b60fd6dd52f1b49ab5bdb287c7c253, type: 2}
+  m_PrefabInternal: {fileID: 1425715511}
 --- !u!1 &704140507
 GameObject:
   m_ObjectHideFlags: 0
@@ -3760,6 +3769,48 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 411918, guid: 4a46590917ba21a4cb820023256af6c1, type: 2}
   m_PrefabInternal: {fileID: 1362701206}
+--- !u!1001 &1425715511
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 107139819}
+    m_Modifications:
+    - target: {fileID: 402556, guid: b0b60fd6dd52f1b49ab5bdb287c7c253, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 12.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 402556, guid: b0b60fd6dd52f1b49ab5bdb287c7c253, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 11.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 402556, guid: b0b60fd6dd52f1b49ab5bdb287c7c253, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 402556, guid: b0b60fd6dd52f1b49ab5bdb287c7c253, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 402556, guid: b0b60fd6dd52f1b49ab5bdb287c7c253, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 402556, guid: b0b60fd6dd52f1b49ab5bdb287c7c253, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 402556, guid: b0b60fd6dd52f1b49ab5bdb287c7c253, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 402556, guid: b0b60fd6dd52f1b49ab5bdb287c7c253, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: b0b60fd6dd52f1b49ab5bdb287c7c253, type: 2}
+  m_IsPrefabParent: 0
 --- !u!4 &1435672485 stripped
 Transform:
   m_PrefabParentObject: {fileID: 442708, guid: 9f1d4e34d0f0bd24c92e8eb3a00907ba, type: 2}
@@ -4056,7 +4107,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.875
+  orthographic size: 6.125
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -4105,12 +4156,12 @@ MonoBehaviour:
   retroSnap: 0
   assetsPixelsPerUnit: 16
   showHUD: 0
-  cameraSize: {x: 9.395833, y: 5.875}
+  cameraSize: {x: 10.890625, y: 6.125}
   contraintUsed: 0
-  cameraPixelsPerUnit: 48
-  ratio: 3
-  nativeAssetResolution: {x: 300.66666, y: 188}
-  fovCoverage: 0.9038462
+  cameraPixelsPerUnit: 32
+  ratio: 2
+  nativeAssetResolution: {x: 348.5, y: 196}
+  fovCoverage: 0.9423077
 --- !u!114 &1538936282
 MonoBehaviour:
   m_ObjectHideFlags: 0

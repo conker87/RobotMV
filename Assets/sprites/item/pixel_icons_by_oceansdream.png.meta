@@ -1,12 +1,12 @@
 fileFormatVersion: 2
 guid: c1109a2542f89614aa201fc2de0ecd6c
-timeCreated: 1469379904
+timeCreated: 1469392340
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: BasicBlaster[PH]
     21300002: pixel_icons_by_oceansdream_1
-    21300004: pixel_icons_by_oceansdream_2
+    21300004: Grenades[PH]
     21300006: pixel_icons_by_oceansdream_3
     21300008: pixel_icons_by_oceansdream_4
     21300010: pixel_icons_by_oceansdream_5
@@ -108,7 +108,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: pixel_icons_by_oceansdream_2
+    - name: Grenades[PH]
       rect:
         serializedVersion: 2
         x: 48
