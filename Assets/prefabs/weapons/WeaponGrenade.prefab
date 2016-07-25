@@ -41,12 +41,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e8e39085a02755469a0929753e993f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WeaponName: Grenade
+  WeaponName: Grenade_DNU
   AttackSpeed: 3
   EnergyCost: 40
   weaponLevel: 3
   damagePerTick: 75
-  Projectile: {fileID: 139484, guid: 1dc6877158e44ea40b7c6a9f007c3c53, type: 2}
+  Projectile: {fileID: 0}
   projectileType: 0
   nextShotTime: 0
 --- !u!212 &21239710

@@ -7,34 +7,29 @@ public class Projectile : MonoBehaviour {
 	public  int		weaponLevel;
 	public string	sourceWeapon = "";
 
-	public bool		doNotDestroyGeometry = false;
-
-	public bool 	doNotMoveForward = false;
-
 	public ProjectileType projectileType;
 
 	public float projectileDamage;
 
 	public Vector3 Direction;
 
-	void Update () {
+	protected virtual void Start () { 
 
-		// Checks to see if Direction is Normalized() by simply checking to see if itself is normalized, one cannot normalize a direction
-		// to 1 again.
 		if (Direction != Direction.normalized) {
 
 			Direction.Normalize();
 
 		}
 
-		if (!doNotMoveForward) {
-			
-			transform.position += Direction * Time.deltaTime * movementSpeed;
-
-		}
 	}
 
-	void OnTriggerEnter2D(Collider2D other) {
+	protected virtual void Update () {
+
+		transform.position += Direction * Time.deltaTime * movementSpeed;
+
+	}
+
+	protected virtual void OnTriggerEnter2D(Collider2D other) {
 
 		if ((other.gameObject.tag == "Player" && projectileType == ProjectileType.PLAYER) ||
 				(other.gameObject.tag == "Enemy" && projectileType == ProjectileType.ENEMY) || 
@@ -44,7 +39,7 @@ public class Projectile : MonoBehaviour {
 
 		}
 
-		if (other.gameObject.tag == "Geometry" && !doNotDestroyGeometry) {
+		if (other.gameObject.tag == "Geometry") {
 
 			Destroy (gameObject);
 
