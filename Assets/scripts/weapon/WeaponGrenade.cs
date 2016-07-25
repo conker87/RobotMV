@@ -11,10 +11,10 @@ public class WeaponGrenade : Weapon {
 		
 	public override void Shoot(Vector3 ShootLocationPosition) {
 
+		mousePositionToWorld = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+		directionToMousePositionInWorld = mousePositionToWorld - (Vector2) ShootLocationPosition;
+
 		if (Input.GetMouseButtonDown (0)) {
-			
-			mousePositionToWorld = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-			directionToMousePositionInWorld = mousePositionToWorld - (Vector2) ShootLocationPosition;
 
 			if (Time.time > nextShotTime && Player.Current.Energy > EnergyCost) {
 
@@ -26,7 +26,8 @@ public class WeaponGrenade : Weapon {
 
 					Debug.Log (mousePositionToWorld.ToString());
 
-					projectileComp.transform.LookAt (mousePositionToWorld);
+
+
 					//projectileComp.GetComponent<Rigidbody2D>().AddRelativeForce(
 					//projectileComp.Direction = directionToMousePositionInWorld;
 					projectileComp.projectileDamage = damagePerTick;
