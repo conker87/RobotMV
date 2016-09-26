@@ -87,24 +87,10 @@ public class CameraManager : MonoBehaviour {
                 if (previousArea == currentArea) { return; }
                 currentArea = previousArea;
 
-				Debug.Log("new area: " + listAreaNodes[currentArea].gameObject.name + " " + currentArea.ToString());
-
-				// HERE WE COULD SEND A MESSAGE TO A UI ELEMENT THAT SHOWS THE NAME OF THE GAMEOBJECT
+                Debug.Log("new area: " + currentArea.ToString());
             }
         }
     }
-
-	public GameObject GetAreaNode(int area) {
-
-		if (listAreaNodes.Count > 0) {
-
-			return listAreaNodes [area];
-
-		}
-
-		return null;
-
-	}
 
     // Changing the focusObject sets the focusPosition to zero
     public GameObject FocusObject {
