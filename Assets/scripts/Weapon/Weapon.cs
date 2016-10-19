@@ -5,10 +5,10 @@ public abstract class Weapon : MonoBehaviour {
 
 	[Header("Weapon Settings")]
 	public string		WeaponName = "";
-	public float		AttackSpeed = 0.05f;	// This is attack per second
+	public float		AttackSpeed = 0.05f;
 	public float		EnergyCost = 10f;
-	public int			weaponLevel;
 	public float 		damagePerTick = 2f;
+	public int			weaponLevel;
 
 	[Header("Projectile settings")]
 	public GameObject	Projectile;
@@ -24,6 +24,12 @@ public abstract class Weapon : MonoBehaviour {
 	public virtual void Awake () {
 
 		nextShotTime = 0f;
+
+	}
+
+	public virtual void Start () {
+
+
 
 	}
 

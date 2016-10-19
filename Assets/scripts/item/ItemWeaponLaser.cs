@@ -12,7 +12,7 @@ public class ItemWeaponLaser : Item {
 	public override void GiveItem()
 	{
 		
-		Player.Current.MissileLauncher = true;
+		Player.Current.Laser = true;
 
 		base.GiveItem ();
 

@@ -17,6 +17,7 @@ TagManager:
   - Switch
   - Boss
   - IgnoreCollision
+  - LaserLineRenderer
   layers:
   - Default
   - TransparentFX

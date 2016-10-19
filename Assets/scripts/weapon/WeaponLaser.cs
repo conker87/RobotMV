@@ -7,7 +7,7 @@ public class WeaponLaser : Weapon {
 	public LayerMask geometryLayer;
 	public float laserLength = 7f;
 
-	LineRenderer line;
+	public LineRenderer line;
 
 	[Header("_DEBUG_EXTENDED")]
 	[SerializeField] Switch s;
@@ -18,12 +18,35 @@ public class WeaponLaser : Weapon {
 
 		base.Awake ();
 
+	}
+
+	public override void Start () {
+
+		base.Start ();
+
 		line = GetComponent<LineRenderer> ();
-		line.sortingLayerName = "Geometry";
+
+		if (line == null) {
+
+			line = GameObject.FindGameObjectWithTag ("LaserLineRenderer").GetComponent<LineRenderer> ();
+			line.sortingLayerName = "Geometry";
+
+			Debug.Log (line);
+
+		}
 
 	}
 		
 	public override void Shoot(Vector3 ShootLocationPosition) {
+
+		if (line == null) {
+
+			line = GameObject.FindGameObjectWithTag ("LaserLineRenderer").GetComponent<LineRenderer> ();
+			line.sortingLayerName = "Geometry";
+
+			Debug.Log (line);
+
+		}
 
 		if (Input.GetMouseButton (0) && Player.Current.Energy > EnergyCost) {
 

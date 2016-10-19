@@ -13,7 +13,7 @@ public class ItemWeaponGrenade : Item
 	public override void GiveItem()
 	{
 		
-		Player.Current.Grenade = true;
+		Player.Current.DNU_Grenade = true;
 
 		base.GiveItem ();
 

@@ -1,27 +1,27 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &155526
+--- !u!1 &186952
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 419988}
-  - 114: {fileID: 11452466}
+  - 4: {fileID: 476066}
+  - 114: {fileID: 11400196}
   m_Layer: 10
-  m_Name: WeaponBasicBlaster
+  m_Name: 1_WeaponMissileLauncher
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &419988
+--- !u!4 &476066
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 155526}
+  m_GameObject: {fileID: 186952}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -29,26 +29,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &11452466
+--- !u!114 &11400196
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 155526}
+  m_GameObject: {fileID: 186952}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33f12de8136a58e4990d74774e3dd91f, type: 3}
+  m_Script: {fileID: 11500000, guid: e5a564f28255f54439027384c69e28d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WeaponName: Basic Blaster
-  AttackSpeed: 0.08
-  EnergyCost: 2
-  weaponLevel: 0
-  damagePerTick: 2
-  Projectile: {fileID: 139484, guid: 67a5760b2e37c4d4bb07867a7c716c77, type: 2}
+  WeaponName: Missile Launcher
+  AttackSpeed: 0.05
+  EnergyCost: 20
+  damagePerTick: 5
+  weaponLevel: 1
+  Projectile: {fileID: 139484, guid: ef660bded5ebd2949821fa7a321b06a8, type: 2}
   projectileType: 0
   nextShotTime: 0
-  chargedShotMultiplier: 3
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -58,5 +57,5 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 155526}
+  m_RootGameObject: {fileID: 186952}
   m_IsPrefabParent: 1
