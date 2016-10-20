@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
 	public float jumpHeight = 3.5f, timeToJumpApex = .4f, accelerationTimeAirbourne = .2f, accelerationTimeGrounded = .1f;
 	float gravity, jumpVelocity;
 
+	[SerializeField]
 	bool hasJumped = false, hasDoubleJumped = false, hasTripleJumped = false;
 	
 	Vector3 velocity;
@@ -37,7 +38,7 @@ public class PlayerController : MonoBehaviour
 
 		ResetJumpingVarsOnCollisionBelow();
 
-		Jumping (input);
+		Movement (input);
 
 		Shoot ();
 
@@ -65,37 +66,43 @@ public class PlayerController : MonoBehaviour
 
 	}
 
-	void Jumping(Vector2 input) {
+	void Movement(Vector2 input) {
 
-		if (Input.GetButtonDown("Jump") &&
-			(Player.Current.TripleJump&& !hasTripleJumped && hasDoubleJumped) &&
-			(hasJumped || !controller.collisions.below) )
-		{
+		if (controller.collisions.below) {
+			
+			if (Player.Current.Jump && Input.GetButton ("Jump")) {
 
-			velocity.y = jumpVelocity;
+				velocity.y = jumpVelocity;
 
-			hasTripleJumped = true;
+				hasJumped = true;
 
-		}
+			}
 
-		if (Input.GetButtonDown ("Jump") &&
-			(Player.Current.DoubleJump && !hasDoubleJumped) &&
-			(hasJumped || !controller.collisions.below)) {
+		} else {
+			
+			if (Player.Current.TripleJump && Input.GetButtonDown("Jump") && hasJumped) {
 
-			velocity.y = jumpVelocity;
+				if (hasDoubleJumped && !hasTripleJumped) {
 
-			hasDoubleJumped = true;
+					velocity.y = jumpVelocity;
 
-		}
+					hasTripleJumped = true;
 
-		if (Input.GetButton("Jump") &&
-			Player.Current.Jump &&
-			controller.collisions.below)
-		{
+				}
 
-			velocity.y = jumpVelocity;
+			}
 
-			hasJumped = true;
+			if (Player.Current.DoubleJump && Input.GetButtonDown ("Jump") && hasJumped) {
+
+				if (!hasDoubleJumped) {
+
+					velocity.y = jumpVelocity;
+
+					hasDoubleJumped = true;
+
+				}
+
+			}
 
 		}
 

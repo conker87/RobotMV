@@ -23,7 +23,7 @@ public abstract class Weapon : MonoBehaviour {
 	// Use this for initialization
 	public virtual void Awake () {
 
-		nextShotTime = 0f;
+
 
 	}
 
@@ -41,9 +41,8 @@ public abstract class Weapon : MonoBehaviour {
 
 		if (Time.time > nextShotTime) {
 			
-			if (!Player.Current._DEBUG_INFINITE_ENERGY) {
-				Player.Current.Energy -= EnergyCost;
-			}
+			Player.Current.DamageEnergy(EnergyCost);
+
 			nextShotTime = Time.time + AttackSpeed;
 
 		}

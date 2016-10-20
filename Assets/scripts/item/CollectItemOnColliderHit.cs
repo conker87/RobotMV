@@ -3,11 +3,11 @@ using System.Collections;
 
 public class CollectItemOnColliderHit : MonoBehaviour {
 
-	void OnTriggerEnter2D(Collider2D coll) {
+	void OnTriggerEnter2D(Collider2D other) {
 
-		if (coll.gameObject.tag == "Item")
+		if (other.gameObject.tag == "Item")
 		{
-			Item i = coll.gameObject.GetComponent<Item> ();
+			Item i = other.gameObject.GetComponent<Item> ();
 
 			i.GiveItem ();
 			Player.ErrorMessage = "You have collected: " + i.ItemName;

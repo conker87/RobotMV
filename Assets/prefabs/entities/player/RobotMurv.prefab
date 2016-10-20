@@ -60,6 +60,7 @@ GameObject:
   - 114: {fileID: 11496000}
   - 114: {fileID: 11475602}
   - 114: {fileID: 11406232}
+  - 114: {fileID: 114000013806545698}
   - 61: {fileID: 6176158}
   m_Layer: 10
   m_Name: RobotMurv
@@ -192,20 +193,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EntityName: Murv
   _DEBUG_INFINITE_HEALTH: 0
-  Health: 100
+  Health: 1
   HealthMaximum: 100
   HealthRegenPerTick: 0.1
   HealthTanks: 1
   HealthTanksMax: 1
   HealthRegenOn: 0
   dead: 0
-  _DEBUG_INFINITE_ENERGY: 1
+  _DEBUG_INFINITE_ENERGY: 0
   Energy: 50
   EnergyMaximum: 50
   EnergyRegenPerTick: 0.5
   EnergyTanks: 1
   EnergyTanksMax: 1
-  EnergyRegenOn: 1
+  EnergyRegenOn: 0
   hasInvincibilityFrames: 1
   invincibilityFramesLength: 1
   isCurrentlyInInvulnerabilityFrames: 0
@@ -218,6 +219,7 @@ MonoBehaviour:
   BasicBlasterChargeShot: 0
   MissileLauncher: 0
   Laser: 0
+  DNU_Grenade: 0
   Bomb: 0
   MegaBomb: 0
   Bombs: 0
@@ -241,9 +243,12 @@ MonoBehaviour:
   ShootLocation: {fileID: 169950}
   CollectionRadius: {fileID: 135198}
   jumpHeight: 3
-  timeToJumpApex: 0.3
+  timeToJumpApex: 0.4
   accelerationTimeAirbourne: 0.2
   accelerationTimeGrounded: 0.1
+  hasJumped: 0
+  hasDoubleJumped: 0
+  hasTripleJumped: 0
 --- !u!114 &11496000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -272,17 +277,20 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 844d3740b2ef8524abe1d7267d411ec5, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
   m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_SelectedWireframeHidden: 1
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -304,3 +312,14 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 186462}
   m_IsPrefabParent: 1
+--- !u!114 &114000013806545698
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 186462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fde17e90ff51f74aa40ae554951ccb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -18,6 +18,7 @@ TagManager:
   - Boss
   - IgnoreCollision
   - LaserLineRenderer
+  - PowerUp
   layers:
   - Default
   - TransparentFX
@@ -35,7 +36,7 @@ TagManager:
   - Enemy
   - Items
   - Object
-  - 
+  - Powerup
   - 
   - 
   - 

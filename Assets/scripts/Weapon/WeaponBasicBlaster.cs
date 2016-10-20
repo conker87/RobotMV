@@ -23,7 +23,7 @@ public class WeaponBasicBlaster : Weapon {
 		// Normal Shot
 		if (Input.GetMouseButtonDown (0)) {
 
-			if (Time.time > nextShotTime && Player.Current.Energy > EnergyCost) {
+			if ((Player.Current.Energy > EnergyCost) && Time.time > nextShotTime) {
 
 				GameObject projectile = Instantiate (Projectile, ShootLocationPosition, Quaternion.identity) as GameObject;
 
@@ -46,7 +46,7 @@ public class WeaponBasicBlaster : Weapon {
 			
 		if (Input.GetMouseButton (0)) {
 
-			if (Time.time > nextShotTime && Player.Current.Energy > (EnergyCost * chargedShotMultiplier) && Player.Current.BasicBlasterChargeShot) {
+			if (Player.Current.BasicBlasterChargeShot && (Time.time > nextShotTime) && (Player.Current.Energy > (EnergyCost * chargedShotMultiplier))) {
 
 				if (chargedShotTimer >= chargedShotTime) {
 					

@@ -49,7 +49,9 @@ public class Entity : MonoBehaviour {
 		if (!dead && Health == 0) {
 			
 			dead = true;
-			Debug.Log (this + " has hit 0 health and should be removed, if this is the player it should be removed cleanly.");
+			Debug.Log (this + " has hit 0 health and has been removed. If it was an Enemy then it should spawn Health and Energy pickups.");
+
+			Destroy (gameObject);
 
 			return;
 
@@ -79,11 +81,53 @@ public class Entity : MonoBehaviour {
 
 	}
 
+	public virtual void RestoreHealth(float restore) {
+
+		Health += restore;
+
+	}
+
 	public virtual void DamageHealth(float damage) {
+
+		if (_DEBUG_INFINITE_HEALTH) {
+
+			return;
+
+		}
+
+		if (isCurrentlyInInvulnerabilityFrames) {
+
+			return;
+
+		}
+
+		if (hasInvincibilityFrames) {
+
+			isCurrentlyInInvulnerabilityFrames = true;
+
+			iFramesRemoveTime = Time.time + invincibilityFramesLength;
+
+		}
 
 		Health -= damage;
 
-		//OverlayCanvasController.instance.ShowCombatText(gameObject, CombatTextType.Hit, damage.ToString());
+	}
+
+	public virtual void RestoreEnergy(float restore) {
+
+		Energy += restore;
+
+	}
+
+	public virtual void DamageEnergy(float damage) {
+
+		if (_DEBUG_INFINITE_ENERGY) {
+
+			return;
+
+		}
+
+		Energy -= damage;
 
 	}
 

@@ -46,13 +46,7 @@ public class Player : Entity
 
 	public override void DamageHealth(float damage) {
 
-		if (hasInvincibilityFrames && !isCurrentlyInInvulnerabilityFrames) {
-
-			base.DamageHealth (damage);
-			isCurrentlyInInvulnerabilityFrames = true;
-
-			iFramesRemoveTime = Time.time + invincibilityFramesLength;
-		}
+		base.DamageHealth (damage);
 
 	}
 

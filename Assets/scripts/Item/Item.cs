@@ -5,7 +5,7 @@ using System.Collections;
 public class Item : MonoBehaviour {
 
 	protected string itemName;
-	public string ItemName { get; set; }
+	public string ItemName { get { return itemName; } set { itemName = value; } }
 
 	protected virtual void Start() {
 
