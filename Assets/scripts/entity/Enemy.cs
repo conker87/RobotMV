@@ -37,8 +37,8 @@ public class Enemy : Entity {
 
 				for (int i = 0; i < rand; i++) {
 				
-					Vector3 newTransform = new Vector3(transform.position.x + Random.Range(-1.5f, 1.5f),
-														transform.position.y + Random.Range(-1.5f, 1.5f),
+					Vector3 newTransform = new Vector3(transform.position.x + Random.Range(-1f, 1f),
+														transform.position.y + Random.Range(-1f, 1f),
 														0f);
 
 					Instantiate (g, newTransform, Quaternion.identity, droppedPowerupsParent);

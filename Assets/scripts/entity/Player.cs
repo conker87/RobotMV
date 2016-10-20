@@ -28,9 +28,13 @@ public class Player : Entity
 	[Header("Bombs")]
 	public bool Bomb = false;
 	public bool MegaBomb = false;
+
 	[Header("Bombs Count")]
 	public int	Bombs = 0;
 	public int MegaBombs = 0,		BombsMaximum = 0,		MegaBombsMaximum = 0;
+
+	[Header("Tools")]
+	public bool Magnet = false;
 
 	[Header("Currently Equipped Items")]
 	public Item CurrentItem = null;
