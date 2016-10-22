@@ -27,7 +27,7 @@ public class Entity : MonoBehaviour {
 
 	public int EnergyTanks = 1, EnergyTanksMax = 1;
 
-	public bool EnergyRegenOn = false;
+	public bool EnergyRegenOn = true;
 
 	[Header("iFrames")]
 	public bool  hasInvincibilityFrames = false;
@@ -44,7 +44,7 @@ public class Entity : MonoBehaviour {
 	public float MoveSpeed = 6;
 	public float MaximumMoveSpeed = 6;
 
-	void Update() {
+	public virtual void Update() {
 
 		if (!dead && Health == 0) {
 			
@@ -59,13 +59,16 @@ public class Entity : MonoBehaviour {
 
 		if (Time.time > nextTickTime) {
 
-			if (HealthRegenOn)	{	HealthRegen ();	}
-			if (EnergyRegenOn)	{	EnergyRegen ();	}
+			Debug.Log ("Time.time");
+
+			if (HealthRegenOn)	{	Debug.Log ("HealthRegen"); HealthRegen ();	}
+			if (EnergyRegenOn)	{	Debug.Log ("EnergyRegen"); EnergyRegen ();	}
 
 			nextTickTime = Time.time + resourceTick;
 
 		}
 
+		Debug.Log ("Clamping: ");
 		HealthClamp ();
 		EnergyClamp ();
 

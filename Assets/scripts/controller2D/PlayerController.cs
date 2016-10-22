@@ -40,7 +40,8 @@ public class PlayerController : MonoBehaviour
 
 		Movement (input);
 
-		Shoot ();
+		ShootWeapon ();
+		UseItem ();
 
 		ReloadLevelWithKey (KeyCode.P);
 
@@ -115,11 +116,22 @@ public class PlayerController : MonoBehaviour
 
 	}
 
-	void Shoot() {
+	void ShootWeapon() {
 
 		if (Player.Current.CurrentWeapon != null) {
 
 			Player.Current.CurrentWeapon.Shoot (ShootLocation.transform.position);
+			//Player.Current.CurrentWeapon.ShootAfter ();
+
+		}
+
+	}
+
+	void UseItem() {
+		
+		if (Player.Current.CurrentItem != null) {
+
+			Player.Current.CurrentItem.Use();
 			//Player.Current.CurrentWeapon.ShootAfter ();
 
 		}

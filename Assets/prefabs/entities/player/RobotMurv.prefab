@@ -59,8 +59,6 @@ GameObject:
   - 114: {fileID: 11421016}
   - 114: {fileID: 11496000}
   - 114: {fileID: 11475602}
-  - 114: {fileID: 11406232}
-  - 114: {fileID: 114000013806545698}
   - 61: {fileID: 6176158}
   m_Layer: 10
   m_Name: RobotMurv
@@ -169,17 +167,6 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 0.95, y: 0.95}
---- !u!114 &11406232
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 186462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cddf7247d89cf0542897c6ea9faa14c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11421016
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -193,7 +180,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EntityName: Murv
   _DEBUG_INFINITE_HEALTH: 0
-  Health: 1
+  Health: 100
   HealthMaximum: 100
   HealthRegenPerTick: 0.1
   HealthTanks: 1
@@ -206,12 +193,13 @@ MonoBehaviour:
   EnergyRegenPerTick: 0.5
   EnergyTanks: 1
   EnergyTanksMax: 1
-  EnergyRegenOn: 0
+  EnergyRegenOn: 1
   hasInvincibilityFrames: 1
   invincibilityFramesLength: 1
   isCurrentlyInInvulnerabilityFrames: 0
   MoveSpeed: 6
   MaximumMoveSpeed: 6
+  position: {x: 0, y: 0}
   Jump: 0
   DoubleJump: 0
   TripleJump: 0
@@ -226,6 +214,7 @@ MonoBehaviour:
   MegaBombs: 0
   BombsMaximum: 0
   MegaBombsMaximum: 0
+  Magnet: 0
   CurrentItem: {fileID: 0}
   CurrentWeapon: {fileID: 0}
   CanChangeWeapon: 1
@@ -312,14 +301,3 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 186462}
   m_IsPrefabParent: 1
---- !u!114 &114000013806545698
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 186462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fde17e90ff51f74aa40ae554951ccb3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

@@ -9,9 +9,10 @@ public class Player : Entity
 
 	// TODO: This class is the area where the abilities for the Player is stored. It is then saved to the save file via IO.
 		// Get/Set or direct changing? Meh.
-	// THIS MUST BE LOADED FROM THE SAVE FILE AT SaveFileLoad!!!!!!!
 
 	public static Player Current { get; protected set; }
+
+	public Vector2 position;
 
 	[Header("Jumping")]
 	public bool Jump = false;
@@ -45,6 +46,14 @@ public class Player : Entity
 	void Start() {
 
 		Current = this;
+
+	}
+
+	public override void Update() {
+
+		base.Update();
+
+		position = transform.position;
 
 	}
 

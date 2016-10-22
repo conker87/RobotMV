@@ -11,6 +11,8 @@ public class CollectPowerUpOnColliderHit : MonoBehaviour {
 
 			p.GivePowerUp ();
 
+
+
 		}
 
 	}
