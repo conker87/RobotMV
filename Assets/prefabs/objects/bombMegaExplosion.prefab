@@ -22,9 +22,9 @@ GameObject:
   - 114: {fileID: 114000010119287764}
   - 58: {fileID: 58000010927450230}
   - 212: {fileID: 212000011536732462}
-  - 114: {fileID: 114000010383553636}
+  - 114: {fileID: 114000013982357638}
   m_Layer: 11
-  m_Name: bombExplosion
+  m_Name: bombMegaExplosion
   m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68,11 +68,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f7d78253b1b1354690be99ee3f5aff2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionTime: 1
-  damage: 10
+  explosionTime: 1.5
+  damage: 50
   originalScale: {x: 0.1, y: 0.1, z: 1}
-  targetScale: {x: 1.5, y: 1.5, z: 1.5}
---- !u!114 &114000010383553636
+  targetScale: {x: 3, y: 3, z: 3}
+--- !u!114 &114000013982357638
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -84,11 +84,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 0
-  weaponLevel: 1
+  weaponLevel: 5
   sourceWeapon: 
   destroyOnHit: 0
   projectileType: 0
-  projectileDamage: 5
+  projectileDamage: 50
   Direction: {x: 0, y: 0, z: 0}
 --- !u!212 &212000011536732462
 SpriteRenderer:

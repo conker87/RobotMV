@@ -1,20 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ItemPickupBomb : ItemPickup {
+public class ItemPickupBombUpgrade : ItemPickup {
 
-	int bombsGiven = 3;
+	int bombsGiven = 1;
 
 	protected override void Start() {
 
-		ItemName = "Bomb";
+		ItemName = "Bomb Upgrade";
 
 	}
 
 	public override void GiveItem()
 	{
 
-		Player.Current.Bombs = Player.Current.BombsMaximum = bombsGiven;
+		Player.Current.BombsMaximum += bombsGiven;
 
 		base.GiveItem ();
 

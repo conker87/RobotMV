@@ -13,7 +13,7 @@ GameObject:
   - 212: {fileID: 21222160}
   - 50: {fileID: 5013182}
   m_Layer: 14
-  m_Name: ItemJump2
+  m_Name: ItemPickupJump2
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

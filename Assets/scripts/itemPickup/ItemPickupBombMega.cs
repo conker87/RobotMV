@@ -3,6 +3,8 @@ using System.Collections;
 
 public class ItemPickupBombMega : ItemPickup {
 
+	int megaBombsGiven = 1;
+
 	protected override void Start() {
 
 		ItemName = "Mega Bomb";
@@ -12,8 +14,7 @@ public class ItemPickupBombMega : ItemPickup {
 	public override void GiveItem()
 	{
 
-		Player.Current.MegaBombsMaximum = 1;
-		Player.Current.MegaBombs = 1;
+		Player.Current.MegaBombs = Player.Current.MegaBombsMaximum = megaBombsGiven;
 
 		base.GiveItem ();
 

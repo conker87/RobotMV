@@ -24,7 +24,7 @@ GameObject:
   - 212: {fileID: 212000012522135178}
   - 50: {fileID: 50000011534637500}
   m_Layer: 14
-  m_Name: ItemMagnet
+  m_Name: ItemPickupMagnet
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

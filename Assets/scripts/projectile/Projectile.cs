@@ -6,6 +6,7 @@ public class Projectile : MonoBehaviour {
 	public float	movementSpeed = 1f;
 	public  int		weaponLevel;
 	public string	sourceWeapon = "";
+	public bool 	destroyOnHit = true;
 
 	public ProjectileType projectileType;
 
@@ -51,7 +52,9 @@ public class Projectile : MonoBehaviour {
 
 		if ((e = other.gameObject.GetComponentInParent<Entity> ()) != null) {
 
-			Destroy (gameObject);
+			if (destroyOnHit) {
+				Destroy (gameObject);
+			}
 			e.DamageHealth(projectileDamage);
 
 		}

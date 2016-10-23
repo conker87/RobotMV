@@ -19,9 +19,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000013245718600}
-  - 114: {fileID: 114000013469026606}
+  - 114: {fileID: 114000013488103154}
   m_Layer: 10
-  m_Name: ItemBomb
+  m_Name: ItemMegaBomb
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40,7 +40,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &114000013469026606
+--- !u!114 &114000013488103154
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -48,14 +48,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000014179707712}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62cf706482411084787602a92b99eb18, type: 3}
+  m_Script: {fileID: 11500000, guid: c0270f88e1d3e77409063390734c7c77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemName: Bombs
+  ItemName: Mega Bomb
   AttackSpeed: 0.5
-  Cooldown: 1
+  Cooldown: 60
   EnergyCost: 0
-  damagePerTick: 5
-  itemLevel: 1
-  Projectile: {fileID: 1000013484451354, guid: f09a65205e26f6e4c9b906dea2ac328e, type: 2}
+  damagePerTick: 25
+  itemLevel: 5
+  Projectile: {fileID: 1000013484451354, guid: 1bb7516c102477342b17150a6316a028, type: 2}
   nextShotTime: 0

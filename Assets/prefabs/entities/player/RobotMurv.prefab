@@ -199,6 +199,7 @@ MonoBehaviour:
   isCurrentlyInInvulnerabilityFrames: 0
   MoveSpeed: 6
   MaximumMoveSpeed: 6
+  inputManager: {fileID: 0}
   position: {x: 0, y: 0}
   Jump: 0
   DoubleJump: 0
@@ -208,8 +209,6 @@ MonoBehaviour:
   MissileLauncher: 0
   Laser: 0
   DNU_Grenade: 0
-  Bomb: 0
-  MegaBomb: 0
   Bombs: 0
   MegaBombs: 0
   BombsMaximum: 0

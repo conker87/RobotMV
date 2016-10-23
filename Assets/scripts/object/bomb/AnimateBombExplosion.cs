@@ -3,11 +3,9 @@ using System.Collections;
 
 public class AnimateBombExplosion : MonoBehaviour {
 
-	public float explosionTime = 2f;
+	public float explosionTime = 1.5f;
+	public Vector3 originalScale = new Vector3(0.1f, 0.1f, 1f), targetScale = new Vector3(3f, 3f, 3f);
 
-	float tick = 0.5f, nextTickTime;
-
-	// Use this for initialization
 	void Start () {
 
 		StartCoroutine(IncreaseScaleOverTime (explosionTime));
@@ -15,8 +13,6 @@ public class AnimateBombExplosion : MonoBehaviour {
 	}
 	
 	IEnumerator IncreaseScaleOverTime(float time) {
-
-		Vector3 originalScale = new Vector3(0.1f, 0.1f, 1f), targetScale = new Vector3(1.5f, 1.5f, 1f);
 
 		float currentTime = 0.0f;
 
@@ -30,21 +26,6 @@ public class AnimateBombExplosion : MonoBehaviour {
 		} while (currentTime <= time);
 
 		Destroy (gameObject);
-
-	}
-
-	void OnTriggerEnter2D(Collider2D other) {
-
-		Debug.Log("HIT SOMETHING -- " + other.gameObject);
-
-		Enemy e;
-
-		if ((e = other.gameObject.GetComponent<Enemy> ()) != null)
-		{
-			
-			e.DamageHealth (10);
-
-		}
 
 	}
 
