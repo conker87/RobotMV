@@ -3,7 +3,8 @@ using System.Collections;
 
 public class SpawnInSeconds : MonoBehaviour {
 
-	// Use this for initialization
+	public GameObject objectToSpawn;
+
 	void Start () {
 	
 	}

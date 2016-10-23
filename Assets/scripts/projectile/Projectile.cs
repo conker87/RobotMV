@@ -3,16 +3,16 @@ using System.Collections;
 
 public class Projectile : MonoBehaviour {
 
+	public string	ProjectileName = "";
 	public float	movementSpeed = 1f;
-	public  int		weaponLevel;
-	public string	sourceWeapon = "";
 	public bool 	destroyOnHit = true;
+	public float	destroyIn = 3f;
 
-	public ProjectileType projectileType;
-
-	public float projectileDamage;
+	public int	weaponLevel;
 
 	public Vector3 Direction;
+	public float projectileDamage;
+	public ProjectileType projectileType;
 
 	protected virtual void Start () { 
 
@@ -21,6 +21,8 @@ public class Projectile : MonoBehaviour {
 			Direction.Normalize();
 
 		}
+			
+		Invoke ("DestroyGameObject", destroyIn);
 
 	}
 
@@ -42,6 +44,7 @@ public class Projectile : MonoBehaviour {
 
 		if (other.gameObject.tag == "Geometry") {
 
+			OnDeath ();
 			Destroy (gameObject);
 
 			return;
@@ -52,12 +55,29 @@ public class Projectile : MonoBehaviour {
 
 		if ((e = other.gameObject.GetComponentInParent<Entity> ()) != null) {
 
-			if (destroyOnHit) {
-				Destroy (gameObject);
-			}
 			e.DamageHealth(projectileDamage);
 
+			if (destroyOnHit) {
+				
+				OnDeath ();
+				Destroy (gameObject);
+
+			}
+
 		}
+
+	}
+
+	protected virtual void DestroyGameObject() {
+
+		OnDeath ();
+		Destroy(gameObject);
+
+	}
+
+	protected virtual void OnDeath() {
+
+		return;
 
 	}
 

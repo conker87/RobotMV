@@ -32,11 +32,11 @@ public class WeaponBasicBlaster : Weapon {
 					if (projectile != null) {
 
 						Projectile projectileComp = projectile.GetComponent<Projectile> ();
-
-						projectileComp.Direction = directionToMousePositionInWorld;
-						projectileComp.projectileDamage = damagePerTick;
-						projectileComp.weaponLevel = weaponLevel;
-						projectileComp.projectileType = projectileType;
+	
+						projectileComp.Direction =			directionToMousePositionInWorld;
+						projectileComp.projectileDamage =	damagePerTick;
+						projectileComp.weaponLevel =		weaponLevel;
+						projectileComp.projectileType =		projectileType;
 
 					}
 
