@@ -12,6 +12,10 @@ public class Player : Entity
 
 	public static Player Current { get; protected set; }
 
+	float timeToNextBomb, timeToNextMegaBomb;
+
+	public InputManager inputManager;
+
 	public Vector2 position;
 
 	[Header("Jumping")]
@@ -27,12 +31,8 @@ public class Player : Entity
 	public bool DNU_Grenade = false;
 
 	[Header("Bombs")]
-	public bool Bomb = false;
-	public bool MegaBomb = false;
-
-	[Header("Bombs Count")]
 	public int	Bombs = 0;
-	public int MegaBombs = 0,		BombsMaximum = 0,		MegaBombsMaximum = 0;
+	public int 	MegaBombs = 0,		BombsMaximum = 0,		MegaBombsMaximum = 0;
 
 	[Header("Tools")]
 	public bool Magnet = false;
@@ -46,6 +46,7 @@ public class Player : Entity
 	void Start() {
 
 		Current = this;
+		inputManager = GameObject.FindObjectOfType<InputManager>();
 
 	}
 
@@ -53,7 +54,69 @@ public class Player : Entity
 
 		base.Update();
 
+		if (BombsMaximum > 0) {
+			BombsRegen ();
+			BombsClamp ();
+		}
+
+		if (MegaBombsMaximum > 0) {
+			MegaBombsRegen ();
+			MegaBombsClamp ();
+		}
+
 		position = transform.position;
+
+	}
+		
+	void BombsClamp() {
+		
+		Bombs = Mathf.Clamp (Bombs, 0, BombsMaximum);
+
+	}
+
+	void BombsRegen() {
+
+		if (Bombs >= BombsMaximum) {
+
+			Bombs = BombsMaximum;
+			timeToNextBomb = Time.time + 3f;
+
+			return;
+
+		}
+
+		if (Time.time > timeToNextBomb) {
+
+			Bombs++;
+
+			timeToNextBomb = Time.time + 3f;
+
+		}
+
+	}
+		
+	void MegaBombsClamp() {
+		
+		MegaBombs = Mathf.Clamp (MegaBombs, 0, MegaBombsMaximum);
+
+	}
+
+	void MegaBombsRegen() {
+
+		if (MegaBombs >= MegaBombsMaximum) {
+
+			MegaBombs = MegaBombsMaximum;
+			return;
+
+		}
+
+		if (Time.time > timeToNextMegaBomb) {
+
+			MegaBombs++;
+
+			timeToNextMegaBomb = Time.time + 10f;
+
+		}
 
 	}
 
@@ -62,8 +125,7 @@ public class Player : Entity
 		base.DamageHealth (damage);
 
 	}
-
-	//void OnCollisionEnter(Collision2D col) {
+		
 	void OnTriggerStay2D(Collider2D col) {
 
 		Enemy e;
@@ -82,10 +144,11 @@ public class Player : Entity
 		style.normal.textColor = Color.magenta;
 
 		GUI.Label(new Rect(10, 90, 500, 20), ErrorMessage, style);
-		GUI.Label(new Rect(10, 110, 500, 20), "H: " + Health + "/" + HealthMaximum + " (" + HealthRegenOn + "), E: " + Energy + "/" + EnergyMaximum + "(" + EnergyRegenOn + ")", style);
-		GUI.Label(new Rect(10, 130, 500, 20), "Jumps: " + Jump + "/" + DoubleJump + "/" + TripleJump, style);
-		GUI.Label(new Rect(10, 150, 500, 20), "Weaps: " + BasicBlaster + "/" + MissileLauncher + "/" + Laser, style);
-		GUI.Label(new Rect(10, 170, 500, 20), "ATM: " + (CurrentWeapon == null ? "None" : CurrentWeapon.WeaponName), style);
+		GUI.Label(new Rect(10, 110, 500, 20), "H/E: " + Health + "/" + HealthMaximum + " (" + HealthRegenOn + ")|" + Energy + "/" + EnergyMaximum + "(" + EnergyRegenOn + ")", style);
+		GUI.Label(new Rect(10, 130, 500, 20), "Jumps: " + Jump + "|" + DoubleJump + "|" + TripleJump, style);
+		GUI.Label(new Rect(10, 150, 500, 20), "Weaps: " + BasicBlaster + "|" + MissileLauncher + "|" + Laser, style);
+		GUI.Label(new Rect(10, 170, 500, 20), "CW/I: " + (CurrentWeapon == null ? "None" : CurrentWeapon.WeaponName) + "|" + (CurrentItem == null ? "None" : CurrentItem.ItemName), style);
 		GUI.Label(new Rect(10, 190, 500, 20), "Speed: " + MoveSpeed, style);
+		GUI.Label(new Rect(10, 210, 500, 20), "Bombs/Max: " + Bombs + "/" + BombsMaximum + "|" + MegaBombs + "/" + MegaBombsMaximum, style);
 	}
 }

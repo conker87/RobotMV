@@ -59,16 +59,13 @@ public class Entity : MonoBehaviour {
 
 		if (Time.time > nextTickTime) {
 
-			Debug.Log ("Time.time");
-
-			if (HealthRegenOn)	{	Debug.Log ("HealthRegen"); HealthRegen ();	}
-			if (EnergyRegenOn)	{	Debug.Log ("EnergyRegen"); EnergyRegen ();	}
+			if (HealthRegenOn)	{	HealthRegen ();	}
+			if (EnergyRegenOn)	{	EnergyRegen ();	}
 
 			nextTickTime = Time.time + resourceTick;
 
 		}
 
-		Debug.Log ("Clamping: ");
 		HealthClamp ();
 		EnergyClamp ();
 

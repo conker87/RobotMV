@@ -25,7 +25,13 @@ Material:
     - first:
         name: PixelSnap
       second: 1
+    - first:
+        name: _CutOff
+      second: 0.1
     m_Colors:
+    - first:
+        name: _AlphaColorKey
+      second: {r: 0, g: 0, b: 0, a: 0}
     - first:
         name: _Color
       second: {r: 1, g: 1, b: 1, a: 1}

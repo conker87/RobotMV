@@ -30,6 +30,7 @@ public class WeaponLaser : Weapon {
 
 			line = GameObject.FindGameObjectWithTag ("LaserLineRenderer").GetComponent<LineRenderer> ();
 			line.sortingLayerName = "Geometry";
+			line.sortingOrder = -1;
 
 			Debug.Log (line);
 
@@ -42,7 +43,6 @@ public class WeaponLaser : Weapon {
 		if (line == null) {
 
 			line = GameObject.FindGameObjectWithTag ("LaserLineRenderer").GetComponent<LineRenderer> ();
-			line.sortingLayerName = "Geometry";
 
 			Debug.Log (line);
 
@@ -104,7 +104,7 @@ public class WeaponLaser : Weapon {
 
 			}
 
-			ShootEnd ();
+			ShootEnd (EnergyCost);
 
 		} else {
 

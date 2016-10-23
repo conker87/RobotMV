@@ -49,7 +49,7 @@ MonoBehaviour:
   projectileType: 0
   nextShotTime: 0
   chargedShotMultiplier: 3
-  chargedShotLevel: 4
+  chargedShotLevel: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

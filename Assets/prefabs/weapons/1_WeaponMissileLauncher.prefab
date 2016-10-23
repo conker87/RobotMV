@@ -43,8 +43,8 @@ MonoBehaviour:
   WeaponName: Missile Launcher
   AttackSpeed: 0.05
   EnergyCost: 20
-  damagePerTick: 5
-  weaponLevel: 1
+  damagePerTick: 40
+  weaponLevel: 2
   Projectile: {fileID: 139484, guid: ef660bded5ebd2949821fa7a321b06a8, type: 2}
   projectileType: 0
   nextShotTime: 0

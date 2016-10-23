@@ -32,7 +32,7 @@ public class WeaponMissileLauncher : Weapon {
 
 				}
 
-				ShootEnd ();
+				ShootEnd (EnergyCost);
 
 			}
 

@@ -37,11 +37,11 @@ public abstract class Weapon : MonoBehaviour {
 
 	}
 
-	public void ShootEnd() {
+	public void ShootEnd(float energyCost) {
 
 		if (Time.time > nextShotTime) {
 			
-			Player.Current.DamageEnergy(EnergyCost);
+			Player.Current.DamageEnergy(energyCost);
 
 			nextShotTime = Time.time + AttackSpeed;
 

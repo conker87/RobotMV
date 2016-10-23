@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="16" tileheight="16" nextobjectid="1">
+<map version="1.0" orientation="orthogonal" renderorder="left-up" width="32" height="32" tilewidth="16" tileheight="16" nextobjectid="1">
  <tileset firstgid="1" name="SBT" tilewidth="16" tileheight="16" tilecount="360" columns="24">
   <image source="../sprites/geometry/square_block_textures_spliced.png" width="384" height="240"/>
   <tile id="289">
@@ -9,10 +9,6 @@
   </tile>
  </tileset>
  <layer name="Geometry" width="32" height="32">
-  <properties>
-   <property name="unity:layer" value="Geometry"/>
-   <property name="unity:tag" value="Geometry"/>
-  </properties>
   <data encoding="csv">
 82,58,6,60,81,60,5,12,34,77,31,33,57,78,6,6,81,29,6,81,83,84,60,6,83,6,82,29,81,84,82,60,
 82,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,30,0,0,6,56,7,53,78,77,32,77,0,7,
@@ -49,10 +45,6 @@
 </data>
  </layer>
  <layer name="Collision" width="32" height="32">
-  <properties>
-   <property name="unity:layer" value="Geometry"/>
-   <property name="unity:tag" value="Geometry"/>
-  </properties>
   <data encoding="csv">
 290,290,290,290,290,290,290,290,290,290,290,290,290,290,290,290,290,290,290,290,290,290,290,290,290,290,290,290,290,290,290,290,
 290,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,290,0,0,290,290,290,290,290,290,290,290,0,290,

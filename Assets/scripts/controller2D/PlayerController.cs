@@ -71,7 +71,7 @@ public class PlayerController : MonoBehaviour
 
 		if (controller.collisions.below) {
 			
-			if (Player.Current.Jump && Input.GetButton ("Jump")) {
+			if (Player.Current.inputManager.GetButtonDown("Jump") && Player.Current.Jump) {
 
 				velocity.y = jumpVelocity;
 
@@ -81,7 +81,7 @@ public class PlayerController : MonoBehaviour
 
 		} else {
 			
-			if (Player.Current.TripleJump && Input.GetButtonDown("Jump") && hasJumped) {
+			if (Player.Current.inputManager.GetButtonDown("Jump") && Player.Current.TripleJump && hasJumped) {
 
 				if (hasDoubleJumped && !hasTripleJumped) {
 
@@ -93,7 +93,7 @@ public class PlayerController : MonoBehaviour
 
 			}
 
-			if (Player.Current.DoubleJump && Input.GetButtonDown ("Jump") && hasJumped) {
+			if (Player.Current.inputManager.GetButtonDown("Jump") && Player.Current.DoubleJump && hasJumped) {
 
 				if (!hasDoubleJumped) {
 

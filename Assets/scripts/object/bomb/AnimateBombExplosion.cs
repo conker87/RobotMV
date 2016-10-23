@@ -4,7 +4,6 @@ using System.Collections;
 public class AnimateBombExplosion : MonoBehaviour {
 
 	public float explosionTime = 2f;
-	Vector3 originalScale = new Vector3(0.1f, 0.1f, 1f), targetScale = new Vector3(1.5f, 1.5f, 1f);
 
 	float tick = 0.5f, nextTickTime;
 

@@ -12,7 +12,8 @@ public class ItemPickupBombMega : ItemPickup {
 	public override void GiveItem()
 	{
 
-		Player.Current.MegaBomb = true;
+		Player.Current.MegaBombsMaximum = 1;
+		Player.Current.MegaBombs = 1;
 
 		base.GiveItem ();
 

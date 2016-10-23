@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62cf706482411084787602a92b99eb18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemName: 
+  ItemName: Bombs
   AttackSpeed: 0.5
   Cooldown: 2
   EnergyCost: 10
