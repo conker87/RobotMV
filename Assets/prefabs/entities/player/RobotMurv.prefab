@@ -57,8 +57,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 431366}
   - 114: {fileID: 11421016}
-  - 114: {fileID: 11496000}
   - 114: {fileID: 11475602}
+  - 114: {fileID: 11496000}
   - 61: {fileID: 6176158}
   m_Layer: 10
   m_Name: RobotMurv
@@ -182,7 +182,7 @@ MonoBehaviour:
   _DEBUG_INFINITE_HEALTH: 0
   Health: 100
   HealthMaximum: 100
-  HealthRegenPerTick: 0.1
+  HealthRegenPerTick: 1
   HealthTanks: 1
   HealthTanksMax: 1
   HealthRegenOn: 0
@@ -190,7 +190,7 @@ MonoBehaviour:
   _DEBUG_INFINITE_ENERGY: 0
   Energy: 50
   EnergyMaximum: 50
-  EnergyRegenPerTick: 0.5
+  EnergyRegenPerTick: 5
   EnergyTanks: 1
   EnergyTanksMax: 1
   EnergyRegenOn: 1
@@ -213,6 +213,8 @@ MonoBehaviour:
   MegaBombs: 0
   BombsMaximum: 0
   MegaBombsMaximum: 0
+  BombsRegen: 3
+  BombsMegaRegen: 60
   Magnet: 0
   CurrentItem: {fileID: 0}
   CurrentWeapon: {fileID: 0}
@@ -248,14 +250,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54c1249eff151864d9e0ed270a5212a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalRayCount: 5
-  verticalRayCount: 5
+  horizontalRayCount: 4
+  verticalRayCount: 4
   maxSlopeAngle: 80
   maxDecendAngle: 70
   collisionMask:
     serializedVersion: 2
     m_Bits: 4096
-  rayCastColor: {r: 1, g: 0, b: 1, a: 0}
+  rayCastColor: {r: 0, g: 1, b: 1, a: 1}
 --- !u!212 &21218034
 SpriteRenderer:
   m_ObjectHideFlags: 1

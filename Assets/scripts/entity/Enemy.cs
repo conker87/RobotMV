@@ -29,6 +29,9 @@ public class Enemy : Entity {
 
 	void OnDestroy() {
 
+		// TODO: Need to add a DroppedPowerUpsChance for each PowerUp and require checking for bombs.
+		//	Maybe even try using a set value for each PowerUp; Health, Energy, Bombs, MegaBombs, etc.
+
 		foreach (GameObject g in droppedPowerUps) {
 
 			if (Random.value < (powerUpChance / 100f)) {

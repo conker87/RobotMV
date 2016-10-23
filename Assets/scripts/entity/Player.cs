@@ -33,6 +33,7 @@ public class Player : Entity
 	[Header("Bombs")]
 	public int	Bombs = 0;
 	public int 	MegaBombs = 0,		BombsMaximum = 0,		MegaBombsMaximum = 0;
+	public float BombsRegen = 3f,	BombsMegaRegen = 60f;
 
 	[Header("Tools")]
 	public bool Magnet = false;
@@ -55,26 +56,26 @@ public class Player : Entity
 		base.Update();
 
 		if (BombsMaximum > 0) {
-			BombsRegen ();
-			BombsClamp ();
+			DoBombsRegen ();
+			DoBombsClamp ();
 		}
 
 		if (MegaBombsMaximum > 0) {
-			MegaBombsRegen ();
-			MegaBombsClamp ();
+			DoMegaBombsRegen ();
+			DoMegaBombsClamp ();
 		}
 
 		position = transform.position;
 
 	}
 		
-	void BombsClamp() {
+	void DoBombsClamp() {
 		
 		Bombs = Mathf.Clamp (Bombs, 0, BombsMaximum);
 
 	}
 
-	void BombsRegen() {
+	void DoBombsRegen() {
 
 		if (Bombs >= BombsMaximum) {
 
@@ -89,19 +90,19 @@ public class Player : Entity
 
 			Bombs++;
 
-			timeToNextBomb = Time.time + 3f;
+			timeToNextBomb = Time.time + BombsRegen;
 
 		}
 
 	}
 		
-	void MegaBombsClamp() {
+	void DoMegaBombsClamp() {
 		
 		MegaBombs = Mathf.Clamp (MegaBombs, 0, MegaBombsMaximum);
 
 	}
 
-	void MegaBombsRegen() {
+	void DoMegaBombsRegen() {
 
 		if (MegaBombs >= MegaBombsMaximum) {
 
@@ -114,7 +115,7 @@ public class Player : Entity
 
 			MegaBombs++;
 
-			timeToNextMegaBomb = Time.time + 10f;
+			timeToNextMegaBomb = Time.time + BombsMegaRegen;
 
 		}
 

@@ -31,6 +31,10 @@ public class _DEBUG_DEV_TOOLS : MonoBehaviour
 		Player.Current.BasicBlaster = !Player.Current.BasicBlaster;
 	}
 
+	public void _DEBUG_TOGGLE_BASIC_BLASTER_CHARGED() {
+		Player.Current.BasicBlasterChargeShot = !Player.Current.BasicBlasterChargeShot;
+	}
+
 	public void _DEBUG_TOGGLE_MISSILE_LAUNCHER() {
 		Player.Current.MissileLauncher = !Player.Current.MissileLauncher;
 	}

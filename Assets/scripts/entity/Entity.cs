@@ -34,11 +34,11 @@ public class Entity : MonoBehaviour {
 	public float invincibilityFramesLength = 0f;
 	public bool	 isCurrentlyInInvulnerabilityFrames = false;
 
-	void HealthRegen()	{	Health += HealthRegenPerTick;						}
-	void HealthClamp()	{	Health = Mathf.Clamp (Health, 0, HealthMaximum);	}
+	void DoHealthRegen()	{	Health += HealthRegenPerTick;						}
+	void DoHealthClamp()	{	Health = Mathf.Clamp (Health, 0, HealthMaximum);	}
 
-	void EnergyRegen()	{	Energy += EnergyRegenPerTick;						}
-	void EnergyClamp()	{	Energy = Mathf.Clamp (Energy, 0, EnergyMaximum);	}
+	void DoEnergyRegen()	{	Energy += EnergyRegenPerTick;						}
+	void DoEnergyClamp()	{	Energy = Mathf.Clamp (Energy, 0, EnergyMaximum);	}
 
 	[Header("Movement")]
 	public float MoveSpeed = 6;
@@ -59,15 +59,15 @@ public class Entity : MonoBehaviour {
 
 		if (Time.time > nextTickTime) {
 
-			if (HealthRegenOn)	{	HealthRegen ();	}
-			if (EnergyRegenOn)	{	EnergyRegen ();	}
+			if (HealthRegenOn)	{	DoHealthRegen ();	}
+			if (EnergyRegenOn)	{	DoEnergyRegen ();	}
 
 			nextTickTime = Time.time + resourceTick;
 
 		}
 
-		HealthClamp ();
-		EnergyClamp ();
+		DoHealthClamp ();
+		DoEnergyClamp ();
 
 		if (hasInvincibilityFrames && isCurrentlyInInvulnerabilityFrames) {
 
