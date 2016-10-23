@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 2f09508539f9fc04ab5569a835348556
-timeCreated: 1468361857
+timeCreated: 1477257091
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -364,6 +364,7 @@ TextureImporter:
     21300714: square_block_textures_spliced_357
     21300716: square_block_textures_spliced_358
     21300718: square_block_textures_spliced_359
+    21300720: Collision
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -406,11 +407,14 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 16
   alphaIsTransparency: 1
+  spriteTessellationDetail: -1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
+    serializedVersion: 2
     sprites:
-    - name: square_block_textures_spliced_0
+    - serializedVersion: 2
+      name: square_block_textures_spliced_0
       rect:
         serializedVersion: 2
         x: 0
@@ -421,7 +425,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_1
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_1
       rect:
         serializedVersion: 2
         x: 16
@@ -432,7 +438,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_2
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_2
       rect:
         serializedVersion: 2
         x: 32
@@ -443,7 +451,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_3
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_3
       rect:
         serializedVersion: 2
         x: 48
@@ -451,10 +461,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: sbt_brown_1
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: sbt_brown_1
       rect:
         serializedVersion: 2
         x: 64
@@ -465,7 +477,9 @@ TextureImporter:
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: sbt_brown_2
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: sbt_brown_2
       rect:
         serializedVersion: 2
         x: 80
@@ -473,10 +487,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: sbt_brown_3
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: sbt_brown_3
       rect:
         serializedVersion: 2
         x: 96
@@ -484,10 +500,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: sbt_brown_4
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: sbt_brown_4
       rect:
         serializedVersion: 2
         x: 112
@@ -495,10 +513,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_8
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_8
       rect:
         serializedVersion: 2
         x: 128
@@ -506,10 +526,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_9
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_9
       rect:
         serializedVersion: 2
         x: 144
@@ -517,10 +539,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_10
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_10
       rect:
         serializedVersion: 2
         x: 160
@@ -528,10 +552,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_11
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_11
       rect:
         serializedVersion: 2
         x: 176
@@ -539,10 +565,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_12
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_12
       rect:
         serializedVersion: 2
         x: 192
@@ -550,10 +578,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_13
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_13
       rect:
         serializedVersion: 2
         x: 208
@@ -561,10 +591,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_14
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_14
       rect:
         serializedVersion: 2
         x: 224
@@ -572,10 +604,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_15
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_15
       rect:
         serializedVersion: 2
         x: 240
@@ -583,10 +617,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_16
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_16
       rect:
         serializedVersion: 2
         x: 256
@@ -594,10 +630,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_17
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_17
       rect:
         serializedVersion: 2
         x: 272
@@ -605,10 +643,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_18
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_18
       rect:
         serializedVersion: 2
         x: 288
@@ -616,10 +656,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_19
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_19
       rect:
         serializedVersion: 2
         x: 304
@@ -627,10 +669,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_20
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_20
       rect:
         serializedVersion: 2
         x: 320
@@ -638,10 +682,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_21
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_21
       rect:
         serializedVersion: 2
         x: 336
@@ -649,10 +695,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_22
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_22
       rect:
         serializedVersion: 2
         x: 352
@@ -660,10 +708,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_23
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_23
       rect:
         serializedVersion: 2
         x: 368
@@ -671,10 +721,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_24
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_24
       rect:
         serializedVersion: 2
         x: 0
@@ -682,10 +734,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_25
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_25
       rect:
         serializedVersion: 2
         x: 16
@@ -693,10 +747,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_26
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_26
       rect:
         serializedVersion: 2
         x: 32
@@ -704,10 +760,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_27
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_27
       rect:
         serializedVersion: 2
         x: 48
@@ -715,10 +773,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: sbt_brown_5
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: sbt_brown_5
       rect:
         serializedVersion: 2
         x: 64
@@ -726,10 +786,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: sbt_brown_6
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: sbt_brown_6
       rect:
         serializedVersion: 2
         x: 80
@@ -737,10 +799,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: sbt_brown_7
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: sbt_brown_7
       rect:
         serializedVersion: 2
         x: 96
@@ -748,10 +812,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: sbt_brown_8
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: sbt_brown_8
       rect:
         serializedVersion: 2
         x: 112
@@ -759,10 +825,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_32
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_32
       rect:
         serializedVersion: 2
         x: 128
@@ -770,10 +838,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_33
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_33
       rect:
         serializedVersion: 2
         x: 144
@@ -781,10 +851,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_34
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_34
       rect:
         serializedVersion: 2
         x: 160
@@ -792,10 +864,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_35
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_35
       rect:
         serializedVersion: 2
         x: 176
@@ -803,10 +877,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_36
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_36
       rect:
         serializedVersion: 2
         x: 192
@@ -814,10 +890,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_37
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_37
       rect:
         serializedVersion: 2
         x: 208
@@ -825,10 +903,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_38
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_38
       rect:
         serializedVersion: 2
         x: 224
@@ -836,10 +916,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_39
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_39
       rect:
         serializedVersion: 2
         x: 240
@@ -847,10 +929,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_40
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_40
       rect:
         serializedVersion: 2
         x: 256
@@ -858,10 +942,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_41
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_41
       rect:
         serializedVersion: 2
         x: 272
@@ -869,10 +955,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_42
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_42
       rect:
         serializedVersion: 2
         x: 288
@@ -880,10 +968,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_43
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_43
       rect:
         serializedVersion: 2
         x: 304
@@ -891,10 +981,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_44
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_44
       rect:
         serializedVersion: 2
         x: 320
@@ -902,10 +994,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_45
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_45
       rect:
         serializedVersion: 2
         x: 336
@@ -913,10 +1007,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_46
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_46
       rect:
         serializedVersion: 2
         x: 352
@@ -924,10 +1020,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_47
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_47
       rect:
         serializedVersion: 2
         x: 368
@@ -935,10 +1033,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_48
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_48
       rect:
         serializedVersion: 2
         x: 0
@@ -946,10 +1046,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_49
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_49
       rect:
         serializedVersion: 2
         x: 16
@@ -957,10 +1059,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_50
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_50
       rect:
         serializedVersion: 2
         x: 32
@@ -968,10 +1072,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_51
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_51
       rect:
         serializedVersion: 2
         x: 48
@@ -979,10 +1085,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: sbt_brown_9
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: sbt_brown_9
       rect:
         serializedVersion: 2
         x: 64
@@ -990,10 +1098,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: sbt_brown_10
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: sbt_brown_10
       rect:
         serializedVersion: 2
         x: 80
@@ -1001,10 +1111,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: sbt_brown_11
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: sbt_brown_11
       rect:
         serializedVersion: 2
         x: 96
@@ -1012,10 +1124,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: sbt_brown_12
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: sbt_brown_12
       rect:
         serializedVersion: 2
         x: 112
@@ -1023,10 +1137,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_56
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_56
       rect:
         serializedVersion: 2
         x: 128
@@ -1034,10 +1150,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_57
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_57
       rect:
         serializedVersion: 2
         x: 144
@@ -1045,10 +1163,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_58
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_58
       rect:
         serializedVersion: 2
         x: 160
@@ -1056,10 +1176,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_59
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_59
       rect:
         serializedVersion: 2
         x: 176
@@ -1067,10 +1189,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_60
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_60
       rect:
         serializedVersion: 2
         x: 192
@@ -1078,10 +1202,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_61
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_61
       rect:
         serializedVersion: 2
         x: 208
@@ -1089,10 +1215,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_62
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_62
       rect:
         serializedVersion: 2
         x: 224
@@ -1100,10 +1228,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_63
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_63
       rect:
         serializedVersion: 2
         x: 240
@@ -1111,10 +1241,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_64
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_64
       rect:
         serializedVersion: 2
         x: 256
@@ -1122,10 +1254,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_65
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_65
       rect:
         serializedVersion: 2
         x: 272
@@ -1133,10 +1267,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_66
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_66
       rect:
         serializedVersion: 2
         x: 288
@@ -1144,10 +1280,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_67
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_67
       rect:
         serializedVersion: 2
         x: 304
@@ -1155,10 +1293,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_68
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_68
       rect:
         serializedVersion: 2
         x: 320
@@ -1166,10 +1306,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_69
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_69
       rect:
         serializedVersion: 2
         x: 336
@@ -1177,10 +1319,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_70
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_70
       rect:
         serializedVersion: 2
         x: 352
@@ -1188,10 +1332,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_71
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_71
       rect:
         serializedVersion: 2
         x: 368
@@ -1199,10 +1345,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_72
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_72
       rect:
         serializedVersion: 2
         x: 0
@@ -1210,10 +1358,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_73
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_73
       rect:
         serializedVersion: 2
         x: 16
@@ -1221,10 +1371,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_74
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_74
       rect:
         serializedVersion: 2
         x: 32
@@ -1232,10 +1384,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_75
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_75
       rect:
         serializedVersion: 2
         x: 48
@@ -1243,10 +1397,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: sbt_brown_13
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: sbt_brown_13
       rect:
         serializedVersion: 2
         x: 64
@@ -1254,10 +1410,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: sbt_brown_14
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: sbt_brown_14
       rect:
         serializedVersion: 2
         x: 80
@@ -1265,10 +1423,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: sbt_brown_15
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: sbt_brown_15
       rect:
         serializedVersion: 2
         x: 96
@@ -1276,10 +1436,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: sbt_brown_16
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: sbt_brown_16
       rect:
         serializedVersion: 2
         x: 112
@@ -1287,10 +1449,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_80
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_80
       rect:
         serializedVersion: 2
         x: 128
@@ -1298,10 +1462,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_81
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_81
       rect:
         serializedVersion: 2
         x: 144
@@ -1309,10 +1475,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_82
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_82
       rect:
         serializedVersion: 2
         x: 160
@@ -1320,10 +1488,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_83
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_83
       rect:
         serializedVersion: 2
         x: 176
@@ -1331,10 +1501,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_84
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_84
       rect:
         serializedVersion: 2
         x: 192
@@ -1342,10 +1514,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_85
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_85
       rect:
         serializedVersion: 2
         x: 208
@@ -1353,10 +1527,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_86
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_86
       rect:
         serializedVersion: 2
         x: 224
@@ -1364,10 +1540,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_87
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_87
       rect:
         serializedVersion: 2
         x: 240
@@ -1375,10 +1553,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_88
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_88
       rect:
         serializedVersion: 2
         x: 256
@@ -1386,10 +1566,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_89
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_89
       rect:
         serializedVersion: 2
         x: 272
@@ -1397,10 +1579,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_90
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_90
       rect:
         serializedVersion: 2
         x: 288
@@ -1408,10 +1592,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_91
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_91
       rect:
         serializedVersion: 2
         x: 304
@@ -1419,10 +1605,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_92
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_92
       rect:
         serializedVersion: 2
         x: 320
@@ -1430,10 +1618,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_93
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_93
       rect:
         serializedVersion: 2
         x: 336
@@ -1441,10 +1631,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_94
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_94
       rect:
         serializedVersion: 2
         x: 352
@@ -1452,10 +1644,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_95
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_95
       rect:
         serializedVersion: 2
         x: 368
@@ -1463,10 +1657,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_96
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_96
       rect:
         serializedVersion: 2
         x: 0
@@ -1474,10 +1670,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_97
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_97
       rect:
         serializedVersion: 2
         x: 16
@@ -1485,10 +1683,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_98
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_98
       rect:
         serializedVersion: 2
         x: 32
@@ -1496,10 +1696,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_99
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_99
       rect:
         serializedVersion: 2
         x: 48
@@ -1507,10 +1709,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_100
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_100
       rect:
         serializedVersion: 2
         x: 64
@@ -1518,10 +1722,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_101
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_101
       rect:
         serializedVersion: 2
         x: 80
@@ -1529,10 +1735,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_102
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_102
       rect:
         serializedVersion: 2
         x: 96
@@ -1540,10 +1748,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_103
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_103
       rect:
         serializedVersion: 2
         x: 112
@@ -1551,10 +1761,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_104
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_104
       rect:
         serializedVersion: 2
         x: 128
@@ -1562,10 +1774,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_105
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_105
       rect:
         serializedVersion: 2
         x: 144
@@ -1573,10 +1787,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_106
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_106
       rect:
         serializedVersion: 2
         x: 160
@@ -1584,10 +1800,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_107
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_107
       rect:
         serializedVersion: 2
         x: 176
@@ -1595,10 +1813,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_108
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_108
       rect:
         serializedVersion: 2
         x: 192
@@ -1606,10 +1826,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_109
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_109
       rect:
         serializedVersion: 2
         x: 208
@@ -1617,10 +1839,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_110
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_110
       rect:
         serializedVersion: 2
         x: 224
@@ -1628,10 +1852,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_111
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_111
       rect:
         serializedVersion: 2
         x: 240
@@ -1639,10 +1865,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_112
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_112
       rect:
         serializedVersion: 2
         x: 256
@@ -1650,10 +1878,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_113
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_113
       rect:
         serializedVersion: 2
         x: 272
@@ -1661,10 +1891,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_114
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_114
       rect:
         serializedVersion: 2
         x: 288
@@ -1672,10 +1904,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_115
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_115
       rect:
         serializedVersion: 2
         x: 304
@@ -1683,10 +1917,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_116
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_116
       rect:
         serializedVersion: 2
         x: 320
@@ -1694,10 +1930,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_117
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_117
       rect:
         serializedVersion: 2
         x: 336
@@ -1705,10 +1943,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_118
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_118
       rect:
         serializedVersion: 2
         x: 352
@@ -1716,10 +1956,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_119
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_119
       rect:
         serializedVersion: 2
         x: 368
@@ -1727,10 +1969,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_120
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_120
       rect:
         serializedVersion: 2
         x: 0
@@ -1738,10 +1982,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_121
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_121
       rect:
         serializedVersion: 2
         x: 16
@@ -1749,10 +1995,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_122
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_122
       rect:
         serializedVersion: 2
         x: 32
@@ -1760,10 +2008,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_123
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_123
       rect:
         serializedVersion: 2
         x: 48
@@ -1771,10 +2021,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_124
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_124
       rect:
         serializedVersion: 2
         x: 64
@@ -1782,10 +2034,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_125
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_125
       rect:
         serializedVersion: 2
         x: 80
@@ -1793,10 +2047,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_126
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_126
       rect:
         serializedVersion: 2
         x: 96
@@ -1804,10 +2060,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_127
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_127
       rect:
         serializedVersion: 2
         x: 112
@@ -1815,10 +2073,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_128
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_128
       rect:
         serializedVersion: 2
         x: 128
@@ -1826,10 +2086,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_129
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_129
       rect:
         serializedVersion: 2
         x: 144
@@ -1837,10 +2099,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_130
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_130
       rect:
         serializedVersion: 2
         x: 160
@@ -1848,10 +2112,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_131
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_131
       rect:
         serializedVersion: 2
         x: 176
@@ -1859,10 +2125,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_132
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_132
       rect:
         serializedVersion: 2
         x: 192
@@ -1870,10 +2138,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_133
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_133
       rect:
         serializedVersion: 2
         x: 208
@@ -1881,10 +2151,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_134
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_134
       rect:
         serializedVersion: 2
         x: 224
@@ -1892,10 +2164,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_135
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_135
       rect:
         serializedVersion: 2
         x: 240
@@ -1903,10 +2177,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_136
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_136
       rect:
         serializedVersion: 2
         x: 256
@@ -1914,10 +2190,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_137
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_137
       rect:
         serializedVersion: 2
         x: 272
@@ -1925,10 +2203,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_138
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_138
       rect:
         serializedVersion: 2
         x: 288
@@ -1936,10 +2216,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_139
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_139
       rect:
         serializedVersion: 2
         x: 304
@@ -1947,10 +2229,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_140
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_140
       rect:
         serializedVersion: 2
         x: 320
@@ -1958,10 +2242,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_141
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_141
       rect:
         serializedVersion: 2
         x: 336
@@ -1969,10 +2255,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_142
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_142
       rect:
         serializedVersion: 2
         x: 352
@@ -1980,10 +2268,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_143
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_143
       rect:
         serializedVersion: 2
         x: 368
@@ -1991,10 +2281,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_144
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_144
       rect:
         serializedVersion: 2
         x: 0
@@ -2002,10 +2294,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_145
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_145
       rect:
         serializedVersion: 2
         x: 16
@@ -2013,10 +2307,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_146
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_146
       rect:
         serializedVersion: 2
         x: 32
@@ -2024,10 +2320,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_147
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_147
       rect:
         serializedVersion: 2
         x: 48
@@ -2035,10 +2333,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_148
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_148
       rect:
         serializedVersion: 2
         x: 64
@@ -2046,10 +2346,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_149
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_149
       rect:
         serializedVersion: 2
         x: 80
@@ -2057,10 +2359,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_150
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_150
       rect:
         serializedVersion: 2
         x: 96
@@ -2068,10 +2372,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_151
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_151
       rect:
         serializedVersion: 2
         x: 112
@@ -2079,10 +2385,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_152
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_152
       rect:
         serializedVersion: 2
         x: 128
@@ -2090,10 +2398,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_153
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_153
       rect:
         serializedVersion: 2
         x: 144
@@ -2101,10 +2411,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_154
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_154
       rect:
         serializedVersion: 2
         x: 160
@@ -2112,10 +2424,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_155
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_155
       rect:
         serializedVersion: 2
         x: 176
@@ -2123,10 +2437,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_156
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_156
       rect:
         serializedVersion: 2
         x: 192
@@ -2134,10 +2450,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_157
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_157
       rect:
         serializedVersion: 2
         x: 208
@@ -2145,10 +2463,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_158
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_158
       rect:
         serializedVersion: 2
         x: 224
@@ -2156,10 +2476,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_159
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_159
       rect:
         serializedVersion: 2
         x: 240
@@ -2167,10 +2489,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_160
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_160
       rect:
         serializedVersion: 2
         x: 256
@@ -2178,10 +2502,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_161
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_161
       rect:
         serializedVersion: 2
         x: 272
@@ -2189,10 +2515,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_162
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_162
       rect:
         serializedVersion: 2
         x: 288
@@ -2200,10 +2528,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_163
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_163
       rect:
         serializedVersion: 2
         x: 304
@@ -2211,10 +2541,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_164
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_164
       rect:
         serializedVersion: 2
         x: 320
@@ -2222,10 +2554,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_165
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_165
       rect:
         serializedVersion: 2
         x: 336
@@ -2233,10 +2567,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_166
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_166
       rect:
         serializedVersion: 2
         x: 352
@@ -2244,10 +2580,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_167
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_167
       rect:
         serializedVersion: 2
         x: 368
@@ -2255,10 +2593,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_168
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_168
       rect:
         serializedVersion: 2
         x: 0
@@ -2266,10 +2606,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_169
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_169
       rect:
         serializedVersion: 2
         x: 16
@@ -2277,10 +2619,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_170
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_170
       rect:
         serializedVersion: 2
         x: 32
@@ -2288,10 +2632,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_171
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_171
       rect:
         serializedVersion: 2
         x: 48
@@ -2299,10 +2645,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_172
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_172
       rect:
         serializedVersion: 2
         x: 64
@@ -2310,10 +2658,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_173
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_173
       rect:
         serializedVersion: 2
         x: 80
@@ -2321,10 +2671,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_174
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_174
       rect:
         serializedVersion: 2
         x: 96
@@ -2332,10 +2684,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_175
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_175
       rect:
         serializedVersion: 2
         x: 112
@@ -2343,10 +2697,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_176
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_176
       rect:
         serializedVersion: 2
         x: 128
@@ -2354,10 +2710,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_177
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_177
       rect:
         serializedVersion: 2
         x: 144
@@ -2365,10 +2723,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_178
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_178
       rect:
         serializedVersion: 2
         x: 160
@@ -2376,10 +2736,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_179
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_179
       rect:
         serializedVersion: 2
         x: 176
@@ -2387,10 +2749,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_180
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_180
       rect:
         serializedVersion: 2
         x: 192
@@ -2398,10 +2762,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_181
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_181
       rect:
         serializedVersion: 2
         x: 208
@@ -2409,10 +2775,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_182
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_182
       rect:
         serializedVersion: 2
         x: 224
@@ -2420,10 +2788,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_183
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_183
       rect:
         serializedVersion: 2
         x: 240
@@ -2431,10 +2801,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_184
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_184
       rect:
         serializedVersion: 2
         x: 256
@@ -2442,10 +2814,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_185
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_185
       rect:
         serializedVersion: 2
         x: 272
@@ -2453,10 +2827,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_186
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_186
       rect:
         serializedVersion: 2
         x: 288
@@ -2464,10 +2840,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_187
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_187
       rect:
         serializedVersion: 2
         x: 304
@@ -2475,10 +2853,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_188
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_188
       rect:
         serializedVersion: 2
         x: 320
@@ -2486,10 +2866,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_189
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_189
       rect:
         serializedVersion: 2
         x: 336
@@ -2497,10 +2879,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_190
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_190
       rect:
         serializedVersion: 2
         x: 352
@@ -2508,10 +2892,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_191
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_191
       rect:
         serializedVersion: 2
         x: 368
@@ -2519,10 +2905,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_192
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_192
       rect:
         serializedVersion: 2
         x: 0
@@ -2530,10 +2918,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_193
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_193
       rect:
         serializedVersion: 2
         x: 16
@@ -2541,10 +2931,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_194
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_194
       rect:
         serializedVersion: 2
         x: 32
@@ -2552,10 +2944,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_195
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_195
       rect:
         serializedVersion: 2
         x: 48
@@ -2563,10 +2957,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_196
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_196
       rect:
         serializedVersion: 2
         x: 64
@@ -2574,10 +2970,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_197
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_197
       rect:
         serializedVersion: 2
         x: 80
@@ -2585,10 +2983,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_198
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_198
       rect:
         serializedVersion: 2
         x: 96
@@ -2596,10 +2996,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_199
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_199
       rect:
         serializedVersion: 2
         x: 112
@@ -2607,10 +3009,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_200
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_200
       rect:
         serializedVersion: 2
         x: 128
@@ -2618,10 +3022,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_201
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_201
       rect:
         serializedVersion: 2
         x: 144
@@ -2629,10 +3035,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_202
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_202
       rect:
         serializedVersion: 2
         x: 160
@@ -2640,10 +3048,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_203
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_203
       rect:
         serializedVersion: 2
         x: 176
@@ -2651,10 +3061,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_204
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_204
       rect:
         serializedVersion: 2
         x: 192
@@ -2662,10 +3074,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_205
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_205
       rect:
         serializedVersion: 2
         x: 208
@@ -2673,10 +3087,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_206
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_206
       rect:
         serializedVersion: 2
         x: 224
@@ -2684,10 +3100,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_207
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_207
       rect:
         serializedVersion: 2
         x: 240
@@ -2695,10 +3113,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_208
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_208
       rect:
         serializedVersion: 2
         x: 256
@@ -2706,10 +3126,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_209
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_209
       rect:
         serializedVersion: 2
         x: 272
@@ -2717,10 +3139,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_210
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_210
       rect:
         serializedVersion: 2
         x: 288
@@ -2728,10 +3152,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_211
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_211
       rect:
         serializedVersion: 2
         x: 304
@@ -2739,10 +3165,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_212
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_212
       rect:
         serializedVersion: 2
         x: 320
@@ -2750,10 +3178,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_213
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_213
       rect:
         serializedVersion: 2
         x: 336
@@ -2761,10 +3191,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_214
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_214
       rect:
         serializedVersion: 2
         x: 352
@@ -2772,10 +3204,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_215
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_215
       rect:
         serializedVersion: 2
         x: 368
@@ -2783,10 +3217,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_216
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_216
       rect:
         serializedVersion: 2
         x: 0
@@ -2794,10 +3230,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_217
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_217
       rect:
         serializedVersion: 2
         x: 16
@@ -2805,10 +3243,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_218
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_218
       rect:
         serializedVersion: 2
         x: 32
@@ -2816,10 +3256,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_219
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_219
       rect:
         serializedVersion: 2
         x: 48
@@ -2827,10 +3269,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_220
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_220
       rect:
         serializedVersion: 2
         x: 64
@@ -2838,10 +3282,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_221
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_221
       rect:
         serializedVersion: 2
         x: 80
@@ -2849,10 +3295,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_222
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_222
       rect:
         serializedVersion: 2
         x: 96
@@ -2860,10 +3308,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_223
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_223
       rect:
         serializedVersion: 2
         x: 112
@@ -2871,10 +3321,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_224
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_224
       rect:
         serializedVersion: 2
         x: 128
@@ -2882,10 +3334,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_225
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_225
       rect:
         serializedVersion: 2
         x: 144
@@ -2893,10 +3347,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_226
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_226
       rect:
         serializedVersion: 2
         x: 160
@@ -2904,10 +3360,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_227
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_227
       rect:
         serializedVersion: 2
         x: 176
@@ -2915,10 +3373,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_228
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_228
       rect:
         serializedVersion: 2
         x: 192
@@ -2926,10 +3386,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_229
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_229
       rect:
         serializedVersion: 2
         x: 208
@@ -2937,10 +3399,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_230
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_230
       rect:
         serializedVersion: 2
         x: 224
@@ -2948,10 +3412,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_231
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_231
       rect:
         serializedVersion: 2
         x: 240
@@ -2959,10 +3425,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_232
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_232
       rect:
         serializedVersion: 2
         x: 256
@@ -2970,10 +3438,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_233
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_233
       rect:
         serializedVersion: 2
         x: 272
@@ -2981,10 +3451,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_234
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_234
       rect:
         serializedVersion: 2
         x: 288
@@ -2992,10 +3464,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_235
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_235
       rect:
         serializedVersion: 2
         x: 304
@@ -3003,10 +3477,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_236
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_236
       rect:
         serializedVersion: 2
         x: 320
@@ -3014,10 +3490,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_237
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_237
       rect:
         serializedVersion: 2
         x: 336
@@ -3025,10 +3503,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_238
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_238
       rect:
         serializedVersion: 2
         x: 352
@@ -3036,10 +3516,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_239
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_239
       rect:
         serializedVersion: 2
         x: 368
@@ -3047,10 +3529,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_240
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_240
       rect:
         serializedVersion: 2
         x: 0
@@ -3058,10 +3542,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_241
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_241
       rect:
         serializedVersion: 2
         x: 16
@@ -3069,10 +3555,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_242
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_242
       rect:
         serializedVersion: 2
         x: 32
@@ -3080,10 +3568,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_243
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_243
       rect:
         serializedVersion: 2
         x: 48
@@ -3091,10 +3581,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_244
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_244
       rect:
         serializedVersion: 2
         x: 64
@@ -3102,10 +3594,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_245
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_245
       rect:
         serializedVersion: 2
         x: 80
@@ -3113,10 +3607,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_246
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_246
       rect:
         serializedVersion: 2
         x: 96
@@ -3124,10 +3620,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_247
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_247
       rect:
         serializedVersion: 2
         x: 112
@@ -3135,10 +3633,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_248
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_248
       rect:
         serializedVersion: 2
         x: 128
@@ -3146,10 +3646,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_249
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_249
       rect:
         serializedVersion: 2
         x: 144
@@ -3157,10 +3659,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_250
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_250
       rect:
         serializedVersion: 2
         x: 160
@@ -3168,10 +3672,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_251
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_251
       rect:
         serializedVersion: 2
         x: 176
@@ -3179,10 +3685,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_252
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_252
       rect:
         serializedVersion: 2
         x: 192
@@ -3190,10 +3698,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_253
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_253
       rect:
         serializedVersion: 2
         x: 208
@@ -3201,10 +3711,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_254
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_254
       rect:
         serializedVersion: 2
         x: 224
@@ -3212,10 +3724,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_255
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_255
       rect:
         serializedVersion: 2
         x: 240
@@ -3223,10 +3737,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_256
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_256
       rect:
         serializedVersion: 2
         x: 256
@@ -3234,10 +3750,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_257
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_257
       rect:
         serializedVersion: 2
         x: 272
@@ -3245,10 +3763,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_258
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_258
       rect:
         serializedVersion: 2
         x: 288
@@ -3256,10 +3776,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_259
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_259
       rect:
         serializedVersion: 2
         x: 304
@@ -3267,10 +3789,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_260
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_260
       rect:
         serializedVersion: 2
         x: 320
@@ -3278,10 +3802,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_261
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_261
       rect:
         serializedVersion: 2
         x: 336
@@ -3289,10 +3815,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_262
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_262
       rect:
         serializedVersion: 2
         x: 352
@@ -3300,10 +3828,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_263
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_263
       rect:
         serializedVersion: 2
         x: 368
@@ -3311,10 +3841,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_264
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_264
       rect:
         serializedVersion: 2
         x: 0
@@ -3322,10 +3854,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_265
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_265
       rect:
         serializedVersion: 2
         x: 16
@@ -3333,10 +3867,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_266
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_266
       rect:
         serializedVersion: 2
         x: 32
@@ -3344,10 +3880,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_267
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_267
       rect:
         serializedVersion: 2
         x: 48
@@ -3355,10 +3893,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_268
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_268
       rect:
         serializedVersion: 2
         x: 64
@@ -3366,10 +3906,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_269
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_269
       rect:
         serializedVersion: 2
         x: 80
@@ -3377,10 +3919,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_270
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_270
       rect:
         serializedVersion: 2
         x: 96
@@ -3388,10 +3932,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_271
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_271
       rect:
         serializedVersion: 2
         x: 112
@@ -3399,10 +3945,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_272
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_272
       rect:
         serializedVersion: 2
         x: 128
@@ -3410,10 +3958,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_273
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_273
       rect:
         serializedVersion: 2
         x: 144
@@ -3421,10 +3971,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_274
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_274
       rect:
         serializedVersion: 2
         x: 160
@@ -3432,10 +3984,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_275
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_275
       rect:
         serializedVersion: 2
         x: 176
@@ -3443,10 +3997,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_276
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_276
       rect:
         serializedVersion: 2
         x: 192
@@ -3454,10 +4010,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_277
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_277
       rect:
         serializedVersion: 2
         x: 208
@@ -3465,10 +4023,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_278
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_278
       rect:
         serializedVersion: 2
         x: 224
@@ -3476,10 +4036,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_279
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_279
       rect:
         serializedVersion: 2
         x: 240
@@ -3487,10 +4049,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_280
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_280
       rect:
         serializedVersion: 2
         x: 256
@@ -3498,10 +4062,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_281
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_281
       rect:
         serializedVersion: 2
         x: 272
@@ -3509,10 +4075,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_282
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_282
       rect:
         serializedVersion: 2
         x: 288
@@ -3520,10 +4088,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_283
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_283
       rect:
         serializedVersion: 2
         x: 304
@@ -3531,10 +4101,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_284
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_284
       rect:
         serializedVersion: 2
         x: 320
@@ -3542,10 +4114,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_285
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_285
       rect:
         serializedVersion: 2
         x: 336
@@ -3553,10 +4127,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_286
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_286
       rect:
         serializedVersion: 2
         x: 352
@@ -3564,10 +4140,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_287
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_287
       rect:
         serializedVersion: 2
         x: 368
@@ -3575,10 +4153,12 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_288
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_288
       rect:
         serializedVersion: 2
         x: 0
@@ -3586,10 +4166,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_306
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_306
       rect:
         serializedVersion: 2
         x: 8
@@ -3597,10 +4179,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_307
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_307
       rect:
         serializedVersion: 2
         x: 0
@@ -3608,10 +4192,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_308
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_308
       rect:
         serializedVersion: 2
         x: 8
@@ -3619,10 +4205,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_289
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_289
       rect:
         serializedVersion: 2
         x: 0
@@ -3630,10 +4218,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_290
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_290
       rect:
         serializedVersion: 2
         x: 8
@@ -3641,10 +4231,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_291
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_291
       rect:
         serializedVersion: 2
         x: 0
@@ -3652,10 +4244,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_292
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_292
       rect:
         serializedVersion: 2
         x: 8
@@ -3663,10 +4257,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_293
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_293
       rect:
         serializedVersion: 2
         x: 0
@@ -3674,10 +4270,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_294
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_294
       rect:
         serializedVersion: 2
         x: 8
@@ -3685,10 +4283,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_295
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_295
       rect:
         serializedVersion: 2
         x: 0
@@ -3696,10 +4296,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_296
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_296
       rect:
         serializedVersion: 2
         x: 8
@@ -3707,10 +4309,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_297
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_297
       rect:
         serializedVersion: 2
         x: 64
@@ -3718,10 +4322,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_298
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_298
       rect:
         serializedVersion: 2
         x: 72
@@ -3729,10 +4335,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_299
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_299
       rect:
         serializedVersion: 2
         x: 64
@@ -3740,10 +4348,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_300
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_300
       rect:
         serializedVersion: 2
         x: 72
@@ -3751,10 +4361,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_301
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_301
       rect:
         serializedVersion: 2
         x: 64
@@ -3762,10 +4374,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_302
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_302
       rect:
         serializedVersion: 2
         x: 72
@@ -3773,10 +4387,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_303
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_303
       rect:
         serializedVersion: 2
         x: 64
@@ -3784,10 +4400,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_304
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_304
       rect:
         serializedVersion: 2
         x: 72
@@ -3795,10 +4413,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_305
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_305
       rect:
         serializedVersion: 2
         x: 64
@@ -3806,10 +4426,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_309
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_309
       rect:
         serializedVersion: 2
         x: 72
@@ -3817,10 +4439,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_310
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_310
       rect:
         serializedVersion: 2
         x: 64
@@ -3828,10 +4452,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_311
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_311
       rect:
         serializedVersion: 2
         x: 72
@@ -3839,10 +4465,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_312
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_312
       rect:
         serializedVersion: 2
         x: 128
@@ -3850,10 +4478,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_313
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_313
       rect:
         serializedVersion: 2
         x: 136
@@ -3861,10 +4491,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_314
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_314
       rect:
         serializedVersion: 2
         x: 128
@@ -3872,10 +4504,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_315
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_315
       rect:
         serializedVersion: 2
         x: 136
@@ -3883,10 +4517,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_316
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_316
       rect:
         serializedVersion: 2
         x: 128
@@ -3894,10 +4530,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_317
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_317
       rect:
         serializedVersion: 2
         x: 136
@@ -3905,10 +4543,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_318
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_318
       rect:
         serializedVersion: 2
         x: 128
@@ -3916,10 +4556,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_319
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_319
       rect:
         serializedVersion: 2
         x: 136
@@ -3927,10 +4569,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_320
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_320
       rect:
         serializedVersion: 2
         x: 128
@@ -3938,10 +4582,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_321
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_321
       rect:
         serializedVersion: 2
         x: 136
@@ -3949,10 +4595,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_322
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_322
       rect:
         serializedVersion: 2
         x: 128
@@ -3960,10 +4608,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_323
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_323
       rect:
         serializedVersion: 2
         x: 136
@@ -3971,10 +4621,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_324
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_324
       rect:
         serializedVersion: 2
         x: 192
@@ -3982,10 +4634,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_325
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_325
       rect:
         serializedVersion: 2
         x: 200
@@ -3993,10 +4647,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_326
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_326
       rect:
         serializedVersion: 2
         x: 192
@@ -4004,10 +4660,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_327
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_327
       rect:
         serializedVersion: 2
         x: 200
@@ -4015,10 +4673,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_328
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_328
       rect:
         serializedVersion: 2
         x: 192
@@ -4026,10 +4686,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_329
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_329
       rect:
         serializedVersion: 2
         x: 200
@@ -4037,10 +4699,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_330
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_330
       rect:
         serializedVersion: 2
         x: 192
@@ -4048,10 +4712,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_331
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_331
       rect:
         serializedVersion: 2
         x: 200
@@ -4059,10 +4725,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_332
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_332
       rect:
         serializedVersion: 2
         x: 192
@@ -4070,10 +4738,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_333
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_333
       rect:
         serializedVersion: 2
         x: 200
@@ -4081,10 +4751,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_334
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_334
       rect:
         serializedVersion: 2
         x: 192
@@ -4092,10 +4764,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_335
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_335
       rect:
         serializedVersion: 2
         x: 200
@@ -4103,10 +4777,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_336
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_336
       rect:
         serializedVersion: 2
         x: 256
@@ -4114,10 +4790,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_337
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_337
       rect:
         serializedVersion: 2
         x: 264
@@ -4125,10 +4803,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_338
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_338
       rect:
         serializedVersion: 2
         x: 256
@@ -4136,10 +4816,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_339
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_339
       rect:
         serializedVersion: 2
         x: 264
@@ -4147,10 +4829,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_340
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_340
       rect:
         serializedVersion: 2
         x: 256
@@ -4158,10 +4842,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_341
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_341
       rect:
         serializedVersion: 2
         x: 264
@@ -4169,10 +4855,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_342
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_342
       rect:
         serializedVersion: 2
         x: 256
@@ -4180,10 +4868,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_343
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_343
       rect:
         serializedVersion: 2
         x: 264
@@ -4191,10 +4881,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_344
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_344
       rect:
         serializedVersion: 2
         x: 256
@@ -4202,10 +4894,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_345
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_345
       rect:
         serializedVersion: 2
         x: 264
@@ -4213,10 +4907,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_346
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_346
       rect:
         serializedVersion: 2
         x: 256
@@ -4224,10 +4920,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_347
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_347
       rect:
         serializedVersion: 2
         x: 264
@@ -4235,10 +4933,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_348
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_348
       rect:
         serializedVersion: 2
         x: 320
@@ -4246,10 +4946,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_349
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_349
       rect:
         serializedVersion: 2
         x: 328
@@ -4257,10 +4959,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_350
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_350
       rect:
         serializedVersion: 2
         x: 320
@@ -4268,10 +4972,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_351
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_351
       rect:
         serializedVersion: 2
         x: 328
@@ -4279,10 +4985,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_352
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_352
       rect:
         serializedVersion: 2
         x: 320
@@ -4290,10 +4998,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_353
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_353
       rect:
         serializedVersion: 2
         x: 328
@@ -4301,10 +5011,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_354
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_354
       rect:
         serializedVersion: 2
         x: 320
@@ -4312,10 +5024,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_355
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_355
       rect:
         serializedVersion: 2
         x: 328
@@ -4323,10 +5037,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_356
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_356
       rect:
         serializedVersion: 2
         x: 320
@@ -4334,10 +5050,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_357
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_357
       rect:
         serializedVersion: 2
         x: 328
@@ -4345,10 +5063,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_358
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_358
       rect:
         serializedVersion: 2
         x: 320
@@ -4356,10 +5076,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: square_block_textures_spliced_359
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: square_block_textures_spliced_359
       rect:
         serializedVersion: 2
         x: 328
@@ -4367,9 +5089,23 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Collision
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
     outline: []
   spritePackingTag: 
   userData: 

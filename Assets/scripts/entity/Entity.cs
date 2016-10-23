@@ -51,9 +51,7 @@ public class Entity : MonoBehaviour {
 			dead = true;
 			Debug.Log (this + " has hit 0 health and has been removed. If it was an Enemy then it should spawn Health and Energy pickups.");
 
-			Destroy (gameObject);
-
-			return;
+			DoDeath ();
 
 		}
 
@@ -78,6 +76,14 @@ public class Entity : MonoBehaviour {
 			}
 
 		}
+
+	}
+
+	public virtual void DoDeath() {
+
+		Destroy (gameObject);
+
+		return;
 
 	}
 
