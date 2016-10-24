@@ -185,9 +185,13 @@ MonoBehaviour:
   MaximumMoveSpeed: 6
   powerUpChance: 100
   droppedPowerupsParent: {fileID: 0}
+  droppedPowerUpsChance:
+  - 50
+  - 50
+  droppedPowerUpsMax: 0500000005000000
   droppedPowerUps:
-  - {fileID: 1000013445478154, guid: 61f7179d513d67e4a952a82c4d65f105, type: 2}
   - {fileID: 1000012869973274, guid: 4f46e4eb1e4615d499ee76e4db8f25b0, type: 2}
+  - {fileID: 1000013445478154, guid: 61f7179d513d67e4a952a82c4d65f105, type: 2}
   DamageOnTouch: 3
 --- !u!212 &21208152
 SpriteRenderer:
@@ -235,7 +239,7 @@ SpriteRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5028263afa6af6642af47b337c6c05af, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}

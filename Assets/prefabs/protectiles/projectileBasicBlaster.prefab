@@ -74,14 +74,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d06beee1ab27bd44ae4255c4fbd4602, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ProjectileName: Blaster
   movementSpeed: 8.5
-  weaponLevel: 0
-  sourceWeapon: BasicBlaster
   destroyOnHit: 1
   destroyIn: 3
-  projectileType: 0
-  projectileDamage: 0
+  weaponLevel: 0
   Direction: {x: 0, y: 0, z: 0}
+  projectileDamage: 0
+  projectileType: 0
+  onDeathObjectSpawn: {fileID: 0}
 --- !u!212 &21213448
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -5,7 +5,7 @@ public class Projectile : MonoBehaviour {
 
 	public string	ProjectileName = "";
 	public float	movementSpeed = 1f;
-	public bool 	destroyOnHit = true;
+	public bool 	destroyOnHit = true, ignoreGeometry = false;
 	public float	destroyIn = 3f;
 
 	public int	weaponLevel;
@@ -13,6 +13,8 @@ public class Projectile : MonoBehaviour {
 	public Vector3 Direction;
 	public float projectileDamage;
 	public ProjectileType projectileType;
+
+	public GameObject onDeathObjectSpawn;
 
 	protected virtual void Start () { 
 
@@ -34,6 +36,8 @@ public class Projectile : MonoBehaviour {
 
 	protected virtual void OnTriggerEnter2D(Collider2D other) {
 
+		Debug.Log (other.gameObject.tag);
+
 		if ((other.gameObject.tag == "Player" && projectileType == ProjectileType.PLAYER) ||
 				(other.gameObject.tag == "Enemy" && projectileType == ProjectileType.ENEMY) || 
 				other.gameObject.tag == "IgnoreCollision") {
@@ -44,10 +48,14 @@ public class Projectile : MonoBehaviour {
 
 		if (other.gameObject.tag == "Geometry") {
 
-			OnDeath ();
-			Destroy (gameObject);
+			if (!ignoreGeometry) {
+				
+				OnDeath ();
+				Destroy (gameObject);
 
-			return;
+				return;
+
+			}
 
 		}
 
@@ -77,7 +85,9 @@ public class Projectile : MonoBehaviour {
 
 	protected virtual void OnDeath() {
 
-		return;
+		if (onDeathObjectSpawn != null) {
+			Instantiate (onDeathObjectSpawn, transform.position, Quaternion.identity);
+		}
 
 	}
 

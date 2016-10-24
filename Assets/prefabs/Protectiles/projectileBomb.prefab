@@ -19,10 +19,11 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000010135397836}
-  - 114: {fileID: 114000014208658790}
+  - 114: {fileID: 114000013061090444}
+  - 114: {fileID: 114000012027538480}
+  - 199: {fileID: 199000011881836158}
   - 212: {fileID: 212000014281261000}
   - 50: {fileID: 50000012855530708}
-  - 199: {fileID: 199000011881836158}
   - 198: {fileID: 198000010280550898}
   m_Layer: 11
   m_Name: projectileBomb
@@ -61,7 +62,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &114000014208658790
+--- !u!114 &114000012027538480
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -69,16 +70,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000013881043524}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ad39714fae9b7748b948c339af170b2, type: 3}
+  m_Script: {fileID: 11500000, guid: 838704449cfacbf44b4f9621dded5671, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProjectileName: 
-  movementSpeed: 0
-  destroyOnHit: 0
+  duration: 1.5
+  colorFrom: {r: 1, g: 1, b: 1, a: 1}
+  colorTo: {r: 1, g: 0, b: 0, a: 1}
+--- !u!114 &114000013061090444
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013881043524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d06beee1ab27bd44ae4255c4fbd4602, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ProjectileName: Bomb
+  movementSpeed: 1
+  destroyOnHit: 1
   destroyIn: 1.5
-  weaponLevel: 1
+  weaponLevel: 0
   Direction: {x: 0, y: 0, z: 0}
-  projectileDamage: 5
+  projectileDamage: 0
   projectileType: 0
   onDeathObjectSpawn: {fileID: 1000013484451354, guid: f09a65205e26f6e4c9b906dea2ac328e,
     type: 2}

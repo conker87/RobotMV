@@ -20,11 +20,11 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013304347350}
   - 114: {fileID: 114000010119287764}
+  - 114: {fileID: 114000012309906670}
   - 58: {fileID: 58000010927450230}
   - 212: {fileID: 212000011536732462}
-  - 114: {fileID: 114000013982357638}
   m_Layer: 11
-  m_Name: bombMegaExplosion
+  m_Name: bombExplosion
   m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013484451354}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23.543793, y: 7.1401997, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -68,11 +68,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f7d78253b1b1354690be99ee3f5aff2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionTime: 1.5
-  damage: 50
+  explosionTime: 1
   originalScale: {x: 0.1, y: 0.1, z: 1}
-  targetScale: {x: 3, y: 3, z: 3}
---- !u!114 &114000013982357638
+  targetScale: {x: 1.5, y: 1.5, z: 1.5}
+--- !u!114 &114000012309906670
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -83,13 +82,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d06beee1ab27bd44ae4255c4fbd4602, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ProjectileName: 
   movementSpeed: 0
-  weaponLevel: 5
-  sourceWeapon: 
   destroyOnHit: 0
-  projectileType: 0
-  projectileDamage: 50
+  ignoreGeometry: 1
+  destroyIn: 1
+  weaponLevel: 1
   Direction: {x: 0, y: 0, z: 0}
+  projectileDamage: 5
+  projectileType: 0
+  onDeathObjectSpawn: {fileID: 0}
 --- !u!212 &212000011536732462
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -103,7 +105,7 @@ SpriteRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5028263afa6af6642af47b337c6c05af, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}

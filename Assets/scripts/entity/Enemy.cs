@@ -10,7 +10,8 @@ public class Enemy : Entity {
 	[Range(0.0f, 100f)]
 	public float powerUpChance = 100f;
 	public Transform droppedPowerupsParent;
-	public float[] droppedPowerUpsChance;
+	public float[]		droppedPowerUpsChance;
+	public int[] 		droppedPowerUpsMax;
 	public GameObject[]	droppedPowerUps;
 
 	[Header("Damage On Touch")]
@@ -33,25 +34,31 @@ public class Enemy : Entity {
 		// TODO: Need to add a DroppedPowerUpsChance for each PowerUp and require checking for bombs.
 		//	Maybe even try using a set value for each PowerUp; Health, Energy, Bombs, MegaBombs, etc.
 
-		foreach (GameObject g in droppedPowerUps) {
+		if (droppedPowerUps.Length == droppedPowerUpsChance.Length || droppedPowerUps.Length == droppedPowerUpsMax.Length) {
 
-			if (Random.value < (powerUpChance / 100f)) {
+			for (int i = 0; i < droppedPowerUps.Length; i++) {
 
-				int rand = Random.Range (1, 10);
+				if (Random.value < (droppedPowerUpsChance [i] / 100f)) {
 
-				for (int i = 0; i < rand; i++) {
+					int rand = Random.Range (1, droppedPowerUpsMax [i]);
 
-					Vector3 newTransform = new Vector3(transform.position.x + Random.Range(-1f, 1f),
-						transform.position.y + Random.Range(-1f, 1f),
-						0f);
+					for (int k = 0; k < rand; k++) {
 
-					Instantiate (g, newTransform, Quaternion.identity, droppedPowerupsParent);
+						Vector3 newTransform = new Vector3 (transform.position.x + Random.Range (-1f, 1f),
+							                      transform.position.y + Random.Range (-1f, 1f),
+							                      0f);
+
+						Instantiate (droppedPowerUps [i], newTransform, Quaternion.identity, droppedPowerupsParent);
+
+					}
 
 				}
 
 			}
 
 		}
+
+		base.DoDeath ();
 
 	}
 
