@@ -41,9 +41,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UsableName: Blaster
-  AttackSpeed: 0.5
-  Cooldown: 0
-  EnergyCost: 10
+  AttackSpeed: 0.02
+  EnergyCost: 3
   DamagePerTick: 2
   Level: 0
   Projectile: {fileID: 139484, guid: 67a5760b2e37c4d4bb07867a7c716c77, type: 2}
