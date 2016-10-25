@@ -78,7 +78,7 @@ public class WeaponLaser : Weapon {
 
 				if ((e = hit.collider.gameObject.GetComponentInParent<Entity> ()) != null && (Time.time > nextShotTime)) {
 
-					e.DamageHealth(damagePerTick);
+					e.DamageHealth(DamagePerTick);
 
 				}
 
@@ -86,7 +86,7 @@ public class WeaponLaser : Weapon {
 
 					if (Player.Current.CurrentWeapon.projectileType == ProjectileType.PLAYER) {
 
-						if (Player.Current.CurrentWeapon.weaponLevel >= d.doorLevel && d.doorState == DoorState.CLOSED) {
+						if (Player.Current.CurrentWeapon.EnergyCost >= d.doorLevel && d.doorState == DoorState.CLOSED) {
 
 							d.doorState = DoorState.OPEN_BEGIN;
 

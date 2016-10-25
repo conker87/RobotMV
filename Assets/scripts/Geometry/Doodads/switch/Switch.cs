@@ -40,8 +40,6 @@ public class Switch : MonoBehaviour {
 
 	protected virtual void OnTriggerEnter2D(Collider2D other) {
 
-		Debug.Log ("Enter");
-
 		hit = other.gameObject.GetComponent<Projectile> ();
 
 		if (hit != null) {

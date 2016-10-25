@@ -35,7 +35,7 @@ public class SwitchResetInSeconds : Switch {
 
 	public override void TriggerSwitch() {
 
-		if (Player.Current.CurrentWeapon.weaponLevel >= weaponLevel && Player.Current.CurrentWeapon.projectileType == ProjectileType.PLAYER) {
+		if (Player.Current.CurrentWeapon.Level >= weaponLevel && Player.Current.CurrentWeapon.projectileType == ProjectileType.PLAYER) {
 
 			if (switchState == SwitchState.OFF) {
 

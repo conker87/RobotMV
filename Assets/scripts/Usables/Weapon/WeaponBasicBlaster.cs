@@ -34,8 +34,8 @@ public class WeaponBasicBlaster : Weapon {
 						Projectile projectileComp = projectile.GetComponent<Projectile> ();
 	
 						projectileComp.Direction =			directionToMousePositionInWorld;
-						projectileComp.projectileDamage =	damagePerTick;
-						projectileComp.weaponLevel =		weaponLevel;
+						projectileComp.projectileDamage =	DamagePerTick;
+						projectileComp.weaponLevel = 		Level;
 						projectileComp.projectileType =		projectileType;
 
 					}
@@ -85,8 +85,8 @@ public class WeaponBasicBlaster : Weapon {
 
 						projectileComp.transform.localScale = new Vector2 (projectileComp.transform.localScale.x * 2, projectileComp.transform.localScale.y * 2);
 						projectileComp.Direction = directionToMousePositionInWorld;
-						projectileComp.projectileDamage = damagePerTick * chargedShotMultiplier;
-						projectileComp.weaponLevel = weaponLevel;
+						projectileComp.projectileDamage = DamagePerTick * chargedShotMultiplier;
+						projectileComp.weaponLevel = Level;
 						projectileComp.projectileType = projectileType;
 						projectileComp.weaponLevel = chargedShotLevel;
 

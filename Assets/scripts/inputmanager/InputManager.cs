@@ -12,7 +12,7 @@ public class InputManager : MonoBehaviour {
         buttonKeys["Jump"]  = KeyCode.Space;
         buttonKeys["Left"]  = KeyCode.LeftArrow;
         buttonKeys["Right"] = KeyCode.RightArrow;
-		buttonKeys["Bomb"] = KeyCode.F;
+		buttonKeys["Item"] = KeyCode.F;
     }
 
 	// Use this for initialization

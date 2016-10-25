@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class CameraManager : MonoBehaviour {
 
     public float smoothTime;
-    public float zoomspeed;
+    protected float zoomspeed;
 
     private float orthographicsize_base;
 

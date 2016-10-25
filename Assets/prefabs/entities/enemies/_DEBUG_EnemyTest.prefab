@@ -74,7 +74,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 117176}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.75, y: 1.25, z: 0}
+  m_LocalPosition: {x: -0.75, y: 0.8, z: 0}
   m_LocalScale: {x: 0.03125, y: 0.03125, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -101,7 +101,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 194838}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.24, y: 7.49, z: 0}
+  m_LocalPosition: {x: 22.25, y: 7.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -164,8 +164,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EntityName: JESUS CHRIST A CAT
   _DEBUG_INFINITE_HEALTH: 0
-  Health: 100
-  HealthMaximum: 100
+  Health: 500
+  HealthMaximum: 500
   HealthRegenPerTick: 0.01
   HealthTanks: 1
   HealthTanksMax: 1
@@ -255,7 +255,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1688667337
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300006, guid: 05321affc1937044eb6b31a27d34c83a, type: 3}
+  m_Sprite: {fileID: 21300004, guid: df644908e9d93a644a633a60f1d55b87, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -317,35 +317,7 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: 0.59049225, y: 0.62632036}
-      - {x: 0.7614422, y: 0.87244654}
-      - {x: -0.84375, y: 0.875}
-      - {x: -0.6261425, y: 0.5824847}
-      - {x: -0.75704384, y: 0.31637383}
-      - {x: -0.5018482, y: 0.37825775}
-      - {x: -0.35665703, y: 0.28182554}
-      - {x: -0.3805294, y: -0.008415699}
-      - {x: -0.3881836, y: -0.12541342}
-      - {x: -0.28353882, y: -0.1900959}
-      - {x: -0.2814579, y: -0.4351182}
-      - {x: -0.18353653, y: -0.471303}
-      - {x: 0.0013217926, y: -0.862236}
-      - {x: 0.06998634, y: -0.8667803}
-      - {x: 0.077596664, y: -0.6854105}
-      - {x: 0.23032379, y: -0.86359787}
-      - {x: 0.28546524, y: -0.8689194}
-      - {x: 0.30862617, y: -0.74991083}
-      - {x: 0.24832535, y: -0.66313744}
-      - {x: 0.30536842, y: -0.39216518}
-      - {x: 0.3037529, y: -0.2132473}
-      - {x: 0.323761, y: -0.08562136}
-      - {x: 0.5411148, y: -0.106649876}
-      - {x: 0.7850342, y: 0.004579067}
-      - {x: 0.84550476, y: 0.25194168}
-      - {x: 0.68229675, y: 0.3244815}
-      - {x: 0.6819401, y: 0.4099021}
-      - {x: 0.5859146, y: 0.51091623}
-    - - {x: 0.34375, y: 0.0625}
-      - {x: 0.4375, y: 0.0625}
-      - {x: 0.3125, y: 0}
-      - {x: 0.34375, y: -0.03125}
+    - - {x: -0.25, y: 0.5}
+      - {x: -0.5, y: -0.5}
+      - {x: 0.5, y: -0.5}
+      - {x: 0.3, y: 0.5}
