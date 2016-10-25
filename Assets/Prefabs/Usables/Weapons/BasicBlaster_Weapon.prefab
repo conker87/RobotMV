@@ -9,7 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 419988}
   - 114: {fileID: 11452466}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: BasicBlaster_Weapon
   m_TagString: Item
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UsableName: Blaster
   AttackSpeed: 0.02
-  EnergyCost: 3
+  EnergyCost: 2
   DamagePerTick: 2
   Level: 0
   Projectile: {fileID: 139484, guid: 67a5760b2e37c4d4bb07867a7c716c77, type: 2}

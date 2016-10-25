@@ -9,7 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 476066}
   - 114: {fileID: 11400196}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: MissileLauncher_Weapon
   m_TagString: Item
   m_Icon: {fileID: 0}
@@ -42,7 +42,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UsableName: Missile Launcher
   AttackSpeed: 0.5
-  Cooldown: 0
   EnergyCost: 10
   DamagePerTick: 2
   Level: 1

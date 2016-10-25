@@ -129,8 +129,6 @@ public class Player : Entity
 		
 	void OnTriggerStay2D(Collider2D col) {
 
-		Debug.Log (col.gameObject.tag);
-
 		Enemy e;
 
 		if ((e = col.gameObject.GetComponentInParent<Enemy> ()) != null) {

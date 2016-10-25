@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013245718600}
   - 114: {fileID: 114000013469026606}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Bomb_Item
   m_TagString: Item
   m_Icon: {fileID: 0}
@@ -53,7 +53,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UsableName: Bomb
   AttackSpeed: 2
-  Cooldown: 0.5
   EnergyCost: 0
   DamagePerTick: 5
   Level: 1

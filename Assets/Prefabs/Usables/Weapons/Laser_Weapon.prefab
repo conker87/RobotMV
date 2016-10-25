@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 423686}
   - 114: {fileID: 11411780}
   - 120: {fileID: 12005336}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Laser_Weapon
   m_TagString: Item
   m_Icon: {fileID: 0}
@@ -43,7 +43,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UsableName: L.A.S.E.R.
   AttackSpeed: 0.1
-  Cooldown: 0
   EnergyCost: 5
   DamagePerTick: 5
   Level: 3
