@@ -7,26 +7,28 @@ public class Entity : MonoBehaviour {
 
 	// System
 	protected float tick = .5f, resourceTick = 0.05f, nextTickTime = 0f, iFramesRemoveTime;		// Shouldn't tick be global?
+	const float healthPerTank = 100f, energyPerTank = 50f;
 
 	public string EntityName = "";
 
 	[Header("Health")]
 	public bool _DEBUG_INFINITE_HEALTH = false;
-	public float Health = 100f;
-	public float HealthMaximum = 100f,	HealthRegenPerTick = 1f;
-	public int HealthTanks = 1, HealthTanksMax = 1;
+	public float Health = 100f, HealthMaximum = 100f;
+	public float HealthRegenPerTick = 1f;
 
+	[Range(0, 10)]
+	public int HealthTanks = 1, HealthTanksMax = 1;
 	public bool HealthRegenOn = false;
 
 	[SerializeField] bool dead = false;
 
 	[Header("Energy")]
 	public bool _DEBUG_INFINITE_ENERGY = false;
-	public float Energy = 50f;
-	public float EnergyMaximum = 50f,		EnergyRegenPerTick = 5f;
+	public float Energy = 50f, EnergyMaximum = 50f;
+	public float EnergyRegenPerTick = 5f;
 
+	[Range(0, 10)]
 	public int EnergyTanks = 1, EnergyTanksMax = 1;
-
 	public bool EnergyRegenOn = true;
 
 	[Header("iFrames")]
@@ -35,10 +37,14 @@ public class Entity : MonoBehaviour {
 	public bool	 isCurrentlyInInvulnerabilityFrames = false;
 
 	void DoHealthRegen()	{	Health += HealthRegenPerTick;						}
-	void DoHealthClamp()	{	Health = Mathf.Clamp (Health, 0, HealthMaximum);	}
+	void DoHealthTanks()	{
+								if (HealthTanks < HealthTanksMax	&&	Health > healthPerTank)		{	HealthTanks++; Health = Health - healthPerTank; }  
+								if (HealthTanks > 0 				&&	Health < 1f)				{	HealthTanks--; Health = Health + healthPerTank;  }
+							}
+	//void DoHealthClamp()	{	Health = Mathf.Clamp (Health, 0, HealthMaximum);	}
 
 	void DoEnergyRegen()	{	Energy += EnergyRegenPerTick;						}
-	void DoEnergyClamp()	{	Energy = Mathf.Clamp (Energy, 0, EnergyMaximum);	}
+	//void DoEnergyClamp()	{	Energy = Mathf.Clamp (Energy, 0, EnergyMaximum);	}
 
 	[Header("Movement")]
 	public float MoveSpeed = 6;
@@ -46,7 +52,7 @@ public class Entity : MonoBehaviour {
 
 	public virtual void Update() {
 
-		if (!dead && Health == 0) {
+		if (!dead && HealthTanks == 0) {// && Health == 0) {
 			
 			dead = true;
 			Debug.Log (this + " has hit 0 health and has been removed. If it was an Enemy then it should spawn Health and Energy pickups.");
@@ -64,8 +70,8 @@ public class Entity : MonoBehaviour {
 
 		}
 
-		DoHealthClamp ();
-		DoEnergyClamp ();
+		//DoHealthClamp ();
+		//DoEnergyClamp ();
 
 		if (hasInvincibilityFrames && isCurrentlyInInvulnerabilityFrames) {
 
