@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013304347350}
   - 114: {fileID: 114000010119287764}
-  - 114: {fileID: 114000012309906670}
+  - 114: {fileID: 114000012110645582}
   - 58: {fileID: 58000010927450230}
   - 212: {fileID: 212000011536732462}
   m_Layer: 11
@@ -71,7 +71,7 @@ MonoBehaviour:
   explosionTime: 1
   originalScale: {x: 0.1, y: 0.1, z: 1}
   targetScale: {x: 1.5, y: 1.5, z: 1.5}
---- !u!114 &114000012309906670
+--- !u!114 &114000012110645582
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -82,12 +82,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d06beee1ab27bd44ae4255c4fbd4602, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProjectileName: 
-  movementSpeed: 0
+  ProjectileName: Bomb
+  movementSpeed: 1
   destroyOnHit: 0
   ignoreGeometry: 1
-  destroyIn: 1
-  weaponLevel: 1
+  destroyIn: 1.5
+  weaponLevel: 0
   Direction: {x: 0, y: 0, z: 0}
   projectileDamage: 5
   projectileType: 0

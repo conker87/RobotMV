@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UsableName: Bomb
-  AttackSpeed: 2
+  AttackSpeed: 0.75
   EnergyCost: 0
   DamagePerTick: 5
   Level: 1

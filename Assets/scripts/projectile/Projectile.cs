@@ -84,7 +84,9 @@ public class Projectile : MonoBehaviour {
 	protected virtual void OnDeath() {
 
 		if (onDeathObjectSpawn != null) {
+			
 			Instantiate (onDeathObjectSpawn, transform.position, Quaternion.identity);
+
 		}
 
 	}

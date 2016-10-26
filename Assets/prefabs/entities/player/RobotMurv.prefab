@@ -59,7 +59,6 @@ GameObject:
   - 114: {fileID: 11421016}
   - 114: {fileID: 11475602}
   - 114: {fileID: 11496000}
-  - 114: {fileID: 114000013779236292}
   - 61: {fileID: 6176158}
   m_Layer: 10
   m_Name: RobotMurv
@@ -88,7 +87,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 186462}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.48, y: 11.7, z: 1}
+  m_LocalPosition: {x: 25.5, y: 4.5, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -185,16 +184,16 @@ MonoBehaviour:
   Health: 100
   HealthMaximum: 100
   HealthRegenPerTick: 1
-  HealthTanks: 1
-  HealthTanksMax: 1
+  HealthTanks: 0
+  HealthTanksMax: 0
   HealthRegenOn: 0
   dead: 0
   _DEBUG_INFINITE_ENERGY: 0
   Energy: 50
   EnergyMaximum: 50
   EnergyRegenPerTick: 0.5
-  EnergyTanks: 1
-  EnergyTanksMax: 1
+  EnergyTanks: 0
+  EnergyTanksMax: 0
   EnergyRegenOn: 1
   hasInvincibilityFrames: 1
   invincibilityFramesLength: 1
@@ -215,8 +214,10 @@ MonoBehaviour:
   MegaBombs: 0
   BombsMaximum: 0
   MegaBombsMaximum: 0
-  BombsRegen: 2
+  BombsRegen: 0.75
   BombsMegaRegen: 60
+  doBombsRegen: 1
+  doBombsMegaRegen: 1
   Magnet: 0
   CurrentItem: {fileID: 0}
   CurrentWeapon: {fileID: 0}
@@ -707,25 +708,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114000013779236292
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 186462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2610cf117544b7429455ec3d733e036, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collisionMask:
-    serializedVersion: 2
-    m_Bits: 0
-  horizontalRayCount: 4
-  verticalRayCount: 4
-  horizontalRaySpacing: 0
-  verticalRaySpacing: 0
-  collider: {fileID: 0}
 --- !u!212 &212000011028282830
 SpriteRenderer:
   m_ObjectHideFlags: 1

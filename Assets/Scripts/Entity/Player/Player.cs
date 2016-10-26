@@ -33,7 +33,10 @@ public class Player : Entity
 	[Header("Bombs")]
 	public int	Bombs = 0;
 	public int 	MegaBombs = 0,		BombsMaximum = 0,		MegaBombsMaximum = 0;
-	public float BombsRegen = 3f,	BombsMegaRegen = 60f;
+	public float BombsRegen = 1f,	BombsMegaRegen = 60f;
+	public bool doBombsRegen = true, doBombsMegaRegen = true;
+
+	bool b = false, t = false;
 
 	[Header("Tools")]
 	public bool Magnet = false;
@@ -77,20 +80,24 @@ public class Player : Entity
 
 	void DoBombsRegen() {
 
-		if (Bombs >= BombsMaximum) {
+		if (!doBombsRegen || Bombs == BombsMaximum) {
 
-			Bombs = BombsMaximum;
-			timeToNextBomb = Time.time + 3f;
-
+			b = false;
 			return;
+
+		}
+
+		if (doBombsRegen && !b) {
+
+			timeToNextBomb = Time.time + 1f;
+			b = true;
 
 		}
 
 		if (Time.time > timeToNextBomb) {
 
-			Bombs++;
-
 			timeToNextBomb = Time.time + BombsRegen;
+			Bombs++;
 
 		}
 
@@ -104,18 +111,24 @@ public class Player : Entity
 
 	void DoMegaBombsRegen() {
 
-		if (MegaBombs >= MegaBombsMaximum) {
+		if (!doBombsMegaRegen || MegaBombs == MegaBombsMaximum) {
 
-			MegaBombs = MegaBombsMaximum;
+			t = false;
 			return;
+
+		}
+
+		if (doBombsMegaRegen && !t) {
+
+			timeToNextMegaBomb = Time.time + BombsMegaRegen;
+			t = true;
 
 		}
 
 		if (Time.time > timeToNextMegaBomb) {
 
-			MegaBombs++;
-
 			timeToNextMegaBomb = Time.time + BombsMegaRegen;
+			MegaBombs++;
 
 		}
 
