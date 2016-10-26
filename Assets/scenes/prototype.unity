@@ -1721,6 +1721,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StopPoints: []
+  startTime: 0
 --- !u!114 &463030673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2625,6 +2626,38 @@ Prefab:
       propertyPath: droppedPowerupsParent
       value: 
       objectReference: {fileID: 107139819}
+    - target: {fileID: 11442826, guid: 4e50ffbed503c7f4c8193f551cb451da, type: 2}
+      propertyPath: HealthMaximum
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442826, guid: 4e50ffbed503c7f4c8193f551cb451da, type: 2}
+      propertyPath: Health
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442826, guid: 4e50ffbed503c7f4c8193f551cb451da, type: 2}
+      propertyPath: droppedPowerUpsChance.Array.data[0]
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442826, guid: 4e50ffbed503c7f4c8193f551cb451da, type: 2}
+      propertyPath: droppedPowerUpsChance.Array.data[1]
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442826, guid: 4e50ffbed503c7f4c8193f551cb451da, type: 2}
+      propertyPath: droppedPowerUpsMax.Array.data[0]
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442826, guid: 4e50ffbed503c7f4c8193f551cb451da, type: 2}
+      propertyPath: droppedPowerUpsMax.Array.data[1]
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442826, guid: 4e50ffbed503c7f4c8193f551cb451da, type: 2}
+      propertyPath: HealthTanks
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442826, guid: 4e50ffbed503c7f4c8193f551cb451da, type: 2}
+      propertyPath: HealthTanksMax
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4e50ffbed503c7f4c8193f551cb451da, type: 2}
   m_IsPrefabParent: 0
@@ -3059,6 +3092,30 @@ Prefab:
       propertyPath: collisionMask.m_Bits
       value: 4096
       objectReference: {fileID: 0}
+    - target: {fileID: 11421016, guid: 6d19e8eb38e26ad40afee1219920c204, type: 2}
+      propertyPath: EnergyTanks
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11421016, guid: 6d19e8eb38e26ad40afee1219920c204, type: 2}
+      propertyPath: EnergyTanksMax
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11421016, guid: 6d19e8eb38e26ad40afee1219920c204, type: 2}
+      propertyPath: Energy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11421016, guid: 6d19e8eb38e26ad40afee1219920c204, type: 2}
+      propertyPath: Health
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11421016, guid: 6d19e8eb38e26ad40afee1219920c204, type: 2}
+      propertyPath: HealthTanksMax
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11421016, guid: 6d19e8eb38e26ad40afee1219920c204, type: 2}
+      propertyPath: HealthTanks
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114000013779236292, guid: 6d19e8eb38e26ad40afee1219920c204, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6d19e8eb38e26ad40afee1219920c204, type: 2}
@@ -3348,15 +3405,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000011050489198, guid: f9a4049b4d7eff1459e4192b03b5f007, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 2.5
+      value: 24.5
       objectReference: {fileID: 0}
     - target: {fileID: 4000011050489198, guid: f9a4049b4d7eff1459e4192b03b5f007, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.5
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: 4000011050489198, guid: f9a4049b4d7eff1459e4192b03b5f007, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4000011050489198, guid: f9a4049b4d7eff1459e4192b03b5f007, type: 2}
       propertyPath: m_LocalRotation.x
@@ -3756,6 +3813,21 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 5028263afa6af6642af47b337c6c05af, type: 2}
+    - target: {fileID: 114000011605484944, guid: f1b13489c451546459d43d79354f2e75,
+        type: 2}
+      propertyPath: HealthTanks
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011605484944, guid: f1b13489c451546459d43d79354f2e75,
+        type: 2}
+      propertyPath: HealthTanksMax
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011605484944, guid: f1b13489c451546459d43d79354f2e75,
+        type: 2}
+      propertyPath: dead
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f1b13489c451546459d43d79354f2e75, type: 2}
   m_IsPrefabParent: 0

@@ -7,7 +7,7 @@ public class Entity : MonoBehaviour {
 
 	// System
 	protected float tick = .5f, resourceTick = 0.05f, nextTickTime = 0f, iFramesRemoveTime;		// Shouldn't tick be global?
-	const float healthPerTank = 100f, energyPerTank = 50f;
+	//const float healthPerTank = 100f, energyPerTank = 50f;
 
 	public string EntityName = "";
 
@@ -17,7 +17,7 @@ public class Entity : MonoBehaviour {
 	public float HealthRegenPerTick = 1f;
 
 	[Range(0, 10)]
-	public int HealthTanks = 1, HealthTanksMax = 1;
+	public int HealthTanks = 0, HealthTanksMax = 0;
 	public bool HealthRegenOn = false;
 
 	[SerializeField] bool dead = false;
@@ -28,7 +28,7 @@ public class Entity : MonoBehaviour {
 	public float EnergyRegenPerTick = 5f;
 
 	[Range(0, 10)]
-	public int EnergyTanks = 1, EnergyTanksMax = 1;
+	public int EnergyTanks = 0, EnergyTanksMax = 0;
 	public bool EnergyRegenOn = true;
 
 	[Header("iFrames")]
@@ -36,15 +36,19 @@ public class Entity : MonoBehaviour {
 	public float invincibilityFramesLength = 0f;
 	public bool	 isCurrentlyInInvulnerabilityFrames = false;
 
-	void DoHealthRegen()	{	Health += HealthRegenPerTick;						}
+	void DoHealthRegen()	{	Health += HealthRegenPerTick;	}
 	void DoHealthTanks()	{
-								if (HealthTanks < HealthTanksMax	&&	Health > healthPerTank)		{	HealthTanks++; Health = Health - healthPerTank; }  
-								if (HealthTanks > 0 				&&	Health < 1f)				{	HealthTanks--; Health = Health + healthPerTank;  }
+								if (HealthTanks < HealthTanksMax	&&	Health > HealthMaximum)		{	HealthTanks++; Health = Health - HealthMaximum; }  
+								if (HealthTanks > 0 				&&	Health <= 0f)				{	HealthTanks--; Health = Health + HealthMaximum;	}
 							}
-	//void DoHealthClamp()	{	Health = Mathf.Clamp (Health, 0, HealthMaximum);	}
+	void DoHealthClamp()	{	Health = Mathf.Clamp (Health, 0, HealthMaximum);	}
 
-	void DoEnergyRegen()	{	Energy += EnergyRegenPerTick;						}
-	//void DoEnergyClamp()	{	Energy = Mathf.Clamp (Energy, 0, EnergyMaximum);	}
+	void DoEnergyRegen()	{	Energy += EnergyRegenPerTick;	}
+	void DoEnergyTanks()	{
+								if (EnergyTanks < EnergyTanksMax	&&	Energy > EnergyMaximum)		{	EnergyTanks++; Energy = Energy - EnergyMaximum; }  
+								if (EnergyTanks > 0 				&&	Energy <= 0f)				{	EnergyTanks--; Energy = Energy + EnergyMaximum;	}
+							}
+	void DoEnergyClamp()	{	if (EnergyTanks == EnergyTanksMax)	{	Energy = Mathf.Clamp (Energy, 0, EnergyMaximum);	}	}
 
 	[Header("Movement")]
 	public float MoveSpeed = 6;
@@ -52,7 +56,7 @@ public class Entity : MonoBehaviour {
 
 	public virtual void Update() {
 
-		if (!dead && HealthTanks == 0) {// && Health == 0) {
+		if (!dead && (HealthTanks == 0 && Health == 0f)) {// && Health == 0) {
 			
 			dead = true;
 			Debug.Log (this + " has hit 0 health and has been removed. If it was an Enemy then it should spawn Health and Energy pickups.");
@@ -70,8 +74,11 @@ public class Entity : MonoBehaviour {
 
 		}
 
-		//DoHealthClamp ();
-		//DoEnergyClamp ();
+		DoHealthTanks ();
+		DoEnergyTanks ();
+
+		DoHealthClamp ();
+		DoEnergyClamp ();
 
 		if (hasInvincibilityFrames && isCurrentlyInInvulnerabilityFrames) {
 

@@ -3,8 +3,6 @@ using System.Collections;
 
 public class PowerUpEnergyUpgrade : PowerUp {
 
-	int tanksGive = 1;
-
 	protected override void Start() {
 
 		PowerUpName = "Energy Tank Upgrade";

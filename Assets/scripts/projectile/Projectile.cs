@@ -36,8 +36,6 @@ public class Projectile : MonoBehaviour {
 
 	protected virtual void OnTriggerEnter2D(Collider2D other) {
 
-		Debug.Log (other.gameObject.tag);
-
 		if ((other.gameObject.tag == "Player" && projectileType == ProjectileType.PLAYER) ||
 				(other.gameObject.tag == "Enemy" && projectileType == ProjectileType.ENEMY) || 
 				other.gameObject.tag == "IgnoreCollision") {

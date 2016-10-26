@@ -40,76 +40,80 @@ public class WeaponLaser : Weapon {
 		
 	public override void Shoot(Vector3 ShootLocationPosition) {
 
-		if (line == null) {
+//		if (line == null) {
+//
+//			line = GameObject.FindGameObjectWithTag ("LaserLineRenderer").GetComponent<LineRenderer> ();
+//
+//			Debug.Log (line);
+//
+//		}
 
-			line = GameObject.FindGameObjectWithTag ("LaserLineRenderer").GetComponent<LineRenderer> ();
+		if (Player.Current.Laser) {
 
-			Debug.Log (line);
+			if (Input.GetMouseButton (0) && ((Player.Current.EnergyTanks > 1) || (Player.Current.Energy >= EnergyCost))) {
 
-		}
+				line.enabled = true;
 
-		if (Input.GetMouseButton (0) && Player.Current.Energy > EnergyCost) {
+				Player.Current.CanChangeWeapon = false;
 
-			line.enabled = true;
+				mousePositionToWorld = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+				directionToMousePositionInWorld = mousePositionToWorld - (Vector2)ShootLocationPosition;
 
-			Player.Current.CanChangeWeapon = false;
+				RaycastHit2D hit = Physics2D.Raycast (ShootLocationPosition, directionToMousePositionInWorld, laserLength, geometryLayer);
 
-			mousePositionToWorld = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-			directionToMousePositionInWorld = mousePositionToWorld - (Vector2) ShootLocationPosition;
+				Debug.DrawRay (ShootLocationPosition, directionToMousePositionInWorld);
 
-			RaycastHit2D hit = Physics2D.Raycast (ShootLocationPosition, directionToMousePositionInWorld, laserLength, geometryLayer);
+				line.SetPosition (0, ShootLocationPosition);
 
-			Debug.DrawRay (ShootLocationPosition, directionToMousePositionInWorld);
+				if (hit.collider != null) {
 
-			line.SetPosition (0, ShootLocationPosition);
+					line.SetVertexCount (3);
 
-			if (hit.collider != null) {
+					line.SetPosition (1, hit.point);
+					line.SetPosition (2, hit.point + (directionToMousePositionInWorld.normalized * .1f));
 
-				line.SetVertexCount (3);
+					if ((s = hit.collider.gameObject.GetComponentInParent<Switch> ()) != null) {
 
-				line.SetPosition (1, hit.point);
-				line.SetPosition (2, hit.point + (directionToMousePositionInWorld.normalized * .1f));
+						s.TriggerSwitch ();
 
-				if ((s = hit.collider.gameObject.GetComponentInParent<Switch> ()) != null) {
+					}
 
-					s.TriggerSwitch ();
+					if ((e = hit.collider.gameObject.GetComponentInParent<Entity> ()) != null && (Time.time > nextShotTime)) {
 
-				}
+						e.DamageHealth (DamagePerTick);
 
-				if ((e = hit.collider.gameObject.GetComponentInParent<Entity> ()) != null && (Time.time > nextShotTime)) {
+					}
 
-					e.DamageHealth(DamagePerTick);
+					if ((d = hit.collider.gameObject.GetComponent<DoorProjectileFire> ()) != null) {
 
-				}
+						if (Player.Current.CurrentWeapon.projectileType == ProjectileType.PLAYER) {
 
-				if ((d = hit.collider.gameObject.GetComponent<DoorProjectileFire> ()) != null) {
+							if (Player.Current.CurrentWeapon.EnergyCost >= d.doorLevel && d.doorState == DoorState.CLOSED) {
 
-					if (Player.Current.CurrentWeapon.projectileType == ProjectileType.PLAYER) {
+								d.doorState = DoorState.OPEN_BEGIN;
 
-						if (Player.Current.CurrentWeapon.EnergyCost >= d.doorLevel && d.doorState == DoorState.CLOSED) {
-
-							d.doorState = DoorState.OPEN_BEGIN;
+							}
 
 						}
 
 					}
 
+				} else {
+
+					line.SetVertexCount (2);
+
+					line.SetPosition (1, (Vector3)(ShootLocationPosition + (Vector3)(directionToMousePositionInWorld.normalized * laserLength)));
+
 				}
+
+				ShootEnd (EnergyCost);
 
 			} else {
 
-				line.SetVertexCount (2);
-
-				line.SetPosition (1, (Vector3) (ShootLocationPosition + (Vector3) (directionToMousePositionInWorld.normalized * laserLength)));
+				line.enabled = false;
+				Player.Current.CanChangeWeapon = true;
 
 			}
-
-			ShootEnd (EnergyCost);
-
-		} else {
-
-			line.enabled = false;
-			Player.Current.CanChangeWeapon = true;
 
 		}
 
