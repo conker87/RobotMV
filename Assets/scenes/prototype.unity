@@ -1638,9 +1638,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 463030669}
-  - 212: {fileID: 463030670}
   - 114: {fileID: 463030673}
-  - 114: {fileID: 463030672}
+  - 212: {fileID: 463030670}
   - 61: {fileID: 463030671}
   m_Layer: 12
   m_Name: Lift
@@ -1709,19 +1708,6 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0.25}
   serializedVersion: 2
   m_Size: {x: 2, y: 0.5}
---- !u!114 &463030672
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 463030668}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f4b9ce1799d49d4f890f834d36bbb78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StopPoints: []
-  startTime: 0
 --- !u!114 &463030673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2626,38 +2612,6 @@ Prefab:
       propertyPath: droppedPowerupsParent
       value: 
       objectReference: {fileID: 107139819}
-    - target: {fileID: 11442826, guid: 4e50ffbed503c7f4c8193f551cb451da, type: 2}
-      propertyPath: HealthMaximum
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 11442826, guid: 4e50ffbed503c7f4c8193f551cb451da, type: 2}
-      propertyPath: Health
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 11442826, guid: 4e50ffbed503c7f4c8193f551cb451da, type: 2}
-      propertyPath: droppedPowerUpsChance.Array.data[0]
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 11442826, guid: 4e50ffbed503c7f4c8193f551cb451da, type: 2}
-      propertyPath: droppedPowerUpsChance.Array.data[1]
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 11442826, guid: 4e50ffbed503c7f4c8193f551cb451da, type: 2}
-      propertyPath: droppedPowerUpsMax.Array.data[0]
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 11442826, guid: 4e50ffbed503c7f4c8193f551cb451da, type: 2}
-      propertyPath: droppedPowerUpsMax.Array.data[1]
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 11442826, guid: 4e50ffbed503c7f4c8193f551cb451da, type: 2}
-      propertyPath: HealthTanks
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11442826, guid: 4e50ffbed503c7f4c8193f551cb451da, type: 2}
-      propertyPath: HealthTanksMax
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4e50ffbed503c7f4c8193f551cb451da, type: 2}
   m_IsPrefabParent: 0
@@ -5301,7 +5255,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1771196167
 Transform:
   m_ObjectHideFlags: 0
@@ -5692,7 +5646,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2025548178
 Transform:
   m_ObjectHideFlags: 0
@@ -5879,7 +5833,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2043614444
 Transform:
   m_ObjectHideFlags: 0

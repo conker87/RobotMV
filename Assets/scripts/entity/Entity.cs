@@ -41,7 +41,7 @@ public class Entity : MonoBehaviour {
 								if (HealthTanks < HealthTanksMax	&&	Health > HealthMaximum)		{	HealthTanks++; Health = Health - HealthMaximum; }  
 								if (HealthTanks > 0 				&&	Health <= 0f)				{	HealthTanks--; Health = Health + HealthMaximum;	}
 							}
-	void DoHealthClamp()	{	Health = Mathf.Clamp (Health, 0, HealthMaximum);	}
+	void DoHealthClamp()	{	if (HealthTanks == HealthTanksMax)	{	Health = Mathf.Clamp (Health, 0, HealthMaximum);	}	}
 
 	void DoEnergyRegen()	{	Energy += EnergyRegenPerTick;	}
 	void DoEnergyTanks()	{
@@ -56,7 +56,7 @@ public class Entity : MonoBehaviour {
 
 	public virtual void Update() {
 
-		if (!dead && (HealthTanks == 0 && Health == 0f)) {// && Health == 0) {
+		if (!dead && (HealthTanks == 0 && Health == 0f)) {
 			
 			dead = true;
 			Debug.Log (this + " has hit 0 health and has been removed. If it was an Enemy then it should spawn Health and Energy pickups.");
@@ -106,6 +106,13 @@ public class Entity : MonoBehaviour {
 
 	}
 
+	public void RestoreHealthFully() {
+
+		Health = HealthMaximum;
+		HealthTanks = HealthTanksMax;
+
+	}
+
 	public virtual void DamageHealth(float damage) {
 
 		if (_DEBUG_INFINITE_HEALTH) {
@@ -138,7 +145,8 @@ public class Entity : MonoBehaviour {
 
 	}
 
-	public virtual void DamageEnergy(float damage) {
+	public virtual void DamageEnergy(float damage)
+	{
 
 		if (_DEBUG_INFINITE_ENERGY) {
 
@@ -147,6 +155,13 @@ public class Entity : MonoBehaviour {
 		}
 
 		Energy -= damage;
+
+	}
+
+	public void RestoreEnergyFully() {
+
+		Energy = EnergyMaximum;
+		EnergyTanks = EnergyTanksMax;
 
 	}
 

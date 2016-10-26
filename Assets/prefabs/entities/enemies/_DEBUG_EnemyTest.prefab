@@ -164,10 +164,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EntityName: JESUS CHRIST A CAT
   _DEBUG_INFINITE_HEALTH: 0
-  Health: 500
-  HealthMaximum: 500
+  Health: 10
+  HealthMaximum: 10
   HealthRegenPerTick: 0.01
-  HealthTanks: 1
+  HealthTanks: 0
   HealthTanksMax: 1
   HealthRegenOn: 0
   dead: 0
@@ -186,12 +186,16 @@ MonoBehaviour:
   powerUpChance: 100
   droppedPowerupsParent: {fileID: 0}
   droppedPowerUpsChance:
-  - 50
-  - 50
-  droppedPowerUpsMax: 0500000005000000
+  - 100
+  - 100
+  - 1
+  - 1
+  droppedPowerUpsMax: 32000000320000003200000032000000
   droppedPowerUps:
   - {fileID: 1000012869973274, guid: 4f46e4eb1e4615d499ee76e4db8f25b0, type: 2}
   - {fileID: 1000013445478154, guid: 61f7179d513d67e4a952a82c4d65f105, type: 2}
+  - {fileID: 1000012869973274, guid: ac5e2bba9cff3f44f80f0c94356ec632, type: 2}
+  - {fileID: 1000013445478154, guid: 54198a54882b2444785436dcf7612911, type: 2}
   DamageOnTouch: 3
 --- !u!212 &21208152
 SpriteRenderer:
