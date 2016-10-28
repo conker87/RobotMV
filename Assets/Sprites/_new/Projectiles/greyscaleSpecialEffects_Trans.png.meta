@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 9c0ebdfd64506f441a3c74a2a87dd7b8
-timeCreated: 1477671656
+timeCreated: 1477674975
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -9,7 +9,7 @@ TextureImporter:
     21300004: projectile_rSquare_4x4
     21300006: projectile_rSquare_5x5
     21300008: projectile_rSquare_6x6
-    21300010: projectile_circle_8x8
+    21300010: projectileBlaster_circle_8x8
     21300012: projectile_circle_10x10
     21300014: projectile_circle_11x11
     21300016: projectile_circle_12x12
@@ -20,6 +20,7 @@ TextureImporter:
     21300026: explosion_BlasterEnd_0_2
     21300028: projectileMissile_9x7_0
     21300030: projectileMissile_10x9_0
+    21300032: projectile!NAME!_10x11_0
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -134,7 +135,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: projectile_circle_8x8
+      name: projectileBlaster_circle_8x8
       rect:
         serializedVersion: 2
         x: 120
@@ -271,6 +272,19 @@ TextureImporter:
         y: 78
         width: 10
         height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: projectile!NAME!_10x11_0
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 60
+        width: 10
+        height: 11
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
