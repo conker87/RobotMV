@@ -13,13 +13,13 @@ public abstract class Weapon : Usables {
 
 	public void ShootEnd(float energyCost) {
 
-		if (Time.time > nextShotTime) {
+		//if (Time.time > nextShotTime) {
 			
 			Player.Current.DamageEnergy(energyCost);
 
 			nextShotTime = Time.time + AttackSpeed;
 
-		}
+		//}
 
 	}
 

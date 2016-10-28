@@ -14,12 +14,6 @@ public class WeaponLaser : Weapon {
 	[SerializeField] Entity e;
 	[SerializeField] Door d;
 
-	public override void Awake() {
-
-		base.Awake ();
-
-	}
-
 	public override void Start () {
 
 		base.Start ();
@@ -39,14 +33,6 @@ public class WeaponLaser : Weapon {
 	}
 		
 	public override void Shoot(Vector3 ShootLocationPosition) {
-
-//		if (line == null) {
-//
-//			line = GameObject.FindGameObjectWithTag ("LaserLineRenderer").GetComponent<LineRenderer> ();
-//
-//			Debug.Log (line);
-//
-//		}
 
 		if (Player.Current.Laser) {
 
@@ -106,7 +92,11 @@ public class WeaponLaser : Weapon {
 
 				}
 
-				ShootEnd (EnergyCost);
+				if (Time.time > nextShotTime) {
+					
+					ShootEnd (EnergyCost);
+
+				}
 
 			} else {
 

@@ -96,8 +96,6 @@ public class Entity : MonoBehaviour {
 
 		Destroy (gameObject);
 
-		return;
-
 	}
 
 	public virtual void RestoreHealth(float restore) {

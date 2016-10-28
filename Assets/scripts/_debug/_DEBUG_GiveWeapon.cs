@@ -33,6 +33,12 @@ public class _DEBUG_GiveWeapon : MonoBehaviour {
 			
 				Player.Current.CurrentWeapon = weapons [2];
 
+			} else
+			if ((Input.GetKey (KeyCode.Alpha4) && Player.Current.Spinner) || 
+				(Input.GetKey (KeyCode.Alpha4) && Input.GetKey (KeyCode.LeftShift))) {
+
+				Player.Current.CurrentWeapon = weapons [3];
+
 			}
 
 		}

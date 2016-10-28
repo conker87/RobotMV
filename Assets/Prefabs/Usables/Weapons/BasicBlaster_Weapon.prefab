@@ -50,7 +50,8 @@ MonoBehaviour:
   nextShotTime: 0
   chargedShotMultiplier: 3
   chargedShotLevel: 3
-  chargedShotProjectile: {fileID: 0}
+  chargedShotProjectile: {fileID: 11475610, guid: 03ae5fc905e54ea45b6dfdd593ccfd01,
+    type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

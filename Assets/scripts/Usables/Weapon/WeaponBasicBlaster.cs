@@ -10,12 +10,6 @@ public class WeaponBasicBlaster : Weapon {
 
 	float chargedShotTimer, chargedShotTime = .5f;
 	bool fireChargedShot = false;
-
-	public override void Awake() {
-
-		base.Awake ();
-
-	}
 		
 	public override void Shoot(Vector3 ShootLocationPosition) {
 
@@ -91,7 +85,6 @@ public class WeaponBasicBlaster : Weapon {
 
 						projectile.Direction =			directionToMousePositionInWorld;
 						projectile.projectileDamage =	DamagePerTick * chargedShotMultiplier;
-						projectile.weaponLevel =		Level;
 						projectile.projectileType =		projectileType;
 						projectile.weaponLevel =		chargedShotLevel;
 
