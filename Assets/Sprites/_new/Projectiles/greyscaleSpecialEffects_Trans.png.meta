@@ -1,0 +1,283 @@
+fileFormatVersion: 2
+guid: 9c0ebdfd64506f441a3c74a2a87dd7b8
+timeCreated: 1477671656
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: projectile_1x1
+    21300002: projectile_rSquare_3x3
+    21300004: projectile_rSquare_4x4
+    21300006: projectile_rSquare_5x5
+    21300008: projectile_rSquare_6x6
+    21300010: projectile_circle_8x8
+    21300012: projectile_circle_10x10
+    21300014: projectile_circle_11x11
+    21300016: projectile_circle_12x12
+    21300018: projectile_circle_14x14
+    21300020: projectile_circle_filled_14x14
+    21300022: explosion_BlasterEnd_0_0
+    21300024: explosion_BlasterEnd_0_1
+    21300026: explosion_BlasterEnd_0_2
+    21300028: projectileMissile_9x7_0
+    21300030: projectileMissile_10x9_0
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 512
+  textureSettings:
+    filterMode: 0
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 32
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: projectile_1x1
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 98
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: projectile_rSquare_3x3
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 97
+        width: 3
+        height: 3
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: projectile_rSquare_4x4
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 96
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: projectile_rSquare_5x5
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 94
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: projectile_rSquare_6x6
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 93
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: projectile_circle_8x8
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 92
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: projectile_circle_10x10
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 89
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: projectile_circle_11x11
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 89
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: projectile_circle_12x12
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 88
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: projectile_circle_14x14
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 85
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: projectile_circle_filled_14x14
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 85
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: explosion_BlasterEnd_0_0
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 85
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: explosion_BlasterEnd_0_1
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 85
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: explosion_BlasterEnd_0_2
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 82
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: projectileMissile_9x7_0
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 81
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: projectileMissile_10x9_0
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 78
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

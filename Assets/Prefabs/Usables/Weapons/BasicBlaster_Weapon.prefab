@@ -45,11 +45,12 @@ MonoBehaviour:
   EnergyCost: 2
   DamagePerTick: 2
   Level: 0
-  Projectile: {fileID: 139484, guid: 67a5760b2e37c4d4bb07867a7c716c77, type: 2}
+  Projectile: {fileID: 11475610, guid: 67a5760b2e37c4d4bb07867a7c716c77, type: 2}
   projectileType: 0
   nextShotTime: 0
   chargedShotMultiplier: 3
   chargedShotLevel: 3
+  chargedShotProjectile: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

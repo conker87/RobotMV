@@ -11,7 +11,7 @@ public class Usables : MonoBehaviour {
 	public int			Level;
 
 	[Header("Spawn settings")]
-	public GameObject	Projectile;
+	public Projectile	Projectile;
 	public ProjectileType projectileType;
 
 	protected Vector2 mousePositionToWorld, directionToMousePositionInWorld;

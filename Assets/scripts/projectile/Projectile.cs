@@ -16,6 +16,8 @@ public class Projectile : MonoBehaviour {
 
 	public GameObject onDeathObjectSpawn;
 
+	//TODO: Replace sprites with greyscale colored ones.
+
 	protected virtual void Start () { 
 
 		if (Direction != Direction.normalized) {

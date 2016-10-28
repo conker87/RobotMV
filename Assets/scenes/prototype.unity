@@ -2627,7 +2627,6 @@ GameObject:
   - 20: {fileID: 779037669}
   - 124: {fileID: 779037668}
   - 92: {fileID: 779037667}
-  - 81: {fileID: 779037666}
   m_Layer: 0
   m_Name: $BocCamera
   m_TagString: Untagged
@@ -2648,13 +2647,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 192461462}
   m_RootOrder: 0
---- !u!81 &779037666
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 779037664}
-  m_Enabled: 1
 --- !u!92 &779037667
 Behaviour:
   m_ObjectHideFlags: 0
@@ -4481,7 +4473,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.8645835
+  orthographic size: 6.1145835
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -4515,7 +4507,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1538936274}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b215d63c2bfec9d49b9939a7480c02ab, type: 3}
   m_Name: 
@@ -4542,12 +4534,12 @@ MonoBehaviour:
   retroSnap: 1
   assetsPixelsPerUnit: 16
   showHUD: 0
-  cameraSize: {x: 10.427083, y: 5.8645835}
+  cameraSize: {x: 10.875, y: 6.1145835}
   contraintUsed: 0
   cameraPixelsPerUnit: 48
   ratio: 3
-  nativeAssetResolution: {x: 333.66666, y: 187.66667}
-  fovCoverage: 0.9022436
+  nativeAssetResolution: {x: 348, y: 195.66667}
+  fovCoverage: 0.9407051
 --- !u!114 &1538936282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5326,6 +5318,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11452466, guid: e23a4e7b9300c4449a2700fcbdacd5f8, type: 2}
+      propertyPath: chargedShotProjectile
+      value: 
+      objectReference: {fileID: 11475610, guid: 03ae5fc905e54ea45b6dfdd593ccfd01,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e23a4e7b9300c4449a2700fcbdacd5f8, type: 2}
   m_IsPrefabParent: 0

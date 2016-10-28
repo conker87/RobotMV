@@ -6,6 +6,8 @@ public class WeaponBasicBlaster : Weapon {
 	public float chargedShotMultiplier = 3f;
 	public int chargedShotLevel = 3;
 
+	public Projectile	chargedShotProjectile;
+
 	float chargedShotTimer, chargedShotTime = .5f;
 	bool fireChargedShot = false;
 
@@ -27,14 +29,21 @@ public class WeaponBasicBlaster : Weapon {
 
 				if (Time.time > nextShotTime) {
 
-					GameObject projectile = Instantiate (Projectile, ShootLocationPosition, Quaternion.identity) as GameObject;
+//					GameObject projectile = Instantiate (Projectile, ShootLocationPosition, Quaternion.identity) as GameObject;
+//
+//					Projectile projectileComp = projectile.GetComponent<Projectile> ();
+//
+//					projectileComp.Direction =			directionToMousePositionInWorld;
+//					projectileComp.projectileDamage =	DamagePerTick;
+//					projectileComp.weaponLevel = 		Level;
+//					projectileComp.projectileType =		projectileType;
 
-					Projectile projectileComp = projectile.GetComponent<Projectile> ();
+					Projectile projectile = Instantiate (Projectile, ShootLocationPosition, Quaternion.identity) as Projectile;
 
-					projectileComp.Direction =			directionToMousePositionInWorld;
-					projectileComp.projectileDamage =	DamagePerTick;
-					projectileComp.weaponLevel = 		Level;
-					projectileComp.projectileType =		projectileType;
+					projectile.Direction =			directionToMousePositionInWorld;
+					projectile.projectileDamage =	DamagePerTick;
+					projectile.weaponLevel = 		Level;
+					projectile.projectileType =		projectileType;
 
 					ShootEnd (EnergyCost);
 
@@ -74,22 +83,19 @@ public class WeaponBasicBlaster : Weapon {
 
 					if (fireChargedShot) {
 
-						GameObject projectile = Instantiate (Projectile, ShootLocationPosition, Quaternion.identity) as GameObject;
+						fireChargedShot = false;
 
-						Projectile projectileComp = projectile.GetComponent<Projectile> ();
+						Projectile projectile = Instantiate (chargedShotProjectile, ShootLocationPosition, Quaternion.identity) as Projectile;
 
-						projectileComp.name = projectileComp.name + "_ChargedShot";
+						projectile.name = projectile.name + "_ChargedShot";
 
-						projectileComp.transform.localScale = new Vector2 (projectileComp.transform.localScale.x * 2, projectileComp.transform.localScale.y * 2);
-						projectileComp.Direction = directionToMousePositionInWorld;
-						projectileComp.projectileDamage = DamagePerTick * chargedShotMultiplier;
-						projectileComp.weaponLevel = Level;
-						projectileComp.projectileType = projectileType;
-						projectileComp.weaponLevel = chargedShotLevel;
+						projectile.Direction =			directionToMousePositionInWorld;
+						projectile.projectileDamage =	DamagePerTick * chargedShotMultiplier;
+						projectile.weaponLevel =		Level;
+						projectile.projectileType =		projectileType;
+						projectile.weaponLevel =		chargedShotLevel;
 
 						ShootEnd (EnergyCost * chargedShotMultiplier);
-
-						fireChargedShot = false;
 
 					}
 

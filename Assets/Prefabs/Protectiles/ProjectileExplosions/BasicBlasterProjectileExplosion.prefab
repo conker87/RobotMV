@@ -9,33 +9,32 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1000013484451354}
+  m_RootGameObject: {fileID: 1000010975605570}
   m_IsPrefabParent: 1
---- !u!1 &1000013484451354
+--- !u!1 &1000010975605570
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 4000013304347350}
-  - 114: {fileID: 114000010119287764}
-  - 114: {fileID: 114000012110645582}
-  - 58: {fileID: 58000010927450230}
-  - 212: {fileID: 212000011536732462}
-  m_Layer: 11
-  m_Name: BombExplosion_Projectile
-  m_TagString: Projectile
+  - 4: {fileID: 4000014159461170}
+  - 114: {fileID: 114000012755249752}
+  - 212: {fileID: 212000014266779340}
+  - 95: {fileID: 95000013844875808}
+  m_Layer: 0
+  m_Name: BasicBlasterProjectileExplosion
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4000013304347350
+--- !u!4 &4000014159461170
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013484451354}
+  m_GameObject: {fileID: 1000010975605570}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -43,61 +42,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!58 &58000010927450230
-CircleCollider2D:
+--- !u!95 &95000013844875808
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013484451354}
+  m_GameObject: {fileID: 1000010975605570}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 1
---- !u!114 &114000010119287764
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9b6b5ef2cba1f8f4ea5177769dd7ca42, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114000012755249752
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013484451354}
+  m_GameObject: {fileID: 1000010975605570}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f7d78253b1b1354690be99ee3f5aff2, type: 3}
+  m_Script: {fileID: 11500000, guid: 363ec66c8209bd2489416d0a21701a86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionTime: 1
-  originalScale: {x: 0.1, y: 0.1, z: 1}
-  targetScale: {x: 1.5, y: 1.5, z: 1.5}
---- !u!114 &114000012110645582
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013484451354}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d06beee1ab27bd44ae4255c4fbd4602, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ProjectileName: Bomb
-  movementSpeed: 1
-  destroyOnHit: 0
-  ignoreGeometry: 1
-  destroyIn: 1.5
-  weaponLevel: 0
-  Direction: {x: 0, y: 0, z: 0}
-  projectileDamage: 5
-  projectileType: 0
-  onDeathObjectSpawn: {fileID: 0}
---- !u!212 &212000011536732462
+  seconds: 1
+--- !u!212 &212000014266779340
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013484451354}
+  m_GameObject: {fileID: 1000010975605570}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -120,8 +99,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1286084587
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2120d9c2c03ba2040955b82da4adae32, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_SortingOrder: 5
+  m_Sprite: {fileID: 21300010, guid: 9c0ebdfd64506f441a3c74a2a87dd7b8, type: 3}
+  m_Color: {r: 0.96862745, g: 1, b: 0.4745098, a: 1}
   m_FlipX: 0
   m_FlipY: 0
