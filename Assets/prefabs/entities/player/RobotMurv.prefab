@@ -207,6 +207,7 @@ MonoBehaviour:
   TripleJump: 0
   BasicBlaster: 0
   BasicBlasterChargeShot: 0
+  Spinner: 1
   MissileLauncher: 0
   Laser: 0
   DNU_Grenade: 0

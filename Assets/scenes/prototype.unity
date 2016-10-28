@@ -3124,14 +3124,6 @@ Prefab:
       propertyPath: CurrentItem
       value: 
       objectReference: {fileID: 202998701}
-    - target: {fileID: 11421016, guid: 6d19e8eb38e26ad40afee1219920c204, type: 2}
-      propertyPath: EnergyTanks
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 11421016, guid: 6d19e8eb38e26ad40afee1219920c204, type: 2}
-      propertyPath: EnergyTanksMax
-      value: 5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6d19e8eb38e26ad40afee1219920c204, type: 2}
   m_IsPrefabParent: 0

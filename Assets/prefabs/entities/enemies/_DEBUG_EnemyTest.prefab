@@ -168,15 +168,15 @@ MonoBehaviour:
   HealthMaximum: 10
   HealthRegenPerTick: 0.01
   HealthTanks: 0
-  HealthTanksMax: 1
+  HealthTanksMax: 0
   HealthRegenOn: 0
   dead: 0
   _DEBUG_INFINITE_ENERGY: 0
   Energy: 50
   EnergyMaximum: 50
   EnergyRegenPerTick: 0.05
-  EnergyTanks: 1
-  EnergyTanksMax: 1
+  EnergyTanks: 0
+  EnergyTanksMax: 0
   EnergyRegenOn: 0
   hasInvincibilityFrames: 0
   invincibilityFramesLength: 0
@@ -190,7 +190,7 @@ MonoBehaviour:
   - 100
   - 1
   - 1
-  droppedPowerUpsMax: 32000000320000003200000032000000
+  droppedPowerUpsMax: 07000000070000000100000001000000
   droppedPowerUps:
   - {fileID: 1000012869973274, guid: 4f46e4eb1e4615d499ee76e4db8f25b0, type: 2}
   - {fileID: 1000013445478154, guid: 61f7179d513d67e4a952a82c4d65f105, type: 2}
