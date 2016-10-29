@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
 		ShootWeapon ();
 		UseItem ();
 
-		ReloadLevelWithKey (KeyCode.P);
+		ReloadLevelWithKey (KeyCode.O);
 
 	}
 

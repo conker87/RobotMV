@@ -56,7 +56,7 @@ MonoBehaviour:
   EnergyCost: 0
   DamagePerTick: 5
   Level: 1
-  Projectile: {fileID: 114000012110645582, guid: f09a65205e26f6e4c9b906dea2ac328e,
+  Projectile: {fileID: 114000011489134620, guid: 21e04479808ed7c49b01e97f97ce4315,
     type: 2}
   projectileType: 0
   nextShotTime: 0

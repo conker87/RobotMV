@@ -6,7 +6,7 @@ public class ProjectileSpinner : Projectile {
 	int timesThroughEnemy = 0;
 	public int timesThroughEnemyMax = 0;
 
-	protected virtual void OnTriggerEnter2D(Collider2D other) {
+	protected override void OnTriggerEnter2D(Collider2D other) {
 
 		// Trigger Base
 		if ((other.gameObject.tag == "Player" && projectileType == ProjectileType.PLAYER) ||

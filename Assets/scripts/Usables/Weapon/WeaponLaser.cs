@@ -38,8 +38,6 @@ public class WeaponLaser : Weapon {
 
 			if (Input.GetMouseButton (0) && ((Player.Current.EnergyTanks > 1) || (Player.Current.Energy >= EnergyCost))) {
 
-				line.enabled = true;
-
 				Player.Current.CanChangeWeapon = false;
 
 				mousePositionToWorld = Camera.main.ScreenToWorldPoint (Input.mousePosition);
@@ -49,6 +47,7 @@ public class WeaponLaser : Weapon {
 
 				Debug.DrawRay (ShootLocationPosition, directionToMousePositionInWorld);
 
+				line.enabled = true;
 				line.SetPosition (0, ShootLocationPosition);
 
 				if (hit.collider != null) {

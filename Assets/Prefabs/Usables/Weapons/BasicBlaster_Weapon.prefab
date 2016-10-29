@@ -42,12 +42,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UsableName: Blaster
   AttackSpeed: 0.02
-  EnergyCost: 2
+  EnergyCost: 1
   DamagePerTick: 2
   Level: 0
+  damagePerEnergyCost: 0
+  damagePerSecond: 0
   Projectile: {fileID: 11475610, guid: 67a5760b2e37c4d4bb07867a7c716c77, type: 2}
   projectileType: 0
-  nextShotTime: 0
   chargedShotMultiplier: 3
   chargedShotLevel: 3
   chargedShotProjectile: {fileID: 11475610, guid: 03ae5fc905e54ea45b6dfdd593ccfd01,

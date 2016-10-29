@@ -1,14 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[ExecuteInEditMode]
 public class Usables : MonoBehaviour {
 
 	[Header("Usable Settings")]
-	public string		UsableName = "";
-	public float		AttackSpeed = 0.5f;
-	public float		EnergyCost = 10f;
-	public float 		DamagePerTick = 2f;
+	public string		UsableName = "Usable <FIXME>";
+	public float		AttackSpeed;
+	public float		EnergyCost;
+	public float 		DamagePerTick;
 	public int			Level;
+	[SerializeField]
+	float damagePerEnergyCost, damagePerSecond;
 
 	[Header("Spawn settings")]
 	public Projectile	Projectile;
@@ -25,12 +28,19 @@ public class Usables : MonoBehaviour {
 	public virtual void Start () {
 
 
-
 	}
 
-	public virtual void Use () {
+	[ExecuteInEditMode]
+	public virtual void Update() {
 
+		DoDamageStats ();
 
+	}
+		
+	void DoDamageStats() {
+
+		damagePerEnergyCost	= DamagePerTick / EnergyCost;
+		damagePerSecond		= (1f / AttackSpeed) / DamagePerTick;
 
 	}
 }

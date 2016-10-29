@@ -3,8 +3,13 @@ using System.Collections;
 
 public class WeaponBasicBlaster : Weapon {
 
-	public float chargedShotMultiplier = 3f;
-	public int chargedShotLevel = 3;
+	/// *****************************************************
+	/// I've decided to allow the player to collect Charge Shot without the need
+	/// for the basic blaster, if people want to glitch, then let them.
+	/// *****************************************************
+
+	public float chargedShotMultiplier;
+	public int chargedShotLevel;
 
 	public Projectile	chargedShotProjectile;
 
@@ -13,31 +18,23 @@ public class WeaponBasicBlaster : Weapon {
 		
 	public override void Shoot(Vector3 ShootLocationPosition) {
 
+		// Basic Blaster
 		if (Player.Current.BasicBlaster) {
-			
-			mousePositionToWorld = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-			directionToMousePositionInWorld = mousePositionToWorld - (Vector2)ShootLocationPosition;
-	
+
 			// Blaster Shot
-			if (Input.GetMouseButtonDown (0) && ((Player.Current.EnergyTanks > 1) || (Player.Current.Energy >= EnergyCost))) {
+			if (Input.GetMouseButtonDown (0) && (((Player.Current.EnergyTanks > 1) || (Player.Current.Energy >= EnergyCost)))) {
 
 				if (Time.time > nextShotTime) {
 
-//					GameObject projectile = Instantiate (Projectile, ShootLocationPosition, Quaternion.identity) as GameObject;
-//
-//					Projectile projectileComp = projectile.GetComponent<Projectile> ();
-//
-//					projectileComp.Direction =			directionToMousePositionInWorld;
-//					projectileComp.projectileDamage =	DamagePerTick;
-//					projectileComp.weaponLevel = 		Level;
-//					projectileComp.projectileType =		projectileType;
+					mousePositionToWorld = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+					directionToMousePositionInWorld = mousePositionToWorld - (Vector2)ShootLocationPosition;
 
 					Projectile projectile = Instantiate (Projectile, ShootLocationPosition, Quaternion.identity) as Projectile;
 
-					projectile.Direction =			directionToMousePositionInWorld;
+					projectile.Direction = directionToMousePositionInWorld;
 					projectile.projectileDamage =	DamagePerTick;
-					projectile.weaponLevel = 		Level;
-					projectile.projectileType =		projectileType;
+					projectile.weaponLevel = Level;
+					projectile.projectileType = projectileType;
 
 					ShootEnd (EnergyCost);
 
@@ -45,52 +42,55 @@ public class WeaponBasicBlaster : Weapon {
 
 			}
 
-			// Blaster Charged Shot
-			if (Player.Current.BasicBlasterChargeShot) {
+		}
 
-				if (Input.GetMouseButton (0) && ((Player.Current.EnergyTanks > 1) || (Player.Current.Energy >= EnergyCost * chargedShotMultiplier))) {
+		// Blaster Charged Shot
+		if (Player.Current.BasicBlasterChargeShot) {
 
-					if (Time.time > nextShotTime) {
-						
-						if (chargedShotTimer < chargedShotTime && !fireChargedShot) {
+			if (Input.GetMouseButton (0) && ((Player.Current.EnergyTanks > 1 || Player.Current.Energy >= EnergyCost * chargedShotMultiplier))) {
 
-							chargedShotTimer += Time.deltaTime;
-							fireChargedShot = false;
-
-						}
-
-						if (chargedShotTimer >= chargedShotTime) {
+				if (Time.time > nextShotTime) {
 					
-							chargedShotTimer = 0f;
+					if (chargedShotTimer < chargedShotTime && !fireChargedShot) {
 
-							fireChargedShot = true;
+						chargedShotTimer += Time.deltaTime;
+						fireChargedShot = false;
 
-						}
+					}
+
+					if (chargedShotTimer >= chargedShotTime) {
+				
+						chargedShotTimer = 0f;
+
+						fireChargedShot = true;
 
 					}
 
 				}
 
-				if (Input.GetMouseButtonUp (0)) {
-		
-					chargedShotTimer = 0f;
+			}
 
-					if (fireChargedShot) {
+			if (Input.GetMouseButtonUp (0)) {
+	
+				chargedShotTimer = 0f;
 
-						fireChargedShot = false;
+				if (fireChargedShot) {
 
-						Projectile projectile = Instantiate (chargedShotProjectile, ShootLocationPosition, Quaternion.identity) as Projectile;
+					fireChargedShot = false;
 
-						projectile.name = projectile.name + "_ChargedShot";
+					mousePositionToWorld = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+					directionToMousePositionInWorld = mousePositionToWorld - (Vector2)ShootLocationPosition;
 
-						projectile.Direction =			directionToMousePositionInWorld;
-						projectile.projectileDamage =	DamagePerTick * chargedShotMultiplier;
-						projectile.projectileType =		projectileType;
-						projectile.weaponLevel =		chargedShotLevel;
+					Projectile projectile = Instantiate (chargedShotProjectile, ShootLocationPosition, Quaternion.identity) as Projectile;
 
-						ShootEnd (EnergyCost * chargedShotMultiplier);
+					projectile.name = projectile.name + "_ChargedShot";
 
-					}
+					projectile.Direction =			directionToMousePositionInWorld;
+					projectile.projectileDamage =	DamagePerTick * chargedShotMultiplier;
+					projectile.projectileType =		projectileType;
+					projectile.weaponLevel =		chargedShotLevel;
+
+					ShootEnd (EnergyCost * chargedShotMultiplier);
 
 				}
 

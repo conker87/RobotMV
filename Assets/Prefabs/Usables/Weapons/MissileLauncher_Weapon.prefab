@@ -42,12 +42,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UsableName: Missile Launcher
   AttackSpeed: 0.5
-  EnergyCost: 10
-  DamagePerTick: 2
+  EnergyCost: 5
+  DamagePerTick: 5
   Level: 1
   Projectile: {fileID: 11475610, guid: ef660bded5ebd2949821fa7a321b06a8, type: 2}
   projectileType: 0
-  nextShotTime: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

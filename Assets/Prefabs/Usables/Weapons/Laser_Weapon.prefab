@@ -45,10 +45,9 @@ MonoBehaviour:
   AttackSpeed: 0.1
   EnergyCost: 5
   DamagePerTick: 5
-  Level: 3
+  Level: 2
   Projectile: {fileID: 0}
   projectileType: 0
-  nextShotTime: 0
   geometryLayer:
     serializedVersion: 2
     m_Bits: 45056

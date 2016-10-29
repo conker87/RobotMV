@@ -4,27 +4,37 @@ using System.Collections;
 public class WeaponSpinner : Weapon {
 
 	[SerializeField]
-	float spinnerTimer, spinnerTimerMax = 2f;
+	float spinnerTimer, spinnerTimerMax = 2f, multiplier;
+	bool hasPressed = false, startEnergy = false;
 		
 	public override void Shoot(Vector3 ShootLocationPosition) {
 
 		if (Player.Current.Spinner) {
 			
-			mousePositionToWorld = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-			directionToMousePositionInWorld = mousePositionToWorld - (Vector2) ShootLocationPosition;
+			if (Input.GetMouseButton (0)) {
 
-			// Spinner 
-			if (Input.GetMouseButton (0) && ((Player.Current.EnergyTanks > 1) || (Player.Current.Energy >= EnergyCost))) {
+				if (Time.time > nextShotTime) {
+					
+					if (startEnergy || Player.Current.EnergyTanks > 1 || Player.Current.Energy >= (EnergyCost * multiplier)) {
+					
+						spinnerTimer += Time.deltaTime;
+						multiplier = 1f + spinnerTimer;
 
-				spinnerTimer += Time.deltaTime;
+						hasPressed = true;
+						startEnergy = true;
+
+					}
+
+				}
 
 			}
 
-			if (Input.GetMouseButtonUp (0)) {
-	
-				spinnerTimer = Mathf.Clamp (spinnerTimer, 0f, spinnerTimerMax);
+			if (Input.GetMouseButtonUp (0) && hasPressed) {
 
-				float multiplier = 1f + spinnerTimer;
+				mousePositionToWorld = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+				directionToMousePositionInWorld = mousePositionToWorld - (Vector2)ShootLocationPosition;
+
+				spinnerTimer = Mathf.Clamp (spinnerTimer, 0f, spinnerTimerMax);
 
 				ProjectileSpinner projectile = Instantiate (Projectile, ShootLocationPosition, Quaternion.identity) as ProjectileSpinner;
 
@@ -32,20 +42,24 @@ public class WeaponSpinner : Weapon {
 
 				projectile.transform.SetParent (transform);
 
-				projectile.transform.localScale	*=	multiplier;
-				projectile.Direction =				directionToMousePositionInWorld;
-				projectile.projectileDamage =		DamagePerTick * multiplier;
-				projectile.weaponLevel =			Level;
-				projectile.projectileType =			projectileType;
-				projectile.timesThroughEnemyMax = 	Mathf.RoundToInt (spinnerTimer);
-				projectile.movementSpeed *=			multiplier;
+				projectile.transform.localScale		*= multiplier;
+				projectile.Direction 				= directionToMousePositionInWorld;
+				projectile.projectileDamage 		= DamagePerTick * multiplier;
+				projectile.weaponLevel 				= Level;
+				projectile.projectileType 			= projectileType;
+				projectile.timesThroughEnemyMax 	= Mathf.RoundToInt (spinnerTimer * 2f);
+				projectile.ignoreGeometry 			= (spinnerTimer > (spinnerTimerMax / 2f)) ? true : false;
+				projectile.movementSpeed 			*=	multiplier;
 
-				projectile.GetComponent<RotateAtSpeed> ().rotationalSpeed *= multiplier;
+				projectile.GetComponent<RotateAtSpeed> ().rotationalSpeed *= (multiplier + 1f);
 
 				spinnerTimer = 0f;
 
 				nextShotTime = Time.time + AttackSpeed;
-				Player.Current.DamageEnergy (EnergyCost);
+				Player.Current.DamageEnergy (EnergyCost * multiplier);
+
+				hasPressed = false;
+				startEnergy = false;
 
 			}
 
