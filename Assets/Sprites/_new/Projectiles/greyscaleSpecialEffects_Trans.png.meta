@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 9c0ebdfd64506f441a3c74a2a87dd7b8
-timeCreated: 1477674975
+timeCreated: 1477869216
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -21,6 +21,8 @@ TextureImporter:
     21300028: projectileMissile_9x7_0
     21300030: projectileMissile_10x9_0
     21300032: projectile!NAME!_10x11_0
+    21300034: projectile_+_3x3
+    21300036: projectile_crossCross_5x5
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -285,6 +287,32 @@ TextureImporter:
         y: 60
         width: 10
         height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: projectile_+_3x3
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 100
+        width: 3
+        height: 3
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: projectile_crossCross_5x5
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 14
+        width: 5
+        height: 5
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

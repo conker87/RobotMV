@@ -27,6 +27,7 @@ public class Player : Entity
 	public bool BasicBlaster = false;
 	public bool BasicBlasterChargeShot = false;
 	public bool Spinner = false;
+	public bool ClusterSpreader = false;
 	public bool MissileLauncher = false;
 	public bool Laser = false;
 	public bool DNU_Grenade = false;
@@ -56,6 +57,8 @@ public class Player : Entity
 	}
 
 	public override void Update() {
+
+		if (!Input.GetMouseButton(0) && !Input.GetMouseButtonDown(0)) { EnergyRegenOn = true; }
 
 		base.Update();
 

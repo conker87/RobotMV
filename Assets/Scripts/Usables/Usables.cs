@@ -14,7 +14,7 @@ public class Usables : MonoBehaviour {
 	float damagePerEnergyCost, damagePerSecond;
 
 	[Header("Spawn settings")]
-	public Projectile	Projectile;
+	public Projectile[]	Projectiles;
 	public ProjectileType projectileType;
 
 	protected Vector2 mousePositionToWorld, directionToMousePositionInWorld;

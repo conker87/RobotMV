@@ -9,30 +9,30 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1000011119917278}
+  m_RootGameObject: {fileID: 1000010001059762}
   m_IsPrefabParent: 1
---- !u!1 &1000011119917278
+--- !u!1 &1000010001059762
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 4000012632209802}
-  - 114: {fileID: 114000010356676178}
+  - 4: {fileID: 4000011171900552}
+  - 114: {fileID: 114000012227676400}
   m_Layer: 0
-  m_Name: Spinner_Weapon
+  m_Name: ClusterSpreader_Weapon
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4000012632209802
+--- !u!4 &4000011171900552
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011119917278}
+  m_GameObject: {fileID: 1000010001059762}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -40,27 +40,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &114000010356676178
+--- !u!114 &114000012227676400
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011119917278}
+  m_GameObject: {fileID: 1000010001059762}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53b14c1cb401e0940978bbeae1050bb3, type: 3}
+  m_Script: {fileID: 11500000, guid: b0f65cd999f9ce64383251607a1eb389, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UsableName: Spinner
-  AttackSpeed: 0.1
-  EnergyCost: 7.5
-  DamagePerTick: 5
-  Level: 3
-  damagePerEnergyCost: 0.6666667
-  damagePerSecond: 2
+  UsableName: Cluster Spreader
+  AttackSpeed: 0.01
+  EnergyCost: 0.3
+  DamagePerTick: 1
+  Level: 5
+  damagePerEnergyCost: 3.3333333
+  damagePerSecond: 100
   Projectiles:
-  - {fileID: 114000013363710182, guid: 7dacad8674e201e42af6d1e8a21ea465, type: 2}
+  - {fileID: 114000011923735812, guid: f70fb549697d0e44a99ca5126eb8f977, type: 2}
+  - {fileID: 114000013216674150, guid: d343e6c0a71b694458dca26196ac23e4, type: 2}
+  - {fileID: 114000010732429336, guid: 2bdc45ed388366247a8eee475eb4bed5, type: 2}
+  - {fileID: 114000011876218462, guid: 5dbb0c36251e4634aafc4797762b3ae6, type: 2}
   projectileType: 0
-  spinnerTimer: 0
-  spinnerTimerMax: 2
-  multiplier: 0
+  shootingAngle: 180

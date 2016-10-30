@@ -36,22 +36,28 @@ public class WeaponSpinner : Weapon {
 
 				spinnerTimer = Mathf.Clamp (spinnerTimer, 0f, spinnerTimerMax);
 
-				ProjectileSpinner projectile = Instantiate (Projectile, ShootLocationPosition, Quaternion.identity) as ProjectileSpinner;
+				foreach (Projectile p in Projectiles) {
 
-				projectile.name = projectile.name + "_" + spinnerTimer;
+					ProjectileSpinner projectile = Instantiate (p, ShootLocationPosition, Quaternion.identity) as ProjectileSpinner;
 
-				projectile.transform.SetParent (transform);
+					projectile.name = projectile.name + "_" + spinnerTimer;
 
-				projectile.transform.localScale		*= multiplier;
-				projectile.Direction 				= directionToMousePositionInWorld;
-				projectile.projectileDamage 		= DamagePerTick * multiplier;
-				projectile.weaponLevel 				= Level;
-				projectile.projectileType 			= projectileType;
-				projectile.timesThroughEnemyMax 	= Mathf.RoundToInt (spinnerTimer * 2f);
-				projectile.ignoreGeometry 			= (spinnerTimer > (spinnerTimerMax / 2f)) ? true : false;
-				projectile.movementSpeed 			*=	multiplier;
+					projectile.transform.SetParent (transform);
 
-				projectile.GetComponent<RotateAtSpeed> ().rotationalSpeed *= (multiplier + 1f);
+					projectile.transform.localScale		*= multiplier;
+					projectile.Direction 				= directionToMousePositionInWorld;
+					projectile.projectileDamage 		= DamagePerTick * multiplier;
+					projectile.weaponLevel 				= Level;
+					projectile.projectileType 			= projectileType;
+					projectile.timesThroughEnemyMax 	= Mathf.RoundToInt (spinnerTimer * 2f);
+					projectile.ignoreGeometry 			= (spinnerTimer > (spinnerTimerMax / 2f)) ? true : false;
+					projectile.movementSpeed 			*=	multiplier;
+
+					projectile.GetComponent<RotateAtSpeed> ().rotationalSpeed *= (multiplier + 1f);
+
+					ShootEnd (EnergyCost);
+
+				}
 
 				spinnerTimer = 0f;
 

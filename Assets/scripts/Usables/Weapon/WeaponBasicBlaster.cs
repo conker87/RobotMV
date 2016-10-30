@@ -29,14 +29,18 @@ public class WeaponBasicBlaster : Weapon {
 					mousePositionToWorld = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 					directionToMousePositionInWorld = mousePositionToWorld - (Vector2)ShootLocationPosition;
 
-					Projectile projectile = Instantiate (Projectile, ShootLocationPosition, Quaternion.identity) as Projectile;
+					foreach (Projectile p in Projectiles) {
 
-					projectile.Direction = directionToMousePositionInWorld;
-					projectile.projectileDamage =	DamagePerTick;
-					projectile.weaponLevel = Level;
-					projectile.projectileType = projectileType;
+						Projectile projectile = Instantiate (p, ShootLocationPosition, Quaternion.identity) as Projectile;
 
-					ShootEnd (EnergyCost);
+						projectile.Direction = directionToMousePositionInWorld;
+						projectile.projectileDamage =	DamagePerTick;
+						projectile.weaponLevel = Level;
+						projectile.projectileType = projectileType;
+
+						ShootEnd (EnergyCost);
+
+					}
 
 				}
 
