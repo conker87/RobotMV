@@ -1,20 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PowerUpBomb : PowerUp {
+public class PowerUpItemBombUpgrade : PowerUp {
 
-	int bombsGiven = 3;
+	int bombsGiven = 1;
 
 	protected override void Start() {
 
-		PowerUpName = "Bomb";
+		PowerUpName = "Bomb Upgrade";
 
 	}
 
 	public override void Give()
 	{
 
-		Player.Current.Bombs = Player.Current.BombsMaximum = bombsGiven;
+		Player.Current.BombsMaximum += bombsGiven;
 
 		base.Give ();
 

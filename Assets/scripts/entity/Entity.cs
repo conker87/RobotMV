@@ -38,6 +38,7 @@ public class Entity : MonoBehaviour {
 
 	void DoHealthRegen()	{	Health += HealthRegenPerTick;	}
 	void DoHealthTanks()	{
+								HealthTanks = Mathf.Clamp (HealthTanks, 0, HealthTanksMax);
 								if (HealthTanks < HealthTanksMax	&&	Health > HealthMaximum)		{	HealthTanks++; Health = Health - HealthMaximum; }  
 								if (HealthTanks > 0 				&&	Health <= 0f)				{	HealthTanks--; Health = Health + HealthMaximum;	}
 							}
@@ -45,6 +46,7 @@ public class Entity : MonoBehaviour {
 
 	void DoEnergyRegen()	{	Energy += EnergyRegenPerTick;	}
 	void DoEnergyTanks()	{
+								EnergyTanks = Mathf.Clamp (EnergyTanks, 0, EnergyTanksMax);
 								if (EnergyTanks < EnergyTanksMax	&&	Energy > EnergyMaximum)		{	EnergyTanks++; Energy = Energy - EnergyMaximum; }  
 								if (EnergyTanks > 0 				&&	Energy <= 0f)				{	EnergyTanks--; Energy = Energy + EnergyMaximum;	}
 							}

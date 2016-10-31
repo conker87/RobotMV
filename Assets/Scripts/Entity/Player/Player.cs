@@ -30,13 +30,16 @@ public class Player : Entity
 	public bool ClusterSpreader = false;
 	public bool MissileLauncher = false;
 	public bool Laser = false;
-	public bool DNU_Grenade = false;
+	//	public bool DNU_Grenade = false;
+
+	[Header("Shields")]
+	public bool ShurikenShield = false;
 
 	[Header("Bombs")]
-	public int	Bombs = 0;
-	public int 	MegaBombs = 0,		BombsMaximum = 0,		MegaBombsMaximum = 0;
-	public float BombsRegen = 1f,	BombsMegaRegen = 60f;
-	public bool doBombsRegen = true, doBombsMegaRegen = true;
+	public int		Bombs = 0;
+	public int 		MegaBombs = 0,		BombsMaximum = 0,		MegaBombsMaximum = 0;
+	public float	BombsRegen = 1f,	BombsMegaRegen = 60f;
+	public bool		doBombsRegen = true, doBombsMegaRegen = true;
 
 	bool b = false, t = false;
 

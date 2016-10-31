@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 9c0ebdfd64506f441a3c74a2a87dd7b8
-timeCreated: 1477869216
+timeCreated: 1477941092
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -23,6 +23,8 @@ TextureImporter:
     21300032: projectile!NAME!_10x11_0
     21300034: projectile_+_3x3
     21300036: projectile_crossCross_5x5
+    21300038: projectile_shield_0_7x7
+    21300040: projectile_shield_1_7x7
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -313,6 +315,32 @@ TextureImporter:
         y: 14
         width: 5
         height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: projectile_shield_0_7x7
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 112
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: projectile_shield_1_7x7
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 113
+        width: 7
+        height: 7
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

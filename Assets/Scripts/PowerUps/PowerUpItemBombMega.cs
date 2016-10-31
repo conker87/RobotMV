@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PowerUpBombMega : PowerUp {
+public class PowerUpItemBombMega : PowerUp {
 
 	int megaBombsGiven = 1;
 

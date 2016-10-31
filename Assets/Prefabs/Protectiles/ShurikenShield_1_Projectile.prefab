@@ -9,33 +9,34 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1000013985838348}
+  m_RootGameObject: {fileID: 1000014158098744}
   m_IsPrefabParent: 1
---- !u!1 &1000013985838348
+--- !u!1 &1000014158098744
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 4000011050489198}
-  - 114: {fileID: 114000012104601602}
-  - 61: {fileID: 61000012074052374}
-  - 212: {fileID: 212000010514092556}
-  - 50: {fileID: 50000012191898242}
-  m_Layer: 14
-  m_Name: PowerUpWeaponMissileLauncher
-  m_TagString: Item
+  - 4: {fileID: 4000010724491130}
+  - 114: {fileID: 114000012293113622}
+  - 114: {fileID: 114000012772741270}
+  - 212: {fileID: 212000013645292226}
+  - 58: {fileID: 58000014093234726}
+  - 50: {fileID: 50000013813004854}
+  m_Layer: 0
+  m_Name: ShurikenShield_1_Projectile
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4000011050489198
+--- !u!4 &4000010724491130
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013985838348}
+  m_GameObject: {fileID: 1000014158098744}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -43,13 +44,13 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!50 &50000012191898242
+--- !u!50 &50000013813004854
 Rigidbody2D:
   serializedVersion: 2
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013985838348}
+  m_GameObject: {fileID: 1000014158098744}
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
@@ -59,13 +60,13 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!61 &61000012074052374
-BoxCollider2D:
+  m_Constraints: 4
+--- !u!58 &58000014093234726
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013985838348}
+  m_GameObject: {fileID: 1000014158098744}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -73,30 +74,59 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
---- !u!114 &114000012104601602
+  m_Radius: 0.109375
+--- !u!114 &114000012293113622
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013985838348}
+  m_GameObject: {fileID: 1000014158098744}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6929a9296acb7ad4faf51839efb8a0b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 3d06beee1ab27bd44ae4255c4fbd4602, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!212 &212000010514092556
+  ProjectileName: Shuriken Shield
+  movementSpeed: 0
+  destroyOnHit: 0
+  ignoreGeometry: 1
+  destroyIn: 30
+  weaponLevel: 0
+  Direction: {x: 0, y: 0, z: 0}
+  projectileDamage: 10
+  projectileType: 0
+  onDeathObjectSpawn: {fileID: 0}
+--- !u!114 &114000012772741270
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014158098744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c657003f05d605e46a4417485f3f46f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  center: {fileID: 0}
+  axis: {x: 0, y: 0, z: 1}
+  radius: 0
+  radiusChangeMultiplier: 0
+  minRadius: 1
+  maxRadius: 5
+  radiusSpeed: 180
+  rotationSpeed: 180
+--- !u!212 &212000013645292226
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013985838348}
+  m_GameObject: {fileID: 1000014158098744}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
   m_Materials:
   - {fileID: 2100000, guid: 5028263afa6af6642af47b337c6c05af, type: 2}
   m_SubsetIndices: 
@@ -114,7 +144,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 323157195
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300012, guid: c1109a2542f89614aa201fc2de0ecd6c, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300040, guid: 9c0ebdfd64506f441a3c74a2a87dd7b8, type: 3}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -13,9 +13,9 @@ public class PowerUpWeaponGrenade : PowerUp
 	public override void Give()
 	{
 		
-		Player.Current.DNU_Grenade = true;
-
-		base.Give ();
+//		Player.Current.DNU_Grenade = true;
+//
+//		base.Give ();
 
 	}
 
