@@ -36,19 +36,34 @@ public class Entity : MonoBehaviour {
 	public float invincibilityFramesLength = 0f;
 	public bool	 isCurrentlyInInvulnerabilityFrames = false;
 
-	void DoHealthRegen()	{	Health += HealthRegenPerTick;	}
 	void DoHealthTanks()	{
 								HealthTanks = Mathf.Clamp (HealthTanks, 0, HealthTanksMax);
+
 								if (HealthTanks < HealthTanksMax	&&	Health > HealthMaximum)		{	HealthTanks++; Health = Health - HealthMaximum; }  
 								if (HealthTanks > 0 				&&	Health <= 0f)				{	HealthTanks--; Health = Health + HealthMaximum;	}
-							}
-	void DoHealthClamp()	{	if (HealthTanks == HealthTanksMax)	{	Health = Mathf.Clamp (Health, 0, HealthMaximum);	}	}
 
-	void DoEnergyRegen()	{	Energy += EnergyRegenPerTick;	}
+								if (HealthTanks == HealthTanksMax	&&	Health > HealthMaximum) {
+
+									return;
+
+								}
+
+							if (HealthTanks == HealthTanksMax)	{	Health = Mathf.Clamp (Health, 0, HealthMaximum);	}
+
+								if (HealthRegenOn) {
+									Health += HealthRegenPerTick;
+								}
+
+							}
+	void DoHealthClamp()	{		}
+
 	void DoEnergyTanks()	{
 								EnergyTanks = Mathf.Clamp (EnergyTanks, 0, EnergyTanksMax);
 								if (EnergyTanks < EnergyTanksMax	&&	Energy > EnergyMaximum)		{	EnergyTanks++; Energy = Energy - EnergyMaximum; }  
 								if (EnergyTanks > 0 				&&	Energy <= 0f)				{	EnergyTanks--; Energy = Energy + EnergyMaximum;	}
+
+								if (EnergyRegenOn) { Energy += EnergyRegenPerTick; }
+
 							}
 	void DoEnergyClamp()	{	if (EnergyTanks == EnergyTanksMax)	{	Energy = Mathf.Clamp (Energy, 0, EnergyMaximum);	}	}
 
