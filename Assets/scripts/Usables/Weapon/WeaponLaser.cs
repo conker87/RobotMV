@@ -14,7 +14,7 @@ public class WeaponLaser : Weapon {
 	[SerializeField] Entity e;
 	[SerializeField] Door d;
 
-	public override void Start () {
+	protected override void Start () {
 
 		base.Start ();
 

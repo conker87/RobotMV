@@ -13,7 +13,7 @@ public class WeaponSpinner : Weapon {
 
 			if (Time.time > nextShotTime) {
 				
-				if (startEnergy || Player.Current.EnergyTanks > 0 || Player.Current.Energy >= (EnergyCost * multiplier)) {
+				if (startEnergy || (Player.Current.EnergyTanks > 0 || Player.Current.Energy >= (EnergyCost * multiplier))) {
 				
 					spinnerTimer += Time.deltaTime;
 					multiplier = 1f + spinnerTimer;

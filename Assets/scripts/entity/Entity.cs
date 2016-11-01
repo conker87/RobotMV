@@ -6,8 +6,7 @@ using EckTechGames.FloatingCombatText;
 public class Entity : MonoBehaviour {
 
 	// System
-	protected float tick = .5f, resourceTick = 0.05f, nextTickTime = 0f, iFramesRemoveTime;		// Shouldn't tick be global?
-	//const float healthPerTank = 100f, energyPerTank = 50f;
+	protected float tick = .5f, resourceTick = 0.01f, nextTickTime = 0f, iFramesRemoveTime;
 
 	public string EntityName = "";
 

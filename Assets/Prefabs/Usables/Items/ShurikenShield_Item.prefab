@@ -51,13 +51,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eacd017c52f3b8d4cb01466b14c12c22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UsableName: Shuriken Shield
-  AttackSpeed: 5
+  UsableName: 
+  Description: 
+  AttackSpeed: 0.5
   EnergyCost: 25
   DamagePerTick: 25
   Level: 0
   damagePerEnergyCost: 1
-  damagePerSecond: 0.008
+  damagePerSecond: 0.08
   Projectiles:
   - {fileID: 114000011255479454, guid: fc3b93f6bee9398409daf4218babf7df, type: 2}
   - {fileID: 114000012293113622, guid: 811f6a9038fda08499e70c98f1800456, type: 2}

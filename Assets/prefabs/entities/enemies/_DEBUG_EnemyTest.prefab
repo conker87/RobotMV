@@ -101,7 +101,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 194838}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.25, y: 7.5, z: 0}
+  m_LocalPosition: {x: 21.25, y: 3.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -164,8 +164,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EntityName: JESUS CHRIST A CAT
   _DEBUG_INFINITE_HEALTH: 0
-  Health: 10
-  HealthMaximum: 10
+  Health: 50
+  HealthMaximum: 50
   HealthRegenPerTick: 0.01
   HealthTanks: 0
   HealthTanksMax: 0
@@ -186,8 +186,8 @@ MonoBehaviour:
   powerUpChance: 100
   droppedPowerupsParent: {fileID: 0}
   droppedPowerUpsChance:
-  - 100
-  - 100
+  - 10
+  - 10
   - 1
   - 1
   droppedPowerUpsMax: 07000000070000000100000001000000

@@ -7,7 +7,7 @@ using System.Collections;
 public class PlayerController : MonoBehaviour
 {
 	
-	public GameObject ShootLocation, CollectionRadius;
+	public GameObject ShootLocation;
 
 	Controller2D controller;
 

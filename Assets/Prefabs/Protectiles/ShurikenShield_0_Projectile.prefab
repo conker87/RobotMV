@@ -21,6 +21,7 @@ GameObject:
   - 4: {fileID: 4000012552906640}
   - 114: {fileID: 114000011255479454}
   - 114: {fileID: 114000011534046968}
+  - 114: {fileID: 114000013212265554}
   - 212: {fileID: 212000012654772096}
   - 58: {fileID: 58000012178484674}
   - 50: {fileID: 50000010447132242}
@@ -90,7 +91,7 @@ MonoBehaviour:
   movementSpeed: 0
   destroyOnHit: 0
   ignoreGeometry: 1
-  destroyIn: 10
+  destroyIn: 15
   weaponLevel: 0
   Direction: {x: 0, y: 0, z: 0}
   projectileDamage: 10
@@ -115,6 +116,18 @@ MonoBehaviour:
   maxRadius: 5
   radiusSpeed: 180
   rotationSpeed: 180
+--- !u!114 &114000013212265554
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012461619448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8db64df4fd2ef2e489415c206b79c01c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationalSpeed: 90
 --- !u!212 &212000012654772096
 SpriteRenderer:
   m_ObjectHideFlags: 1

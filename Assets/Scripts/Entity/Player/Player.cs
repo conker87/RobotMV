@@ -32,6 +32,7 @@ public class Player : Entity
 
 	[Header("Shields")]
 	public bool ShurikenShield = false;
+	public bool EnergyShield = false;
 
 	[Header("Bombs")]
 	public int		Bombs = 0;

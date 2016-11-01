@@ -11,7 +11,7 @@ public class OrbitAroundGameObject : MonoBehaviour
 
 	void Start() {
 
-		center = GameObject.FindGameObjectWithTag ("Player").transform;
+		center = GameObject.FindObjectOfType<Player> ().transform; //FindGameObjectWithTag ("Player").transform;
 
 		radius = Random.Range (minRadius, maxRadius);
 

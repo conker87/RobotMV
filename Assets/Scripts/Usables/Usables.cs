@@ -1,11 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
+using SmartLocalization;
 
 [ExecuteInEditMode]
 public class Usables : MonoBehaviour {
 
 	[Header("Usable Settings")]
 	public string		UsableName = "Usable <FIXME>";
+
+	[TextArea(1,10)]
+	public string		Description = "Desc <FIXME>";
 	public float		AttackSpeed;
 	public float		EnergyCost;
 	public float 		DamagePerTick;
@@ -19,19 +23,19 @@ public class Usables : MonoBehaviour {
 
 	protected Vector2 mousePositionToWorld, directionToMousePositionInWorld;
 
-	public virtual void Awake () {
+	protected virtual void Awake () {
 
 
 
 	}
 
-	public virtual void Start () {
+	protected virtual void Start () {
 
 
 	}
 
 	[ExecuteInEditMode]
-	public virtual void Update() {
+	protected virtual void Update() {
 
 		DoDamageStats ();
 

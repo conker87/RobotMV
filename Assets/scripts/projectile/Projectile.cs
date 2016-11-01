@@ -6,6 +6,7 @@ public class Projectile : MonoBehaviour {
 	public string	ProjectileName = "";
 	public float	movementSpeed = 1f;
 	public bool 	destroyOnHit = true, ignoreGeometry = false;
+	public bool		destroyInOn = true;
 	public float	destroyIn = 3f;
 
 	public int	weaponLevel;
@@ -23,8 +24,10 @@ public class Projectile : MonoBehaviour {
 			Direction.Normalize();
 
 		}
-			
-		Invoke ("DestroyGameObject", destroyIn);
+
+		if (destroyInOn) {
+			Invoke ("DestroyGameObject", destroyIn);
+		}
 
 	}
 
@@ -57,9 +60,18 @@ public class Projectile : MonoBehaviour {
 
 		}
 
+		Projectile p;
+
+		if ((p = other.GetComponent<ProjectileEnergyShield> ()) != null) {
+
+			OnDeath ();
+			Destroy (gameObject);
+
+		}
+
 		Entity e;
 
-		if ((e = other.gameObject.GetComponentInParent<Entity> ()) != null) {
+		if ((e = other.GetComponentInParent<Entity> ()) != null) {
 
 			if (destroyOnHit) {
 

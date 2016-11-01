@@ -173,7 +173,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShootLocation: {fileID: 169950}
-  CollectionRadius: {fileID: 0}
   jumpHeight: 3
   timeToJumpApex: 0.4
   accelerationTimeAirbourne: 0.2

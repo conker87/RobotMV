@@ -3,12 +3,6 @@ using System.Collections;
 
 public class WeaponMissileLauncher : Weapon {
 
-	public override void Awake() {
-
-		base.Awake ();
-
-	}
-		
 	public override void Shoot(Vector3 ShootLocationPosition) {
 
 		if (Player.Current.MissileLauncher) {
