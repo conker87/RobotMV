@@ -35,7 +35,7 @@ public class Usables : MonoBehaviour {
 
 		DoDamageStats ();
 
-	}
+}
 		
 	void DoDamageStats() {
 

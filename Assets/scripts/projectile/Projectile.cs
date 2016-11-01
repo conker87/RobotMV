@@ -16,8 +16,6 @@ public class Projectile : MonoBehaviour {
 
 	public GameObject onDeathObjectSpawn;
 
-	//TODO: Replace sprites with greyscale colored ones.
-
 	protected virtual void Start () { 
 
 		if (Direction != Direction.normalized) {
@@ -63,14 +61,20 @@ public class Projectile : MonoBehaviour {
 
 		if ((e = other.gameObject.GetComponentInParent<Entity> ()) != null) {
 
-			e.DamageHealth(projectileDamage);
-
 			if (destroyOnHit) {
-				
+
 				OnDeath ();
 				Destroy (gameObject);
 
 			}
+
+			if (e.tag == "Geometry" && gameObject.tag != "DestroyGeometry") {
+
+				return;
+
+			}
+
+			e.DamageHealth(projectileDamage);
 
 		}
 

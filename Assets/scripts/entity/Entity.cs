@@ -36,36 +36,39 @@ public class Entity : MonoBehaviour {
 	public float invincibilityFramesLength = 0f;
 	public bool	 isCurrentlyInInvulnerabilityFrames = false;
 
-	void DoHealthTanks()	{
-								HealthTanks = Mathf.Clamp (HealthTanks, 0, HealthTanksMax);
+	void DoHealth()	{
 
-								if (HealthTanks < HealthTanksMax	&&	Health > HealthMaximum)		{	HealthTanks++; Health = Health - HealthMaximum; }  
-								if (HealthTanks > 0 				&&	Health <= 0f)				{	HealthTanks--; Health = Health + HealthMaximum;	}
+		// Regen
+		if (HealthRegenOn && Time.time > nextTickTime && !(HealthTanks == HealthTanksMax && Health > HealthMaximum)) {
 
-								if (HealthTanks == HealthTanksMax	&&	Health > HealthMaximum) {
+			Health += HealthRegenPerTick;
 
-									return;
+		}
 
-								}
+		// Tanks
+		if (HealthTanks < HealthTanksMax	&&	Health > HealthMaximum)		{	HealthTanks++; Health = Health - HealthMaximum; }  
+		if (HealthTanks > 0 				&&	Health <= 0f)				{	HealthTanks--; Health = Health + HealthMaximum;	}
 
-							if (HealthTanks == HealthTanksMax)	{	Health = Mathf.Clamp (Health, 0, HealthMaximum);	}
+		HealthTanks = Mathf.Clamp (HealthTanks, 0, HealthTanksMax);
+		if (HealthTanks == HealthTanksMax)	{	Health = Mathf.Clamp (Health, 0, HealthMaximum);	}
 
-								if (HealthRegenOn) {
-									Health += HealthRegenPerTick;
-								}
+	}
 
-							}
-	void DoHealthClamp()	{		}
+	void DoEnergy() {
+		
+		if (EnergyRegenOn && Time.time > nextTickTime && !(EnergyTanks == EnergyTanksMax && Energy >= EnergyMaximum)) {
 
-	void DoEnergyTanks()	{
-								EnergyTanks = Mathf.Clamp (EnergyTanks, 0, EnergyTanksMax);
-								if (EnergyTanks < EnergyTanksMax	&&	Energy > EnergyMaximum)		{	EnergyTanks++; Energy = Energy - EnergyMaximum; }  
-								if (EnergyTanks > 0 				&&	Energy <= 0f)				{	EnergyTanks--; Energy = Energy + EnergyMaximum;	}
+			Energy += EnergyRegenPerTick;
 
-								if (EnergyRegenOn) { Energy += EnergyRegenPerTick; }
+		}
 
-							}
-	void DoEnergyClamp()	{	if (EnergyTanks == EnergyTanksMax)	{	Energy = Mathf.Clamp (Energy, 0, EnergyMaximum);	}	}
+		if (EnergyTanks < EnergyTanksMax	&&	Energy > EnergyMaximum)		{	EnergyTanks++; Energy = Energy - EnergyMaximum; }  
+		if (EnergyTanks > 0 				&&	Energy <= 0f)				{	EnergyTanks--; Energy = Energy + EnergyMaximum;	}
+
+		EnergyTanks = Mathf.Clamp (EnergyTanks, 0, EnergyTanksMax);
+		if (EnergyTanks == EnergyTanksMax)	{	Energy = Mathf.Clamp (Energy, 0, EnergyMaximum);	}
+
+	}
 
 	[Header("Movement")]
 	public float MoveSpeed = 6;
@@ -82,20 +85,14 @@ public class Entity : MonoBehaviour {
 
 		}
 
-		if (Time.time > nextTickTime) {
+		DoHealth ();
+		DoEnergy ();
 
-			if (HealthRegenOn)	{	DoHealthRegen ();	}
-			if (EnergyRegenOn)	{	DoEnergyRegen ();	}
+		if (Time.time > nextTickTime) {
 
 			nextTickTime = Time.time + resourceTick;
 
 		}
-
-		DoHealthTanks ();
-		DoEnergyTanks ();
-
-		DoHealthClamp ();
-		DoEnergyClamp ();
 
 		if (hasInvincibilityFrames && isCurrentlyInInvulnerabilityFrames) {
 

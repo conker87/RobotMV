@@ -24,9 +24,9 @@ GameObject:
   - 212: {fileID: 212000012654772096}
   - 58: {fileID: 58000012178484674}
   - 50: {fileID: 50000010447132242}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ShurikenShield_0_Projectile
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -90,7 +90,7 @@ MonoBehaviour:
   movementSpeed: 0
   destroyOnHit: 0
   ignoreGeometry: 1
-  destroyIn: 30
+  destroyIn: 10
   weaponLevel: 0
   Direction: {x: 0, y: 0, z: 0}
   projectileDamage: 10

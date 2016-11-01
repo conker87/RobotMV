@@ -13,16 +13,18 @@ public class WeaponMissileLauncher : Weapon {
 
 		if (Player.Current.MissileLauncher) {
 
-			if (Input.GetMouseButtonDown (0) && ((Player.Current.EnergyTanks > 1) || (Player.Current.Energy >= EnergyCost))) {
+			if (Input.GetMouseButtonDown (0)) {
 			
 				if (Time.time > nextShotTime) {
 
-					mousePositionToWorld = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-					directionToMousePositionInWorld = mousePositionToWorld - (Vector2)ShootLocationPosition;
-				
-					foreach (Projectile p in Projectiles) {
+					if (Player.Current.EnergyTanks > 0 || Player.Current.Energy >= EnergyCost) {
 
-						Projectile projectile = Instantiate (p, ShootLocationPosition, Quaternion.identity) as Projectile;
+						mousePositionToWorld = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+						directionToMousePositionInWorld = mousePositionToWorld - (Vector2)ShootLocationPosition;
+				
+						int random = Random.Range (0, Projectiles.Length);
+
+						Projectile projectile = Instantiate (Projectiles [random], ShootLocationPosition, Quaternion.identity) as Projectile;
 
 						projectile.Direction = directionToMousePositionInWorld;
 						projectile.projectileDamage =	DamagePerTick;
@@ -32,8 +34,6 @@ public class WeaponMissileLauncher : Weapon {
 						ShootEnd (EnergyCost);
 
 					}
-
-					ShootEnd (EnergyCost);
 
 				}
 

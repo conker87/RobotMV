@@ -9,66 +9,66 @@ public class WeaponSpinner : Weapon {
 		
 	public override void Shoot(Vector3 ShootLocationPosition) {
 
-		if (Player.Current.Spinner) {
-			
-			if (Input.GetMouseButton (0)) {
+		if (Input.GetMouseButton (0)) {
 
-				if (Time.time > nextShotTime) {
-					
-					if (startEnergy || Player.Current.EnergyTanks > 1 || Player.Current.Energy >= (EnergyCost * multiplier)) {
-					
-						spinnerTimer += Time.deltaTime;
-						multiplier = 1f + spinnerTimer;
+			if (Time.time > nextShotTime) {
+				
+				if (startEnergy || Player.Current.EnergyTanks > 0 || Player.Current.Energy >= (EnergyCost * multiplier)) {
+				
+					spinnerTimer += Time.deltaTime;
+					multiplier = 1f + spinnerTimer;
 
-						hasPressed = true;
-						startEnergy = true;
-
-					}
+					hasPressed = true;
+					startEnergy = true;
 
 				}
 
 			}
 
-			if (Input.GetMouseButtonUp (0) && hasPressed) {
+		}
 
-				mousePositionToWorld = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-				directionToMousePositionInWorld = mousePositionToWorld - (Vector2)ShootLocationPosition;
+		if (Input.GetMouseButtonUp (0) && hasPressed) {
 
-				spinnerTimer = Mathf.Clamp (spinnerTimer, 0f, spinnerTimerMax);
+			mousePositionToWorld = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+			directionToMousePositionInWorld = mousePositionToWorld - (Vector2)ShootLocationPosition;
 
-				foreach (Projectile p in Projectiles) {
+			spinnerTimer = Mathf.Clamp (spinnerTimer, 0f, spinnerTimerMax);
 
-					ProjectileSpinner projectile = Instantiate (p, ShootLocationPosition, Quaternion.identity) as ProjectileSpinner;
+			foreach (Projectile p in Projectiles) {
 
-					projectile.name = projectile.name + "_" + spinnerTimer;
+				ProjectileSpinner projectile = Instantiate (p, ShootLocationPosition, Quaternion.identity) as ProjectileSpinner;
 
-					projectile.transform.SetParent (transform);
+				projectile.name = projectile.name + "_" + spinnerTimer;
 
-					projectile.transform.localScale		*= multiplier;
-					projectile.Direction 				= directionToMousePositionInWorld;
-					projectile.projectileDamage 		= DamagePerTick * multiplier;
-					projectile.weaponLevel 				= Level;
-					projectile.projectileType 			= projectileType;
-					projectile.timesThroughEnemyMax 	= Mathf.RoundToInt (spinnerTimer * 2f);
-					projectile.ignoreGeometry 			= (spinnerTimer > (spinnerTimerMax / 2f)) ? true : false;
-					projectile.movementSpeed 			*=	multiplier;
+				projectile.transform.SetParent (transform);
 
-					projectile.GetComponent<RotateAtSpeed> ().rotationalSpeed *= (multiplier + 1f);
+				projectile.transform.localScale		*= multiplier;
+				projectile.Direction 				= directionToMousePositionInWorld;
+				projectile.projectileDamage 		= DamagePerTick * multiplier;
+				projectile.weaponLevel 				= Level;
+				projectile.projectileType 			= projectileType;
+				projectile.timesThroughEnemyMax 	= Mathf.RoundToInt (spinnerTimer * 2f);
+				projectile.ignoreGeometry 			= (spinnerTimer > (spinnerTimerMax / 2f)) ? true : false;
+				projectile.movementSpeed 			*=	multiplier;
 
-					ShootEnd (EnergyCost);
+				projectile.GetComponent<RotateAtSpeed> ().rotationalSpeed *= (multiplier + 1f);
 
-				}
-
-				spinnerTimer = 0f;
-
-				nextShotTime = Time.time + AttackSpeed;
-				Player.Current.DamageEnergy (EnergyCost * multiplier);
-
-				hasPressed = false;
-				startEnergy = false;
+				ShootEnd (EnergyCost);
 
 			}
 
+			spinnerTimer = 0f;
+
+			nextShotTime = Time.time + AttackSpeed;
+			Player.Current.DamageEnergy (EnergyCost * multiplier);
+
+			hasPressed = false;
+			startEnergy = false;
+
+		}
+
+		if (!Input.GetMouseButton (0)) {
+			spinnerTimer = 0f;
 		}
 
 	}

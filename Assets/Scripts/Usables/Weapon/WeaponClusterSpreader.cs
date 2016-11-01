@@ -7,16 +7,13 @@ public class WeaponClusterSpreader : Weapon {
 
 	public override void Shoot(Vector3 ShootLocationPosition) {
 
-		Player.Current.EnergyRegenOn = true;
+		if (Input.GetMouseButton (0)) {
 
-		// Basic Blaster
-		if (Player.Current.ClusterSpreader) {
+			Player.Current.CanChangeWeapon = false;
 
-			if (Input.GetMouseButton (0) && ((Player.Current.EnergyTanks > 1) || (Player.Current.Energy >= EnergyCost))) {
+			if (Time.time > nextShotTime) {
 
-				Player.Current.CanChangeWeapon = false;
-
-				if (Time.time > nextShotTime) {
+				if (Player.Current.EnergyTanks > 0 || Player.Current.Energy >= EnergyCost) {
 
 					float radians = shootingAngle * (Mathf.PI / 180f);
 
@@ -41,24 +38,11 @@ public class WeaponClusterSpreader : Weapon {
 
 				}
 
-//				foreach (Projectile p in Projectiles) {
-//
-//					Projectile projectile = Instantiate (p, ShootLocationPosition, Quaternion.identity) as Projectile;
-//
-//					projectile.Direction = directionToMousePositionInWorld;
-//					projectile.projectileDamage =	DamagePerTick;
-//					projectile.weaponLevel = Level;
-//					projectile.projectileType = projectileType;
-//
-//					ShootEnd (EnergyCost);
-//
-//				}
-
-			} else {
-				
-				Player.Current.CanChangeWeapon = true;
-
 			}
+
+		} else {
+			
+			Player.Current.CanChangeWeapon = true;
 
 		}
 

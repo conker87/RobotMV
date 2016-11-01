@@ -18,29 +18,26 @@ public class WeaponBasicBlaster : Weapon {
 		
 	public override void Shoot(Vector3 ShootLocationPosition) {
 
-		// Basic Blaster
-		if (Player.Current.BasicBlaster) {
+		// Blaster Shot
+		if (Input.GetMouseButtonDown (0)) {
 
-			// Blaster Shot
-			if (Input.GetMouseButtonDown (0) && (((Player.Current.EnergyTanks > 1) || (Player.Current.Energy >= EnergyCost)))) {
+			if (Time.time > nextShotTime) {
 
-				if (Time.time > nextShotTime) {
+				if (Player.Current.EnergyTanks > 0 || Player.Current.Energy >= EnergyCost) {
 
 					mousePositionToWorld = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 					directionToMousePositionInWorld = mousePositionToWorld - (Vector2)ShootLocationPosition;
 
-					foreach (Projectile p in Projectiles) {
+					int random = Random.Range (0, Projectiles.Length);
 
-						Projectile projectile = Instantiate (p, ShootLocationPosition, Quaternion.identity) as Projectile;
+					Projectile projectile = Instantiate (Projectiles [random], ShootLocationPosition, Quaternion.identity) as Projectile;
 
-						projectile.Direction = directionToMousePositionInWorld;
-						projectile.projectileDamage =	DamagePerTick;
-						projectile.weaponLevel = Level;
-						projectile.projectileType = projectileType;
+					projectile.Direction = directionToMousePositionInWorld;
+					projectile.projectileDamage =	DamagePerTick;
+					projectile.weaponLevel = Level;
+					projectile.projectileType = projectileType;
 
-						ShootEnd (EnergyCost);
-
-					}
+					ShootEnd (EnergyCost);
 
 				}
 
@@ -51,22 +48,26 @@ public class WeaponBasicBlaster : Weapon {
 		// Blaster Charged Shot
 		if (Player.Current.BasicBlasterChargeShot) {
 
-			if (Input.GetMouseButton (0) && ((Player.Current.EnergyTanks > 1 || Player.Current.Energy >= EnergyCost * chargedShotMultiplier))) {
+			if (Input.GetMouseButton (0)) {
 
 				if (Time.time > nextShotTime) {
+
+					if (Player.Current.EnergyTanks > 1 || Player.Current.Energy >= EnergyCost * chargedShotMultiplier) {
 					
-					if (chargedShotTimer < chargedShotTime && !fireChargedShot) {
+						if (chargedShotTimer < chargedShotTime && !fireChargedShot) {
 
-						chargedShotTimer += Time.deltaTime;
-						fireChargedShot = false;
+							chargedShotTimer += Time.deltaTime;
+							fireChargedShot = false;
 
-					}
+						}
 
-					if (chargedShotTimer >= chargedShotTime) {
+						if (chargedShotTimer >= chargedShotTime) {
 				
-						chargedShotTimer = 0f;
+							chargedShotTimer = 0f;
 
-						fireChargedShot = true;
+							fireChargedShot = true;
+
+						}
 
 					}
 

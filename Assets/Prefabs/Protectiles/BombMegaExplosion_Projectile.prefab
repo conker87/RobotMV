@@ -19,13 +19,13 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000013304347350}
-  - 114: {fileID: 114000010119287764}
   - 114: {fileID: 114000010870803582}
+  - 114: {fileID: 114000010119287764}
   - 58: {fileID: 58000010927450230}
   - 212: {fileID: 212000011536732462}
   m_Layer: 11
   m_Name: BombMegaExplosion_Projectile
-  m_TagString: Projectile
+  m_TagString: DestroyGeometry
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

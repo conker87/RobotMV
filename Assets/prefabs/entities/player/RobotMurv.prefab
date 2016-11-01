@@ -16,23 +16,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &135198
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 402310}
-  - 50: {fileID: 5094836}
-  - 61: {fileID: 6194886}
-  m_Layer: 10
-  m_Name: CollectionRadius
-  m_TagString: Player
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
 --- !u!1 &169950
 GameObject:
   m_ObjectHideFlags: 0
@@ -67,19 +50,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &402310
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 135198}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 431366}
-  m_RootOrder: 3
 --- !u!4 &431366
 Transform:
   m_ObjectHideFlags: 1
@@ -87,14 +57,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 186462}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25.5, y: 4.5, z: 1}
+  m_LocalPosition: {x: 26.5, y: 4.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 4000013207597610}
   - {fileID: 497946}
   - {fileID: 476404}
-  - {fileID: 402310}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &476404
@@ -103,10 +72,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 169950}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071067}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
   m_Children: []
   m_Father: {fileID: 431366}
   m_RootOrder: 2
@@ -123,23 +92,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 431366}
   m_RootOrder: 1
---- !u!50 &5094836
-Rigidbody2D:
-  serializedVersion: 2
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 135198}
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!61 &6176158
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -154,20 +106,6 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 0.9, y: 0.9}
---- !u!61 &6194886
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 135198}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Size: {x: 0.95, y: 0.95}
 --- !u!114 &11421016
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -191,26 +129,26 @@ MonoBehaviour:
   _DEBUG_INFINITE_ENERGY: 0
   Energy: 50
   EnergyMaximum: 50
-  EnergyRegenPerTick: 0.5
+  EnergyRegenPerTick: 0.2
   EnergyTanks: 0
   EnergyTanksMax: 0
   EnergyRegenOn: 1
   hasInvincibilityFrames: 1
   invincibilityFramesLength: 1
-  isCurrentlyInInvulnerabilityFrames: 1
+  isCurrentlyInInvulnerabilityFrames: 0
   MoveSpeed: 6
   MaximumMoveSpeed: 6
   inputManager: {fileID: 0}
-  position: {x: 0, y: 0}
   Jump: 0
   DoubleJump: 0
   TripleJump: 0
   BasicBlaster: 0
   BasicBlasterChargeShot: 0
-  Spinner: 1
+  Spinner: 0
+  ClusterSpreader: 0
   MissileLauncher: 0
   Laser: 0
-  DNU_Grenade: 0
+  ShurikenShield: 0
   Bombs: 0
   MegaBombs: 0
   BombsMaximum: 0
@@ -235,7 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShootLocation: {fileID: 169950}
-  CollectionRadius: {fileID: 135198}
+  CollectionRadius: {fileID: 0}
   jumpHeight: 3
   timeToJumpApex: 0.4
   accelerationTimeAirbourne: 0.2
@@ -261,7 +199,7 @@ MonoBehaviour:
   verticalRayCount: 4
   horizontalRaySpacing: 0
   verticalRaySpacing: 0
-  collider: {fileID: 0}
+  _collider: {fileID: 0}
 --- !u!212 &21218034
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -275,7 +213,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 844d3740b2ef8524abe1d7267d411ec5, type: 2}
+  - {fileID: 2100000, guid: 5028263afa6af6642af47b337c6c05af, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -292,7 +230,7 @@ SpriteRenderer:
   m_SortingLayerID: -354108773
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: df644908e9d93a644a633a60f1d55b87, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
 --- !u!1001 &100100000

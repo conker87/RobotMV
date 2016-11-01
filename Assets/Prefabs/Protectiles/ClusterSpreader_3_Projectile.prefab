@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000010703019874}
-  - 114: {fileID: 114000011876218462}
+  - 114: {fileID: 114000011129700582}
   - 212: {fileID: 212000013562805932}
   - 58: {fileID: 58000013941673178}
   - 50: {fileID: 50000011391982484}
@@ -74,7 +74,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
---- !u!114 &114000011876218462
+--- !u!114 &114000011129700582
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -82,11 +82,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000013732636130}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aacff47caa46b89459199f1b06b6a7f4, type: 3}
+  m_Script: {fileID: 11500000, guid: 3d06beee1ab27bd44ae4255c4fbd4602, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ProjectileName: Spreading Cluster
-  movementSpeed: 2
+  movementSpeed: 3
   destroyOnHit: 0
   ignoreGeometry: 0
   destroyIn: 1.5

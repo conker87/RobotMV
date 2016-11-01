@@ -16,8 +16,6 @@ public class Player : Entity
 
 	public InputManager inputManager;
 
-	public Vector2 position;
-
 	[Header("Jumping")]
 	public bool Jump = false;
 	public bool DoubleJump = false, TripleJump = false;
@@ -61,8 +59,6 @@ public class Player : Entity
 
 	public override void Update() {
 
-		if (!Input.GetMouseButton(0) && !Input.GetMouseButtonDown(0)) { EnergyRegenOn = true; }
-
 		base.Update();
 
 		if (BombsMaximum > 0) {
@@ -74,8 +70,6 @@ public class Player : Entity
 			DoMegaBombsRegen ();
 			DoMegaBombsClamp ();
 		}
-
-		position = transform.position;
 
 	}
 		

@@ -59,9 +59,9 @@ MonoBehaviour:
   damagePerEnergyCost: 3.3333333
   damagePerSecond: 100
   Projectiles:
-  - {fileID: 114000011923735812, guid: f70fb549697d0e44a99ca5126eb8f977, type: 2}
-  - {fileID: 114000013216674150, guid: d343e6c0a71b694458dca26196ac23e4, type: 2}
-  - {fileID: 114000010732429336, guid: 2bdc45ed388366247a8eee475eb4bed5, type: 2}
-  - {fileID: 114000011876218462, guid: 5dbb0c36251e4634aafc4797762b3ae6, type: 2}
+  - {fileID: 114000014003846476, guid: f70fb549697d0e44a99ca5126eb8f977, type: 2}
+  - {fileID: 114000013886771804, guid: d343e6c0a71b694458dca26196ac23e4, type: 2}
+  - {fileID: 114000010684911880, guid: 2bdc45ed388366247a8eee475eb4bed5, type: 2}
+  - {fileID: 114000011129700582, guid: 5dbb0c36251e4634aafc4797762b3ae6, type: 2}
   projectileType: 0
   shootingAngle: 180

@@ -19,6 +19,7 @@ TagManager:
   - IgnoreCollision
   - LaserLineRenderer
   - PowerUp
+  - DestroyGeometry
   layers:
   - Default
   - TransparentFX

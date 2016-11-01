@@ -34,11 +34,11 @@ public class WeaponLaser : Weapon {
 		
 	public override void Shoot(Vector3 ShootLocationPosition) {
 
-		if (Player.Current.Laser) {
+		if (Input.GetMouseButton (0)) {
 
-			if (Input.GetMouseButton (0) && ((Player.Current.EnergyTanks > 1) || (Player.Current.Energy >= EnergyCost))) {
+			Player.Current.CanChangeWeapon = false;
 
-				Player.Current.CanChangeWeapon = false;
+			if (Player.Current.EnergyTanks > 0 || Player.Current.Energy >= EnergyCost) {
 
 				mousePositionToWorld = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 				directionToMousePositionInWorld = mousePositionToWorld - (Vector2)ShootLocationPosition;
@@ -57,27 +57,27 @@ public class WeaponLaser : Weapon {
 					line.SetPosition (1, hit.point);
 					line.SetPosition (2, hit.point + (directionToMousePositionInWorld.normalized * .1f));
 
+					if ((e = hit.collider.gameObject.GetComponentInParent<Entity> ()) != null && (Time.time > nextShotTime)) {
+
+						if (e.tag != "Geometry") {
+
+							e.DamageHealth (DamagePerTick);
+
+						}
+
+					}
+
 					if ((s = hit.collider.gameObject.GetComponentInParent<Switch> ()) != null) {
 
 						s.TriggerSwitch ();
 
 					}
 
-					if ((e = hit.collider.gameObject.GetComponentInParent<Entity> ()) != null && (Time.time > nextShotTime)) {
-
-						e.DamageHealth (DamagePerTick);
-
-					}
-
 					if ((d = hit.collider.gameObject.GetComponent<DoorProjectileFire> ()) != null) {
 
-						if (Player.Current.CurrentWeapon.projectileType == ProjectileType.PLAYER) {
+						if (Player.Current.CurrentWeapon.Level >= d.doorLevel && d.doorState == DoorState.CLOSED) {
 
-							if (Player.Current.CurrentWeapon.EnergyCost >= d.doorLevel && d.doorState == DoorState.CLOSED) {
-
-								d.doorState = DoorState.OPEN_BEGIN;
-
-							}
+							d.doorState = DoorState.OPEN_BEGIN;
 
 						}
 
@@ -92,7 +92,7 @@ public class WeaponLaser : Weapon {
 				}
 
 				if (Time.time > nextShotTime) {
-					
+				
 					ShootEnd (EnergyCost);
 
 				}
@@ -100,9 +100,13 @@ public class WeaponLaser : Weapon {
 			} else {
 
 				line.enabled = false;
-				Player.Current.CanChangeWeapon = true;
 
 			}
+
+		} else {
+
+			line.enabled = false;
+			Player.Current.CanChangeWeapon = true;
 
 		}
 
