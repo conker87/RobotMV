@@ -15,6 +15,8 @@ public class PowerUpItemEnergyShield : PowerUp
 		
 		Player.Current.EnergyShield = true;
 
+		base.Give ();
+
 	}
 
 }

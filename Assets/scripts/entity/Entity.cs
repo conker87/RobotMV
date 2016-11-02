@@ -6,7 +6,7 @@ using EckTechGames.FloatingCombatText;
 public class Entity : MonoBehaviour {
 
 	// System
-	protected float tick = .5f, resourceTick = 0.01f, nextTickTime = 0f, iFramesRemoveTime;
+	protected float nextTickTime = 0f, iFramesRemoveTime;
 
 	public string EntityName = "";
 
@@ -89,7 +89,7 @@ public class Entity : MonoBehaviour {
 
 		if (Time.time > nextTickTime) {
 
-			nextTickTime = Time.time + resourceTick;
+			nextTickTime = Time.time + Constants.ResourceTick;
 
 		}
 

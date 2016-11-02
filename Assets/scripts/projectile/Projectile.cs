@@ -60,9 +60,7 @@ public class Projectile : MonoBehaviour {
 
 		}
 
-		Projectile p;
-
-		if ((p = other.GetComponent<ProjectileEnergyShield> ()) != null) {
+		if (other.GetComponent<ProjectileEnergyShield> () != null) {
 
 			OnDeath ();
 			Destroy (gameObject);
