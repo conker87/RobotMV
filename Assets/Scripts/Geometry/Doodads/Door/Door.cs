@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DoorAnim : MonoBehaviour {
+public class Door : MonoBehaviour {
 
 	[Header("TODO:")]
 	[TextArea(1, 2)]
@@ -57,6 +57,18 @@ public class DoorAnim : MonoBehaviour {
 			}
 
 		}
+
+	}
+
+	public void OpenDoor() {
+
+		anim.SetBool ("open", true);
+
+	}
+
+	public bool IsDoorOpen() {
+
+		return anim.GetBool ("open");
 
 	}
 

@@ -85,6 +85,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 764e866f0e6954a4196852f51cc7f626, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TODO: ANIMATIONS REQUIRE THEIR BOX COLLIDERS TO MATCH THEIR SPRITES, CHECK _OLD
+    FOLDER FOR DETAILS.
   doorLevel: 0
   doorOpenLength: 0
   willDoorStayOpen: 0
@@ -92,8 +94,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   doorCheckDistance: 2
-  andGate: 0
-  switches: []
+  andGate: 1
+  switches:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!212 &212000010171047750
 SpriteRenderer:
   m_ObjectHideFlags: 1

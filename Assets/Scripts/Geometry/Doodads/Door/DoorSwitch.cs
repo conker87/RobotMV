@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class DoorAnimSwitch : DoorAnim {
+public class DoorSwitch : Door {
 
 	[Header("Door Switches")]
 	public bool andGate = false;

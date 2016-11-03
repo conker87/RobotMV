@@ -12,7 +12,7 @@ public class WeaponLaser : Weapon {
 	[Header("_DEBUG_EXTENDED")]
 	[SerializeField] Switch s;
 	[SerializeField] Entity e;
-	[SerializeField] Door d;
+	[SerializeField] DoorProjectile d;
 
 	protected override void Start () {
 
@@ -73,11 +73,11 @@ public class WeaponLaser : Weapon {
 
 					}
 
-					if ((d = hit.collider.gameObject.GetComponent<DoorProjectileFire> ()) != null) {
+					if ((d = hit.collider.gameObject.GetComponent<DoorProjectile> ()) != null) {
 
-						if (Player.Current.CurrentWeapon.Level >= d.doorLevel && d.doorState == DoorState.CLOSED) {
+						if (Player.Current.CurrentWeapon.Level >= d.doorLevel && d.IsDoorOpen() == false) {
 
-							d.doorState = DoorState.OPEN_BEGIN;
+							d.OpenDoor ();
 
 						}
 

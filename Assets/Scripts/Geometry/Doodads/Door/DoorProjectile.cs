@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DoorAnimProjectile : DoorAnim {
+public class DoorProjectile : Door {
 
 	void OnTriggerEnter2D(Collider2D other) {
 
