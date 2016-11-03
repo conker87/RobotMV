@@ -11,11 +11,11 @@ public class Usables : MonoBehaviour {
 	[TextArea(1,10)]
 	public string		Description = "Desc <FIXME>";
 	public float		AttackSpeed;
-	public float		EnergyCost;
+	public float		EnergyCost, MinimumEnergyRequired;
 	public float 		DamagePerTick;
 	public int			Level;
 	[SerializeField]
-	float damagePerEnergyCost, damagePerSecond;
+	float damagePerEnergyCost, damagePerSecond, energyUsePerSecond;
 
 	[Header("Spawn settings")]
 	public Projectile[]	Projectiles;
@@ -45,6 +45,7 @@ public class Usables : MonoBehaviour {
 
 		damagePerEnergyCost	= DamagePerTick / EnergyCost;
 		damagePerSecond		= (1f / AttackSpeed) / DamagePerTick;
+		energyUsePerSecond	= (1f / AttackSpeed) - (0.2f / Constants.ResourceTick);
 
 	}
 }

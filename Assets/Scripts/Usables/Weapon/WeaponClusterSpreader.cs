@@ -7,6 +7,14 @@ public class WeaponClusterSpreader : Weapon {
 
 	public override void Shoot(Vector3 ShootLocationPosition) {
 
+		base.Shoot (ShootLocationPosition);
+
+		if (disabledDueToPenalty) {
+
+			return;
+
+		}
+
 		if (Input.GetMouseButton (0)) {
 
 			Player.Current.CanChangeWeapon = false;

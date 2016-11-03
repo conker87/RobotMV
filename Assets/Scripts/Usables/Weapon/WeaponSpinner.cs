@@ -9,6 +9,14 @@ public class WeaponSpinner : Weapon {
 		
 	public override void Shoot(Vector3 ShootLocationPosition) {
 
+		base.Shoot (ShootLocationPosition);
+
+		if (disabledDueToPenalty) {
+
+			return;
+
+		}
+
 		if (Input.GetMouseButton (0)) {
 
 			if (Time.time > nextShotTime) {

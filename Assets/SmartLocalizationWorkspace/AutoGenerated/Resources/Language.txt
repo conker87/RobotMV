@@ -116,9 +116,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-	<data name="ITEM_ShurikenShieldDescription" xml:space="preserve">
-		<value>Spawns an energy shuriken that orbits around Murv. The shurikens deal 25 damage to any Enemy it comes into contact with.
+	<data name="ITEM_BasicBlasterDescription" xml:space="preserve">
+		<value>The basicist of blasters. Fires a bland energy ball.
 
+Does 2 damage to an Enemy.
+Uses 30 energy per second with regen.</value>
+	</data>
+	<data name="ITEM_BasicBlasterName" xml:space="preserve">
+		<value>Basic Blaster</value>
+	</data>
+	<data name="ITEM_ShurikenShieldDescription" xml:space="preserve">
+		<value>Spawns an energy shuriken that orbits around Murv.
+
+The shurikens deal 25 damage to any Enemy it comes into contact with.
+Uses 25 energy per shuriken.
 Each shuriken lasts 25 sec.</value>
 	</data>
 	<data name="ITEM_ShurikenShieldName" xml:space="preserve">

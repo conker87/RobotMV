@@ -5,6 +5,14 @@ public class WeaponMissileLauncher : Weapon {
 
 	public override void Shoot(Vector3 ShootLocationPosition) {
 
+		base.Shoot (ShootLocationPosition);
+
+		if (disabledDueToPenalty) {
+
+			return;
+
+		}
+
 		if (Player.Current.MissileLauncher) {
 
 			if (Input.GetMouseButtonDown (0)) {

@@ -1,12 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using SmartLocalization;
 
 public class WeaponBasicBlaster : Weapon {
-
-	/// *****************************************************
-	/// I've decided to allow the player to collect Charge Shot without the need
-	/// for the basic blaster, if people want to glitch, then let them.
-	/// *****************************************************
 
 	public float chargedShotMultiplier;
 	public int chargedShotLevel;
@@ -15,8 +11,26 @@ public class WeaponBasicBlaster : Weapon {
 
 	float chargedShotTimer, chargedShotTime = .5f;
 	bool fireChargedShot = false;
-		
+
+	protected override void Update ()
+	{
+
+		base.Update ();
+
+		UsableName = LanguageManager.Instance.GetTextValue ("ITEM_BasicBlasterName");
+		Description = LanguageManager.Instance.GetTextValue ("ITEM_BasicBlasterDescription");
+
+	}
+
 	public override void Shoot(Vector3 ShootLocationPosition) {
+
+		base.Shoot (ShootLocationPosition);
+
+		if (disabledDueToPenalty) {
+
+			return;
+
+		}
 
 		// Blaster Shot
 		if (Input.GetMouseButtonDown (0)) {

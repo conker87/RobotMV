@@ -116,6 +116,15 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+	<data name="ITEM_BasicBlasterDescription" xml:space="preserve">
+		<value>Le basiciste des blasters. Incendie une balle énergique.
+
+Fait 2 dégâts à un Ennemi.
+Utilise 30 d'énergie par seconde avec regen.</value>
+	</data>
+	<data name="ITEM_BasicBlasterName" xml:space="preserve">
+		<value>Blaster de base</value>
+	</data>
 	<data name="ITEM_ShurikenShieldDescription" xml:space="preserve">
 		<value>Fraye une énergie shuriken qui orbite autour Murv. Les shurikens infligent 25 blessures à tout ennemi avec lequel il entre en contact.
 
