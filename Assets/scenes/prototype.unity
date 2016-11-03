@@ -5127,7 +5127,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 7.484375
+  orthographic size: 7.71875
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -5188,12 +5188,12 @@ MonoBehaviour:
   retroSnap: 1
   assetsPixelsPerUnit: 16
   showHUD: 0
-  cameraSize: {x: 13.296875, y: 7.484375}
+  cameraSize: {x: 13.71875, y: 7.71875}
   contraintUsed: 0
   cameraPixelsPerUnit: 32
   ratio: 2
-  nativeAssetResolution: {x: 425.5, y: 239.5}
-  fovCoverage: 1.1514423
+  nativeAssetResolution: {x: 439, y: 247}
+  fovCoverage: 1.1875
 --- !u!114 &1538936282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5395,6 +5395,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1347795079}
     m_Modifications:
+    - target: {fileID: 114000012848173808, guid: 541bbf68434699741b260765eae97c88,
+        type: 2}
+      propertyPath: switches.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013146171914, guid: 541bbf68434699741b260765eae97c88, type: 2}
       propertyPath: m_LocalPosition.x
       value: 19.5
@@ -5437,6 +5442,16 @@ Prefab:
       propertyPath: switches.Array.data[1]
       value: 
       objectReference: {fileID: 798862312}
+    - target: {fileID: 114000012848173808, guid: 541bbf68434699741b260765eae97c88,
+        type: 2}
+      propertyPath: switches.Array.data[2]
+      value: 
+      objectReference: {fileID: 798862312}
+    - target: {fileID: 114000012848173808, guid: 541bbf68434699741b260765eae97c88,
+        type: 2}
+      propertyPath: andGate
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 541bbf68434699741b260765eae97c88, type: 2}
   m_IsPrefabParent: 0
@@ -6546,6 +6561,60 @@ Transform:
   m_PrefabParentObject: {fileID: 4000010192693158, guid: bb4132516b33d2c44a527167dfed7ee3,
     type: 2}
   m_PrefabInternal: {fileID: 306374120}
+--- !u!1 &1993764650 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 140962, guid: 4d619a8757b9d2a4fa0417541695f27c, type: 2}
+  m_PrefabInternal: {fileID: 601311349}
+--- !u!95 &1993764651
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1993764650}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 20df87929b24fc24ea32aec548b885df, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!212 &1993764652
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1993764650}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 1
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
 --- !u!1 &2025548177
 GameObject:
   m_ObjectHideFlags: 0

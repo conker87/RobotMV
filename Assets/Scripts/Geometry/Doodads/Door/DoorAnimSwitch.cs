@@ -19,7 +19,7 @@ public class DoorAnimSwitch : DoorAnim {
 
 	protected override void Update () {
 
-		DoCircleCheck (willDoorStayOpen, false);
+		DoCircleCheck (willDoorStayOpen);
 
 		DoSwitchCheck ();
 

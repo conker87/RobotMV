@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000014159461170}
-  - 114: {fileID: 114000012755249752}
+  - 114: {fileID: 114000012766059182}
   - 212: {fileID: 212000014266779340}
   - 95: {fileID: 95000013844875808}
   m_Layer: 0
@@ -36,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010975605570}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -12.157703, y: 1.381671, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -59,7 +59,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114000012755249752
+--- !u!114 &114000012766059182
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -67,10 +67,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000010975605570}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 363ec66c8209bd2489416d0a21701a86, type: 3}
+  m_Script: {fileID: 11500000, guid: 2fc3bba712cfec54ea92704ddca22161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seconds: 1
 --- !u!212 &212000014266779340
 SpriteRenderer:
   m_ObjectHideFlags: 1
