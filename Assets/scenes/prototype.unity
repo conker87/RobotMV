@@ -2261,8 +2261,20 @@ MonoBehaviour:
     isRightToLeft: 0
   defaultLanguage: en
   availableLanguages:
-    version: 0
-    cultureInfos: []
+    version: 1
+    cultureInfos:
+    - languageCode: en
+      englishName: English
+      nativeName: English
+      isRightToLeft: 0
+    - languageCode: fr
+      englishName: French
+      nativeName: "Fran\xE7ais"
+      isRightToLeft: 0
+    - languageCode: de
+      englishName: German
+      nativeName: Deutsche
+      isRightToLeft: 0
 --- !u!4 &503233026
 Transform:
   m_ObjectHideFlags: 0
