@@ -20,17 +20,17 @@ public class SwitchResetInSeconds : Switch {
 
 	}
 
-	protected override void OnTriggerEnter2D(Collider2D other) {
-
-		hit = other.gameObject.GetComponent<Projectile> ();
-
-		if (hit != null) {
-
-			TriggerSwitch ();
-
-		}
-
-	}
+//	protected override void OnTriggerEnter2D(Collider2D other) {
+//
+//		hit = other.gameObject.GetComponent<Projectile> ();
+//
+//		if (hit != null) {
+//
+//			TriggerSwitch ();
+//
+//		}
+//
+//	}
 
 	public override void TriggerSwitch() {
 

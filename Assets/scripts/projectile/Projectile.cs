@@ -47,6 +47,12 @@ public class Projectile : MonoBehaviour {
 
 		}
 
+		if (other.gameObject.tag == "Projectile") {
+
+			return;
+
+		}
+
 		if (other.gameObject.tag == "Geometry") {
 
 			if (!ignoreGeometry) {
@@ -62,8 +68,8 @@ public class Projectile : MonoBehaviour {
 
 		if (other.GetComponent<ProjectileEnergyShield> () != null) {
 
-			OnDeath ();
-			Destroy (gameObject);
+			//OnDeath ();
+			//Destroy (gameObject);
 
 		}
 

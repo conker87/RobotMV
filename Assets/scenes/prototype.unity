@@ -549,6 +549,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 114000012495475828, guid: 57a93f7215a68f34d9963567a3ceab65,
+        type: 2}
+      propertyPath: Level
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012495475828, guid: 57a93f7215a68f34d9963567a3ceab65,
+        type: 2}
+      propertyPath: energyUsePerSecond
+      value: -18
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 57a93f7215a68f34d9963567a3ceab65, type: 2}
   m_IsPrefabParent: 0
@@ -4790,6 +4800,11 @@ Prefab:
     - target: {fileID: 1000011415403318, guid: 57e0e741973070d4d9f5c55fcd217f71, type: 2}
       propertyPath: m_Name
       value: doorBlaster256_Projectile_AnimTest
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011173034984, guid: 57e0e741973070d4d9f5c55fcd217f71,
+        type: 2}
+      propertyPath: doorCheckDistance
+      value: 2.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 57e0e741973070d4d9f5c55fcd217f71, type: 2}
