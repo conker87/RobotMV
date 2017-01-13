@@ -19,7 +19,12 @@ TagManager:
   - IgnoreCollision
   - LaserLineRenderer
   - PowerUp
-  - DestroyGeometry
+  - TiledGeometryDestroyable
+  - TiledGeometry
+  - TiledForeground
+  - TiledBackground
+  - TiledParalax
+  - TiledGeometryBG
   layers:
   - Default
   - TransparentFX
@@ -57,17 +62,17 @@ TagManager:
   - name: Background
     uniqueID: 1093696345
     locked: 0
-  - name: ParalaxLayerTwo
+  - name: ParalaxBG
     uniqueID: 4293450287
     locked: 0
-  - name: ParalaxLayerOne
+  - name: ParalaxFG
     uniqueID: 3825685883
     locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Geometry
-    uniqueID: 3251578445
+  - name: GeometryBG
+    uniqueID: 2175010047
     locked: 0
   - name: Enemy
     uniqueID: 2606299959
@@ -80,6 +85,9 @@ TagManager:
     locked: 0
   - name: Projectiles
     uniqueID: 3008882709
+    locked: 0
+  - name: Geometry
+    uniqueID: 3251578445
     locked: 0
   - name: Foreground
     uniqueID: 1859086223
