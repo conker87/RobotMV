@@ -14,6 +14,8 @@ public class Usables : MonoBehaviour {
 	public float		EnergyCost, MinimumEnergyRequired;
 	public float 		DamagePerTick;
 	public int			Level;
+	public int 			Charges;
+
 	[SerializeField]
 	float damagePerEnergyCost, damagePerSecond, energyUsePerSecond;
 
