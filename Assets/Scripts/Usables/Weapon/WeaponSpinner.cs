@@ -5,7 +5,7 @@ public class WeaponSpinner : Weapon {
 
 	[SerializeField]
 	float spinnerTimer, spinnerTimerMax = 2f, multiplier;
-	bool hasPressed = false, startEnergy = false;
+	bool hasPressed = false;
 
 	protected override void Update () {
 
@@ -25,7 +25,6 @@ public class WeaponSpinner : Weapon {
 				multiplier = 1f + spinnerTimer;
 
 				hasPressed = true;
-				startEnergy = true;
 
 			}
 
@@ -64,7 +63,6 @@ public class WeaponSpinner : Weapon {
 			spinnerTimer = 0f;
 
 			hasPressed = false;
-			startEnergy = false;
 
 		}
 

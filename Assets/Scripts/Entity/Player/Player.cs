@@ -46,9 +46,6 @@ public class Player : Entity
 	public float	BombsMegaRegenCooldown = 60f;
 	public bool		doBombsMegaRegen = true;
 
-
-	bool b = false, t = false;
-
 	[Header("Tools")]
 	public bool Magnet = false;
 
@@ -91,15 +88,13 @@ public class Player : Entity
 
 		if (!doBombsRegen || Bombs == BombsMaximum) {
 
-			b = false;
 			return;
 
 		}
 
-		if (doBombsRegen && !b) {
+		if (doBombsRegen) {
 
 			timeToNextBomb = Time.time + 1f;
-			b = true;
 
 		}
 
@@ -122,15 +117,13 @@ public class Player : Entity
 
 		if (!doBombsMegaRegen || MegaBombs == MegaBombsMaximum) {
 
-			t = false;
 			return;
 
 		}
 
-		if (doBombsMegaRegen && !t) {
+		if (doBombsMegaRegen) {
 
 			timeToNextMegaBomb = Time.time + BombsMegaRegenCooldown;
-			t = true;
 
 		}
 

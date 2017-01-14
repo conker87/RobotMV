@@ -41,18 +41,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0758466530ae4a24a831ee6c1ea24180, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UsableName: L.A.S.E.R.
-  AttackSpeed: 0.1
-  EnergyCost: 5
-  DamagePerTick: 5
+  UsableNameLocalisationID: LocalisationID <FIXME>
+  DescriptionLocalisationID: LocalisationID <FIXME>
+  AttackLength: 0
+  Cooldown: 0
+  Damage: 0
   Level: 2
-  Projectile: {fileID: 0}
+  Charges: 0
+  Projectiles: []
   projectileType: 0
   geometryLayer:
     serializedVersion: 2
     m_Bits: 45056
   laserLength: 7
-  line: {fileID: 0}
+  line: {fileID: 12005336}
   s: {fileID: 0}
   e: {fileID: 0}
   d: {fileID: 0}

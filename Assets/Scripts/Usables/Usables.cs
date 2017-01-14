@@ -14,9 +14,6 @@ public class Usables : MonoBehaviour {
 	public int			Level;
 	public int 			Charges;
 
-	[SerializeField]
-	float damagePerSecond;
-
 	protected float cooldownTime;
 	protected bool stillCoolingDown = false;
 
@@ -48,14 +45,8 @@ public class Usables : MonoBehaviour {
 			stillCoolingDown = false;
 
 		}
-
-		DoDamageStats ();
-
-}
-		
-	void DoDamageStats() {
-
-		damagePerSecond		= (1f / Cooldown) / Damage;
+			
 
 	}
+
 }

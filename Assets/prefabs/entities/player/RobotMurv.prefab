@@ -118,10 +118,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EntityNameLocalisationID: PLAYER_MURV
-  _DEBUG_INFINITE_HEALTH: 0
+  INFINITE_HEALTH: 1
   Health: 3
   HealthMaximum: 3
-  HealthRegenOn: 0
+  HealthRegenOn: 1
   HealthRegenCooldown: 10
   dead: 0
   hasInvincibilityFrames: 1
@@ -139,15 +139,19 @@ MonoBehaviour:
   ClusterSpreader: 0
   MissileLauncher: 0
   Laser: 0
+  INFINITE_SHURIKENSHIELD: 0
   ShurikenShield: 0
+  INFINITE_ENERGYSHIELD: 0
   EnergyShield: 0
+  INFINITE_BOMBS: 0
   Bombs: 0
-  MegaBombs: 0
   BombsMaximum: 0
-  MegaBombsMaximum: 0
-  BombsRegen: 0.75
-  BombsMegaRegen: 60
+  BombsRegenCooldown: 1
   doBombsRegen: 1
+  INFINITE_MEGABOMBS: 0
+  MegaBombs: 0
+  MegaBombsMaximum: 0
+  BombsMegaRegenCooldown: 60
   doBombsMegaRegen: 1
   Magnet: 0
   CurrentItem: {fileID: 0}

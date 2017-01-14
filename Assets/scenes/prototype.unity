@@ -502,6 +502,11 @@ Prefab:
       propertyPath: damagePerSecond
       value: 0.16666667
       objectReference: {fileID: 0}
+    - target: {fileID: 11400196, guid: 476941db036a5164b81f8b9b2243c28c, type: 2}
+      propertyPath: Projectiles.Array.data[0]
+      value: 
+      objectReference: {fileID: 11475610, guid: ef660bded5ebd2949821fa7a321b06a8,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 476941db036a5164b81f8b9b2243c28c, type: 2}
   m_IsPrefabParent: 0
@@ -3185,11 +3190,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 906788795}
---- !u!120 &917086272 stripped
-LineRenderer:
-  m_PrefabParentObject: {fileID: 12005336, guid: 79836b8c9dbd05c48b45d7b5bc2f9ae0,
-    type: 2}
-  m_PrefabInternal: {fileID: 1274267753}
 --- !u!4 &919256317 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000011017491622, guid: 6d54243cec1e4054db99becc8eaf0f7b,
@@ -3719,96 +3719,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1201693132}
---- !u!1 &1205555379
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 224: {fileID: 1205555380}
-  - 222: {fileID: 1205555383}
-  - 114: {fileID: 1205555382}
-  - 114: {fileID: 1205555381}
-  m_Layer: 5
-  m_Name: GUIPrototypeCopyright (1)
-  m_TagString: GUI
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!224 &1205555380
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1205555379}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 1436526359}
-  m_RootOrder: 4
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 271, y: 174}
-  m_SizeDelta: {x: -599, y: 213}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1205555381
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1205555379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -900027084, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
---- !u!114 &1205555382
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1205555379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 0
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 851c377553b118c4cbe851ba463801e7, type: 3}
-    m_FontSize: 60
-    m_FontStyle: 0
-    m_BestFit: 1
-    m_MinSize: 6
-    m_MaxSize: 75
-    m_Alignment: 3
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: I think we could fix this by simply adding a collider to another layer that
-    only the enemies will collide with.
---- !u!222 &1205555383
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1205555379}
 --- !u!1 &1231187890
 GameObject:
   m_ObjectHideFlags: 0
@@ -3979,22 +3889,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 11411780, guid: 79836b8c9dbd05c48b45d7b5bc2f9ae0, type: 2}
-      propertyPath: MinimumEnergyRequired
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 11411780, guid: 79836b8c9dbd05c48b45d7b5bc2f9ae0, type: 2}
-      propertyPath: damagePerEnergyCost
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11411780, guid: 79836b8c9dbd05c48b45d7b5bc2f9ae0, type: 2}
-      propertyPath: damagePerSecond
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 11411780, guid: 79836b8c9dbd05c48b45d7b5bc2f9ae0, type: 2}
-      propertyPath: line
-      value: 
-      objectReference: {fileID: 917086272}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 79836b8c9dbd05c48b45d7b5bc2f9ae0, type: 2}
   m_IsPrefabParent: 0
@@ -4762,7 +4656,6 @@ RectTransform:
   - {fileID: 1641204409}
   - {fileID: 1750724847}
   - {fileID: 181401751}
-  - {fileID: 1205555380}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_AnchorMin: {x: 0, y: 0}
@@ -5958,38 +5851,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11452466, guid: e23a4e7b9300c4449a2700fcbdacd5f8, type: 2}
-      propertyPath: EnergyCost
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 11452466, guid: e23a4e7b9300c4449a2700fcbdacd5f8, type: 2}
-      propertyPath: damagePerEnergyCost
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11452466, guid: e23a4e7b9300c4449a2700fcbdacd5f8, type: 2}
-      propertyPath: Description
-      value: The basicist of blasters.
-      objectReference: {fileID: 0}
-    - target: {fileID: 11452466, guid: e23a4e7b9300c4449a2700fcbdacd5f8, type: 2}
-      propertyPath: MinimumEnergyRequired
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 11452466, guid: e23a4e7b9300c4449a2700fcbdacd5f8, type: 2}
-      propertyPath: Cooldown
-      value: 0.06666667
-      objectReference: {fileID: 0}
-    - target: {fileID: 11452466, guid: e23a4e7b9300c4449a2700fcbdacd5f8, type: 2}
-      propertyPath: damagePerSecond
-      value: 14.999999
-      objectReference: {fileID: 0}
-    - target: {fileID: 11452466, guid: e23a4e7b9300c4449a2700fcbdacd5f8, type: 2}
-      propertyPath: energyUsePerSecond
-      value: Infinity
-      objectReference: {fileID: 0}
-    - target: {fileID: 11452466, guid: e23a4e7b9300c4449a2700fcbdacd5f8, type: 2}
-      propertyPath: Damage
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e23a4e7b9300c4449a2700fcbdacd5f8, type: 2}
   m_IsPrefabParent: 0
@@ -6270,10 +6131,6 @@ Prefab:
       propertyPath: CurrentItem
       value: 
       objectReference: {fileID: 575456688}
-    - target: {fileID: 11421016, guid: 6d19e8eb38e26ad40afee1219920c204, type: 2}
-      propertyPath: INFINITE_HEALTH
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6d19e8eb38e26ad40afee1219920c204, type: 2}
   m_IsPrefabParent: 0

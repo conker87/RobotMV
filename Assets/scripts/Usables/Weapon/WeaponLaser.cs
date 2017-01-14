@@ -54,6 +54,7 @@ public class WeaponLaser : Weapon {
 			Debug.DrawRay (ShootLocationPosition, directionToMousePositionInWorld);
 
 			line.enabled = true;
+			line.sortingLayerName = "Projectiles";
 			line.SetPosition (0, ShootLocationPosition);
 
 			if (hit.collider != null) {

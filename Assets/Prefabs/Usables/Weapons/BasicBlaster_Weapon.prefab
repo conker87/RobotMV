@@ -40,13 +40,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33f12de8136a58e4990d74774e3dd91f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UsableName: Blaster
-  AttackSpeed: 0.02
-  EnergyCost: 1
-  DamagePerTick: 2
+  UsableNameLocalisationID: LocalisationID <FIXME>
+  DescriptionLocalisationID: LocalisationID <FIXME>
+  AttackLength: 0
+  Cooldown: 0.06666667
+  Damage: 1
   Level: 0
-  damagePerEnergyCost: 2
-  damagePerSecond: 25
+  Charges: 0
   Projectiles:
   - {fileID: 11475610, guid: 67a5760b2e37c4d4bb07867a7c716c77, type: 2}
   projectileType: 0
