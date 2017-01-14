@@ -17,28 +17,35 @@ public class Player : Entity
 	public InputManager inputManager;
 
 	[Header("Jumping")]
-	public bool Jump = false;
-	public bool DoubleJump = false, TripleJump = false;
+	public bool 	Jump = false;
+	public bool 	DoubleJump = false, TripleJump = false;
 
 	[Header("Items")]
 	[Header("Weapons")]
-	public bool BasicBlaster = false;
-	public bool BasicBlasterChargeShot = false;
-	public bool Spinner = false;
-	public bool ClusterSpreader = false;
-	public bool MissileLauncher = false;
-	public bool Laser = false;
+	public bool 	BasicBlaster = false;
+	public bool 	BasicBlasterChargeShot = false;
+	public bool 	Spinner = false;
+	public bool 	ClusterSpreader = false;
+	public bool 	MissileLauncher = false;
+	public bool 	Laser = false;
 	//	public bool DNU_Grenade = false;
 
 	[Header("Shields")]
-	public bool ShurikenShield = false;
-	public bool EnergyShield = false;
+	public bool 	INFINITE_SHURIKENSHIELD = false;
+	public bool 	ShurikenShield = false;
+	public bool 	INFINITE_ENERGYSHIELD = false;
+	public bool 	EnergyShield = false;
 
 	[Header("Bombs")]
-	public int		Bombs = 0;
-	public int 		MegaBombs = 0,		BombsMaximum = 0,		MegaBombsMaximum = 0;
-	public float	BombsRegen = 1f,	BombsMegaRegen = 60f;
-	public bool		doBombsRegen = true, doBombsMegaRegen = true;
+	public bool 	INFINITE_BOMBS = false;
+	public int		Bombs = 0, BombsMaximum = 0;
+	public float	BombsRegenCooldown = 1f;
+	public bool		doBombsRegen = true;
+	public bool 	INFINITE_MEGABOMBS = false;
+	public int 		MegaBombs = 0, MegaBombsMaximum = 0;
+	public float	BombsMegaRegenCooldown = 60f;
+	public bool		doBombsMegaRegen = true;
+
 
 	bool b = false, t = false;
 
@@ -98,7 +105,7 @@ public class Player : Entity
 
 		if (Time.time > timeToNextBomb) {
 
-			timeToNextBomb = Time.time + BombsRegen;
+			timeToNextBomb = Time.time + BombsRegenCooldown;
 			Bombs++;
 
 		}
@@ -122,21 +129,21 @@ public class Player : Entity
 
 		if (doBombsMegaRegen && !t) {
 
-			timeToNextMegaBomb = Time.time + BombsMegaRegen;
+			timeToNextMegaBomb = Time.time + BombsMegaRegenCooldown;
 			t = true;
 
 		}
 
 		if (Time.time > timeToNextMegaBomb) {
 
-			timeToNextMegaBomb = Time.time + BombsMegaRegen;
+			timeToNextMegaBomb = Time.time + BombsMegaRegenCooldown;
 			MegaBombs++;
 
 		}
 
 	}
 
-	public override void DamageHealth(float damage) {
+	public override void DamageHealth(int damage) {
 
 		base.DamageHealth (damage);
 
@@ -160,11 +167,10 @@ public class Player : Entity
 		style.normal.textColor = Color.magenta;
 
 		GUI.Label(new Rect(10, 10, 500, 20), ErrorMessage, style);
-		GUI.Label(new Rect(10, 30, 500, 20), "H: " + Health + "/" + HealthMaximum + " (" + HealthTanks + "/" + HealthTanksMax + "|" + HealthRegenOn + ")", style);
-		GUI.Label(new Rect(10, 50, 500, 20), "E: " + Energy + "/" + EnergyMaximum + "(" + EnergyTanks + "/" + EnergyTanksMax + "|" + EnergyRegenOn + ")", style);
+		GUI.Label(new Rect(10, 30, 500, 20), "H: " + Health + "/" + HealthMaximum + "|" + HealthRegenOn + ")", style);
 		GUI.Label(new Rect(10, 70, 500, 20), "Jumps: " + Jump + "|" + DoubleJump + "|" + TripleJump, style);
 		GUI.Label(new Rect(10, 90, 500, 20), "Weaps: " + BasicBlaster + "|" + MissileLauncher + "|" + Laser, style);
-		GUI.Label(new Rect(10, 110, 500, 20), "CW/I: " + (CurrentWeapon == null ? "None" : CurrentWeapon.UsableName) + "|" + (CurrentItem == null ? "None" : CurrentItem.UsableName), style);
+		GUI.Label(new Rect(10, 110, 500, 20), "CW/I: " + (CurrentWeapon == null ? "None" : CurrentWeapon.UsableNameLocalisationID) + "|" + (CurrentItem == null ? "None" : CurrentItem.UsableNameLocalisationID), style);
 		GUI.Label(new Rect(10, 130, 500, 20), "Speed: " + MoveSpeed, style);
 		GUI.Label(new Rect(10, 150, 500, 20), "Bombs/Max: " + Bombs + "/" + BombsMaximum + "|" + MegaBombs + "/" + MegaBombsMaximum, style);
 	}

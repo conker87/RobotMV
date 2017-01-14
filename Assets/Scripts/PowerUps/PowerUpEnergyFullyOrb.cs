@@ -12,7 +12,9 @@ public class PowerUpEnergyFullyOrb : PowerUp {
 	public override void Give()
 	{
 
-		Player.Current.RestoreEnergyFully ();
+		Debug.Log ("Player.Current.RestoreEnergyFully NOT LONGER EXISTS :: PLEASE REMOVE THIS GAMEOBJECT FROM REFERENCES: " + this);
+
+		//Player.Current.RestoreEnergyFully ();
 
 		base.Give ();
 

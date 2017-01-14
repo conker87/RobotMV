@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class _DEBUG_GiveWeapon : MonoBehaviour {
+public class GiveWeapon : MonoBehaviour {
 
 	public List<Weapon> weapons = new List<Weapon>();
 	public List<Item> items = new List<Item>();

@@ -6,18 +6,19 @@ using SmartLocalization;
 public class Usables : MonoBehaviour {
 
 	[Header("Usable Settings")]
-	public string		UsableName = "Usable <FIXME>";
+	public string		UsableNameLocalisationID = "LocalisationID <FIXME>";
+	public string		DescriptionLocalisationID = "LocalisationID <FIXME>";
 
-	[TextArea(1,10)]
-	public string		Description = "Desc <FIXME>";
-	public float		AttackSpeed;
-	public float		EnergyCost, MinimumEnergyRequired;
-	public float 		DamagePerTick;
+	public float		AttackLength, Cooldown;
+	public int 			Damage;
 	public int			Level;
 	public int 			Charges;
 
 	[SerializeField]
-	float damagePerEnergyCost, damagePerSecond, energyUsePerSecond;
+	float damagePerSecond;
+
+	protected float cooldownTime;
+	protected bool stillCoolingDown = false;
 
 	[Header("Spawn settings")]
 	public Projectile[]	Projectiles;
@@ -33,11 +34,20 @@ public class Usables : MonoBehaviour {
 
 	protected virtual void Start () {
 
+		cooldownTime = 0f;
 
 	}
 
 	[ExecuteInEditMode]
 	protected virtual void Update() {
+
+		stillCoolingDown = true;
+
+		if (Time.time > cooldownTime) {
+
+			stillCoolingDown = false;
+
+		}
 
 		DoDamageStats ();
 
@@ -45,9 +55,7 @@ public class Usables : MonoBehaviour {
 		
 	void DoDamageStats() {
 
-		damagePerEnergyCost	= DamagePerTick / EnergyCost;
-		damagePerSecond		= (1f / AttackSpeed) / DamagePerTick;
-		energyUsePerSecond	= (1f / AttackSpeed) - (0.2f / Constants.ResourceTick);
+		damagePerSecond		= (1f / Cooldown) / Damage;
 
 	}
 }

@@ -75,9 +75,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ProjectileName: Missile
-  movementSpeed: 15
+  movementSpeed: 10
   destroyOnHit: 1
   ignoreGeometry: 0
+  destroyInOn: 1
   destroyIn: 3
   weaponLevel: 1
   Direction: {x: 0, y: 0, z: 0}

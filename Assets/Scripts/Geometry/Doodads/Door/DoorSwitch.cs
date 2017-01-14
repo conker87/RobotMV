@@ -11,7 +11,7 @@ public class DoorSwitch : Door {
 	int andGateCounter = 0;
 	Switch lastSwitch;
 
-	[Header("_DEBUG_")]
+	[Header("")]
 	float timeUntilNextSwitchCheck;
 	float timeUntilSwitchesReset;
 

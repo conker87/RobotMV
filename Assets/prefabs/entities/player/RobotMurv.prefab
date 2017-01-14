@@ -57,7 +57,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 186462}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 26.5, y: 4.5, z: 0}
+  m_LocalPosition: {x: 11.5, y: 11.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -87,7 +87,7 @@ Transform:
   m_GameObject: {fileID: 131212}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9, y: 0.9, z: 1}
+  m_LocalScale: {x: 0.55, y: 0.9, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 431366}
@@ -105,7 +105,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.9, y: 0.9}
+  m_Size: {x: 0.55, y: 0.9}
 --- !u!114 &11421016
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -117,24 +117,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d846980c2c869f4f9afbd82e2f85809, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EntityName: Murv
+  EntityNameLocalisationID: PLAYER_MURV
   _DEBUG_INFINITE_HEALTH: 0
-  Health: 100
-  HealthMaximum: 100
-  HealthRegenPerTick: 1
-  HealthTanks: 0
-  HealthTanksMax: 0
+  Health: 3
+  HealthMaximum: 3
   HealthRegenOn: 0
+  HealthRegenCooldown: 10
   dead: 0
-  _DEBUG_INFINITE_ENERGY: 0
-  Energy: 50
-  EnergyMaximum: 50
-  EnergyRegenPerTick: 0.2
-  EnergyTanks: 0
-  EnergyTanksMax: 0
-  EnergyRegenOn: 1
   hasInvincibilityFrames: 1
-  invincibilityFramesLength: 1
+  invincibilityFramesLength: 0.5
   isCurrentlyInInvulnerabilityFrames: 0
   MoveSpeed: 6
   MaximumMoveSpeed: 6
@@ -149,6 +140,7 @@ MonoBehaviour:
   MissileLauncher: 0
   Laser: 0
   ShurikenShield: 0
+  EnergyShield: 0
   Bombs: 0
   MegaBombs: 0
   BombsMaximum: 0

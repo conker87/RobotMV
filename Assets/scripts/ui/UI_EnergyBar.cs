@@ -8,10 +8,10 @@ public class UI_EnergyBar : MonoBehaviour {
 	
 	void Update () {
 	
-		float percentageClamped = Mathf.Clamp01 (p.Energy / p.EnergyMaximum);
-		Vector3 percentageScale = new Vector3 (percentageClamped, 1, 1);
-
-		transform.localScale = percentageScale;
+//		float percentageClamped = Mathf.Clamp01 (p.Energy / p.EnergyMaximum);
+//		Vector3 percentageScale = new Vector3 (percentageClamped, 1, 1);
+//
+//		transform.localScale = percentageScale;
 
 	}
 

@@ -3,25 +3,9 @@ using System.Collections;
 
 public abstract class Weapon : Usables {
 
-	protected float nextShotTime = 0f;
-	protected float penaltyForHavingNoEnergyInSeconds = 1f, penaltyTime;
-
-	protected bool disabledDueToPenalty = false;
-
 	public virtual void Shoot() {
 
-		if (Player.Current.Energy < MinimumEnergyRequired) {
 
-			disabledDueToPenalty = true;
-			penaltyTime = Time.time + penaltyForHavingNoEnergyInSeconds;
-
-		}
-
-		if (Time.time > penaltyTime) {
-
-			disabledDueToPenalty = false;
-
-		}
 
 	}
 
@@ -31,11 +15,9 @@ public abstract class Weapon : Usables {
 
 	}
 
-	public virtual void ShootEnd(float energyCost) {
+	public virtual void ShootEnd() {
 			
-		Player.Current.DamageEnergy(energyCost);
-
-		nextShotTime = Time.time + AttackSpeed;
+		cooldownTime = Time.time + Cooldown;
 
 	}
 

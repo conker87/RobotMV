@@ -15,7 +15,7 @@ public class Enemy : Entity {
 	public GameObject[]	droppedPowerUps;
 
 	[Header("Damage On Touch")]
-	public float DamageOnTouch = 3f;
+	public int DamageOnTouch = 1;
 
 	void OnTriggerEnter2D(Collider2D other) {
 

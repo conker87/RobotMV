@@ -11,8 +11,10 @@ public class PowerUpEnergyUpgrade : PowerUp {
 
 	public override void Give() {
 		
-		Player.Current.EnergyTanksMax++;
-		Player.Current.EnergyTanks = Player.Current.EnergyTanksMax;
+		Debug.Log ("Player.Current.EnergyTanksMax NOT LONGER EXISTS :: PLEASE REMOVE THIS GAMEOBJECT FROM REFERENCES: " + this);
+
+		//Player.Current.EnergyTanksMax++;
+		//Player.Current.EnergyTanks = Player.Current.EnergyTanksMax;
 
 		base.Give ();
 

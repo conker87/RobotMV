@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PowerUpHealthOrb : PowerUp {
 
-	public float health = 10f;
+	public int health = 1;
 
 	protected override void Start() {
 

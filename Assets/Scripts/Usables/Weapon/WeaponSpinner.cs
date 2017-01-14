@@ -6,30 +6,26 @@ public class WeaponSpinner : Weapon {
 	[SerializeField]
 	float spinnerTimer, spinnerTimerMax = 2f, multiplier;
 	bool hasPressed = false, startEnergy = false;
+
+	protected override void Update () {
+
+		base.Update ();
+
+	}
 		
 	public override void Shoot(Vector3 ShootLocationPosition) {
 
 		base.Shoot (ShootLocationPosition);
 
-		if (disabledDueToPenalty) {
-
-			return;
-
-		}
-
 		if (Input.GetMouseButton (0)) {
 
-			if (Time.time > nextShotTime) {
+			if (Time.time > cooldownTime) {
 				
-				if (startEnergy || (Player.Current.EnergyTanks > 0 || Player.Current.Energy >= (EnergyCost * multiplier))) {
-				
-					spinnerTimer += Time.deltaTime;
-					multiplier = 1f + spinnerTimer;
+				spinnerTimer += Time.deltaTime;
+				multiplier = 1f + spinnerTimer;
 
-					hasPressed = true;
-					startEnergy = true;
-
-				}
+				hasPressed = true;
+				startEnergy = true;
 
 			}
 
@@ -52,7 +48,7 @@ public class WeaponSpinner : Weapon {
 
 				projectile.transform.localScale		*= multiplier;
 				projectile.Direction 				= directionToMousePositionInWorld;
-				projectile.projectileDamage 		= DamagePerTick * multiplier;
+				projectile.projectileDamage			= Mathf.RoundToInt (Damage * multiplier);
 				projectile.weaponLevel 				= Level;
 				projectile.projectileType 			= projectileType;
 				projectile.timesThroughEnemyMax 	= Mathf.RoundToInt (spinnerTimer * 2f);
@@ -61,14 +57,11 @@ public class WeaponSpinner : Weapon {
 
 				projectile.GetComponent<RotateAtSpeed> ().rotationalSpeed *= (multiplier + 1f);
 
-				ShootEnd (EnergyCost);
+				ShootEnd ();
 
 			}
 
 			spinnerTimer = 0f;
-
-			nextShotTime = Time.time + AttackSpeed;
-			Player.Current.DamageEnergy (EnergyCost * multiplier);
 
 			hasPressed = false;
 			startEnergy = false;

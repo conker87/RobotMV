@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Projectile : MonoBehaviour {
 
+	// TODO: Allow the projectile to have options of going through enemies a certain number of times.
+
 	public string	ProjectileName = "";
 	public float	movementSpeed = 1f;
 	public bool 	destroyOnHit = true, ignoreGeometry = false;
@@ -12,7 +14,7 @@ public class Projectile : MonoBehaviour {
 	public int	weaponLevel;
 
 	public Vector3 Direction;
-	public float projectileDamage;
+	public int projectileDamage;
 	public ProjectileType projectileType;
 
 	public GameObject onDeathObjectSpawn;

@@ -2,11 +2,11 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class _DEBUG_DEV_TOOLS : MonoBehaviour
+public class DEV_TOOLS : MonoBehaviour
 {
 	public GameObject GUIPanel;
 
-	public void _DEBUG_TOGGLE_DEV_TOOLS() {
+	public void TOGGLE_DEV_TOOLS() {
 		
 		if (GUIPanel != null)
 		{
@@ -15,65 +15,53 @@ public class _DEBUG_DEV_TOOLS : MonoBehaviour
 
 	}
 
-	public void _DEBUG_TOGGLE_JUMP() {
+	public void TOGGLE_JUMP() {
 		Player.Current.Jump = !Player.Current.Jump;
 	}
 
-	public void _DEBUG_TOGGLE_DOUBLE_JUMP() {
+	public void TOGGLE_DOUBLE_JUMP() {
 		Player.Current.DoubleJump = !Player.Current.DoubleJump;
 	}
 
-	public void _DEBUG_TOGGLE_TRIPLE_JUMP() {
+	public void TOGGLE_TRIPLE_JUMP() {
 		Player.Current.TripleJump = !Player.Current.TripleJump;
 	}
 
-	public void _DEBUG_TOGGLE_BASIC_BLASTER() {
+	public void TOGGLE_BASIC_BLASTER() {
 		Player.Current.BasicBlaster = !Player.Current.BasicBlaster;
 	}
 
-	public void _DEBUG_TOGGLE_BASIC_BLASTER_CHARGED() {
+	public void TOGGLE_BASIC_BLASTER_CHARGED() {
 		Player.Current.BasicBlasterChargeShot = !Player.Current.BasicBlasterChargeShot;
 	}
 
-	public void _DEBUG_TOGGLE_MISSILE_LAUNCHER() {
+	public void TOGGLE_MISSILE_LAUNCHER() {
 		Player.Current.MissileLauncher = !Player.Current.MissileLauncher;
 	}
 
-	public void _DEBUG_TOGGLE_LASER() {
+	public void TOGGLE_LASER() {
 		Player.Current.Laser = !Player.Current.Laser;
 	}
 
-	public void _DEBUG_TOGGLE_HEALTH_REGEN() {
+	public void TOGGLE_HEALTH_REGEN() {
 
 		Player.Current.HealthRegenOn = !Player.Current.HealthRegenOn;
 
 	}
-
-	public void _DEBUG_TOGGLE_ENERGY_REGEN() {
-
-		Player.Current.EnergyRegenOn = !Player.Current.EnergyRegenOn;
-
-	}
-
-	public void _DEBUG_TOGGLE_ENERGY_CONSUMPTION() {
-
-		Player.Current._DEBUG_INFINITE_ENERGY = !Player.Current._DEBUG_INFINITE_ENERGY;
-
-	}
-
-	public void _DEBUG_DAMAGE_PLAYER() {
+		
+	public void DAMAGE_PLAYER() {
 
 		Player.Current.DamageHealth (10);
 
 	}
 
-	public void _DEBUG_DAMAGE_PLAYER_IGNORE_iFRAMES() {
+	public void DAMAGE_PLAYER_IGNORE_iFRAMES() {
 
 		Player.Current.Health -= 10;
 
 	}
 
-	public void _DEBUG_MOVEMENT_SPEED_DECREASE() {
+	public void MOVEMENT_SPEED_DECREASE() {
 		
 		Player player = Player.Current;
 
@@ -101,7 +89,7 @@ public class _DEBUG_DEV_TOOLS : MonoBehaviour
 
 	}
 	
-	public void _DEBUG_MOVEMENT_SPEED_INCREASE() {
+	public void MOVEMENT_SPEED_INCREASE() {
 		
 		GameObject player;
 		player = GameObject.FindGameObjectWithTag("Player");
@@ -137,21 +125,21 @@ public class _DEBUG_DEV_TOOLS : MonoBehaviour
 
 			if (!Player.Current.Jump) {
 
-				_DEBUG_TOGGLE_JUMP ();
+				TOGGLE_JUMP ();
 
 			} else if (!Player.Current.DoubleJump) {
 
-				_DEBUG_TOGGLE_DOUBLE_JUMP ();
+				TOGGLE_DOUBLE_JUMP ();
 
 			} else if (!Player.Current.TripleJump) {
 
-				_DEBUG_TOGGLE_TRIPLE_JUMP ();
+				TOGGLE_TRIPLE_JUMP ();
 
 			} else {
 
-				_DEBUG_TOGGLE_JUMP ();
-				_DEBUG_TOGGLE_DOUBLE_JUMP ();
-				_DEBUG_TOGGLE_TRIPLE_JUMP ();
+				TOGGLE_JUMP ();
+				TOGGLE_DOUBLE_JUMP ();
+				TOGGLE_TRIPLE_JUMP ();
 
 			}
 

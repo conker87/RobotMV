@@ -17,45 +17,34 @@ public class WeaponBasicBlaster : Weapon {
 
 		base.Update ();
 
-		UsableName = LanguageManager.Instance.GetTextValue ("ITEM_BasicBlasterName");
-		Description = LanguageManager.Instance.GetTextValue ("ITEM_BasicBlasterDescription");
-
 	}
 
 	public override void Shoot(Vector3 ShootLocationPosition) {
 
-		base.Shoot (ShootLocationPosition);
-
-		if (disabledDueToPenalty) {
+		if (stillCoolingDown) {
 
 			return;
 
 		}
 
+		base.Shoot (ShootLocationPosition);
+
 		// Blaster Shot
 		if (Input.GetMouseButtonDown (0)) {
 
-			if (Time.time > nextShotTime) {
+			mousePositionToWorld = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+			directionToMousePositionInWorld = mousePositionToWorld - (Vector2)ShootLocationPosition;
 
-				if (Player.Current.EnergyTanks > 0 || Player.Current.Energy >= EnergyCost) {
+			int random = Random.Range (0, Projectiles.Length);
 
-					mousePositionToWorld = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-					directionToMousePositionInWorld = mousePositionToWorld - (Vector2)ShootLocationPosition;
+			Projectile projectile = Instantiate (Projectiles [random], ShootLocationPosition, Quaternion.identity) as Projectile;
 
-					int random = Random.Range (0, Projectiles.Length);
+			projectile.Direction = directionToMousePositionInWorld;
+			projectile.projectileDamage =	Damage;
+			projectile.weaponLevel = Level;
+			projectile.projectileType = projectileType;
 
-					Projectile projectile = Instantiate (Projectiles [random], ShootLocationPosition, Quaternion.identity) as Projectile;
-
-					projectile.Direction = directionToMousePositionInWorld;
-					projectile.projectileDamage =	DamagePerTick;
-					projectile.weaponLevel = Level;
-					projectile.projectileType = projectileType;
-
-					ShootEnd (EnergyCost);
-
-				}
-
-			}
+			ShootEnd ();
 
 		}
 
@@ -63,27 +52,19 @@ public class WeaponBasicBlaster : Weapon {
 		if (Player.Current.BasicBlasterChargeShot) {
 
 			if (Input.GetMouseButton (0)) {
-
-				if (Time.time > nextShotTime) {
-
-					if (Player.Current.EnergyTanks > 1 || Player.Current.Energy >= EnergyCost * chargedShotMultiplier) {
 					
-						if (chargedShotTimer < chargedShotTime && !fireChargedShot) {
+				if (chargedShotTimer < chargedShotTime && !fireChargedShot) {
 
-							chargedShotTimer += Time.deltaTime;
-							fireChargedShot = false;
+					chargedShotTimer += Time.deltaTime;
+					fireChargedShot = false;
 
-						}
+				}
 
-						if (chargedShotTimer >= chargedShotTime) {
-				
-							chargedShotTimer = 0f;
+				if (chargedShotTimer >= chargedShotTime) {
+		
+					chargedShotTimer = 0f;
 
-							fireChargedShot = true;
-
-						}
-
-					}
+					fireChargedShot = true;
 
 				}
 
@@ -105,11 +86,9 @@ public class WeaponBasicBlaster : Weapon {
 					projectile.name = projectile.name + "_ChargedShot";
 
 					projectile.Direction =			directionToMousePositionInWorld;
-					projectile.projectileDamage =	DamagePerTick * chargedShotMultiplier;
+					projectile.projectileDamage =	Mathf.RoundToInt(Damage * chargedShotMultiplier);
 					projectile.projectileType =		projectileType;
 					projectile.weaponLevel =		chargedShotLevel;
-
-					ShootEnd (EnergyCost * chargedShotMultiplier);
 
 				}
 

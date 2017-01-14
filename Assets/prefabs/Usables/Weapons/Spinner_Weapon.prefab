@@ -51,13 +51,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53b14c1cb401e0940978bbeae1050bb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UsableName: Spinner
-  AttackSpeed: 0.1
-  EnergyCost: 7.5
-  DamagePerTick: 5
+  UsableNameLocalisationID: LocalisationID <FIXME>
+  DescriptionLocalisationID: LocalisationID <FIXME>
+  AttackLength: 0
+  Cooldown: 2
+  Damage: 1
   Level: 3
-  damagePerEnergyCost: 0.6666667
-  damagePerSecond: 2
+  Charges: 0
+  damagePerSecond: 0.5
   Projectiles:
   - {fileID: 114000013363710182, guid: 7dacad8674e201e42af6d1e8a21ea465, type: 2}
   projectileType: 0

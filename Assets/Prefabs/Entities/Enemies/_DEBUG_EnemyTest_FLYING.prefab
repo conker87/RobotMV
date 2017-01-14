@@ -87,7 +87,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012504783192}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.33, y: 18.26, z: 0}
+  m_LocalPosition: {x: 3, y: 18.5, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -177,22 +177,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72a7940ac5955cc43a94963842889ca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EntityName: Test Flying Enemy
-  _DEBUG_INFINITE_HEALTH: 0
-  Health: 50
-  HealthMaximum: 50
-  HealthRegenPerTick: 0.01
-  HealthTanks: 0
-  HealthTanksMax: 0
+  EntityNameLocalisationID: 
+  INFINITE_HEALTH: 0
+  Health: 3
+  HealthMaximum: 3
   HealthRegenOn: 0
+  HealthRegenCooldown: 10
   dead: 0
-  _DEBUG_INFINITE_ENERGY: 0
-  Energy: 50
-  EnergyMaximum: 50
-  EnergyRegenPerTick: 0.05
-  EnergyTanks: 0
-  EnergyTanksMax: 0
-  EnergyRegenOn: 0
   hasInvincibilityFrames: 0
   invincibilityFramesLength: 0
   isCurrentlyInInvulnerabilityFrames: 0
@@ -211,7 +202,7 @@ MonoBehaviour:
   - {fileID: 1000013445478154, guid: 61f7179d513d67e4a952a82c4d65f105, type: 2}
   - {fileID: 1000012869973274, guid: ac5e2bba9cff3f44f80f0c94356ec632, type: 2}
   - {fileID: 1000013445478154, guid: 54198a54882b2444785436dcf7612911, type: 2}
-  DamageOnTouch: 3
+  DamageOnTouch: 1
 --- !u!114 &114000012870737596
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -244,7 +235,7 @@ MonoBehaviour:
   moveSpeed: 600
   fmode: 0
   pathIsEnded: 0
-  nextWaypointDistance: 1
+  nextWaypointDistance: 0.5
 --- !u!114 &114000013813690454
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -3,50 +3,45 @@ using System.Collections;
 
 public class WeaponClusterSpreader : Weapon {
 
+	// TODO: Decide what to do with this weapon as it will not work in this setting.
+
 	public float shootingAngle;
+
+	protected override void Update () {
+
+		base.Update ();
+
+	}
 
 	public override void Shoot(Vector3 ShootLocationPosition) {
 
 		base.Shoot (ShootLocationPosition);
 
-		if (disabledDueToPenalty) {
-
-			return;
-
-		}
 
 		if (Input.GetMouseButton (0)) {
 
 			Player.Current.CanChangeWeapon = false;
 
-			if (Time.time > nextShotTime) {
+			float radians = shootingAngle * (Mathf.PI / 180f);
 
-				if (Player.Current.EnergyTanks > 0 || Player.Current.Energy >= EnergyCost) {
+			mousePositionToWorld = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+			directionToMousePositionInWorld = mousePositionToWorld - (Vector2)ShootLocationPosition;
 
-					float radians = shootingAngle * (Mathf.PI / 180f);
+			int random = Random.Range (0, Projectiles.Length);
 
-					mousePositionToWorld = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-					directionToMousePositionInWorld = mousePositionToWorld - (Vector2)ShootLocationPosition;
+			Projectile projectile = Instantiate (Projectiles [random], ShootLocationPosition, Quaternion.identity) as Projectile;
 
-					int random = Random.Range (0, Projectiles.Length);
+			float randomXDirection = Random.Range (directionToMousePositionInWorld.x - radians, directionToMousePositionInWorld.x + radians),
+			randomYDirection = Random.Range (directionToMousePositionInWorld.y - radians, directionToMousePositionInWorld.y + radians);
 
-					Projectile projectile = Instantiate (Projectiles [random], ShootLocationPosition, Quaternion.identity) as Projectile;
+			directionToMousePositionInWorld = new Vector2 (randomXDirection, randomYDirection);
 
-					float randomXDirection = Random.Range (directionToMousePositionInWorld.x - radians, directionToMousePositionInWorld.x + radians),
-					randomYDirection = Random.Range (directionToMousePositionInWorld.y - radians, directionToMousePositionInWorld.y + radians);
+			projectile.Direction = directionToMousePositionInWorld;
+			projectile.projectileDamage =	Damage;
+			projectile.weaponLevel = Level;
+			projectile.projectileType = projectileType;
 
-					directionToMousePositionInWorld = new Vector2 (randomXDirection, randomYDirection);
-
-					projectile.Direction = directionToMousePositionInWorld;
-					projectile.projectileDamage =	DamagePerTick;
-					projectile.weaponLevel = Level;
-					projectile.projectileType = projectileType;
-
-					ShootEnd (EnergyCost);
-
-				}
-
-			}
+			ShootEnd ();
 
 		} else {
 			

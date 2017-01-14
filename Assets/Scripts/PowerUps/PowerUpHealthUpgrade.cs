@@ -11,8 +11,10 @@ public class PowerUpHealthUpgrade : PowerUp {
 
 	public override void Give() {
 		
-		Player.Current.HealthTanksMax++;
-		Player.Current.HealthTanks = Player.Current.HealthTanksMax;
+		Debug.Log ("Player.Current.HealthTanksMax NOT LONGER EXISTS :: PLEASE REMOVE THIS GAMEOBJECT FROM REFERENCES: " + this);
+
+		//Player.Current.HealthTanksMax++;
+		//Player.Current.HealthTanks = Player.Current.HealthTanksMax;
 
 		base.Give ();
 

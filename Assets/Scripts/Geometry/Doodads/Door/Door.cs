@@ -3,9 +3,7 @@ using System.Collections;
 
 public class Door : MonoBehaviour {
 
-	[Header("TODO:")]
-	[TextArea(1, 2)]
-	public string TODO = "ANIMATIONS REQUIRE THEIR BOX COLLIDERS TO MATCH THEIR SPRITES, CHECK _OLD FOLDER FOR DETAILS.";
+	// TODO: ANIMATIONS REQUIRE THEIR BOX COLLIDERS TO MATCH THEIR SPRITES, CHECK _OLD FOLDER FOR DETAILS
 
 	[Header("Door Details")]
 	[Range(0, 20)] public int doorLevel = 0;

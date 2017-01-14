@@ -40,13 +40,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5a564f28255f54439027384c69e28d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UsableName: Missile Launcher
-  AttackSpeed: 0.5
-  EnergyCost: 5
-  DamagePerTick: 5
+  UsableNameLocalisationID: Missile
+  DescriptionLocalisationID: LocalisationID <FIXME>
+  AttackLength: 0
+  Cooldown: 3
+  Damage: 3
   Level: 1
-  damagePerEnergyCost: 1
-  damagePerSecond: 0.4
+  Charges: 0
+  damagePerSecond: 0.11111111
   Projectiles:
   - {fileID: 11475610, guid: ef660bded5ebd2949821fa7a321b06a8, type: 2}
   projectileType: 0

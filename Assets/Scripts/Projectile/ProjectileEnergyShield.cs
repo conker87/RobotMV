@@ -8,16 +8,12 @@ public class ProjectileEnergyShield : Projectile {
 
 		transform.position = Player.Current.transform.position;
 
-		Player.Current.EnergyRegenOn = false;
-
 	}
 
 	protected override void OnDeath ()
 	{
 		
 		base.OnDeath ();
-
-		Player.Current.EnergyRegenOn = true;
 
 	}
 
@@ -29,17 +25,11 @@ public class ProjectileEnergyShield : Projectile {
 
 			if (p.projectileType == ProjectileType.ENEMY) {
 
-				Player.Current.DamageEnergy (p.projectileDamage);
+
 
 			}
 
 		}
-
-	}   
-
-	void OnDisable() {
-
-		Player.Current.EnergyRegenOn = true;
 
 	}
 
