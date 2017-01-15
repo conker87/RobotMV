@@ -3,34 +3,9 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections;
 
-[RequireComponent (typeof (Controller2D))]
-public class PlayerController : MonoBehaviour
-{
+public class PlayerController : MovementController {
 	
-	public GameObject ShootLocation;
-
-	Controller2D controller;
-
-	public float jumpHeight = 3.5f, timeToJumpApex = .4f, accelerationTimeAirbourne = .2f, accelerationTimeGrounded = .1f;
-	float gravity, jumpVelocity;
-
-	[SerializeField]
-	bool hasJumped = false, hasDoubleJumped = false, hasTripleJumped = false;
-	
-	Vector3 velocity;
-	float velocityXSmoothing, nextShotTime;
-
-	void Start ()
-	{
-		controller = GetComponent<Controller2D>();
-
-		gravity = -(2 * jumpHeight) / Mathf.Pow(timeToJumpApex, 2);
-		jumpVelocity = Mathf.Abs(gravity) * timeToJumpApex;
-
-		//Debug.Log ("gravity: " + gravity + ", jumpVelocity: " + jumpVelocity);
-	}
-
-	void Update ()
+	protected override void Update ()
 	{
 		Vector2 input = new Vector2 (Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
@@ -47,16 +22,7 @@ public class PlayerController : MonoBehaviour
 
 	}
 
-	void SetVelocityToZeroOnCollisionsAboveAndBelow() {
-
-		if (controller.collisions.above || controller.collisions.below) 
-		{
-			velocity.y = 0;
-		}
-
-	}
-
-	void ResetJumpingVarsOnCollisionBelow() {
+	protected override void ResetJumpingVarsOnCollisionBelow() {
 
 		if (controller.collisions.below)
 		{
@@ -67,7 +33,7 @@ public class PlayerController : MonoBehaviour
 
 	}
 
-	void Movement(Vector2 input) {
+	public override void Movement(Vector2 input) {
 
 		if (controller.collisions.below) {
 			
