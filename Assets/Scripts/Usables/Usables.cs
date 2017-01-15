@@ -14,7 +14,8 @@ public class Usables : MonoBehaviour {
 	public int			Level;
 	public int 			Charges;
 
-	protected float cooldownTime;
+	[SerializeField]
+	protected float cooldownTime, attackLengthTime;
 	protected bool stillCoolingDown = false;
 
 	[Header("Spawn settings")]
@@ -31,6 +32,7 @@ public class Usables : MonoBehaviour {
 
 	protected virtual void Start () {
 
+		attackLengthTime = 0f;
 		cooldownTime = 0f;
 
 	}
@@ -50,3 +52,5 @@ public class Usables : MonoBehaviour {
 	}
 
 }
+
+public enum ProjectileType { PLAYER, ENEMY };

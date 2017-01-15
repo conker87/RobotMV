@@ -3,11 +3,15 @@ using System.Collections;
 
 public class WeaponLaser : Weapon {
 
+	// TODO: Sort out an animated and wobbly rendered line shader.
+
 	[Header("Laser Settings")]
 	public LayerMask geometryLayer;
 	public float laserLength = 7f;
 
 	public LineRenderer line;
+
+	bool hasBeenFiring = false;
 
 	[Header("EXTENDED")]
 	[SerializeField] Switch s;
@@ -19,96 +23,119 @@ public class WeaponLaser : Weapon {
 		base.Start ();
 
 		line = GetComponent<LineRenderer> ();
-
-		if (line == null) {
-
-			line = GameObject.FindGameObjectWithTag ("LaserLineRenderer").GetComponent<LineRenderer> ();
-			line.sortingLayerName = "Geometry";
-			line.sortingOrder = -1;
-
-			Debug.Log (line);
-
-		}
-
-	}
-
-	protected override void Update () {
-
-		base.Update ();
+		line.sortingLayerName = "Geometry";
+		line.sortingOrder = -1;
 
 	}
 		
 	public override void Shoot(Vector3 ShootLocationPosition) {
 
-		base.Shoot (ShootLocationPosition);
+		if (stillCoolingDown) {
 
-		if (Input.GetMouseButton (0)) {
+			return;
 
-			Player.Current.CanChangeWeapon = false;
+		}
 
-			mousePositionToWorld = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-			directionToMousePositionInWorld = mousePositionToWorld - (Vector2)ShootLocationPosition;
+		//base.Shoot (ShootLocationPosition);
 
-			RaycastHit2D hit = Physics2D.Raycast (ShootLocationPosition, directionToMousePositionInWorld, laserLength, geometryLayer);
+		if (Input.GetMouseButtonDown (0)) {
 
-			Debug.DrawRay (ShootLocationPosition, directionToMousePositionInWorld);
+			attackLengthTime = Time.time + AttackLength;
 
-			line.enabled = true;
-			line.sortingLayerName = "Projectiles";
-			line.SetPosition (0, ShootLocationPosition);
+		}
 
-			if (hit.collider != null) {
+		// Debug.Log ("Time.time: " + Time.time + " attackLengthTime: " + attackLengthTime);
 
-				line.SetVertexCount (3);
+		if (Time.time < attackLengthTime) {
 
-				line.SetPosition (1, hit.point);
-				line.SetPosition (2, hit.point + (directionToMousePositionInWorld.normalized * .1f));
+			if (Input.GetMouseButton (0)) {
 
-				// TODO: Fix me
-				if ((e = hit.collider.gameObject.GetComponentInParent<Entity> ()) != null && (Time.time > AttackLength)) {
+				Player.Current.CanChangeWeapon = false;
+				hasBeenFiring = true;
 
-					if (e.tag != "Geometry") {
+				mousePositionToWorld = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+				directionToMousePositionInWorld = mousePositionToWorld - (Vector2)ShootLocationPosition;
 
-						e.DamageHealth (Damage);
+				RaycastHit2D hit = Physics2D.Raycast (ShootLocationPosition, directionToMousePositionInWorld, laserLength, geometryLayer);
+
+				Debug.DrawRay (ShootLocationPosition, directionToMousePositionInWorld);
+
+				line.enabled = true;
+				line.sortingLayerName = "Projectiles";
+				line.SetPosition (0, ShootLocationPosition);
+
+				if (hit.collider != null) {
+
+					line.SetVertexCount (3);
+
+					line.SetPosition (1, hit.point);
+					line.SetPosition (2, hit.point + (directionToMousePositionInWorld.normalized * .1f));
+
+					// TODO: Fix me
+					if ((e = hit.collider.gameObject.GetComponentInParent<Entity> ()) != null) {
+
+						if (e.tag != "Geometry") {
+
+							e.DamageHealth (Damage);
+
+						}
 
 					}
 
-				}
+					if ((s = hit.collider.gameObject.GetComponentInParent<Switch> ()) != null) {
 
-				if ((s = hit.collider.gameObject.GetComponentInParent<Switch> ()) != null) {
-
-					s.TriggerSwitch ();
-
-				}
-
-				if ((d = hit.collider.gameObject.GetComponent<DoorProjectile> ()) != null) {
-
-					if (Player.Current.CurrentWeapon.Level >= d.doorLevel && d.IsDoorOpen() == false) {
-
-						d.OpenDoor ();
+						s.TriggerSwitch ();
 
 					}
+
+					if ((d = hit.collider.gameObject.GetComponent<DoorProjectile> ()) != null) {
+
+						if (Player.Current.CurrentWeapon.Level >= d.doorLevel && d.IsDoorOpen () == false) {
+
+							d.OpenDoor ();
+
+						}
+
+					}
+
+				} else {
+
+					line.SetVertexCount (2);
+
+					line.SetPosition (1, (Vector3)(ShootLocationPosition + (Vector3)(directionToMousePositionInWorld.normalized * laserLength)));
 
 				}
 
 			} else {
 
-				line.SetVertexCount (2);
+				// Debug.Log ("hasBeenFiring: " + hasBeenFiring);
 
-				line.SetPosition (1, (Vector3) (ShootLocationPosition + (Vector3) (directionToMousePositionInWorld.normalized * laserLength)));
+				if (hasBeenFiring) {
 
-			}
+					line.enabled = false;
+					Player.Current.CanChangeWeapon = true;
 
-			if (Time.time > AttackLength) {
-			
-				ShootEnd ();
+					ShootEnd ();
+
+					hasBeenFiring = false;
+
+				}
 
 			}
 
 		} else {
 
-		line.enabled = false;
-		Player.Current.CanChangeWeapon = true;
+			if (hasBeenFiring) {
+
+				// Debug.Log ("Time.time > attackLengthTime");
+
+				line.enabled = false;
+				Player.Current.CanChangeWeapon = true;
+				hasBeenFiring = false;
+
+				ShootEnd ();
+
+			}
 
 		}
 

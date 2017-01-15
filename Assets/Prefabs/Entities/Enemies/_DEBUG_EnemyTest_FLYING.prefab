@@ -193,14 +193,10 @@ MonoBehaviour:
   droppedPowerupsParent: {fileID: 0}
   droppedPowerUpsChance:
   - 10
-  - 10
   - 1
-  - 1
-  droppedPowerUpsMax: 07000000070000000100000001000000
+  droppedPowerUpsMax: 0700000001000000
   droppedPowerUps:
   - {fileID: 1000012869973274, guid: 4f46e4eb1e4615d499ee76e4db8f25b0, type: 2}
-  - {fileID: 1000013445478154, guid: 61f7179d513d67e4a952a82c4d65f105, type: 2}
-  - {fileID: 1000012869973274, guid: ac5e2bba9cff3f44f80f0c94356ec632, type: 2}
   - {fileID: 1000013445478154, guid: 54198a54882b2444785436dcf7612911, type: 2}
   DamageOnTouch: 1
 --- !u!114 &114000012870737596

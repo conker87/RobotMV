@@ -43,11 +43,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UsableNameLocalisationID: LocalisationID <FIXME>
   DescriptionLocalisationID: LocalisationID <FIXME>
-  AttackLength: 0
-  Cooldown: 0
+  AttackLength: 2
+  Cooldown: 1
   Damage: 0
   Level: 2
   Charges: 0
+  cooldownTime: 0
+  attackLengthTime: 0
   Projectiles: []
   projectileType: 0
   geometryLayer:
@@ -91,8 +93,8 @@ LineRenderer:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 1}
   m_Parameters:
-    startWidth: 0.25
-    endWidth: 0.25
+    startWidth: 0.2
+    endWidth: 0.2
     m_StartColor:
       serializedVersion: 2
       rgba: 4278190335

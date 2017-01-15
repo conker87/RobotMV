@@ -659,8 +659,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: _DEBUG_TOGGLE_MISSILE_LAUNCHER
+      - m_Target: {fileID: 46155615}
+        m_MethodName: TOGGLE_MISSILE_LAUNCHER
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -908,8 +908,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: _DEBUG_DAMAGE_PLAYER_IGNORE_iFRAMES
+      - m_Target: {fileID: 46155615}
+        m_MethodName: DAMAGE_PLAYER_IGNORE_iFRAMES
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1030,8 +1030,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: _DEBUG_TOGGLE_LASER
+      - m_Target: {fileID: 46155615}
+        m_MethodName: TOGGLE_LASER
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1318,16 +1318,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114000011866705478, guid: 3141ccddd3a564b4f9bfc906ed5a16e1,
-        type: 2}
-      propertyPath: droppedPowerupsParent
-      value: 
-      objectReference: {fileID: 107139819}
     - target: {fileID: 212000012936453022, guid: 3141ccddd3a564b4f9bfc906ed5a16e1,
         type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f9a665bc43fcd704cb0a162527c6ebee, type: 2}
+    - target: {fileID: 114000011866705478, guid: 3141ccddd3a564b4f9bfc906ed5a16e1,
+        type: 2}
+      propertyPath: droppedPowerupsParent
+      value: 
+      objectReference: {fileID: 107139819}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3141ccddd3a564b4f9bfc906ed5a16e1, type: 2}
   m_IsPrefabParent: 0
@@ -1417,8 +1417,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: _DEBUG_TOGGLE_TRIPLE_JUMP
+      - m_Target: {fileID: 46155615}
+        m_MethodName: TOGGLE_TRIPLE_JUMP
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2228,7 +2228,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!120 &549260961
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -3144,8 +3144,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: _DEBUG_DAMAGE_PLAYER
+      - m_Target: {fileID: 46155615}
+        m_MethodName: DAMAGE_PLAYER
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3281,8 +3281,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: _DEBUG_TOGGLE_DOUBLE_JUMP
+      - m_Target: {fileID: 46155615}
+        m_MethodName: TOGGLE_DOUBLE_JUMP
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3889,6 +3889,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 12005336, guid: 79836b8c9dbd05c48b45d7b5bc2f9ae0, type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1043388851
+      objectReference: {fileID: 0}
+    - target: {fileID: 12005336, guid: 79836b8c9dbd05c48b45d7b5bc2f9ae0, type: 2}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 79836b8c9dbd05c48b45d7b5bc2f9ae0, type: 2}
   m_IsPrefabParent: 0
@@ -4240,8 +4248,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: _DEBUG_TOGGLE_BASIC_BLASTER
+      - m_Target: {fileID: 46155615}
+        m_MethodName: TOGGLE_BASIC_BLASTER
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4751,8 +4759,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: _DEBUG_TOGGLE_BASIC_BLASTER_CHARGED
+      - m_Target: {fileID: 46155615}
+        m_MethodName: TOGGLE_BASIC_BLASTER_CHARGED
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5039,12 +5047,6 @@ MonoBehaviour:
   retroSnap: 1
   assetsPixelsPerUnit: 16
   showHUD: 0
-  cameraSize: {x: 6.8125, y: 4.7890625}
-  contraintUsed: 0
-  cameraPixelsPerUnit: 64
-  ratio: 4
-  nativeAssetResolution: {x: 218, y: 153.25}
-  fovCoverage: 0.9578125
 --- !u!114 &1538936282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6628,8 +6630,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: _DEBUG_TOGGLE_JUMP
+      - m_Target: {fileID: 46155615}
+        m_MethodName: TOGGLE_JUMP
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6780,8 +6782,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: _DEBUG_TOGGLE_HEALTH_REGEN
+      - m_Target: {fileID: 46155615}
+        m_MethodName: TOGGLE_HEALTH_REGEN
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

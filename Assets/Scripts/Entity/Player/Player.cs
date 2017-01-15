@@ -161,10 +161,10 @@ public class Player : Entity
 
 		GUI.Label(new Rect(10, 10, 500, 20), ErrorMessage, style);
 		GUI.Label(new Rect(10, 30, 500, 20), "H: " + Health + "/" + HealthMaximum + "|" + HealthRegenOn + ")", style);
-		GUI.Label(new Rect(10, 70, 500, 20), "Jumps: " + Jump + "|" + DoubleJump + "|" + TripleJump, style);
-		GUI.Label(new Rect(10, 90, 500, 20), "Weaps: " + BasicBlaster + "|" + MissileLauncher + "|" + Laser, style);
-		GUI.Label(new Rect(10, 110, 500, 20), "CW/I: " + (CurrentWeapon == null ? "None" : CurrentWeapon.UsableNameLocalisationID) + "|" + (CurrentItem == null ? "None" : CurrentItem.UsableNameLocalisationID), style);
-		GUI.Label(new Rect(10, 130, 500, 20), "Speed: " + MoveSpeed, style);
-		GUI.Label(new Rect(10, 150, 500, 20), "Bombs/Max: " + Bombs + "/" + BombsMaximum + "|" + MegaBombs + "/" + MegaBombsMaximum, style);
+		GUI.Label(new Rect(10, 50, 500, 20), "Jumps: " + Jump + "|" + DoubleJump + "|" + TripleJump, style);
+		GUI.Label(new Rect(10, 70, 500, 20), "Weaps: " + BasicBlaster + "|" + MissileLauncher + "|" + Laser, style);
+		GUI.Label(new Rect(10, 90, 500, 20), "CW/I: " + (CurrentWeapon == null ? "None" : CurrentWeapon.UsableNameLocalisationID) + "|" + (CurrentItem == null ? "None" : CurrentItem.UsableNameLocalisationID), style);
+		GUI.Label(new Rect(10, 110, 500, 20), "Speed: " + MoveSpeed, style);
+		GUI.Label(new Rect(10, 130, 500, 20), "Bombs/Max: " + Bombs + "/" + BombsMaximum + "|" + MegaBombs + "/" + MegaBombsMaximum, style);
 	}
 }

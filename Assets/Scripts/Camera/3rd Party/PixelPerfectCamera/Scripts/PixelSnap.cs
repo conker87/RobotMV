@@ -99,7 +99,7 @@ public class PixelSnap : MonoBehaviour
             
         }
         else {
-            // Convert the units to pixels, round them, convert back to units. The offsets make sure that the distance we round is from screen pixel (fragment) edges snap to texel edges.
+            // Convert the units to pixels, round them, convert back to units. The offsets make sure that the distance we round is from screen pixel (fragment) edges to texel edges.
             relPos.x = (Mathf.Round(relPos.x / cameraUPP - offset.x - pivotOffsetFrac.x) + offset.x + pivotOffsetFrac.x + pivotOffsetInt.x) * cameraUPP;
             relPos.y = (Mathf.Round(relPos.y / cameraUPP - offset.y - pivotOffsetFrac.y) + offset.y + pivotOffsetFrac.y + pivotOffsetInt.y) * cameraUPP;
         }

@@ -5,9 +5,7 @@ using EckTechGames.FloatingCombatText;
 
 public class Entity : MonoBehaviour {
 
-	/// TODO:
-	/// Replace Health with int Orbs
-	/// Replace Energy with Cooldowns for items and shooting.
+	/// TODO: Replace Health with int Orbs, replace Energy with Cooldowns for items and shooting.
 
 
 	// System
