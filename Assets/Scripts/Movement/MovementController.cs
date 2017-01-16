@@ -1,35 +1,36 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[RequireComponent (typeof (Controller2D))]
-public class MovementController : MonoBehaviour {
+public class MovementController : Controller2D {
 
-	public GameObject ShootLocation;
+	[Header("Gravity")]
+	public float jumpHeight = 3.5f;
+	public float timeToJumpApex = .4f, accelerationTimeAirbourne = .2f, accelerationTimeGrounded = .1f;
 
-	protected Controller2D controller;
-
-	public float jumpHeight = 3.5f, timeToJumpApex = .4f, accelerationTimeAirbourne = .2f, accelerationTimeGrounded = .1f, moveSpeed = 5f;
+	[Header("Movement")]
+	public float moveSpeed = 5f;
 
 	protected float gravity, jumpVelocity;
 
+	[Header("Jumping")]
 	[SerializeField]
-	protected bool hasJumped = false, hasDoubleJumped = false, hasTripleJumped = false;
+	protected bool hasJumped = false;
 
 	protected Vector3 velocity;
 	protected float velocityXSmoothing, nextShotTime;
 
-	protected virtual void Start ()
-	{
-		controller = GetComponent<Controller2D>();
+	protected override void Start () {
+
+		base.Start ();
 
 		gravity = -(2 * jumpHeight) / Mathf.Pow(timeToJumpApex, 2);
 		jumpVelocity = Mathf.Abs(gravity) * timeToJumpApex;
 
 		//Debug.Log ("gravity: " + gravity + ", jumpVelocity: " + jumpVelocity);
+
 	}
 
-	protected virtual void Update ()
-	{
+	protected virtual void Update () {
 
 		SetVelocityToZeroOnCollisionsAboveAndBelow ();
 
@@ -39,7 +40,7 @@ public class MovementController : MonoBehaviour {
 
 	protected void SetVelocityToZeroOnCollisionsAboveAndBelow() {
 
-		if (controller.collisions.above || controller.collisions.below) 
+		if (collisions.above || collisions.below) 
 		{
 			velocity.y = 0;
 		}
@@ -48,8 +49,7 @@ public class MovementController : MonoBehaviour {
 
 	protected virtual void ResetJumpingVarsOnCollisionBelow() {
 
-		if (controller.collisions.below)
-		{
+		if (collisions.below) {
 			
 			hasJumped = false;
 
@@ -61,10 +61,11 @@ public class MovementController : MonoBehaviour {
 
 		float targetVelocityX = input.x * moveSpeed;
 
-		velocity.x = Mathf.SmoothDamp(velocity.x, targetVelocityX, ref velocityXSmoothing,
-			(controller.collisions.below) ? accelerationTimeGrounded : accelerationTimeAirbourne);
-		velocity.y += gravity * Time.fixedDeltaTime;
-		controller.Move (velocity * Time.fixedDeltaTime);
+		velocity.x = Mathf.SmoothDamp(velocity.x, targetVelocityX, ref velocityXSmoothing, (collisions.below) ? accelerationTimeGrounded : accelerationTimeAirbourne);
+
+		velocity.y = (isFlyingEntity) ? input.y : velocity.y + (gravity * Time.fixedDeltaTime);
+
+		Move (velocity * Time.fixedDeltaTime);
 
 	}
 

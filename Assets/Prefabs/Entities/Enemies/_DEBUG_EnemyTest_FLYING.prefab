@@ -52,11 +52,11 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000010833762344}
   - 114: {fileID: 114000011866705478}
+  - 114: {fileID: 114000010719973058}
+  - 114: {fileID: 114000011726360590}
   - 114: {fileID: 114000013813690454}
-  - 114: {fileID: 114000012997360804}
-  - 212: {fileID: 212000012845981594}
-  - 50: {fileID: 50000011736796096}
   - 58: {fileID: 58000011873285818}
+  - 212: {fileID: 212000012845981594}
   m_Layer: 13
   m_Name: _DEBUG_EnemyTest_FLYING
   m_TagString: Enemy
@@ -135,23 +135,6 @@ Transform:
   - {fileID: 4000011264138108}
   m_Father: {fileID: 4000010833762344}
   m_RootOrder: 0
---- !u!50 &50000011736796096
-Rigidbody2D:
-  serializedVersion: 2
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012504783192}
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 10
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!58 &58000011873285818
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -166,6 +149,56 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.45
+--- !u!114 &114000010719973058
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012504783192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 485164339f1b4884baecbad93c9092ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionMask:
+    serializedVersion: 2
+    m_Bits: 4096
+  horizontalRayCount: 4
+  verticalRayCount: 4
+  horizontalRaySpacing: 0
+  verticalRaySpacing: 0
+  _collider: {fileID: 0}
+  jumpHeight: 3.5
+  timeToJumpApex: 0.4
+  accelerationTimeAirbourne: 0.2
+  accelerationTimeGrounded: 0.1
+  moveSpeed: 5
+  hasJumped: 0
+  isFlyingEntity: 0
+--- !u!114 &114000011726360590
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012504783192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9062f6846259af64e969146b40f5ac6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  nextWaypointDistance: 1
+  updateRate: 2
+  requiresLineOfSight: 1
+  playerRange: 20
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 1024
+  geometryMask:
+    serializedVersion: 2
+    m_Bits: 4096
+  EnemyMT: 0
+  pathIsEnded: 0
 --- !u!114 &114000011866705478
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -211,27 +244,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entity: {fileID: 114000011866705478}
---- !u!114 &114000012997360804
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012504783192}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c8c96ce404b331489add72c9812c9ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  playerRange: 10
-  playerMask:
-    serializedVersion: 2
-    m_Bits: 1024
-  updateRate: 2
-  moveSpeed: 600
-  fmode: 0
-  pathIsEnded: 0
-  nextWaypointDistance: 0.5
 --- !u!114 &114000013813690454
 MonoBehaviour:
   m_ObjectHideFlags: 1

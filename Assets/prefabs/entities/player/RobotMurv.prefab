@@ -41,7 +41,6 @@ GameObject:
   - 4: {fileID: 431366}
   - 114: {fileID: 11421016}
   - 114: {fileID: 11475602}
-  - 114: {fileID: 11496000}
   - 61: {fileID: 6176158}
   m_Layer: 10
   m_Name: RobotMurv
@@ -57,7 +56,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 186462}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.5, y: 11.5, z: 0}
+  m_LocalPosition: {x: 18.57, y: 11.34, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -168,25 +167,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5c64e43c5b5da640923f0413f615d9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShootLocation: {fileID: 169950}
-  jumpHeight: 3
-  timeToJumpApex: 0.4
-  accelerationTimeAirbourne: 0.2
-  accelerationTimeGrounded: 0.1
-  hasJumped: 0
-  hasDoubleJumped: 0
-  hasTripleJumped: 0
---- !u!114 &11496000
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 186462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54c1249eff151864d9e0ed270a5212a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   collisionMask:
     serializedVersion: 2
     m_Bits: 4096
@@ -195,6 +175,15 @@ MonoBehaviour:
   horizontalRaySpacing: 0
   verticalRaySpacing: 0
   _collider: {fileID: 0}
+  jumpHeight: 3
+  timeToJumpApex: 0.4
+  accelerationTimeAirbourne: 0.2
+  accelerationTimeGrounded: 0.1
+  moveSpeed: 5
+  hasJumped: 0
+  hasDoubleJumped: 0
+  hasTripleJumped: 0
+  ShootLocation: {fileID: 169950}
 --- !u!212 &21218034
 SpriteRenderer:
   m_ObjectHideFlags: 1

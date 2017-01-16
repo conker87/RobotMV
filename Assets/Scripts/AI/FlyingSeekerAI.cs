@@ -2,14 +2,13 @@
 using System.Collections;
 using Pathfinding;
 
-[RequireComponent(typeof(Rigidbody2D))]
-public class FlyingMovement : EnemyAI {
+public class FlyingSeekerAI : EnemyAI {
 
-	protected override void Start() {
-
-		rb = GetComponent<Rigidbody2D> ();
-
+	protected override void Start () {
+		
 		base.Start ();
+
+		EnemyMT = EnemyMovementType.FLYING;
 
 	}
 
@@ -24,23 +23,30 @@ public class FlyingMovement : EnemyAI {
 		if (currentWaypoint >= path.vectorPath.Count) {
 
 			if (pathIsEnded) {
+
 				return;
+
 			}
 
-			Debug.Log ("Path complete.");
+			//Debug.Log ("Path complete.");
 			pathIsEnded = true;
+
 			return;
 
 		}
 
 		pathIsEnded = false;
 
-		// Next waypoint direction
-		Vector3 direction = (path.vectorPath[currentWaypoint] - transform.position).normalized;
+		Vector3 direction;
 
-		direction *= moveSpeed * Time.fixedDeltaTime;
+		direction = (path.vectorPath [currentWaypoint] - transform.position).normalized;
 
-		rb.AddForce (direction, fmode);
+		//direction.x = (direction.x == 0f) ? 0f : Mathf.Sign(direction.x) * 1f;
+		//direction.y = (direction.y == 0f) ? 0f : Mathf.Sign(direction.y) * 1f;
+
+		Debug.Log (direction);
+
+		mc.Movement (direction);
 
 		if (Vector3.Distance (transform.position, path.vectorPath [currentWaypoint]) < nextWaypointDistance) {
 
@@ -48,7 +54,6 @@ public class FlyingMovement : EnemyAI {
 			return;
 
 		}
-
 
 	}
 

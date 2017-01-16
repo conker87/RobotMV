@@ -37,9 +37,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013009537534}
   - 114: {fileID: 114000013816671216}
-  - 114: {fileID: 114000010883802602}
-  - 114: {fileID: 114000012191024676}
-  - 114: {fileID: 114000010091128778}
+  - 114: {fileID: 114000010749356972}
+  - 114: {fileID: 114000010788236044}
   - 114: {fileID: 114000012124012704}
   - 61: {fileID: 61000011990722276}
   - 212: {fileID: 212000011708352378}
@@ -129,7 +128,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000014054109662}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.97, y: 10.61, z: 0}
+  m_LocalPosition: {x: 16, y: 11, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -150,7 +149,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
---- !u!114 &114000010091128778
+--- !u!114 &114000010749356972
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -158,31 +157,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000014054109662}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5cbab3ba14744b448d6d599c3b70671, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  playerRange: 20
-  playerMask:
-    serializedVersion: 2
-    m_Bits: 1024
-  geometryMask:
-    serializedVersion: 2
-    m_Bits: 4096
-  updateRate: 4
-  moveSpeed: 0
-  fmode: 0
-  pathIsEnded: 0
-  nextWaypointDistance: 1
---- !u!114 &114000010883802602
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000014054109662}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54c1249eff151864d9e0ed270a5212a7, type: 3}
+  m_Script: {fileID: 11500000, guid: 485164339f1b4884baecbad93c9092ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   collisionMask:
@@ -193,6 +168,37 @@ MonoBehaviour:
   horizontalRaySpacing: 0
   verticalRaySpacing: 0
   _collider: {fileID: 0}
+  jumpHeight: 3.5
+  timeToJumpApex: 0.4
+  accelerationTimeAirbourne: 0.2
+  accelerationTimeGrounded: 0.1
+  moveSpeed: 2.5
+  hasJumped: 0
+  isFlyingEntity: 0
+--- !u!114 &114000010788236044
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014054109662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ee8874e6e976e548aeffba64801cd46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  nextWaypointDistance: 1
+  updateRate: 2
+  requiresLineOfSight: 1
+  playerRange: 5
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 1024
+  geometryMask:
+    serializedVersion: 2
+    m_Bits: 4096
+  EnemyMT: 1
+  pathIsEnded: 0
 --- !u!114 &114000010939630578
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -232,26 +238,6 @@ MonoBehaviour:
     tagsChange: -1
     tagsSet: -1
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
---- !u!114 &114000012191024676
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000014054109662}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97bfe61170a1ba94081a7eda86b094fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ShootLocation: {fileID: 0}
-  jumpHeight: 3.5
-  timeToJumpApex: 0.4
-  accelerationTimeAirbourne: 0.2
-  accelerationTimeGrounded: 0.1
-  moveSpeed: 3
-  hasJumped: 0
-  hasDoubleJumped: 0
-  hasTripleJumped: 0
 --- !u!114 &114000013816671216
 MonoBehaviour:
   m_ObjectHideFlags: 1
