@@ -26,6 +26,7 @@ public class EnemyAI : MonoBehaviour {
 	public Transform enemyOriginPosition;
 	public bool canWander = false, returnToOrigin = true;
 	public float waitingTime = 3f;
+	protected bool hasDoneWaitingTimeNext = false;
 
 	protected float wanderingTimeNext, waitingTimeNext;
 
@@ -85,7 +86,7 @@ public class EnemyAI : MonoBehaviour {
 
 	protected virtual void OnPathComplete(Path p) {
 
-		// Debug.Log ("Path error? : " + p.error);
+		Debug.Log ("Path error? : " + p.error);
 
 		if (!p.error) {
 
@@ -148,4 +149,4 @@ public class EnemyAI : MonoBehaviour {
 }
 
 public enum EnemyMovementType { FLYING, GROUND };
-public enum EnemyMovementState { IDLE, WANDERING, SEEKING, WAITING }
+public enum EnemyMovementState { IDLE, WANDERING, SEEKING, WAITING, HEADING_HOME }

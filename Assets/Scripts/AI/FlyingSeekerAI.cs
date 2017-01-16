@@ -43,12 +43,6 @@ public class FlyingSeekerAI : EnemyAI {
 
 				}
 
-				if (pathIsEnded) {
-
-					return;
-
-				}
-
 			}
 
 		} else {
