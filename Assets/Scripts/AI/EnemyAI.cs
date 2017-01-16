@@ -20,6 +20,15 @@ public class EnemyAI : MonoBehaviour {
 	[Header("Enemy Movement Type")]
 	public EnemyMovementType EnemyMT;
 
+	[Header("Enemy Movement State")]
+	[SerializeField]
+	protected EnemyMovementState EnemyMS;
+	public Transform enemyOriginPosition;
+	public bool canWander = false, returnToOrigin = true;
+	public float waitingTime = 3f;
+
+	protected float wanderingTimeNext, waitingTimeNext;
+
 	protected Collider2D circleCollider;
 	protected RaycastHit2D ray;
 
@@ -56,26 +65,6 @@ public class EnemyAI : MonoBehaviour {
 	protected virtual void FixedUpdate() {
 
 		throw new UnityException ("FixedUpdate should be overrided.");
-
-//		if (target == null || path == null) {
-//
-//			// Make sure gravity is done on the Entity.
-//			DoGravity();
-//
-//			return;
-//
-//		}
-//
-//		DoWaypath ();
-//
-//		DoMovement (target);
-//
-//		if (Vector3.Distance (transform.position, path.vectorPath [currentWaypoint]) < nextWaypointDistance) {
-//
-//			currentWaypoint++;
-//			return;
-//
-//		}
 
 	}
 
@@ -136,6 +125,18 @@ public class EnemyAI : MonoBehaviour {
 
 	}
 
+	protected virtual void OnDisable () {
+		// Abort calculation of path
+		if (seeker != null && !seeker.IsDone()) seeker.GetCurrentPath().Error();
+
+		// Release current path
+		//if (path != null) path.Release(this);
+		path = null;
+
+		// Make sure we receive callbacks when paths complete
+		seeker.pathCallback -= OnPathComplete;
+	}
+
 	void OnDrawGizmos() {
 
 		Gizmos.DrawLine (transform.position, ((Vector2) direction * playerRange) + (Vector2) transform.position);
@@ -147,3 +148,4 @@ public class EnemyAI : MonoBehaviour {
 }
 
 public enum EnemyMovementType { FLYING, GROUND };
+public enum EnemyMovementState { IDLE, WANDERING, SEEKING, WAITING }
