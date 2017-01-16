@@ -66,7 +66,7 @@ public class WeaponLaser : Weapon {
 
 				if (hit.collider != null) {
 
-					line.SetVertexCount (3);
+					line.numPositions = 3;
 
 					line.SetPosition (1, hit.point);
 					line.SetPosition (2, hit.point + (directionToMousePositionInWorld.normalized * .1f));
@@ -100,7 +100,7 @@ public class WeaponLaser : Weapon {
 
 				} else {
 
-					line.SetVertexCount (2);
+					line.numPositions = 2;
 
 					line.SetPosition (1, (Vector3)(ShootLocationPosition + (Vector3)(directionToMousePositionInWorld.normalized * laserLength)));
 

@@ -27,6 +27,7 @@ public class EnemyAI : MonoBehaviour {
 	public bool canWander = false, returnToOrigin = true;
 	public float waitingTime = 3f;
 	protected bool hasDoneWaitingTimeNext = false;
+	protected Vector2 randomPosition;
 
 	protected float wanderingTimeNext, waitingTimeNext;
 
@@ -56,6 +57,8 @@ public class EnemyAI : MonoBehaviour {
 		seeker = GetComponent<Seeker> ();
 		mc = GetComponent<MovementController> ();
 
+		wanderingTimeNext = waitingTimeNext = 0f;
+
 		StartCoroutine (UpdatePath ());
 
 	}
@@ -65,7 +68,82 @@ public class EnemyAI : MonoBehaviour {
 	/// </summary>
 	protected virtual void FixedUpdate() {
 
-		throw new UnityException ("FixedUpdate should be overrided.");
+		// throw new UnityException ("FixedUpdate should be overrided.");
+
+		if (target == null) {
+
+			if (EnemyMS == EnemyMovementState.SEEKING) {
+
+				waitingTimeNext = Time.time + waitingTime;
+				EnemyMS = EnemyMovementState.HEADING_HOME;
+
+			} else if (EnemyMS == EnemyMovementState.HEADING_HOME && returnToOrigin && Time.time > waitingTimeNext) {
+
+
+				seeker.StartPath (transform.position, enemyOriginPosition.position, OnPathComplete);
+				pathIsEnded = false;
+
+				EnemyMS = EnemyMovementState.IDLE;
+
+			} else {
+
+				if (canWander && Time.time > wanderingTimeNext) {
+
+					// TODO: Position needs to check to see if it's not inside geometry and if so, pick again.
+					Debug.Log ("Using new position: " + randomPosition);
+
+					seeker.StartPath (transform.position, randomPosition, OnPathComplete);
+					pathIsEnded = false;
+
+					EnemyMS = EnemyMovementState.WANDERING;
+
+					wanderingTimeNext = Time.time + waitingTime;
+
+				}
+
+			}
+
+		} else {
+
+			EnemyMS = EnemyMovementState.SEEKING;
+
+		}
+
+		if (path == null) {
+
+			EnemyMS = EnemyMovementState.IDLE;
+			return;
+
+		}
+
+		if (currentWaypoint >= path.vectorPath.Count) {
+
+			if (pathIsEnded) {
+
+				return;
+
+			}
+
+			pathIsEnded = true;
+
+			return;
+
+		}
+
+		pathIsEnded = false;
+
+		Vector3 direction;
+
+		direction = (path.vectorPath [currentWaypoint] - transform.position).normalized;
+
+		mc.Movement (direction);
+
+		if (Vector3.Distance (transform.position, path.vectorPath [currentWaypoint]) < nextWaypointDistance) {
+
+			currentWaypoint++;
+			return;
+
+		}
 
 	}
 

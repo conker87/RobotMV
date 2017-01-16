@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!--Tiled2Unity generated xml data-->
 <!--Do not modify by hand-->
-<!--Last exported: 16/01/2017 15:32:54-->
-<Tiled2Unity version="1.0.7.7">
+<!--Last exported: 16/01/2017 22:58:11-->
+<Tiled2Unity version="1.0.9.4">
   <AssignMaterial mesh="mesh_0001" material="zeta_complex" />
   <AssignMaterial mesh="mesh_0003" material="zeta_complex" />
   <AssignMaterial mesh="mesh_0004" material="zeta_complex" />
@@ -20,13 +20,16 @@
       <GameObject name="zeta_complex" copy="mesh_0004" sortingLayerName="Geometry" sortingOrder="5" opacity="1" />
       <GameObject name="Collision">
         <PolygonCollider2D>
+          <Path>0,0 0,-32 32,-32 32,0</Path>
+          <Path>2,-1.5 30,-1.5 30.5,-2 30.5,-30 30,-30.5 2,-30.5 1.5,-30 1.5,-2</Path>
           <Path>8.5,-19 14.5,-19 14.5,-19.5 15,-19.5 15,-18.5 14.5,-18.5 14.5,-18 8.5,-18</Path>
           <Path>15,-19.6875 26,-19.6875 26,-19.5 15,-19.5</Path>
           <Path>8.5,-19.5 5.5,-19.5 5.5,-19.6875 8.5,-19.6875</Path>
-          <Path>14.5,-22.125 12.75,-23 10.75,-23 8.75,-22 8.5,-22 8.5,-22.375 5.5,-22.375 5.5,-22.5 8.5,-22.5 8.5,-23.5 15,-23.5 15,-22.5 26,-22.5 26,-22.375 15,-22.375</Path>
-          <Path>0,0 0,-32 32,-32 32,0</Path>
-          <Path>2,-1.5 30,-1.5 30.5,-2 30.5,-30 30,-30.5 2,-30.5 1.5,-30 1.5,-2</Path>
+          <Path>14.5,-22.125 12.75,-23 10.75,-23 10,-22.625 10,-23 9.5,-23 9.5,-22.5 9.75,-22.5 8.75,-22 8.5,-22 8.5,-22.375 5.5,-22.375 5.5,-22.5 8.5,-22.5 8.5,-23.5 15,-23.5 15,-22.5 26,-22.5 26,-22.375 15,-22.375</Path>
         </PolygonCollider2D>
+        <EdgeCollider2D>
+          <Points>9.5,-23 10,-23 10,-22.625 9.75,-22.5 9.5,-22.5</Points>
+        </EdgeCollider2D>
       </GameObject>
     </GameObject>
     <GameObject name="Foreground" x="0" y="0" z="0" tag="TiledForeground">
