@@ -16,10 +16,10 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 4000013245718600}
-  - 114: {fileID: 114000013469026606}
+  - component: {fileID: 4000013245718600}
+  - component: {fileID: 114000013469026606}
   m_Layer: 0
   m_Name: Bomb_Item
   m_TagString: Item
@@ -36,10 +36,10 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &114000013469026606
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -51,13 +51,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62cf706482411084787602a92b99eb18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UsableName: Bomb
-  AttackSpeed: 0.75
-  EnergyCost: 0
-  DamagePerTick: 5
+  UsableNameLocalisationID: ITEM_BOMB
+  DescriptionLocalisationID: ITEM_BOMB_DESC
+  AttackLength: 0
+  Cooldown: 0
+  Damage: 0
   Level: 1
-  damagePerEnergyCost: Infinity
-  damagePerSecond: 0.26666668
+  Charges: 0
+  cooldownTime: 0
+  attackLengthTime: 0
   Projectiles:
   - {fileID: 114000011489134620, guid: 21e04479808ed7c49b01e97f97ce4315, type: 2}
   projectileType: 0

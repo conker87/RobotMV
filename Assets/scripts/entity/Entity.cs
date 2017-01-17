@@ -13,7 +13,6 @@ public class Entity : MonoBehaviour {
 	[Header("Health")]
 	public Dictionary<string, int> VitalsD = new Dictionary<string, int> ();
 
-	public bool 	INFINITE_HEALTH = false;
 	public int		Health = 3, HealthMaximum = 3;
 	public bool  	HealthRegenOn = false;
 	public float 	HealthRegenCooldown = 10f; 
@@ -40,13 +39,12 @@ public class Entity : MonoBehaviour {
 	public float MoveSpeed = 6;
 	public float MaximumMoveSpeed = 6;
 
-	[ExecuteInEditMode]
 	protected virtual void Awake() {
 
 		VitalsD.Clear ();
 
-		VitalsD.Add ("HEALTH", 3);
-		VitalsD.Add ("HEALTH_MAX", 3);
+		VitalsD.Add ("HEALTH",		3);
+		VitalsD.Add ("HEALTH_MAX",	3);
 
 	}
 

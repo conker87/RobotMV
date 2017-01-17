@@ -12,16 +12,9 @@ public class WeaponBasicBlaster : Weapon {
 	float chargedShotTimer, chargedShotTime = .5f;
 	bool fireChargedShot = false;
 
-	protected override void Update ()
-	{
-
-		base.Update ();
-
-	}
-
 	public override void Shoot(Vector3 ShootLocationPosition) {
 
-		if (stillCoolingDown) {
+		if (stillCoolingDown || !Player.Current.CollectablesD["BASIC_BLASTER"]) {
 
 			return;
 
@@ -49,7 +42,7 @@ public class WeaponBasicBlaster : Weapon {
 		}
 
 		// Blaster Charged Shot
-		if (Player.Current.BasicBlasterChargeShot) {
+		if (Player.Current.CollectablesD["BASIC_BLASTER_CHARGED_SHOT"]) {
 
 			if (Input.GetMouseButton (0)) {
 					

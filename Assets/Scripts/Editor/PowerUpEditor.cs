@@ -4,11 +4,12 @@ using UnityEngine;
 [CustomEditor(typeof(PowerUp)), CanEditMultipleObjects]
 public class PowerUpEditor : Editor {
 
-	public SerializedProperty PowerUpName_Prop, PowerUpID_Prop, PowerUpD_Prop, PowerUpT_Prop, AddItem_Prop, GiveItem_Prop;
+	public SerializedProperty PowerUpNameLocalisationID_Prop, PowerUpDescLocalisationID_Prop, PowerUpID_Prop, PowerUpD_Prop, PowerUpT_Prop, AddItem_Prop, GiveItem_Prop;
 
 	void OnEnable() {
 
-		PowerUpName_Prop = serializedObject.FindProperty ("PowerUpName");
+		PowerUpNameLocalisationID_Prop = serializedObject.FindProperty ("PowerUpNameLocalisationID");
+		PowerUpDescLocalisationID_Prop = serializedObject.FindProperty ("PowerUpDescriptionLocalisationID");
 		PowerUpID_Prop = serializedObject.FindProperty ("PowerUpID");
 		PowerUpD_Prop = serializedObject.FindProperty ("PowerUpD");
 		AddItem_Prop = serializedObject.FindProperty ("AddItem");
@@ -20,7 +21,8 @@ public class PowerUpEditor : Editor {
 		
 		serializedObject.Update ();
 
-		EditorGUILayout.PropertyField( PowerUpName_Prop );
+		EditorGUILayout.PropertyField( PowerUpNameLocalisationID_Prop );
+		EditorGUILayout.PropertyField( PowerUpDescLocalisationID_Prop );
 		EditorGUILayout.PropertyField( PowerUpID_Prop );
 
 		EditorGUILayout.PropertyField( PowerUpD_Prop, new GUIContent("Power Up Type:") );

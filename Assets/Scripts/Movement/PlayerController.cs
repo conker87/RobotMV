@@ -42,7 +42,7 @@ public class PlayerController : MovementController {
 
 	public override void Movement(Vector2 input) {
 
-		if (Player.Current.inputManager.GetButtonDown("Jump") && Player.Current.TripleJump && hasJumped) {
+		if (Player.Current.inputManager.GetButtonDown("Jump") && Player.Current.CollectablesD["JUMP_TRIPLE"] && hasJumped) {
 
 			if (hasDoubleJumped && !hasTripleJumped) {
 
@@ -54,7 +54,7 @@ public class PlayerController : MovementController {
 
 		}
 
-		if (Player.Current.inputManager.GetButtonDown("Jump") && Player.Current.DoubleJump && (!collisions.below || hasJumped)) {
+		if (Player.Current.inputManager.GetButtonDown("Jump") && Player.Current.CollectablesD["JUMP_DOUBLE"] && (!collisions.below || hasJumped)) {
 
 			if (!hasDoubleJumped) {
 
@@ -69,7 +69,7 @@ public class PlayerController : MovementController {
 
 		if (collisions.below) {
 			
-			if (Player.Current.inputManager.GetButtonDown("Jump") && Player.Current.Jump) {
+			if (Player.Current.inputManager.GetButtonDown("Jump") && Player.Current.CollectablesD["JUMP"]) {
 
 				velocity.y = jumpVelocity;
 

@@ -111,14 +111,18 @@ public class EnemyAI : MonoBehaviour {
 						}
 
 						if (wanderCollisionItteration > 0) {
-							Debug.Log ("randomPosition of '" + this + "' is: " + randomPosition + " and was inside a collider and requires rerolling, current itteration: " + wanderCollisionItteration);
+							
+							//Debug.Log ("randomPosition of '" + this + "' is: " + randomPosition + " and was inside a collider and requires rerolling, current itteration: " + wanderCollisionItteration);
+
 						}
 
 						// Pick a RPP for the EnemyAI to wander to.
 						randomPosition = RandomlyGenerateWanderPosition (enemyOriginPosition.position.x, enemyOriginPosition.position.y, playerRange);
 
 						if (wanderCollisionItteration == 0) {
-							Debug.Log ("randomPosition of '" + this + "' is: " + randomPosition + ", current itteration: " + wanderCollisionItteration);
+							
+							//Debug.Log ("randomPosition of '" + this + "' is: " + randomPosition + ", current itteration: " + wanderCollisionItteration);
+
 						}
 
 						// Increases the current itteration of the Random Position Picking for Wandering.

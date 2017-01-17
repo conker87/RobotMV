@@ -3,12 +3,6 @@ using System.Collections;
 
 public class WeaponMissileLauncher : Weapon {
 
-	protected override void Update () {
-
-		base.Update ();
-
-	}
-
 	public override void Shoot(Vector3 ShootLocationPosition) {
 
 		if (stillCoolingDown) {

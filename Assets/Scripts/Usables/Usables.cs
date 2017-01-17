@@ -37,7 +37,6 @@ public class Usables : MonoBehaviour {
 
 	}
 
-	[ExecuteInEditMode]
 	protected virtual void Update() {
 
 		stillCoolingDown = true;

@@ -7,12 +7,6 @@ public class WeaponSpinner : Weapon {
 	float spinnerTimer, spinnerTimerMax = 2f, multiplier;
 	bool hasPressed = false;
 
-	protected override void Update () {
-
-		base.Update ();
-
-	}
-		
 	public override void Shoot(Vector3 ShootLocationPosition) {
 
 		base.Shoot (ShootLocationPosition);
@@ -47,7 +41,7 @@ public class WeaponSpinner : Weapon {
 
 				projectile.transform.localScale		*= multiplier;
 				projectile.Direction 				= directionToMousePositionInWorld;
-				projectile.projectileDamage			= Mathf.RoundToInt (Damage * multiplier);
+				projectile.projectileDamage			= Mathf.RoundToInt (Damage * multiplier * 5f);
 				projectile.weaponLevel 				= Level;
 				projectile.projectileType 			= projectileType;
 				projectile.timesThroughEnemyMax 	= Mathf.RoundToInt (spinnerTimer * 2f);

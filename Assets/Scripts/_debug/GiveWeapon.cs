@@ -22,22 +22,22 @@ public class GiveWeapon : MonoBehaviour {
 
 	void DoItemsDebug() {
 
-		if ((Input.GetKey (KeyCode.Equals) && Player.Current.BombsMaximum > 0) ||
+		if ((Input.GetKey (KeyCode.Equals) && Player.Current.BombsD["BOMBS_MAX"] > 0) ||
 			(Input.GetKey (KeyCode.LeftShift) && Input.GetKey (KeyCode.Equals))) {
 
 			Player.Current.CurrentItem = items [0];
 
-		} else if ((Input.GetKey (KeyCode.Minus) && Player.Current.MegaBombsMaximum > 0) ||
+		} else if ((Input.GetKey (KeyCode.Minus) && Player.Current.BombsD["BOMBS_MEGA_MAX"] > 0) ||
 			(Input.GetKey (KeyCode.LeftShift) && Input.GetKey (KeyCode.Minus))) {
 
 			Player.Current.CurrentItem = items [1];
 
-		} else if ((Input.GetKey (KeyCode.Alpha0) && Player.Current.ShurikenShield) ||
+		} else if ((Input.GetKey (KeyCode.Alpha0) && Player.Current.CollectablesD["SHURIKEN_SHIELD"]) ||
 			(Input.GetKey (KeyCode.LeftShift) && Input.GetKey (KeyCode.Alpha0))) {
 
 			Player.Current.CurrentItem = items [2];
 
-		} else if ((Input.GetKey (KeyCode.Alpha9) && Player.Current.EnergyShield) ||
+		} else if ((Input.GetKey (KeyCode.Alpha9) && Player.Current.CollectablesD["ENERGY_SHIELD"])  ||
 			(Input.GetKey (KeyCode.LeftShift) && Input.GetKey (KeyCode.Alpha9))) {
 
 			Player.Current.CurrentItem = items [3];
@@ -50,27 +50,27 @@ public class GiveWeapon : MonoBehaviour {
 
 		if (Player.Current.CanChangeWeapon) {
 
-			if ((Input.GetKey (KeyCode.Alpha1) && Player.Current.BasicBlaster) ||
+			if ((Input.GetKey (KeyCode.Alpha1) && Player.Current.CollectablesD["ENERGY_SHIELD"]) ||
 				(Input.GetKey (KeyCode.LeftShift) && Input.GetKey (KeyCode.Alpha1))) {
 
 				Player.Current.CurrentWeapon = weapons [0];
 
-			} else if ((Input.GetKey (KeyCode.Alpha2) && Player.Current.MissileLauncher) ||
+			} else if ((Input.GetKey (KeyCode.Alpha2) && Player.Current.CollectablesD["MISSILE_LAUNCHER"]) ||
 				(Input.GetKey (KeyCode.LeftShift) && Input.GetKey (KeyCode.Alpha2))) {
 
 				Player.Current.CurrentWeapon = weapons [1];
 
-			} else if ((Input.GetKey (KeyCode.Alpha3) && Player.Current.Laser) ||
+			} else if ((Input.GetKey (KeyCode.Alpha3) && Player.Current.CollectablesD["LASER"]) ||
 				(Input.GetKey (KeyCode.LeftShift) && Input.GetKey (KeyCode.Alpha3))) {
 
 				Player.Current.CurrentWeapon = weapons [2];
 
-			} else if ((Input.GetKey (KeyCode.Alpha4) && Player.Current.Spinner) ||
+			} else if ((Input.GetKey (KeyCode.Alpha4) && Player.Current.CollectablesD["SPINNER"]) ||
 				(Input.GetKey (KeyCode.LeftShift) && Input.GetKey (KeyCode.Alpha4))) {
 
 				Player.Current.CurrentWeapon = weapons [3];
 
-			} else if ((Input.GetKey (KeyCode.Alpha5) && Player.Current.ClusterSpreader) ||
+			} else if ((Input.GetKey (KeyCode.Alpha5) && Player.Current.CollectablesD["CLUSTER_SPREADER"]) ||
 				(Input.GetKey (KeyCode.LeftShift) && Input.GetKey (KeyCode.Alpha5))) {
 
 				Player.Current.CurrentWeapon = weapons [4];

@@ -7,12 +7,6 @@ public class WeaponClusterSpreader : Weapon {
 
 	public float shootingAngle;
 
-	protected override void Update () {
-
-		base.Update ();
-
-	}
-
 	public override void Shoot(Vector3 ShootLocationPosition) {
 
 		base.Shoot (ShootLocationPosition);

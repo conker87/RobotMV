@@ -190,7 +190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   drawGizmos: 1
-  detailedGizmos: 0
+  detailedGizmos: 1
   startEndModifier:
     addPoints: 0
     exactStartPoint: 3
@@ -223,14 +223,14 @@ MonoBehaviour:
   playerRange: 5
   playerMask:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 0
   geometryMask:
     serializedVersion: 2
     m_Bits: 4096
   EnemyMT: 0
   EnemyMS: 0
   enemyOriginPosition: {fileID: 4000011937968966}
-  canWander: 0
+  canWander: 1
   returnToOrigin: 1
   waitingTime: 3
   pathIsEnded: 0
@@ -246,7 +246,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EntityNameLocalisationID: 
-  INFINITE_HEALTH: 0
   Health: 3
   HealthMaximum: 3
   HealthRegenOn: 0
@@ -264,7 +263,7 @@ MonoBehaviour:
   - 1
   droppedPowerUpsMax: 0700000001000000
   droppedPowerUps:
-  - {fileID: 1000012869973274, guid: 4f46e4eb1e4615d499ee76e4db8f25b0, type: 2}
+  - {fileID: 1000013445478154, guid: 61f7179d513d67e4a952a82c4d65f105, type: 2}
   - {fileID: 1000013445478154, guid: 54198a54882b2444785436dcf7612911, type: 2}
   DamageOnTouch: 1
 --- !u!114 &114000013238393588
@@ -289,7 +288,7 @@ MonoBehaviour:
   isFlyingEntity: 0
   jumpHeight: 3.5
   timeToJumpApex: 0.4
-  accelerationTimeAirbourne: 0.2
+  accelerationTimeAirbourne: 0.1
   accelerationTimeGrounded: 0.1
   moveSpeed: 2.5
   hasJumped: 0

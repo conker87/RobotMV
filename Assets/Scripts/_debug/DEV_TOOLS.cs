@@ -16,31 +16,31 @@ public class DEV_TOOLS : MonoBehaviour
 	}
 
 	public void TOGGLE_JUMP() {
-		Player.Current.Jump = !Player.Current.Jump;
+		Player.Current.CollectablesD["JUMP"] = !Player.Current.CollectablesD["JUMP"];
 	}
 
 	public void TOGGLE_DOUBLE_JUMP() {
-		Player.Current.DoubleJump = !Player.Current.DoubleJump;
+		Player.Current.CollectablesD["JUMP_DOUBLE"] = !Player.Current.CollectablesD["JUMP_DOUBLE"];
 	}
 
 	public void TOGGLE_TRIPLE_JUMP() {
-		Player.Current.TripleJump = !Player.Current.TripleJump;
+		Player.Current.CollectablesD["JUMP_TRIPLE"] = !Player.Current.CollectablesD["JUMP_TRIPLE"];
 	}
 
 	public void TOGGLE_BASIC_BLASTER() {
-		Player.Current.BasicBlaster = !Player.Current.BasicBlaster;
+		Player.Current.CollectablesD["BASIC_BLASTER"] = !Player.Current.CollectablesD["BASIC_BLASTER"];
 	}
 
 	public void TOGGLE_BASIC_BLASTER_CHARGED() {
-		Player.Current.BasicBlasterChargeShot = !Player.Current.BasicBlasterChargeShot;
+		Player.Current.CollectablesD["BASIC_BLASTER_CHARGED_SHOT"] = !Player.Current.CollectablesD["BASIC_BLASTER_CHARGED_SHOT"];
 	}
 
 	public void TOGGLE_MISSILE_LAUNCHER() {
-		Player.Current.MissileLauncher = !Player.Current.MissileLauncher;
+		Player.Current.CollectablesD["MISSILE_LAUNCHER"] = !Player.Current.CollectablesD["MISSILE_LAUNCHER"];
 	}
 
 	public void TOGGLE_LASER() {
-		Player.Current.Laser = !Player.Current.Laser;
+		Player.Current.CollectablesD["LASER"] = !Player.Current.CollectablesD["LASER"];
 	}
 
 	public void TOGGLE_HEALTH_REGEN() {
@@ -123,15 +123,15 @@ public class DEV_TOOLS : MonoBehaviour
 
 		if (Input.GetKeyUp (KeyCode.J)) {
 
-			if (!Player.Current.Jump) {
+			if (!Player.Current.CollectablesD["JUMP"]) {
 
 				TOGGLE_JUMP ();
 
-			} else if (!Player.Current.DoubleJump) {
+			} else if (!Player.Current.CollectablesD["JUMP_DOUBLE"]) {
 
 				TOGGLE_DOUBLE_JUMP ();
 
-			} else if (!Player.Current.TripleJump) {
+			} else if (!Player.Current.CollectablesD["JUMP_TRIPLE"]) {
 
 				TOGGLE_TRIPLE_JUMP ();
 

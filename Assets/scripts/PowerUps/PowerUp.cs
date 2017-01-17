@@ -5,7 +5,8 @@ using System.Collections;
 public class PowerUp : MonoBehaviour {
 
 	[Header("Power Up")]
-	public string PowerUpName;
+	public string PowerUpNameLocalisationID = "LocalisationID <FIXME>";
+	public string PowerUpDescriptionLocalisationID = "LocalisationID <FIXME>";
 
 	[Header("Power Up Settings")]
 	public string PowerUpID;

@@ -5,7 +5,7 @@ public class Projectile : MonoBehaviour {
 
 	// TODO: Allow the projectile to have options of going through enemies a certain number of times.
 
-	public string	ProjectileName = "";
+	public string	ProjectileNameLocalisationID = "";
 	public float	movementSpeed = 1f;
 	public bool 	destroyOnHit = true, ignoreGeometry = false;
 	public bool		destroyInOn = true;

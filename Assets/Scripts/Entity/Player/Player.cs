@@ -23,11 +23,19 @@ public class Player : Entity
 
 	public InputManager inputManager;
 
-	[Header("Jumping")]
-	public bool 	Jump = false;
-	public bool 	DoubleJump = false, TripleJump = false;
+	public bool 	INFINITE_HEALTH = false;
 
-	[Header("Items")]
+	// [Header("Jumping")]
+	// public bool 	Jump = false;
+	// public bool 	DoubleJump = false, TripleJump = false;
+
+	public float	BombsRegenCooldown = 1f;
+	public bool		doBombsRegen = true;
+
+	public float	BombsMegaRegenCooldown = 60f;
+	public bool		doBombsMegaRegen = true;
+
+	/* [Header("Items")]
 	[Header("Weapons")]
 	public bool 	BasicBlaster = false;
 	public bool 	BasicBlasterChargeShot = false;
@@ -35,13 +43,12 @@ public class Player : Entity
 	public bool 	ClusterSpreader = false;
 	public bool 	MissileLauncher = false;
 	public bool 	Laser = false;
-//	public bool		Bombs = false;
+	public bool		Bombs = false;
 	public bool		MegaBombs = false;
+	public bool		Magnet = false;
 
 	[Header("Shields")]
-	public bool 	INFINITE_SHURIKENSHIELD = false;
 	public bool 	ShurikenShield = false;
-	public bool 	INFINITE_ENERGYSHIELD = false;
 	public bool 	EnergyShield = false;
 
 	[Header("Bombs")]
@@ -52,10 +59,7 @@ public class Player : Entity
 	public bool 	INFINITE_MEGABOMBS = false;
 	public int 		MegaBombsCount = 0, MegaBombsMaximum = 0;
 	public float	BombsMegaRegenCooldown = 60f;
-	public bool		doBombsMegaRegen = true;
-
-	[Header("Tools")]
-	public bool Magnet = false;
+	public bool		doBombsMegaRegen = true; */
 
 	[Header("Currently Equipped Items")]
 	public Item CurrentItem = null;
@@ -68,8 +72,39 @@ public class Player : Entity
 		base.Awake ();
 
 		// TODO: These should be loaded from the Save File.
-		VitalsD.Add ("BOMBS", 0);
-		VitalsD.Add ("MEGA_BOMBS", 0);
+
+		CollectablesD.Clear ();
+		CollectablesD.Add ("BASIC_BLASTER",					false);
+		CollectablesD.Add ("BASIC_BLASTER_CHARGED_SHOT",	false);
+		CollectablesD.Add ("SPINNER",						false);
+		CollectablesD.Add ("CLUSTER_SPREADER",				false);
+		CollectablesD.Add ("MISSILE_LAUNCHER",				false);
+		CollectablesD.Add ("LASER",							false);
+
+		CollectablesD.Add ("MAGNET",		false);
+
+		CollectablesD.Add ("JUMP",			false);
+		CollectablesD.Add ("JUMP_DOUBLE",	false);
+		CollectablesD.Add ("JUMP_TRIPLE",	false);
+
+		CollectablesD.Add ("BOMBS",							false);
+		CollectablesD.Add ("BOMBS_MEGA",					false);
+
+		CollectablesD.Add ("SHURIKEN_SHIELD",	false);
+		CollectablesD.Add ("ENERGY_SHIELD",		false);
+
+		BombsD.Clear ();
+		BombsD.Add ("BOMBS_CURRENT",		0);
+		BombsD.Add ("BOMBS_MEGA_CURRENT",	0);
+		BombsD.Add ("BOMBS_MAX",			3);
+		BombsD.Add ("BOMBS_MEGA_MAX",		1);
+
+		CheatsD.Clear ();
+		CheatsD.Add ("INFINITE_HEALTH",				false);
+		CheatsD.Add ("INFINITE_SHURIKEN_SHIELD",	false);
+		CheatsD.Add ("INFINITE_ENERGY_SHIELD",		false);
+		CheatsD.Add ("INFINITE_BOMBS",				false);
+		CheatsD.Add ("INFINITE_BOMBS_MEGA",			false);
 
 	}
 
@@ -100,69 +135,69 @@ public class Player : Entity
 //			// DoBombsRegen ();
 //			DoBombsClamp ();
 //		}
-
-		if (MegaBombs) {
-			// DoMegaBombsRegen ();
-			DoMegaBombsClamp ();
-		}
+//
+//		if (MegaBombs) {
+//			// DoMegaBombsRegen ();
+//			DoMegaBombsClamp ();
+//		}
 
 	}
 		
 	void DoBombsClamp() {
 		
-		BombsCount = Mathf.Clamp (BombsCount, 0, BombsMaximum);
+		// BombsCount = Mathf.Clamp (BombsCount, 0, BombsMaximum);
 
 	}
 
 	void DoBombsRegen() {
 
-		if (!doBombsRegen || BombsCount == BombsMaximum) {
-
-			return;
-
-		}
-
-		if (doBombsRegen) {
-
-			timeToNextBomb = Time.time + 1f;
-
-		}
-
-		if (Time.time > timeToNextBomb) {
-
-			timeToNextBomb = Time.time + BombsRegenCooldown;
-			BombsCount++;
-
-		}
+//		if (!doBombsRegen || BombsCount == BombsMaximum) {
+//
+//			return;
+//
+//		}
+//
+//		if (doBombsRegen) {
+//
+//			timeToNextBomb = Time.time + 1f;
+//
+//		}
+//
+//		if (Time.time > timeToNextBomb) {
+//
+//			timeToNextBomb = Time.time + BombsRegenCooldown;
+//			BombsCount++;
+//
+//		}
 
 	}
 		
 	void DoMegaBombsClamp() {
 		
-		MegaBombsCount = Mathf.Clamp (MegaBombsCount, 0, MegaBombsMaximum);
+		// MegaBombsCount = Mathf.Clamp (MegaBombsCount, 0, MegaBombsMaximum);
 
 	}
 
 	void DoMegaBombsRegen() {
 
-		if (!doBombsMegaRegen || MegaBombsCount == MegaBombsMaximum) {
-
-			return;
-
-		}
-
-		if (doBombsMegaRegen) {
-
-			timeToNextMegaBomb = Time.time + BombsMegaRegenCooldown;
-
-		}
-
-		if (Time.time > timeToNextMegaBomb) {
-
-			timeToNextMegaBomb = Time.time + BombsMegaRegenCooldown;
-			MegaBombsCount++;
-
-		}
+//		if (!doBombsMegaRegen || MegaBombsCount == MegaBombsMaximum) {
+//
+//			return;
+//
+//		}
+//
+//		if (doBombsMegaRegen) {
+//
+//			timeToNextMegaBomb = Time.time + BombsMegaRegenCooldown;
+//
+//		}
+//
+//		if (Time.time > timeToNextMegaBomb) {
+//
+//			timeToNextMegaBomb = Time.time + BombsMegaRegenCooldown;
+//			MegaBombsCount++;
+//
+//		}
 
 	}
 		
@@ -185,11 +220,9 @@ public class Player : Entity
 
 		GUI.Label(new Rect(10, 10, 500, 20), ErrorMessage, style);
 		GUI.Label(new Rect(10, 30, 500, 20), "H: " + Health + "/" + HealthMaximum + "|" + HealthRegenOn + ")", style);
-		GUI.Label(new Rect(10, 50, 500, 20), "Jumps: " + Jump + "|" + DoubleJump + "|" + TripleJump, style);
-		GUI.Label(new Rect(10, 70, 500, 20), "Weaps: " + BasicBlaster + "|" + MissileLauncher + "|" + Laser, style);
-		GUI.Label(new Rect(10, 90, 500, 20), "CW/I: " + (CurrentWeapon == null ? "None" : CurrentWeapon.UsableNameLocalisationID) + "|" + (CurrentItem == null ? "None" : CurrentItem.UsableNameLocalisationID), style);
-		GUI.Label(new Rect(10, 110, 500, 20), "Speed: " + MoveSpeed, style);
-		GUI.Label(new Rect(10, 130, 500, 20), "Bombs/Max: " + BombsCount + "/" + BombsMaximum + "|" + MegaBombs + "/" + MegaBombsMaximum, style);
+		GUI.Label(new Rect(10, 50, 500, 20), "Jumps: " + CollectablesD["JUMP"] + "|" + CollectablesD["JUMP_DOUBLE"] + "|" + CollectablesD["JUMP_TRIPLE"], style);
+		GUI.Label(new Rect(10, 70, 500, 20), "CW/I: " + (CurrentWeapon == null ? "None" : CurrentWeapon.UsableNameLocalisationID) + "|" + (CurrentItem == null ? "None" : CurrentItem.UsableNameLocalisationID), style);
+		GUI.Label(new Rect(10, 90, 500, 20), "Speed: " + MoveSpeed, style);
 	}
 }
 

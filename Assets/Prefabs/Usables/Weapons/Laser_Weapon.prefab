@@ -41,8 +41,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0758466530ae4a24a831ee6c1ea24180, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UsableNameLocalisationID: LocalisationID <FIXME>
-  DescriptionLocalisationID: LocalisationID <FIXME>
+  UsableNameLocalisationID: ITEM_LASER
+  DescriptionLocalisationID: ITEM_LASER_DESC
   AttackLength: 1
   Cooldown: 1
   Damage: 0
