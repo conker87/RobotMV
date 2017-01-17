@@ -4,52 +4,47 @@ using System.Collections;
 [RequireComponent (typeof (Rigidbody2D))]
 public class PowerUp : MonoBehaviour {
 
-	[Header("Power Up ID")]
+	[Header("Power Up")]
+	public string PowerUpName;
+
+	[Header("Power Up Settings")]
 	public string PowerUpID;
-
-	[Header("Power Up To")]
 	public PowerUpDictionary PowerUpD;
-	public PowerUpGiveType PowerUpT;
-
-	[Header("Power Up Count Value")]
 	public int AddItem;
-
-	[Header("Power Up Bool Value")]
-	public bool GiveItem;
 
 	public virtual void Give() {
 
 		if (PowerUpD == PowerUpDictionary.BOMB) {
 
-			if (!Player.Current.BombsD.ContainsKey (PowerUpID) || PowerUpT == PowerUpGiveType.BOOL) {
+			if (!Player.Current.BombsD.ContainsKey (PowerUpID)) {
 
-				Debug.Log ("PowerUpID: " + PowerUpID + " does not exist or is not a type " + PowerUpT.ToString() + " and cannot be set as one.");
+				Debug.Log ("PowerUpID: " + PowerUpID + " does not exist.");
 				return;
 
 			}
 
-			Player.Current.BombsD [PowerUpID] = GiveItem;
+			Player.Current.BombsD [PowerUpID] += AddItem;
 
 		}
 
 		if (PowerUpD == PowerUpDictionary.COLLECTABLE) {
 
-			if (!Player.Current.CollectablesD.ContainsKey (PowerUpID) || PowerUpT == PowerUpGiveType.COUNT) {
+			if (!Player.Current.CollectablesD.ContainsKey (PowerUpID)) {
 
-				Debug.Log ("PowerUpID: " + PowerUpID + " does not exist or is not a type " + PowerUpT.ToString() + " and cannot be set as one.");
+				Debug.Log ("PowerUpID: " + PowerUpID + " does not exist.");
 				return;
 
 			}
 
-			Player.Current.CollectablesD [PowerUpID] = GiveItem;
+			Player.Current.CollectablesD [PowerUpID] = true;
 
 		}
 
 		if (PowerUpD == PowerUpDictionary.VITAL) {
 
-			if (!Player.Current.VitalsD.ContainsKey (PowerUpID) || PowerUpT == PowerUpGiveType.BOOL) {
+			if (!Player.Current.VitalsD.ContainsKey (PowerUpID)) {
 
-				Debug.Log ("PowerUpID: " + PowerUpID + " does not exist or is not a type " + PowerUpT.ToString() + " and cannot be set as one.");
+				Debug.Log ("PowerUpID: " + PowerUpID + " does not exist.");
 				return;
 
 			}
@@ -76,4 +71,3 @@ public class PowerUp : MonoBehaviour {
 }
 
 public enum PowerUpDictionary { BOMB, COLLECTABLE, VITAL };
-public enum PowerUpGiveType { COUNT, BOOL };

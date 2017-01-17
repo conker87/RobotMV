@@ -9,7 +9,7 @@ public class Player : Entity
 	public static string ErrorMessage = "";
 	[SerializeField]
 	public Dictionary<string, bool> CollectablesD = new Dictionary<string, bool> ();
-	public Dictionary<string, bool> BombsD = new Dictionary<string, bool> ();
+	public Dictionary<string, int> BombsD = new Dictionary<string, int> ();
 
 	// TODO: Move this to the GameManager once we sort it out.
 	public Dictionary<string, bool> CheatsD = new Dictionary<string, bool> ();
