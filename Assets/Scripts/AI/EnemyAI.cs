@@ -9,11 +9,14 @@ public class EnemyAI : MonoBehaviour {
 	// Player
 	[Header("Waypoint")]
 	public Transform target;
+	[Range(0, 10)]
 	public float nextWaypointDistance = 1f;
+	[Range(0.01f, 10)]
 	public float updateRate = 2f;
 	public bool requiresLineOfSight = true;
 
 	[Header("Player & Masks")]
+	[Range(0, 20)]
 	public float playerRange = 5f;
 	public LayerMask playerMask, geometryMask;
 
@@ -25,8 +28,10 @@ public class EnemyAI : MonoBehaviour {
 	protected EnemyMovementState EnemyMS;
 	public Transform enemyOriginPosition;
 	public bool canWander = false, returnToOrigin = true;
+	[Range(0, 10)]
 	public float waitingTime = 3f;
-	protected bool hasDoneWaitingTimeNext = false;
+	protected bool hasDoneWaitingTimeNext = false, wanderingFailed = false;
+	protected int wanderCollisionMaxItterations = 4, wanderCollisionItteration;
 	protected Vector2 randomPosition;
 
 	protected float wanderingTimeNext, waitingTimeNext;
@@ -78,8 +83,7 @@ public class EnemyAI : MonoBehaviour {
 				EnemyMS = EnemyMovementState.HEADING_HOME;
 
 			} else if (EnemyMS == EnemyMovementState.HEADING_HOME && returnToOrigin && Time.time > waitingTimeNext) {
-
-
+				
 				seeker.StartPath (transform.position, enemyOriginPosition.position, OnPathComplete);
 				pathIsEnded = false;
 
@@ -89,15 +93,50 @@ public class EnemyAI : MonoBehaviour {
 
 				if (canWander && Time.time > wanderingTimeNext) {
 
+					wanderingFailed = false;
+					wanderCollisionItteration = 0;
+
 					// TODO: Position needs to check to see if it's not inside geometry and if so, pick again.
-					Debug.Log ("Using new position: " + randomPosition);
+					// Debug.Log ("Using new position: " + randomPosition);
 
-					seeker.StartPath (transform.position, randomPosition, OnPathComplete);
-					pathIsEnded = false;
+					do {
 
-					EnemyMS = EnemyMovementState.WANDERING;
+						// If the current itteration of RPP is more than the maximum then break out of the do-while and do not pick another RPP for the cooldown duration.
+						if (wanderCollisionItteration > wanderCollisionMaxItterations) {
 
-					wanderingTimeNext = Time.time + waitingTime;
+							wanderingFailed = true;
+							wanderingTimeNext = Time.time + waitingTime;
+							break;
+
+						}
+
+						if (wanderCollisionItteration > 0) {
+							Debug.Log ("randomPosition of '" + this + "' is: " + randomPosition + " and was inside a collider and requires rerolling, current itteration: " + wanderCollisionItteration);
+						}
+
+						// Pick a RPP for the EnemyAI to wander to.
+						randomPosition = RandomlyGenerateWanderPosition (enemyOriginPosition.position.x, enemyOriginPosition.position.y, playerRange);
+
+						if (wanderCollisionItteration == 0) {
+							Debug.Log ("randomPosition of '" + this + "' is: " + randomPosition + ", current itteration: " + wanderCollisionItteration);
+						}
+
+						// Increases the current itteration of the Random Position Picking for Wandering.
+						wanderCollisionItteration++;
+
+					} while (Physics2D.OverlapCircle (randomPosition, 0.3f, geometryMask));
+
+					// If the RPP has not failed this cooldown itteration then move the Enemy to that position.
+					if (!wanderingFailed) {
+						
+						seeker.StartPath (transform.position, randomPosition, OnPathComplete);
+						pathIsEnded = false;
+
+						EnemyMS = EnemyMovementState.WANDERING;
+
+						wanderingTimeNext = Time.time + waitingTime;
+
+					}
 
 				}
 
@@ -145,6 +184,14 @@ public class EnemyAI : MonoBehaviour {
 
 		}
 
+	}
+
+	protected virtual Vector2 RandomlyGenerateWanderPosition(float xPosition, float yPosition, float range) {
+
+		throw new UnityException("RandomlyGenerateWanderPosition needs to be Overriden inheritly.");
+
+		return new Vector2(float.MaxValue, -float.MaxValue);
+		
 	}
 
 	protected virtual IEnumerator UpdatePath() {

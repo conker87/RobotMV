@@ -128,6 +128,29 @@ MonoBehaviour:
   isCurrentlyInInvulnerabilityFrames: 0
   MoveSpeed: 6
   MaximumMoveSpeed: 6
+  Collectables:
+  - ItemID: JUMP
+    Collected: 0
+  - ItemID: DOUBLE_JUMP
+    Collected: 0
+  - ItemID: TRIPLE_JUMP
+    Collected: 0
+  - ItemID: BASIC_BLASTER
+    Collected: 0
+  - ItemID: BASIC_BLASTER_CHARGED_SHOT
+    Collected: 0
+  - ItemID: MISSILE_LAUNCHER
+    Collected: 0
+  - ItemID: SPINNER
+    Collected: 0
+  - ItemID: LASER
+    Collected: 0
+  - ItemID: ???
+    Collected: 0
+  - ItemID: BOMB
+    Collected: 0
+  - ItemID: MEGA_BOMB
+    Collected: 0
   inputManager: {fileID: 0}
   Jump: 0
   DoubleJump: 0
@@ -138,17 +161,19 @@ MonoBehaviour:
   ClusterSpreader: 0
   MissileLauncher: 0
   Laser: 0
+  Bombs: 0
+  MegaBombs: 0
   INFINITE_SHURIKENSHIELD: 0
   ShurikenShield: 0
   INFINITE_ENERGYSHIELD: 0
   EnergyShield: 0
   INFINITE_BOMBS: 0
-  Bombs: 0
+  BombsCount: 0
   BombsMaximum: 0
   BombsRegenCooldown: 1
   doBombsRegen: 1
   INFINITE_MEGABOMBS: 0
-  MegaBombs: 0
+  MegaBombsCount: 0
   MegaBombsMaximum: 0
   BombsMegaRegenCooldown: 60
   doBombsMegaRegen: 1

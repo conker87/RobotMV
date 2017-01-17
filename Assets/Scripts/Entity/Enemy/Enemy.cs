@@ -23,7 +23,9 @@ public class Enemy : Entity {
 
 			Entity e = other.gameObject.GetComponent<Entity> ();
 
-			e.DamageHealth (DamageOnTouch);
+			e.DamageVital ("HEALTH", DamageOnTouch);
+
+			//e.DamageHealth (DamageOnTouch);
 
 		}
 

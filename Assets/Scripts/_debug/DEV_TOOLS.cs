@@ -51,7 +51,7 @@ public class DEV_TOOLS : MonoBehaviour
 		
 	public void DAMAGE_PLAYER() {
 
-		Player.Current.DamageHealth (10);
+		Player.Current.DamageVital("HEALTH", 10);
 
 	}
 

@@ -1,11 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.UI;
 
 public class Player : Entity
 {
 	GUIStyle style;
 	public static string ErrorMessage = "";
+	[SerializeField]
+	public Dictionary<string, bool> CollectablesD = new Dictionary<string, bool> ();
+	public Dictionary<string, bool> BombsD = new Dictionary<string, bool> ();
+
+	// TODO: Move this to the GameManager once we sort it out.
+	public Dictionary<string, bool> CheatsD = new Dictionary<string, bool> ();
 
 	// TODO: This class is the area where the abilities for the Player is stored. It is then saved to the save file via IO.
 		// Get/Set or direct changing? Meh.
@@ -28,7 +35,8 @@ public class Player : Entity
 	public bool 	ClusterSpreader = false;
 	public bool 	MissileLauncher = false;
 	public bool 	Laser = false;
-	//	public bool DNU_Grenade = false;
+//	public bool		Bombs = false;
+	public bool		MegaBombs = false;
 
 	[Header("Shields")]
 	public bool 	INFINITE_SHURIKENSHIELD = false;
@@ -38,11 +46,11 @@ public class Player : Entity
 
 	[Header("Bombs")]
 	public bool 	INFINITE_BOMBS = false;
-	public int		Bombs = 0, BombsMaximum = 0;
+	public int		BombsCount = 0, BombsMaximum = 0;
 	public float	BombsRegenCooldown = 1f;
 	public bool		doBombsRegen = true;
 	public bool 	INFINITE_MEGABOMBS = false;
-	public int 		MegaBombs = 0, MegaBombsMaximum = 0;
+	public int 		MegaBombsCount = 0, MegaBombsMaximum = 0;
 	public float	BombsMegaRegenCooldown = 60f;
 	public bool		doBombsMegaRegen = true;
 
@@ -55,6 +63,16 @@ public class Player : Entity
 
 	public bool CanChangeWeapon = true;
 
+	protected override void Awake() {
+
+		base.Awake ();
+
+		// TODO: These should be loaded from the Save File.
+		VitalsD.Add ("BOMBS", 0);
+		VitalsD.Add ("MEGA_BOMBS", 0);
+
+	}
+
 	void Start() {
 
 		Current = this;
@@ -62,17 +80,29 @@ public class Player : Entity
 
 	}
 
+	public void DamageVitalPlayer(string ID, int damage, string CHEAT_ID = null) {
+
+		if (CHEAT_ID != null && CheatsD.ContainsKey(CHEAT_ID) && CheatsD [CHEAT_ID]) {
+
+			return;
+
+		}
+
+		base.DamageVital (ID, damage);
+
+	}
+
 	public override void Update() {
 
 		base.Update();
 
-		if (BombsMaximum > 0) {
-			DoBombsRegen ();
-			DoBombsClamp ();
-		}
+//		if (Bombs) {
+//			// DoBombsRegen ();
+//			DoBombsClamp ();
+//		}
 
-		if (MegaBombsMaximum > 0) {
-			DoMegaBombsRegen ();
+		if (MegaBombs) {
+			// DoMegaBombsRegen ();
 			DoMegaBombsClamp ();
 		}
 
@@ -80,13 +110,13 @@ public class Player : Entity
 		
 	void DoBombsClamp() {
 		
-		Bombs = Mathf.Clamp (Bombs, 0, BombsMaximum);
+		BombsCount = Mathf.Clamp (BombsCount, 0, BombsMaximum);
 
 	}
 
 	void DoBombsRegen() {
 
-		if (!doBombsRegen || Bombs == BombsMaximum) {
+		if (!doBombsRegen || BombsCount == BombsMaximum) {
 
 			return;
 
@@ -101,7 +131,7 @@ public class Player : Entity
 		if (Time.time > timeToNextBomb) {
 
 			timeToNextBomb = Time.time + BombsRegenCooldown;
-			Bombs++;
+			BombsCount++;
 
 		}
 
@@ -109,13 +139,13 @@ public class Player : Entity
 		
 	void DoMegaBombsClamp() {
 		
-		MegaBombs = Mathf.Clamp (MegaBombs, 0, MegaBombsMaximum);
+		MegaBombsCount = Mathf.Clamp (MegaBombsCount, 0, MegaBombsMaximum);
 
 	}
 
 	void DoMegaBombsRegen() {
 
-		if (!doBombsMegaRegen || MegaBombs == MegaBombsMaximum) {
+		if (!doBombsMegaRegen || MegaBombsCount == MegaBombsMaximum) {
 
 			return;
 
@@ -130,15 +160,9 @@ public class Player : Entity
 		if (Time.time > timeToNextMegaBomb) {
 
 			timeToNextMegaBomb = Time.time + BombsMegaRegenCooldown;
-			MegaBombs++;
+			MegaBombsCount++;
 
 		}
-
-	}
-
-	public override void DamageHealth(int damage) {
-
-		base.DamageHealth (damage);
 
 	}
 		
@@ -148,7 +172,7 @@ public class Player : Entity
 
 		if ((e = col.gameObject.GetComponentInParent<Enemy> ()) != null) {
 			
-			DamageHealth (e.DamageOnTouch);
+			DamageVitalPlayer ("HEALTH", e.DamageOnTouch);
 
 		}
 
@@ -165,6 +189,22 @@ public class Player : Entity
 		GUI.Label(new Rect(10, 70, 500, 20), "Weaps: " + BasicBlaster + "|" + MissileLauncher + "|" + Laser, style);
 		GUI.Label(new Rect(10, 90, 500, 20), "CW/I: " + (CurrentWeapon == null ? "None" : CurrentWeapon.UsableNameLocalisationID) + "|" + (CurrentItem == null ? "None" : CurrentItem.UsableNameLocalisationID), style);
 		GUI.Label(new Rect(10, 110, 500, 20), "Speed: " + MoveSpeed, style);
-		GUI.Label(new Rect(10, 130, 500, 20), "Bombs/Max: " + Bombs + "/" + BombsMaximum + "|" + MegaBombs + "/" + MegaBombsMaximum, style);
+		GUI.Label(new Rect(10, 130, 500, 20), "Bombs/Max: " + BombsCount + "/" + BombsMaximum + "|" + MegaBombs + "/" + MegaBombsMaximum, style);
 	}
+}
+
+[System.Serializable]
+public struct Collectables {
+	
+	public string ItemID;
+	public bool Collected;
+
+}
+
+[System.Serializable]
+public struct Cheats {
+
+	public string CheatID;
+	public bool isCheatOn;
+
 }

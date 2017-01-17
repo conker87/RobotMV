@@ -34,7 +34,9 @@ public class ProjectileSpinner : Projectile {
 
 		if ((e = other.gameObject.GetComponentInParent<Entity> ()) != null) {
 
-			e.DamageHealth(projectileDamage);
+			e.DamageVital ("HEALTH", projectileDamage);
+
+			// e.DamageHealth(projectileDamage);
 
 			if (timesThroughEnemyMax > 0) {
 

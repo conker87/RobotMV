@@ -5,30 +5,20 @@ using EckTechGames.FloatingCombatText;
 
 public class Entity : MonoBehaviour {
 
-	/// TODO: Replace Health with int Orbs, replace Energy with Cooldowns for items and shooting.
-
-
 	// System
-	protected float nextTickTime = 0f, iFramesRemoveTime;
+	protected float iFramesRemoveTime, nextTickTime;
 
 	public string EntityNameLocalisationID = "";
 
 	[Header("Health")]
+	public Dictionary<string, int> VitalsD = new Dictionary<string, int> ();
+
 	public bool 	INFINITE_HEALTH = false;
 	public int		Health = 3, HealthMaximum = 3;
 	public bool  	HealthRegenOn = false;
 	public float 	HealthRegenCooldown = 10f; 
 
 	[SerializeField] bool dead = false;
-
-	//[Header("Energy :: DEPRECATED")]
-	//public bool INFINITE_ENERGY = false;
-	//public float Energy = 50f, EnergyMaximum = 50f;
-	//public float EnergyRegenPerTick = 5f;
-
-	//[Range(0, 10)]
-	//public int EnergyTanks = 0, EnergyTanksMax = 0;
-	//public bool EnergyRegenOn = true;
 
 	[Header("iFrames")]
 	public bool  hasInvincibilityFrames = false;
@@ -39,45 +29,26 @@ public class Entity : MonoBehaviour {
 
 		return;
 
-		// Regen
-//		if (HealthRegenOn && Time.time > nextTickTime && !(HealthTanks == HealthTanksMax && Health > HealthMaximum)) {
-//
-//			Health += HealthRegenPerTick;
-//
-//		}
-//
-//		// Tanks
-//		if (HealthTanks < HealthTanksMax	&&	Health > HealthMaximum)		{	HealthTanks++; Health = Health - HealthMaximum; }  
-//		if (HealthTanks > 0 				&&	Health <= 0f)				{	HealthTanks--; Health = Health + HealthMaximum;	}
-//
-//		HealthTanks = Mathf.Clamp (HealthTanks, 0, HealthTanksMax);
-//		if (HealthTanks == HealthTanksMax)	{	Health = Mathf.Clamp (Health, 0, HealthMaximum);	}
+		if (HealthRegenOn && !isCurrentlyInInvulnerabilityFrames && Health != HealthMaximum && Time.time > nextTickTime) {
 
-	}
+			//EntityVitals["HEALTH++;
 
-	void DoEnergy() {
-
-		// No longer using Energy.
-		return;
-
-		// Regen
-//		if (EnergyRegenOn && Time.time > nextTickTime && !(EnergyTanks == EnergyTanksMax && Energy >= EnergyMaximum)) {
-//
-//			Energy += EnergyRegenPerTick;
-//
-//		}
-//
-//		if (EnergyTanks < EnergyTanksMax	&&	Energy > EnergyMaximum)		{	EnergyTanks++; Energy = Energy - EnergyMaximum; }  
-//		if (EnergyTanks > 0 				&&	Energy <= 0f)				{	EnergyTanks--; Energy = Energy + EnergyMaximum;	}
-//
-//		EnergyTanks = Mathf.Clamp (EnergyTanks, 0, EnergyTanksMax);
-//		if (EnergyTanks == EnergyTanksMax)	{	Energy = Mathf.Clamp (Energy, 0, EnergyMaximum);	}
-
+		}
 	}
 
 	[Header("Movement")]
 	public float MoveSpeed = 6;
 	public float MaximumMoveSpeed = 6;
+
+	[ExecuteInEditMode]
+	protected virtual void Awake() {
+
+		VitalsD.Clear ();
+
+		VitalsD.Add ("HEALTH", 3);
+		VitalsD.Add ("HEALTH_MAX", 3);
+
+	}
 
 	public virtual void Update() {
 
@@ -91,11 +62,11 @@ public class Entity : MonoBehaviour {
 		}
 
 		DoHealth ();
-		DoEnergy ();
 
 		if (Time.time > nextTickTime) {
 
-			nextTickTime = Time.time + Constants.ResourceTick;
+			// TODO: This constant value needs to be changed depending on the current difficulty setting.
+			nextTickTime = Time.time + 10f;
 
 		}
 
@@ -117,25 +88,19 @@ public class Entity : MonoBehaviour {
 
 	}
 
-	public virtual void RestoreHealth(int restore) {
+	public virtual void RestoreVital(string ID, int restore) {
 
-		Health += restore;
-
-	}
-
-	public void RestoreHealthFully() {
-
-		Health = HealthMaximum;
+		VitalsD [ID] += restore;
 
 	}
 
-	public virtual void DamageHealth(int damage) {
+	public virtual void RestoreVitalFully(string ID, string MaxID) {
 
-		if (INFINITE_HEALTH) {
+		VitalsD [ID] = VitalsD[MaxID];
 
-			return;
+	}
 
-		}
+	public virtual void DamageVital(string ID, int damage) {
 
 		if (isCurrentlyInInvulnerabilityFrames) {
 
@@ -154,5 +119,20 @@ public class Entity : MonoBehaviour {
 		Health -= damage;
 
 	}
+
+}
+	
+[System.Serializable]
+public struct EntityVitals {
+
+	public EntityVitals(string ID, int val) {
+
+		this.VitalsID = ID;
+		this.Value = val;
+
+	}
+
+	public string VitalsID;
+	public int Value;
 
 }

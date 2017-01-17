@@ -96,6 +96,22 @@ Transform:
   m_PrefabParentObject: {fileID: 4000010498333044, guid: b6345384379232a4cb23ea186216e10d,
     type: 2}
   m_PrefabInternal: {fileID: 1557600301}
+--- !u!1 &30797612 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000010259206870, guid: bb4132516b33d2c44a527167dfed7ee3,
+    type: 2}
+  m_PrefabInternal: {fileID: 306374120}
+--- !u!114 &30797613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 30797612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be90426aa3d02f54989a44d162fd669f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &37488315
 GameObject:
   m_ObjectHideFlags: 0
@@ -1563,7 +1579,8 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114000010125802292, guid: bb4132516b33d2c44a527167dfed7ee3, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: bb4132516b33d2c44a527167dfed7ee3, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &339995786 stripped
@@ -2492,7 +2509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   astarData:
-    dataString: UEsDBBQAAAgIAAAAIewADl3QDAIAAFkEAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFtU9tymzAQ/RVGz7UHY8xA31Lfkpm08cTp9FlGi9FYSIwu9SXjf68k5ECc8gI6e3a1e/bwjrBqodSvWFOBvkeTbxGiSjSgJS0f+J6BBWMLGk4rIZsl2cNcKK0svMJMgQ1JoV02t9B7hE72NSpcyjmkXtw7utqvErgG2fP+zzK8ZLhpgWzpBXryNAnsaeJpXBAIjHiczFx5wRhVoROkz62LoW1bgwRk44RiO5hvwNWqge5r7QoOc1+qSoEOUkh8XlBp9emKoh9C165Sg9Wh6+wvZsZdk8ZF5tvqqv78QhhNfLiSonm8XTyJ3eS6puXhFZ9LrPRA1iG86DufeIWOmB3wjsGfGvgvsZbCcGKDb9K4VKMgWfTHj9nmNZSHHu9avQNN+3U/s3GRxWmWpvlyFOdhWaN4XHRPGl2vXpTTnNFmFxJvx4cTVUFxC22Z8GvxDgFpd/hk5/L+USHRoq7Z3wre8H5otBBYUam0DQUxsNHimfLDWlIyZN/wBVX6mTa0E9wZx429E0Y6Nlr6XTiVjJ4LycHDQYwWOGb6vLH36ntv3MUGN99FVrjUQn7Ouv1adyke7vneHsPQRhw/TLA3lHy2GMp2UExnWV4lQLJpHo92kM9IklUpKfIiBYy8Bym3fWG26QoH1e1aeD84t35zFZ2o0Vri1tueSHxc00sjBhJRXoltKQH4S1fBj3T9B1BLAwQUAAAICAAAACHsNbAKvjQAAAA3AAAAEgAkAGdyYXBoMF9lZGl0b3IuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWyslPzk5NUbJSCCkqTdVRUCrOyC93rSgpSgQKuSXmFIPECjLL8kuAfCXn1LyS1CKlWgBQSwMEFAAACAgAAAAh7G3YLzFsAAAAeQAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw1rMAQkMdBaX0osSCjGKgEJhTmpkCYkcrmSWlWhqbmlmkGaWmmBlbGOgmpVqYphiZpZmkWFpYmqQmKsUC1ZdUFqT6JeamQvQEJJZkpGXmpWTmpeu5F2WmuIOMVoqtBQBQSwECLQAUAAAICAAAACHsAA5d0AwCAABZBAAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAAACHsNbAKvjQAAAA3AAAAEgAkAAAAAAAAAAAAAABZAgAAZ3JhcGgwX2VkaXRvci5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAAAh7G3YLzFsAAAAeQAAAAkAJAAAAAAAAAAAAAAA4QIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAwADABwBAACYAwAAAAA=
+    dataString: UEsDBBQAAAgIAAAAIewL/y7FCgIAAFoEAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1U9uOmzAQ/RXk5yYihCDo2za3Vtp2o82u+uzgIVgxNvKluazy77WNs7DZlhfwmTPjmTOHN4RVC6V+xpoK9DWafIkQVaIBLWn5wPcMLBhb0HBaCdksyR7mQmll4RVmCmxICu2yuYXeInSyr1HhUs4h9eLe0dV+lcA1yJ73b5bhJcNNC2RLL9CTp0lgTxNP44JAYMTjZObKC8aoCp0gfW5dDG3bGiQgGycU28F8A65WDXRfa1dwmPtUVQp0kELi84JKq09XFH0TunaVGqwOXWd/MDPumjQuMt9WV/XnJ8Jo4sOVFM3328WT2E2ua1oenvG5xEoPZB3Ci77ziVfoiNkB7xj8roH/EmspDCc2+CKNSzUKkkV/fJ9tXkN56PGu1TvQtJ/3MxsXWZxmaZovR3EeljWKx0X3pNH16kU5zRltdiHxdnw4URUUt9CWCb8W7xCQdoc/7FzePyokWtQ1+6rgBe+HRguBFZVK21AQAxstHik/rCUlQ/YNX1ClH2lDO8GdcdzYO2GkY6Ol34VTyei5kBzksEgLHDN93tiL9b057mL/z1rhUgv5Mev2b92leLjne38MQxtxfHfB3lDy0WMo20ExnWV5lQDJpnk82kE+I0lWpaTIixQw8iak3PaF2aYrHGS3e+G9Dbg1nKvoVI3WErfe90Ti45peGqF6JuWV2JYSgD91FfxI179QSwMEFAAACAgAAAAh7DWwCr40AAAANwAAABIAJABncmFwaDBfZWRpdG9yLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVsrJT85OTVGyUggpKk3VUVAqzsgvd60oKUoECrkl5hSDxAoyy/JLgHwl59S8ktQipVoAUEsDBBQAAAgIAAAAIext2C8xbAAAAHkAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNazAEJDHQWl9KLEgoxioBCYU5qZAmJHK5klpVoam5pZpBmlppgZWxjoJqVamKYYmaWZpFhaWJqkJirFAtWXVBak+iXmpkL0BCSWZKRl5qVk5qXruRdlpriDjFaKrQUAUEsBAi0AFAAACAgAAAAh7Av/LsUKAgAAWgQAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAAAh7DWwCr40AAAANwAAABIAJAAAAAAAAAAAAAAAVwIAAGdyYXBoMF9lZGl0b3IuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAAAAIext2C8xbAAAAHkAAAAJACQAAAAAAAAAAAAAAN8CAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAMAAwAcAQAAlgMAAAAA
     upgradeData: 
     data_backup: 
     file_cachedStartup: {fileID: 0}
@@ -5402,7 +5419,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013127499702, guid: 132ec8d29ba248e4fa5b3298676fb73c, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -6
+      value: -5.7
       objectReference: {fileID: 0}
     - target: {fileID: 4000013127499702, guid: 132ec8d29ba248e4fa5b3298676fb73c, type: 2}
       propertyPath: m_LocalPosition.z
@@ -5440,12 +5457,22 @@ Prefab:
       objectReference: {fileID: 2100000, guid: f9a665bc43fcd704cb0a162527c6ebee, type: 2}
     - target: {fileID: 1000012256857852, guid: 132ec8d29ba248e4fa5b3298676fb73c, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114000011166079004, guid: 132ec8d29ba248e4fa5b3298676fb73c,
         type: 2}
       propertyPath: accelerationTimeAirbourne
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013044660200, guid: 132ec8d29ba248e4fa5b3298676fb73c,
+        type: 2}
+      propertyPath: playerMask.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013044660200, guid: 132ec8d29ba248e4fa5b3298676fb73c,
+        type: 2}
+      propertyPath: canWander
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 132ec8d29ba248e4fa5b3298676fb73c, type: 2}
@@ -5625,12 +5652,32 @@ Prefab:
       objectReference: {fileID: 2100000, guid: f9a665bc43fcd704cb0a162527c6ebee, type: 2}
     - target: {fileID: 1000012984397466, guid: 3141ccddd3a564b4f9bfc906ed5a16e1, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114000013238393588, guid: 3141ccddd3a564b4f9bfc906ed5a16e1,
         type: 2}
       propertyPath: accelerationTimeAirbourne
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011907706010, guid: 3141ccddd3a564b4f9bfc906ed5a16e1,
+        type: 2}
+      propertyPath: playerMask.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011907706010, guid: 3141ccddd3a564b4f9bfc906ed5a16e1,
+        type: 2}
+      propertyPath: canWander
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010840588934, guid: 3141ccddd3a564b4f9bfc906ed5a16e1,
+        type: 2}
+      propertyPath: detailedGizmos
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011907706010, guid: 3141ccddd3a564b4f9bfc906ed5a16e1,
+        type: 2}
+      propertyPath: waitingTime
+      value: 0.016666668
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3141ccddd3a564b4f9bfc906ed5a16e1, type: 2}
@@ -5993,6 +6040,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 810097863}
     m_Modifications:
+    - target: {fileID: 11421016, guid: 6d19e8eb38e26ad40afee1219920c204, type: 2}
+      propertyPath: Collectables.Array.size
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 431366, guid: 6d19e8eb38e26ad40afee1219920c204, type: 2}
       propertyPath: m_LocalPosition.x
       value: -4.22
@@ -6033,6 +6084,14 @@ Prefab:
       propertyPath: CurrentItem
       value: 
       objectReference: {fileID: 575456688}
+    - target: {fileID: 11421016, guid: 6d19e8eb38e26ad40afee1219920c204, type: 2}
+      propertyPath: Collectables.Array.data[11].ItemID
+      value: MEGA_BOMB
+      objectReference: {fileID: 0}
+    - target: {fileID: 11421016, guid: 6d19e8eb38e26ad40afee1219920c204, type: 2}
+      propertyPath: Collectables.Array.data[12].ItemID
+      value: MEGA_BOMB
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6d19e8eb38e26ad40afee1219920c204, type: 2}
   m_IsPrefabParent: 0

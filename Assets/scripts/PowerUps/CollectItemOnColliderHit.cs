@@ -10,7 +10,7 @@ public class CollectItemOnColliderHit : MonoBehaviour {
 			PowerUp i = other.gameObject.GetComponent<PowerUp> ();
 
 			i.Give ();
-			Player.ErrorMessage = "You have collected: " + i.PowerUpName;
+			Player.ErrorMessage = "You have collected: " + i.PowerUpID;
 
 		}
 

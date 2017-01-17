@@ -76,7 +76,9 @@ public class WeaponLaser : Weapon {
 
 						if (e.tag != "Geometry") {
 
-							e.DamageHealth (Damage);
+							e.DamageVital ("HEALTH", Damage);
+
+							// e.DamageHealth (Damage);
 
 						}
 

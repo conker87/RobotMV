@@ -92,7 +92,9 @@ public class Projectile : MonoBehaviour {
 
 			}
 
-			e.DamageHealth(projectileDamage);
+			e.DamageVital ("HEALTH", projectileDamage);
+
+			// e.DamageHealth(projectileDamage);
 
 		}
 

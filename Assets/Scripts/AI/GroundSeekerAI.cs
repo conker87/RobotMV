@@ -17,13 +17,13 @@ public class GroundSeekerAI : EnemyAI {
 		// Always do gravity.
 		mc.Movement(new Vector2(0f, 1f));
 
-		if (EnemyMS != EnemyMovementState.SEEKING && canWander && Time.time > wanderingTimeNext) {
-
-			randomPosition = new Vector2 (enemyOriginPosition.position.x + Random.Range (-playerRange, playerRange), enemyOriginPosition.position.y);
-
-		}
-
 		base.FixedUpdate ();
+
+	}
+		
+	protected override Vector2 RandomlyGenerateWanderPosition(float xPosition, float yPosition, float range) {
+
+		return new Vector2 (xPosition + Random.Range (-range, range), yPosition);
 
 	}
 
