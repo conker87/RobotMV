@@ -5,6 +5,8 @@ public class ProjectileChild : Projectile {
 
 	Projectile p;
 
+	public bool DoOverrideParentMovementSpeed = false;
+
 	protected override void Start() {
 
 		base.Start ();
@@ -14,6 +16,18 @@ public class ProjectileChild : Projectile {
 		if (p != null) {
 
 			ProjectileDamage = p.ProjectileDamage;
+
+		}
+
+	}
+
+	protected override void Update() {
+
+		base.Update ();
+
+		if (DoOverrideParentMovementSpeed) {
+
+			p.MovementSpeed = MovementSpeed;
 
 		}
 

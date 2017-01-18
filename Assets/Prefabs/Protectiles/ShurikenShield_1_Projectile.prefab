@@ -103,16 +103,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ProjectileNameLocalisationID: PROJECTILE_SHURIKEN_SHIELD
-  movementSpeed: 0
-  destroyOnHit: 0
-  ignoreGeometry: 1
-  destroyInOn: 1
-  destroyIn: 15
-  projectileRotatesToDirection: 0
-  weaponLevel: 0
   Direction: {x: 0, y: 0, z: 0}
-  projectileDamage: 10
-  projectileType: 0
+  MovementSpeed: 1
+  ProjectileRotatesToDirection: 0
+  ProjectileType: 0
+  ProjectileDamage: 0
+  WeaponLevel: 0
+  IgnoreGeometry: 0
+  DestroyOnHit: 1
+  DestroyInSecondsOn: 1
+  DestroyInSeconds: 3
   onDeathObjectSpawn: {fileID: 0}
 --- !u!114 &114000012772741270
 MonoBehaviour:

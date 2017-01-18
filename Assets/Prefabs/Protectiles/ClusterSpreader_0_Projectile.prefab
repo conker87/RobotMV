@@ -89,16 +89,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ProjectileNameLocalisationID: PROJECTILE_CLUSTER_SPREADER
-  movementSpeed: 3
-  destroyOnHit: 0
-  ignoreGeometry: 0
-  destroyInOn: 1
-  destroyIn: 1.5
-  projectileRotatesToDirection: 0
-  weaponLevel: 5
   Direction: {x: 0, y: 0, z: 0}
-  projectileDamage: 0
-  projectileType: 0
+  MovementSpeed: 1
+  ProjectileRotatesToDirection: 0
+  ProjectileType: 0
+  ProjectileDamage: 0
+  WeaponLevel: 0
+  IgnoreGeometry: 0
+  DestroyOnHit: 1
+  DestroyInSecondsOn: 1
+  DestroyInSeconds: 3
   onDeathObjectSpawn: {fileID: 0}
 --- !u!212 &212000013044479900
 SpriteRenderer:

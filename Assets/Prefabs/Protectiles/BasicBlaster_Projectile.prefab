@@ -78,16 +78,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ProjectileNameLocalisationID: PROJECTILE_BASIC_BLASTER
-  movementSpeed: 8.5
-  destroyOnHit: 1
-  ignoreGeometry: 0
-  destroyInOn: 1
-  destroyIn: 3
-  projectileRotatesToDirection: 0
-  weaponLevel: 0
   Direction: {x: 0, y: 0, z: 0}
-  projectileDamage: 0
-  projectileType: 0
+  MovementSpeed: 1
+  ProjectileRotatesToDirection: 0
+  ProjectileType: 0
+  ProjectileDamage: 0
+  WeaponLevel: 0
+  IgnoreGeometry: 0
+  DestroyOnHit: 1
+  DestroyInSecondsOn: 1
+  DestroyInSeconds: 3
   onDeathObjectSpawn: {fileID: 1000010975605570, guid: 23f06e358c387964abbf8faf86410a7d,
     type: 2}
 --- !u!212 &21213448

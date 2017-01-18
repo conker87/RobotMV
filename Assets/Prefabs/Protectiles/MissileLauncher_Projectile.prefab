@@ -10,7 +10,7 @@ GameObject:
   - component: {fileID: 429712}
   - component: {fileID: 11475610}
   - component: {fileID: 21213448}
-  - component: {fileID: 6143926}
+  - component: {fileID: 60843764093183876}
   - component: {fileID: 5033066}
   - component: {fileID: 95947040515382084}
   m_Layer: 11
@@ -27,7 +27,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 139484}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -25.289927, y: -7.5188313, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -53,20 +53,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &6143926
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 139484}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Size: {x: 0.31, y: 0.28}
 --- !u!114 &11475610
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -89,7 +75,8 @@ MonoBehaviour:
   DestroyOnHit: 1
   DestroyInSecondsOn: 1
   DestroyInSeconds: 3
-  onDeathObjectSpawn: {fileID: 0}
+  onDeathObjectSpawn: {fileID: 1000010975605570, guid: 23f06e358c387964abbf8faf86410a7d,
+    type: 2}
 --- !u!212 &21213448
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -136,6 +123,32 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 139484}
   m_IsPrefabParent: 1
+--- !u!60 &60843764093183876
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 139484}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 0.095526695, y: 0.4073124}
+      - {x: 0.09493065, y: 0.46506596}
+      - {x: -0.091739655, y: 0.47182798}
+      - {x: -0.09328842, y: 0.40675163}
+      - {x: -0.1587553, y: 0.41025543}
+      - {x: -0.1560669, y: -0.02631569}
+      - {x: -0.21747017, y: -0.028933525}
+      - {x: -0.22119808, y: -0.21939659}
+      - {x: 0.21784878, y: -0.22025585}
+      - {x: 0.21725082, y: -0.028892517}
+      - {x: 0.15743256, y: -0.025875092}
+      - {x: 0.16025543, y: 0.4117546}
 --- !u!95 &95947040515382084
 Animator:
   serializedVersion: 3

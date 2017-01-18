@@ -57,7 +57,7 @@ MonoBehaviour:
   AttackLength: 0
   Damage: 0
   Level: 5
-  Cooldown: 0
+  Cooldown: 0.06666667
   Charges: 0
   InitialProjectileMovementSpeed: 2
   Projectiles:

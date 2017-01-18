@@ -42,9 +42,15 @@ public class WeaponBasicBlaster : Weapon {
 
 				}
 
+			} else {
+
+				chargedShotTimer = 0f;
+
 			}
 
 			if (Input.GetMouseButtonUp (0) && fireChargedShot) {
+
+				chargedShotTimer = 0f;
 
 				fireChargedShot = false;
 
