@@ -21,6 +21,7 @@ public class Player : Entity
 	[Header("Input")]
 	public InputManager inputManager;
 
+	[Header("Bombs Regen")]
 	public float	BombsRegenCooldown = 1f;
 	public bool		doBombsRegen = true;
 

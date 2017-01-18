@@ -599,6 +599,15 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 60862115299129780, guid: f4c2b01b81d1920479bf6f107a32868a,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f4c2b01b81d1920479bf6f107a32868a, type: 2}
   m_IsPrefabParent: 0
@@ -2973,6 +2982,10 @@ Prefab:
     - target: {fileID: 114419005945581582, guid: 716d2ce00840e9647ae069a985153b7a,
         type: 2}
       propertyPath: waitAtWaitpoint
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474284968547482, guid: 716d2ce00840e9647ae069a985153b7a, type: 2}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -5522,7 +5535,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.859375
+  orthographic size: 9.71875
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -5566,7 +5579,7 @@ MonoBehaviour:
   maxCameraHalfHeight: 2
   targetDimension: 1
   targetCameraHalfWidth: 2
-  targetCameraHalfHeight: 5
+  targetCameraHalfHeight: 8.74
   pixelPerfect: 1
   retroSnap: 1
   assetsPixelsPerUnit: 16
@@ -6261,6 +6274,11 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114000013044660200, guid: 132ec8d29ba248e4fa5b3298676fb73c,
+        type: 2}
+      propertyPath: waitingTime
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 132ec8d29ba248e4fa5b3298676fb73c, type: 2}
   m_IsPrefabParent: 0
@@ -6592,7 +6610,7 @@ Prefab:
       objectReference: {fileID: 107139819}
     - target: {fileID: 1415113390521480, guid: 25a8b27f64e6f3b4aa5b29ca8a189efc, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114183802179108028, guid: 25a8b27f64e6f3b4aa5b29ca8a189efc,
         type: 2}
@@ -8107,6 +8125,26 @@ Transform:
 GameObject:
   m_PrefabParentObject: {fileID: 186462, guid: 6d19e8eb38e26ad40afee1219920c204, type: 2}
   m_PrefabInternal: {fileID: 1857332661}
+--- !u!50 &2135313288
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2135313287}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 1
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!114 &2135313291 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11421016, guid: 6d19e8eb38e26ad40afee1219920c204,

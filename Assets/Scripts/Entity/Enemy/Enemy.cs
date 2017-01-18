@@ -19,13 +19,11 @@ public class Enemy : Entity {
 
 	void OnTriggerEnter2D(Collider2D other) {
 
-		if (other.gameObject.tag == playerTag) {
+		Entity e;
 
-			Entity e = other.gameObject.GetComponent<Entity> ();
+		if ((e = other.GetComponent<Player>()) != null) {
 
 			e.DamageVital ("HEALTH", DamageOnTouch);
-
-			//e.DamageHealth (DamageOnTouch);
 
 		}
 
@@ -57,7 +55,9 @@ public class Enemy : Entity {
 
 		}
 
-		base.DoDeath ();
+		Destroy (transform.parent.gameObject);
+
+		// base.DoDeath ();
 
 	}
 

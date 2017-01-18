@@ -102,8 +102,6 @@ public class GroundWaypointsAI : EnemyAI {
 
 		Vector3 direction = (path.vectorPath [currentWaypoint] - transform.position).normalized;
 
-		Debug.Log (direction);
-
 		mc.Movement (direction);
 
 		if (Vector3.Distance (transform.position, path.vectorPath [currentWaypoint]) < nextWaypointDistance) {

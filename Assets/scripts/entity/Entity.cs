@@ -11,10 +11,9 @@ public class Entity : MonoBehaviour {
 	public string EntityNameLocalisationID = "Localisation <FIXME>";
 	public string EntityDescLocalisationID = "Localisation <FIXME>";
 
-	[Header("Health")]
 	public Dictionary<string, int> VitalsD = new Dictionary<string, int> ();
 
-//	public int		Health = 3, HealthMaximum = 3;
+	[Header("Health")]
 	public bool  	HealthRegenOn = false;
 	public float 	HealthRegenCooldown = 10f; 
 
@@ -26,7 +25,9 @@ public class Entity : MonoBehaviour {
 	public bool	 isCurrentlyInInvulnerabilityFrames = false;
 
 	void DoHealth()	{
-		
+
+		return;
+
 		if (HealthRegenOn && !isCurrentlyInInvulnerabilityFrames && VitalsD["HEALTH"] != VitalsD["HEALTH_MAX"] && Time.time > nextTickTime) {
 
 			VitalsD ["HEALTH"]++;
