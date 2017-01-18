@@ -11,6 +11,8 @@ public class Projectile : MonoBehaviour {
 	public bool		destroyInOn = true;
 	public float	destroyIn = 3f;
 
+	public bool projectileRotatesToDirection = false;
+
 	public int	weaponLevel;
 
 	public Vector3 Direction;
@@ -36,6 +38,15 @@ public class Projectile : MonoBehaviour {
 	protected virtual void Update () {
 
 		transform.position += Direction * Time.deltaTime * movementSpeed;
+
+		if (projectileRotatesToDirection && Direction != Vector3.zero) {
+			
+			float angle = Mathf.Atan2 (Direction.x, -Direction.y) * Mathf.Rad2Deg + 180;
+				Vector3 euler = transform.eulerAngles;
+				euler.z = Mathf.LerpAngle (euler.z, angle, Time.deltaTime * 90f);
+			transform.eulerAngles = euler;
+
+		}
 
 	}
 

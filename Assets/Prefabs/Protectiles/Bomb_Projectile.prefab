@@ -82,6 +82,7 @@ MonoBehaviour:
   ignoreGeometry: 0
   destroyInOn: 1
   destroyIn: 1.5
+  projectileRotatesToDirection: 0
   weaponLevel: 0
   Direction: {x: 0, y: 0, z: 0}
   projectileDamage: 0
