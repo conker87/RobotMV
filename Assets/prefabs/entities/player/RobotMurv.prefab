@@ -117,67 +117,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EntityNameLocalisationID: PLAYER_MURV
-  INFINITE_HEALTH: 1
-  Health: 3
-  HealthMaximum: 3
+  EntityDescLocalisationID: PLAYER_MURV_DESC
   HealthRegenOn: 1
   HealthRegenCooldown: 10
   dead: 0
   hasInvincibilityFrames: 1
-  invincibilityFramesLength: 0.5
+  invincibilityFramesLength: 4
   isCurrentlyInInvulnerabilityFrames: 0
   MoveSpeed: 6
   MaximumMoveSpeed: 6
-  Collectables:
-  - ItemID: JUMP
-    Collected: 0
-  - ItemID: DOUBLE_JUMP
-    Collected: 0
-  - ItemID: TRIPLE_JUMP
-    Collected: 0
-  - ItemID: BASIC_BLASTER
-    Collected: 0
-  - ItemID: BASIC_BLASTER_CHARGED_SHOT
-    Collected: 0
-  - ItemID: MISSILE_LAUNCHER
-    Collected: 0
-  - ItemID: SPINNER
-    Collected: 0
-  - ItemID: LASER
-    Collected: 0
-  - ItemID: ???
-    Collected: 0
-  - ItemID: BOMB
-    Collected: 0
-  - ItemID: MEGA_BOMB
-    Collected: 0
   inputManager: {fileID: 0}
-  Jump: 0
-  DoubleJump: 0
-  TripleJump: 0
-  BasicBlaster: 0
-  BasicBlasterChargeShot: 0
-  Spinner: 0
-  ClusterSpreader: 0
-  MissileLauncher: 0
-  Laser: 0
-  Bombs: 0
-  MegaBombs: 0
-  INFINITE_SHURIKENSHIELD: 0
-  ShurikenShield: 0
-  INFINITE_ENERGYSHIELD: 0
-  EnergyShield: 0
-  INFINITE_BOMBS: 0
-  BombsCount: 0
-  BombsMaximum: 0
+  INFINITE_HEALTH: 1
   BombsRegenCooldown: 1
   doBombsRegen: 1
-  INFINITE_MEGABOMBS: 0
-  MegaBombsCount: 0
-  MegaBombsMaximum: 0
   BombsMegaRegenCooldown: 60
   doBombsMegaRegen: 1
-  Magnet: 0
   CurrentItem: {fileID: 0}
   CurrentWeapon: {fileID: 0}
   CanChangeWeapon: 1
@@ -202,7 +156,7 @@ MonoBehaviour:
   _collider: {fileID: 0}
   isFlyingEntity: 0
   jumpHeight: 3
-  timeToJumpApex: 0.85
+  timeToJumpApex: 0.6
   accelerationTimeAirbourne: 0.1
   accelerationTimeGrounded: 0.1
   moveSpeed: 2.5

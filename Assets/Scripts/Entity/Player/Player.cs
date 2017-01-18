@@ -14,20 +14,12 @@ public class Player : Entity
 	// TODO: Move this to the GameManager once we sort it out.
 	public Dictionary<string, bool> CheatsD = new Dictionary<string, bool> ();
 
-	// TODO: This class is the area where the abilities for the Player is stored. It is then saved to the save file via IO.
-		// Get/Set or direct changing? Meh.
-
 	public static Player Current { get; protected set; }
 
 	float timeToNextBomb, timeToNextMegaBomb;
 
+	[Header("Input")]
 	public InputManager inputManager;
-
-	public bool 	INFINITE_HEALTH = false;
-
-	// [Header("Jumping")]
-	// public bool 	Jump = false;
-	// public bool 	DoubleJump = false, TripleJump = false;
 
 	public float	BombsRegenCooldown = 1f;
 	public bool		doBombsRegen = true;
@@ -81,30 +73,30 @@ public class Player : Entity
 		CollectablesD.Add ("MISSILE_LAUNCHER",				false);
 		CollectablesD.Add ("LASER",							false);
 
-		CollectablesD.Add ("MAGNET",		false);
+		CollectablesD.Add ("MAGNET",						false);
 
-		CollectablesD.Add ("JUMP",			false);
-		CollectablesD.Add ("JUMP_DOUBLE",	false);
-		CollectablesD.Add ("JUMP_TRIPLE",	false);
+		CollectablesD.Add ("JUMP",							false);
+		CollectablesD.Add ("JUMP_DOUBLE",					false);
+		CollectablesD.Add ("JUMP_TRIPLE",					false);
 
 		CollectablesD.Add ("BOMBS",							false);
 		CollectablesD.Add ("BOMBS_MEGA",					false);
 
-		CollectablesD.Add ("SHURIKEN_SHIELD",	false);
-		CollectablesD.Add ("ENERGY_SHIELD",		false);
+		CollectablesD.Add ("SHURIKEN_SHIELD",				false);
+		CollectablesD.Add ("ENERGY_SHIELD",					false);
 
 		BombsD.Clear ();
-		BombsD.Add ("BOMBS_CURRENT",		0);
-		BombsD.Add ("BOMBS_MEGA_CURRENT",	0);
-		BombsD.Add ("BOMBS_MAX",			3);
-		BombsD.Add ("BOMBS_MEGA_MAX",		1);
+		BombsD.Add ("BOMBS_CURRENT",						0);
+		BombsD.Add ("BOMBS_MEGA_CURRENT",					0);
+		BombsD.Add ("BOMBS_MAX",							3);
+		BombsD.Add ("BOMBS_MEGA_MAX",						1);
 
 		CheatsD.Clear ();
-		CheatsD.Add ("INFINITE_HEALTH",				false);
-		CheatsD.Add ("INFINITE_SHURIKEN_SHIELD",	false);
-		CheatsD.Add ("INFINITE_ENERGY_SHIELD",		false);
-		CheatsD.Add ("INFINITE_BOMBS",				false);
-		CheatsD.Add ("INFINITE_BOMBS_MEGA",			false);
+		CheatsD.Add ("INFINITE_HEALTH",						false);
+		CheatsD.Add ("INFINITE_SHURIKEN_SHIELD",			false);
+		CheatsD.Add ("INFINITE_ENERGY_SHIELD",				false);
+		CheatsD.Add ("INFINITE_BOMBS",						false);
+		CheatsD.Add ("INFINITE_BOMBS_MEGA",					false);
 
 	}
 
@@ -219,7 +211,7 @@ public class Player : Entity
 		style.normal.textColor = Color.magenta;
 
 		GUI.Label(new Rect(10, 10, 500, 20), ErrorMessage, style);
-		GUI.Label(new Rect(10, 30, 500, 20), "H: " + Health + "/" + HealthMaximum + "|" + HealthRegenOn + ")", style);
+		GUI.Label(new Rect(10, 30, 500, 20), "H: " + VitalsD["HEALTH"] + "/" + VitalsD["HEALTH_MAX"] + "|" + HealthRegenOn + ")", style);
 		GUI.Label(new Rect(10, 50, 500, 20), "Jumps: " + CollectablesD["JUMP"] + "|" + CollectablesD["JUMP_DOUBLE"] + "|" + CollectablesD["JUMP_TRIPLE"], style);
 		GUI.Label(new Rect(10, 70, 500, 20), "CW/I: " + (CurrentWeapon == null ? "None" : CurrentWeapon.UsableNameLocalisationID) + "|" + (CurrentItem == null ? "None" : CurrentItem.UsableNameLocalisationID), style);
 		GUI.Label(new Rect(10, 90, 500, 20), "Speed: " + MoveSpeed, style);

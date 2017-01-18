@@ -57,7 +57,7 @@ public class DEV_TOOLS : MonoBehaviour
 
 	public void DAMAGE_PLAYER_IGNORE_iFRAMES() {
 
-		Player.Current.Health -= 10;
+		Player.Current.VitalsD["HEALTH"] -= 10;
 
 	}
 

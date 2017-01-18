@@ -8,12 +8,13 @@ public class Entity : MonoBehaviour {
 	// System
 	protected float iFramesRemoveTime, nextTickTime;
 
-	public string EntityNameLocalisationID = "";
+	public string EntityNameLocalisationID = "Localisation <FIXME>";
+	public string EntityDescLocalisationID = "Localisation <FIXME>";
 
 	[Header("Health")]
 	public Dictionary<string, int> VitalsD = new Dictionary<string, int> ();
 
-	public int		Health = 3, HealthMaximum = 3;
+//	public int		Health = 3, HealthMaximum = 3;
 	public bool  	HealthRegenOn = false;
 	public float 	HealthRegenCooldown = 10f; 
 
@@ -25,14 +26,13 @@ public class Entity : MonoBehaviour {
 	public bool	 isCurrentlyInInvulnerabilityFrames = false;
 
 	void DoHealth()	{
+		
+		if (HealthRegenOn && !isCurrentlyInInvulnerabilityFrames && VitalsD["HEALTH"] != VitalsD["HEALTH_MAX"] && Time.time > nextTickTime) {
 
-		return;
-
-		if (HealthRegenOn && !isCurrentlyInInvulnerabilityFrames && Health != HealthMaximum && Time.time > nextTickTime) {
-
-			//EntityVitals["HEALTH++;
+			VitalsD ["HEALTH"]++;
 
 		}
+
 	}
 
 	[Header("Movement")]
@@ -50,7 +50,7 @@ public class Entity : MonoBehaviour {
 
 	public virtual void Update() {
 
-		if (!dead && Health < 1) {
+		if (!dead && VitalsD["HEALTH"] < 1) {
 			
 			dead = true;
 			Debug.Log (this + " has hit 0 health and has been removed. If it was an Enemy then it should spawn Health and Energy pickups.");
@@ -106,6 +106,8 @@ public class Entity : MonoBehaviour {
 
 		}
 
+		VitalsD["HEALTH"] -= damage;
+
 		if (hasInvincibilityFrames) {
 
 			isCurrentlyInInvulnerabilityFrames = true;
@@ -114,23 +116,6 @@ public class Entity : MonoBehaviour {
 
 		}
 
-		Health -= damage;
-
 	}
-
-}
-	
-[System.Serializable]
-public struct EntityVitals {
-
-	public EntityVitals(string ID, int val) {
-
-		this.VitalsID = ID;
-		this.Value = val;
-
-	}
-
-	public string VitalsID;
-	public int Value;
 
 }

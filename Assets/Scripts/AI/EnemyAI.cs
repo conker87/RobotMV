@@ -7,7 +7,7 @@ using Pathfinding;
 public class EnemyAI : MonoBehaviour {
 
 	// Player
-	[Header("Waypoint")]
+	[Header("Seeker Waypoints")]
 	public Transform target;
 	[Range(0, 10)]
 	public float nextWaypointDistance = 1f;
@@ -26,8 +26,13 @@ public class EnemyAI : MonoBehaviour {
 	[Header("Enemy Movement State")]
 	[SerializeField]
 	protected EnemyMovementState EnemyMS;
+
+	[Header("Enemy Movement Settings")]
+	public bool returnToOrigin = true;
 	public Transform enemyOriginPosition;
-	public bool canWander = false, returnToOrigin = true;
+
+	[Header("Enemy Wander Settings")]
+	public bool canWander = false;
 	[Range(0, 10)]
 	public float waitingTime = 3f;
 	protected bool hasDoneWaitingTimeNext = false, wanderingFailed = false;
@@ -183,6 +188,8 @@ public class EnemyAI : MonoBehaviour {
 
 		if (Vector3.Distance (transform.position, path.vectorPath [currentWaypoint]) < nextWaypointDistance) {
 
+			Debug.Log ("currentWaypoint: " + currentWaypoint + ", path.vectorPath.Count: " + path.vectorPath.Count);
+
 			currentWaypoint++;
 			return;
 
@@ -215,7 +222,7 @@ public class EnemyAI : MonoBehaviour {
 
 	protected virtual void OnPathComplete(Path p) {
 
-		Debug.Log ("Path error? : " + p.error);
+		// Debug.Log ("Path error? : " + p.error);
 
 		if (!p.error) {
 
@@ -278,4 +285,4 @@ public class EnemyAI : MonoBehaviour {
 }
 
 public enum EnemyMovementType { FLYING, GROUND };
-public enum EnemyMovementState { IDLE, WANDERING, SEEKING, WAITING, HEADING_HOME }
+public enum EnemyMovementState { IDLE, WANDERING, SEEKING, WAITING, HEADING_HOME, PATROLLING }

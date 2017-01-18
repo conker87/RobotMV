@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using SmartLocalization;
 
 [ExecuteInEditMode]
 public class Usables : MonoBehaviour {

@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using SmartLocalization;
 
 public class WeaponBasicBlaster : Weapon {
 

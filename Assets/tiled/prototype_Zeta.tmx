@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" renderorder="left-down" width="64" height="64" tilewidth="8" tileheight="8" nextobjectid="1">
  <tileset firstgid="1" name="zeta_complex" tilewidth="8" tileheight="8" spacing="1" margin="1" tilecount="176" columns="4">
-  <image source="../../../_assets/Untied/zeta_complex/zeta_complex.png" width="37" height="397"/>
+  <image source="../Sprites/Untied/zeta_complex/zeta_complex.png" width="37" height="397"/>
   <terraintypes>
    <terrain name="Purple" tile="-1"/>
   </terraintypes>
@@ -730,10 +730,10 @@
   </tile>
  </tileset>
  <tileset firstgid="177" name="orbital_starbase_noBorder" tilewidth="8" tileheight="8" margin="1" tilecount="184" columns="8">
-  <image source="../../../_assets/Untied/orbital_starbase/orbital_starbase_noBorder.png" width="69" height="188"/>
+  <image source="../Sprites/Untied/orbital_starbase/orbital_starbase_noBorder.png" width="69" height="188"/>
  </tileset>
  <tileset firstgid="361" name="cyber_citadel_tiles" tilewidth="8" tileheight="8" spacing="1" margin="1" tilecount="164" columns="4">
-  <image source="../../../_assets/Untied/cyber_citadel/cyber_citadel_tiles.png" width="37" height="370"/>
+  <image source="../Sprites/Untied/cyber_citadel/cyber_citadel_tiles.png" width="37" height="370"/>
   <tile id="0">
    <objectgroup draworder="index">
     <object id="1" x="0" y="0" width="8" height="8"/>
