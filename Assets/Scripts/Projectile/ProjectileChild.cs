@@ -5,7 +5,9 @@ public class ProjectileChild : Projectile {
 
 	Projectile p;
 
-	void Start() {
+	protected override void Start() {
+
+		base.Start ();
 
 		p = GetComponentInParent<Projectile> ();
 

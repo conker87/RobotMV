@@ -23,7 +23,7 @@ public class Projectile : MonoBehaviour {
 
 	protected virtual void Start () { 
 
-		if (Direction != Direction.normalized) {
+		if (Direction != Vector3.zero && Direction != Direction.normalized) {
 
 			Direction.Normalize();
 

@@ -233,7 +233,8 @@ MonoBehaviour:
   Direction: {x: 0, y: 0, z: 0}
   projectileDamage: 5
   projectileType: 0
-  onDeathObjectSpawn: {fileID: 0}
+  onDeathObjectSpawn: {fileID: 1000010975605570, guid: 23f06e358c387964abbf8faf86410a7d,
+    type: 2}
 --- !u!114 &114299835740865446
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -256,7 +257,8 @@ MonoBehaviour:
   Direction: {x: 0, y: 0, z: 0}
   projectileDamage: 5
   projectileType: 0
-  onDeathObjectSpawn: {fileID: 0}
+  onDeathObjectSpawn: {fileID: 1000010975605570, guid: 23f06e358c387964abbf8faf86410a7d,
+    type: 2}
 --- !u!114 &114399354632120090
 MonoBehaviour:
   m_ObjectHideFlags: 1
