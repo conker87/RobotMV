@@ -40,15 +40,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5a564f28255f54439027384c69e28d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UsableNameLocalisationID: ITEM_MISSILE_LAUNCHER
-  DescriptionLocalisationID: ITEM_MISSILE_LAUNCHER_DESC
+  CollectableID: MISSILE_LAUNCHER
+  UsableNameLocalisationID: WEAPON_MISSILE_LAUNCHER
+  DescriptionLocalisationID: WEAPON_MISSILE_LAUNCHER_DESC
   AttackLength: 0
-  Cooldown: 3
   Damage: 3
   Level: 1
+  Cooldown: 1
   Charges: 0
-  cooldownTime: 0
-  attackLengthTime: 0
+  InitialProjectileMovementSpeed: 0
   Projectiles:
   - {fileID: 11475610, guid: ef660bded5ebd2949821fa7a321b06a8, type: 2}
   projectileType: 0

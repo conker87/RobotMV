@@ -28,15 +28,7 @@ public class WeaponLaser : Weapon {
 
 	}
 		
-	public override void Shoot(Vector3 ShootLocationPosition) {
-
-		if (stillCoolingDown) {
-
-			return;
-
-		}
-
-		//base.Shoot (ShootLocationPosition);
+	public override void ShootMouse(Vector3 ShootLocationPosition) {
 
 		if (Input.GetMouseButtonDown (0)) {
 
@@ -117,7 +109,8 @@ public class WeaponLaser : Weapon {
 					line.enabled = false;
 					Player.Current.CanChangeWeapon = true;
 
-					ShootEnd ();
+					// Prevent firing again until after cooldown time
+					cooldownTime = Time.time + Cooldown;
 
 					hasBeenFiring = false;
 
@@ -135,11 +128,14 @@ public class WeaponLaser : Weapon {
 				Player.Current.CanChangeWeapon = true;
 				hasBeenFiring = false;
 
-				ShootEnd ();
+				// Prevent firing again until after cooldown time
+				cooldownTime = Time.time + Cooldown;
 
 			}
 
 		}
+
+
 
 	}
 

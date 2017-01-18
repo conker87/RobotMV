@@ -37,8 +37,8 @@ public class Entity : MonoBehaviour {
 	}
 
 	[Header("Movement")]
-	public float MoveSpeed = 6;
-	public float MaximumMoveSpeed = 6;
+	public float MoveSpeed = 3f;
+	public float MaximumMoveSpeed = 3f;
 
 	protected virtual void Awake() {
 
@@ -61,6 +61,12 @@ public class Entity : MonoBehaviour {
 		}
 
 		DoHealth ();
+
+		if (MoveSpeed > MaximumMoveSpeed) {
+
+			MoveSpeed = MaximumMoveSpeed;
+
+		}
 
 		if (Time.time > nextTickTime) {
 

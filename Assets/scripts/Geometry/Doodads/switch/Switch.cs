@@ -38,7 +38,7 @@ public class Switch : MonoBehaviour {
 
 		hit = other.gameObject.GetComponent<Projectile> ();
 
-		if (hit != null && hit.weaponLevel >= weaponLevel) {
+		if (hit != null && hit.WeaponLevel >= weaponLevel) {
 
 			TriggerSwitch ();
 

@@ -9,8 +9,8 @@ public class ProjectileSpinner : Projectile {
 	protected override void OnTriggerEnter2D(Collider2D other) {
 
 		// Trigger Base
-		if ((other.gameObject.tag == "Player" && projectileType == ProjectileType.PLAYER) ||
-			(other.gameObject.tag == "Enemy" && projectileType == ProjectileType.ENEMY) || 
+		if ((other.gameObject.tag == "Player" && ProjectileType == ProjectileType.PLAYER) ||
+			(other.gameObject.tag == "Enemy" && ProjectileType == ProjectileType.ENEMY) || 
 			other.gameObject.tag == "IgnoreCollision") {
 
 			return;
@@ -19,7 +19,7 @@ public class ProjectileSpinner : Projectile {
 
 		if (other.gameObject.tag == "Geometry") {
 
-			if (!ignoreGeometry) {
+			if (!IgnoreGeometry) {
 
 				OnDeath ();
 				Destroy (gameObject);
@@ -34,19 +34,19 @@ public class ProjectileSpinner : Projectile {
 
 		if ((e = other.gameObject.GetComponentInParent<Entity> ()) != null) {
 
-			e.DamageVital ("HEALTH", projectileDamage);
+			e.DamageVital ("HEALTH", ProjectileDamage);
 
 			// e.DamageHealth(projectileDamage);
 
 			if (timesThroughEnemyMax > 0) {
 
-				destroyOnHit = (timesThroughEnemy < timesThroughEnemyMax) ? false : true;
+				DestroyOnHit = (timesThroughEnemy < timesThroughEnemyMax) ? false : true;
 
 				timesThroughEnemy++;
 
 			}
 
-			if (destroyOnHit) {
+			if (DestroyOnHit) {
 
 				OnDeath ();
 				Destroy (gameObject);

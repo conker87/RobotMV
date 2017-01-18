@@ -26,8 +26,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 139484}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalPosition: {x: -26.36, y: -6.34, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -78,17 +78,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ProjectileNameLocalisationID: PROJECTILE_BASIC_BLASTER_CHARGED_SHOOT
-  movementSpeed: 8.5
-  destroyOnHit: 1
-  ignoreGeometry: 0
-  destroyInOn: 1
-  destroyIn: 3
-  projectileRotatesToDirection: 0
-  weaponLevel: 0
   Direction: {x: 0, y: 0, z: 0}
-  projectileDamage: 0
-  projectileType: 0
-  onDeathObjectSpawn: {fileID: 1000010975605570, guid: 23f06e358c387964abbf8faf86410a7d,
+  MovementSpeed: 1
+  ProjectileRotatesToDirection: 0
+  ProjectileType: 0
+  ProjectileDamage: 0
+  WeaponLevel: 0
+  IgnoreGeometry: 0
+  DestroyOnHit: 1
+  DestroyInSecondsOn: 1
+  DestroyInSeconds: 3
+  onDeathObjectSpawn: {fileID: 1916320768390920, guid: 995ab6c3f6df57d4d90551c5b6b04afd,
     type: 2}
 --- !u!212 &21213448
 SpriteRenderer:

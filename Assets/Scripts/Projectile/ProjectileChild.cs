@@ -13,7 +13,7 @@ public class ProjectileChild : Projectile {
 
 		if (p != null) {
 
-			projectileDamage = p.projectileDamage;
+			ProjectileDamage = p.ProjectileDamage;
 
 		}
 

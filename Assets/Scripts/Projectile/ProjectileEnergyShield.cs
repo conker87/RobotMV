@@ -23,7 +23,7 @@ public class ProjectileEnergyShield : Projectile {
 
 		if ((p = other.gameObject.GetComponentInParent<Projectile> ()) != null) {
 
-			if (p.projectileType == ProjectileType.ENEMY) {
+			if (p.ProjectileType == ProjectileType.ENEMY) {
 
 
 

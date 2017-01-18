@@ -16,9 +16,7 @@ public class PlayerController : MovementController {
 	{
 		Vector2 input = new Vector2 (Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
-		SetVelocityToZeroOnCollisionsAboveAndBelow ();
-
-		ResetJumpingVarsOnCollisionBelow();
+		base.Update ();
 
 		Movement (input);
 

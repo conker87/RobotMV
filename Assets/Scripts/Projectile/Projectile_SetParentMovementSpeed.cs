@@ -10,7 +10,7 @@ public class Projectile_SetParentMovementSpeed : MonoBehaviour {
 
 	void Start() {
 
-		p.movementSpeed = movementSpeed;
+		p.MovementSpeed = movementSpeed;
 
 	}
 

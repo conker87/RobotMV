@@ -7,9 +7,9 @@ public class DoorProjectile : Door {
 
 		hit = other.gameObject.GetComponent<Projectile> ();
 
-		if (hit != null && hit.projectileType == ProjectileType.PLAYER) {
+		if (hit != null && hit.ProjectileType == ProjectileType.PLAYER) {
 
-			if (hit.weaponLevel >= doorLevel) {
+			if (hit.WeaponLevel >= doorLevel) {
 
 				anim.SetBool ("open", true);
 				timeToClose = Time.time + doorOpenLength;

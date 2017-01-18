@@ -3,9 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using EckTechGames.FloatingCombatText;
 
+[RequireComponent(typeof(EnemyController))]
 public class Enemy : Entity {
-
-	string playerTag = "Player";
 
 	[Range(0.0f, 100f)]
 	public float		powerUpChance			= 100f;
@@ -58,8 +57,6 @@ public class Enemy : Entity {
 		Debug.Log (transform.root);
 
 		Destroy (transform.parent.gameObject);
-
-		// base.DoDeath ();
 
 	}
 

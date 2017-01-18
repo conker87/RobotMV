@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(PlayerController))]
 public class Player : Entity
 {
 	GUIStyle style;
@@ -69,10 +70,12 @@ public class Player : Entity
 		CollectablesD.Clear ();
 		CollectablesD.Add ("BASIC_BLASTER",					false);
 		CollectablesD.Add ("BASIC_BLASTER_CHARGED_SHOT",	false);
-		CollectablesD.Add ("SPINNER",						false);
+		CollectablesD.Add ("BLACK_HOLE_BURST",				false);
 		CollectablesD.Add ("CLUSTER_SPREADER",				false);
-		CollectablesD.Add ("MISSILE_LAUNCHER",				false);
 		CollectablesD.Add ("LASER",							false);
+		CollectablesD.Add ("MISSILE_LAUNCHER",				false);
+		CollectablesD.Add ("SPINNER",						false);
+		CollectablesD.Add ("SPLITTER",						false);
 
 		CollectablesD.Add ("MAGNET",						false);
 

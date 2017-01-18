@@ -3,15 +3,7 @@ using System.Collections;
 
 public class WeaponMissileLauncher : Weapon {
 
-	public override void Shoot(Vector3 ShootLocationPosition) {
-
-		if (stillCoolingDown) {
-
-			return;
-
-		}
-
-		base.Shoot (ShootLocationPosition);
+	public override void ShootMouse(Vector3 ShootLocationPosition) {
 
 		if (Input.GetMouseButtonDown (0)) {
 
@@ -20,17 +12,12 @@ public class WeaponMissileLauncher : Weapon {
 	
 			int random = Random.Range (0, Projectiles.Length);
 
-			Projectile projectile = Instantiate (Projectiles [random], ShootLocationPosition, Quaternion.Euler( directionToMousePositionInWorld )) as Projectile;
+			Projectile projectile = Instantiate (Projectiles [random], ShootLocationPosition, Quaternion.identity) as Projectile;
 
-			projectile.Direction = directionToMousePositionInWorld;
+			projectile.SetSettings (directionToMousePositionInWorld, InitialProjectileMovementSpeed, true, projectileType, Damage, Level);
 
-			//projectile.transform.rotation = Quaternion.Euler( directionToMousePositionInWorld );
-
-			projectile.projectileDamage =	Damage;
-			projectile.weaponLevel = Level;
-			projectile.projectileType = projectileType;
-
-			ShootEnd ();
+			// Prevent firing again until after cooldown time
+			cooldownTime = Time.time + Cooldown;
 
 		}
 

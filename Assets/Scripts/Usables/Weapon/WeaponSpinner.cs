@@ -38,19 +38,19 @@ public class WeaponSpinner : Weapon {
 				projectile.name = projectile.name + "_" + spinnerTimer;
 
 				projectile.transform.SetParent (transform);
+				projectile.transform.localScale	*= multiplier;
 
-				projectile.transform.localScale		*= multiplier;
-				projectile.Direction 				= directionToMousePositionInWorld;
-				projectile.projectileDamage			= Mathf.RoundToInt (Damage * multiplier * 5f);
-				projectile.weaponLevel 				= Level;
-				projectile.projectileType 			= projectileType;
-				projectile.timesThroughEnemyMax 	= Mathf.RoundToInt (spinnerTimer * 2f);
-				projectile.ignoreGeometry 			= (spinnerTimer > (spinnerTimerMax / 2f)) ? true : false;
-				projectile.movementSpeed 			*=	multiplier;
+				bool doesIgnoreGeometry = (spinnerTimer > (spinnerTimerMax / 2f)) ? true : false;
+
+				projectile.SetSettings (directionToMousePositionInWorld, InitialProjectileMovementSpeed * multiplier, false, projectileType, Mathf.RoundToInt (Damage * multiplier * 5f),
+					Level, doesIgnoreGeometry, true);
+					
+				projectile.timesThroughEnemyMax = Mathf.RoundToInt (spinnerTimer * 2f);
 
 				projectile.GetComponent<RotateAtSpeed> ().rotationalSpeed *= (multiplier + 1f);
 
-				ShootEnd ();
+				// Prevent firing again until after cooldown time
+				cooldownTime = Time.time + Cooldown;
 
 			}
 

@@ -77,7 +77,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1507994166191586
 GameObject:
   m_ObjectHideFlags: 1
@@ -314,8 +314,8 @@ MonoBehaviour:
   verticalRaySpacing: 0.14000025
   _collider: {fileID: 0}
   isFlyingEntity: 1
-  jumpHeight: 0
-  timeToJumpApex: 0
+  jumpHeight: 1
+  timeToJumpApex: 1
   accelerationTimeAirbourne: 0.1
   accelerationTimeGrounded: 0.1
   moveSpeed: 2.5
@@ -370,17 +370,16 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4096
   EnemyMT: 0
-  EnemyMS: 5
+  EnemyMS: 0
+  returnToOrigin: 1
   enemyOriginPosition: {fileID: 0}
   canWander: 0
-  returnToOrigin: 1
   waitingTime: 3
   pathIsEnded: 0
   waypoints:
   - {fileID: 4355340977304868}
   - {fileID: 4091812768975118}
-  - {fileID: 4277156938486104}
-  - {fileID: 4212459500518576}
+  waitAtWaitpoint: 2
 --- !u!114 &114909016363058210
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -393,14 +392,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EntityNameLocalisationID: 
+  EntityDescLocalisationID: Localisation <FIXME>
   HealthRegenOn: 0
   HealthRegenCooldown: 10
   dead: 0
   hasInvincibilityFrames: 0
   invincibilityFramesLength: 0
   isCurrentlyInInvulnerabilityFrames: 0
-  MoveSpeed: 6
-  MaximumMoveSpeed: 6
+  MoveSpeed: 3
+  MaximumMoveSpeed: 3
   powerUpChance: 100
   droppedPowerupsParent: {fileID: 0}
   droppedPowerUpsChance:

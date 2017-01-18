@@ -41,15 +41,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0758466530ae4a24a831ee6c1ea24180, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UsableNameLocalisationID: ITEM_LASER
-  DescriptionLocalisationID: ITEM_LASER_DESC
+  CollectableID: LASER
+  UsableNameLocalisationID: WEAPON_LASER
+  DescriptionLocalisationID: WEAPON_LASER_DESC
   AttackLength: 1
-  Cooldown: 1
   Damage: 0
   Level: 2
+  Cooldown: 1
   Charges: 0
-  cooldownTime: 0
-  attackLengthTime: 0
   Projectiles: []
   projectileType: 0
   geometryLayer:

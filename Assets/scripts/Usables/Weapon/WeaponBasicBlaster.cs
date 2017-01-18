@@ -3,57 +3,39 @@ using System.Collections;
 
 public class WeaponBasicBlaster : Weapon {
 
-	public float chargedShotMultiplier;
-	public int chargedShotLevel;
+	[Header("Basic Blaster Append Settings")]
+	public string		BasicBlasterChargedShotID = "FIXME";
+
+	public float		chargedShotMultiplier;
+	public int			chargedShotLevel;
 
 	public Projectile	chargedShotProjectile;
 
-	float chargedShotTimer, chargedShotTime = .5f;
+	// Cooldown & Attack Length Time.time vars.
+	[SerializeField]
+	float chargedShotTimer, chargedShotChargeTime = .5f;
 	bool fireChargedShot = false;
 
-	public override void Shoot(Vector3 ShootLocationPosition) {
-
-		if (stillCoolingDown || !Player.Current.CollectablesD["BASIC_BLASTER"]) {
-
-			return;
-
-		}
-
-		base.Shoot (ShootLocationPosition);
-
-		// Blaster Shot
-		if (Input.GetMouseButtonDown (0)) {
-
-			mousePositionToWorld = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-			directionToMousePositionInWorld = mousePositionToWorld - (Vector2)ShootLocationPosition;
-
-			int random = Random.Range (0, Projectiles.Length);
-
-			Projectile projectile = Instantiate (Projectiles [random], ShootLocationPosition, Quaternion.identity) as Projectile;
-
-			projectile.Direction = directionToMousePositionInWorld;
-			projectile.projectileDamage =	Damage;
-			projectile.weaponLevel = Level;
-			projectile.projectileType = projectileType;
-
-			ShootEnd ();
-
-		}
+	public override void ShootMouse (Vector3 ShootLocationPosition) {
+		
+		base.ShootMouse (ShootLocationPosition);
 
 		// Blaster Charged Shot
-		if (Player.Current.CollectablesD["BASIC_BLASTER_CHARGED_SHOT"]) {
+		if (Player.Current.CollectablesD[BasicBlasterChargedShotID]) {
 
 			if (Input.GetMouseButton (0)) {
-					
-				if (chargedShotTimer < chargedShotTime && !fireChargedShot) {
+
+				// Checks to see if the timer is less than the time set to fully charge
+				if (chargedShotTimer < chargedShotChargeTime && !fireChargedShot) {
 
 					chargedShotTimer += Time.deltaTime;
 					fireChargedShot = false;
 
 				}
 
-				if (chargedShotTimer >= chargedShotTime) {
-		
+				// Checks to see if the timer is more than the time.
+				if (chargedShotTimer >= chargedShotChargeTime) {
+
 					chargedShotTimer = 0f;
 
 					fireChargedShot = true;
@@ -62,27 +44,19 @@ public class WeaponBasicBlaster : Weapon {
 
 			}
 
-			if (Input.GetMouseButtonUp (0)) {
-	
-				chargedShotTimer = 0f;
+			if (Input.GetMouseButtonUp (0) && fireChargedShot) {
 
-				if (fireChargedShot) {
+				fireChargedShot = false;
 
-					fireChargedShot = false;
+				mousePositionToWorld = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+				directionToMousePositionInWorld = mousePositionToWorld - (Vector2)ShootLocationPosition;
 
-					mousePositionToWorld = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-					directionToMousePositionInWorld = mousePositionToWorld - (Vector2)ShootLocationPosition;
+				Projectile projectile = Instantiate (chargedShotProjectile, ShootLocationPosition, Quaternion.identity) as Projectile;
 
-					Projectile projectile = Instantiate (chargedShotProjectile, ShootLocationPosition, Quaternion.identity) as Projectile;
+				projectile.name = projectile.name + "_ChargedShot";
+				projectile.transform.localScale *= chargedShotMultiplier / 2f;
 
-					projectile.name = projectile.name + "_ChargedShot";
-
-					projectile.Direction =			directionToMousePositionInWorld;
-					projectile.projectileDamage =	Mathf.RoundToInt(Damage * chargedShotMultiplier);
-					projectile.projectileType =		projectileType;
-					projectile.weaponLevel =		chargedShotLevel;
-
-				}
+				projectile.SetSettings (directionToMousePositionInWorld, InitialProjectileMovementSpeed * (chargedShotMultiplier / 2f), false, projectileType, Mathf.RoundToInt(Damage * chargedShotMultiplier), chargedShotLevel);
 
 			}
 

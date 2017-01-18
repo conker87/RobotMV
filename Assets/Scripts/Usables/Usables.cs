@@ -4,23 +4,33 @@ using System.Collections;
 [ExecuteInEditMode]
 public class Usables : MonoBehaviour {
 
-	[Header("Usable Settings")]
+	[Header("Usable Localisation ID")]
+	public string		CollectableID = "FIXME";
+
 	public string		UsableNameLocalisationID = "LocalisationID <FIXME>";
 	public string		DescriptionLocalisationID = "LocalisationID <FIXME>";
 
-	public float		AttackLength, Cooldown;
+	[Header("Usable Attack Settings")]
+	public float		AttackLength;
 	public int 			Damage;
 	public int			Level;
+
+	[Header("Usable Cooldown Settings")]
+	public float		Cooldown;
 	public int 			Charges;
 
-	[SerializeField]
+	[Header("Usable Movement Settings")]
+
+	// Cooldown & Attack Length Time.time vars.
 	protected float cooldownTime, attackLengthTime;
 	protected bool stillCoolingDown = false;
 
 	[Header("Spawn settings")]
+	public float 		InitialProjectileMovementSpeed;
 	public Projectile[]	Projectiles;
 	public ProjectileType projectileType;
 
+	// Usable Direction for Projeciles.
 	protected Vector2 mousePositionToWorld, directionToMousePositionInWorld;
 
 	protected virtual void Awake () {

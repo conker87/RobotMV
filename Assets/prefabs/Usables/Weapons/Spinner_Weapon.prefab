@@ -51,15 +51,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53b14c1cb401e0940978bbeae1050bb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UsableNameLocalisationID: ITEM_SPINNER
-  DescriptionLocalisationID: ITEM_SPINNER_DESC
+  CollectableID: SPINNER
+  UsableNameLocalisationID: WEAPON_SPINNER
+  DescriptionLocalisationID: WEAPON_SPINNER_DESC
   AttackLength: 0
-  Cooldown: 2
   Damage: 1
   Level: 3
+  Cooldown: 2
   Charges: 0
-  cooldownTime: 0
-  attackLengthTime: 0
   Projectiles:
   - {fileID: 114000013363710182, guid: 7dacad8674e201e42af6d1e8a21ea465, type: 2}
   projectileType: 0

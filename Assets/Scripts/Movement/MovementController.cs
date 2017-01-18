@@ -8,7 +8,8 @@ public class MovementController : Controller2D {
 	public float timeToJumpApex = .4f, accelerationTimeAirbourne = .2f, accelerationTimeGrounded = .1f;
 
 	[Header("Movement")]
-	public float moveSpeed = 5f;
+	protected float moveSpeed = 5f;
+	protected Entity connectedEntity;
 
 	protected float gravity, jumpVelocity;
 
@@ -23,6 +24,8 @@ public class MovementController : Controller2D {
 
 		base.Start ();
 
+		connectedEntity = GetComponent<Entity> ();
+
 		gravity = -(2 * jumpHeight) / Mathf.Pow(timeToJumpApex, 2);
 		jumpVelocity = Mathf.Abs(gravity) * timeToJumpApex;
 
@@ -31,6 +34,16 @@ public class MovementController : Controller2D {
 	}
 
 	protected virtual void Update () {
+
+		if (connectedEntity != null) {
+
+			if (moveSpeed != connectedEntity.MoveSpeed) {
+
+				moveSpeed = connectedEntity.MoveSpeed;
+
+			}
+
+		}
 
 		SetVelocityToZeroOnCollisionsAboveAndBelow ();
 

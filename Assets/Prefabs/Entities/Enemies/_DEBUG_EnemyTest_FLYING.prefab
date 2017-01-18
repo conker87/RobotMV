@@ -78,7 +78,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1000013420170200
 GameObject:
   m_ObjectHideFlags: 1
@@ -177,7 +177,7 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.45
+  m_Radius: 0.4
 --- !u!114 &114000010840588934
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -223,15 +223,15 @@ MonoBehaviour:
   playerRange: 5
   playerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   geometryMask:
     serializedVersion: 2
     m_Bits: 4096
   EnemyMT: 0
   EnemyMS: 0
+  returnToOrigin: 1
   enemyOriginPosition: {fileID: 4000011937968966}
   canWander: 1
-  returnToOrigin: 1
   waitingTime: 3
   pathIsEnded: 0
 --- !u!114 &114000012125470180
@@ -246,16 +246,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EntityNameLocalisationID: 
-  Health: 3
-  HealthMaximum: 3
+  EntityDescLocalisationID: Localisation <FIXME>
   HealthRegenOn: 0
   HealthRegenCooldown: 10
   dead: 0
   hasInvincibilityFrames: 0
   invincibilityFramesLength: 0
   isCurrentlyInInvulnerabilityFrames: 0
-  MoveSpeed: 6
-  MaximumMoveSpeed: 6
+  MoveSpeed: 3
+  MaximumMoveSpeed: 3
   powerUpChance: 100
   droppedPowerupsParent: {fileID: 0}
   droppedPowerUpsChance:

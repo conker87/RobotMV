@@ -5,21 +5,43 @@ public class Projectile : MonoBehaviour {
 
 	// TODO: Allow the projectile to have options of going through enemies a certain number of times.
 
-	public string	ProjectileNameLocalisationID = "";
-	public float	movementSpeed = 1f;
-	public bool 	destroyOnHit = true, ignoreGeometry = false;
-	public bool		destroyInOn = true;
-	public float	destroyIn = 3f;
+	[Header("Projectile Localisation ID")]
+	public string			ProjectileNameLocalisationID = "";
 
-	public bool projectileRotatesToDirection = false;
+	[Header("Projectile Movement Settings")]
+	public Vector3			Direction;
+	public float			MovementSpeed = 1f;
+	public bool				ProjectileRotatesToDirection;
 
-	public int	weaponLevel;
+	[Header("Projectile Damage Settings")]
+	public ProjectileType	ProjectileType;
+	public int				ProjectileDamage;
+	public int				WeaponLevel;
 
-	public Vector3 Direction;
-	public int projectileDamage;
-	public ProjectileType projectileType;
+	[Header("Projectile Other Settings")]
+	public bool				IgnoreGeometry = false;
+	public bool 			DestroyOnHit = true;
+	public bool				DestroyInSecondsOn = true;
+	public float			DestroyInSeconds = 3f;
 
+	[Header("Projectile Other Settings")]
 	public GameObject onDeathObjectSpawn;
+
+	public void SetSettings(Vector2 direction, float movementSpeed = 3f, bool projectileRotatesToDirection = false, ProjectileType projectileType = ProjectileType.PLAYER, int projectileDamage = 1, int weaponLevel = 0,
+		bool ignoreGeometry = false, bool destroyOnHit = true, bool destroyInSecondsOn = true, float destroyInSeconds = 3f) {
+
+		Direction =						direction;
+		MovementSpeed = 				movementSpeed;
+		ProjectileRotatesToDirection = 	projectileRotatesToDirection;
+		ProjectileType = 				projectileType;
+		ProjectileDamage = 				projectileDamage;
+		WeaponLevel = 					weaponLevel;
+		IgnoreGeometry = 				ignoreGeometry;
+		DestroyOnHit = 					destroyOnHit;
+		DestroyInSecondsOn = 			destroyInSecondsOn;
+		DestroyInSeconds = 				destroyInSeconds;
+
+	}
 
 	protected virtual void Start () { 
 
@@ -29,21 +51,25 @@ public class Projectile : MonoBehaviour {
 
 		}
 
-		if (destroyInOn) {
-			Invoke ("DestroyGameObject", destroyIn);
+		if (DestroyInSecondsOn) {
+			Invoke ("DestroyGameObject", DestroyInSeconds);
 		}
 
 	}
 
 	protected virtual void Update () {
 
-		transform.position += Direction * Time.deltaTime * movementSpeed;
+		if (MovementSpeed > 0) {
+			
+			transform.position += Direction * Time.deltaTime * MovementSpeed;
 
-		if (projectileRotatesToDirection && Direction != Vector3.zero) {
+		}
+
+		if (ProjectileRotatesToDirection && Direction != Vector3.zero) {
 			
 			float angle = Mathf.Atan2 (Direction.x, -Direction.y) * Mathf.Rad2Deg + 180;
-				Vector3 euler = transform.eulerAngles;
-				euler.z = Mathf.LerpAngle (euler.z, angle, Time.deltaTime * 90f);
+			Vector3 euler = transform.eulerAngles;
+			euler.z = Mathf.LerpAngle (euler.z, angle, Time.deltaTime * 90f);
 			transform.eulerAngles = euler;
 
 		}
@@ -52,8 +78,8 @@ public class Projectile : MonoBehaviour {
 
 	protected virtual void OnTriggerEnter2D(Collider2D other) {
 
-		if ((other.gameObject.tag == "Player" && projectileType == ProjectileType.PLAYER) ||
-				(other.gameObject.tag == "Enemy" && projectileType == ProjectileType.ENEMY) || 
+		if ((other.gameObject.tag == "Player" && ProjectileType == ProjectileType.PLAYER) ||
+				(other.gameObject.tag == "Enemy" && ProjectileType == ProjectileType.ENEMY) || 
 				other.gameObject.tag == "IgnoreCollision") {
 			
 			return;
@@ -68,7 +94,7 @@ public class Projectile : MonoBehaviour {
 
 		if (other.gameObject.tag == "Geometry") {
 
-			if (!ignoreGeometry) {
+			if (!IgnoreGeometry) {
 				
 				OnDeath ();
 				Destroy (gameObject);
@@ -90,7 +116,7 @@ public class Projectile : MonoBehaviour {
 
 		if ((e = other.GetComponentInParent<Entity> ()) != null) {
 
-			if (destroyOnHit) {
+			if (DestroyOnHit) {
 
 				OnDeath ();
 				Destroy (gameObject);
@@ -103,7 +129,7 @@ public class Projectile : MonoBehaviour {
 
 			}
 
-			e.DamageVital ("HEALTH", projectileDamage);
+			e.DamageVital ("HEALTH", ProjectileDamage);
 
 			// e.DamageHealth(projectileDamage);
 
