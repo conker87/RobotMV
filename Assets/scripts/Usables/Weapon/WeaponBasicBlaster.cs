@@ -16,9 +16,20 @@ public class WeaponBasicBlaster : Weapon {
 	float chargedShotTimer, chargedShotChargeTime = .5f;
 	bool fireChargedShot = false;
 
-	public override void ShootMouse (Vector3 ShootLocationPosition) {
+	public override void ShootMouse (Vector3 ShootLocationPosition, Vector2 Direction) {
 		
-		base.ShootMouse (ShootLocationPosition);
+		if (InputManager.Current.GetButtonDown("Fire")) {
+
+			int random = Random.Range (0, Projectiles.Length);
+
+			Projectile projectile = Instantiate (Projectiles [random], ShootLocationPosition, Quaternion.identity) as Projectile;
+
+			projectile.SetSettings (Direction, InitialProjectileMovementSpeed, false, projectileType, Damage, Level);
+
+			// Prevent firing again until after cooldown time
+			cooldownTime = Time.time + Cooldown;
+
+		}
 
 		// Blaster Charged Shot
 		if (Player.Current.CollectablesD[BasicBlasterChargedShotID]) {

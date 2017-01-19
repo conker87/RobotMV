@@ -12,9 +12,15 @@ public class FlyingSeekerAI : EnemyAI {
 
 	}
 
-	protected override void FixedUpdate() {
+	protected override void Update() {
 
-		base.FixedUpdate ();
+		if (PauseManager.Current.checkIfCurrentlyPaused ()) {
+
+			return;
+
+		}
+
+		base.Update ();
 
 	}
 

@@ -7,7 +7,7 @@ public class WeaponClusterSpreader : Weapon {
 
 	public float shootingAngle;
 
-	public override void ShootMouse(Vector3 ShootLocationPosition) {
+	public override void ShootMouse(Vector3 ShootLocationPosition, Vector2 Direction) {
 
 		if (Input.GetMouseButton (0)) {
 

@@ -6,6 +6,18 @@ public class ProjectileSpinner : Projectile {
 	int timesThroughEnemy = 0;
 	public int timesThroughEnemyMax = 0;
 
+	protected override void Update () {
+
+		if (PauseManager.Current.checkIfCurrentlyPaused ()) {
+
+			return;
+
+		}
+
+		base.Update ();
+
+	}
+
 	protected override void OnTriggerEnter2D(Collider2D other) {
 
 		// Trigger Base

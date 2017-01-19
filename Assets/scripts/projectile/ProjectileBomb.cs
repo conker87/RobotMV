@@ -5,6 +5,12 @@ public class ProjectileBomb : Projectile {
 
 	protected override void Update () {
 
+		if (PauseManager.Current.checkIfCurrentlyPaused ()) {
+
+			return;
+
+		}
+
 		base.Update ();
 
 		Player.Current.doBombsRegen = false;

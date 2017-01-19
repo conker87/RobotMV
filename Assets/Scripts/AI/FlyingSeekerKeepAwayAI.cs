@@ -15,7 +15,13 @@ public class FlyingSeekerKeepAwayAI : FlyingSeekerAI {
 
 	}
 
-	protected override void FixedUpdate() {
+	protected override void Update() {
+
+		if (PauseManager.Current.checkIfCurrentlyPaused ()) {
+
+			return;
+
+		}
 
 		if (target == null) {
 

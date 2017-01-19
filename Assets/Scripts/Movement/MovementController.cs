@@ -34,6 +34,12 @@ public class MovementController : Controller2D {
 	}
 
 	protected virtual void Update () {
+		
+		if (PauseManager.Current.checkIfCurrentlyPaused ()) {
+
+			return;
+
+		}
 
 		if (connectedEntity != null) {
 
@@ -53,8 +59,7 @@ public class MovementController : Controller2D {
 
 	protected virtual void SetVelocityToZeroOnCollisionsAboveAndBelow() {
 
-		if (collisions.above || collisions.below) 
-		{
+		if (collisions.above || collisions.below) {
 			velocity.y = 0;
 		}
 

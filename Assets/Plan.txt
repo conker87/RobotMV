@@ -1,0 +1,15 @@
+﻿
+  		ROBOT MURV ZERO PLAN
+	
+This file contains the plan for the video game RobotMV on PC (Steam).
+
+1: Basic engine work
+	a: Movement,
+	b: Guns,
+	c: Projectiles,
+	d: Geometry,
+	e: Small amounts of UI.
+
+2. Art direction picked
+
+3: Basic Enemy AI

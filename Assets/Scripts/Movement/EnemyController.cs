@@ -16,9 +16,14 @@ public class EnemyController : MovementController {
 
 	}
 
-	protected override void Update ()
-	{
+	protected override void Update () {
 		
+		if (PauseManager.Current.checkIfCurrentlyPaused ()) {
+
+			return;
+
+		}
+
 		if (connectedEntity != null) {
 
 			if (moveSpeed != connectedEntity.MoveSpeed) {

@@ -51,6 +51,15 @@ public class Projectile : MonoBehaviour {
 
 		}
 
+		if (ProjectileRotatesToDirection && Direction != Vector3.zero) {
+
+			float angle = Mathf.Atan2 (Direction.x, -Direction.y) * Mathf.Rad2Deg + 180;
+			Vector3 euler = transform.eulerAngles;
+			euler.z = Mathf.LerpAngle (euler.z, angle, Time.deltaTime * 90f);
+			transform.eulerAngles = euler;
+
+		}
+
 		if (DestroyInSecondsOn) {
 			Invoke ("DestroyGameObject", DestroyInSeconds);
 		}
@@ -59,18 +68,15 @@ public class Projectile : MonoBehaviour {
 
 	protected virtual void Update () {
 
-		if (MovementSpeed > 0) {
-			
-			transform.position += Direction * Time.deltaTime * MovementSpeed;
+		if (PauseManager.Current.checkIfCurrentlyPaused ()) {
+
+			return;
 
 		}
 
-		if (ProjectileRotatesToDirection && Direction != Vector3.zero) {
+		if (MovementSpeed > 0) {
 			
-			float angle = Mathf.Atan2 (Direction.x, -Direction.y) * Mathf.Rad2Deg + 180;
-			Vector3 euler = transform.eulerAngles;
-			euler.z = Mathf.LerpAngle (euler.z, angle, Time.deltaTime * 90f);
-			transform.eulerAngles = euler;
+			transform.position += Direction * Time.deltaTime * MovementSpeed;
 
 		}
 

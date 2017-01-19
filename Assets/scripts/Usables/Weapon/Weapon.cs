@@ -5,7 +5,7 @@ public abstract class Weapon : Usables {
 
 	protected bool canContinue = false;
 
-	public virtual void Shoot (Vector3 ShootLocationPosition) {
+	public virtual void Shoot (Vector3 ShootLocationPosition, Vector2 Direction) {
 
 		canContinue = true;
 
@@ -29,21 +29,28 @@ public abstract class Weapon : Usables {
 
 		}
 
-		ShootMouse (ShootLocationPosition);
+		ShootMouse (ShootLocationPosition, Direction);
 
 	}
 
 	// Default Shoot method, will be overritten by more complex firing methods.
-	public virtual void ShootMouse(Vector3 ShootLocationPosition) {
+	public virtual void ShootMouse(Vector3 ShootLocationPosition, Vector2 Direction) {
 
-		if (Input.GetMouseButtonDown (0)) {
+		if (InputManager.Current.GetButtonDown("Fire")) {
 
-			mousePositionToWorld = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-			directionToMousePositionInWorld = mousePositionToWorld - (Vector2) ShootLocationPosition;
+			if (false) {
+
+
+
+			} else {
+
+				Direction = new Vector2 (1f, 0f);
+
+			}
 
 			int random = Random.Range (0, Projectiles.Length);
 
-			Projectile projectile = Instantiate (Projectiles [random], ShootLocationPosition, Quaternion.identity) as Projectile;
+			Projectile projectile = Instantiate (Projectiles [random], Direction, Quaternion.identity) as Projectile;
 
 			projectile.SetSettings (directionToMousePositionInWorld, InitialProjectileMovementSpeed, false, projectileType, Damage, Level);
 

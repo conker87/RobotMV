@@ -16,6 +16,12 @@ public class ProjectileBlackHoleBurst : Projectile {
 	int random;
 
 	protected override void Update () {
+
+		if (PauseManager.Current.checkIfCurrentlyPaused ()) {
+
+			return;
+
+		}
 		
 		base.Update ();
 

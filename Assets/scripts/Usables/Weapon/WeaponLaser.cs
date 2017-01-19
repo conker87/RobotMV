@@ -28,7 +28,7 @@ public class WeaponLaser : Weapon {
 
 	}
 		
-	public override void ShootMouse(Vector3 ShootLocationPosition) {
+	public override void ShootMouse(Vector3 ShootLocationPosition, Vector2 Direction) {
 
 		if (Input.GetMouseButtonDown (0)) {
 

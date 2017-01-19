@@ -20,15 +20,15 @@ public class Entity : MonoBehaviour {
 	[SerializeField] bool dead = false;
 
 	[Header("iFrames")]
-	public bool  hasInvincibilityFrames = false;
-	public float invincibilityFramesLength = 0f;
-	public bool	 isCurrentlyInInvulnerabilityFrames = false;
+	public bool  hasInvincibilityTime = false;
+	public float invincibilityTimeLength = 0f;
+	public bool	 isCurrentlyInInvulnerabilityTime = false;
 
 	void DoHealth()	{
 
 		return;
 
-		if (HealthRegenOn && !isCurrentlyInInvulnerabilityFrames && VitalsD["HEALTH"] != VitalsD["HEALTH_MAX"] && Time.time > nextTickTime) {
+		if (HealthRegenOn && !isCurrentlyInInvulnerabilityTime && VitalsD["HEALTH"] != VitalsD["HEALTH_MAX"] && Time.time > nextTickTime) {
 
 			VitalsD ["HEALTH"]++;
 
@@ -79,11 +79,11 @@ public class Entity : MonoBehaviour {
 
 		}
 
-		if (hasInvincibilityFrames && isCurrentlyInInvulnerabilityFrames) {
+		if (hasInvincibilityTime && isCurrentlyInInvulnerabilityTime) {
 
 			if (Time.time > iFramesRemoveTime) {
 
-				isCurrentlyInInvulnerabilityFrames = false;
+				isCurrentlyInInvulnerabilityTime = false;
 
 			}
 
@@ -111,7 +111,7 @@ public class Entity : MonoBehaviour {
 
 	public virtual void DamageVital(string ID, int damage) {
 
-		if (isCurrentlyInInvulnerabilityFrames) {
+		if (isCurrentlyInInvulnerabilityTime) {
 
 			return;
 
@@ -119,11 +119,11 @@ public class Entity : MonoBehaviour {
 
 		VitalsD["HEALTH"] -= damage;
 
-		if (hasInvincibilityFrames) {
+		if (hasInvincibilityTime) {
 
-			isCurrentlyInInvulnerabilityFrames = true;
+			isCurrentlyInInvulnerabilityTime = true;
 
-			iFramesRemoveTime = Time.time + invincibilityFramesLength;
+			iFramesRemoveTime = Time.time + invincibilityTimeLength;
 
 		}
 

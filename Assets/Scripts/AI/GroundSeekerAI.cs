@@ -12,12 +12,18 @@ public class GroundSeekerAI : EnemyAI {
 
 	}
 
-	protected override void FixedUpdate() {
+	protected override void Update() {
+
+		if (PauseManager.Current.checkIfCurrentlyPaused ()) {
+
+			return;
+
+		}
 
 		// Always do gravity.
 		mc.Movement(new Vector2(0f, 1f));
 
-		base.FixedUpdate ();
+		base.Update ();
 
 	}
 		

@@ -1,36 +1,36 @@
 fileFormatVersion: 2
 guid: c96498085fd79764bba046bf472e1f99
-timeCreated: 1428532471
+timeCreated: 1484840759
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: sheet_0
-    21300002: sheet_1
-    21300004: sheet_2
-    21300006: sheet_3
-    21300008: sheet_4
-    21300010: sheet_5
-    21300012: sheet_6
-    21300014: sheet_7
-    21300016: sheet_8
-    21300018: sheet_9
-    21300020: sheet_10
-    21300022: sheet_11
-    21300024: sheet_12
-    21300026: sheet_13
-    21300028: sheet_14
-    21300030: sheet_15
-    21300032: sheet_16
+    21300000: controller_xbox_a
+    21300002: controller_xbox_b
+    21300004: controller_xbox_back
+    21300006: controller_xbox_dpad_down
+    21300008: controller_xbox_dpad_left
+    21300010: controller_xbox_dpad_right
+    21300012: controller_xbox_dpad_up
+    21300014: controller_xbox_leftButton
+    21300016: controller_xbox_leftStick
+    21300018: controller_xbox_leftStickButton
+    21300020: controller_xbox_leftTrigger
+    21300022: controller_xbox_leftTrigger_a
+    21300024: controller_xbox_rightButton
+    21300026: controller_xbox_rightStick
+    21300028: controller_xbox_rightStickButton
+    21300030: controller_xbox_rightTrigger
+    21300032: controller_xbox_rightTrigger_a
     21300034: sheet_17
-    21300036: sheet_18
-    21300038: sheet_19
-    21300040: sheet_20
-  serializedVersion: 2
+    21300036: controller_xbox_x
+    21300038: controller_xbox_y
+    21300040: controller_xbox_start
+  serializedVersion: 4
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
+    sRGBTexture: 1
     linearTexture: 0
-    correctGamma: 0
     fadeOut: 0
     borderMipMap: 0
     mipMapFadeDistanceStart: 1
@@ -42,10 +42,8 @@ TextureImporter:
     normalMapFilter: 0
   isReadable: 0
   grayScaleToAlpha: 0
-  generateCubemap: 0
+  generateCubemap: 6
   cubemapConvolution: 0
-  cubemapConvolutionSteps: 8
-  cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -3
   maxTextureSize: 512
@@ -56,9 +54,7 @@ TextureImporter:
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
-  rGBM: 0
   compressionQuality: 50
-  allowsAlphaSplitting: 0
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
@@ -66,12 +62,44 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 16
+  alphaUsage: 1
   alphaIsTransparency: 1
+  spriteTessellationDetail: -1
   textureType: 8
-  buildTargetSettings: []
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 512
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 512
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 512
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
   spriteSheet:
+    serializedVersion: 2
     sprites:
-    - name: sheet_0
+    - serializedVersion: 2
+      name: controller_xbox_a
       rect:
         serializedVersion: 2
         x: 4
@@ -79,18 +107,12 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -30, y: 40}
-        - {x: -40, y: 37}
-        - {x: -40, y: -37}
-        - {x: -29, y: -40}
-        - {x: 31, y: -40}
-        - {x: 40, y: -26}
-        - {x: 40, y: 27}
-        - {x: 34, y: 40}
-    - name: sheet_1
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: controller_xbox_b
       rect:
         serializedVersion: 2
         x: 88
@@ -98,18 +120,12 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -30, y: 40}
-        - {x: -40, y: 37}
-        - {x: -40, y: -37}
-        - {x: -29, y: -40}
-        - {x: 31, y: -40}
-        - {x: 40, y: -26}
-        - {x: 40, y: 27}
-        - {x: 34, y: 40}
-    - name: sheet_2
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: controller_xbox_back
       rect:
         serializedVersion: 2
         x: 172
@@ -119,24 +135,10 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -23.5, y: 24.5}
-        - {x: -28.5, y: 19.5}
-        - {x: -28.5, y: -37.5}
-        - {x: -23.5, y: -40.5}
-        - {x: 29.5, y: -40.5}
-        - {x: 42.5, y: -36.5}
-        - {x: 42.5, y: 17.5}
-        - {x: 29.5, y: 24.5}
-      - - {x: -21.5, y: 40.5}
-        - {x: -35.5, y: 35.5}
-        - {x: -42.5, y: 19.5}
-        - {x: -42.5, y: 1.5}
-        - {x: -25.5, y: 1.5}
-        - {x: 6.5, y: 25.5}
-        - {x: 6.5, y: 38.5}
-        - {x: 5.5, y: 40.5}
-    - name: sheet_3
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: controller_xbox_dpad_down
       rect:
         serializedVersion: 2
         x: 261
@@ -146,16 +148,10 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -34, y: 40}
-        - {x: -40, y: 28}
-        - {x: -40, y: -23}
-        - {x: -20, y: -40}
-        - {x: 20, y: -40}
-        - {x: 40, y: -22}
-        - {x: 40, y: 36}
-        - {x: 27, y: 40}
-    - name: sheet_4
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: controller_xbox_dpad_left
       rect:
         serializedVersion: 2
         x: 345
@@ -165,16 +161,10 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -24, y: 40}
-        - {x: -40, y: 24}
-        - {x: -40, y: -26}
-        - {x: -24, y: -40}
-        - {x: 20, y: -40}
-        - {x: 40, y: -22}
-        - {x: 40, y: 23}
-        - {x: 23, y: 40}
-    - name: sheet_5
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: controller_xbox_dpad_right
       rect:
         serializedVersion: 2
         x: 4
@@ -182,37 +172,25 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -24, y: 40}
-        - {x: -40, y: 24}
-        - {x: -40, y: -26}
-        - {x: -24, y: -40}
-        - {x: 20, y: -40}
-        - {x: 40, y: -22}
-        - {x: 40, y: 23}
-        - {x: 23, y: 40}
-    - name: sheet_6
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: controller_xbox_dpad_up
       rect:
         serializedVersion: 2
         x: 88
-        y: 344
+        y: 345
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -34, y: 40}
-        - {x: -40, y: 28}
-        - {x: -40, y: -23}
-        - {x: -20, y: -40}
-        - {x: 20, y: -40}
-        - {x: 40, y: -22}
-        - {x: 40, y: 36}
-        - {x: 27, y: 40}
-    - name: sheet_7
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: controller_xbox_leftButton
       rect:
         serializedVersion: 2
         x: 172
@@ -222,15 +200,10 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -52, y: 25}
-        - {x: -59, y: 20}
-        - {x: -59, y: -18}
-        - {x: -51, y: -25}
-        - {x: 59, y: -25}
-        - {x: 59, y: 22}
-        - {x: 55, y: 25}
-    - name: sheet_8
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: controller_xbox_leftStick
       rect:
         serializedVersion: 2
         x: 294
@@ -238,19 +211,12 @@ TextureImporter:
         width: 92
         height: 80
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 35, y: 40}
-        - {x: -27, y: 40}
-        - {x: -46, y: 36}
-        - {x: -46, y: -14}
-        - {x: -33, y: -40}
-        - {x: 31, y: -40}
-        - {x: 46, y: -14}
-        - {x: 46, y: 28}
-        - {x: 44, y: 35}
-    - name: sheet_9
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: controller_xbox_leftStickButton
       rect:
         serializedVersion: 2
         x: 390
@@ -258,18 +224,12 @@ TextureImporter:
         width: 92
         height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -26, y: 35}
-        - {x: -46, y: 22}
-        - {x: -46, y: -12}
-        - {x: -22, y: -35}
-        - {x: 35, y: -35}
-        - {x: 46, y: -12}
-        - {x: 46, y: 28}
-        - {x: 36, y: 35}
-    - name: sheet_10
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: controller_xbox_leftTrigger
       rect:
         serializedVersion: 2
         x: 4
@@ -277,33 +237,25 @@ TextureImporter:
         width: 89
         height: 80
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -44.5, y: 40}
-        - {x: -44.5, y: -40}
-        - {x: 11.5, y: -40}
-        - {x: 44.5, y: 14}
-        - {x: 44.5, y: 40}
-    - name: sheet_11
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: controller_xbox_leftTrigger_a
       rect:
         serializedVersion: 2
-        x: 97
+        x: 98
         y: 260
         width: 54
         height: 80
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -27, y: 40}
-        - {x: -27, y: -23}
-        - {x: -18, y: -40}
-        - {x: 21, y: -40}
-        - {x: 27, y: -28}
-        - {x: 27, y: 6}
-        - {x: -3, y: 40}
-    - name: sheet_12
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: controller_xbox_rightButton
       rect:
         serializedVersion: 2
         x: 155
@@ -311,17 +263,12 @@ TextureImporter:
         width: 118
         height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -52, y: 25}
-        - {x: -59, y: 20}
-        - {x: -59, y: -18}
-        - {x: -51, y: -25}
-        - {x: 59, y: -25}
-        - {x: 59, y: 22}
-        - {x: 55, y: 25}
-    - name: sheet_13
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: controller_xbox_rightStick
       rect:
         serializedVersion: 2
         x: 277
@@ -331,17 +278,10 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 35, y: 40}
-        - {x: -27, y: 40}
-        - {x: -46, y: 36}
-        - {x: -46, y: -14}
-        - {x: -33, y: -40}
-        - {x: 31, y: -40}
-        - {x: 46, y: -14}
-        - {x: 46, y: 28}
-        - {x: 44, y: 35}
-    - name: sheet_14
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: controller_xbox_rightStickButton
       rect:
         serializedVersion: 2
         x: 373
@@ -349,18 +289,12 @@ TextureImporter:
         width: 92
         height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -26, y: 35}
-        - {x: -46, y: 22}
-        - {x: -46, y: -12}
-        - {x: -22, y: -35}
-        - {x: 35, y: -35}
-        - {x: 46, y: -12}
-        - {x: 46, y: 28}
-        - {x: 36, y: 35}
-    - name: sheet_15
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: controller_xbox_rightTrigger
       rect:
         serializedVersion: 2
         x: 4
@@ -368,15 +302,12 @@ TextureImporter:
         width: 89
         height: 80
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -44.5, y: 40}
-        - {x: -44.5, y: 12}
-        - {x: -10.5, y: -40}
-        - {x: 44.5, y: -40}
-        - {x: 44.5, y: 40}
-    - name: sheet_16
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: controller_xbox_rightTrigger_a
       rect:
         serializedVersion: 2
         x: 97
@@ -384,28 +315,12 @@ TextureImporter:
         width: 54
         height: 80
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -6, y: 40}
-        - {x: -27, y: -6}
-        - {x: -27, y: -32}
-        - {x: -14, y: -40}
-        - {x: 19, y: -40}
-        - {x: 27, y: -37}
-        - {x: 27, y: 40}
-    - name: sheet_17
-      rect:
-        serializedVersion: 2
-        x: 227
-        y: 208
-        width: 15
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: sheet_18
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: controller_xbox_x
       rect:
         serializedVersion: 2
         x: 246
@@ -413,16 +328,12 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -40, y: 40}
-        - {x: -40, y: -36}
-        - {x: -39, y: -40}
-        - {x: 23, y: -40}
-        - {x: 40, y: -32}
-        - {x: 40, y: 40}
-    - name: sheet_19
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: controller_xbox_y
       rect:
         serializedVersion: 2
         x: 330
@@ -430,28 +341,23 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -30, y: 40}
-        - {x: -40, y: 37}
-        - {x: -40, y: -37}
-        - {x: -29, y: -40}
-        - {x: 31, y: -40}
-        - {x: 40, y: -26}
-        - {x: 40, y: 27}
-        - {x: 34, y: 40}
-    - name: sheet_20
-      rect:
-        serializedVersion: 2
-        x: 194
-        y: 241
-        width: 14
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: controller_xbox_start
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 177
+        width: 87
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
     outline: []
   spritePackingTag: 
   userData: 

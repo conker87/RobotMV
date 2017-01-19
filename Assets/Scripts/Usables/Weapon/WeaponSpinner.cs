@@ -7,9 +7,9 @@ public class WeaponSpinner : Weapon {
 	float spinnerTimer, spinnerTimerMax = 2f, multiplier;
 	bool hasPressed = false;
 
-	public override void Shoot(Vector3 ShootLocationPosition) {
+	public override void Shoot(Vector3 ShootLocationPosition, Vector2 Direction) {
 
-		base.Shoot (ShootLocationPosition);
+		base.Shoot (ShootLocationPosition, Direction);
 
 		if (Input.GetMouseButton (0)) {
 

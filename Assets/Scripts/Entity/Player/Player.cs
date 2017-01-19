@@ -19,9 +19,6 @@ public class Player : Entity
 
 	float timeToNextBomb, timeToNextMegaBomb;
 
-	[Header("Input")]
-	public InputManager inputManager;
-
 	[Header("Bombs Regen")]
 	public float	BombsRegenCooldown = 1f;
 	public bool		doBombsRegen = true;
@@ -77,7 +74,6 @@ public class Player : Entity
 	void Start() {
 
 		Current = this;
-		inputManager = GameObject.FindObjectOfType<InputManager>();
 
 	}
 

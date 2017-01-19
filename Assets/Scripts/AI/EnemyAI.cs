@@ -78,9 +78,13 @@ public class EnemyAI : MonoBehaviour {
 	/// <summary>
 	/// FixedUpdate should be overrided.
 	/// </summary>
-	protected virtual void FixedUpdate() {
+	protected virtual void Update() {
 
-		// throw new UnityException ("FixedUpdate should be overrided.");
+		if (PauseManager.Current.checkIfCurrentlyPaused ()) {
+
+			return;
+
+		}
 
 		if (target == null) {
 
