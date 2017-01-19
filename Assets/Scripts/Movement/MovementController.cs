@@ -51,7 +51,7 @@ public class MovementController : Controller2D {
 
 	}
 
-	protected void SetVelocityToZeroOnCollisionsAboveAndBelow() {
+	protected virtual void SetVelocityToZeroOnCollisionsAboveAndBelow() {
 
 		if (collisions.above || collisions.below) 
 		{

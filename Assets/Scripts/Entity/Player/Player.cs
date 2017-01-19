@@ -29,36 +29,6 @@ public class Player : Entity
 	public float	BombsMegaRegenCooldown = 60f;
 	public bool		doBombsMegaRegen = true;
 
-	/* [Header("Items")]
-	[Header("Weapons")]
-	public bool 	BasicBlaster = false;
-	public bool 	BasicBlasterChargeShot = false;
-	public bool 	Spinner = false;
-	public bool 	ClusterSpreader = false;
-	public bool 	MissileLauncher = false;
-	public bool 	Laser = false;
-	public bool		Bombs = false;
-	public bool		MegaBombs = false;
-	public bool		Magnet = false;
-
-	[Header("Shields")]
-	public bool 	ShurikenShield = false;
-	public bool 	EnergyShield = false;
-
-	[Header("Bombs")]
-	public bool 	INFINITE_BOMBS = false;
-	public int		BombsCount = 0, BombsMaximum = 0;
-	public float	BombsRegenCooldown = 1f;
-	public bool		doBombsRegen = true;
-	public bool 	INFINITE_MEGABOMBS = false;
-	public int 		MegaBombsCount = 0, MegaBombsMaximum = 0;
-	public float	BombsMegaRegenCooldown = 60f;
-	public bool		doBombsMegaRegen = true; */
-
-	[Header("Currently Equipped Items")]
-	public Item CurrentItem = null;
-	public Weapon CurrentWeapon = null;
-
 	public bool CanChangeWeapon = true;
 
 	protected override void Awake() {

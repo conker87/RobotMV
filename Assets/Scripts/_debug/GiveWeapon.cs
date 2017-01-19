@@ -28,8 +28,6 @@ public class GiveWeapon : MonoBehaviour {
 
 					int check = 0;
 
-					Debug.Log (check);
-
 					if (code.ToString().Contains("Alpha") && int.TryParse(code.ToString ().Remove (0, 5), out check)) {
 
 						weaponsCurrent = check - 1;

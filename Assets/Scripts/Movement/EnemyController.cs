@@ -16,4 +16,27 @@ public class EnemyController : MovementController {
 
 	}
 
+	protected override void Update ()
+	{
+		
+		if (connectedEntity != null) {
+
+			if (moveSpeed != connectedEntity.MoveSpeed) {
+
+				moveSpeed = connectedEntity.MoveSpeed;
+
+			}
+
+		}
+
+		if (!isFlyingEntity) {
+		
+			SetVelocityToZeroOnCollisionsAboveAndBelow ();
+
+		}
+
+		ResetJumpingVarsOnCollisionBelow();
+
+	}
+
 }

@@ -6,6 +6,8 @@ using Pathfinding;
 [RequireComponent(typeof(EnemyController))]
 public class EnemyAI : MonoBehaviour {
 
+	// TODO: AI needs a total rework with proper states.
+
 	// Player
 	[Header("Seeker Waypoints")]
 	public Transform target;
@@ -285,4 +287,4 @@ public class EnemyAI : MonoBehaviour {
 }
 
 public enum EnemyMovementType { FLYING, GROUND };
-public enum EnemyMovementState { IDLE, WANDERING, SEEKING, WAITING, HEADING_HOME, PATROLLING }
+public enum EnemyMovementState { IDLE, WANDERING, SEEKING, WAITING, HEADING_HOME, PATROLLING, KEEPING_AWAY }

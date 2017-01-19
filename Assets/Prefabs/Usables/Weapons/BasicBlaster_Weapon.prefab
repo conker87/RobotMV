@@ -48,7 +48,7 @@ MonoBehaviour:
   Level: 0
   Cooldown: 0.033333335
   Charges: 0
-  ProjectileMovementSpeed: 5
+  InitialProjectileMovementSpeed: 5
   Projectiles:
   - {fileID: 11475610, guid: 67a5760b2e37c4d4bb07867a7c716c77, type: 2}
   projectileType: 0

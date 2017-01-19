@@ -40,6 +40,10 @@ public class Entity : MonoBehaviour {
 	public float MoveSpeed = 3f;
 	public float MaximumMoveSpeed = 3f;
 
+	[Header("Currently Equipped Items")]
+	public Item CurrentItem = null;
+	public Weapon CurrentWeapon = null;
+
 	protected virtual void Awake() {
 
 		VitalsD.Clear ();

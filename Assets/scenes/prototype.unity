@@ -2893,7 +2893,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   astarData:
-    dataString: UEsDBBQAAAgIAAAAIewL/y7FCgIAAFoEAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1U9uOmzAQ/RXk5yYihCDo2za3Vtp2o82u+uzgIVgxNvKluazy77WNs7DZlhfwmTPjmTOHN4RVC6V+xpoK9DWafIkQVaIBLWn5wPcMLBhb0HBaCdksyR7mQmll4RVmCmxICu2yuYXeInSyr1HhUs4h9eLe0dV+lcA1yJ73b5bhJcNNC2RLL9CTp0lgTxNP44JAYMTjZObKC8aoCp0gfW5dDG3bGiQgGycU28F8A65WDXRfa1dwmPtUVQp0kELi84JKq09XFH0TunaVGqwOXWd/MDPumjQuMt9WV/XnJ8Jo4sOVFM3328WT2E2ua1oenvG5xEoPZB3Ci77ziVfoiNkB7xj8roH/EmspDCc2+CKNSzUKkkV/fJ9tXkN56PGu1TvQtJ/3MxsXWZxmaZovR3EeljWKx0X3pNH16kU5zRltdiHxdnw4URUUt9CWCb8W7xCQdoc/7FzePyokWtQ1+6rgBe+HRguBFZVK21AQAxstHik/rCUlQ/YNX1ClH2lDO8GdcdzYO2GkY6Ol34VTyei5kBzksEgLHDN93tiL9b057mL/z1rhUgv5Mev2b92leLjne38MQxtxfHfB3lDy0WMo20ExnWV5lQDJpnk82kE+I0lWpaTIixQw8iak3PaF2aYrHGS3e+G9Dbg1nKvoVI3WErfe90Ti45peGqF6JuWV2JYSgD91FfxI179QSwMEFAAACAgAAAAh7DWwCr40AAAANwAAABIAJABncmFwaDBfZWRpdG9yLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVsrJT85OTVGyUggpKk3VUVAqzsgvd60oKUoECrkl5hSDxAoyy/JLgHwl59S8ktQipVoAUEsDBBQAAAgIAAAAIext2C8xbAAAAHkAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNazAEJDHQWl9KLEgoxioBCYU5qZAmJHK5klpVoam5pZpBmlppgZWxjoJqVamKYYmaWZpFhaWJqkJirFAtWXVBak+iXmpkL0BCSWZKRl5qVk5qXruRdlpriDjFaKrQUAUEsBAi0AFAAACAgAAAAh7Av/LsUKAgAAWgQAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAAAh7DWwCr40AAAANwAAABIAJAAAAAAAAAAAAAAAVwIAAGdyYXBoMF9lZGl0b3IuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAAAAIext2C8xbAAAAHkAAAAJACQAAAAAAAAAAAAAAN8CAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAMAAwAcAQAAlgMAAAAA
+    dataString: UEsDBBQAAAgIAAAAIexR/DErBgIAAFkEAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1U9mOmzAU/RXk5yYihCDo2zRbK0070Szqs4MvwYqxkZdmGeXfaxtnIJmWF/C551zf5fCOsGqh1M9YU4G+RpMvEaJKNKAlLR/4joEFYwsaTishmyXZwVworSy8wkyBDUmhnZpb6D1CR/saFU5yCtKze0cX+1UC1yB73r9ZhpcMNy2QF3qGnjxNAnuaeBoXBAIjHiczl14wRlWoBOlT62LoGZ+QDRKKbVf+dtdkDXRXa6+dDKVPVaVAB5LEpwWVdjxdTvRN6NrlarDad4X9wcy4W9K4yHxVXd6fnwijiQ9XUjTfr1dPYte4rmm5t0WWWOnBVIfw4rZ2ww+Y7fGWwe8a+C+xlsJwYoOv0jipUZAs+uNHb/Mayn2Pd6Xegab9vJ7ZuMjiNEvTfDmK87CrUTwuuieNLhc/lOOc0WYbhNfjw5E6syQd9MKE34o3CEi7wh+2L28fFbqzqCv2TcEr3g19FgIrKpW2oUDHRotHyvdrScmQfcUXVOlH2tBu4M43ru2tMNKx0dLvwk3J6LmQHOQwSQscM33a2Iv1vTnuYv9XrXCphbxVXX+tO4mHe773xzC0EYcPF+wMJbceQ9kWiuksy6sESDbN49EW8hlJsiolRV6kgJE3IeW2Lsw2XeKwL7sX3tuAW8O5jG6q0Vri1vueSHxY03MjVM+kvBIvpQTgT10G39LlL1BLAwQUAAAICAAAACHsNbAKvjQAAAA3AAAAEgAkAGdyYXBoMF9lZGl0b3IuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWyslPzk5NUbJSCCkqTdVRUCrOyC93rSgpSgQKuSXmFIPECjLL8kuAfCXn1LyS1CKlWgBQSwMEFAAACAgAAAAh7G3YLzFsAAAAeQAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw1rMAQkMdBaX0osSCjGKgEJhTmpkCYkcrmSWlWhqbmlmkGaWmmBlbGOgmpVqYphiZpZmkWFpYmqQmKsUC1ZdUFqT6JeamQvQEJJZkpGXmpWTmpeu5F2WmuIOMVoqtBQBQSwECLQAUAAAICAAAACHsUfwxKwYCAABZBAAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAAACHsNbAKvjQAAAA3AAAAEgAkAAAAAAAAAAAAAABTAgAAZ3JhcGgwX2VkaXRvci5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAAAh7G3YLzFsAAAAeQAAAAkAJAAAAAAAAAAAAAAA2wIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAwADABwBAACSAwAAAAA=
     upgradeData: 
     data_backup: 
     file_cachedStartup: {fileID: 0}
@@ -3014,16 +3014,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 114384901200432078, guid: 716d2ce00840e9647ae069a985153b7a,
-        type: 2}
-      propertyPath: droppedPowerupsParent
-      value: 
-      objectReference: {fileID: 107139819}
-    - target: {fileID: 212114177915771906, guid: 716d2ce00840e9647ae069a985153b7a,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: f9a665bc43fcd704cb0a162527c6ebee, type: 2}
+    - target: {fileID: 1474284968547482, guid: 716d2ce00840e9647ae069a985153b7a, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 716d2ce00840e9647ae069a985153b7a, type: 2}
   m_IsPrefabParent: 0
@@ -5682,7 +5676,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.458333
+  orthographic size: 5.5
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -6402,16 +6396,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114000013262603818, guid: 132ec8d29ba248e4fa5b3298676fb73c,
-        type: 2}
-      propertyPath: droppedPowerupsParent
-      value: 
-      objectReference: {fileID: 107139819}
-    - target: {fileID: 212000011932415616, guid: 132ec8d29ba248e4fa5b3298676fb73c,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: f9a665bc43fcd704cb0a162527c6ebee, type: 2}
+    - target: {fileID: 1000012256857852, guid: 132ec8d29ba248e4fa5b3298676fb73c, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 132ec8d29ba248e4fa5b3298676fb73c, type: 2}
   m_IsPrefabParent: 0
@@ -6578,16 +6566,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114000012125470180, guid: 3141ccddd3a564b4f9bfc906ed5a16e1,
-        type: 2}
-      propertyPath: droppedPowerupsParent
-      value: 
-      objectReference: {fileID: 107139819}
-    - target: {fileID: 212000010064825982, guid: 3141ccddd3a564b4f9bfc906ed5a16e1,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: f9a665bc43fcd704cb0a162527c6ebee, type: 2}
+    - target: {fileID: 1000012984397466, guid: 3141ccddd3a564b4f9bfc906ed5a16e1, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3141ccddd3a564b4f9bfc906ed5a16e1, type: 2}
   m_IsPrefabParent: 0
@@ -6712,16 +6694,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114909016363058210, guid: 25a8b27f64e6f3b4aa5b29ca8a189efc,
-        type: 2}
-      propertyPath: droppedPowerupsParent
-      value: 
-      objectReference: {fileID: 107139819}
-    - target: {fileID: 212447908639182286, guid: 25a8b27f64e6f3b4aa5b29ca8a189efc,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: f9a665bc43fcd704cb0a162527c6ebee, type: 2}
+    - target: {fileID: 1415113390521480, guid: 25a8b27f64e6f3b4aa5b29ca8a189efc, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 25a8b27f64e6f3b4aa5b29ca8a189efc, type: 2}
   m_IsPrefabParent: 0
@@ -7179,6 +7155,14 @@ Prefab:
       propertyPath: CurrentItem
       value: 
       objectReference: {fileID: 575456688}
+    - target: {fileID: 11475602, guid: 6d19e8eb38e26ad40afee1219920c204, type: 2}
+      propertyPath: verticalRayCount
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475602, guid: 6d19e8eb38e26ad40afee1219920c204, type: 2}
+      propertyPath: horizontalRayCount
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6d19e8eb38e26ad40afee1219920c204, type: 2}
   m_IsPrefabParent: 0

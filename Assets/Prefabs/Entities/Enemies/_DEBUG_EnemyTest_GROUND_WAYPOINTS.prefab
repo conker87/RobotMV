@@ -19,7 +19,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4136134841191994}
-  m_Layer: 0
+  - component: {fileID: 114905747183776176}
+  - component: {fileID: 114868025749523180}
+  m_Layer: 13
   m_Name: _DEBUG_EnemyTest_GROUND_WAYPOINTS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +105,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4701433572241726}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Waypoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,7 +120,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4553714696049594}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: -5765324120231101433, guid: 0000000000000000d000000000000000, type: 0}
@@ -146,7 +148,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1474284968547482}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -5.7, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4701433572241726}
@@ -296,6 +298,8 @@ MonoBehaviour:
   isCurrentlyInInvulnerabilityFrames: 0
   MoveSpeed: 3
   MaximumMoveSpeed: 3
+  CurrentItem: {fileID: 0}
+  CurrentWeapon: {fileID: 0}
   powerUpChance: 100
   droppedPowerupsParent: {fileID: 0}
   droppedPowerUpsChance:
@@ -363,8 +367,55 @@ MonoBehaviour:
   timeToJumpApex: 0.4
   accelerationTimeAirbourne: 0.1
   accelerationTimeGrounded: 0.1
-  moveSpeed: 2.5
   hasJumped: 0
+--- !u!114 &114868025749523180
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1474284968547482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 847a14d4dc9cc43679ab34fc78e0182f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  repathRate: 0.5
+  target: {fileID: 0}
+  canSearch: 1
+  canMove: 1
+  speed: 3
+  enableRotation: 1
+  rotationIn2D: 0
+  rotationSpeed: 10
+  interpolatePathSwitches: 1
+  switchPathInterpolationSpeed: 5
+--- !u!114 &114905747183776176
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1474284968547482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drawGizmos: 1
+  detailedGizmos: 0
+  startEndModifier:
+    addPoints: 0
+    exactStartPoint: 3
+    exactEndPoint: 3
+    useRaycasting: 0
+    mask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    useGraphRaycasting: 0
+  traversableTags: -1
+  traversableTagsCompatibility:
+    tagsChange: -1
+    tagsSet: -1
+  tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 --- !u!212 &212108985435167298
 SpriteRenderer:
   m_ObjectHideFlags: 1
