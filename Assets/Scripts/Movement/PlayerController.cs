@@ -5,6 +5,11 @@ using System.Collections;
 
 public class PlayerController : MovementController {
 
+	// The multiplier to the movement speed if the Entity is crouching.
+	public float crouchingMovementPenalty = 0.6f;
+
+	Vector2 Direction;
+
 	[SerializeField]
 	protected bool hasDoubleJumped = false, hasTripleJumped = false, isCurrentlyCrouching = false, currentlyLookingLeft = false;
 	[SerializeField]
@@ -41,7 +46,10 @@ public class PlayerController : MovementController {
 
 		base.Update ();
 
+		Direction = InputManager.Current.GetShootingDirection (currentlyLookingLeft, isCurrentlyCrouching);
+
 		input = new Vector2 (0f, 0f);
+		float movement = 0f;
 
 		if (!InputManager.Current.GetButton ("FixLocation")) {
 		
@@ -50,10 +58,6 @@ public class PlayerController : MovementController {
 				input = new Vector2 (Input.GetAxisRaw ("Horizontal"), Input.GetAxisRaw ("Vertical"));
 
 			} else {
-
-				float movement = 0f;
-
-				// TODO: Must check to see if also Crouching (y == -1)
 
 				if (InputManager.Current.GetButton ("Left")) {
 
@@ -77,11 +81,37 @@ public class PlayerController : MovementController {
 
 		}
 
+		if (collisions.below && (Direction.y == -1 && Direction.x == 0f)) {
+
+			isCurrentlyCrouching = true;
+			// Do crouching Anim.
+
+			Direction = new Vector2 (movement, 0f);
+
+		} else if (collisions.below && (Direction.y == -1 && Direction.x != 0f)) {
+
+			isCurrentlyCrouching = true;
+			// Do crouching Anim.
+
+			Vector2 newInput = new Vector2 (movement * crouchingMovementPenalty, input.y);
+
+			input = newInput;
+
+		} else {
+
+			isCurrentlyCrouching = false;
+
+		}
+
 		Movement (input);
 
 		sr.flipX = (currentlyLookingLeft) ? true : false;
 
-		ShootWeapon ();
+		if (Direction != Vector2.zero) {
+
+			ShootWeapon (ShootLocation.transform.position, Direction);
+
+		}
 
 		if (InputManager.Current.GetButtonDown ("Item")) {
 		
@@ -157,11 +187,11 @@ public class PlayerController : MovementController {
 
 	}
 
-	void ShootWeapon() {
+	void ShootWeapon(Vector2 ShootPosition, Vector2 ShootDirection) {
 
 		if (Player.Current.CurrentWeapon != null) {
 
-			Player.Current.CurrentWeapon.Shoot (ShootLocation.transform.position, InputManager.Current.GetShootingDirection(currentlyLookingLeft));
+			Player.Current.CurrentWeapon.Shoot (ShootPosition, ShootDirection);
 
 		}
 

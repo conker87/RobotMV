@@ -43,7 +43,7 @@ public class InputManager : MonoBehaviour {
 		// Keyboard Settings
 		KeyboardKeys["Jump"]  = 					new KeycodeDetails(KeyCode.Space);
 		KeyboardKeys["Fire"]  = 					new KeycodeDetails(KeyCode.Return);
-		KeyboardKeys["FixLocation"]  =				new KeycodeDetails(KeyCode.LeftControl);
+		KeyboardKeys["FixLocation"]  =				new KeycodeDetails(KeyCode.LeftShift);
 		KeyboardKeys["Up"]  = 						new KeycodeDetails(KeyCode.W, MovementAxis.Y,	1);
 		KeyboardKeys["Left"]  = 					new KeycodeDetails(KeyCode.A, MovementAxis.X,	-1);
 		KeyboardKeys["Down"]  = 					new KeycodeDetails(KeyCode.S, MovementAxis.Y,	-1);
@@ -200,8 +200,12 @@ public class InputManager : MonoBehaviour {
 
 			} else {
 
-				x = (currentlyLookingLeft) ? -1f : 1f;
-
+				if (!GetButton ("Up") && !GetButton ("Down")) {
+					x = (currentlyLookingLeft) ? -1f : 1f;
+				} else {
+					x = 0f;
+				}
+					
 			}
 
 			Direction = new Vector2 (x, y);

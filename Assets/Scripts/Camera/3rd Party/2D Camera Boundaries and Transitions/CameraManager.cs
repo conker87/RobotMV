@@ -29,7 +29,14 @@ public class CameraManager : MonoBehaviour {
             Debug.LogWarning(gameObject.name.ToString() + " (CameraManager): No Area boundaries are assigned. The camera will move freely to the set targets");
     }
 
-    void Update() {
+	void Update() {
+
+		if (PauseManager.Current.checkIfCurrentlyPaused ()) {
+
+			return;
+
+		}
+
         // Declare Vector3 for the new position
         Vector3 newPosition;
 

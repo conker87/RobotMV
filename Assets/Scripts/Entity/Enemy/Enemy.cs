@@ -54,8 +54,6 @@ public class Enemy : Entity {
 
 		}
 
-		Debug.Log (transform.root);
-
 		Destroy (transform.parent.gameObject);
 
 	}
