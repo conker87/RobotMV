@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PauseManager : MonoBehaviour {
 
@@ -26,32 +27,117 @@ public class PauseManager : MonoBehaviour {
 	}
 	#endregion
 
+	[Header("GUI Parents")]
 	public Transform PauseGUI;
+	public Transform ControlsGUI;
+
+	[Header("Main Controls")]
+	public Button ControlsMenu;
+
+	[Header("Control Controls")]
+	public Button SaveControls;
+	public Button CancelControls, RevertControls;
+	public Toggle ControllerConfigToggle;
+
+	[SerializeField]
+	PauseState pause = PauseState.NONE;
+
+	bool canUnpause = true;
 
 	protected bool isCurrentlyPaused = false;
 
-	// Update is called once per frame
+	void Start() {
+
+		ControllerConfigToggle.isOn = InputManager.Current.isUsingController;
+
+		PauseGUI.gameObject.SetActive (false);
+		ControlsGUI.gameObject.SetActive (false);
+
+		ControlsMenu.onClick.AddListener(delegate() { SetState (PauseState.CONTROL); });
+
+	}
+
+	public void SetState(PauseState state) {
+
+		pause = state;
+
+	}
+
 	void Update () {
 
-		// Time.timeScale = (PauseGUI.gameObject.activeSelf) ? 0f : 1f;
+		if (pause == PauseState.NONE) {
 
-		if (InputManager.Current.GetButtonDown ("Pause")) {
+			PauseGUI.gameObject.SetActive (false);
+			ControlsGUI.gameObject.SetActive (false);
 
-			TogglePause ();
+			if (InputManager.Current.GetButtonDown ("Pause") || InputManager.Current.GetButtonDown ("UIBack")) {
+
+				SetState (PauseState.MAIN);
+
+			}
+
+			return;
 
 		}
+
+		if (pause == PauseState.MAIN) {
+
+			PauseGUI.gameObject.SetActive (true);
+
+			if (InputManager.Current.GetButtonDown ("Pause") || InputManager.Current.GetButtonDown ("UIBack")) {
+
+				SetState (PauseState.NONE);
+
+			}
+
+			return;
+
+		}
+
+		if (pause == PauseState.CONTROL) {
+
+			ControlsGUI.gameObject.SetActive (true);
+
+			if (InputManager.Current.GetButtonDown ("Pause") || InputManager.Current.GetButtonDown ("UIBack")) {
+
+				SetState (PauseState.MAIN);
+				ControlsGUI.gameObject.SetActive (false);
+
+			}
+
+			return;
+
+		}
+
+
 		
 	}
 
-	void TogglePause() {
+	void ToggleMainPause(PauseState newState) {
 
 		if (PauseGUI != null) {
 
 			PauseGUI.gameObject.SetActive (!PauseGUI.gameObject.activeSelf);
 
+			pause = newState;
+
 			isCurrentlyPaused = PauseGUI.gameObject.activeSelf;
 
 		}
+
+	}
+
+	public void ToggleControls() {
+
+		ControlsGUI.gameObject.SetActive (!ControlsGUI.gameObject.activeSelf);
+
+		canUnpause = !ControlsGUI.gameObject.activeSelf;
+
+	}
+
+	public void ToggleIsUsingController() {
+
+		InputManager.Current.isUsingController = ControllerConfigToggle.isOn;
 
 	}
 
@@ -61,3 +147,5 @@ public class PauseManager : MonoBehaviour {
 
 	}
 }
+
+public enum PauseState { NONE, MAIN, CONTROL, GRAPHICS, SOUND };

@@ -38,21 +38,11 @@ public abstract class Weapon : Usables {
 
 		if (InputManager.Current.GetButtonDown("Fire")) {
 
-			if (false) {
-
-
-
-			} else {
-
-				Direction = new Vector2 (1f, 0f);
-
-			}
-
 			int random = Random.Range (0, Projectiles.Length);
 
-			Projectile projectile = Instantiate (Projectiles [random], Direction, Quaternion.identity) as Projectile;
+			Projectile projectile = Instantiate (Projectiles [random], ShootLocationPosition, Quaternion.identity) as Projectile;
 
-			projectile.SetSettings (directionToMousePositionInWorld, InitialProjectileMovementSpeed, false, projectileType, Damage, Level);
+			projectile.SetSettings (Direction, InitialProjectileMovementSpeed, false, projectileType, Damage, Level);
 
 			// Prevent firing again until after cooldown time
 			cooldownTime = Time.time + Cooldown;

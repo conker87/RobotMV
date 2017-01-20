@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections;
 
@@ -49,51 +48,25 @@ public class PlayerController : MovementController {
 		Direction = InputManager.Current.GetShootingDirection (currentlyLookingLeft, isCurrentlyCrouching);
 
 		input = new Vector2 (0f, 0f);
-		float movement = 0f;
 
-		if (!InputManager.Current.GetButton ("FixLocation")) {
-		
-			if (InputManager.Current.isUsingController) {
+		sr.flipX = (currentlyLookingLeft) ? true : false;
 
-				input = new Vector2 (Input.GetAxisRaw ("Horizontal"), Input.GetAxisRaw ("Vertical"));
+		input = DoMovement ();
 
-			} else {
-
-				if (InputManager.Current.GetButton ("Left")) {
-
-					movement = -1f;
-					currentlyLookingLeft = true;
-
-				} else if (InputManager.Current.GetButton ("Right")) {
-
-					movement = 1;
-					currentlyLookingLeft = false;
-
-				} else {
-
-					movement = 0f;
-
-				}
-
-				input = new Vector2 (movement, 0f);
-
-			}
-
-		}
 
 		if (collisions.below && (Direction.y == -1 && Direction.x == 0f)) {
 
 			isCurrentlyCrouching = true;
 			// Do crouching Anim.
 
-			Direction = new Vector2 (movement, 0f);
+			Direction = new Vector2 (input.x, 0f);
 
 		} else if (collisions.below && (Direction.y == -1 && Direction.x != 0f)) {
 
 			isCurrentlyCrouching = true;
 			// Do crouching Anim.
 
-			Vector2 newInput = new Vector2 (movement * crouchingMovementPenalty, input.y);
+			Vector2 newInput = new Vector2 (input.x * crouchingMovementPenalty, input.y);
 
 			input = newInput;
 
@@ -103,9 +76,7 @@ public class PlayerController : MovementController {
 
 		}
 
-		Movement (input);
-
-		sr.flipX = (currentlyLookingLeft) ? true : false;
+		Jumping (input);
 
 		if (Direction != Vector2.zero) {
 
@@ -113,77 +84,87 @@ public class PlayerController : MovementController {
 
 		}
 
-		if (InputManager.Current.GetButtonDown ("Item")) {
-		
-			UseItem ();
-
-		}
-
-
-		if (InputManager.Current.GetButtonDown ("DEBUG_ResetScene")) {
-
-			ReloadLevel ();
-
-		}
-
-	}
-
-	protected override void ResetJumpingVarsOnCollisionBelow() {
-
-		if (collisions.below) {
-			
-			hasJumped = false;
-			hasDoubleJumped = false;
-			hasTripleJumped = false;
-
-		}
-
-	}
-
-	public override void Movement(Vector2 input) {
-
-		if (InputManager.Current.GetButtonDown("Jump") && Player.Current.CollectablesD["JUMP_TRIPLE"] && hasJumped) {
-
-			if (hasDoubleJumped && !hasTripleJumped) {
-
-				velocity.y = jumpVelocity;
-
-				hasTripleJumped = true;
-
-			}
-
-		}
-
-		if (InputManager.Current.GetButtonDown("Jump") && Player.Current.CollectablesD["JUMP_DOUBLE"] && (!collisions.below || hasJumped)) {
-
-			if (!hasDoubleJumped) {
-
-				velocity.y = jumpVelocity;
-
-				hasDoubleJumped = true;
-				hasJumped = true;
-
-			}
-
-		}
-
-		if (collisions.below) {
-			
-			if (InputManager.Current.GetButtonDown("Jump") && Player.Current.CollectablesD["JUMP"]) {
-
-				velocity.y = jumpVelocity;
-
-				hasJumped = true;
-
-			}
-
-		}
-			
 		if (input != Vector2.zero) {
 			currentlyLookingLeft = (input.x < 0) ? true : false;
 		}
 
-		base.Movement (input);
+		UseItem ();
+
+		Movement (input);
+	
+}
+
+
+
+	public void Jumping(Vector2 input) {
+
+		if (InputManager.Current.GetButtonDown("Jump")) {
+
+			if (!collisions.below || hasJumped) {
+
+				if (Player.Current.CollectablesD ["JUMP_TRIPLE"] && hasJumped && hasDoubleJumped && !hasTripleJumped) {
+
+					velocity.y = jumpVelocity;
+
+					hasTripleJumped = true;
+
+				}
+
+				if (Player.Current.CollectablesD["JUMP_DOUBLE"] && !hasDoubleJumped) {
+
+					velocity.y = jumpVelocity;
+
+					hasDoubleJumped = true;
+					hasJumped = true;
+
+				}
+
+			} else if (collisions.below) {
+
+				if (Player.Current.CollectablesD["JUMP"]) {
+
+					velocity.y = jumpVelocity;
+
+					hasJumped = true;
+
+				}
+
+			}
+
+		}
+
+	}
+
+	protected Vector2 DoMovement() {
+		
+		float movement = 0f;
+
+		if (!InputManager.Current.isUsingController) {
+
+			if (InputManager.Current.GetButton ("Left")) {
+
+				movement = (InputManager.Current.GetButton ("FixLocation")) ? 0f : -1f;
+				currentlyLookingLeft = true;
+
+			} else if (InputManager.Current.GetButton ("Right")) {
+
+				movement = (InputManager.Current.GetButton ("FixLocation")) ? 0f : 1f;
+				currentlyLookingLeft = false;
+
+			} else {
+
+				movement = 0f;
+
+			}
+
+			return input = new Vector2 (movement, 0f);
+
+		} else {
+
+			return input = (InputManager.Current.GetButton ("FixLocation")) ? new Vector2 (0f, Input.GetAxisRaw ("Vertical")) :
+				new Vector2 (Input.GetAxisRaw ("Horizontal"), Input.GetAxisRaw ("Vertical"));
+
+		}
 
 	}
 
@@ -199,7 +180,7 @@ public class PlayerController : MovementController {
 
 	void UseItem() {
 		
-		if (Player.Current.CurrentItem != null) {
+		if (InputManager.Current.GetButtonDown ("Item") && Player.Current.CurrentItem != null) {
 
 			Player.Current.CurrentItem.Use();
 			//Player.Current.CurrentWeapon.ShootAfter ();
@@ -208,9 +189,15 @@ public class PlayerController : MovementController {
 
 	}
 
-	void ReloadLevel() {
+	protected override void ResetJumpingVarsOnCollisionBelow() {
 
-		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+		if (collisions.below) {
+
+			hasJumped = false;
+			hasDoubleJumped = false;
+			hasTripleJumped = false;
+
+		}
 
 	}
 

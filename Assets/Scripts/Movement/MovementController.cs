@@ -83,7 +83,7 @@ public class MovementController : Controller2D {
 
 		velocity.y = (isFlyingEntity) ? input.y * moveSpeed : velocity.y + (gravity * Time.fixedDeltaTime);
 
-		Move (velocity * Time.fixedDeltaTime);
+		Move (velocity * Time.deltaTime);
 
 	}
 

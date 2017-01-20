@@ -31,8 +31,6 @@ public class InputManager : MonoBehaviour {
 
 	public bool isUsingController = false;
 
-	float valueForMovementInput = 1f;
-
     void OnEnable() {
 		
 		KeyboardKeys = new Dictionary<string, KeycodeDetails>();
@@ -50,6 +48,8 @@ public class InputManager : MonoBehaviour {
 		KeyboardKeys["Right"] = 					new KeycodeDetails(KeyCode.D, MovementAxis.X,	1);
 		KeyboardKeys["Item"]	= 					new KeycodeDetails(KeyCode.F);
 
+		KeyboardKeys["UIBack"]	= 					new KeycodeDetails(KeyCode.Escape);	// B
+
 		KeyboardKeys["Pause"]	= 					new KeycodeDetails(KeyCode.Escape);
 
 		KeyboardKeys["DEBUG_ResetScene"] = 			new KeycodeDetails(KeyCode.P);
@@ -59,6 +59,8 @@ public class InputManager : MonoBehaviour {
 		ControllerButtons["Fire"]	= 				new KeycodeDetails(KeyCode.JoystickButton0);	// A
 		ControllerButtons["FixLocation"]  =			new KeycodeDetails(KeyCode.JoystickButton4);	// leftButton
 		ControllerButtons["Item"]	= 				new KeycodeDetails(KeyCode.JoystickButton1);	// B
+
+		ControllerButtons["UIBack"]	= 				new KeycodeDetails(KeyCode.JoystickButton1);	// B
 
 		ControllerButtons["Pause"]	= 				new KeycodeDetails(KeyCode.JoystickButton7);
 
@@ -118,38 +120,65 @@ public class InputManager : MonoBehaviour {
 
 		}
 
-
-
-		return false;
 	}
 
 	public bool GetButtonDown(string buttonName) {
-		// TODO: Check to see if the game is supposed to be paused
-		//  Or maybe if you're in a different input mode (like a window
-		//  is open, or if the player is typing in a text box)
 
-		if ((KeyboardKeys.ContainsKey(buttonName) == false || ControllerButtons.ContainsKey(buttonName) == false)) {
+		if (isUsingController) {
 
-			Debug.LogError("InputManager::GetButtonDown -- No button named: " + buttonName);
+			if (ControllerButtons.ContainsKey (buttonName) == false) {
 
-			return false;
+				Debug.LogError ("InputManager::GetButtonDown -- No button named: " + buttonName);
+
+				return false;
+
+			}
+
+			return Input.GetKeyDown (ControllerButtons [buttonName].keyUsed);
+
+		} else {
+			
+			if (KeyboardKeys.ContainsKey (buttonName) == false) {
+
+				Debug.LogError ("InputManager::GetButtonDown -- No button named: " + buttonName);
+
+				return false;
+
+			}
+
+			return Input.GetKeyDown(KeyboardKeys[buttonName].keyUsed);
 
 		}
-
-		return (Input.GetKeyDown( KeyboardKeys[buttonName].keyUsed)) ? Input.GetKeyDown( KeyboardKeys[buttonName].keyUsed) : Input.GetKeyDown( ControllerButtons[buttonName].keyUsed);
 
 	}
 
-	public bool GetButtonUp( string buttonName )  {
+	public bool GetButtonUp(string buttonName)  {
 
-		if (KeyboardKeys.ContainsKey(buttonName) == false || ControllerButtons.ContainsKey(buttonName) == false) {
+		if (isUsingController) {
 
-			Debug.LogError("InputManager::GetButtonDown -- No button named: " + buttonName);
+			if (ControllerButtons.ContainsKey (buttonName) == false) {
 
-			return false;
+				Debug.LogError ("InputManager::GetButtonDown -- No button named: " + buttonName);
+
+				return false;
+
+			}
+
+			return Input.GetKeyUp (ControllerButtons [buttonName].keyUsed);
+
+		} else {
+
+			if (KeyboardKeys.ContainsKey (buttonName) == false) {
+
+				Debug.LogError ("InputManager::GetButtonDown -- No button named: " + buttonName);
+
+				return false;
+
+			}
+
+			return Input.GetKeyUp(KeyboardKeys[buttonName].keyUsed);
+
 		}
-
-		return (Input.GetKeyUp( KeyboardKeys[buttonName].keyUsed)) ? Input.GetKeyDown( KeyboardKeys[buttonName].keyUsed) : Input.GetKeyDown( ControllerButtons[buttonName].keyUsed);
 
 	}
 
@@ -215,42 +244,6 @@ public class InputManager : MonoBehaviour {
 		// Debug.Log (Direction);
 
 		return Direction;
-
-	}
-
-	public bool GetMovementButton( string buttonName )  {
-
-		if (KeyboardKeys.ContainsKey(buttonName) == false) {
-
-			Debug.LogError("InputManager::GetButtonDown -- No button named: " + buttonName);
-			return false;
-
-		}
-
-		if (Input.GetKey(KeyboardKeys[buttonName].keyUsed)) {
-
-			if (KeyboardKeys [buttonName].movementValue != 0) {
-
-				return Input.GetKey(KeyboardKeys[buttonName].keyUsed);
-
-			}
-
-		}
-
-		return false;
-
-	}
-
-	public int GetMovementButtonValue( string buttonName )  {
-
-		if (KeyboardKeys.ContainsKey(buttonName) == false) {
-
-			Debug.LogError("InputManager::GetButtonDown -- No button named: " + buttonName);
-			return 0;
-
-		}
-
-		return KeyboardKeys[buttonName].movementValue;
 
 	}
 

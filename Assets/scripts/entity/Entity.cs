@@ -24,18 +24,6 @@ public class Entity : MonoBehaviour {
 	public float invincibilityTimeLength = 0f;
 	public bool	 isCurrentlyInInvulnerabilityTime = false;
 
-	void DoHealth()	{
-
-		return;
-
-		if (HealthRegenOn && !isCurrentlyInInvulnerabilityTime && VitalsD["HEALTH"] != VitalsD["HEALTH_MAX"] && Time.time > nextTickTime) {
-
-			VitalsD ["HEALTH"]++;
-
-		}
-
-	}
-
 	[Header("Movement")]
 	public float MoveSpeed = 3f;
 	public float MaximumMoveSpeed = 3f;
@@ -63,8 +51,6 @@ public class Entity : MonoBehaviour {
 			DoDeath ();
 
 		}
-
-		DoHealth ();
 
 		if (MoveSpeed > MaximumMoveSpeed) {
 

@@ -76,7 +76,7 @@ public class Projectile : MonoBehaviour {
 
 		if (MovementSpeed > 0) {
 			
-			transform.position += Direction * Time.deltaTime * MovementSpeed;
+			transform.position += Direction * Time.fixedDeltaTime * MovementSpeed;
 
 		}
 
