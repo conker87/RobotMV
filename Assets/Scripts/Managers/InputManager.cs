@@ -27,7 +27,7 @@ public class InputManager : MonoBehaviour {
 
 	}
 
-	Dictionary<string, KeycodeDetails> KeyboardKeys, ControllerButtons;
+	public Dictionary<string, KeycodeDetails> KeyboardKeys, ControllerButtons;
 
 	public bool isUsingController = false;
 

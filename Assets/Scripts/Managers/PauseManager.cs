@@ -65,6 +65,8 @@ public class PauseManager : MonoBehaviour {
 
 	void Update () {
 
+		isCurrentlyPaused = (pause != PauseState.NONE) ? true : false;
+
 		if (pause == PauseState.NONE) {
 
 			PauseGUI.gameObject.SetActive (false);
