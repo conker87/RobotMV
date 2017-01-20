@@ -5,7 +5,7 @@ public class CollectItemOnColliderHit : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other) {
 
-		if (other.gameObject.tag == "Item")
+		if (other.gameObject.tag == "Use Item")
 		{
 			PowerUp i = other.gameObject.GetComponent<PowerUp> ();
 

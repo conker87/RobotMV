@@ -36,7 +36,7 @@ public abstract class Weapon : Usables {
 	// Default Shoot method, will be overritten by more complex firing methods.
 	public virtual void ShootMouse(Vector3 ShootLocationPosition, Vector2 Direction) {
 
-		if (InputManager.Current.GetButtonDown("Fire")) {
+		if (InputManager.Current.GetButtonDown("Fire Weapon")) {
 
 			int random = Random.Range (0, Projectiles.Length);
 

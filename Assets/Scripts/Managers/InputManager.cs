@@ -39,32 +39,32 @@ public class InputManager : MonoBehaviour {
         // TODO:  Consider reading these from a user preferences file
 
 		// Keyboard Settings
+		KeyboardKeys["Up"]  = 						new KeycodeDetails(KeyCode.W);
+		KeyboardKeys["Down"]  = 					new KeycodeDetails(KeyCode.S);
+		KeyboardKeys["Left"]  = 					new KeycodeDetails(KeyCode.A);
+		KeyboardKeys["Right"] = 					new KeycodeDetails(KeyCode.D);
 		KeyboardKeys["Jump"]  = 					new KeycodeDetails(KeyCode.Space);
-		KeyboardKeys["Fire"]  = 					new KeycodeDetails(KeyCode.Return);
-		KeyboardKeys["FixLocation"]  =				new KeycodeDetails(KeyCode.LeftShift);
-		KeyboardKeys["Up"]  = 						new KeycodeDetails(KeyCode.W, MovementAxis.Y,	1);
-		KeyboardKeys["Left"]  = 					new KeycodeDetails(KeyCode.A, MovementAxis.X,	-1);
-		KeyboardKeys["Down"]  = 					new KeycodeDetails(KeyCode.S, MovementAxis.Y,	-1);
-		KeyboardKeys["Right"] = 					new KeycodeDetails(KeyCode.D, MovementAxis.X,	1);
-		KeyboardKeys["Item"]	= 					new KeycodeDetails(KeyCode.F);
+		KeyboardKeys["Fire Weapon"]  = 				new KeycodeDetails(KeyCode.Return);
+		KeyboardKeys["Use Item"]	= 				new KeycodeDetails(KeyCode.F);
+		KeyboardKeys["Fix Location"]  =				new KeycodeDetails(KeyCode.LeftShift);
 
-		KeyboardKeys["UIBack"]	= 					new KeycodeDetails(KeyCode.Escape);	// B
+		KeyboardKeys["UIBack"]	= 					new KeycodeDetails(KeyCode.Escape, true);	// B
 
-		KeyboardKeys["Pause"]	= 					new KeycodeDetails(KeyCode.Escape);
+		KeyboardKeys["Pause"]	= 					new KeycodeDetails(KeyCode.Escape, true);
 
-		KeyboardKeys["DEBUG_ResetScene"] = 			new KeycodeDetails(KeyCode.P);
+		KeyboardKeys["DEBUG_ResetScene"] = 			new KeycodeDetails(KeyCode.P, true);
 
 		// Controller Settings
 		ControllerButtons["Jump"]  = 				new KeycodeDetails(KeyCode.JoystickButton2);	// X
-		ControllerButtons["Fire"]	= 				new KeycodeDetails(KeyCode.JoystickButton0);	// A
-		ControllerButtons["FixLocation"]  =			new KeycodeDetails(KeyCode.JoystickButton4);	// leftButton
-		ControllerButtons["Item"]	= 				new KeycodeDetails(KeyCode.JoystickButton1);	// B
+		ControllerButtons["Fire Weapon"]	= 		new KeycodeDetails(KeyCode.JoystickButton0);	// A
+		ControllerButtons["Fix Location"]  =		new KeycodeDetails(KeyCode.JoystickButton4);	// leftButton
+		ControllerButtons["Use Item"]	= 			new KeycodeDetails(KeyCode.JoystickButton1);	// B
 
-		ControllerButtons["UIBack"]	= 				new KeycodeDetails(KeyCode.JoystickButton1);	// B
+		ControllerButtons["UIBack"]	= 				new KeycodeDetails(KeyCode.JoystickButton1, true);	// B
 
-		ControllerButtons["Pause"]	= 				new KeycodeDetails(KeyCode.JoystickButton7);
+		ControllerButtons["Pause"]	= 				new KeycodeDetails(KeyCode.JoystickButton7, true);
 
-		ControllerButtons["DEBUG_ResetScene"] = 	new KeycodeDetails(KeyCode.P);
+		ControllerButtons["DEBUG_ResetScene"] = 	new KeycodeDetails(KeyCode.P, true);
 
     }
 
@@ -265,9 +265,9 @@ public class InputManager : MonoBehaviour {
         return KeyboardKeys[buttonName].keyUsed.ToString();
     }
 
-	public void SetButtonForKey( string buttonName, KeyCode keyCode, MovementAxis movementType = MovementAxis.NONE ) {
+	public void SetButtonForKey( string buttonName, KeyCode keyCode, bool ignoreInSettings = false) {
 
-		KeycodeDetails newKey = new KeycodeDetails (keyCode, movementType, KeyboardKeys [buttonName].movementValue);
+		KeycodeDetails newKey = new KeycodeDetails (keyCode, ignoreInSettings);
 
 		KeyboardKeys [buttonName] = newKey;
 
@@ -277,25 +277,21 @@ public class InputManager : MonoBehaviour {
 
 public struct KeycodeDetails {
 
-	public KeycodeDetails(KeyCode KeyUsed, MovementAxis Movement = MovementAxis.NONE, int MovementValue = 0) {
+	public KeycodeDetails(KeyCode KeyUsed, bool IgnoreInSettings = false) {
 
 		this.keyUsed = KeyUsed;
-		this.movement = Movement;
-		this.movementValue = MovementValue;
+		this.ignoreInSettings = IgnoreInSettings;
 
 	}
 
-	public void Add(KeyCode KeyUsed, int MovementValue) {
+	public void Add(KeyCode KeyUsed, bool IgnoreInSettings) {
 
 		this.keyUsed = KeyUsed;
-		this.movementValue = MovementValue;
+		this.ignoreInSettings = IgnoreInSettings;
 
 	}
 
 	public KeyCode		keyUsed;
-	public MovementAxis movement;
-	public int			movementValue;
+	public bool			ignoreInSettings;
 
 }
-
-public enum MovementAxis { NONE, X, Y }

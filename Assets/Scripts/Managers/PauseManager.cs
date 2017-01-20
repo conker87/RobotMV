@@ -29,18 +29,22 @@ public class PauseManager : MonoBehaviour {
 
 	[Header("GUI Parents")]
 	public Transform PauseGUI;
-	public Transform ControlsGUI;
+	public Transform ControlsGUI, GraphicsGUI, SoundGUI;
 
 	[Header("Main Controls")]
 	public Button ControlsMenu;
+	public Button GraphicsMenu;
+	public Button SoundsMenu;
+
+	public Button ResumeButton, QuitToMainMenuButton, QuitToDesktopButton;
 
 	[Header("Control Controls")]
 	public Button SaveControls;
-	public Button CancelControls, RevertControls;
+	public Button RevertControls;
 	public Toggle ControllerConfigToggle;
 
 	[SerializeField]
-	PauseState pause = PauseState.NONE;
+	PauseState pause = PauseState.NONE, changingStates;
 
 	bool canUnpause = true;
 
@@ -48,18 +52,34 @@ public class PauseManager : MonoBehaviour {
 
 	void Start() {
 
-		ControllerConfigToggle.isOn = InputManager.Current.isUsingController;
+		// ControllerConfigToggle.isOn = InputManager.Current.isUsingController;
 
 		PauseGUI.gameObject.SetActive (false);
 		ControlsGUI.gameObject.SetActive (false);
+		GraphicsGUI.gameObject.SetActive (false);
+		SoundGUI.gameObject.SetActive (false);
 
-		ControlsMenu.onClick.AddListener(delegate() { SetState (PauseState.CONTROL); });
+		ResumeButton.onClick.AddListener(	delegate() { SetState (PauseState.NONE, out changingStates);		});
+
+		ControlsMenu.onClick.AddListener(	delegate() { SetState (PauseState.CONTROL, out changingStates);		});
+		GraphicsMenu.onClick.AddListener(	delegate() { SetState (PauseState.GRAPHICS, out changingStates);	});
+		SoundsMenu.onClick.AddListener	(	delegate() { SetState (PauseState.SOUND, out changingStates);		});
 
 	}
 
-	public void SetState(PauseState state) {
+	public void SetState(PauseState state, out PauseState outNewStat) {
 
-		pause = state;
+		if (pause == state) {
+
+			pause = PauseState.MAIN;
+			outNewStat = pause;
+
+			return;
+
+		}
+
+		pause = PauseState.CHANGING_STATE;
+		outNewStat = state;
 
 	}
 
@@ -74,7 +94,7 @@ public class PauseManager : MonoBehaviour {
 
 			if (InputManager.Current.GetButtonDown ("Pause") || InputManager.Current.GetButtonDown ("UIBack")) {
 
-				SetState (PauseState.MAIN);
+				SetState (PauseState.MAIN, out changingStates);
 
 			}
 
@@ -88,7 +108,7 @@ public class PauseManager : MonoBehaviour {
 
 			if (InputManager.Current.GetButtonDown ("Pause") || InputManager.Current.GetButtonDown ("UIBack")) {
 
-				SetState (PauseState.NONE);
+				SetState (PauseState.NONE, out changingStates);
 
 			}
 
@@ -102,7 +122,7 @@ public class PauseManager : MonoBehaviour {
 
 			if (InputManager.Current.GetButtonDown ("Pause") || InputManager.Current.GetButtonDown ("UIBack")) {
 
-				SetState (PauseState.MAIN);
+				SetState (PauseState.MAIN, out changingStates);
 				ControlsGUI.gameObject.SetActive (false);
 
 			}
@@ -111,7 +131,45 @@ public class PauseManager : MonoBehaviour {
 
 		}
 
+		if (pause == PauseState.GRAPHICS) {
 
+			GraphicsGUI.gameObject.SetActive (true);
+
+			if (InputManager.Current.GetButtonDown ("Pause") || InputManager.Current.GetButtonDown ("UIBack")) {
+
+				SetState (PauseState.MAIN, out changingStates);
+				GraphicsGUI.gameObject.SetActive (false);
+
+			}
+
+			return;
+
+		}
+
+		if (pause == PauseState.SOUND) {
+
+			SoundGUI.gameObject.SetActive (true);
+
+			if (InputManager.Current.GetButtonDown ("Pause") || InputManager.Current.GetButtonDown ("UIBack")) {
+
+				SetState (PauseState.MAIN, out changingStates);
+				SoundGUI.gameObject.SetActive (false);
+
+			}
+
+			return;
+
+		}
+
+		if (pause == PauseState.CHANGING_STATE) {
+
+			pause = changingStates;
+
+			ControlsGUI.gameObject.SetActive (false);
+			GraphicsGUI.gameObject.SetActive (false);
+			SoundGUI.gameObject.SetActive (false);
+
+		}
 		
 	}
 
@@ -143,6 +201,18 @@ public class PauseManager : MonoBehaviour {
 
 	}
 
+	public void QuitToMainMenu(string mainMenuScene) {
+
+		UnityEngine.SceneManagement.SceneManager.LoadScene (mainMenuScene);
+
+	}
+
+	public void QuitToDesktop() {
+
+		Application.Quit ();
+
+	}
+
 	public bool checkIfCurrentlyPaused() {
 
 		return isCurrentlyPaused;
@@ -150,4 +220,4 @@ public class PauseManager : MonoBehaviour {
 	}
 }
 
-public enum PauseState { NONE, MAIN, CONTROL, GRAPHICS, SOUND };
+public enum PauseState { NONE, MAIN, CONTROL, GRAPHICS, SOUND, CHANGING_STATE };

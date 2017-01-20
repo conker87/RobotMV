@@ -143,12 +143,12 @@ public class PlayerController : MovementController {
 
 			if (InputManager.Current.GetButton ("Left")) {
 
-				movement = (InputManager.Current.GetButton ("FixLocation")) ? 0f : -1f;
+				movement = (InputManager.Current.GetButton ("Fix Location")) ? 0f : -1f;
 				currentlyLookingLeft = true;
 
 			} else if (InputManager.Current.GetButton ("Right")) {
 
-				movement = (InputManager.Current.GetButton ("FixLocation")) ? 0f : 1f;
+				movement = (InputManager.Current.GetButton ("Fix Location")) ? 0f : 1f;
 				currentlyLookingLeft = false;
 
 			} else {
@@ -161,7 +161,7 @@ public class PlayerController : MovementController {
 
 		} else {
 
-			return input = (InputManager.Current.GetButton ("FixLocation")) ? new Vector2 (0f, Input.GetAxisRaw ("Vertical")) :
+			return input = (InputManager.Current.GetButton ("Fix Location")) ? new Vector2 (0f, Input.GetAxisRaw ("Vertical")) :
 				new Vector2 (Input.GetAxisRaw ("Horizontal"), Input.GetAxisRaw ("Vertical"));
 
 		}
@@ -180,7 +180,7 @@ public class PlayerController : MovementController {
 
 	void UseItem() {
 		
-		if (InputManager.Current.GetButtonDown ("Item") && Player.Current.CurrentItem != null) {
+		if (InputManager.Current.GetButtonDown ("Use Item") && Player.Current.CurrentItem != null) {
 
 			Player.Current.CurrentItem.Use();
 			//Player.Current.CurrentWeapon.ShootAfter ();

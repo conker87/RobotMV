@@ -18,7 +18,7 @@ public class WeaponBasicBlaster : Weapon {
 
 	public override void ShootMouse (Vector3 ShootLocationPosition, Vector2 Direction) {
 		
-		if (InputManager.Current.GetButtonDown("Fire")) {
+		if (InputManager.Current.GetButtonDown("Fire Weapon")) {
 
 			int random = Random.Range (0, Projectiles.Length);
 
@@ -34,7 +34,7 @@ public class WeaponBasicBlaster : Weapon {
 		// Blaster Charged Shot
 		if (Player.Current.CollectablesD[BasicBlasterChargedShotID]) {
 
-			if (InputManager.Current.GetButton("Fire")) {
+			if (InputManager.Current.GetButton("Fire Weapon")) {
 
 				// Checks to see if the timer is less than the time set to fully charge
 				if (chargedShotTimer < chargedShotChargeTime && !fireChargedShot) {
@@ -59,7 +59,7 @@ public class WeaponBasicBlaster : Weapon {
 
 			}
 
-			if (InputManager.Current.GetButtonUp("Fire") && fireChargedShot) {
+			if (InputManager.Current.GetButtonUp("Fire Weapon") && fireChargedShot) {
 
 				chargedShotTimer = 0f;
 
