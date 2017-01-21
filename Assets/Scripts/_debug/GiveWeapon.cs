@@ -73,7 +73,7 @@ public class GiveWeapon : MonoBehaviour {
 
 	void DoWeaponsDebug() {
 
-		if (Player.Current.CanChangeWeapon) {
+		if (!PauseManager.Current.checkIfCurrentlyPaused() && Player.Current.CanChangeWeapon) {
 
 			if (Input.GetAxis ("Mouse ScrollWheel") > 0) {
 
@@ -98,33 +98,15 @@ public class GiveWeapon : MonoBehaviour {
 
 			}
 
-			Player.Current.CurrentWeapon = weapons [weaponsCurrent];
+			// TODO: Make it so that if you do not have any of the other weapons, then auto increment and 
+			//	overflows to 0.
 
-//			if ((Input.GetKey (KeyCode.Alpha1) && Player.Current.CollectablesD["ENERGY_SHIELD"]) ||
-//				(Input.GetKey (KeyCode.LeftShift) && Input.GetKey (KeyCode.Alpha1))) {
-//
-//				Player.Current.CurrentWeapon = weapons [0];
-//
-//			} else if ((Input.GetKey (KeyCode.Alpha2) && Player.Current.CollectablesD["MISSILE_LAUNCHER"]) ||
-//				(Input.GetKey (KeyCode.LeftShift) && Input.GetKey (KeyCode.Alpha2))) {
-//
-//				Player.Current.CurrentWeapon = weapons [1];
-//
-//			} else if ((Input.GetKey (KeyCode.Alpha3) && Player.Current.CollectablesD["LASER"]) ||
-//				(Input.GetKey (KeyCode.LeftShift) && Input.GetKey (KeyCode.Alpha3))) {
-//
-//				Player.Current.CurrentWeapon = weapons [2];
-//
-//			} else if ((Input.GetKey (KeyCode.Alpha4) && Player.Current.CollectablesD["SPINNER"]) ||
-//				(Input.GetKey (KeyCode.LeftShift) && Input.GetKey (KeyCode.Alpha4))) {
-//
-//				Player.Current.CurrentWeapon = weapons [3];
-//
-//			} else if ((Input.GetKey (KeyCode.Alpha5) && Player.Current.CollectablesD["CLUSTER_SPREADER"]) ||
-//				(Input.GetKey (KeyCode.LeftShift) && Input.GetKey (KeyCode.Alpha5))) {
-//
-//				Player.Current.CurrentWeapon = weapons [4];
-//			}
+			//if (Player.Current.CollectablesD.ContainsKey(weapons[weaponsCurrent].CollectableID) &&
+			//	Player.Current.CollectablesD[weapons[weaponsCurrent].CollectableID].) {
+
+				Player.Current.CurrentWeapon = weapons [weaponsCurrent];
+
+			//}
 
 		}
 
