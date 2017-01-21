@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,6 +7,7 @@ using UnityEngine.UI;
 public class PauseManager : MonoBehaviour {
 
 	#region Singleton
+
 	private static PauseManager _current;
 	public static PauseManager Current {
 		get {
@@ -25,6 +27,7 @@ public class PauseManager : MonoBehaviour {
 		DontDestroyOnLoad(gameObject);
 
 	}
+
 	#endregion
 
 	[Header("GUI Parents")]
@@ -42,6 +45,9 @@ public class PauseManager : MonoBehaviour {
 	public Button SaveControls;
 	public Button RevertControls;
 	public Toggle ControllerConfigToggle;
+
+	[SerializeField]
+	string currentlyChangingKeybindID = "";
 
 	[SerializeField]
 	PauseState pause = PauseState.NONE, changingStates;
@@ -69,6 +75,8 @@ public class PauseManager : MonoBehaviour {
 
 	public void SetState(PauseState state, out PauseState outNewStat) {
 
+		ControlsMenu_CancelChangedBindings ();
+
 		if (pause == state) {
 
 			pause = PauseState.MAIN;
@@ -83,9 +91,69 @@ public class PauseManager : MonoBehaviour {
 
 	}
 
+	public void SetStateForce(PauseState state) {
+
+		if (pause == state) {
+
+			pause = PauseState.MAIN;
+
+			return;
+
+		}
+
+		pause = state;
+
+	}
+
 	void Update () {
 
 		isCurrentlyPaused = (pause != PauseState.NONE) ? true : false;
+
+		if (pause == PauseState.SETTING_CONTROLS) {
+
+			if (InputManager.Current.GetButtonDown ("Pause") || InputManager.Current.GetButtonDown ("UIBack")) {
+
+				SetStateForce(PauseState.CONTROL);
+
+			}
+
+			// Listen for Keyboard input
+			if (Input.anyKeyDown) {
+	
+				foreach (KeyCode code in Enum.GetValues (typeof(KeyCode))) {
+	
+					if (Input.GetKeyDown (code)) {
+	
+						for (int i = 0; i < InputManager.Current.publicKeyboardKeys.Count; i++) {
+							
+							if (InputManager.Current.publicKeyboardKeys[i].key_id == currentlyChangingKeybindID) {
+
+								InputManager.Current.publicKeyboardKeys[i] = new KeycodeDetails(code, false, currentlyChangingKeybindID);
+
+								currentlyChangingKeybindID = "";
+
+								SetStateForce (PauseState.CONTROL);
+
+								return;
+
+							}
+						}
+
+
+						InputManager.Current.publicKeyboardKeys.Add ( new KeycodeDetails (code, false, currentlyChangingKeybindID) );
+
+						currentlyChangingKeybindID = "";
+						SetStateForce(PauseState.CONTROL);
+	
+					}
+	
+				}
+	
+			}
+
+			return;
+
+		}
 
 		if (pause == PauseState.NONE) {
 
@@ -201,6 +269,34 @@ public class PauseManager : MonoBehaviour {
 
 	}
 
+	#region Controls Menu
+
+	public void ControlMenu_KeyboardBindingOnClick(string Key_ID) {
+
+		SetStateForce(PauseState.SETTING_CONTROLS);
+
+		currentlyChangingKeybindID = Key_ID;
+
+		Debug.Log (Key_ID);
+
+	}
+
+	public void ControlsMenu_CancelChangedBindings() {
+
+		InputManager.Current.ClearPublicKeybindingLists ();
+
+	}
+
+	public void ControlsMenu_SaveBindings() {
+
+		// TODO: Itterate through InputManager.Current.KeyboardKeys && ControllerKeys, find matching keys from
+		// 	this.PublicKeyboardKeys & publicControllerKeys (!! CREATE OWN LISTS IN THIS MANAGER !!), if they match
+		//	then replace the dictionary entry.
+  
+	}
+
+	#endregion
+
 	public void QuitToMainMenu(string mainMenuScene) {
 
 		UnityEngine.SceneManagement.SceneManager.LoadScene (mainMenuScene);
@@ -220,4 +316,4 @@ public class PauseManager : MonoBehaviour {
 	}
 }
 
-public enum PauseState { NONE, MAIN, CONTROL, GRAPHICS, SOUND, CHANGING_STATE };
+public enum PauseState { NONE, MAIN, CONTROL, SETTING_CONTROLS, GRAPHICS, SOUND, CHANGING_STATE };

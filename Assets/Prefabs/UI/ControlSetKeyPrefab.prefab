@@ -200,8 +200,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aa11a707f0ef87418bb0c4116417389, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ControlLabel: {fileID: 114450832561328460}
+  LabelText: {fileID: 114450832561328460}
   ButtonLabel: {fileID: 114568531839298616}
+  button: {fileID: 114753031102814638}
 --- !u!114 &114568531839298616
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -380,7 +381,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 299, y: 623}
   m_SizeDelta: {x: 531, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224914431778001180

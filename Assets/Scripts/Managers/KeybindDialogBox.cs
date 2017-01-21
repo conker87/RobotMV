@@ -30,7 +30,7 @@ public class KeybindDialogBox : MonoBehaviour {
             buttonNameText.text = bn;
 
             Text keyNameText = go.transform.Find("Button/Key Name").GetComponent<Text>();
-            keyNameText.text = inputManager.GetKeyNameForButton(bn);
+			keyNameText.text = ""; //inputManager.GetKeyNameForButton(bn);
             buttonToLabel[bn] = keyNameText;
 
             Button keyBindButton = go.transform.Find("Button").GetComponent<Button>();

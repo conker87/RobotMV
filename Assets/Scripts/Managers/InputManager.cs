@@ -21,6 +21,8 @@ public class InputManager : MonoBehaviour {
 	}
 	#endregion
 
+	public List<KeyCode> bannedKeybinds = new List<KeyCode> ();
+
 	void Awake() {
 		
 		DontDestroyOnLoad(gameObject);
@@ -92,6 +94,9 @@ public class InputManager : MonoBehaviour {
 
 		}
 
+		publicControllerButtons.Clear ();
+		publicKeyboardKeys.Clear ();
+
     }
 
 	void Update () {
@@ -112,6 +117,7 @@ public class InputManager : MonoBehaviour {
 
 	}
 
+	#region Get Button Methods
 	public float GetAxis (string axisName) {
 
 		return Input.GetAxisRaw (axisName);
@@ -208,6 +214,32 @@ public class InputManager : MonoBehaviour {
 
 	}
 
+    public string[] GetButtonNames() {
+		
+        return KeyboardKeys.Keys.ToArray();
+
+    }
+
+	public string GetKeyboardNameForButton( string buttonName ) {
+        
+		if (KeyboardKeys.ContainsKey(buttonName) == false) {
+			
+            Debug.LogError("InputManager::GetKeyNameForButton -- No button named: " + buttonName);
+            return "N/A";
+
+        }
+
+        return KeyboardKeys[buttonName].keyUsed.ToString();
+    }
+	#endregion
+
+	public void ClearPublicKeybindingLists() {
+
+		publicKeyboardKeys.Clear ();
+		publicControllerButtons.Clear ();
+
+	}
+
 	public Vector2 GetShootingDirection(bool currentlyLookingLeft = true, bool isCurrentlyCrouching = false) {
 
 		Vector2 Direction = Vector2.zero;
@@ -244,7 +276,7 @@ public class InputManager : MonoBehaviour {
 				y = 0f;
 
 			}
- 
+
 			if (GetButton ("Left")) {
 
 				x = -1f;
@@ -260,7 +292,7 @@ public class InputManager : MonoBehaviour {
 				} else {
 					x = 0f;
 				}
-					
+
 			}
 
 			Direction = new Vector2 (x, y);
@@ -272,24 +304,6 @@ public class InputManager : MonoBehaviour {
 		return Direction;
 
 	}
-
-    public string[] GetButtonNames() {
-		
-        return KeyboardKeys.Keys.ToArray();
-
-    }
-
-	public string GetKeyNameForButton( string buttonName ) {
-        
-		if (KeyboardKeys.ContainsKey(buttonName) == false) {
-			
-            Debug.LogError("InputManager::GetKeyNameForButton -- No button named: " + buttonName);
-            return "N/A";
-
-        }
-
-        return KeyboardKeys[buttonName].keyUsed.ToString();
-    }
 
 	public void SetButtonForKey( string buttonName, KeyCode keyCode, bool ignoreInSettings = false) {
 
@@ -306,13 +320,13 @@ public struct KeycodeDetails {
 
 	public KeycodeDetails(KeyCode KeyUsed, bool IgnoreInSettings = false, string Key_ID = "") {
 
+		this.key_id = Key_ID;
 		this.keyUsed = KeyUsed;
 		this.ignoreInSettings = IgnoreInSettings;
-		this.key_id = Key_ID;
 
 	}
 
-	public void Add(KeyCode KeyUsed, bool IgnoreInSettings, string Key_ID = "") {
+	public void Add(KeyCode KeyUsed, bool IgnoreInSettings = false, string Key_ID = "") {
 
 		this.keyUsed = KeyUsed;
 		this.ignoreInSettings = IgnoreInSettings;
