@@ -46,6 +46,15 @@ public class PauseManager : MonoBehaviour {
 	public Button RevertControls;
 	public Toggle ControllerConfigToggle;
 
+	public Transform KeyboardBindingsParent, ControllerBindingsParent;
+	public GameObject BindingsPrefab;
+
+	public List<GameObject> KeyboardBindingsButtonList = new List<GameObject> ();
+	public List<GameObject> ControllerBindingsButtonList = new List<GameObject> ();
+
+	public List<KeycodeDetails> changingKeyboardKeybindings	= new List<KeycodeDetails> ();
+	public List<KeycodeDetails> changingControllerKeybindings	= new List<KeycodeDetails> ();
+
 	[SerializeField]
 	string currentlyChangingKeybindID = "";
 
@@ -71,37 +80,61 @@ public class PauseManager : MonoBehaviour {
 		GraphicsMenu.onClick.AddListener(	delegate() { SetState (PauseState.GRAPHICS, out changingStates);	});
 		SoundsMenu.onClick.AddListener	(	delegate() { SetState (PauseState.SOUND, out changingStates);		});
 
-	}
+		// Keyboard Keybindings Itteration
+		foreach(KeyValuePair<string, KeycodeDetails> k in InputManager.Current.GetKeyboardKeybinding()) {
+			
+			if (k.Value.ignoreInSettings) {
 
-	public void SetState(PauseState state, out PauseState outNewStat) {
+				continue;
 
-		ControlsMenu_CancelChangedBindings ();
+			}
 
-		if (pause == state) {
+			string key = k.Key;
 
-			pause = PauseState.MAIN;
-			outNewStat = pause;
+			GameObject buttonGameObject = Instantiate (BindingsPrefab, KeyboardBindingsParent) as GameObject;
+			Button button = buttonGameObject.GetComponentInChildren<Button> ();
+			Text[] labels = buttonGameObject.GetComponentsInChildren<Text> ();
 
-			return;
+			buttonGameObject.transform.localScale = new Vector3 (1f, 1f, 1f);
+			buttonGameObject.name = "KeyboardKeybindButton_" + k.Key;
 
-		}
+			button.onClick.AddListener( delegate() { ControlsMenu_KeyboardBindingOnClick( key ); } );
 
-		pause = PauseState.CHANGING_STATE;
-		outNewStat = state;
+			labels [0].text = k.Key;
+			labels [1].text = k.Value.keyUsed.ToString();
 
-	}
-
-	public void SetStateForce(PauseState state) {
-
-		if (pause == state) {
-
-			pause = PauseState.MAIN;
-
-			return;
+			KeyboardBindingsButtonList.Add (buttonGameObject);
 
 		}
 
-		pause = state;
+		// Controller Keybindings Itteration
+		foreach(KeyValuePair<string, KeycodeDetails> k in InputManager.Current.GetControllerKeybinding()) {
+
+			if (k.Value.ignoreInSettings) {
+
+				continue;
+
+			}
+
+			string key = k.Key;
+
+			GameObject buttonGameObject = Instantiate (BindingsPrefab, ControllerBindingsParent) as GameObject;
+			Button button = buttonGameObject.GetComponentInChildren<Button> ();
+			Text[] labels = buttonGameObject.GetComponentsInChildren<Text> ();
+
+			buttonGameObject.transform.localScale = new Vector3 (1f, 1f, 1f);
+			buttonGameObject.name = "ControllerKeybindButton_" + k.Key;
+
+			button.onClick.AddListener( delegate() { ControlsMenu_KeyboardBindingOnClick( key ); } );
+
+			labels [0].text = k.Key;
+			labels [1].text = k.Value.keyUsed.ToString();
+
+			ControllerBindingsButtonList.Add (buttonGameObject);
+
+		}
+
+		ResetPrivateKeybindingsCopyToSaved ();
 
 	}
 
@@ -124,11 +157,11 @@ public class PauseManager : MonoBehaviour {
 	
 					if (Input.GetKeyDown (code)) {
 	
-						for (int i = 0; i < InputManager.Current.publicKeyboardKeys.Count; i++) {
+						for (int i = 0; i < changingKeyboardKeybindings.Count; i++) {
 							
-							if (InputManager.Current.publicKeyboardKeys[i].key_id == currentlyChangingKeybindID) {
+							if (changingKeyboardKeybindings[i].key_id == currentlyChangingKeybindID) {
 
-								InputManager.Current.publicKeyboardKeys[i] = new KeycodeDetails(code, false, currentlyChangingKeybindID);
+								changingKeyboardKeybindings[i] = new KeycodeDetails(code, false, currentlyChangingKeybindID);
 
 								currentlyChangingKeybindID = "";
 
@@ -255,23 +288,33 @@ public class PauseManager : MonoBehaviour {
 
 	}
 
-	public void ToggleControls() {
+	void ResetPrivateKeybindingsCopyToSaved() {
 
-		ControlsGUI.gameObject.SetActive (!ControlsGUI.gameObject.activeSelf);
+		changingKeyboardKeybindings.Clear ();
+		changingControllerKeybindings.Clear ();
 
-		canUnpause = !ControlsGUI.gameObject.activeSelf;
+		foreach(KeyValuePair<string, KeycodeDetails> k in InputManager.Current.GetKeyboardKeybinding()) {
+
+			changingKeyboardKeybindings.Add (k.Value);
+
+		}
+
+		foreach(KeyValuePair<string, KeycodeDetails> k in InputManager.Current.GetControllerKeybinding()) {
+
+			changingControllerKeybindings.Add (k.Value);
+
+		}
 
 	}
 
-	public void ToggleIsUsingController() {
+	#region Controls Menu
+	public void ControlsMenu_ToggleIsUsingController() {
 
 		InputManager.Current.isUsingController = ControllerConfigToggle.isOn;
 
 	}
 
-	#region Controls Menu
-
-	public void ControlMenu_KeyboardBindingOnClick(string Key_ID) {
+	public void ControlsMenu_KeyboardBindingOnClick(string Key_ID) {
 
 		SetStateForce(PauseState.SETTING_CONTROLS);
 
@@ -283,7 +326,7 @@ public class PauseManager : MonoBehaviour {
 
 	public void ControlsMenu_CancelChangedBindings() {
 
-		InputManager.Current.ClearPublicKeybindingLists ();
+		ResetPrivateKeybindingsCopyToSaved ();
 
 	}
 
@@ -292,9 +335,15 @@ public class PauseManager : MonoBehaviour {
 		// TODO: Itterate through InputManager.Current.KeyboardKeys && ControllerKeys, find matching keys from
 		// 	this.PublicKeyboardKeys & publicControllerKeys (!! CREATE OWN LISTS IN THIS MANAGER !!), if they match
 		//	then replace the dictionary entry.
+		InputManager.Current.SaveNewKeybindsListsToDictionary(changingKeyboardKeybindings, changingControllerKeybindings);
   
 	}
 
+	public void ControlsMenu_RevertToDefaultBindings() {
+
+		InputManager.Current.RevertToDefaultBindings ();
+
+	}
 	#endregion
 
 	public void QuitToMainMenu(string mainMenuScene) {
@@ -308,10 +357,40 @@ public class PauseManager : MonoBehaviour {
 		Application.Quit ();
 
 	}
-
+		
 	public bool checkIfCurrentlyPaused() {
 
 		return isCurrentlyPaused;
+
+	}
+
+	public void SetState(PauseState state, out PauseState outNewStat) {
+
+		if (pause == state) {
+
+			pause = PauseState.MAIN;
+			outNewStat = pause;
+
+			return;
+
+		}
+
+		pause = PauseState.CHANGING_STATE;
+		outNewStat = state;
+
+	}
+
+	public void SetStateForce(PauseState state) {
+
+		if (pause == state) {
+
+			pause = PauseState.MAIN;
+
+			return;
+
+		}
+
+		pause = state;
 
 	}
 }

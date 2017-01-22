@@ -44,33 +44,33 @@ public class InputManager : MonoBehaviour {
 		KeyboardKeys.Clear ();
 		ControllerButtons.Clear ();
 
-		KeyboardKeys ["DEBUG_ResetScene"] = new KeycodeDetails (KeyCode.P, true);
-		KeyboardKeys ["UIBack"]	= new KeycodeDetails (KeyCode.Escape, true);	// B
-		KeyboardKeys ["Pause"]	= new KeycodeDetails (KeyCode.Escape, true);
+		KeyboardKeys ["DEBUG_ResetScene"] = new KeycodeDetails (KeyCode.P, true, "DEBUG_ResetScene");
+		KeyboardKeys ["UIBack"]	= new KeycodeDetails (KeyCode.Escape, true, "UIBack");	// B
+		KeyboardKeys ["Pause"]	= new KeycodeDetails (KeyCode.Escape, true, "Pause");
 
-		ControllerButtons ["DEBUG_ResetScene"] = new KeycodeDetails (KeyCode.P, true);
-		ControllerButtons ["UIBack"]	= new KeycodeDetails (KeyCode.JoystickButton1, true);	// B
-		ControllerButtons ["Pause"]	= new KeycodeDetails (KeyCode.JoystickButton7, true);
+		ControllerButtons ["DEBUG_ResetScene"] = new KeycodeDetails (KeyCode.P, true, "DEBUG_ResetScene");
+		ControllerButtons ["UIBack"]	= new KeycodeDetails (KeyCode.JoystickButton1, true, "UIBack");	// B
+		ControllerButtons ["Pause"]	= new KeycodeDetails (KeyCode.JoystickButton7, true, "Pause");
 
 		// TODO:  Consider reading these from a user preferences file
 		if (publicKeyboardKeys == null) {
 			
 			// Keyboard Settings
-			KeyboardKeys ["Up"] = new KeycodeDetails (KeyCode.W);
-			KeyboardKeys ["Down"] = new KeycodeDetails (KeyCode.S);
-			KeyboardKeys ["Left"] = new KeycodeDetails (KeyCode.A);
-			KeyboardKeys ["Right"] = new KeycodeDetails (KeyCode.D);
-			KeyboardKeys ["Jump"] = new KeycodeDetails (KeyCode.Space);
-			KeyboardKeys ["Fire Weapon"] = new KeycodeDetails (KeyCode.Return);
-			KeyboardKeys ["Use Item"]	= new KeycodeDetails (KeyCode.F);
-			KeyboardKeys ["Fix Location"] = new KeycodeDetails (KeyCode.LeftShift);
+			KeyboardKeys ["Up"] = new KeycodeDetails (KeyCode.W, false, "Up");
+			KeyboardKeys ["Down"] = new KeycodeDetails (KeyCode.S, false, "Down");
+			KeyboardKeys ["Left"] = new KeycodeDetails (KeyCode.A, false, "Left");
+			KeyboardKeys ["Right"] = new KeycodeDetails (KeyCode.D, false, "Right");
+			KeyboardKeys ["Jump"] = new KeycodeDetails (KeyCode.Space, false, "Jump");
+			KeyboardKeys ["Fire Weapon"] = new KeycodeDetails (KeyCode.Return, false, "Fire Weapon");
+			KeyboardKeys ["Use Item"]	= new KeycodeDetails (KeyCode.F, false, "Use Item");
+			KeyboardKeys ["Fix Location"] = new KeycodeDetails (KeyCode.LeftShift, false, "Fix Location");
 
 		} else {
 
 			foreach (KeycodeDetails k in publicKeyboardKeys) {
 
 				// This should not require validation as this is from the editor.
-				KeyboardKeys.Add (k.key_id, new KeycodeDetails (k.keyUsed, k.ignoreInSettings));
+				KeyboardKeys.Add (k.key_id, new KeycodeDetails (k.keyUsed, k.ignoreInSettings, k.key_id));
 
 			}
 
@@ -79,16 +79,16 @@ public class InputManager : MonoBehaviour {
 		if (publicControllerButtons == null) {
 
 			// Controller Settings
-			ControllerButtons ["Jump"] = new KeycodeDetails (KeyCode.JoystickButton2);	// X
-			ControllerButtons ["Fire Weapon"]	= new KeycodeDetails (KeyCode.JoystickButton0);	// A
-			ControllerButtons ["Fix Location"] = new KeycodeDetails (KeyCode.JoystickButton4);	// leftButton
-			ControllerButtons ["Use Item"]	= new KeycodeDetails (KeyCode.JoystickButton1);	// B
+			ControllerButtons ["Jump"] = new KeycodeDetails (KeyCode.JoystickButton2, false, "Jump");	// X
+			ControllerButtons ["Fire Weapon"]	= new KeycodeDetails (KeyCode.JoystickButton0, false, "Fire Weapon");	// A
+			ControllerButtons ["Fix Location"] = new KeycodeDetails (KeyCode.JoystickButton4, false, "Fix Location");	// leftButton
+			ControllerButtons ["Use Item"]	= new KeycodeDetails (KeyCode.JoystickButton1, false, "Use Item");	// B
 
 		} else {
 
 			foreach (KeycodeDetails k in publicControllerButtons) {
 
-				ControllerButtons.Add (k.key_id, new KeycodeDetails (k.keyUsed, k.ignoreInSettings));
+				ControllerButtons.Add (k.key_id, new KeycodeDetails (k.keyUsed, k.ignoreInSettings, k.key_id));
 
 			}
 
@@ -233,6 +233,96 @@ public class InputManager : MonoBehaviour {
     }
 	#endregion
 
+	#region Keybinding Methods
+
+	public Dictionary<string, KeycodeDetails> GetKeyboardKeybinding() {
+
+		return KeyboardKeys;
+
+	}
+
+	public Dictionary<string, KeycodeDetails> GetControllerKeybinding() {
+
+		return ControllerButtons;
+
+	}
+
+	public void SaveNewKeybindsListsToDictionary(List<KeycodeDetails> keyboardKeybinds, List<KeycodeDetails> controllerKeybinds) {
+
+		foreach (KeycodeDetails k in keyboardKeybinds) {
+
+			if (KeyboardKeys.ContainsKey (k.key_id)) {
+
+				KeyboardKeys [k.key_id] = new KeycodeDetails (k.keyUsed, k.ignoreInSettings, k.key_id);
+
+			}
+
+		}
+
+		foreach (KeycodeDetails c in controllerKeybinds) {
+
+			if (ControllerButtons.ContainsKey (c.key_id)) {
+
+				ControllerButtons [c.key_id] = new KeycodeDetails (c.keyUsed, c.ignoreInSettings, c.key_id);
+
+			}
+
+		}
+
+//		for (int i = 0; i < InputManager.Current.publicKeyboardKeys.Count; i++) {
+//
+//			if (InputManager.Current.publicKeyboardKeys[i].key_id == currentlyChangingKeybindID) {
+//
+//				InputManager.Current.publicKeyboardKeys[i] = new KeycodeDetails(code, false, currentlyChangingKeybindID);
+//
+//				currentlyChangingKeybindID = "";
+//
+//
+//
+//				return;
+//
+//			}
+//		}
+//
+//
+//		InputManager.Current.publicKeyboardKeys.Add ( new KeycodeDetails (code, false, currentlyChangingKeybindID) );
+
+	}
+
+	public void RevertToDefaultBindings() {
+
+		// Keyboard Settings
+		KeyboardKeys.Clear ();
+		KeyboardKeys ["Up"] = new KeycodeDetails (KeyCode.W);
+		KeyboardKeys ["Down"] = new KeycodeDetails (KeyCode.S);
+		KeyboardKeys ["Left"] = new KeycodeDetails (KeyCode.A);
+		KeyboardKeys ["Right"] = new KeycodeDetails (KeyCode.D);
+		KeyboardKeys ["Jump"] = new KeycodeDetails (KeyCode.Space);
+		KeyboardKeys ["Fire Weapon"] = new KeycodeDetails (KeyCode.Return);
+		KeyboardKeys ["Use Item"]	= new KeycodeDetails (KeyCode.F);
+		KeyboardKeys ["Fix Location"] = new KeycodeDetails (KeyCode.LeftShift);
+
+		// Controller Settings
+		ControllerButtons.Clear();
+		ControllerButtons ["Jump"] = new KeycodeDetails (KeyCode.JoystickButton2);	// X
+		ControllerButtons ["Fire Weapon"]	= new KeycodeDetails (KeyCode.JoystickButton0);	// A
+		ControllerButtons ["Fix Location"] = new KeycodeDetails (KeyCode.JoystickButton4);	// leftButton
+		ControllerButtons ["Use Item"]	= new KeycodeDetails (KeyCode.JoystickButton1);	// B
+
+		// Debug & Menu UI keys.
+		KeyboardKeys ["DEBUG_ResetScene"] = new KeycodeDetails (KeyCode.P, true);
+		KeyboardKeys ["UIBack"]	= new KeycodeDetails (KeyCode.Escape, true);	// B
+		KeyboardKeys ["Pause"]	= new KeycodeDetails (KeyCode.Escape, true);
+
+		ControllerButtons ["DEBUG_ResetScene"] = new KeycodeDetails (KeyCode.P, true);
+		ControllerButtons ["UIBack"]	= new KeycodeDetails (KeyCode.JoystickButton1, true);	// B
+		ControllerButtons ["Pause"]	= new KeycodeDetails (KeyCode.JoystickButton7, true);
+
+	}
+
+	#endregion
+
+
 	public void ClearPublicKeybindingLists() {
 
 		publicKeyboardKeys.Clear ();
@@ -339,3 +429,5 @@ public struct KeycodeDetails {
 	public bool			ignoreInSettings;
 
 }
+
+public enum KeybindingScheme { KEYBOARD, CONTROLLER };

@@ -2726,6 +2726,22 @@ Prefab:
       propertyPath: RevertControls
       value: 
       objectReference: {fileID: 1713232321}
+    - target: {fileID: 114735789846361512, guid: 3825adbc764c54f40adcb846fa46bcba,
+        type: 2}
+      propertyPath: KeyboardBindingsParent
+      value: 
+      objectReference: {fileID: 1741972551}
+    - target: {fileID: 114735789846361512, guid: 3825adbc764c54f40adcb846fa46bcba,
+        type: 2}
+      propertyPath: ControllerBindingsParent
+      value: 
+      objectReference: {fileID: 2100403939}
+    - target: {fileID: 114735789846361512, guid: 3825adbc764c54f40adcb846fa46bcba,
+        type: 2}
+      propertyPath: BindingsPrefab
+      value: 
+      objectReference: {fileID: 1938357649184882, guid: f5ceffdc5ba7e4c4989ff40c8bd2d900,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3825adbc764c54f40adcb846fa46bcba, type: 2}
   m_IsPrefabParent: 0
@@ -8086,7 +8102,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1607841223}
-        m_MethodName: 
+        m_MethodName: ControlsMenu_RevertToDefaultBindings
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8274,7 +8290,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1741972551}
   - component: {fileID: 1741972552}
-  - component: {fileID: 1741972553}
   m_Layer: 5
   m_Name: KeyboardControlsList
   m_TagString: Untagged
@@ -8322,19 +8337,6 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
---- !u!114 &1741972553
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1741972550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: caffbb4e40b3df04d8f50e247a880fa0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ControlSetKeyPrefab: {fileID: 1938357649184882, guid: f5ceffdc5ba7e4c4989ff40c8bd2d900,
-    type: 2}
 --- !u!1001 &1752632413
 Prefab:
   m_ObjectHideFlags: 0
@@ -9866,7 +9868,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2100403939}
   - component: {fileID: 2100403941}
-  - component: {fileID: 2100403940}
   m_Layer: 5
   m_Name: ControllerControlsList
   m_TagString: Untagged
@@ -9892,19 +9893,6 @@ RectTransform:
   m_AnchoredPosition: {x: 10, y: -526}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2100403940
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2100403938}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 619ecb887b218db4f94d58a74bf3c9a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ControlSetKeyPrefab: {fileID: 1938357649184882, guid: f5ceffdc5ba7e4c4989ff40c8bd2d900,
-    type: 2}
 --- !u!114 &2100403941
 MonoBehaviour:
   m_ObjectHideFlags: 0
