@@ -49,11 +49,9 @@ public class PauseManager : MonoBehaviour {
 	public Transform KeyboardBindingsParent, ControllerBindingsParent;
 	public GameObject BindingsPrefab;
 
-	public List<GameObject> KeyboardBindingsButtonList = new List<GameObject> ();
-	public List<GameObject> ControllerBindingsButtonList = new List<GameObject> ();
+	//public List<GameObject> BindingsList = new List<Keybinds> ();
 
-	public List<KeycodeDetails> changingKeyboardKeybindings	= new List<KeycodeDetails> ();
-	public List<KeycodeDetails> changingControllerKeybindings	= new List<KeycodeDetails> ();
+	public List<GameObject> keybindingsPrefabList = new List<GameObject> ();
 
 	[SerializeField]
 	string currentlyChangingKeybindID = "";
@@ -81,60 +79,42 @@ public class PauseManager : MonoBehaviour {
 		SoundsMenu.onClick.AddListener	(	delegate() { SetState (PauseState.SOUND, out changingStates);		});
 
 		// Keyboard Keybindings Itteration
-		foreach(KeyValuePair<string, KeycodeDetails> k in InputManager.Current.GetKeyboardKeybinding()) {
+		foreach(KeyValuePair<string, Keybinds> k in InputManager.Current.GetKeybindings()) {
 			
 			if (k.Value.ignoreInSettings) {
 
-				continue;
+				//continue;
 
 			}
 
 			string key = k.Key;
 
+			// TODO: ControlSetKeyPrefab now has a component that stores the cache of these, use GetComponent<ControlSetKeybind>();
 			GameObject buttonGameObject = Instantiate (BindingsPrefab, KeyboardBindingsParent) as GameObject;
-			Button button = buttonGameObject.GetComponentInChildren<Button> ();
-			Text[] labels = buttonGameObject.GetComponentsInChildren<Text> ();
+
+			ControlSetKeybind CSK = buttonGameObject.GetComponent<ControlSetKeybind>();
 
 			buttonGameObject.transform.localScale = new Vector3 (1f, 1f, 1f);
-			buttonGameObject.name = "KeyboardKeybindButton_" + k.Key;
+			buttonGameObject.name = "KeybindingsButton_" + k.Key;
 
-			button.onClick.AddListener( delegate() { ControlsMenu_KeyboardBindingOnClick( key ); } );
+			CSK.KeyboardBind.onClick.AddListener (delegate() {
+				ControlsMenu_KeyboardBindingOnClick (key);
+			});
 
-			labels [0].text = k.Key;
-			labels [1].text = k.Value.keyUsed.ToString();
-
-			KeyboardBindingsButtonList.Add (buttonGameObject);
-
-		}
-
-		// Controller Keybindings Itteration
-		foreach(KeyValuePair<string, KeycodeDetails> k in InputManager.Current.GetControllerKeybinding()) {
-
-			if (k.Value.ignoreInSettings) {
-
-				continue;
-
+			if (k.Value.ControllerBinds != KeyCode.Break) {
+				CSK.ControllerBind.onClick.AddListener (delegate() {
+					ControlsMenu_KeyboardBindingOnClick (key);
+				});
 			}
 
-			string key = k.Key;
+			CSK.labelText.text = key;
 
-			GameObject buttonGameObject = Instantiate (BindingsPrefab, ControllerBindingsParent) as GameObject;
-			Button button = buttonGameObject.GetComponentInChildren<Button> ();
-			Text[] labels = buttonGameObject.GetComponentsInChildren<Text> ();
+			CSK.KeyboardBindLabel.text = k.Value.KeyboardBinds.ToString();
+			CSK.ControllerBindLabel.text = k.Value.ControllerBinds.ToString();;
 
-			buttonGameObject.transform.localScale = new Vector3 (1f, 1f, 1f);
-			buttonGameObject.name = "ControllerKeybindButton_" + k.Key;
-
-			button.onClick.AddListener( delegate() { ControlsMenu_KeyboardBindingOnClick( key ); } );
-
-			labels [0].text = k.Key;
-			labels [1].text = k.Value.keyUsed.ToString();
-
-			ControllerBindingsButtonList.Add (buttonGameObject);
+			keybindingsPrefabList.Add (buttonGameObject);
 
 		}
-
-		ResetPrivateKeybindingsCopyToSaved ();
 
 	}
 
@@ -152,16 +132,18 @@ public class PauseManager : MonoBehaviour {
 
 			// Listen for Keyboard input
 			if (Input.anyKeyDown) {
-	
+
+				Dictionary<string, Keybinds> changableKeybindsDictionary = InputManager.Current.GetChangableKeybindings();
+
 				foreach (KeyCode code in Enum.GetValues (typeof(KeyCode))) {
 	
 					if (Input.GetKeyDown (code)) {
-	
-						for (int i = 0; i < changingKeyboardKeybindings.Count; i++) {
-							
-							if (changingKeyboardKeybindings[i].key_id == currentlyChangingKeybindID) {
 
-								changingKeyboardKeybindings[i] = new KeycodeDetails(code, false, currentlyChangingKeybindID);
+						for (int i = 0; i < changableKeybindsDictionary.Count; i++) {
+							
+							//if (changableKeybindsDictionary[i].key_id == currentlyChangingKeybindID) {
+
+								//changableKeybindsDictionary[i] = new Keybinds(code, false, currentlyChangingKeybindID);
 
 								currentlyChangingKeybindID = "";
 
@@ -169,11 +151,11 @@ public class PauseManager : MonoBehaviour {
 
 								return;
 
-							}
+							//}
 						}
 
 
-						InputManager.Current.publicKeyboardKeys.Add ( new KeycodeDetails (code, false, currentlyChangingKeybindID) );
+						//InputManager.Current.publicKeyboardKeys.Add ( new Keybinds (code, false, currentlyChangingKeybindID) );
 
 						currentlyChangingKeybindID = "";
 						SetStateForce(PauseState.CONTROL);
@@ -287,26 +269,7 @@ public class PauseManager : MonoBehaviour {
 		}
 
 	}
-
-	void ResetPrivateKeybindingsCopyToSaved() {
-
-		changingKeyboardKeybindings.Clear ();
-		changingControllerKeybindings.Clear ();
-
-		foreach(KeyValuePair<string, KeycodeDetails> k in InputManager.Current.GetKeyboardKeybinding()) {
-
-			changingKeyboardKeybindings.Add (k.Value);
-
-		}
-
-		foreach(KeyValuePair<string, KeycodeDetails> k in InputManager.Current.GetControllerKeybinding()) {
-
-			changingControllerKeybindings.Add (k.Value);
-
-		}
-
-	}
-
+		
 	#region Controls Menu
 	public void ControlsMenu_ToggleIsUsingController() {
 
@@ -326,7 +289,7 @@ public class PauseManager : MonoBehaviour {
 
 	public void ControlsMenu_CancelChangedBindings() {
 
-		ResetPrivateKeybindingsCopyToSaved ();
+		InputManager.Current.RevertChangesToCurrent ();
 
 	}
 
@@ -335,7 +298,7 @@ public class PauseManager : MonoBehaviour {
 		// TODO: Itterate through InputManager.Current.KeyboardKeys && ControllerKeys, find matching keys from
 		// 	this.PublicKeyboardKeys & publicControllerKeys (!! CREATE OWN LISTS IN THIS MANAGER !!), if they match
 		//	then replace the dictionary entry.
-		InputManager.Current.SaveNewKeybindsListsToDictionary(changingKeyboardKeybindings, changingControllerKeybindings);
+		//InputManager.Current.SaveNewKeybindsListsToDictionary(changingKeyboardKeybindings, changingControllerKeybindings);
   
 	}
 
