@@ -7,27 +7,29 @@ using System.Linq;
 public class InputManager : MonoBehaviour {
 
 	#region Singleton
-	private static InputManager _current;
-	public static InputManager Current {
-		get {
-		
-			if (_current == null) {
-				_current = GameObject.FindObjectOfType<InputManager>();
-			}
 
-			return _current;
+	public static InputManager Current;
+
+	void Awake() {
+
+		if (Current == null) {
+			
+			Current = this;
+
+		} else if (Current != this) {
+
+			Destroy(gameObject);
 
 		}
+
+		//Sets this to not be destroyed when reloading scene
+		// DontDestroyOnLoad(gameObject);
+
 	}
+
 	#endregion
 
 	public List<KeyCode> bannedKeybinds = new List<KeyCode> ();
-
-	void Awake() {
-		
-		DontDestroyOnLoad(gameObject);
-
-	}
 
 	public Dictionary<string, Keybinds> CurrentKeybindings, ChangingKeybindings;
 
@@ -52,6 +54,7 @@ public class InputManager : MonoBehaviour {
 	}
 
 	#region Get Button Methods
+
 	public float GetAxis (string axisName) {
 
 		return Input.GetAxisRaw (axisName);
@@ -97,10 +100,8 @@ public class InputManager : MonoBehaviour {
 			return Input.GetKeyDown(CurrentKeybindings[buttonName].ControllerBinds);
 
 		} else {
-
-
+			
 			return Input.GetKeyDown(CurrentKeybindings[buttonName].KeyboardBinds);
-
 
 		}
 
@@ -147,6 +148,7 @@ public class InputManager : MonoBehaviour {
 
 		return new string[] { CurrentKeybindings[buttonName].KeyboardBinds.ToString(), CurrentKeybindings[buttonName].ControllerBinds.ToString() } ;
     }
+
 	#endregion
 
 	#region Keybinding Methods
@@ -172,48 +174,6 @@ public class InputManager : MonoBehaviour {
 	public void SetChangableKeybindings(Keybinds keybind) {
 
 		ChangingKeybindings[keybind.key_id] = keybind;
-
-	}
-
-	public void SaveNewKeybindsListsToDictionary(List<Keybinds> keyboardKeybinds, List<Keybinds> controllerKeybinds) {
-
-//		foreach (Keybinds k in keyboardKeybinds) {
-//
-//			if (KeyboardKeys.ContainsKey (k.key_id)) {
-//
-//				KeyboardKeys [k.key_id] = new Keybinds (k.keyUsed, k.ignoreInSettings, k.key_id);
-//
-//			}
-//
-//		}
-//
-//		foreach (Keybinds c in controllerKeybinds) {
-//
-//			if (ControllerButtons.ContainsKey (c.key_id)) {
-//
-//				ControllerButtons [c.key_id] = new Keybinds (c.keyUsed, c.ignoreInSettings, c.key_id);
-//
-//			}
-//
-//		}
-//
-////		for (int i = 0; i < InputManager.Current.publicKeyboardKeys.Count; i++) {
-////
-////			if (InputManager.Current.publicKeyboardKeys[i].key_id == currentlyChangingKeybindID) {
-////
-////				InputManager.Current.publicKeyboardKeys[i] = new KeycodeDetails(code, false, currentlyChangingKeybindID);
-////
-////				currentlyChangingKeybindID = "";
-////
-////
-////
-////				return;
-////
-////			}
-////		}
-////
-////
-////		InputManager.Current.publicKeyboardKeys.Add ( new KeycodeDetails (code, false, currentlyChangingKeybindID) );
 
 	}
 

@@ -184,12 +184,6 @@ public class PixelPerfectCamera : MonoBehaviour {
 //#if UNITY_EDITOR
 	void Update () {
 
-		if (PauseManager.Current.checkIfCurrentlyPaused ()) {
-
-			return;
-
-		}
-
         if (res.width != cam.pixelWidth || res.height != cam.pixelHeight)
         {
             adjustCameraFOV();

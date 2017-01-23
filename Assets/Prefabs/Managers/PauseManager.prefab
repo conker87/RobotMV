@@ -9,17 +9,17 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1604157021604096}
+  m_RootGameObject: {fileID: 1451941723590206}
   m_IsPrefabParent: 1
---- !u!1 &1604157021604096
+--- !u!1 &1451941723590206
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4348071916618396}
-  - component: {fileID: 114735789846361512}
+  - component: {fileID: 4171146378749448}
+  - component: {fileID: 114865204087960282}
   m_Layer: 0
   m_Name: PauseManager
   m_TagString: Untagged
@@ -27,12 +27,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4348071916618396
+--- !u!4 &4171146378749448
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1604157021604096}
+  m_GameObject: {fileID: 1451941723590206}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -40,12 +40,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114735789846361512
+--- !u!114 &114865204087960282
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1604157021604096}
+  m_GameObject: {fileID: 1451941723590206}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45ea732183747d04588e1119d2e0672d, type: 3}
@@ -64,5 +64,10 @@ MonoBehaviour:
   SaveControls: {fileID: 0}
   RevertControls: {fileID: 0}
   ControllerConfigToggle: {fileID: 0}
+  BindingListsParent: {fileID: 0}
+  BindingsPrefab: {fileID: 1938357649184882, guid: f5ceffdc5ba7e4c4989ff40c8bd2d900,
+    type: 2}
+  keybindingsPrefabList: []
+  currentlyChangingKeybindID: 
   pause: 0
   changingStates: 0
