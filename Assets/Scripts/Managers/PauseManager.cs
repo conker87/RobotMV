@@ -40,7 +40,7 @@ public class PauseManager : MonoBehaviour {
 	public Button GraphicsMenu;
 	public Button SoundsMenu;
 
-	public Button ResumeButton, QuitToMainMenuButton, QuitToDesktopButton;
+	public Button QuitToMainMenuButton;
 
 	[Header("Control Controls")]
 	public Button SaveControls;
@@ -74,13 +74,11 @@ public class PauseManager : MonoBehaviour {
 		GraphicsGUI.gameObject.SetActive (false);
 		SoundGUI.gameObject.SetActive (false);
 
-		ResumeButton.onClick.AddListener		(	delegate() { SetState (PauseState.NONE, out changingStates);		});
-		QuitToMainMenuButton.onClick.AddListener(	delegate() { QuitToMainMenu("MainMenu");							});
-		QuitToDesktopButton.onClick.AddListener	(	delegate() { QuitToDesktop();										});
+		QuitToMainMenuButton.onClick.AddListener(	delegate() { QuitToMainMenu("MainMenu");		});
 
-		ControlsMenu.onClick.AddListener(	delegate() { SetState (PauseState.CONTROL, out changingStates);		});
-		GraphicsMenu.onClick.AddListener(	delegate() { SetState (PauseState.GRAPHICS, out changingStates);	});
-		SoundsMenu.onClick.AddListener	(	delegate() { SetState (PauseState.SOUND, out changingStates);		});
+		ControlsMenu.onClick.AddListener(	delegate() { SetStateForce (PauseState.CONTROL);	});
+		GraphicsMenu.onClick.AddListener(	delegate() { SetStateForce (PauseState.GRAPHICS);	});
+		SoundsMenu.onClick.AddListener	(	delegate() { SetStateForce (PauseState.SOUND);		});
 
 		// Keyboard Keybindings Itteration
 		foreach(KeyValuePair<string, Keybinds> k in InputManager.Current.GetKeybindings()) {
@@ -125,18 +123,6 @@ public class PauseManager : MonoBehaviour {
 	}
 
 	void Update () {
-
-		isCurrentlyPaused = (pause != PauseState.NONE) ? true : false;
-
-		if (pause == PauseState.CHANGING_STATE) {
-
-			pause = changingStates;
-
-			ControlsGUI.gameObject.SetActive (false);
-			GraphicsGUI.gameObject.SetActive (false);
-			SoundGUI.gameObject.SetActive (false);
-
-		}
 
 		if (pause == PauseState.SETTING_CONTROLS) {
 
@@ -200,14 +186,18 @@ public class PauseManager : MonoBehaviour {
 
 		}
 
+		isCurrentlyPaused = (pause != PauseState.NONE) ? true : false;
+
 		if (pause == PauseState.NONE) {
 
 			PauseGUI.gameObject.SetActive (false);
 			ControlsGUI.gameObject.SetActive (false);
+			GraphicsGUI.gameObject.SetActive (false);
+			SoundGUI.gameObject.SetActive (false);
 
 			if (InputManager.Current.GetButtonDown ("Pause") || InputManager.Current.GetButtonDown ("UIBack")) {
 
-				SetState (PauseState.MAIN, out changingStates);
+				pause = PauseState.MAIN;
 
 			}
 
@@ -218,10 +208,13 @@ public class PauseManager : MonoBehaviour {
 		if (pause == PauseState.MAIN) {
 
 			PauseGUI.gameObject.SetActive (true);
+			ControlsGUI.gameObject.SetActive (false);
+			GraphicsGUI.gameObject.SetActive (false);
+			SoundGUI.gameObject.SetActive (false);
 
 			if (InputManager.Current.GetButtonDown ("Pause") || InputManager.Current.GetButtonDown ("UIBack")) {
 
-				SetState (PauseState.NONE, out changingStates);
+				pause = PauseState.NONE;
 
 			}
 
@@ -236,7 +229,6 @@ public class PauseManager : MonoBehaviour {
 			if (InputManager.Current.GetButtonDown ("Pause") || InputManager.Current.GetButtonDown ("UIBack")) {
 
 				SetState (PauseState.MAIN, out changingStates);
-				ControlsGUI.gameObject.SetActive (false);
 
 			}
 
@@ -251,7 +243,6 @@ public class PauseManager : MonoBehaviour {
 			if (InputManager.Current.GetButtonDown ("Pause") || InputManager.Current.GetButtonDown ("UIBack")) {
 
 				SetState (PauseState.MAIN, out changingStates);
-				GraphicsGUI.gameObject.SetActive (false);
 
 			}
 
@@ -266,7 +257,6 @@ public class PauseManager : MonoBehaviour {
 			if (InputManager.Current.GetButtonDown ("Pause") || InputManager.Current.GetButtonDown ("UIBack")) {
 
 				SetState (PauseState.MAIN, out changingStates);
-				SoundGUI.gameObject.SetActive (false);
 
 			}
 

@@ -179,10 +179,6 @@ public class InputManager : MonoBehaviour {
 
 	public void RevertToDefaultBindings() {
 
-		CurrentKeybindings["DEBUG_ResetScene"]	= new Keybinds ("DEBUG_ResetScene", 		KeyCode.P, KeyCode.Break,	true);
-		CurrentKeybindings["UIBack"]			= new Keybinds ("UIBack", KeyCode.Escape,	KeyCode.JoystickButton1,	true);		// B
-		CurrentKeybindings["Pause"]				= new Keybinds ("Pause", KeyCode.Escape, 	KeyCode.JoystickButton7,	true);
-
 		CurrentKeybindings["Up"]				= new Keybinds ("Up", KeyCode.W, KeyCode.Break, true);
 		CurrentKeybindings["Down"]				= new Keybinds ("Down", KeyCode.S, KeyCode.Break, true);
 		CurrentKeybindings["Left"]				= new Keybinds ("Left", KeyCode.A, KeyCode.Break, true);
@@ -193,6 +189,10 @@ public class InputManager : MonoBehaviour {
 		CurrentKeybindings["Use Item"]			= new Keybinds ("Use Item", KeyCode.E, KeyCode.JoystickButton5,	true);				// RightButton
 		CurrentKeybindings["Change Item"]		= new Keybinds ("Change Item", KeyCode.R, KeyCode.JoystickButton3,	true);			// Y
 		CurrentKeybindings["Fix Location"]		= new Keybinds ("Fix Location", KeyCode.LeftShift, KeyCode.JoystickButton4,	true);	// LeftButton
+
+		CurrentKeybindings["DEBUG_ResetScene"]	= new Keybinds ("DEBUG_ResetScene", 		KeyCode.P, KeyCode.Break,	true);
+		CurrentKeybindings["UIBack"]			= new Keybinds ("UIBack", KeyCode.Escape,	KeyCode.JoystickButton1,	true);		// B
+		CurrentKeybindings["Pause"]				= new Keybinds ("Pause", KeyCode.Escape, 	KeyCode.JoystickButton7,	true);
 
 	}
 
