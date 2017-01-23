@@ -23,7 +23,7 @@ public class ProjectileChild : Projectile {
 
 	protected override void Update() {
 
-		if (PauseManager.Current.checkIfCurrentlyPaused ()) {
+		if (PauseManager.Current == null ||PauseManager.Current.checkIfCurrentlyPaused ()) {
 
 			return;
 

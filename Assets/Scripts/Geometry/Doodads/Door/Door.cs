@@ -4,6 +4,7 @@ using System.Collections;
 public class Door : MonoBehaviour {
 
 	// TODO: ANIMATIONS REQUIRE THEIR BOX COLLIDERS TO MATCH THEIR SPRITES, CHECK _OLD FOLDER FOR DETAILS
+	// TODO: Refactor this base class & it's inherits.
 
 	[Header("Door Details")]
 	[Range(0, 20)] public int doorLevel = 0;
@@ -21,7 +22,7 @@ public class Door : MonoBehaviour {
 
 	protected Projectile hit;
 
-	void Start () {
+	protected virtual void Start () {
 	
 		anim = GetComponent<Animator> ();
 
@@ -30,7 +31,6 @@ public class Door : MonoBehaviour {
 	protected virtual void Update () {
 			
 		DoCircleCheck (willDoorStayOpen);
-
 
 	}
 
@@ -44,7 +44,7 @@ public class Door : MonoBehaviour {
 
 				if (Time.time > timeToClose && !willStayOpen) {
 
-					anim.SetBool ("open", false);
+					CloseDoor();
 
 				}
 
@@ -61,6 +61,12 @@ public class Door : MonoBehaviour {
 	public void OpenDoor() {
 
 		anim.SetBool ("open", true);
+
+	}
+
+	public void CloseDoor() {
+
+		anim.SetBool ("open", false);
 
 	}
 

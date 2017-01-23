@@ -11,7 +11,7 @@ public class DoorProjectile : Door {
 
 			if (hit.WeaponLevel >= doorLevel) {
 
-				anim.SetBool ("open", true);
+				OpenDoor ();
 				timeToClose = Time.time + doorOpenLength;
 
 			}

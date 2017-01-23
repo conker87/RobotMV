@@ -37,7 +37,7 @@ public class PlayerController : MovementController {
 
 	protected override void Update () {
 
-		if (PauseManager.Current.checkIfCurrentlyPaused ()) {
+		if (PauseManager.Current == null || PauseManager.Current.checkIfCurrentlyPaused ()) {
 
 			return;
 
@@ -156,6 +156,8 @@ public class PlayerController : MovementController {
 				movement = 0f;
 
 			}
+
+			//return input = new Vector2 (hardInput.GetAxis ("Forward", "Backward", gravity), 0f);
 
 			return input = new Vector2 (movement, 0f);
 

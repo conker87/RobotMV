@@ -16,13 +16,13 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 4000013146171914}
-  - 114: {fileID: 114000012848173808}
-  - 61: {fileID: 61000014161814184}
-  - 212: {fileID: 212000010171047750}
-  - 95: {fileID: 95000011296859600}
+  - component: {fileID: 4000013146171914}
+  - component: {fileID: 114015769747027450}
+  - component: {fileID: 61000014161814184}
+  - component: {fileID: 212000010171047750}
+  - component: {fileID: 95000011296859600}
   m_Layer: 12
   m_Name: doorBlaster256_Switch_AnimTest
   m_TagString: Geometry
@@ -36,13 +36,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000014257990180}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.5, y: 2, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -9.67, y: -4.57, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &61000014161814184
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -74,7 +74,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114000012848173808
+--- !u!114 &114015769747027450
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -82,20 +82,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000014257990180}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 764e866f0e6954a4196852f51cc7f626, type: 3}
+  m_Script: {fileID: 11500000, guid: ef2fd642c48fbe94bacce8118497f057, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TODO: ANIMATIONS REQUIRE THEIR BOX COLLIDERS TO MATCH THEIR SPRITES, CHECK _OLD
-    FOLDER FOR DETAILS.
   doorLevel: 0
-  doorOpenLength: 0
-  willDoorStayOpen: 0
+  doorOpenLength: 5
+  willDoorStayOpen: 1
   circleLayerMask:
     serializedVersion: 2
     m_Bits: 1024
   doorCheckDistance: 2
-  andGate: 1
-  switches:
+  enemies:
   - {fileID: 0}
   - {fileID: 0}
 --- !u!212 &212000010171047750
@@ -112,7 +109,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 0
   m_Materials:
   - {fileID: 2100000, guid: 5028263afa6af6642af47b337c6c05af, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -120,7 +119,7 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 1
+  m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89

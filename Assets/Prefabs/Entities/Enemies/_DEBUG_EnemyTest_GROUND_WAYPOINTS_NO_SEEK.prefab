@@ -106,7 +106,7 @@ GameObject:
   m_Layer: 13
   m_Name: _DEBUG_EnemyTest_GROUND_WAYPOINTS_NO_SEEK
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5765324120231101433, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -312,9 +312,9 @@ MonoBehaviour:
   HealthRegenOn: 0
   HealthRegenCooldown: 10
   dead: 0
-  hasInvincibilityFrames: 0
-  invincibilityFramesLength: 0
-  isCurrentlyInInvulnerabilityFrames: 0
+  hasInvincibilityTime: 0
+  invincibilityTimeLength: 0
+  isCurrentlyInInvulnerabilityTime: 0
   MoveSpeed: 3
   MaximumMoveSpeed: 3
   CurrentItem: {fileID: 0}
