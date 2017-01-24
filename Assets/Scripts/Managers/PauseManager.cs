@@ -99,20 +99,26 @@ public class PauseManager : MonoBehaviour {
 			buttonGameObject.transform.localScale = new Vector3 (1f, 1f, 1f);
 			buttonGameObject.name = "KeybindingsButton_" + k.Key;
 
+			CSK.labelText.text = key;
+
 			CSK.KeyboardBind.onClick.AddListener (delegate() {
 				ControlsMenu_KeyboardBindingOnClick (key, false);
 			});
+
+			CSK.KeyboardBindLabel.text = k.Value.KeyboardBinds.ToString();
+			CSK.KeyboardBind.interactable = true;
+
+			CSK.ControllerBindLabel.text = "";
 
 			if (k.Value.ControllerBinds != KeyCode.Break) {
 				CSK.ControllerBind.onClick.AddListener (delegate() {
 					ControlsMenu_KeyboardBindingOnClick (key, true);
 				});
+
+				CSK.ControllerBind.interactable = true;
+				CSK.ControllerBindLabel.text = k.Value.ControllerBinds.ToString();
+
 			}
-
-			CSK.labelText.text = key;
-
-			CSK.KeyboardBindLabel.text = k.Value.KeyboardBinds.ToString();
-			CSK.ControllerBindLabel.text = k.Value.ControllerBinds.ToString();;
 
 			keybindingsPrefabList.Add (buttonGameObject);
 
