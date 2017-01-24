@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,18 +12,16 @@ public class PauseManager : MonoBehaviour {
 	public static PauseManager Current;
 
 	void Awake() {
-		
-		//Check if instance already exists
+
 		if (Current == null) {
-			//if not, set instance to this
+
 			Current = this;
 
-		//If instance already exists and it's not this:
 		} else if (Current != this) {
-			
+
 			Destroy(gameObject);
-		
-		}  
+
+		}
 
 		//Sets this to not be destroyed when reloading scene
 		// DontDestroyOnLoad(gameObject);
@@ -50,9 +49,22 @@ public class PauseManager : MonoBehaviour {
 	public Transform BindingListsParent;
 	public GameObject BindingsPrefab;
 
+	public List<GameObject> keybindingsPrefabList = new List<GameObject> ();
+
+	[Header("Graphics Controls")]
+	public Button SaveGraphics;
+	public Button CancelGraphics, RevertGraphics;
+	public Toggle WindowedMode;
+	public Toggle FullscreenMode;
+
+	public Transform ResolutionPrefabParent;
+	public GameObject ResolutionPrefab;
+
+	public List<Toggle> resolutionPrefabList = new List<Toggle> ();
+
 	//public List<GameObject> BindingsList = new List<Keybinds> ();
 
-	public List<GameObject> keybindingsPrefabList = new List<GameObject> ();
+
 
 	[SerializeField]
 	string currentlyChangingKeybindID = "";
@@ -74,57 +86,32 @@ public class PauseManager : MonoBehaviour {
 		GraphicsGUI.gameObject.SetActive (false);
 		SoundGUI.gameObject.SetActive (false);
 
-		QuitToMainMenuButton.onClick.AddListener(	delegate() { QuitToMainMenu("MainMenu");		});
+		// Main Menu Listeners
+		QuitToMainMenuButton.onClick.AddListener(	delegate() { QuitToMainMenu("MainMenu");		} );
+		ControlsMenu.onClick.AddListener(	delegate() { SetStateForce (PauseState.CONTROL);	} );
+		GraphicsMenu.onClick.AddListener(	delegate() { SetStateForce (PauseState.GRAPHICS);	} );
+		SoundsMenu.onClick.AddListener	(	delegate() { SetStateForce (PauseState.SOUND);		} );
 
-		ControlsMenu.onClick.AddListener(	delegate() { SetStateForce (PauseState.CONTROL);	});
-		GraphicsMenu.onClick.AddListener(	delegate() { SetStateForce (PauseState.GRAPHICS);	});
-		SoundsMenu.onClick.AddListener	(	delegate() { SetStateForce (PauseState.SOUND);		});
+		// Graphics Listeners
+		SaveGraphics.onClick.AddListener(	delegate() { GraphicsMenu_Save();		} );
 
-		// Keyboard Keybindings Itteration
-		foreach(KeyValuePair<string, Keybinds> k in InputManager.Current.GetKeybindings()) {
-			
-			if (k.Value.ignoreInSettings) {
+		// Populate lists
+//		PopulateKeybindButtons();
+//		PopulateResolutionToggles ();
 
-				//continue;
+		// Set Defaults
+		// Controls
 
-			}
+		// Graphics
+		WindowedMode.isOn = !Screen.fullScreen;
 
-			string key = k.Key;
+	}
 
-			// TODO: ControlSetKeyPrefab now has a component that stores the cache of these, use GetComponent<ControlSetKeybind>();
-			GameObject buttonGameObject = Instantiate (BindingsPrefab, BindingListsParent) as GameObject;
+	void OnEnable() {
 
-			ControlSetKeybind CSK = buttonGameObject.GetComponent<ControlSetKeybind>();
-
-			buttonGameObject.transform.localScale = new Vector3 (1f, 1f, 1f);
-			buttonGameObject.name = "KeybindingsButton_" + k.Key;
-
-			CSK.labelText.text = key;
-
-			CSK.KeyboardBind.onClick.AddListener (delegate() {
-				ControlsMenu_KeyboardBindingOnClick (key, false);
-			});
-
-			CSK.KeyboardBindLabel.text = k.Value.KeyboardBinds.ToString();
-			CSK.KeyboardBind.interactable = true;
-
-			CSK.ControllerBindLabel.text = "";
-
-			if (k.Value.ControllerBinds != KeyCode.Break) {
-				CSK.ControllerBind.onClick.AddListener (delegate() {
-					ControlsMenu_KeyboardBindingOnClick (key, true);
-				});
-
-				CSK.ControllerBind.interactable = true;
-				CSK.ControllerBindLabel.text = k.Value.ControllerBinds.ToString();
-
-			}
-
-			keybindingsPrefabList.Add (buttonGameObject);
-
-		}
-
-		// 
+		// Populate lists
+		PopulateKeybindButtons();
+		PopulateResolutionToggles ();
 
 	}
 
@@ -246,6 +233,9 @@ public class PauseManager : MonoBehaviour {
 
 			GraphicsGUI.gameObject.SetActive (true);
 
+//			FullscreenMode.isOn = !WindowedMode.isOn;
+//			WindowedMode.isOn = !FullscreenMode.isOn;
+
 			if (InputManager.Current.GetButtonDown ("Pause") || InputManager.Current.GetButtonDown ("UIBack")) {
 
 				pause = PauseState.MAIN;
@@ -303,6 +293,22 @@ public class PauseManager : MonoBehaviour {
 
 	}
 
+	#region Main Menu
+
+	public void QuitToMainMenu(string mainMenuScene) {
+
+		UnityEngine.SceneManagement.SceneManager.LoadScene (mainMenuScene);
+
+	}
+
+	public void QuitToDesktop() {
+
+		Application.Quit ();
+
+	}
+
+	#endregion
+
 	#region Controls Menu
 
 	public void ControlsMenu_ToggleIsUsingController() {
@@ -336,7 +342,7 @@ public class PauseManager : MonoBehaviour {
 		//InputManager.Current.SaveNewKeybindsListsToDictionary(changingKeyboardKeybindings, changingControllerKeybindings);
 
 		//InputManager.Current.SetKeybindings ();
-  
+
 	}
 
 	public void ControlsMenu_RevertToDefaultBindings() {
@@ -345,24 +351,133 @@ public class PauseManager : MonoBehaviour {
 
 	}
 
-	#endregion
+	void PopulateKeybindButtons() {
 
-	#region Main Menu
+		foreach(KeyValuePair<string, Keybinds> k in InputManager.Current.GetKeybindings()) {
 
-	public void QuitToMainMenu(string mainMenuScene) {
+			if (k.Value.ignoreInSettings) {
 
-		UnityEngine.SceneManagement.SceneManager.LoadScene (mainMenuScene);
+				//continue;
+
+			}
+
+			string key = k.Key;
+
+			// TODO: ControlSetKeyPrefab now has a component that stores the cache of these, use GetComponent<ControlSetKeybind>();
+			GameObject buttonGameObject = Instantiate (BindingsPrefab, BindingListsParent) as GameObject;
+
+			ControlSetKeybind CSK = buttonGameObject.GetComponent<ControlSetKeybind>();
+
+			buttonGameObject.transform.localScale = new Vector3 (1f, 1f, 1f);
+			buttonGameObject.name = "KeybindingsButton_" + k.Key;
+
+			CSK.labelText.text = key;
+
+			CSK.KeyboardBind.onClick.AddListener (delegate() {
+				ControlsMenu_KeyboardBindingOnClick (key, false);
+			});
+
+			CSK.KeyboardBindLabel.text = k.Value.KeyboardBinds.ToString();
+			CSK.KeyboardBind.interactable = true;
+
+			CSK.ControllerBindLabel.text = "";
+
+			if (k.Value.ControllerBinds != KeyCode.Break) {
+				CSK.ControllerBind.onClick.AddListener (delegate() {
+					ControlsMenu_KeyboardBindingOnClick (key, true);
+				});
+
+				CSK.ControllerBind.interactable = true;
+				CSK.ControllerBindLabel.text = k.Value.ControllerBinds.ToString();
+
+			}
+
+			keybindingsPrefabList.Add (buttonGameObject);
+
+		}
 
 	}
 
-	public void QuitToDesktop() {
+	#endregion
 
-		Application.Quit ();
+	#region Graphics Menu
+
+	public void GraphicsMenu_Save() {
+
+		int width = 1280, height = 720, refreshRate = 60;
+		bool fullscreen = !WindowedMode.isOn;
+
+		Debug.Log("GraphicsMenu_Save");
+
+		foreach (Toggle g in resolutionPrefabList) {
+
+			Debug.Log (g);
+
+			if (g.isOn) {
+
+				Text labelText = g.GetComponentInChildren<Text> ();
+				string[] split = labelText.text.Split ('x');
+
+				width = int.Parse (split [0]);
+				height = int.Parse (split [1]);
+				refreshRate = int.Parse (split [2].Remove(split [2].Length - 2));
+
+				break;
+
+			}
+
+		}
+
+		Debug.Log (string.Format("width: {0}, height: {1}, fullscreen: {2}, refreshRate: {3}", width, height, fullscreen, refreshRate));
+
+		Screen.SetResolution (width, height, fullscreen, refreshRate);
+
+	}
+
+	void PopulateResolutionToggles() {
+
+		Resolution[] resolutions = Screen.resolutions;
+
+		resolutions = resolutions.OrderByDescending (item => item.width).ToArray ();
+
+		string previousRes = "", currentRes = "";
+
+		foreach(Resolution r in resolutions) {
+
+			currentRes = r.width + "x" + r.height + " " + r.refreshRate;
+
+			if (currentRes == previousRes) {
+
+				continue;
+
+			}
+
+			previousRes = r.width + "x" + r.height + " " + r.refreshRate;
+
+			// TODO: ControlSetKeyPrefab now has a component that stores the cache of these, use GetComponent<ControlSetKeybind>();
+			GameObject toggleGameObject = Instantiate (ResolutionPrefab, ResolutionPrefabParent) as GameObject;
+			Toggle toggle = toggleGameObject.GetComponent<Toggle>();
+			Text toggleLabel = toggleGameObject.GetComponentInChildren<Text> ();
+
+			if (r.height == Screen.height && r.width == Screen.width) {
+
+				toggle.isOn = true;
+
+			}
+
+			toggleGameObject.transform.localScale = new Vector3 (1f, 1f, 1f);
+			toggleGameObject.name = "ResolutionToggle_" + r.width + "x" + r.height + "_" + r.refreshRate;
+
+			toggleLabel.text = r.width + "x" + r.height + "x" + r.refreshRate + "Hz";
+
+			resolutionPrefabList.Add (toggle);
+
+		}
 
 	}
 
 	#endregion
-		
+
 	public bool checkIfCurrentlyPaused() {
 
 		return isCurrentlyPaused;
