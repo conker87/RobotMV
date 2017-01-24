@@ -228,7 +228,7 @@ public class PauseManager : MonoBehaviour {
 
 			if (InputManager.Current.GetButtonDown ("Pause") || InputManager.Current.GetButtonDown ("UIBack")) {
 
-				SetState (PauseState.MAIN, out changingStates);
+				pause = PauseState.MAIN;
 
 			}
 
@@ -242,7 +242,7 @@ public class PauseManager : MonoBehaviour {
 
 			if (InputManager.Current.GetButtonDown ("Pause") || InputManager.Current.GetButtonDown ("UIBack")) {
 
-				SetState (PauseState.MAIN, out changingStates);
+				pause = PauseState.MAIN;
 
 			}
 
@@ -256,7 +256,7 @@ public class PauseManager : MonoBehaviour {
 
 			if (InputManager.Current.GetButtonDown ("Pause") || InputManager.Current.GetButtonDown ("UIBack")) {
 
-				SetState (PauseState.MAIN, out changingStates);
+				pause = PauseState.MAIN;
 
 			}
 
