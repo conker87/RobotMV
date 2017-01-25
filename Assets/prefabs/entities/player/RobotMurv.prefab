@@ -43,7 +43,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 186462}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.33, y: -5.522, z: 0}
+  m_LocalPosition: {x: -4.202, y: -3.988, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 4000013207597610}
@@ -75,9 +75,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.03}
   serializedVersion: 2
-  m_Size: {x: 0.95, y: 2.05}
+  m_Size: {x: 0.95, y: 2}
 --- !u!114 &11421016
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -131,6 +131,7 @@ MonoBehaviour:
   accelerationTimeAirbourne: 0.1
   accelerationTimeGrounded: 0.1
   hasJumped: 0
+  crouchingMovementPenalty: 0.6
   hasDoubleJumped: 0
   hasTripleJumped: 0
   isCurrentlyCrouching: 0
@@ -578,7 +579,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 186462}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 7ff5e3a9949478243a07b416836dad72, type: 2}
   m_CullingMode: 0

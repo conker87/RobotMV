@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -6,6 +7,8 @@ public class CameraManager : MonoBehaviour {
 
     public float smoothTime;
     protected float zoomspeed;
+
+	public Text areaTextName;
 
     private float orthographicsize_base;
 
@@ -88,16 +91,35 @@ public class CameraManager : MonoBehaviour {
         int previousArea = currentArea;
 
         foreach (GameObject n in listAreaNodes) {
+			
             if (GetAreaRect(listAreaNodes.IndexOf(n)).Contains(followtarget)) {
+				
                 previousArea = listAreaNodes.IndexOf(n);
 
                 if (previousArea == currentArea) { return; }
                 currentArea = previousArea;
 
-                Debug.Log("new area: " + currentArea.ToString());
+				Debug.Log("new area: " + currentArea.ToString() + ", name of prefab: " + n.name);
+
+				ShowAreaNameOnScreen(n.name);
+
             }
         }
     }
+
+	private void ShowAreaNameOnScreen(string name) {
+
+		DisableInSeconds disable = areaTextName.GetComponent<DisableInSeconds> ();
+
+		if (!areaTextName.IsActive()) {
+
+			areaTextName.text = name;
+			disable.Reset (4f);
+
+		}
+
+
+	}
 
     // Changing the focusObject sets the focusPosition to zero
     public GameObject FocusObject {
