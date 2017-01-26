@@ -17,7 +17,7 @@ public class WeaponBasicBlaster : Weapon {
 	bool fireChargedShot = false;
 
 	public override void ShootMouse (Vector3 ShootLocationPosition, Vector2 Direction) {
-		
+
 		if (InputManager.Current.GetButtonDown("Fire Weapon")) {
 
 			int random = Random.Range (0, Projectiles.Length);

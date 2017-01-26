@@ -11,6 +11,7 @@ public class WeaponSpinner : Weapon {
 
 		base.Shoot (ShootLocationPosition, Direction);
 
+		// TODO: Change to InputManager.Current.GetButton("Fire Weapon")
 		if (Input.GetMouseButton (0)) {
 
 			if (Time.time > cooldownTime) {
@@ -24,6 +25,7 @@ public class WeaponSpinner : Weapon {
 
 		}
 
+		// TODO: Change to InputManager.Current.GetButton("Fire Weapon")
 		if (Input.GetMouseButtonUp (0) && hasPressed) {
 
 			mousePositionToWorld = Camera.main.ScreenToWorldPoint (Input.mousePosition);

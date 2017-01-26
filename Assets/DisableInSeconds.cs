@@ -8,6 +8,12 @@ public class DisableInSeconds : MonoBehaviour {
 	public float timeIn;
 	float time;
 
+	void Start() {
+
+		gameObject.SetActive (false);
+
+	}
+
 	// Update is called once per frame
 	void Update () {
 

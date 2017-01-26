@@ -4,7 +4,8 @@ using System.Collections;
 public class WeaponSplitter : Weapon {
 
 	public override void ShootMouse(Vector3 ShootLocationPosition, Vector2 Direction) {
-
+		
+		// TODO: Change to InputManager.Current.GetButton("Fire Weapon")
 		if (Input.GetMouseButtonDown (0)) {
 
 			mousePositionToWorld = Camera.main.ScreenToWorldPoint (Input.mousePosition);

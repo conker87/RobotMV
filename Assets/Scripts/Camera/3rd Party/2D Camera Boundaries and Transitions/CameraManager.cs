@@ -111,12 +111,8 @@ public class CameraManager : MonoBehaviour {
 
 		DisableInSeconds disable = areaTextName.GetComponent<DisableInSeconds> ();
 
-		if (!areaTextName.IsActive()) {
-
-			areaTextName.text = name;
-			disable.Reset (4f);
-
-		}
+		areaTextName.text = name + " ";
+		disable.Reset (3f);
 
 
 	}
