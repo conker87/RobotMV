@@ -30,7 +30,7 @@ public class WeaponLaser : Weapon {
 		
 	public override void ShootMouse(Vector3 ShootLocationPosition, Vector2 Direction) {
 
-		if (Input.GetMouseButtonDown (0)) {
+		if (InputManager.Current.GetButtonDown("Fire Weapon")) {
 
 			attackLengthTime = Time.time + AttackLength;
 
@@ -40,17 +40,12 @@ public class WeaponLaser : Weapon {
 
 		if (Time.time < attackLengthTime) {
 
-			if (Input.GetMouseButton (0)) {
+			if (InputManager.Current.GetButton("Fire Weapon")) {
 
 				Player.Current.CanChangeWeapon = false;
 				hasBeenFiring = true;
 
-				mousePositionToWorld = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-				directionToMousePositionInWorld = mousePositionToWorld - (Vector2)ShootLocationPosition;
-
-				RaycastHit2D hit = Physics2D.Raycast (ShootLocationPosition, directionToMousePositionInWorld, laserLength, geometryLayer);
-
-				Debug.DrawRay (ShootLocationPosition, directionToMousePositionInWorld);
+				RaycastHit2D hit = Physics2D.Raycast (ShootLocationPosition, Direction, laserLength, geometryLayer);
 
 				line.enabled = true;
 				line.sortingLayerName = "Projectiles";
@@ -61,16 +56,17 @@ public class WeaponLaser : Weapon {
 					line.numPositions = 3;
 
 					line.SetPosition (1, hit.point);
-					line.SetPosition (2, hit.point + (directionToMousePositionInWorld.normalized * .1f));
+					line.SetPosition (2, hit.point + (Direction.normalized * .1f));
 
-					// TODO: Fix me
 					if ((e = hit.collider.gameObject.GetComponentInParent<Entity> ()) != null) {
 
 						if (e.tag != "Geometry") {
 
+							// TODO: There hould be a "tick" timer that deals damage a set number of times over
+								// the attack length. The attack length will then be reduced via power ups
+								// this effectively inccreases DPS by reducing cast time.
+								// TODO: damage, speed and cooldown need power ups too.
 							e.DamageVital ("HEALTH", Damage);
-
-							// e.DamageHealth (Damage);
 
 						}
 
@@ -96,7 +92,7 @@ public class WeaponLaser : Weapon {
 
 					line.numPositions = 2;
 
-					line.SetPosition (1, (Vector3)(ShootLocationPosition + (Vector3)(directionToMousePositionInWorld.normalized * laserLength)));
+					line.SetPosition (1, (Vector3)(ShootLocationPosition + (Vector3)(Direction.normalized * laserLength)));
 
 				}
 

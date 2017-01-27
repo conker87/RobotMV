@@ -10,6 +10,7 @@ public class Player : Entity
 	public static string ErrorMessage = "";
 	[SerializeField]
 	public Dictionary<string, bool> CollectablesD = new Dictionary<string, bool> ();
+	public Dictionary<string, CollectablesInfo> CollectablesInfoD = new Dictionary<string, CollectablesInfo> ();
 	public Dictionary<string, int> BombsD = new Dictionary<string, int> ();
 
 	// TODO: Move this to the GameManager once we sort it out.
@@ -33,10 +34,13 @@ public class Player : Entity
 		base.Awake ();
 
 		// TODO: These should be loaded from the Save File.
-
 		CollectablesD.Clear ();
+		CollectablesInfoD.Clear ();
 		CollectablesD.Add ("BASIC_BLASTER",					false);
 		CollectablesD.Add ("BASIC_BLASTER_CHARGED_SHOT",	false);
+
+		CollectablesInfoD.Add ("BASIC_BLASTER_INFO", new CollectablesInfo("BASIC_BLASTER", 1f, 1f, 1)); 
+
 		CollectablesD.Add ("BLACK_HOLE_BURST",				false);
 		CollectablesD.Add ("CLUSTER_SPREADER",				false);
 		CollectablesD.Add ("LASER",							false);
@@ -193,6 +197,25 @@ public struct Collectables {
 	
 	public string ItemID;
 	public bool Collected;
+
+}
+
+[System.Serializable]
+public struct CollectablesInfo {
+
+	public CollectablesInfo(string itemID, float attackLengthMultiplier, float cooldownMultiplier, float damageMultiplier) {
+
+		this.ItemID = itemID;
+		this.AttackLengthMultiplier = attackLengthMultiplier;
+		this.CooldownMultiplier = cooldownMultiplier;
+		this.DamageMultiplier = damageMultiplier;
+
+	}
+
+	public string ItemID;
+	public float AttackLengthMultiplier;
+	public float CooldownMultiplier;
+	public float DamageMultiplier;
 
 }
 

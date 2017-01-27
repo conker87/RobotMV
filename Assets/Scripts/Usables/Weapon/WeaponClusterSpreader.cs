@@ -10,14 +10,11 @@ public class WeaponClusterSpreader : Weapon {
 	public override void ShootMouse(Vector3 ShootLocationPosition, Vector2 Direction) {
 
 		// TODO: Change to InputManager.Current.GetButton("Fire Weapon")
-		if (Input.GetMouseButton (0)) {
+		if (InputManager.Current.GetButton("Fire Weapon") || Input.GetMouseButton (0)) {
 
 			Player.Current.CanChangeWeapon = false;
 
 			float radians = shootingAngle * (Mathf.PI / 180f);
-
-			mousePositionToWorld = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-			directionToMousePositionInWorld = mousePositionToWorld - (Vector2)ShootLocationPosition;
 
 			int random = Random.Range (0, Projectiles.Length);
 
@@ -27,7 +24,7 @@ public class WeaponClusterSpreader : Weapon {
 
 			Projectile projectile = Instantiate (Projectiles [random], ShootLocationPosition, Quaternion.identity) as Projectile;
 
-			projectile.SetSettings (directionToMousePositionInWorld, InitialProjectileMovementSpeed, false, projectileType, Damage, Level);
+			projectile.SetSettings (Direction, InitialProjectileMovementSpeed, false, projectileType, Damage, Level);
 
 			// Prevent firing again until after cooldown time
 			cooldownTime = Time.time + Cooldown;

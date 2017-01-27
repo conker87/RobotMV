@@ -7,31 +7,27 @@ public class WeaponSpinner : Weapon {
 	float spinnerTimer, spinnerTimerMax = 2f, multiplier;
 	bool hasPressed = false;
 
-	public override void Shoot(Vector3 ShootLocationPosition, Vector2 Direction) {
+	public override void ShootMouse(Vector3 ShootLocationPosition, Vector2 Direction) {
 
-		base.Shoot (ShootLocationPosition, Direction);
+		if (InputManager.Current.GetButtonDown("Fire Weapon")) {
 
-		// TODO: Change to InputManager.Current.GetButton("Fire Weapon")
-		if (Input.GetMouseButton (0)) {
-
-			if (Time.time > cooldownTime) {
-				
-				spinnerTimer += Time.deltaTime;
-				multiplier = 1f + spinnerTimer;
-
-				hasPressed = true;
-
-			}
+			hasPressed = true;
 
 		}
 
 		// TODO: Change to InputManager.Current.GetButton("Fire Weapon")
-		if (Input.GetMouseButtonUp (0) && hasPressed) {
+		if (InputManager.Current.GetButton("Fire Weapon") && hasPressed) {
 
-			mousePositionToWorld = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-			directionToMousePositionInWorld = mousePositionToWorld - (Vector2)ShootLocationPosition;
+			spinnerTimer += Time.deltaTime;
+
+
+		}
+
+		// TODO: Change to InputManager.Current.GetButton("Fire Weapon")
+		if (InputManager.Current.GetButtonUp("Fire Weapon") && hasPressed) {
 
 			spinnerTimer = Mathf.Clamp (spinnerTimer, 0f, spinnerTimerMax);
+			multiplier = 1f + spinnerTimer;
 
 			foreach (Projectile p in Projectiles) {
 
@@ -44,17 +40,19 @@ public class WeaponSpinner : Weapon {
 
 				bool doesIgnoreGeometry = (spinnerTimer > (spinnerTimerMax / 2f)) ? true : false;
 
-				projectile.SetSettings (directionToMousePositionInWorld, InitialProjectileMovementSpeed * multiplier, false, projectileType, Mathf.RoundToInt (Damage * multiplier * 5f),
+				projectile.SetSettings (Direction, InitialProjectileMovementSpeed * multiplier, false, projectileType, Mathf.RoundToInt (Damage * multiplier * 5f),
 					Level, doesIgnoreGeometry, true);
 					
 				projectile.timesThroughEnemyMax = Mathf.RoundToInt (spinnerTimer * 2f);
 
 				projectile.GetComponent<RotateAtSpeed> ().rotationalSpeed *= (multiplier + 1f);
 
-				// Prevent firing again until after cooldown time
-				cooldownTime = Time.time + Cooldown;
-
 			}
+
+			Debug.Log ("cooldownTime = Time.time + Cooldown");
+
+			// Prevent firing again until after cooldown time
+			cooldownTime = Time.time + Cooldown;
 
 			spinnerTimer = 0f;
 
@@ -62,8 +60,12 @@ public class WeaponSpinner : Weapon {
 
 		}
 
-		if (!Input.GetMouseButton (0)) {
+		if (!InputManager.Current.GetButton("Fire Weapon")) {
+
 			spinnerTimer = 0f;
+
+			hasPressed = false;
+
 		}
 
 	}

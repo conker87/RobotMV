@@ -77,9 +77,7 @@ public class InputManager : MonoBehaviour {
 
 		} else {
 
-
 			return Input.GetKey(CurrentKeybindings[buttonName].KeyboardBinds);
-
 
 		}
 
