@@ -64,8 +64,6 @@ public class PauseManager : MonoBehaviour {
 
 	//public List<GameObject> BindingsList = new List<Keybinds> ();
 
-
-
 	[SerializeField]
 	string currentlyChangingKeybindID = "";
 	bool isControllerKeybind = false;
