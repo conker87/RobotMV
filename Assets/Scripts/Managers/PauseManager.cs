@@ -32,19 +32,19 @@ public class PauseManager : MonoBehaviour {
 
 	[Header("GUI Parents")]
 	public Transform PauseGUI;
-	public Transform ControlsGUI, GraphicsGUI, SoundGUI;
+	public Transform MainMenuGUI, ControlsGUI, GraphicsGUI, SoundGUI;
 
 	[Header("Main Controls")]
-	public Button ControlsMenu;
-	public Button GraphicsMenu;
-	public Button SoundsMenu;
+	public Button MainControlsButton;
+	public Button MainGraphicsButton;
+	public Button MainSoundsButton;
 
-	public Button QuitToMainMenuButton;
+	public Button MainQuitButton;
 
 	[Header("Control Controls")]
-	public Button SaveControls;
-	public Button RevertControls;
-	public Toggle ControllerConfigToggle;
+	public Button ControlsSaveButton;
+	public Button ControlsCancelButton, ControlsRevertButton;
+	public Toggle ControlIsControllerToggle;
 
 	public Transform BindingListsParent;
 	public GameObject BindingsPrefab;
@@ -52,10 +52,9 @@ public class PauseManager : MonoBehaviour {
 	public List<GameObject> keybindingsPrefabList = new List<GameObject> ();
 
 	[Header("Graphics Controls")]
-	public Button SaveGraphics;
-	public Button CancelGraphics, RevertGraphics;
-	public Toggle WindowedMode;
-	public Toggle FullscreenMode;
+	public Button GraphicsSaveButton;
+	public Button GraphicsCancelButton, GraphicsRevertButton;
+	public Toggle ToggleWindowedMode;
 
 	public Transform ResolutionPrefabParent;
 	public GameObject ResolutionPrefab;
@@ -79,19 +78,20 @@ public class PauseManager : MonoBehaviour {
 
 		// ControllerConfigToggle.isOn = InputManager.Current.isUsingController;
 
+		MainMenuGUI.gameObject.SetActive (false);
 		PauseGUI.gameObject.SetActive (false);
 		ControlsGUI.gameObject.SetActive (false);
 		GraphicsGUI.gameObject.SetActive (false);
 		SoundGUI.gameObject.SetActive (false);
 
 		// Main Menu Listeners
-		QuitToMainMenuButton.onClick.AddListener(	delegate() { QuitToMainMenu("MainMenu");		} );
-		ControlsMenu.onClick.AddListener(	delegate() { SetStateForce (PauseState.CONTROL);	} );
-		GraphicsMenu.onClick.AddListener(	delegate() { SetStateForce (PauseState.GRAPHICS);	} );
-		SoundsMenu.onClick.AddListener	(	delegate() { SetStateForce (PauseState.SOUND);		} );
+		MainQuitButton.onClick.AddListener(	delegate() { QuitToMainMenu("MainMenu");		} );
+		MainControlsButton.onClick.AddListener		(	delegate() { SetState (PauseState.CONTROL);		} );
+		MainGraphicsButton.onClick.AddListener		(	delegate() { SetState (PauseState.GRAPHICS);	} );
+		MainSoundsButton.onClick.AddListener			(	delegate() { SetState (PauseState.SOUND);		} );
 
 		// Graphics Listeners
-		SaveGraphics.onClick.AddListener(	delegate() { GraphicsMenu_Save();		} );
+		GraphicsSaveButton.onClick.AddListener		(	delegate() { GraphicsMenu_Save();		} );
 
 		// Populate lists
 //		PopulateKeybindButtons();
@@ -101,7 +101,7 @@ public class PauseManager : MonoBehaviour {
 		// Controls
 
 		// Graphics
-		WindowedMode.isOn = !Screen.fullScreen;
+		ToggleWindowedMode.isOn = !Screen.fullScreen;
 
 	}
 
@@ -119,7 +119,7 @@ public class PauseManager : MonoBehaviour {
 
 			if (InputManager.Current.GetButtonDown ("Pause") || InputManager.Current.GetButtonDown ("UIBack")) {
 
-				SetStateForce(PauseState.CONTROL);
+				SetState(PauseState.CONTROL);
 				return;
 
 			}
@@ -165,7 +165,7 @@ public class PauseManager : MonoBehaviour {
 						}
 
 						currentlyChangingKeybindID = "";
-						SetStateForce(PauseState.CONTROL);
+						SetState(PauseState.CONTROL);
 	
 					}
 	
@@ -197,7 +197,8 @@ public class PauseManager : MonoBehaviour {
 		}
 
 		if (pause == PauseState.MAIN) {
-
+			
+			MainMenuGUI.gameObject.SetActive (true);
 			PauseGUI.gameObject.SetActive (true);
 			ControlsGUI.gameObject.SetActive (false);
 			GraphicsGUI.gameObject.SetActive (false);
@@ -210,6 +211,12 @@ public class PauseManager : MonoBehaviour {
 			}
 
 			return;
+
+		}
+
+		if (pause != PauseState.MAIN) {
+
+			MainMenuGUI.gameObject.SetActive (false);
 
 		}
 
@@ -311,13 +318,13 @@ public class PauseManager : MonoBehaviour {
 
 	public void ControlsMenu_ToggleIsUsingController() {
 
-		InputManager.Current.isUsingController = ControllerConfigToggle.isOn;
+		InputManager.Current.isUsingController = ControlIsControllerToggle.isOn;
 
 	}
 
 	public void ControlsMenu_KeyboardBindingOnClick(string Key_ID, bool isController) {
 
-		SetStateForce(PauseState.SETTING_CONTROLS);
+		SetState(PauseState.SETTING_CONTROLS);
 
 		currentlyChangingKeybindID = Key_ID;
 		isControllerKeybind = isController;
@@ -403,7 +410,7 @@ public class PauseManager : MonoBehaviour {
 	public void GraphicsMenu_Save() {
 
 		int width = 1280, height = 720, refreshRate = 60;
-		bool fullscreen = !WindowedMode.isOn;
+		bool fullscreen = !ToggleWindowedMode.isOn;
 
 		Debug.Log("GraphicsMenu_Save");
 
@@ -482,23 +489,7 @@ public class PauseManager : MonoBehaviour {
 
 	}
 
-	public void SetState(PauseState state, out PauseState outNewStat) {
-
-		if (pause == state) {
-
-			pause = PauseState.MAIN;
-			outNewStat = pause;
-
-			return;
-
-		}
-
-		pause = PauseState.CHANGING_STATE;
-		outNewStat = state;
-
-	}
-
-	public void SetStateForce(PauseState state) {
+	public void SetState(PauseState state) {
 
 		if (pause == state) {
 
@@ -511,6 +502,7 @@ public class PauseManager : MonoBehaviour {
 		pause = state;
 
 	}
+
 }
 
 public enum PauseState { NONE, MAIN, CONTROL, SETTING_CONTROLS, GRAPHICS, SOUND, CHANGING_STATE };

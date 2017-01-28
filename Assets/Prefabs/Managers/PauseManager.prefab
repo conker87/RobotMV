@@ -52,25 +52,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PauseGUI: {fileID: 0}
+  MainMenuGUI: {fileID: 0}
   ControlsGUI: {fileID: 0}
   GraphicsGUI: {fileID: 0}
   SoundGUI: {fileID: 0}
-  ControlsMenu: {fileID: 0}
-  GraphicsMenu: {fileID: 0}
-  SoundsMenu: {fileID: 0}
-  QuitToMainMenuButton: {fileID: 0}
-  SaveControls: {fileID: 0}
-  RevertControls: {fileID: 0}
-  ControllerConfigToggle: {fileID: 0}
+  MainControlsButton: {fileID: 0}
+  MainGraphicsButton: {fileID: 0}
+  MainSoundsButton: {fileID: 0}
+  MainQuitButton: {fileID: 0}
+  ControlsSaveButton: {fileID: 0}
+  ControlsCancelButton: {fileID: 0}
+  ControlsRevertButton: {fileID: 0}
+  ControlIsControllerToggle: {fileID: 0}
   BindingListsParent: {fileID: 0}
   BindingsPrefab: {fileID: 1034101658099598, guid: 104d99b13328b5048b0f860ad3ea61de,
     type: 2}
   keybindingsPrefabList: []
-  SaveGraphics: {fileID: 0}
-  CancelGraphics: {fileID: 0}
-  RevertGraphics: {fileID: 0}
-  WindowedMode: {fileID: 0}
-  FullscreenMode: {fileID: 0}
+  GraphicsSaveButton: {fileID: 0}
+  GraphicsCancelButton: {fileID: 0}
+  GraphicsRevertButton: {fileID: 0}
+  ToggleWindowedMode: {fileID: 0}
   ResolutionPrefabParent: {fileID: 0}
   ResolutionPrefab: {fileID: 1463246737266332, guid: c1efcc71f6d045d4886dfd151fd38858,
     type: 2}
