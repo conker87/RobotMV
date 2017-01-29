@@ -14,8 +14,11 @@ public class Entity : MonoBehaviour {
 	public Dictionary<string, int> VitalsD = new Dictionary<string, int> ();
 
 	[Header("Health")]
-	public bool  	HealthRegenOn = false;
-	public float 	HealthRegenCooldown = 10f; 
+	public int		Health_Current = 3;
+	public int 		Health_Max = 3;
+	public bool  	Health_RegenOn = false;
+	public float 	Health_RegenCooldown = 10f;
+	public bool		HEALTH_INFINITE = false;
 
 	[SerializeField] bool dead = false;
 
@@ -43,25 +46,18 @@ public class Entity : MonoBehaviour {
 
 	public virtual void Update() {
 
-		if (!dead && VitalsD["HEALTH"] < 1) {
+		if (!dead && Health_Current < 1) {
 			
 			dead = true;
 			Debug.Log (this + " has hit 0 health and has been removed. If it was an Enemy then it should spawn Health and Energy pickups.");
 
-			DoDeath ();
+			Die ();
 
 		}
 
 		if (MoveSpeed > MaximumMoveSpeed) {
 
 			MoveSpeed = MaximumMoveSpeed;
-
-		}
-
-		if (Time.time > nextTickTime) {
-
-			// TODO: This constant value needs to be changed depending on the current difficulty setting.
-			nextTickTime = Time.time + 10f;
 
 		}
 
@@ -77,33 +73,35 @@ public class Entity : MonoBehaviour {
 
 	}
 
-	public virtual void DoDeath() {
+	public virtual void Die() {
 
 		Destroy (gameObject);
 
 	}
 
-	public virtual void RestoreVital(string ID, int restore) {
+	#region Variable Functions
 
-		VitalsD [ID] += restore;
+	public virtual void RestoreHealth(int restore) {
 
-	}
-
-	public virtual void RestoreVitalFully(string ID, string MaxID) {
-
-		VitalsD [ID] = VitalsD[MaxID];
+		Health_Current += restore;
 
 	}
 
-	public virtual void DamageVital(string ID, int damage) {
+	public virtual void RestoreHealthFully() {
 
-		if (isCurrentlyInInvulnerabilityTime) {
+		Health_Current = Health_Max;
+
+	}
+
+	public virtual void DamageHealth(int damage) {
+
+		if (isCurrentlyInInvulnerabilityTime || HEALTH_INFINITE) {
 
 			return;
 
 		}
 
-		VitalsD["HEALTH"] -= damage;
+		Health_Current -= damage;
 
 		if (hasInvincibilityTime) {
 
@@ -115,4 +113,5 @@ public class Entity : MonoBehaviour {
 
 	}
 
+	#endregion
 }

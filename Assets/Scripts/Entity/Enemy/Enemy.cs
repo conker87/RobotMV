@@ -6,6 +6,8 @@ using EckTechGames.FloatingCombatText;
 [RequireComponent(typeof(EnemyController))]
 public class Enemy : Entity {
 
+	public int Health = 3;
+
 	[Range(0.0f, 100f)]
 	public float		powerUpChance			= 100f;
 	public Transform	droppedPowerupsParent;
@@ -22,13 +24,13 @@ public class Enemy : Entity {
 
 		if ((e = other.GetComponent<Player>()) != null) {
 
-			e.DamageVital ("HEALTH", DamageOnTouch);
+			e.DamageHealth(DamageOnTouch);
 
 		}
 
 	}
 
-	public override void DoDeath() {
+	public override void Die() {
 
 		if (droppedPowerUps.Length == droppedPowerUpsChance.Length || droppedPowerUps.Length == droppedPowerUpsMax.Length) {
 

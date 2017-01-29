@@ -12,6 +12,7 @@ public class PowerUp : MonoBehaviour {
 	public string PowerUpID;
 	public PowerUpDictionary PowerUpD;
 	public int AddItem;
+	public CollectionItemType IncreaseMultiplierOf;
 
 	public virtual void Give() {
 
@@ -54,6 +55,51 @@ public class PowerUp : MonoBehaviour {
 
 		}
 
+		if (PowerUpD == PowerUpDictionary.COLLECTION_INFO) {
+
+			if (!Player.Current.CollectablesInfoD.ContainsKey (PowerUpID)) {
+
+				Debug.Log ("PowerUpID: " + PowerUpID + " does not exist.");
+				return;
+
+			}
+
+			CollectablesInfo newCollectablesInfo = new CollectablesInfo (1f, 1f, 1f);
+			float attackLengthMod = Player.Current.CollectablesInfoD [PowerUpID].AttackLengthMultiplier,
+					cooldownMod = Player.Current.CollectablesInfoD [PowerUpID].CooldownMultiplier,
+					damageMod = Player.Current.CollectablesInfoD [PowerUpID].DamageMultiplier;
+
+			if (IncreaseMultiplierOf == CollectionItemType.ATTACK_LENGTH) {
+
+				newCollectablesInfo = new CollectablesInfo (
+					attackLengthMod += AddItem,
+					cooldownMod,
+					damageMod);
+
+			}
+
+			if (IncreaseMultiplierOf == CollectionItemType.COOLDOWN) {
+
+				newCollectablesInfo = new CollectablesInfo (
+					attackLengthMod,
+					cooldownMod += AddItem,
+					damageMod);
+
+			}
+
+			if (IncreaseMultiplierOf == CollectionItemType.DAMAGE) {
+				
+				newCollectablesInfo = new CollectablesInfo (
+					attackLengthMod,
+					cooldownMod,
+					damageMod += AddItem);
+
+			}
+
+			Player.Current.CollectablesInfoD [PowerUpID] = newCollectablesInfo;
+
+		}
+
 		Destroy(gameObject);
 
 	}
@@ -71,4 +117,5 @@ public class PowerUp : MonoBehaviour {
 
 }
 
-public enum PowerUpDictionary { BOMB, COLLECTABLE, VITAL };
+public enum PowerUpDictionary { BOMB, COLLECTABLE, VITAL, COLLECTION_INFO };
+public enum CollectionItemType { ATTACK_LENGTH, COOLDOWN, DAMAGE };

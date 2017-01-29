@@ -8,13 +8,17 @@ public class Player : Entity
 {
 	GUIStyle style;
 	public static string ErrorMessage = "";
-	[SerializeField]
-	public Dictionary<string, bool> CollectablesD = new Dictionary<string, bool> ();
-	public Dictionary<string, CollectablesInfo> CollectablesInfoD = new Dictionary<string, CollectablesInfo> ();
-	public Dictionary<string, int> BombsD = new Dictionary<string, int> ();
 
-	// TODO: Move this to the GameManager once we sort it out.
-	public Dictionary<string, bool> CheatsD = new Dictionary<string, bool> ();
+	[Header("Weapons")]
+	public bool Weapon_Basic_Blaster = false;
+	public bool Upgrade_Basic_Blaster_Charged_Shot = false;
+
+	[Header("Items")]
+
+	[Header("PowerUps")]
+	public bool PowerUp_Jump = false;
+	public bool PowerUp_Double_Jump = false;
+	public bool PowerUp_Triple_Jump = false;
 
 	public static Player Current { get; protected set; }
 
@@ -34,62 +38,58 @@ public class Player : Entity
 		base.Awake ();
 
 		// TODO: These should be loaded from the Save File.
-		CollectablesD.Clear ();
-		CollectablesInfoD.Clear ();
-		CollectablesD.Add ("BASIC_BLASTER",					false);
-		CollectablesD.Add ("BASIC_BLASTER_CHARGED_SHOT",	false);
-
-		CollectablesInfoD.Add ("BASIC_BLASTER_INFO", new CollectablesInfo("BASIC_BLASTER", 1f, 1f, 1)); 
-
-		CollectablesD.Add ("BLACK_HOLE_BURST",				false);
-		CollectablesD.Add ("CLUSTER_SPREADER",				false);
-		CollectablesD.Add ("LASER",							false);
-		CollectablesD.Add ("MISSILE_LAUNCHER",				false);
-		CollectablesD.Add ("SPINNER",						false);
-		CollectablesD.Add ("SPLITTER",						false);
-
-		CollectablesD.Add ("MAGNET",						false);
-
-		CollectablesD.Add ("JUMP",							false);
-		CollectablesD.Add ("JUMP_DOUBLE",					false);
-		CollectablesD.Add ("JUMP_TRIPLE",					false);
-
-		CollectablesD.Add ("BOMBS",							false);
-		CollectablesD.Add ("BOMBS_MEGA",					false);
-
-		CollectablesD.Add ("SHURIKEN_SHIELD",				false);
-		CollectablesD.Add ("ENERGY_SHIELD",					false);
-
-		BombsD.Clear ();
-		BombsD.Add ("BOMBS_CURRENT",						0);
-		BombsD.Add ("BOMBS_MEGA_CURRENT",					0);
-		BombsD.Add ("BOMBS_MAX",							3);
-		BombsD.Add ("BOMBS_MEGA_MAX",						1);
-
-		CheatsD.Clear ();
-		CheatsD.Add ("INFINITE_HEALTH",						false);
-		CheatsD.Add ("INFINITE_SHURIKEN_SHIELD",			false);
-		CheatsD.Add ("INFINITE_ENERGY_SHIELD",				false);
-		CheatsD.Add ("INFINITE_BOMBS",						false);
-		CheatsD.Add ("INFINITE_BOMBS_MEGA",					false);
+//		CollectablesD.Clear ();
+//		CollectablesInfoD.Clear ();
+//		CollectablesD.Add ("BASIC_BLASTER",					false);
+//		CollectablesD.Add ("BASIC_BLASTER_CHARGED_SHOT",	false);
+//
+//		CollectablesInfo defaultInfo = new CollectablesInfo (1f, 1f, 1f);
+//
+//		CollectablesInfoD.Add ("BASIC_BLASTER",					defaultInfo); 
+//		CollectablesInfoD.Add ("BASIC_BLASTER_CHARGED_SHOT",	defaultInfo); 
+//		CollectablesInfoD.Add ("BLACK_HOLE_BURST",				defaultInfo); 
+//		CollectablesInfoD.Add ("LASER",							defaultInfo); 
+//		CollectablesInfoD.Add ("MISSILE_LAUNCHER",				defaultInfo); 
+//		CollectablesInfoD.Add ("SPINNER",						defaultInfo); 
+//		CollectablesInfoD.Add ("SPLITTER",						defaultInfo); 
+//		CollectablesInfoD.Add ("GLOBAL",						defaultInfo); 
+//
+//		CollectablesD.Add ("BLACK_HOLE_BURST",				false);
+//		CollectablesD.Add ("LASER",							false);
+//		CollectablesD.Add ("MISSILE_LAUNCHER",				false);
+//		CollectablesD.Add ("SPINNER",						false);
+//		CollectablesD.Add ("SPLITTER",						false);
+//
+//		CollectablesD.Add ("MAGNET",						false);
+//
+//		CollectablesD.Add ("JUMP",							false);
+//		CollectablesD.Add ("JUMP_DOUBLE",					false);
+//		CollectablesD.Add ("JUMP_TRIPLE",					false);
+//
+//		CollectablesD.Add ("BOMBS",							false);
+//		CollectablesD.Add ("BOMBS_MEGA",					false);
+//
+//		CollectablesD.Add ("SHURIKEN_SHIELD",				false);
+//		CollectablesD.Add ("ENERGY_SHIELD",					false);
+//
+//		BombsD.Clear ();
+//		BombsD.Add ("BOMBS_CURRENT",						0);
+//		BombsD.Add ("BOMBS_MEGA_CURRENT",					0);
+//		BombsD.Add ("BOMBS_MAX",							3);
+//		BombsD.Add ("BOMBS_MEGA_MAX",						1);
+//
+//		CheatsD.Clear ();
+//		CheatsD.Add ("INFINITE_HEALTH",						false);
+//		CheatsD.Add ("INFINITE_SHURIKEN_SHIELD",			false);
+//		CheatsD.Add ("INFINITE_ENERGY_SHIELD",				false);
+//		CheatsD.Add ("INFINITE_BOMBS",						false);
+//		CheatsD.Add ("INFINITE_BOMBS_MEGA",					false);
 
 	}
 
 	void Start() {
 
 		Current = this;
-
-	}
-
-	public void DamageVitalPlayer(string ID, int damage, string CHEAT_ID = null) {
-
-		if (CHEAT_ID != null && CheatsD.ContainsKey(CHEAT_ID) && CheatsD [CHEAT_ID]) {
-
-			return;
-
-		}
-
-		base.DamageVital (ID, damage);
 
 	}
 
@@ -173,7 +173,7 @@ public class Player : Entity
 
 		if ((e = col.gameObject.GetComponentInParent<Enemy> ()) != null) {
 			
-			DamageVitalPlayer ("HEALTH", e.DamageOnTouch);
+			DamageHealth (e.DamageOnTouch);
 
 		}
 
@@ -185,8 +185,8 @@ public class Player : Entity
 		style.normal.textColor = Color.magenta;
 
 		GUI.Label(new Rect(10, 10, 500, 20), ErrorMessage, style);
-		GUI.Label(new Rect(10, 30, 500, 20), "H: " + VitalsD["HEALTH"] + "/" + VitalsD["HEALTH_MAX"] + "|" + HealthRegenOn + ")", style);
-		GUI.Label(new Rect(10, 50, 500, 20), "Jumps: " + CollectablesD["JUMP"] + "|" + CollectablesD["JUMP_DOUBLE"] + "|" + CollectablesD["JUMP_TRIPLE"], style);
+		GUI.Label(new Rect(10, 30, 500, 20), "H: " + VitalsD["HEALTH"] + "/" + VitalsD["HEALTH_MAX"] + "|" + Health_RegenOn + ")", style);
+		GUI.Label(new Rect(10, 50, 500, 20), "Jumps: " + PowerUp_Jump + "|" + PowerUp_Double_Jump + "|" + PowerUp_Triple_Jump, style);
 		GUI.Label(new Rect(10, 70, 500, 20), "CW/I: " + (CurrentWeapon == null ? "None" : CurrentWeapon.UsableNameLocalisationID) + "|" + (CurrentItem == null ? "None" : CurrentItem.UsableNameLocalisationID), style);
 		GUI.Label(new Rect(10, 90, 500, 20), "Speed: " + MoveSpeed, style);
 	}
@@ -203,16 +203,14 @@ public struct Collectables {
 [System.Serializable]
 public struct CollectablesInfo {
 
-	public CollectablesInfo(string itemID, float attackLengthMultiplier, float cooldownMultiplier, float damageMultiplier) {
+	public CollectablesInfo(float attackLengthMultiplier, float cooldownMultiplier, float damageMultiplier) {
 
-		this.ItemID = itemID;
 		this.AttackLengthMultiplier = attackLengthMultiplier;
 		this.CooldownMultiplier = cooldownMultiplier;
 		this.DamageMultiplier = damageMultiplier;
 
 	}
 
-	public string ItemID;
 	public float AttackLengthMultiplier;
 	public float CooldownMultiplier;
 	public float DamageMultiplier;
