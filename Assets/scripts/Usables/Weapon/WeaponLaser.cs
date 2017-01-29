@@ -30,6 +30,13 @@ public class WeaponLaser : Weapon {
 		
 	public override void ShootMouse(Vector3 ShootLocationPosition, Vector2 Direction) {
 
+		if (!Player.Current.Weapon_Laser) {
+
+			return;
+
+		}
+
+
 		if (InputManager.Current.GetButtonDown("Fire Weapon")) {
 
 			attackLengthTime = Time.time + AttackLength;
@@ -66,7 +73,7 @@ public class WeaponLaser : Weapon {
 								// the attack length. The attack length will then be reduced via power ups
 								// this effectively inccreases DPS by reducing cast time.
 								// TODO: damage, speed and cooldown need power ups too.
-							e.DamageVital ("HEALTH", Damage);
+							e.DamageHealth(Damage);
 
 						}
 

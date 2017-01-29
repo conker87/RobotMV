@@ -3,27 +3,9 @@ using System.Collections;
 
 public abstract class Weapon : Usables {
 
-	protected bool canContinue = false;
-
 	public virtual void Shoot (Vector3 ShootLocationPosition, Vector2 Direction) {
 
-		canContinue = true;
-
-		if (!Player.Current.CollectablesD.ContainsKey (CollectableID)) {
-
-			canContinue = false;
-
-			Debug.LogWarning ("WARNING: " + this + " has reference to a CollectableID that is invalid! '" + CollectableID + "'");
-
-		}
-
-		if (canContinue && (!Player.Current.CollectablesD[CollectableID] || stillCoolingDown)) {
-
-			canContinue = false;
-
-		}
-
-		if (!canContinue) {
+		if (stillCoolingDown) {
 
 			return;
 

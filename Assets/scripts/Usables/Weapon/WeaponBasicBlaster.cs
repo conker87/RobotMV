@@ -18,6 +18,12 @@ public class WeaponBasicBlaster : Weapon {
 
 	public override void ShootMouse (Vector3 ShootLocationPosition, Vector2 Direction) {
 
+		if (!Player.Current.Weapon_BasicBlaster) {
+
+			return;
+
+		}
+
 		if (InputManager.Current.GetButtonDown("Fire Weapon")) {
 
 			int random = Random.Range (0, Projectiles.Length);
@@ -32,47 +38,49 @@ public class WeaponBasicBlaster : Weapon {
 		}
 
 		// Blaster Charged Shot
-		if (Player.Current.CollectablesD[BasicBlasterChargedShotID]) {
+		if (!Player.Current.Upgrade_BasicBlaster_ChargedShot) {
 
-			if (InputManager.Current.GetButton("Fire Weapon")) {
+			return;
 
-				// Checks to see if the timer is less than the time set to fully charge
-				if (chargedShotTimer < chargedShotChargeTime && !fireChargedShot) {
+		}
 
-					chargedShotTimer += Time.deltaTime;
-					fireChargedShot = false;
+		if (InputManager.Current.GetButton("Fire Weapon")) {
 
-				}
+			// Checks to see if the timer is less than the time set to fully charge
+			if (chargedShotTimer < chargedShotChargeTime && !fireChargedShot) {
 
-				// Checks to see if the timer is more than the time.
-				if (chargedShotTimer >= chargedShotChargeTime) {
-
-					chargedShotTimer = 0f;
-
-					fireChargedShot = true;
-
-				}
-
-			} else {
-
-				chargedShotTimer = 0f;
-
-			}
-
-			if (InputManager.Current.GetButtonUp("Fire Weapon") && fireChargedShot) {
-
-				chargedShotTimer = 0f;
-
+				chargedShotTimer += Time.deltaTime;
 				fireChargedShot = false;
 
-				Projectile projectile = Instantiate (chargedShotProjectile, ShootLocationPosition, Quaternion.identity) as Projectile;
+			}
 
-				projectile.name = projectile.name + "_ChargedShot";
-				projectile.transform.localScale *= chargedShotMultiplier / 2f;
+			// Checks to see if the timer is more than the time.
+			if (chargedShotTimer >= chargedShotChargeTime) {
 
-				projectile.SetSettings (Direction, InitialProjectileMovementSpeed * (chargedShotMultiplier / 2f), false, projectileType, Mathf.RoundToInt(Damage * chargedShotMultiplier), chargedShotLevel);
+				chargedShotTimer = 0f;
+
+				fireChargedShot = true;
 
 			}
+
+		} else {
+
+			chargedShotTimer = 0f;
+
+		}
+
+		if (InputManager.Current.GetButtonUp("Fire Weapon") && fireChargedShot) {
+
+			chargedShotTimer = 0f;
+
+			fireChargedShot = false;
+
+			Projectile projectile = Instantiate (chargedShotProjectile, ShootLocationPosition, Quaternion.identity) as Projectile;
+
+			projectile.name = projectile.name + "_ChargedShot";
+			projectile.transform.localScale *= chargedShotMultiplier / 2f;
+
+			projectile.SetSettings (Direction, InitialProjectileMovementSpeed * (chargedShotMultiplier / 2f), false, projectileType, Mathf.RoundToInt(Damage * chargedShotMultiplier), chargedShotLevel);
 
 		}
 

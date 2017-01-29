@@ -11,8 +11,6 @@ public class Entity : MonoBehaviour {
 	public string EntityNameLocalisationID = "Localisation <FIXME>";
 	public string EntityDescLocalisationID = "Localisation <FIXME>";
 
-	public Dictionary<string, int> VitalsD = new Dictionary<string, int> ();
-
 	[Header("Health")]
 	public int		Health_Current = 3;
 	public int 		Health_Max = 3;
@@ -34,15 +32,6 @@ public class Entity : MonoBehaviour {
 	[Header("Currently Equipped Items")]
 	public Item CurrentItem = null;
 	public Weapon CurrentWeapon = null;
-
-	protected virtual void Awake() {
-
-		VitalsD.Clear ();
-
-		VitalsD.Add ("HEALTH",		3);
-		VitalsD.Add ("HEALTH_MAX",	3);
-
-	}
 
 	public virtual void Update() {
 

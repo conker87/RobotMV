@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4316805505920700}
-  - component: {fileID: 114160582804149946}
+  - component: {fileID: 114728647790835932}
   - component: {fileID: 212387840102026054}
   - component: {fileID: 61972529423477742}
   - component: {fileID: 50474354259880622}
@@ -37,8 +37,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1569074654064816}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4, y: -5.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 10.25, y: -29.75, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -77,7 +77,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
---- !u!114 &114160582804149946
+--- !u!114 &114728647790835932
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -85,14 +85,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1569074654064816}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be90426aa3d02f54989a44d162fd669f, type: 3}
+  m_Script: {fileID: 11500000, guid: 1251e6b72f4492041bd7ae07671fbb8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   PowerUpNameLocalisationID: COLLECTABLE_JUMP
   PowerUpDescriptionLocalisationID: COLLECTABLE_JUMP_DESC
-  PowerUpID: JUMP
-  PowerUpD: 1
-  AddItem: 0
 --- !u!212 &212387840102026054
 SpriteRenderer:
   m_ObjectHideFlags: 1

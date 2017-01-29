@@ -9,6 +9,12 @@ public class WeaponSpinner : Weapon {
 
 	public override void ShootMouse(Vector3 ShootLocationPosition, Vector2 Direction) {
 
+		if (!Player.Current.Weapon_Spinner) {
+
+			return;
+
+		}
+
 		if (InputManager.Current.GetButtonDown("Fire Weapon")) {
 
 			hasPressed = true;

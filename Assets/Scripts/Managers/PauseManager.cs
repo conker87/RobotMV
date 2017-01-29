@@ -70,8 +70,6 @@ public class PauseManager : MonoBehaviour {
 	[SerializeField]
 	PauseState pause = PauseState.NONE, changingStates;
 
-	bool canUnpause = true;
-
 	protected bool isCurrentlyPaused = false;
 
 	void Start() {

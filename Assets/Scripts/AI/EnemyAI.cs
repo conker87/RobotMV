@@ -207,7 +207,7 @@ public class EnemyAI : MonoBehaviour {
 
 		throw new UnityException("RandomlyGenerateWanderPosition needs to be Overriden inheritly.");
 
-		return new Vector2(float.MaxValue, -float.MaxValue);
+		// return new Vector2(float.MaxValue, -float.MaxValue);
 		
 	}
 

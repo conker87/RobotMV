@@ -8,7 +8,7 @@ public class UI_HealthBar : MonoBehaviour {
 
 	void Update () {
 
-		float percentageClamped = Mathf.Clamp01 (entity.VitalsD["HEALTH"] / entity.VitalsD["HEALTH_MAX"]);
+		float percentageClamped = Mathf.Clamp01 (entity.Health_Current / entity.Health_Max);
 		Vector3 percentageScale = new Vector3 (percentageClamped, 1, 1);
 
 		transform.localScale = percentageScale;

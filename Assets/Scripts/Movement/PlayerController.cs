@@ -102,7 +102,7 @@ public class PlayerController : MovementController {
 
 			if (!collisions.below || hasJumped) {
 
-				if (Player.Current.PowerUp_Triple_Jump && hasJumped && hasDoubleJumped && !hasTripleJumped) {
+				if (Player.Current.PowerUp_Jump_Triple && hasJumped && hasDoubleJumped && !hasTripleJumped) {
 
 					velocity.y = jumpVelocity;
 
@@ -110,7 +110,7 @@ public class PlayerController : MovementController {
 
 				}
 
-				if (Player.Current.PowerUp_Double_Jump && !hasDoubleJumped) {
+				if (Player.Current.PowerUp_Jump_Double && !hasDoubleJumped) {
 
 					velocity.y = jumpVelocity;
 
