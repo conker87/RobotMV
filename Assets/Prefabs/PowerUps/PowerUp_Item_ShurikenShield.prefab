@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4000011027367818}
-  - component: {fileID: 114605977002526500}
+  - component: {fileID: 114008823207967634}
   - component: {fileID: 212000011096963098}
   - component: {fileID: 61000011262216412}
   - component: {fileID: 50000014118006724}
@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013159829152}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4, y: -5.5, z: 0}
+  m_LocalPosition: {x: 13.07, y: -25.76, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -77,7 +77,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
---- !u!114 &114605977002526500
+--- !u!114 &114008823207967634
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -85,14 +85,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000013159829152}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be90426aa3d02f54989a44d162fd669f, type: 3}
+  m_Script: {fileID: 11500000, guid: d826157d457d9d94fbb0a25a039a9ac3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   PowerUpNameLocalisationID: COLLECTABLE_SHURIKEN_SHIELD
   PowerUpDescriptionLocalisationID: COLLECTABLE_SHURIKEN_SHIELD_DESC
-  PowerUpID: SHURIKEN_SHIELD
-  PowerUpD: 0
-  AddItem: 0
 --- !u!212 &212000011096963098
 SpriteRenderer:
   m_ObjectHideFlags: 1

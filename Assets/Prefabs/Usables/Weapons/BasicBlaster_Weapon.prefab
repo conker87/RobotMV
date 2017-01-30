@@ -43,17 +43,16 @@ MonoBehaviour:
   CollectableID: BASIC_BLASTER
   UsableNameLocalisationID: WEAPON_BASIC_BLASTER
   DescriptionLocalisationID: WEAPON_BASIC_BLASTER_DESC
-  AttackLength: 0
-  Damage: 1
+  InitialAttackLength: 0
+  InitialDamage: 1
   Level: 0
-  Cooldown: 0.033333335
-  Charges: 0
-  InitialProjectileMovementSpeed: 5
+  InitialCooldown: 0.06666667
+  InitialProjectileMovementSpeed: 7
   Projectiles:
   - {fileID: 11475610, guid: 67a5760b2e37c4d4bb07867a7c716c77, type: 2}
   projectileType: 0
   BasicBlasterChargedShotID: BASIC_BLASTER_CHARGED_SHOT
-  chargedShotMultiplier: 3
+  chargedShotMultiplier: 2
   chargedShotLevel: 3
   chargedShotProjectile: {fileID: 11475610, guid: 03ae5fc905e54ea45b6dfdd593ccfd01,
     type: 2}

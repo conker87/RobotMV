@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PowerUpWeaponChargedShot : PowerUp {
+public class PowerUpWeaponSplitter : PowerUp {
 
 	public override void Give() {
 		
-		Player.Current.Weapon_BasicBlaster_ChargedShot = true;
+		Player.Current.Weapon_Splitter = true;
 
 		base.Give ();
 

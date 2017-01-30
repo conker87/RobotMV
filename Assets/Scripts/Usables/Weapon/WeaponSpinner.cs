@@ -26,7 +26,6 @@ public class WeaponSpinner : Weapon {
 
 			spinnerTimer += Time.deltaTime;
 
-
 		}
 
 		// TODO: Change to InputManager.Current.GetButton("Fire Weapon")
@@ -46,19 +45,21 @@ public class WeaponSpinner : Weapon {
 
 				bool doesIgnoreGeometry = (spinnerTimer > (spinnerTimerMax / 2f)) ? true : false;
 
-				projectile.SetSettings (Direction, InitialProjectileMovementSpeed * multiplier, false, projectileType, Mathf.RoundToInt (Damage * multiplier * 5f),
+				projectile.SetSettings (Direction, InitialProjectileMovementSpeed * multiplier, false, projectileType, Mathf.RoundToInt (InitialDamage * multiplier * 5f),
 					Level, doesIgnoreGeometry, true);
 					
 				projectile.timesThroughEnemyMax = Mathf.RoundToInt (spinnerTimer * 2f);
 
 				projectile.GetComponent<RotateAtSpeed> ().rotationalSpeed *= (multiplier + 1f);
 
+				// TODO: Perhaps have it so that AttackLength governs the maximum time at which some projectiles live for?
+
 			}
 
 			Debug.Log ("cooldownTime = Time.time + Cooldown");
 
 			// Prevent firing again until after cooldown time
-			cooldownTime = Time.time + Cooldown;
+			cooldownTime = Time.time + InitialCooldown;
 
 			spinnerTimer = 0f;
 

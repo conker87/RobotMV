@@ -9,47 +9,47 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1000010520889936}
+  m_RootGameObject: {fileID: 1655082280362748}
   m_IsPrefabParent: 1
---- !u!1 &1000010520889936
+--- !u!1 &1655082280362748
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4000011872652682}
-  - component: {fileID: 114253200181669086}
-  - component: {fileID: 212000011577085618}
-  - component: {fileID: 61000011501057748}
-  - component: {fileID: 50000012632116628}
+  - component: {fileID: 4701472215733478}
+  - component: {fileID: 114839936731601172}
+  - component: {fileID: 212241713427151260}
+  - component: {fileID: 61575086491048962}
+  - component: {fileID: 50042643107332204}
   m_Layer: 14
-  m_Name: PowerUp_Weapon_BasicBlaster
+  m_Name: PowerUp_Weapon_BasicBlaster_ChargedShot 1
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4000011872652682
+--- !u!4 &4701472215733478
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010520889936}
+  m_GameObject: {fileID: 1655082280362748}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.18, y: -5.26, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 11.82, y: -28.01, z: 0}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50000012632116628
+--- !u!50 &50042643107332204
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010520889936}
+  m_GameObject: {fileID: 1655082280362748}
   m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -63,12 +63,12 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &61000011501057748
+--- !u!61 &61575086491048962
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010520889936}
+  m_GameObject: {fileID: 1655082280362748}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -77,28 +77,25 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
---- !u!114 &114253200181669086
+--- !u!114 &114839936731601172
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010520889936}
+  m_GameObject: {fileID: 1655082280362748}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be90426aa3d02f54989a44d162fd669f, type: 3}
+  m_Script: {fileID: 11500000, guid: c795d3794a5bc824bac1ef69c6f1f797, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PowerUpNameLocalisationID: COLLECTABLE_BASIC_BLASTER
-  PowerUpDescriptionLocalisationID: COLLECTABLE_BASIC_BLASTER_DESC
-  PowerUpID: BASIC_BLASTER
-  PowerUpD: 1
-  AddItem: 0
---- !u!212 &212000011577085618
+  PowerUpNameLocalisationID: COLLECTABLE_BASIC_BLASTER_CHARGED_SHOT
+  PowerUpDescriptionLocalisationID: COLLECTABLE_BASIC_BLASTER_CHARGED_SHOT_DESC
+--- !u!212 &212241713427151260
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010520889936}
+  m_GameObject: {fileID: 1655082280362748}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -125,6 +122,6 @@ SpriteRenderer:
   m_SortingLayerID: 323157195
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c1109a2542f89614aa201fc2de0ecd6c, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0

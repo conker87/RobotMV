@@ -11,13 +11,12 @@ public class Usables : MonoBehaviour {
 	public string		DescriptionLocalisationID = "LocalisationID <FIXME>";
 
 	[Header("Usable Attack Settings")]
-	public float		AttackLength;
-	public int 			Damage;
+	public float		InitialAttackLength, CurrentAttackLength;
+	public int 			InitialDamage, CurrentDamage;
 	public int			Level;
 
 	[Header("Usable Cooldown Settings")]
-	public float		Cooldown;
-	public int 			Charges;
+	public float		InitialCooldown, CurrentCooldown;
 
 	[Header("Usable Movement Settings")]
 

@@ -54,11 +54,10 @@ MonoBehaviour:
   CollectableID: BLACK_HOLE_BURST
   UsableNameLocalisationID: WEAPON_BLACK_HOLE_BURST
   DescriptionLocalisationID: WEAPON_BLACK_HOLE_BURST_DESC
-  AttackLength: 20
-  Damage: 1
+  InitialAttackLength: 0
+  InitialDamage: 1
   Level: 0
-  Cooldown: 30
-  Charges: 0
+  InitialCooldown: 20
   InitialProjectileMovementSpeed: 0
   Projectiles:
   - {fileID: 114889568425055286, guid: 6c0df5e42363ee642b67a337b6493546, type: 2}

@@ -12,10 +12,10 @@ public class WeaponMissileLauncher : Weapon {
 
 			Projectile projectile = Instantiate (Projectiles [random], ShootLocationPosition, Quaternion.identity) as Projectile;
 
-			projectile.SetSettings (Direction, InitialProjectileMovementSpeed, true, projectileType, Damage, Level);
+			projectile.SetSettings (Direction, InitialProjectileMovementSpeed, true, projectileType, InitialDamage, Level);
 
 			// Prevent firing again until after cooldown time
-			cooldownTime = Time.time + Cooldown;
+			cooldownTime = Time.time + InitialCooldown;
 
 		}
 

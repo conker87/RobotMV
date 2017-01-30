@@ -43,11 +43,10 @@ MonoBehaviour:
   CollectableID: MISSILE_LAUNCHER
   UsableNameLocalisationID: WEAPON_MISSILE_LAUNCHER
   DescriptionLocalisationID: WEAPON_MISSILE_LAUNCHER_DESC
-  AttackLength: 0
-  Damage: 3
+  InitialAttackLength: 0
+  InitialDamage: 5
   Level: 1
-  Cooldown: 1
-  Charges: 0
+  InitialCooldown: 1.5
   InitialProjectileMovementSpeed: 0
   Projectiles:
   - {fileID: 11475610, guid: ef660bded5ebd2949821fa7a321b06a8, type: 2}

@@ -11,7 +11,7 @@ GameObject:
   m_Layer: 10
   m_Name: ShootLocation
   m_TagString: Player
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2800000, guid: ef3f88195b0638848966229be1a08896, type: 3}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -43,8 +43,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 186462}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.202, y: -3.988, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalPosition: {x: 9.5, y: -27.25, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4000013207597610}
   - {fileID: 476404}
@@ -57,13 +57,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 169950}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.35, y: -0.01, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 431366}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &6176158
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -73,11 +73,11 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: -0.03}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.95, y: 2}
+  m_Size: {x: 0.25, y: 0.8125}
 --- !u!114 &11421016
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -91,8 +91,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EntityNameLocalisationID: PLAYER_MURV
   EntityDescLocalisationID: PLAYER_MURV_DESC
-  HealthRegenOn: 1
-  HealthRegenCooldown: 10
+  Health_Current: 1
+  Health_Max: 3
+  Health_RegenOn: 0
+  Health_RegenCooldown: 10
+  HEALTH_INFINITE: 0
   dead: 0
   hasInvincibilityTime: 1
   invincibilityTimeLength: 1
@@ -101,10 +104,54 @@ MonoBehaviour:
   MaximumMoveSpeed: 10
   CurrentItem: {fileID: 0}
   CurrentWeapon: {fileID: 0}
-  BombsRegenCooldown: 1
-  doBombsRegen: 1
-  BombsMegaRegenCooldown: 60
-  doBombsMegaRegen: 1
+  Weapon_BasicBlaster: 0
+  Weapon_BasicBlaster_AttackLengthMod: 1
+  Weapon_BasicBlaster_CooldownMod: 1
+  Weapon_BasicBlaster_DamageMod: 1
+  Weapon_BasicBlaster_ChargedShot: 0
+  Weapon_BasicBlaster_ChargedShot_AttackLengthMod: 1
+  Weapon_BasicBlaster_ChargedShot_CooldownMod: 1
+  Weapon_BasicBlaster_ChargedShot_DamageMod: 1
+  Weapon_BlackHoleBurst: 0
+  Weapon_BlackHoleBurst_AttackLengthMod: 1
+  Weapon_BlackHoleBurst_CooldownMod: 1
+  Weapon_BlackHoleBurst_DamageMod: 1
+  Weapon_Laser: 0
+  Weapon_Laser_AttackLengthMod: 1
+  Weapon_Laser_CooldownMod: 1
+  Weapon_Laser_DamageMod: 1
+  Weapon_MissileLauncher: 0
+  Weapon_MissileLauncher_AttackLengthMod: 1
+  Weapon_MissileLauncher_CooldownMod: 1
+  Weapon_MissileLauncher_DamageMod: 1
+  Weapon_Spinner: 0
+  Weapon_Spinner_AttackLengthMod: 1
+  Weapon_Spinner_CooldownMod: 1
+  Weapon_Spinner_DamageMod: 1
+  Weapon_Splitter: 0
+  Weapon_Splitter_AttackLengthMod: 1
+  Weapon_Splitter_CooldownMod: 1
+  Weapon_Splitter_DamageMod: 1
+  Item_Magnet: 0
+  Item_ShurikenShield: 0
+  Item_ShurikenShield_AttackLengthMod: 1
+  Item_ShurikenShield_CooldownMod: 1
+  Item_ShurikenShield_DamageMod: 1
+  SHURIKEN_SHIELD_INFINITE: 0
+  Item_EnergyShield: 0
+  Item_EnergyShield_AttackLengthMod: 1
+  Item_EnergyShield_CooldownMod: 1
+  Item_EnergyShield_DamageMod: 1
+  ENERGY_SHIELD_INFINITE: 0
+  PowerUp_Jump: 0
+  PowerUp_Jump_Double: 0
+  PowerUp_Jump_Triple: 0
+  Bombs_Current: 0
+  Bombs_Max: 0
+  BOMBS_INFINITE: 0
+  Bombs_Mega_Current: 0
+  Bombs_Mega_Max: 0
+  BOMBS_MEGA_INFINITE: 0
   CanChangeWeapon: 1
 --- !u!114 &11475602
 MonoBehaviour:
@@ -935,7 +982,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -354108773
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300002, guid: f7acd6a79c21736489629e8928bd622f, type: 3}
+  m_Sprite: {fileID: 21300002, guid: bce6406851b33e8498b680d6afd129e9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

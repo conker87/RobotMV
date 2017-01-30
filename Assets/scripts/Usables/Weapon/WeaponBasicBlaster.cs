@@ -6,10 +6,9 @@ public class WeaponBasicBlaster : Weapon {
 	[Header("Basic Blaster Append Settings")]
 	public string		BasicBlasterChargedShotID = "FIXME";
 
-	public float		chargedShotMultiplier;
-	public int			chargedShotLevel;
+	public int			ChargedShotMultiplier = 2;
 
-	public Projectile	chargedShotProjectile;
+	public Projectile	ChargedShotProjectile;
 
 	// Cooldown & Attack Length Time.time vars.
 	[SerializeField]
@@ -30,15 +29,18 @@ public class WeaponBasicBlaster : Weapon {
 
 			Projectile projectile = Instantiate (Projectiles [random], ShootLocationPosition, Quaternion.identity) as Projectile;
 
-			projectile.SetSettings (Direction, InitialProjectileMovementSpeed, false, projectileType, Damage, Level);
+			CurrentDamage = Mathf.RoundToInt (InitialDamage * Player.Current.Weapon_BasicBlaster_DamageMod);
+
+			projectile.SetSettings (Direction, InitialProjectileMovementSpeed, false, projectileType, CurrentDamage, Level);
 
 			// Prevent firing again until after cooldown time
-			cooldownTime = Time.time + Cooldown;
+			CurrentCooldown = InitialCooldown * Player.Current.Weapon_BasicBlaster_CooldownMod;
+			cooldownTime = Time.time + CurrentCooldown;
 
 		}
 
 		// Blaster Charged Shot
-		if (!Player.Current.Upgrade_BasicBlaster_ChargedShot) {
+		if (!Player.Current.Weapon_BasicBlaster_ChargedShot) {
 
 			return;
 
@@ -78,9 +80,11 @@ public class WeaponBasicBlaster : Weapon {
 			Projectile projectile = Instantiate (chargedShotProjectile, ShootLocationPosition, Quaternion.identity) as Projectile;
 
 			projectile.name = projectile.name + "_ChargedShot";
-			projectile.transform.localScale *= chargedShotMultiplier / 2f;
+			projectile.transform.localScale *= (ChargedShotMultiplier / 1.5f);
 
-			projectile.SetSettings (Direction, InitialProjectileMovementSpeed * (chargedShotMultiplier / 2f), false, projectileType, Mathf.RoundToInt(Damage * chargedShotMultiplier), chargedShotLevel);
+			int currentDamage = Mathf.RoundToInt (InitialDamage * ChargedShotMultiplier * Player.Current.Weapon_BasicBlaster_DamageMod);
+
+			projectile.SetSettings (Direction, InitialProjectileMovementSpeed * (ChargedShotMultiplier / 2f), false, projectileType, currentDamage, Level * ChargedShotMultiplier);
 
 		}
 

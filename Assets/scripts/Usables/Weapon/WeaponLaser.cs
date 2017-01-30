@@ -39,7 +39,7 @@ public class WeaponLaser : Weapon {
 
 		if (InputManager.Current.GetButtonDown("Fire Weapon")) {
 
-			attackLengthTime = Time.time + AttackLength;
+			attackLengthTime = Time.time + InitialAttackLength;
 
 		}
 
@@ -73,7 +73,7 @@ public class WeaponLaser : Weapon {
 								// the attack length. The attack length will then be reduced via power ups
 								// this effectively inccreases DPS by reducing cast time.
 								// TODO: damage, speed and cooldown need power ups too.
-							e.DamageHealth(Damage);
+							e.DamageHealth(InitialDamage);
 
 						}
 
@@ -113,7 +113,7 @@ public class WeaponLaser : Weapon {
 					Player.Current.CanChangeWeapon = true;
 
 					// Prevent firing again until after cooldown time
-					cooldownTime = Time.time + Cooldown;
+					cooldownTime = Time.time + InitialCooldown;
 
 					hasBeenFiring = false;
 
@@ -132,7 +132,7 @@ public class WeaponLaser : Weapon {
 				hasBeenFiring = false;
 
 				// Prevent firing again until after cooldown time
-				cooldownTime = Time.time + Cooldown;
+				cooldownTime = Time.time + InitialCooldown;
 
 			}
 

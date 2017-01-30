@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4961149323752306}
-  - component: {fileID: 114522697952714982}
+  - component: {fileID: 114300926680038204}
   - component: {fileID: 212122716619549006}
   - component: {fileID: 61590084217901448}
   - component: {fileID: 50711896762385480}
@@ -37,8 +37,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1342557206681126}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4, y: -5.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 11.82, y: -28.01, z: 0}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -77,7 +77,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
---- !u!114 &114522697952714982
+--- !u!114 &114300926680038204
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -85,14 +85,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1342557206681126}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be90426aa3d02f54989a44d162fd669f, type: 3}
+  m_Script: {fileID: 11500000, guid: c795d3794a5bc824bac1ef69c6f1f797, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   PowerUpNameLocalisationID: COLLECTABLE_BASIC_BLASTER_CHARGED_SHOT
   PowerUpDescriptionLocalisationID: COLLECTABLE_BASIC_BLASTER_CHARGED_SHOT_DESC
-  PowerUpID: BASIC_BLASTER_CHARGED_SHOT
-  PowerUpD: 1
-  AddItem: 0
 --- !u!212 &212122716619549006
 SpriteRenderer:
   m_ObjectHideFlags: 1

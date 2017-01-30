@@ -10,20 +10,54 @@ public class Player : Entity
 	public static string ErrorMessage = "";
 
 	[Header("Weapons")]
-	public bool Weapon_BasicBlaster = false;
-	public bool Upgrade_BasicBlaster_ChargedShot = false;
-	public bool Weapon_BlackHoleBurst = false;
-	public bool Weapon_Laser = false;
-	public bool Weapon_MissileLauncher = false;
-	public bool Weapon_Spinner = false;
-	public bool Weapon_Splitter = false;
+	public bool 	Weapon_BasicBlaster = false;
+	public float 	// Weapon_BasicBlaster_AttackLengthMod = 1f,
+					Weapon_BasicBlaster_CooldownMod = 1f,
+					Weapon_BasicBlaster_DamageMod = 1f;
+
+	public bool 	Weapon_BasicBlaster_ChargedShot = false;
+	public float 	// Weapon_BasicBlaster_ChargedShot_AttackLengthMod = 1f,
+					// Weapon_BasicBlaster_ChargedShot_CooldownMod = 1f,
+					Weapon_BasicBlaster_ChargedShot_DamageMod = 1f;
+
+	public bool 	Weapon_BlackHoleBurst = false;
+	public float 	Weapon_BlackHoleBurst_AttackLengthMod = 1f,
+					Weapon_BlackHoleBurst_CooldownMod = 1f,
+					Weapon_BlackHoleBurst_DamageMod = 1f;
+
+	public bool 	Weapon_Laser = false;
+	public float 	Weapon_Laser_AttackLengthMod = 1f,
+					Weapon_Laser_CooldownMod = 1f,
+					Weapon_Laser_DamageMod = 1f;
+
+	public bool	 	Weapon_MissileLauncher = false;
+	public float 	// Weapon_MissileLauncher_AttackLengthMod = 1f,
+					Weapon_MissileLauncher_CooldownMod = 1f,
+					Weapon_MissileLauncher_DamageMod = 1f;
+
+	public bool 	Weapon_Spinner = false;
+	public float 	Weapon_Spinner_AttackLengthMod = 1f,
+					Weapon_Spinner_CooldownMod = 1f,
+					Weapon_Spinner_DamageMod = 1f;
+
+	public bool 	Weapon_Splitter = false;
+	public float 	// Weapon_Splitter_AttackLengthMod = 1f,
+					Weapon_Splitter_CooldownMod = 1f,
+					Weapon_Splitter_DamageMod = 1f;
 
 	[Header("Items")]
-	public bool Item_Magnet = false;
-	public bool Item_ShurikenShield = false;
-	public bool Item_EnergyShield = false;
+	public bool		Item_Magnet = false;
 
+	public bool 	Item_ShurikenShield = false;
+	public float 	Item_ShurikenShield_AttackLengthMod = 1f,
+					Item_ShurikenShield_CooldownMod = 1f,
+					Item_ShurikenShield_DamageMod = 1f;
 	public bool SHURIKEN_SHIELD_INFINITE = false;
+
+	public bool 	Item_EnergyShield = false;
+	public float 	Item_EnergyShield_AttackLengthMod = 1f,
+					Item_EnergyShield_CooldownMod = 1f,
+					Item_EnergyShield_DamageMod = 1f;
 	public bool ENERGY_SHIELD_INFINITE = false;
 
 	[Header("PowerUps")]
@@ -35,7 +69,7 @@ public class Player : Entity
 
 	[Header("Bombs")]
 	public int		Bombs_Current = 0;
-	public int Bombs_Max = 0;
+	public int 		Bombs_Max = 0;
 	public bool 	BOMBS_INFINITE = false;
 
 	public int 		Bombs_Mega_Current = 0, Bombs_Mega_Max = 0;

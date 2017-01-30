@@ -54,11 +54,11 @@ MonoBehaviour:
   CollectableID: SPLITTER
   UsableNameLocalisationID: WEAPON_SPLITTER
   DescriptionLocalisationID: WEAPON_SPLITTER_DESC
-  AttackLength: 0
-  Damage: 0
+  InitialAttackLength: 0
+  InitialDamage: 5
   Level: 5
-  Cooldown: 1
-  Charges: 0
+  InitialCooldown: 0.33333334
+  InitialProjectileMovementSpeed: 0
   Projectiles:
   - {fileID: 114399354632120090, guid: 7d189a25cf504fa4ea1f1499ec66908a, type: 2}
   projectileType: 0

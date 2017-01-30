@@ -84,6 +84,8 @@ public class Entity : MonoBehaviour {
 
 	public virtual void DamageHealth(int damage) {
 
+		Debug.Log ("Hitting " + this + " with damage: " + damage);
+
 		if (isCurrentlyInInvulnerabilityTime || HEALTH_INFINITE) {
 
 			return;

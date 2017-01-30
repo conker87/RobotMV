@@ -24,10 +24,10 @@ public abstract class Weapon : Usables {
 
 			Projectile projectile = Instantiate (Projectiles [random], ShootLocationPosition, Quaternion.identity) as Projectile;
 
-			projectile.SetSettings (Direction, InitialProjectileMovementSpeed, false, projectileType, Damage, Level);
+			projectile.SetSettings (Direction, InitialProjectileMovementSpeed, false, projectileType, InitialDamage, Level);
 
 			// Prevent firing again until after cooldown time
-			cooldownTime = Time.time + Cooldown;
+			cooldownTime = Time.time + InitialCooldown;
 
 		}
 
