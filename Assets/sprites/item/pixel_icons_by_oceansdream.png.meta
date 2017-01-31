@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: c1109a2542f89614aa201fc2de0ecd6c
-timeCreated: 1469392340
+timeCreated: 1485876986
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -8,18 +8,18 @@ TextureImporter:
     21300002: pixel_icons_by_oceansdream_1
     21300004: Grenades[PH]
     21300006: pixel_icons_by_oceansdream_3
-    21300008: pixel_icons_by_oceansdream_4
+    21300008: Projectile_Missile
     21300010: pixel_icons_by_oceansdream_5
     21300012: MissileLauncher[PH]
     21300014: pixel_icons_by_oceansdream_7
     21300016: pixel_icons_by_oceansdream_8
-    21300018: pixel_icons_by_oceansdream_9
+    21300018: Splitter[PH]
     21300020: pixel_icons_by_oceansdream_10
     21300022: pixel_icons_by_oceansdream_11
     21300024: pixel_icons_by_oceansdream_12
     21300026: pixel_icons_by_oceansdream_13
     21300028: pixel_icons_by_oceansdream_14
-    21300030: pixel_icons_by_oceansdream_15
+    21300030: Spinner[PH]
     21300032: LaserBeam[PH]
     21300034: pixel_icons_by_oceansdream_17
     21300036: pixel_icons_by_oceansdream_18
@@ -40,12 +40,12 @@ TextureImporter:
     21300066: pixel_icons_by_oceansdream_33
     21300068: pixel_icons_by_oceansdream_34
     21300070: pixel_icons_by_oceansdream_35
-  serializedVersion: 2
+  serializedVersion: 4
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
+    sRGBTexture: 1
     linearTexture: 0
-    correctGamma: 0
     fadeOut: 0
     borderMipMap: 0
     mipMapFadeDistanceStart: 1
@@ -57,10 +57,8 @@ TextureImporter:
     normalMapFilter: 0
   isReadable: 0
   grayScaleToAlpha: 0
-  generateCubemap: 0
+  generateCubemap: 6
   cubemapConvolution: 0
-  cubemapConvolutionSteps: 7
-  cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -3
   maxTextureSize: 256
@@ -71,9 +69,7 @@ TextureImporter:
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
-  rGBM: 0
   compressionQuality: 50
-  allowsAlphaSplitting: 0
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
@@ -81,12 +77,44 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 24
+  alphaUsage: 1
   alphaIsTransparency: 1
+  spriteTessellationDetail: -1
   textureType: 8
-  buildTargetSettings: []
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 256
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 256
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 256
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
   spriteSheet:
+    serializedVersion: 2
     sprites:
-    - name: BasicBlaster[PH]
+    - serializedVersion: 2
+      name: BasicBlaster[PH]
       rect:
         serializedVersion: 2
         x: 0
@@ -97,7 +125,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: pixel_icons_by_oceansdream_1
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: pixel_icons_by_oceansdream_1
       rect:
         serializedVersion: 2
         x: 24
@@ -108,7 +138,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Grenades[PH]
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Grenades[PH]
       rect:
         serializedVersion: 2
         x: 48
@@ -119,7 +151,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: pixel_icons_by_oceansdream_3
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: pixel_icons_by_oceansdream_3
       rect:
         serializedVersion: 2
         x: 72
@@ -130,10 +164,25 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: pixel_icons_by_oceansdream_4
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Projectile_Missile
       rect:
         serializedVersion: 2
-        x: 96
+        x: 103
+        y: 122
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: pixel_icons_by_oceansdream_5
+      rect:
+        serializedVersion: 2
+        x: 120
         y: 120
         width: 24
         height: 24
@@ -141,18 +190,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: pixel_icons_by_oceansdream_5
-      rect:
-        serializedVersion: 2
-        x: 120
-        y: 120
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: MissileLauncher[PH]
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: MissileLauncher[PH]
       rect:
         serializedVersion: 2
         x: 0
@@ -163,7 +203,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: pixel_icons_by_oceansdream_7
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: pixel_icons_by_oceansdream_7
       rect:
         serializedVersion: 2
         x: 24
@@ -174,7 +216,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: pixel_icons_by_oceansdream_8
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: pixel_icons_by_oceansdream_8
       rect:
         serializedVersion: 2
         x: 48
@@ -185,7 +229,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: pixel_icons_by_oceansdream_9
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Splitter[PH]
       rect:
         serializedVersion: 2
         x: 72
@@ -196,7 +242,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: pixel_icons_by_oceansdream_10
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: pixel_icons_by_oceansdream_10
       rect:
         serializedVersion: 2
         x: 96
@@ -207,7 +255,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: pixel_icons_by_oceansdream_11
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: pixel_icons_by_oceansdream_11
       rect:
         serializedVersion: 2
         x: 120
@@ -218,7 +268,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: pixel_icons_by_oceansdream_12
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: pixel_icons_by_oceansdream_12
       rect:
         serializedVersion: 2
         x: 0
@@ -229,7 +281,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: pixel_icons_by_oceansdream_13
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: pixel_icons_by_oceansdream_13
       rect:
         serializedVersion: 2
         x: 24
@@ -240,7 +294,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: pixel_icons_by_oceansdream_14
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: pixel_icons_by_oceansdream_14
       rect:
         serializedVersion: 2
         x: 48
@@ -251,7 +307,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: pixel_icons_by_oceansdream_15
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Spinner[PH]
       rect:
         serializedVersion: 2
         x: 72
@@ -262,7 +320,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: LaserBeam[PH]
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: LaserBeam[PH]
       rect:
         serializedVersion: 2
         x: 96
@@ -273,7 +333,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: pixel_icons_by_oceansdream_17
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: pixel_icons_by_oceansdream_17
       rect:
         serializedVersion: 2
         x: 120
@@ -284,7 +346,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: pixel_icons_by_oceansdream_18
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: pixel_icons_by_oceansdream_18
       rect:
         serializedVersion: 2
         x: 0
@@ -295,7 +359,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: pixel_icons_by_oceansdream_19
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: pixel_icons_by_oceansdream_19
       rect:
         serializedVersion: 2
         x: 24
@@ -306,7 +372,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: pixel_icons_by_oceansdream_20
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: pixel_icons_by_oceansdream_20
       rect:
         serializedVersion: 2
         x: 48
@@ -317,7 +385,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: pixel_icons_by_oceansdream_21
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: pixel_icons_by_oceansdream_21
       rect:
         serializedVersion: 2
         x: 72
@@ -328,7 +398,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: pixel_icons_by_oceansdream_22
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: pixel_icons_by_oceansdream_22
       rect:
         serializedVersion: 2
         x: 96
@@ -339,7 +411,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: pixel_icons_by_oceansdream_23
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: pixel_icons_by_oceansdream_23
       rect:
         serializedVersion: 2
         x: 120
@@ -350,7 +424,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: pixel_icons_by_oceansdream_24
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: pixel_icons_by_oceansdream_24
       rect:
         serializedVersion: 2
         x: 0
@@ -361,7 +437,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: pixel_icons_by_oceansdream_25
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: pixel_icons_by_oceansdream_25
       rect:
         serializedVersion: 2
         x: 24
@@ -372,7 +450,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: pixel_icons_by_oceansdream_26
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: pixel_icons_by_oceansdream_26
       rect:
         serializedVersion: 2
         x: 48
@@ -383,7 +463,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: pixel_icons_by_oceansdream_27
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: pixel_icons_by_oceansdream_27
       rect:
         serializedVersion: 2
         x: 72
@@ -394,7 +476,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: pixel_icons_by_oceansdream_28
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: pixel_icons_by_oceansdream_28
       rect:
         serializedVersion: 2
         x: 96
@@ -405,7 +489,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: pixel_icons_by_oceansdream_29
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: pixel_icons_by_oceansdream_29
       rect:
         serializedVersion: 2
         x: 120
@@ -416,7 +502,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: pixel_icons_by_oceansdream_30
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: pixel_icons_by_oceansdream_30
       rect:
         serializedVersion: 2
         x: 0
@@ -427,7 +515,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: pixel_icons_by_oceansdream_31
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: pixel_icons_by_oceansdream_31
       rect:
         serializedVersion: 2
         x: 24
@@ -438,7 +528,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: pixel_icons_by_oceansdream_32
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: pixel_icons_by_oceansdream_32
       rect:
         serializedVersion: 2
         x: 48
@@ -449,7 +541,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: pixel_icons_by_oceansdream_33
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: pixel_icons_by_oceansdream_33
       rect:
         serializedVersion: 2
         x: 72
@@ -460,7 +554,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: pixel_icons_by_oceansdream_34
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: pixel_icons_by_oceansdream_34
       rect:
         serializedVersion: 2
         x: 96
@@ -471,7 +567,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: pixel_icons_by_oceansdream_35
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: pixel_icons_by_oceansdream_35
       rect:
         serializedVersion: 2
         x: 120
@@ -482,6 +580,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      tessellationDetail: -1
     outline: []
   spritePackingTag: 
   userData: 

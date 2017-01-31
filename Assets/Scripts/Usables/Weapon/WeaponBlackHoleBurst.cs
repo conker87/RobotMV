@@ -19,7 +19,8 @@ public class WeaponBlackHoleBurst : Weapon {
 			Projectile projectile = Instantiate (Projectiles [random], ShootLocationPosition, Quaternion.identity) as Projectile;
 			projectile.SetSettings (Direction, InitialProjectileMovementSpeed, false, projectileType, CurrentDamage, Level);
 
-			projectile.DestroyInSeconds = InitialAttackLength;
+			CurrentAttackLength = InitialAttackLength * Player.Current.Weapon_BlackHoleBurst_AttackLengthMod;
+			projectile.DestroyInSeconds = CurrentAttackLength;
 
 			// Prevent firing again until after cooldown time
 			CurrentCooldown = InitialCooldown * Player.Current.Weapon_BlackHoleBurst_CooldownMod;
