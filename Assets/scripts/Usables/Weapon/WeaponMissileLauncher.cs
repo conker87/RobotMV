@@ -12,7 +12,7 @@ public class WeaponMissileLauncher : Weapon {
 		}
 
 		// TODO: Change to InputManager.Current.GetButton("Fire Weapon")
-		if (InputManager.Current.GetButtonDown("Fire Weapon") || Input.GetMouseButtonDown (0)) {
+		if (InputManager.Current.GetButtonDown("Fire Weapon")) {
 
 			int random = Random.Range (0, Projectiles.Length);
 			CurrentDamage = Mathf.RoundToInt (InitialDamage * Player.Current.Weapon_MissileLauncher_DamageMod);

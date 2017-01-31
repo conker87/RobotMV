@@ -19,7 +19,7 @@ public class DoorSwitch : Door {
 
 	protected override void Update () {
 
-		DoCircleCheck (willDoorStayOpen);
+		base.Update ();
 
 		DoSwitchCheck ();
 
@@ -58,7 +58,10 @@ public class DoorSwitch : Door {
 
 					if (andGateCounter == switches.Length) {
 
-						anim.SetBool ("open", true);
+						// anim.SetBool ("open", true);
+
+						OpenDoor ();
+
 						lastSwitch = null;
 						andGateCounter = 0;
 						timeToClose = Time.time + doorOpenLength;
@@ -71,8 +74,13 @@ public class DoorSwitch : Door {
 
 					if (currentSwitch.switchState == SwitchState.ON) {
 
-						anim.SetBool ("open", true);
+						// anim.SetBool ("open", true);
+						SwitchResetInSeconds currentSwitchReset;
+
+						OpenDoor ();
+
 						timeToClose = Time.time + doorOpenLength;
+						// timeToClose = ((currentSwitchReset = currentSwitch.GetComponent<SwitchResetInSeconds>()) != null) ? Time.time + currentSwitchReset.resetInSeconds : Time.time + doorOpenLength;
 
 						return;
 

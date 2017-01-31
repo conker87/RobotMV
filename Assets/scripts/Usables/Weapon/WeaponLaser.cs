@@ -14,7 +14,7 @@ public class WeaponLaser : Weapon {
 	bool hasBeenFiring = false;
 
 	[SerializeField]
-	float tickTimer = 10f, nextTickTime;
+	float attacksPerAttackLength = 10f, nextTickTime;
 
 	[Header("EXTENDED")]
 	[SerializeField] Switch s;
@@ -33,25 +33,27 @@ public class WeaponLaser : Weapon {
 		
 	public override void ShootMouse(Vector3 ShootLocationPosition, Vector2 Direction) {
 
+		// Prevent the weapon from being used if the Player does not have the Weapon.
 		if (!Player.Current.Weapon_Laser) {
 
 			return;
 
 		}
 
-
+		// If the button to Fire is press down then set the attckLengthTime to the current time plus the current Attack Length modifier.
 		if (InputManager.Current.GetButtonDown("Fire Weapon")) {
 
-			attackLengthTime = Time.time + InitialAttackLength;
+			CurrentAttackLength = InitialAttackLength * Player.Current.Weapon_Laser_AttackLengthMod;
+			attackLengthTime = Time.time + CurrentAttackLength;
 
 		}
 
-		// Debug.Log ("Time.time: " + Time.time + " attackLengthTime: " + attackLengthTime);
-
+		// As long as the current time is less than the calculated total attack length modifier then continue to fire the weapon.
 		if (Time.time < attackLengthTime) {
 
 			if (InputManager.Current.GetButton("Fire Weapon")) {
 
+				// The Player cannot change their weapon during the firing state, this is less a gameplay issue more an issue with the line renderer.
 				Player.Current.CanChangeWeapon = false;
 				hasBeenFiring = true;
 
@@ -65,23 +67,23 @@ public class WeaponLaser : Weapon {
 
 					line.numPositions = 3;
 
+					// Set an extra position for the laser to .1 units more to make sure the laser looks like it's hitting the collider.
 					line.SetPosition (1, hit.point);
 					line.SetPosition (2, hit.point + (Direction.normalized * .1f));
 
+					// If the collider of the hit point has a component of Entity then deal damage to the enemy 10 times a period of the total Attack Length.
 					if ((e = hit.collider.gameObject.GetComponentInParent<Entity> ()) != null) {
 
+						// Some destructable blocks will have the Entity component which allows the use of Bombs and Mega Bombs on them, these blocks are tagged as
+						//	"Geometry"
 						if (e.tag != "Geometry") {
 
-							// TODO: There hould be a "tick" timer that deals damage a set number of times over
-								// the attack length. The attack length will then be reduced via power ups
-								// this effectively inccreases DPS by reducing cast time.
-								// TODO: damage, speed and cooldown need power ups too.
 							if (Time.time > nextTickTime) {
 								
 								int currentDamage = Mathf.RoundToInt (InitialDamage * Player.Current.Weapon_Laser_DamageMod);
 								e.DamageHealth (currentDamage);
 
-								nextTickTime += Time.time + (attackLengthTime); // / tickTimer);
+								nextTickTime = Time.time + (CurrentAttackLength / attacksPerAttackLength);
 
 							}
 
@@ -89,15 +91,20 @@ public class WeaponLaser : Weapon {
 
 					}
 
+					// If the collider of the hit point has a component of Switch and the level of the Laser is more than/equal to switch level then trigger it.
 					if ((s = hit.collider.gameObject.GetComponentInParent<Switch> ()) != null) {
 
-						s.TriggerSwitch ();
+						if (Level >= s.weaponLevel) {
+							s.TriggerSwitch ();
+						}
 
 					}
 
+					// If the collider of the hit point has a component of Door, specifically the Projectile variant and the level of the Laser is more than/equal
+					// 	to door level and it is not currently open then trigger it
 					if ((d = hit.collider.gameObject.GetComponent<DoorProjectile> ()) != null) {
 
-						if (Player.Current.CurrentWeapon.Level >= d.doorLevel && d.IsDoorOpen () == false) {
+						if (Level >= d.doorLevel && d.IsDoorOpen () == false) {
 
 							d.OpenDoor ();
 
@@ -107,22 +114,23 @@ public class WeaponLaser : Weapon {
 
 				} else {
 
+					// Without a hit point the laser just has 2 positions, the last one being in the direction of fire times the length of the laser.
 					line.numPositions = 2;
 
-					line.SetPosition (1, (Vector3)(ShootLocationPosition + (Vector3)(Direction.normalized * laserLength)));
+					line.SetPosition (1, (Vector2) ShootLocationPosition + (Vector2) (Direction.normalized * laserLength));
 
 				}
 
 			} else {
 
-				// Debug.Log ("hasBeenFiring: " + hasBeenFiring);
-
+				// If the laser has been firing then disable the laser, allow the Player to change weapons, add on the cooldown and reset the firing bool.
 				if (hasBeenFiring) {
 
 					line.enabled = false;
 					Player.Current.CanChangeWeapon = true;
 
 					// Prevent firing again until after cooldown time
+					CurrentCooldown = InitialCooldown * Player.Current.Weapon_Laser_CooldownMod;
 					cooldownTime = Time.time + InitialCooldown;
 
 					hasBeenFiring = false;
@@ -132,17 +140,18 @@ public class WeaponLaser : Weapon {
 			}
 
 		} else {
-
+			
+			// If the laser has been firing then disable the laser, allow the Player to change weapons, add on the cooldown and reset the firing bool.
 			if (hasBeenFiring) {
-
-				// Debug.Log ("Time.time > attackLengthTime");
 
 				line.enabled = false;
 				Player.Current.CanChangeWeapon = true;
-				hasBeenFiring = false;
 
 				// Prevent firing again until after cooldown time
+				CurrentCooldown = InitialCooldown * Player.Current.Weapon_Laser_CooldownMod;
 				cooldownTime = Time.time + InitialCooldown;
+
+				hasBeenFiring = false;
 
 			}
 

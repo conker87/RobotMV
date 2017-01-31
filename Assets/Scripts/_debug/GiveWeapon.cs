@@ -24,6 +24,12 @@ public class GiveWeapon : MonoBehaviour {
 
 			foreach (KeyCode code in Enum.GetValues (typeof(KeyCode))) {
 
+				if (!Player.Current.CanChangeWeapon) {
+
+					break;
+
+				}
+
 				if (Input.GetKeyDown (code)) {
 
 					int check = 0;
