@@ -12,14 +12,14 @@ public class Usables : MonoBehaviour {
 
 	[Header("Usable Attack Settings")]
 	public float 		InitialAttackLength;
-	protected float		CurrentAttackLength;
+	[SerializeField] protected float		CurrentAttackLength;
 	public int 			InitialDamage;
-	protected int 		CurrentDamage;
+	[SerializeField] protected int 		CurrentDamage;
 	public int			Level;
 
 	[Header("Usable Cooldown Settings")]
 	public float 		InitialCooldown;
-	protected float 	CurrentCooldown;
+	[SerializeField] protected float 	CurrentCooldown;
 
 	[Header("Usable Movement Settings")]
 

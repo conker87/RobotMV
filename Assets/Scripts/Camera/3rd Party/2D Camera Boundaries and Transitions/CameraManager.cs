@@ -21,9 +21,14 @@ public class CameraManager : MonoBehaviour {
     [Header("Area Elements")]
     [SerializeField] private int currentArea = 0;
     [SerializeField] private List<GameObject> listAreaNodes = new List<GameObject>();
+	private static List<GameObject> listAreaNodes_Static = new List<GameObject>();
+
+	public static int staticCurrentArea = 0;
 
     void Start() {
         orthographicsize_base = Camera.main.orthographicSize;
+
+		listAreaNodes_Static = listAreaNodes;
 
         if (focusObject != null)
             FocusObject = focusObject;
@@ -91,7 +96,7 @@ public class CameraManager : MonoBehaviour {
         int previousArea = currentArea;
 
         foreach (GameObject n in listAreaNodes) {
-			
+
             if (GetAreaRect(listAreaNodes.IndexOf(n)).Contains(followtarget)) {
 				
                 previousArea = listAreaNodes.IndexOf(n);
@@ -99,21 +104,33 @@ public class CameraManager : MonoBehaviour {
                 if (previousArea == currentArea) { return; }
                 currentArea = previousArea;
 
-				Debug.Log("new area: " + currentArea.ToString() + ", name of prefab: " + n.name);
-
-				ShowAreaNameOnScreen(n.name);
+				staticCurrentArea = currentArea;
 
             }
+
         }
+
     }
 
-	private void ShowAreaNameOnScreen(string name) {
+	public static int GetCurrentAreaIndex() {
 
-		DisableInSeconds disable = areaTextName.GetComponent<DisableInSeconds> ();
+		return staticCurrentArea;
 
-		areaTextName.text = name + " ";
-		disable.Reset (3f);
+	}
 
+	public static int GetAreaIDForRoom(GameObject roomGameObject) {
+
+		foreach (GameObject n in listAreaNodes_Static) {
+
+			if (roomGameObject.GetInstanceID() == n.GetInstanceID()) {
+
+				return listAreaNodes_Static.IndexOf (n);
+
+			}
+
+		}
+
+		return -1;
 
 	}
 

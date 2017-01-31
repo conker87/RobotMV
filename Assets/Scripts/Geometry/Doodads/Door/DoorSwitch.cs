@@ -79,8 +79,7 @@ public class DoorSwitch : Door {
 
 						OpenDoor ();
 
-						timeToClose = Time.time + doorOpenLength;
-						// timeToClose = ((currentSwitchReset = currentSwitch.GetComponent<SwitchResetInSeconds>()) != null) ? Time.time + currentSwitchReset.resetInSeconds : Time.time + doorOpenLength;
+						timeToClose = ((currentSwitchReset = currentSwitch.GetComponent<SwitchResetInSeconds>()) != null) ? Time.time + currentSwitchReset.resetInSeconds : Time.time + doorOpenLength;
 
 						return;
 

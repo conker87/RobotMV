@@ -55,9 +55,12 @@ MonoBehaviour:
   UsableNameLocalisationID: WEAPON_SPLITTER
   DescriptionLocalisationID: WEAPON_SPLITTER_DESC
   InitialAttackLength: 0
+  CurrentAttackLength: 0
   InitialDamage: 5
+  CurrentDamage: 0
   Level: 5
   InitialCooldown: 0.33333334
+  CurrentCooldown: 0
   InitialProjectileMovementSpeed: 0
   Projectiles:
   - {fileID: 114399354632120090, guid: 7d189a25cf504fa4ea1f1499ec66908a, type: 2}

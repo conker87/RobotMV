@@ -23,6 +23,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 491144}
+  - component: {fileID: 114270277198782450}
   m_Layer: 0
   m_Name: AreaNodeStart
   m_TagString: Untagged
@@ -37,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 144786}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 15.5, y: -12.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 491144}
@@ -50,7 +51,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 166548}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 7.25, y: -18.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 482378}
@@ -68,3 +69,18 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 166548}
   m_IsPrefabParent: 1
+--- !u!114 &114270277198782450
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 166548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 391719a0733dd6746baa43adcfd0cbf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RoomNameLocalisationID: ROOM_STARTING_AREA
+  roomID: 0
+  isCurrentlyInThisRoom: 0
+  AreaText: {fileID: 0}

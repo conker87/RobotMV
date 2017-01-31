@@ -16,8 +16,6 @@ public class WeaponSplitter : Weapon {
 			int random = Random.Range (0, Projectiles.Length);
 			CurrentDamage = Mathf.RoundToInt (InitialDamage * Player.Current.Weapon_Splitter_DamageMod);
 
-			Debug.Log (CurrentDamage);
-
 			Projectile projectile = Instantiate (Projectiles [random], ShootLocationPosition, Quaternion.identity) as Projectile;
 			projectile.SetSettings (Direction, 3f, true, projectileType, CurrentDamage, Level);
 

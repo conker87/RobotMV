@@ -9,117 +9,110 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1114081295882504}
+  m_RootGameObject: {fileID: 1103825385337958}
   m_IsPrefabParent: 1
---- !u!1 &1114081295882504
+--- !u!1 &1103825385337958
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4188617808724286}
-  - component: {fileID: 114006283344859084}
-  - component: {fileID: 114011272815474490}
-  - component: {fileID: 212295474425164996}
-  - component: {fileID: 58945481379506846}
-  - component: {fileID: 50126045070845262}
-  m_Layer: 0
-  m_Name: BlackHoleBurst_Child_2_Projectile
-  m_TagString: Untagged
+  - component: {fileID: 4447489614681422}
+  - component: {fileID: 114078084369185870}
+  - component: {fileID: 212611754591435296}
+  - component: {fileID: 58765848547703926}
+  - component: {fileID: 58028195716250706}
+  m_Layer: 13
+  m_Name: _DEBUG_JeromBoss_1
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4188617808724286
+--- !u!4 &4447489614681422
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1114081295882504}
+  m_GameObject: {fileID: 1103825385337958}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 8.17, y: -11.3, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50126045070845262
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1114081295882504}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!58 &58945481379506846
+--- !u!58 &58028195716250706
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1114081295882504}
+  m_GameObject: {fileID: 1103825385337958}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 6, y: -1.98}
   serializedVersion: 2
-  m_Radius: 0.109375
---- !u!114 &114006283344859084
+  m_Radius: 1.83
+--- !u!58 &58765848547703926
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1103825385337958}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: -6, y: -1.98}
+  serializedVersion: 2
+  m_Radius: 1.83
+--- !u!114 &114078084369185870
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1114081295882504}
+  m_GameObject: {fileID: 1103825385337958}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b5373759037bac4e9c37bb3bd09aab9, type: 3}
+  m_Script: {fileID: 11500000, guid: 774aa37c59c40144ab3b7fa757d41c10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProjectileNameLocalisationID: PROJECTILE_BLACK_HOLE_BURST_CHILD
-  Direction: {x: 0, y: 0, z: 0}
-  MovementSpeed: 1
-  ProjectileRotatesToDirection: 0
-  ProjectileType: 0
-  ProjectileDamage: 0
-  WeaponLevel: 0
-  IgnoreGeometry: 0
-  DestroyOnHit: 1
-  DestroyInSecondsOn: 1
-  DestroyInSeconds: 5
-  onDeathObjectSpawn: {fileID: 0}
-  DoOverrideParentMovementSpeed: 0
---- !u!114 &114011272815474490
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1114081295882504}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8db64df4fd2ef2e489415c206b79c01c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationalSpeed: 225
---- !u!212 &212295474425164996
+  EntityNameLocalisationID: Localisation <FIXME>
+  EntityDescLocalisationID: Localisation <FIXME>
+  Health_Current: 500
+  Health_Max: 500
+  Health_RegenOn: 0
+  Health_RegenCooldown: 10
+  HEALTH_INFINITE: 0
+  dead: 0
+  hasInvincibilityTime: 0
+  invincibilityTimeLength: 0
+  isCurrentlyInInvulnerabilityTime: 0
+  MoveSpeed: 3
+  MaximumMoveSpeed: 3
+  CurrentItem: {fileID: 0}
+  CurrentWeapon: {fileID: 0}
+  powerUpChance: 100
+  droppedPowerupsParent: {fileID: 0}
+  droppedPowerUpsChance: []
+  droppedPowerUpsMax: 
+  droppedPowerUps: []
+  DamageOnTouch: 1
+  bossRoomID: 1
+  BossHealthBar_Parent: {fileID: 0}
+  BossHealthBar_Fill_Parent: {fileID: 0}
+  BossHealthBar_BossName: {fileID: 0}
+--- !u!212 &212611754591435296
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1114081295882504}
+  m_GameObject: {fileID: 1103825385337958}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -143,9 +136,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1286084587
+  m_SortingLayerID: -1688667337
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300048, guid: 9c0ebdfd64506f441a3c74a2a87dd7b8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5770533963a92374888f080f1850e6f4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

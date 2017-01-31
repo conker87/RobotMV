@@ -33,7 +33,7 @@ public class Entity : MonoBehaviour {
 	public Item CurrentItem = null;
 	public Weapon CurrentWeapon = null;
 
-	public virtual void Update() {
+	protected virtual void Update() {
 
 		if (!dead && Health_Current < 1) {
 			
@@ -84,7 +84,7 @@ public class Entity : MonoBehaviour {
 
 	public virtual void DamageHealth(int damage) {
 
-		// Debug.Log ("Hitting " + this + " with damage: " + damage);
+		Debug.Log ("Hitting " + this + " with damage: " + damage);
 
 		if (isCurrentlyInInvulnerabilityTime || HEALTH_INFINITE) {
 
