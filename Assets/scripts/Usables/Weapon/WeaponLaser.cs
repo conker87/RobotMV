@@ -13,6 +13,9 @@ public class WeaponLaser : Weapon {
 
 	bool hasBeenFiring = false;
 
+	[SerializeField]
+	float tickTimer = 10f, nextTickTime;
+
 	[Header("EXTENDED")]
 	[SerializeField] Switch s;
 	[SerializeField] Entity e;
@@ -73,7 +76,14 @@ public class WeaponLaser : Weapon {
 								// the attack length. The attack length will then be reduced via power ups
 								// this effectively inccreases DPS by reducing cast time.
 								// TODO: damage, speed and cooldown need power ups too.
-							e.DamageHealth(InitialDamage);
+							if (Time.time > nextTickTime) {
+								
+								int currentDamage = Mathf.RoundToInt (InitialDamage * Player.Current.Weapon_Laser_DamageMod);
+								e.DamageHealth (currentDamage);
+
+								nextTickTime += Time.time + (attackLengthTime); // / tickTimer);
+
+							}
 
 						}
 

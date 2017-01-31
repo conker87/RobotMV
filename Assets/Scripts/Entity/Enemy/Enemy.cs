@@ -6,8 +6,6 @@ using EckTechGames.FloatingCombatText;
 [RequireComponent(typeof(EnemyController))]
 public class Enemy : Entity {
 
-	public int Health = 3;
-
 	[Range(0.0f, 100f)]
 	public float		powerUpChance			= 100f;
 	public Transform	droppedPowerupsParent;

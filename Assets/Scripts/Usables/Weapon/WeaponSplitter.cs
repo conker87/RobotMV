@@ -14,13 +14,24 @@ public class WeaponSplitter : Weapon {
 		if (InputManager.Current.GetButtonDown("Fire Weapon")) {
 
 			int random = Random.Range (0, Projectiles.Length);
+			CurrentDamage = Mathf.RoundToInt (InitialDamage * Player.Current.Weapon_Splitter_DamageMod);
+
+			Debug.Log (CurrentDamage);
 
 			Projectile projectile = Instantiate (Projectiles [random], ShootLocationPosition, Quaternion.identity) as Projectile;
+			projectile.SetSettings (Direction, 3f, true, projectileType, CurrentDamage, Level);
 
-			projectile.SetSettings (Direction, 3f, true, projectileType, InitialDamage, Level);
+			ProjectileChild[] children = projectile.GetComponentsInChildren<ProjectileChild> ();
+
+			foreach (ProjectileChild c in children) {
+
+				c.ProjectileDamage = CurrentDamage;
+
+			}
 
 			// Prevent firing again until after cooldown time
-			cooldownTime = Time.time + InitialCooldown;
+			CurrentCooldown = InitialCooldown * Player.Current.Weapon_Splitter_CooldownMod;
+			cooldownTime = Time.time + CurrentCooldown;
 
 		}
 

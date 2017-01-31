@@ -26,11 +26,9 @@ public class WeaponBasicBlaster : Weapon {
 		if (InputManager.Current.GetButtonDown("Fire Weapon")) {
 
 			int random = Random.Range (0, Projectiles.Length);
-
-			Projectile projectile = Instantiate (Projectiles [random], ShootLocationPosition, Quaternion.identity) as Projectile;
-
 			CurrentDamage = Mathf.RoundToInt (InitialDamage * Player.Current.Weapon_BasicBlaster_DamageMod);
 
+			Projectile projectile = Instantiate (Projectiles [random], ShootLocationPosition, Quaternion.identity) as Projectile;
 			projectile.SetSettings (Direction, InitialProjectileMovementSpeed, false, projectileType, CurrentDamage, Level);
 
 			// Prevent firing again until after cooldown time
@@ -77,7 +75,7 @@ public class WeaponBasicBlaster : Weapon {
 
 			fireChargedShot = false;
 
-			Projectile projectile = Instantiate (chargedShotProjectile, ShootLocationPosition, Quaternion.identity) as Projectile;
+			Projectile projectile = Instantiate (ChargedShotProjectile, ShootLocationPosition, Quaternion.identity) as Projectile;
 
 			projectile.name = projectile.name + "_ChargedShot";
 			projectile.transform.localScale *= (ChargedShotMultiplier / 1.5f);

@@ -34,32 +34,31 @@ public class WeaponSpinner : Weapon {
 			spinnerTimer = Mathf.Clamp (spinnerTimer, 0f, spinnerTimerMax);
 			multiplier = 1f + spinnerTimer;
 
-			foreach (Projectile p in Projectiles) {
+			int random = Random.Range (0, Projectiles.Length);
+			CurrentDamage = Mathf.RoundToInt (InitialDamage * Player.Current.Weapon_Spinner_DamageMod);
 
-				ProjectileSpinner projectile = Instantiate (p, ShootLocationPosition, Quaternion.identity) as ProjectileSpinner;
+			ProjectileSpinner projectile = Instantiate (Projectiles [random], ShootLocationPosition, Quaternion.identity) as ProjectileSpinner;
 
-				projectile.name = projectile.name + "_" + spinnerTimer;
+			projectile.name = projectile.name + "_" + spinnerTimer;
+			projectile.transform.SetParent (transform);
+			projectile.transform.localScale	*= multiplier;
 
-				projectile.transform.SetParent (transform);
-				projectile.transform.localScale	*= multiplier;
+			bool doesIgnoreGeometry = (spinnerTimer > (spinnerTimerMax / 2f)) ? true : false;
 
-				bool doesIgnoreGeometry = (spinnerTimer > (spinnerTimerMax / 2f)) ? true : false;
+			projectile.SetSettings (Direction, InitialProjectileMovementSpeed * multiplier, false, projectileType, Mathf.RoundToInt (CurrentDamage * multiplier),
+				Level, doesIgnoreGeometry, true);
+				
+			projectile.timesThroughEnemyMax = Mathf.RoundToInt (spinnerTimer * 2f);
 
-				projectile.SetSettings (Direction, InitialProjectileMovementSpeed * multiplier, false, projectileType, Mathf.RoundToInt (InitialDamage * multiplier * 5f),
-					Level, doesIgnoreGeometry, true);
-					
-				projectile.timesThroughEnemyMax = Mathf.RoundToInt (spinnerTimer * 2f);
+			projectile.GetComponent<RotateAtSpeed> ().rotationalSpeed *= (multiplier + 1f);
 
-				projectile.GetComponent<RotateAtSpeed> ().rotationalSpeed *= (multiplier + 1f);
-
-				// TODO: Perhaps have it so that AttackLength governs the maximum time at which some projectiles live for?
-
-			}
+			// TODO: Perhaps have it so that AttackLength governs the maximum time at which some projectiles live for?
 
 			Debug.Log ("cooldownTime = Time.time + Cooldown");
 
 			// Prevent firing again until after cooldown time
-			cooldownTime = Time.time + InitialCooldown;
+			CurrentCooldown = InitialCooldown * Player.Current.Weapon_Spinner_CooldownMod;
+			cooldownTime = Time.time + CurrentCooldown;
 
 			spinnerTimer = 0f;
 

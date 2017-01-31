@@ -44,11 +44,14 @@ MonoBehaviour:
   CollectableID: LASER
   UsableNameLocalisationID: WEAPON_LASER
   DescriptionLocalisationID: WEAPON_LASER_DESC
-  AttackLength: 1
-  Damage: 0
+  InitialAttackLength: 1
+  CurrentAttackLength: 1.5
+  InitialDamage: 1
+  CurrentDamage: 0
   Level: 2
-  Cooldown: 1
-  Charges: 0
+  InitialCooldown: 1
+  CurrentCooldown: 0
+  InitialProjectileMovementSpeed: 0
   Projectiles: []
   projectileType: 0
   geometryLayer:
@@ -56,6 +59,8 @@ MonoBehaviour:
     m_Bits: 45056
   laserLength: 7
   line: {fileID: 12005336}
+  tickTimer: 0
+  nextTickTime: 0
   s: {fileID: 0}
   e: {fileID: 0}
   d: {fileID: 0}

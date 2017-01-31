@@ -11,12 +11,15 @@ public class Usables : MonoBehaviour {
 	public string		DescriptionLocalisationID = "LocalisationID <FIXME>";
 
 	[Header("Usable Attack Settings")]
-	public float		InitialAttackLength, CurrentAttackLength;
-	public int 			InitialDamage, CurrentDamage;
+	public float 		InitialAttackLength;
+	protected float		CurrentAttackLength;
+	public int 			InitialDamage;
+	protected int 		CurrentDamage;
 	public int			Level;
 
 	[Header("Usable Cooldown Settings")]
-	public float		InitialCooldown, CurrentCooldown;
+	public float 		InitialCooldown;
+	protected float 	CurrentCooldown;
 
 	[Header("Usable Movement Settings")]
 
@@ -25,9 +28,9 @@ public class Usables : MonoBehaviour {
 	protected bool stillCoolingDown = false;
 
 	[Header("Spawn settings")]
-	public float 		InitialProjectileMovementSpeed;
-	public Projectile[]	Projectiles;
-	public ProjectileType projectileType;
+	public float 			InitialProjectileMovementSpeed;
+	public Projectile[]		Projectiles;
+	public ProjectileType 	projectileType;
 
 	// Usable Direction for Projeciles.
 	protected Vector2 mousePositionToWorld, directionToMousePositionInWorld;

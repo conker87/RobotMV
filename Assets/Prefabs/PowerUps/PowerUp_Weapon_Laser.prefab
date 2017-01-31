@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4000013704008316}
-  - component: {fileID: 114342393059049902}
+  - component: {fileID: 114198389046911436}
   - component: {fileID: 212000011366520232}
   - component: {fileID: 61000010431667384}
   - component: {fileID: 50000012681259148}
@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010363153858}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13, y: -27.25, z: 0}
+  m_LocalPosition: {x: 16.5, y: -27.5, z: 0}
   m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -77,7 +77,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
---- !u!114 &114342393059049902
+--- !u!114 &114198389046911436
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -85,7 +85,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000010363153858}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6929a9296acb7ad4faf51839efb8a0b7, type: 3}
+  m_Script: {fileID: 11500000, guid: f60888c4058e12f449102d924195e1f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   PowerUpNameLocalisationID: COLLECTABLE_LASER
