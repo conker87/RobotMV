@@ -18,7 +18,7 @@ public class Entity : MonoBehaviour {
 	public float 	Health_RegenCooldown = 10f;
 	public bool		HEALTH_INFINITE = false;
 
-	[SerializeField] bool dead = false;
+	[SerializeField] protected bool dead = false;
 
 	[Header("iFrames")]
 	public bool  hasInvincibilityTime = false;

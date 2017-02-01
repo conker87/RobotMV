@@ -36,7 +36,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1103825385337958}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 8.17, y: -11.3, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
@@ -82,7 +82,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 774aa37c59c40144ab3b7fa757d41c10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EntityNameLocalisationID: Localisation <FIXME>
+  EntityNameLocalisationID: _DEBUG_JEROM
   EntityDescLocalisationID: Localisation <FIXME>
   Health_Current: 500
   Health_Max: 500

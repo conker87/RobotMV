@@ -9,13 +9,16 @@ public class Boss : Enemy {
 	[SerializeField]
 	int bossRoomID = -1;
 
-	public GameObject BossHealthBar_Parent, BossHealthBar_Fill_Parent, BossHealthBar_BossName;
+	[SerializeField]
+	GameObject BossHealthBar_Parent, BossHealthBar_Fill_Parent, BossHealthBar_BossName;
 
 	void Start() {
 
-		// Add GameObject.Find("BossHealthBar_Parent");, etc.
+		BossHealthBar_Parent = GameObject.Find("BossHealthBar_Parent");
+		BossHealthBar_Fill_Parent = GameObject.Find("BossHealthBar_Fill_Parent");
+		BossHealthBar_BossName = GameObject.Find("BossHealthBar_BossName");
 
-
+		BossHealthBar_Parent.SetActive (false);
 
 	}
 
@@ -24,7 +27,7 @@ public class Boss : Enemy {
 
 		base.Update ();
 
-		if (CameraManager.GetCurrentAreaIndex () == bossRoomID) {
+		if (!dead && CameraManager.GetCurrentAreaIndex () == bossRoomID) {
 
 			BossHealthBar_Parent.SetActive(true);
 			BossHealthBar_BossName.GetComponent<Text> ().text = EntityNameLocalisationID; // Localisation.GetStringInCurrentLocal
