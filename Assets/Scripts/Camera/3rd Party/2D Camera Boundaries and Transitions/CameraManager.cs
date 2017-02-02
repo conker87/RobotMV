@@ -102,9 +102,8 @@ public class CameraManager : MonoBehaviour {
                 previousArea = listAreaNodes.IndexOf(n);
 
                 if (previousArea == currentArea) { return; }
-                currentArea = previousArea;
-
-				staticCurrentArea = currentArea;
+                
+				staticCurrentArea = currentArea = previousArea;
 
             }
 
