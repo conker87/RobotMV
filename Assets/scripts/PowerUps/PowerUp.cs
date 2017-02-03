@@ -10,6 +10,8 @@ public class PowerUp : MonoBehaviour {
 
 	public virtual void Give() {
 
+		Debug.Log ("Player has acquired: " + this);
+
 		Destroy(gameObject);
 
 	}

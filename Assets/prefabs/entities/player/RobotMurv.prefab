@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 11475602}
   - component: {fileID: 212081354901738854}
   - component: {fileID: 6176158}
-  - component: {fileID: 50860229841600570}
+  - component: {fileID: 50142820455255314}
   - component: {fileID: 95392894217379292}
   m_Layer: 10
   m_Name: RobotMurv
@@ -43,7 +43,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 186462}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.5, y: -27.25, z: 0}
+  m_LocalPosition: {x: 9.5, y: -26.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4000013207597610}
@@ -73,7 +73,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
@@ -91,8 +91,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EntityNameLocalisationID: PLAYER_MURV
   EntityDescLocalisationID: PLAYER_MURV_DESC
-  Health_Current: 1
-  Health_Max: 3
+  Health_Current: 50
+  Health_Max: 50
   Health_RegenOn: 0
   Health_RegenCooldown: 10
   HEALTH_INFINITE: 0
@@ -104,32 +104,27 @@ MonoBehaviour:
   MaximumMoveSpeed: 10
   CurrentItem: {fileID: 0}
   CurrentWeapon: {fileID: 0}
-  Weapon_BasicBlaster: 0
-  Weapon_BasicBlaster_AttackLengthMod: 1
+  Weapon_BasicBlaster: 1
   Weapon_BasicBlaster_CooldownMod: 1
   Weapon_BasicBlaster_DamageMod: 1
   Weapon_BasicBlaster_ChargedShot: 0
-  Weapon_BasicBlaster_ChargedShot_AttackLengthMod: 1
-  Weapon_BasicBlaster_ChargedShot_CooldownMod: 1
   Weapon_BasicBlaster_ChargedShot_DamageMod: 1
-  Weapon_BlackHoleBurst: 0
+  Weapon_BlackHoleBurst: 1
   Weapon_BlackHoleBurst_AttackLengthMod: 1
   Weapon_BlackHoleBurst_CooldownMod: 1
   Weapon_BlackHoleBurst_DamageMod: 1
-  Weapon_Laser: 0
+  Weapon_Laser: 1
   Weapon_Laser_AttackLengthMod: 1
   Weapon_Laser_CooldownMod: 1
   Weapon_Laser_DamageMod: 1
-  Weapon_MissileLauncher: 0
-  Weapon_MissileLauncher_AttackLengthMod: 1
+  Weapon_MissileLauncher: 1
   Weapon_MissileLauncher_CooldownMod: 1
   Weapon_MissileLauncher_DamageMod: 1
-  Weapon_Spinner: 0
+  Weapon_Spinner: 1
   Weapon_Spinner_AttackLengthMod: 1
   Weapon_Spinner_CooldownMod: 1
   Weapon_Spinner_DamageMod: 1
-  Weapon_Splitter: 0
-  Weapon_Splitter_AttackLengthMod: 1
+  Weapon_Splitter: 1
   Weapon_Splitter_CooldownMod: 1
   Weapon_Splitter_DamageMod: 1
   Item_Magnet: 0
@@ -143,9 +138,9 @@ MonoBehaviour:
   Item_EnergyShield_CooldownMod: 1
   Item_EnergyShield_DamageMod: 1
   ENERGY_SHIELD_INFINITE: 0
-  PowerUp_Jump: 0
-  PowerUp_Jump_Double: 0
-  PowerUp_Jump_Triple: 0
+  PowerUp_Jump: 1
+  PowerUp_Jump_Double: 1
+  PowerUp_Jump_Triple: 1
   Bombs_Current: 0
   Bombs_Max: 0
   BOMBS_INFINITE: 0
@@ -582,7 +577,7 @@ Transform:
   m_Father: {fileID: 4000014023068666}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50860229841600570
+--- !u!50 &50142820455255314
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
@@ -591,7 +586,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 186462}
   m_BodyType: 1
   m_Simulated: 1
-  m_UseFullKinematicContacts: 1
+  m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0

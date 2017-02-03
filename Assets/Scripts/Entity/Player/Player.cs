@@ -114,37 +114,5 @@ public class Player : Entity
 		GUI.Label(new Rect(10, 70, 500, 20), "CW/I: " + (CurrentWeapon == null ? "None" : CurrentWeapon.UsableNameLocalisationID) + "|" + (CurrentItem == null ? "None" : CurrentItem.UsableNameLocalisationID), style);
 		GUI.Label(new Rect(10, 90, 500, 20), "Speed: " + MoveSpeed, style);
 	}
-}
-
-[System.Serializable]
-public struct Collectables {
-	
-	public string ItemID;
-	public bool Collected;
-
-}
-
-[System.Serializable]
-public struct CollectablesInfo {
-
-	public CollectablesInfo(float attackLengthMultiplier, float cooldownMultiplier, float damageMultiplier) {
-
-		this.AttackLengthMultiplier = attackLengthMultiplier;
-		this.CooldownMultiplier = cooldownMultiplier;
-		this.DamageMultiplier = damageMultiplier;
-
-	}
-
-	public float AttackLengthMultiplier;
-	public float CooldownMultiplier;
-	public float DamageMultiplier;
-
-}
-
-[System.Serializable]
-public struct Cheats {
-
-	public string CheatID;
-	public bool isCheatOn;
 
 }

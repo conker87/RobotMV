@@ -38,7 +38,7 @@ public class Entity : MonoBehaviour {
 		if (!dead && Health_Current < 1) {
 			
 			dead = true;
-			Debug.Log (this + " has hit 0 health and has been removed. If it was an Enemy then it should spawn Health and Energy pickups.");
+			Debug.Log (this + " has hit 0 health and has been removed. If it was an Enemy then it should spawn Health & Bombs pickups.");
 
 			Die ();
 
@@ -55,6 +55,7 @@ public class Entity : MonoBehaviour {
 			if (Time.time > iFramesRemoveTime) {
 
 				isCurrentlyInInvulnerabilityTime = false;
+				iFramesRemoveTime = 0f;
 
 			}
 
@@ -84,13 +85,13 @@ public class Entity : MonoBehaviour {
 
 	public virtual void DamageHealth(int damage) {
 
-		Debug.Log ("Hitting " + this + " with damage: " + damage);
-
 		if (isCurrentlyInInvulnerabilityTime || HEALTH_INFINITE) {
 
 			return;
 
 		}
+
+		Debug.Log ("Hitting " + this + " with damage: " + damage);
 
 		Health_Current -= damage;
 

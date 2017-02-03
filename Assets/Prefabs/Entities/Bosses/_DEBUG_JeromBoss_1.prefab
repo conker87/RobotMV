@@ -99,9 +99,17 @@ MonoBehaviour:
   CurrentWeapon: {fileID: 0}
   powerUpChance: 100
   droppedPowerupsParent: {fileID: 0}
-  droppedPowerUpsChance: []
-  droppedPowerUpsMax: 
-  droppedPowerUps: []
+  droppedPowerUpsChance:
+  - 75
+  - 10
+  - 25
+  - 10
+  droppedPowerUpsMax: 06000000010000000300000001000000
+  droppedPowerUps:
+  - {fileID: 114643271526062652, guid: 61f7179d513d67e4a952a82c4d65f105, type: 2}
+  - {fileID: 114460776220873172, guid: 54198a54882b2444785436dcf7612911, type: 2}
+  - {fileID: 114876723573573252, guid: a088fb30035d5c5418d98b870b10c69d, type: 2}
+  - {fileID: 114910764144543006, guid: 87e9ec93965902c4881e4f551914c251, type: 2}
   DamageOnTouch: 1
   bossRoomID: 1
   BossHealthBar_Parent: {fileID: 0}

@@ -26,7 +26,7 @@ public class WeaponBasicBlaster : Weapon {
 		if (InputManager.Current.GetButtonDown("Fire Weapon")) {
 
 			int random = Random.Range (0, Projectiles.Length);
-			CurrentDamage = Mathf.RoundToInt (InitialDamage * Player.Current.Weapon_BasicBlaster_DamageMod);
+			CurrentDamage	= Mathf.RoundToInt (InitialDamage * Player.Current.Weapon_BasicBlaster_DamageMod);
 
 			ProjectileBase projectile = Instantiate (Projectiles [random], ShootLocationPosition, Quaternion.identity) as ProjectileBase;
 			projectile.SetSettings (Direction, InitialProjectileMovementSpeed, false, projectileType, CurrentDamage, Level);
