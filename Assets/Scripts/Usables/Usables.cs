@@ -29,7 +29,7 @@ public class Usables : MonoBehaviour {
 
 	[Header("Spawn settings")]
 	public float 			InitialProjectileMovementSpeed;
-	public Projectile[]		Projectiles;
+	public ProjectileBase[]		Projectiles;
 	public ProjectileType 	projectileType;
 
 	// Usable Direction for Projeciles.

@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d06beee1ab27bd44ae4255c4fbd4602, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProjectileNameLocalisationID: PROJECTILE_SHURIKEN_SHIELD
+  ProjectileNameLocalisationID: 50524f4a454354494c455f53485552494b454e5f534849454c44
   Direction: {x: 0, y: 0, z: 0}
   MovementSpeed: 1
   ProjectileRotatesToDirection: 0
@@ -113,7 +113,8 @@ MonoBehaviour:
   DestroyOnHit: 1
   DestroyInSecondsOn: 1
   DestroyInSeconds: 3
-  onDeathObjectSpawn: {fileID: 0}
+  ProjectileHitAnimation: {fileID: 0}
+  e: {fileID: 0}
 --- !u!114 &114000012772741270
 MonoBehaviour:
   m_ObjectHideFlags: 1

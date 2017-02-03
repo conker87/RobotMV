@@ -16,7 +16,7 @@ public class WeaponBlackHoleBurst : Weapon {
 			int random = Random.Range (0, Projectiles.Length);
 			CurrentDamage = Mathf.RoundToInt (InitialDamage * Player.Current.Weapon_BlackHoleBurst_DamageMod);
 
-			Projectile projectile = Instantiate (Projectiles [random], ShootLocationPosition, Quaternion.identity) as Projectile;
+			ProjectileBase projectile = Instantiate (Projectiles [random], ShootLocationPosition, Quaternion.identity) as ProjectileBase;
 			projectile.SetSettings (Direction, InitialProjectileMovementSpeed, false, projectileType, CurrentDamage, Level);
 
 			CurrentAttackLength = InitialAttackLength * Player.Current.Weapon_BlackHoleBurst_AttackLengthMod;

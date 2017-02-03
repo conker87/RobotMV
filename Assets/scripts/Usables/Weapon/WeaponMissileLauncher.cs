@@ -17,7 +17,7 @@ public class WeaponMissileLauncher : Weapon {
 			int random = Random.Range (0, Projectiles.Length);
 			CurrentDamage = Mathf.RoundToInt (InitialDamage * Player.Current.Weapon_MissileLauncher_DamageMod);
 
-			Projectile projectile = Instantiate (Projectiles [random], ShootLocationPosition, Quaternion.identity) as Projectile;
+			ProjectileBase projectile = Instantiate (Projectiles [random], ShootLocationPosition, Quaternion.identity) as ProjectileBase;
 			projectile.SetSettings (Direction, InitialProjectileMovementSpeed, true, projectileType, CurrentDamage, Level);
 
 			// Prevent firing again until after cooldown time

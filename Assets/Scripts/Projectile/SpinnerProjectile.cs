@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ProjectileSpinner : Projectile {
+// Refactored 03/02/2017
+public class SpinnerProjectile : ProjectileBase {
 
 	int timesThroughEnemy = 0;
 	public int timesThroughEnemyMax = 0;
@@ -33,7 +34,7 @@ public class ProjectileSpinner : Projectile {
 
 			if (!IgnoreGeometry) {
 
-				OnDeath ();
+				Die ();
 				Destroy (gameObject);
 
 				return;
@@ -60,7 +61,7 @@ public class ProjectileSpinner : Projectile {
 
 			if (DestroyOnHit) {
 
-				OnDeath ();
+				Die ();
 				Destroy (gameObject);
 
 			}

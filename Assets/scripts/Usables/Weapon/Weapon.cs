@@ -22,7 +22,7 @@ public abstract class Weapon : Usables {
 
 			int random = Random.Range (0, Projectiles.Length);
 
-			Projectile projectile = Instantiate (Projectiles [random], ShootLocationPosition, Quaternion.identity) as Projectile;
+			ProjectileBase projectile = Instantiate (Projectiles [random], ShootLocationPosition, Quaternion.identity) as ProjectileBase;
 
 			projectile.SetSettings (Direction, InitialProjectileMovementSpeed, false, projectileType, InitialDamage, Level);
 

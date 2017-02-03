@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Projectile : MonoBehaviour {
+// Refactored 03/02/2017
+public class ProjectileBase : MonoBehaviour {
 
 	// TODO: Allow the projectile to have options of going through enemies a certain number of times.
 
@@ -24,8 +25,11 @@ public class Projectile : MonoBehaviour {
 	public bool				DestroyInSecondsOn = true;
 	public float			DestroyInSeconds = 3f;
 
-	[Header("Projectile Other Settings")]
-	public GameObject onDeathObjectSpawn;
+	[Header("Projectile Hit Animation")]
+	[Tooltip("The GameObject that is spawned at the hit.point of the collider that it is destroyed on.\n\nThis is used to add a '\"bullet hole\" type object.")]
+	public GameObject		ProjectileHitAnimation;
+
+	Entity e;
 
 	public void SetSettings(Vector2 direction, float movementSpeed = 3f, bool projectileRotatesToDirection = false, ProjectileType projectileType = ProjectileType.PLAYER, int projectileDamage = 1, int weaponLevel = 0,
 		bool ignoreGeometry = false, bool destroyOnHit = true, bool destroyInSecondsOn = true, float destroyInSeconds = 3f) {
@@ -82,53 +86,31 @@ public class Projectile : MonoBehaviour {
 
 	}
 
+	// Refactored: 02/02/17
 	protected virtual void OnTriggerEnter2D(Collider2D other) {
 
-		if ((other.gameObject.tag == "Player" && ProjectileType == ProjectileType.PLAYER) ||
-				(other.gameObject.tag == "Enemy" && ProjectileType == ProjectileType.ENEMY) || 
+		// If the collider is an EnergyShield & the type is not PLAYER then destroy the projectile as it's an Enemy's.
+		if (other.GetComponent<EnergyShieldProjectile> () != null && ProjectileType != ProjectileType.PLAYER) {
+
+			Die ();
+			return;
+
+		}
+
+		// If the projectile either: hits Player & is type PLAYER, hits an Enemy & is type ENEMY, hits a PowerUp,
+		//	hits another Projectile or hits an object that is tagged appropriately then this is ignored.
+		if (	(other.GetComponent<Player>() != null && ProjectileType == ProjectileType.PLAYER) ||
+				(other.GetComponent<Enemy>() != null && ProjectileType == ProjectileType.ENEMY) ||
+				(other.GetComponent<PowerUp>()) ||
+				(other.GetComponent<ProjectileBase>()) ||
 				other.gameObject.tag == "IgnoreCollision") {
 			
 			return;
 
 		}
-
-		if (other.gameObject.tag == "Projectile") {
-
-			return;
-
-		}
-
-		if (other.gameObject.tag == "Geometry") {
-
-			if (!IgnoreGeometry) {
-				
-				OnDeath ();
-				Destroy (gameObject);
-
-				return;
-
-			}
-
-		}
-
-		if (other.GetComponent<ProjectileEnergyShield> () != null) {
-
-			//OnDeath ();
-			//Destroy (gameObject);
-
-		}
-
-		Entity e;
-
+			
 		if ((e = other.GetComponentInParent<Entity> ()) != null) {
-
-			if (DestroyOnHit) {
-
-				OnDeath ();
-				Destroy (gameObject);
-
-			}
-
+			
 			if (e.tag == "Geometry" && gameObject.tag != "DestroyGeometry") {
 
 				return;
@@ -137,7 +119,19 @@ public class Projectile : MonoBehaviour {
 
 			e.DamageHealth(ProjectileDamage);
 
-			// e.DamageHealth(projectileDamage);
+			if (DestroyOnHit) {
+
+				Die ();
+
+			}
+
+			return;
+
+		}
+
+		if (!IgnoreGeometry) {
+
+			Die ();
 
 		}
 
@@ -145,18 +139,19 @@ public class Projectile : MonoBehaviour {
 
 	protected virtual void DestroyGameObject() {
 
-		OnDeath ();
-		Destroy(gameObject);
+		Die (false);
 
 	}
 
-	protected virtual void OnDeath() {
+	protected virtual void Die(bool doHitAnimation = true) {
 
-		if (onDeathObjectSpawn != null) {
+		if (doHitAnimation && ProjectileHitAnimation != null) {
 			
-			Instantiate (onDeathObjectSpawn, transform.position, Quaternion.identity);
+			Instantiate (ProjectileHitAnimation, transform.position, Quaternion.identity);
 
 		}
+
+		Destroy(gameObject);
 
 	}
 

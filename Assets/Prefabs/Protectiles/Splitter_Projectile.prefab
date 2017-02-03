@@ -35,7 +35,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4498469178253348}
-  - component: {fileID: 114299835740865446}
+  - component: {fileID: 114932704238911214}
   - component: {fileID: 212248386014410448}
   - component: {fileID: 95836486679024244}
   - component: {fileID: 61669947938611628}
@@ -55,7 +55,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4439744246690398}
-  - component: {fileID: 114231096166033596}
+  - component: {fileID: 114607789313335320}
   - component: {fileID: 212851179542327492}
   - component: {fileID: 95222518772750232}
   - component: {fileID: 61680603886860918}
@@ -210,56 +210,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114231096166033596
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1918014722969756}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b5373759037bac4e9c37bb3bd09aab9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ProjectileNameLocalisationID: 
-  Direction: {x: 0, y: 0, z: 0}
-  MovementSpeed: 1
-  ProjectileRotatesToDirection: 0
-  ProjectileType: 0
-  ProjectileDamage: 0
-  WeaponLevel: 0
-  IgnoreGeometry: 0
-  DestroyOnHit: 1
-  DestroyInSecondsOn: 1
-  DestroyInSeconds: 3
-  onDeathObjectSpawn: {fileID: 1000010975605570, guid: 23f06e358c387964abbf8faf86410a7d,
-    type: 2}
-  DoOverrideParentMovementSpeed: 0
---- !u!114 &114299835740865446
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1347596744775526}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b5373759037bac4e9c37bb3bd09aab9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ProjectileNameLocalisationID: 
-  Direction: {x: 0, y: 0, z: 0}
-  MovementSpeed: 1
-  ProjectileRotatesToDirection: 0
-  ProjectileType: 0
-  ProjectileDamage: 0
-  WeaponLevel: 0
-  IgnoreGeometry: 0
-  DestroyOnHit: 1
-  DestroyInSecondsOn: 1
-  DestroyInSeconds: 3
-  onDeathObjectSpawn: {fileID: 1000010975605570, guid: 23f06e358c387964abbf8faf86410a7d,
-    type: 2}
-  DoOverrideParentMovementSpeed: 1
 --- !u!114 &114399354632120090
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -268,7 +218,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1074971764268550}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d06beee1ab27bd44ae4255c4fbd4602, type: 3}
+  m_Script: {fileID: 11500000, guid: a35cf3e6c24321a48920138fc5f2cd35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ProjectileNameLocalisationID: 
@@ -282,7 +232,54 @@ MonoBehaviour:
   DestroyOnHit: 1
   DestroyInSecondsOn: 1
   DestroyInSeconds: 3
-  onDeathObjectSpawn: {fileID: 0}
+  ProjectileHitAnimation: {fileID: 1000010975605570, guid: 23f06e358c387964abbf8faf86410a7d,
+    type: 2}
+--- !u!114 &114607789313335320
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1918014722969756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf41721757eb42a4f9ad8a431a50d355, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ProjectileNameLocalisationID: 
+  Direction: {x: 0, y: 0, z: 0}
+  MovementSpeed: 1
+  ProjectileRotatesToDirection: 0
+  ProjectileType: 0
+  ProjectileDamage: 0
+  WeaponLevel: 0
+  IgnoreGeometry: 0
+  DestroyOnHit: 1
+  DestroyInSecondsOn: 1
+  DestroyInSeconds: 3
+  ProjectileHitAnimation: {fileID: 0}
+--- !u!114 &114932704238911214
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1347596744775526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf41721757eb42a4f9ad8a431a50d355, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ProjectileNameLocalisationID: 
+  Direction: {x: 0, y: 0, z: 0}
+  MovementSpeed: 1
+  ProjectileRotatesToDirection: 0
+  ProjectileType: 0
+  ProjectileDamage: 0
+  WeaponLevel: 0
+  IgnoreGeometry: 0
+  DestroyOnHit: 1
+  DestroyInSecondsOn: 1
+  DestroyInSeconds: 3
+  ProjectileHitAnimation: {fileID: 0}
 --- !u!212 &212248386014410448
 SpriteRenderer:
   m_ObjectHideFlags: 1

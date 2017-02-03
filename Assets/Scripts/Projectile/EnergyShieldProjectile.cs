@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ProjectileEnergyShield : Projectile {
+// Refactored 03/02/2017
+public class EnergyShieldProjectile : ProjectileBase {
 
 	protected override void Update () {
 
@@ -15,26 +16,9 @@ public class ProjectileEnergyShield : Projectile {
 
 	}
 
-	protected override void OnDeath ()
-	{
-		
-		base.OnDeath ();
-
-	}
-
 	protected override void OnTriggerEnter2D(Collider2D other) {
 
-		Projectile p;
 
-		if ((p = other.gameObject.GetComponentInParent<Projectile> ()) != null) {
-
-			if (p.ProjectileType == ProjectileType.ENEMY) {
-
-
-
-			}
-
-		}
 
 	}
 

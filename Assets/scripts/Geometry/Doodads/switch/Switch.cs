@@ -11,7 +11,7 @@ public class Switch : MonoBehaviour {
 	[Header("System")]
 	public SwitchState switchState;
 
-	protected Projectile hit;
+	protected ProjectileBase hit;
 	protected Animator anim;
 
 	protected virtual void Start() {
@@ -36,7 +36,7 @@ public class Switch : MonoBehaviour {
 
 	protected virtual void OnTriggerEnter2D(Collider2D other) {
 
-		hit = other.gameObject.GetComponent<Projectile> ();
+		hit = other.gameObject.GetComponent<ProjectileBase> ();
 
 		if (hit != null && hit.WeaponLevel >= weaponLevel) {
 

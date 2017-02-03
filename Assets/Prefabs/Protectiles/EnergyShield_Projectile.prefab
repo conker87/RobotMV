@@ -85,7 +85,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000012040032580}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 885fb9bc4fc95604884d7eab82e6f50a, type: 3}
+  m_Script: {fileID: 11500000, guid: b2bf9f3f085a1084b92b5b7375e6f61a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ProjectileNameLocalisationID: PROJECTILE_ENERGY_SHIELD
@@ -99,7 +99,7 @@ MonoBehaviour:
   DestroyOnHit: 1
   DestroyInSecondsOn: 1
   DestroyInSeconds: 3
-  onDeathObjectSpawn: {fileID: 0}
+  ProjectileHitAnimation: {fileID: 0}
 --- !u!212 &212000011026461778
 SpriteRenderer:
   m_ObjectHideFlags: 1

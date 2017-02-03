@@ -27,7 +27,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 139484}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 24.158163, y: -27.115284, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -61,7 +61,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 139484}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d06beee1ab27bd44ae4255c4fbd4602, type: 3}
+  m_Script: {fileID: 11500000, guid: 914a64946d97682478613a490f159ba4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ProjectileNameLocalisationID: PROJECTILE_MISSILE
@@ -75,8 +75,7 @@ MonoBehaviour:
   DestroyOnHit: 1
   DestroyInSecondsOn: 1
   DestroyInSeconds: 3
-  onDeathObjectSpawn: {fileID: 1000010975605570, guid: 23f06e358c387964abbf8faf86410a7d,
-    type: 2}
+  ProjectileHitAnimation: {fileID: 0}
 --- !u!212 &21213448
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -132,7 +131,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2

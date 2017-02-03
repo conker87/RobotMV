@@ -73,7 +73,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000013881043524}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efbfc609695b18c44ae2beff84950016, type: 3}
+  m_Script: {fileID: 11500000, guid: 737526a66b97d6f419ba544a461ced9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ProjectileNameLocalisationID: PROJECTILE_BOMB
@@ -87,8 +87,7 @@ MonoBehaviour:
   DestroyOnHit: 1
   DestroyInSecondsOn: 1
   DestroyInSeconds: 3
-  onDeathObjectSpawn: {fileID: 1000013484451354, guid: f09a65205e26f6e4c9b906dea2ac328e,
-    type: 2}
+  ProjectileHitAnimation: {fileID: 0}
 --- !u!114 &114000012027538480
 MonoBehaviour:
   m_ObjectHideFlags: 1

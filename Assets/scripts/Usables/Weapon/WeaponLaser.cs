@@ -19,7 +19,7 @@ public class WeaponLaser : Weapon {
 	[Header("EXTENDED")]
 	[SerializeField] Switch s;
 	[SerializeField] Entity e;
-	[SerializeField] DoorProjectile d;
+	[SerializeField] ProjectileDoor d;
 
 	protected override void Start () {
 
@@ -102,9 +102,9 @@ public class WeaponLaser : Weapon {
 
 					// If the collider of the hit point has a component of Door, specifically the Projectile variant and the level of the Laser is more than/equal
 					// 	to door level and it is not currently open then trigger it
-					if ((d = hit.collider.gameObject.GetComponent<DoorProjectile> ()) != null) {
+					if ((d = hit.collider.gameObject.GetComponent<ProjectileDoor> ()) != null) {
 
-						if (Level >= d.doorLevel && d.IsDoorOpen () == false) {
+						if (Level >= d.DoorLevel && d.IsDoorOpen () == false) {
 
 							d.OpenDoor ();
 

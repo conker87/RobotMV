@@ -8,7 +8,7 @@ public class WeaponBasicBlaster : Weapon {
 
 	public int			ChargedShotMultiplier = 2;
 
-	public Projectile	ChargedShotProjectile;
+	public ProjectileBase	ChargedShotProjectile;
 
 	// Cooldown & Attack Length Time.time vars.
 	[SerializeField]
@@ -28,7 +28,7 @@ public class WeaponBasicBlaster : Weapon {
 			int random = Random.Range (0, Projectiles.Length);
 			CurrentDamage = Mathf.RoundToInt (InitialDamage * Player.Current.Weapon_BasicBlaster_DamageMod);
 
-			Projectile projectile = Instantiate (Projectiles [random], ShootLocationPosition, Quaternion.identity) as Projectile;
+			ProjectileBase projectile = Instantiate (Projectiles [random], ShootLocationPosition, Quaternion.identity) as ProjectileBase;
 			projectile.SetSettings (Direction, InitialProjectileMovementSpeed, false, projectileType, CurrentDamage, Level);
 
 			// Prevent firing again until after cooldown time
@@ -75,7 +75,7 @@ public class WeaponBasicBlaster : Weapon {
 
 			fireChargedShot = false;
 
-			Projectile projectile = Instantiate (ChargedShotProjectile, ShootLocationPosition, Quaternion.identity) as Projectile;
+			ProjectileBase projectile = Instantiate (ChargedShotProjectile, ShootLocationPosition, Quaternion.identity) as ProjectileBase;
 
 			projectile.name = projectile.name + "_ChargedShot";
 			projectile.transform.localScale *= (ChargedShotMultiplier / 1.5f);

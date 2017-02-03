@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ProjectileBlackHoleBurst : Projectile {
+// Refactored 03/02/2017
+public class BlackHoleBurstProjectile : ProjectileBase {
 
 	[Header("Burst Settings")]
-	public Projectile[] bursts;
+	public ProjectileBase[] bursts;
 	[Range(0, 10)]
 	public float minimumTimeTilNextBurst = 0f, maximumTimeTilNextBurst = 10f;
 	[Range(1, 10)]
@@ -29,7 +30,7 @@ public class ProjectileBlackHoleBurst : Projectile {
 
 			random = Random.Range (0, bursts.Length - 1);
 
-			Projectile projectile = Instantiate (bursts [random], transform.position, Quaternion.identity) as Projectile; 
+			ProjectileBase projectile = Instantiate (bursts [random], transform.position, Quaternion.identity) as ProjectileBase; 
 
 			Vector2 randomNormalisedDirection = new Vector2 (Random.Range (-1f, 1f), Random.Range (-1f, 1f));
 

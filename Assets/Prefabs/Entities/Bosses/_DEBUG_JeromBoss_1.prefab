@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 58028195716250706}
   m_Layer: 13
   m_Name: _DEBUG_JeromBoss_1
-  m_TagString: Boss
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84,8 +84,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EntityNameLocalisationID: _DEBUG_JEROM
   EntityDescLocalisationID: Localisation <FIXME>
-  Health_Current: 500
-  Health_Max: 500
+  Health_Current: 10
+  Health_Max: 10
   Health_RegenOn: 0
   Health_RegenCooldown: 10
   HEALTH_INFINITE: 0

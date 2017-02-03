@@ -37,7 +37,7 @@ public class WeaponSpinner : Weapon {
 			int random = Random.Range (0, Projectiles.Length);
 			CurrentDamage = Mathf.RoundToInt (InitialDamage * Player.Current.Weapon_Spinner_DamageMod);
 
-			ProjectileSpinner projectile = Instantiate (Projectiles [random], ShootLocationPosition, Quaternion.identity) as ProjectileSpinner;
+			SpinnerProjectile projectile = Instantiate (Projectiles [random], ShootLocationPosition, Quaternion.identity) as SpinnerProjectile;
 
 			projectile.name = projectile.name + "_" + spinnerTimer;
 			projectile.transform.SetParent (transform);
@@ -51,10 +51,6 @@ public class WeaponSpinner : Weapon {
 			projectile.timesThroughEnemyMax = Mathf.RoundToInt (spinnerTimer * 2f);
 
 			projectile.GetComponent<RotateAtSpeed> ().rotationalSpeed *= (multiplier + 1f);
-
-			// TODO: Perhaps have it so that AttackLength governs the maximum time at which some projectiles live for?
-
-			Debug.Log ("cooldownTime = Time.time + Cooldown");
 
 			// Prevent firing again until after cooldown time
 			CurrentCooldown = InitialCooldown * Player.Current.Weapon_Spinner_CooldownMod;

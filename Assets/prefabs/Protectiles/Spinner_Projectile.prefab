@@ -110,7 +110,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000010814590310}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c89819a8b551ea40ae0be9f2219a7d9, type: 3}
+  m_Script: {fileID: 11500000, guid: 4392f75e42374af46876b0451488b7ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ProjectileNameLocalisationID: PROJECTILE_SPINNER
@@ -124,7 +124,8 @@ MonoBehaviour:
   DestroyOnHit: 1
   DestroyInSecondsOn: 1
   DestroyInSeconds: 3
-  onDeathObjectSpawn: {fileID: 0}
+  ProjectileHitAnimation: {fileID: 1000010975605570, guid: 23f06e358c387964abbf8faf86410a7d,
+    type: 2}
   timesThroughEnemyMax: 0
 --- !u!212 &212000014060733104
 SpriteRenderer:

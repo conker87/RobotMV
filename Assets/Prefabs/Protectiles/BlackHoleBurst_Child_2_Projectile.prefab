@@ -100,7 +100,7 @@ MonoBehaviour:
   DestroyOnHit: 1
   DestroyInSecondsOn: 1
   DestroyInSeconds: 5
-  onDeathObjectSpawn: {fileID: 0}
+  ProjectileHitAnimation: {fileID: 0}
   DoOverrideParentMovementSpeed: 0
 --- !u!114 &114011272815474490
 MonoBehaviour:
