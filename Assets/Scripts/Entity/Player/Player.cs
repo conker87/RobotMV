@@ -84,35 +84,27 @@ public class Player : Entity
 		Current = this;
 
 	}
-
-	protected override void Update() {
-
-		base.Update();
-
-	}
 		
 	void OnTriggerStay2D(Collider2D col) {
 
-		Enemy e;
-
-		if ((e = col.gameObject.GetComponentInParent<Enemy> ()) != null) {
-			
-			DamageHealth (e.DamageOnTouch);
-
-		}
+//		Enemy e;
+//
+//		if ((e = col.gameObject.GetComponentInParent<Enemy> ()) != null) {
+//			
+//			DamageHealth (e.DamageOnTouch);
+//
+//		}
 
 	}
 
-	void OnGUI()
-	{
+	void OnGUI() {
 		style = new GUIStyle(GUI.skin.label);
 		style.normal.textColor = Color.magenta;
 
 		GUI.Label(new Rect(10, 10, 500, 20), ErrorMessage, style);
 		GUI.Label(new Rect(10, 30, 500, 20), "H: " + Health_Current + "/" + Health_Max + "|" + Health_RegenOn + ")", style);
-		GUI.Label(new Rect(10, 50, 500, 20), "Jumps: " + PowerUp_Jump + "|" + PowerUp_Jump_Double + "|" + PowerUp_Jump_Triple, style);
-		GUI.Label(new Rect(10, 70, 500, 20), "CW/I: " + (CurrentWeapon == null ? "None" : CurrentWeapon.UsableNameLocalisationID) + "|" + (CurrentItem == null ? "None" : CurrentItem.UsableNameLocalisationID), style);
-		GUI.Label(new Rect(10, 90, 500, 20), "Speed: " + MoveSpeed, style);
+		GUI.Label(new Rect(10, 50, 500, 20), "CW/I: " + (CurrentWeapon == null ? "None" : CurrentWeapon.UsableNameLocalisationID) + "|" + (CurrentItem == null ? "None" : CurrentItem.UsableNameLocalisationID), style);
+
 	}
 
 }

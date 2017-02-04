@@ -15,7 +15,7 @@ public class Enemy : Entity {
 	[Header("Damage On Touch")]
 	public int DamageOnTouch = 1;
 
-	void OnTriggerEnter2D(Collider2D other) {
+	void OnTriggerStay2D(Collider2D other) {
 
 		Entity e;
 

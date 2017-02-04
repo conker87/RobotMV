@@ -14,9 +14,6 @@ public class SwitchDoor : DoorBase {
 
 	[Header("")]
 	float timeUntilNextSwitchCheck;
-	float timeUntilSwitchesReset;
-
-	bool addToReset = false;
 
 	protected override void Update () {
 
@@ -48,16 +45,6 @@ public class SwitchDoor : DoorBase {
 
 						lastSwitch = s;
 						andGateCounter++;
-
-						addToReset = true;
-
-					//}
-
-					//if (addToReset) {
-
-						timeUntilSwitchesReset = Time.time + s.GetComponent<SwitchResetInSeconds> ().resetInSeconds;
-
-						addToReset = false;
 
 					}
 

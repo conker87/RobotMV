@@ -130,7 +130,13 @@ public class PauseManager : MonoBehaviour {
 				foreach (KeyCode code in Enum.GetValues (typeof(KeyCode))) {
 	
 					if (Input.GetKeyDown (code)) {
-						
+
+						if (code == KeyCode.Break) {
+
+							break;
+
+						}
+
 						int index = GetIndexOfPrefabList (currentlyChangingKeybindID);
 						ControlSetKeybind CSK = keybindingsPrefabList [index].GetComponent<ControlSetKeybind> ();
 

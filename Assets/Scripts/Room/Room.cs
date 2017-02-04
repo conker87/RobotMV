@@ -15,7 +15,7 @@ public class Room : MonoBehaviour {
 
 	[SerializeField]
 	Text areaNameText;
-	GameObject AreaName_Panel;
+	// GameObject AreaName_Panel;
 
 	// Use this for initialization
 	[ExecuteInEditMode]
@@ -23,7 +23,7 @@ public class Room : MonoBehaviour {
 
 		// There's really no need to add the GameObject into the field for every room, so let's just find the GameObject itself.
 		areaNameText = GameObject.Find ("AreaName").GetComponent<Text>();
-		AreaName_Panel = GameObject.Find ("AreaName_Panel");
+		// AreaName_Panel = GameObject.Find ("AreaName_Panel");
 
 		roomID = CameraManager.GetAreaIDForRoom (gameObject);
 

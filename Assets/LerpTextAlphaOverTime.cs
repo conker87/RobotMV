@@ -14,7 +14,7 @@ public class LerpTextAlphaOverTime : MonoBehaviour {
 
 	void Start() {
 
-		text = GetComponent<Text> ();
+		// text = GetComponent<Text> ();
 
 	}
 

@@ -50,6 +50,12 @@ public class Entity : MonoBehaviour {
 
 		}
 
+		if (Health_Current > Health_Max) {
+
+			Health_Current = Health_Max;
+
+		}
+
 		if (hasInvincibilityTime && isCurrentlyInInvulnerabilityTime) {
 
 			if (Time.time > iFramesRemoveTime) {
@@ -91,7 +97,7 @@ public class Entity : MonoBehaviour {
 
 		}
 
-		Debug.Log ("Hitting " + this + " with damage: " + damage);
+		Debug.Log ("Entity -- Hitting " + this + " with damage: " + damage);
 
 		Health_Current -= damage;
 

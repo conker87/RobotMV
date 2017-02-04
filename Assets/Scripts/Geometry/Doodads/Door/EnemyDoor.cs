@@ -13,8 +13,6 @@ public class EnemyDoor : DoorBase {
 	float timeUntilNextEnemyCheck;
 	float timeUntilEnemyReset;
 
-	bool addToReset = false;
-
 	protected override void Start () {
 		
 		base.Start ();
