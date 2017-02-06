@@ -8,6 +8,8 @@ public class ProjectileDoor : DoorBase {
 
 	void OnTriggerEnter2D(Collider2D other) {
 
+		Debug.Log ("Something hit me!");
+
 		// Checks to see if the Collider is a Projectile, then checks if the Projectile is the Player's,
 		//	then checks if the WeaponLevel of the Projectie is more than/equal to the current DoorLevel,
 		//	if this is true then the door should open.
