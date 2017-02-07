@@ -75,6 +75,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Geometry
+    uniqueID: 3251578445
+    locked: 0
   - name: Enemy
     uniqueID: 2606299959
     locked: 0
@@ -86,9 +89,6 @@ TagManager:
     locked: 0
   - name: Projectiles
     uniqueID: 3008882709
-    locked: 0
-  - name: Geometry
-    uniqueID: 3251578445
     locked: 0
   - name: Foreground
     uniqueID: 1859086223
