@@ -8,9 +8,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 419988}
-  - component: {fileID: 11452466}
+  - component: {fileID: 114286196592274854}
   m_Layer: 0
-  m_Name: BasicBlaster_Weapon
+  m_Name: PhazerBeam_Weapon
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22,44 +22,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 155526}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &11452466
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 155526}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33f12de8136a58e4990d74774e3dd91f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollectableID: FIXME
-  UsableNameLocalisationID: WEAPON_BASIC_BLASTER
-  DescriptionLocalisationID: WEAPON_BASIC_BLASTER_DESC
-  InitialAttackLength: 0
-  CurrentAttackLength: 0
-  InitialDamage: 1
-  CurrentDamage: 2
-  Level: 0
-  InitialCooldown: 0.06666667
-  CurrentCooldown: 0.06666667
-  InitialProjectileMovementSpeed: 5
-  Projectiles:
-  - {fileID: 11475610, guid: 67a5760b2e37c4d4bb07867a7c716c77, type: 2}
-  projectileType: 0
-  BasicBlasterChargedShotID: FIXME
-  ChargedShotMultiplier: 2
-  ChargedShotProjectile: {fileID: 11475610, guid: 03ae5fc905e54ea45b6dfdd593ccfd01,
-    type: 2}
-  chargedShotTimer: 0
-  chargedShotChargeTime: 0.5
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -71,3 +40,28 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 155526}
   m_IsPrefabParent: 1
+--- !u!114 &114286196592274854
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e590347b2f087894dbd5d2a0bd9c8c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollectableID: PHAZER_BEAM
+  UsableNameLocalisationID: WEAPON_PHAZER_BEAM
+  DescriptionLocalisationID: WEAPON_PHAZER_BEAM_DESC
+  InitialAttackLength: 0
+  CurrentAttackLength: 0
+  InitialDamage: 3
+  CurrentDamage: 0
+  Level: 2
+  InitialCooldown: 0.2
+  CurrentCooldown: 0
+  InitialProjectileMovementSpeed: 5
+  Projectiles:
+  - {fileID: 114227459315094078, guid: 79cc77a99247b4c42ae03f094715aad9, type: 2}
+  projectileType: 0

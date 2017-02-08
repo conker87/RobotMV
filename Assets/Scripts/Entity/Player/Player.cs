@@ -35,6 +35,12 @@ public class Player : Entity
 					Weapon_MissileLauncher_CooldownMod = 1f,
 					Weapon_MissileLauncher_DamageMod = 1f;
 
+	// TODO: Needs a PowerUp prefab
+	public bool 	Weapon_PhazerBeam = false;
+	public float 	// Weapon_PhazerBeam_AttackLengthMod = 1f,
+					Weapon_PhazerBeam_CooldownMod = 1f,
+					Weapon_PhazerBeam_DamageMod = 1f;
+
 	public bool 	Weapon_Spinner = false;
 	public float 	Weapon_Spinner_AttackLengthMod = 1f,
 					Weapon_Spinner_CooldownMod = 1f,

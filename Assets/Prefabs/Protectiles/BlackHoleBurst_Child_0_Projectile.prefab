@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 212844297241437284}
   - component: {fileID: 58438995379749158}
   - component: {fileID: 50797307311895796}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: BlackHoleBurst_Child_0_Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}

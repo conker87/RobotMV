@@ -7,7 +7,7 @@ public class ProjectileBase : MonoBehaviour {
 	// TODO: Allow the projectile to have options of going through enemies a certain number of times.
 
 	[Header("Projectile Localisation ID")]
-	public string			ProjectileNameLocalisationID = "";
+	public string			ProjectileNameLocalisationID = "FIXME";
 
 	[Header("Projectile Movement Settings")]
 	public Vector3			Direction;
@@ -72,7 +72,7 @@ public class ProjectileBase : MonoBehaviour {
 
 	protected virtual void Update () {
 
-		if (PauseManager.Current == null ||PauseManager.Current.checkIfCurrentlyPaused ()) {
+		if (PauseManager.Current == null || PauseManager.Current.checkIfCurrentlyPaused ()) {
 
 			return;
 
