@@ -28,7 +28,6 @@ public class BombExplosionProjectile : ProjectileBase {
 				e.DamageHealth (ProjectileDamage);
 
 				attackSpeedTime = Time.time + (DestroyInSeconds / attacksPerProjectile);
-				Debug.Log (attackSpeedTime);
 
 			}
 
