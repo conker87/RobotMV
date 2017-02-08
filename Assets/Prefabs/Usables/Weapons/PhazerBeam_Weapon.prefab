@@ -61,7 +61,7 @@ MonoBehaviour:
   Level: 2
   InitialCooldown: 0.2
   CurrentCooldown: 0
-  InitialProjectileMovementSpeed: 5
+  InitialProjectileMovementSpeed: 7
   Projectiles:
   - {fileID: 114227459315094078, guid: 79cc77a99247b4c42ae03f094715aad9, type: 2}
   projectileType: 0

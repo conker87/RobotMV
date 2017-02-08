@@ -51,15 +51,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62cf706482411084787602a92b99eb18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CollectableID: FIXME
   UsableNameLocalisationID: ITEM_BOMB
   DescriptionLocalisationID: ITEM_BOMB_DESC
-  AttackLength: 0
-  Cooldown: 0
-  Damage: 0
+  InitialAttackLength: 1.5
+  CurrentAttackLength: 0
+  InitialDamage: 5
+  CurrentDamage: 0
   Level: 1
-  Charges: 0
-  cooldownTime: 0
-  attackLengthTime: 0
+  InitialCooldown: 0.5
+  CurrentCooldown: 0
+  InitialProjectileMovementSpeed: 0
   Projectiles:
   - {fileID: 114000011489134620, guid: 21e04479808ed7c49b01e97f97ce4315, type: 2}
   projectileType: 0

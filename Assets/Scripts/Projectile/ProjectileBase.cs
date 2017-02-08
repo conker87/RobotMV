@@ -143,6 +143,18 @@ public class ProjectileBase : MonoBehaviour {
 
 	}
 
+	protected virtual void DestroyGameObjectWithHitAnim() {
+
+		Die (true);
+
+	}
+
+	protected virtual void Die() {
+
+		Die (false);
+
+	}
+
 	protected virtual void Die(bool doHitAnimation = true) {
 
 		if (doHitAnimation && ProjectileHitAnimation != null) {

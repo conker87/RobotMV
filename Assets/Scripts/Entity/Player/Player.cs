@@ -77,9 +77,15 @@ public class Player : Entity
 	public int		Bombs_Current = 0;
 	public int 		Bombs_Max = 0;
 	public bool 	BOMBS_INFINITE = false;
+	public float 	Item_Bomb_AttackLengthMod = 1f,
+					Item_Bomb_CooldownMod = 1f,
+					Item_Bomb_DamageMod = 1f;
 
 	public int 		Bombs_Mega_Current = 0, Bombs_Mega_Max = 0;
 	public bool 	BOMBS_MEGA_INFINITE = false;
+	public float 	Item_Bomb_Mega_AttackLengthMod = 1f,
+					Item_Bomb_Mega_CooldownMod = 1f,
+					Item_Bomb_Mega_DamageMod = 1f;
 
 	float timeToNextBomb, timeToNextMegaBomb;
 

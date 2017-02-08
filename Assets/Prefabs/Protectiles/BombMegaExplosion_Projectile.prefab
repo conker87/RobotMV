@@ -9,20 +9,21 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1000013484451354}
+  m_RootGameObject: {fileID: 1747847227635752}
   m_IsPrefabParent: 1
---- !u!1 &1000013484451354
+--- !u!1 &1747847227635752
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4000013304347350}
-  - component: {fileID: 114000010870803582}
-  - component: {fileID: 114000010119287764}
-  - component: {fileID: 58000010927450230}
-  - component: {fileID: 212000011536732462}
+  - component: {fileID: 4606926425431544}
+  - component: {fileID: 114114944097073512}
+  - component: {fileID: 114879503588068808}
+  - component: {fileID: 58976179167986874}
+  - component: {fileID: 212270238611607056}
+  - component: {fileID: 50869183232046268}
   m_Layer: 11
   m_Name: BombMegaExplosion_Projectile
   m_TagString: DestroyGeometry
@@ -30,25 +31,45 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4000013304347350
+--- !u!4 &4606926425431544
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013484451354}
+  m_GameObject: {fileID: 1747847227635752}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 36.03, y: -27.35, z: 0}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &58000010927450230
+--- !u!50 &50869183232046268
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1747847227635752}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!58 &58976179167986874
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013484451354}
+  m_GameObject: {fileID: 1747847227635752}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -57,29 +78,15 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1
---- !u!114 &114000010119287764
+--- !u!114 &114114944097073512
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013484451354}
+  m_GameObject: {fileID: 1747847227635752}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f7d78253b1b1354690be99ee3f5aff2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  explosionTime: 1.5
-  originalScale: {x: 0.1, y: 0.1, z: 1}
-  targetScale: {x: 3, y: 3, z: 3}
---- !u!114 &114000010870803582
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013484451354}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d06beee1ab27bd44ae4255c4fbd4602, type: 3}
+  m_Script: {fileID: 11500000, guid: 6afe0b5bf49f5cd46b18f087a722991f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ProjectileNameLocalisationID: PROJECTILE_BOMB_MEGA_EXPLOSION
@@ -92,14 +99,30 @@ MonoBehaviour:
   IgnoreGeometry: 0
   DestroyOnHit: 1
   DestroyInSecondsOn: 1
-  DestroyInSeconds: 3
-  onDeathObjectSpawn: {fileID: 0}
---- !u!212 &212000011536732462
+  DestroyInSeconds: 1.5
+  ProjectileHitAnimation: {fileID: 0}
+  attacksPerProjectile: 6
+--- !u!114 &114879503588068808
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1747847227635752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f7d78253b1b1354690be99ee3f5aff2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lerpTime: 1.5
+  getTimeFromProjectile: 1
+  originalScale: {x: 0.1, y: 0.1, z: 1}
+  targetScale: {x: 3, y: 3, z: 1}
+--- !u!212 &212270238611607056
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013484451354}
+  m_GameObject: {fileID: 1747847227635752}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0

@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 114227459315094078}
   - component: {fileID: 61794552101139234}
   - component: {fileID: 212992449283711030}
-  - component: {fileID: 95732638604888748}
   - component: {fileID: 50839989766572972}
   m_Layer: 11
   m_Name: PhazerBeamProjectile
@@ -38,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1661322979341624}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.96, y: -0.8, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -73,28 +72,11 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.8125}
---- !u!95 &95732638604888748
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1661322979341624}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0fa88b6316992d44da95d0968da0a7f7, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
+  m_Size: {x: 0.1875, y: 1}
 --- !u!114 &114227459315094078
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -149,7 +131,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1286084587
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300002, guid: ee59d8e8f5bd0d64b88b0a9bcdef15f1, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300052, guid: 9c0ebdfd64506f441a3c74a2a87dd7b8, type: 3}
+  m_Color: {r: 0.81501, g: 0.16176468, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

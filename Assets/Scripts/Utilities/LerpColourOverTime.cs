@@ -6,11 +6,19 @@ public class LerpColourOverTime : MonoBehaviour {
 	public float duration;
 	float t;
 
+	public bool getDurationFromProjectile = false;
+
 	public Color colorFrom, colorTo;
 
 	Renderer r;
 
 	void Start() {
+
+		if (getDurationFromProjectile) {
+
+			duration = GetComponent<ProjectileBase> ().DestroyInSeconds;
+
+		}
 
 		r = GetComponent<SpriteRenderer> ();
 
@@ -28,7 +36,7 @@ public class LerpColourOverTime : MonoBehaviour {
 
 		if (t < 1) {
 			
-			t += Time.deltaTime;
+			t += Time.deltaTime / duration;
 
 		}
 

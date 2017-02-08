@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 50000012855530708}
   - component: {fileID: 198000010280550898}
   m_Layer: 11
-  m_Name: Bomb_Projectile
+  m_Name: Bomb_Mega_Projectile
   m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 737526a66b97d6f419ba544a461ced9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProjectileNameLocalisationID: PROJECTILE_BOMB
+  ProjectileNameLocalisationID: PROJECTILE_BOMB_MEGA
   Direction: {x: 0, y: 0, z: 0}
   MovementSpeed: 0
   ProjectileRotatesToDirection: 0
@@ -86,8 +86,8 @@ MonoBehaviour:
   IgnoreGeometry: 0
   DestroyOnHit: 1
   DestroyInSecondsOn: 1
-  DestroyInSeconds: 3.2
-  ProjectileHitAnimation: {fileID: 1747847227635752, guid: f87af08be5000e542963dfac30dc91bc,
+  DestroyInSeconds: 3
+  ProjectileHitAnimation: {fileID: 1747847227635752, guid: 8106a6d06d7e4c14896032085b209cc7,
     type: 2}
 --- !u!114 &114000012027538480
 MonoBehaviour:
@@ -102,8 +102,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 1.5
   getDurationFromProjectile: 1
-  colorFrom: {r: 1, g: 1, b: 1, a: 1}
-  colorTo: {r: 1, g: 0, b: 0, a: 1}
+  colorFrom: {r: 1, g: 0, b: 0, a: 1}
+  colorTo: {r: 0, g: 0, b: 0, a: 1}
 --- !u!198 &198000010280550898
 ParticleSystem:
   m_ObjectHideFlags: 1
