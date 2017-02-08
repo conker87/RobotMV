@@ -29,7 +29,7 @@ public class ProjectileBase : MonoBehaviour {
 	[Tooltip("The GameObject that is spawned at the hit.point of the collider that it is destroyed on.\n\nThis is used to add a '\"bullet hole\" type object.")]
 	public GameObject		ProjectileHitAnimation;
 
-	Entity e;
+	protected Entity e;
 
 	public void SetSettings(Vector2 direction, float movementSpeed = 3f, bool projectileRotatesToDirection = false, ProjectileType projectileType = ProjectileType.PLAYER, int projectileDamage = 1, int weaponLevel = 0,
 		bool ignoreGeometry = false, bool destroyOnHit = true, bool destroyInSecondsOn = true, float destroyInSeconds = 3f) {
@@ -92,7 +92,7 @@ public class ProjectileBase : MonoBehaviour {
 		// If the collider is an EnergyShield & the type is not PLAYER then destroy the projectile as it's an Enemy's.
 		if (other.GetComponent<EnergyShieldProjectile> () != null && ProjectileType != ProjectileType.PLAYER) {
 
-			Die ();
+			Die (true);
 			return;
 
 		}
@@ -121,7 +121,7 @@ public class ProjectileBase : MonoBehaviour {
 
 			if (DestroyOnHit) {
 
-				Die ();
+				Die (true);
 
 			}
 
@@ -131,7 +131,7 @@ public class ProjectileBase : MonoBehaviour {
 
 		if (!IgnoreGeometry) {
 
-			Die ();
+			Die (true);
 
 		}
 
