@@ -9,47 +9,47 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1000011479509470}
+  m_RootGameObject: {fileID: 1000013431395350}
   m_IsPrefabParent: 1
---- !u!1 &1000011479509470
+--- !u!1 &1000013431395350
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4000013615711744}
-  - component: {fileID: 114521542919793454}
-  - component: {fileID: 212000013743567772}
-  - component: {fileID: 61000013607591840}
-  - component: {fileID: 50000010682578812}
+  - component: {fileID: 4000011551171008}
+  - component: {fileID: 114429023816184924}
+  - component: {fileID: 212000012473446344}
+  - component: {fileID: 61000013520001084}
+  - component: {fileID: 50000010306359564}
   m_Layer: 14
-  m_Name: PowerUp_Item_BombUpgrade
+  m_Name: PowerUp_Item_BombMega_MaxUpgrade
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4000013615711744
+--- !u!4 &4000011551171008
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011479509470}
+  m_GameObject: {fileID: 1000013431395350}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.18, y: -11.26, z: 0}
+  m_LocalPosition: {x: 13.5, y: -20.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50000010682578812
+--- !u!50 &50000010306359564
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011479509470}
+  m_GameObject: {fileID: 1000013431395350}
   m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -63,12 +63,12 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &61000013607591840
+--- !u!61 &61000013520001084
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011479509470}
+  m_GameObject: {fileID: 1000013431395350}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -77,25 +77,25 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
---- !u!114 &114521542919793454
+--- !u!114 &114429023816184924
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011479509470}
+  m_GameObject: {fileID: 1000013431395350}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4e91fcf5de875e49aad6c9844c387a1, type: 3}
+  m_Script: {fileID: 11500000, guid: 2589390598d4930429e4beff7e214b71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PowerUpNameLocalisationID: COLLECTABLE_BOMBS_UPGRADE
-  PowerUpDescriptionLocalisationID: COLLECTABLE_BOMBS_UPGRADE_DESC
---- !u!212 &212000013743567772
+  PowerUpNameLocalisationID: COLLECTABLE_BOMBS_MEGA_MAX_UPGRADE
+  PowerUpDescriptionLocalisationID: COLLECTABLE_BOMBS_MEGA_MAX_UPGRADE_DESC
+--- !u!212 &212000012473446344
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011479509470}
+  m_GameObject: {fileID: 1000013431395350}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -122,6 +122,6 @@ SpriteRenderer:
   m_SortingLayerID: 323157195
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300044, guid: c1109a2542f89614aa201fc2de0ecd6c, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.33333334, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
