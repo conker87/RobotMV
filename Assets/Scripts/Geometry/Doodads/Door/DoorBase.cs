@@ -41,7 +41,7 @@ public class DoorBase : MonoBehaviour {
 
 	}
 
-	protected void CheckForPlayerInSurrounding(bool doCheck = true) {
+	protected virtual void CheckForPlayerInSurrounding(bool doCheck = true) {
 
 		if (!doCheck) {
 

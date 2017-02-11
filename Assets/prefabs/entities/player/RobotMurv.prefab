@@ -43,7 +43,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 186462}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.5, y: -28, z: 0}
+  m_LocalPosition: {x: 16.18, y: -28, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4000013207597610}
@@ -91,13 +91,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EntityNameLocalisationID: PLAYER_MURV
   EntityDescLocalisationID: PLAYER_MURV_DESC
-  Health_Current: 3
-  Health_Max: 3
+  Health_Current: 10
+  Health_Max: 10
   Health_RegenOn: 0
   Health_RegenCooldown: 10
   HEALTH_INFINITE: 0
   dead: 0
-  hasInvincibilityTime: 0
+  hasInvincibilityTime: 1
   invincibilityTimeLength: 1
   isCurrentlyInInvulnerabilityTime: 0
   MoveSpeed: 4
@@ -120,6 +120,9 @@ MonoBehaviour:
   Weapon_MissileLauncher: 0
   Weapon_MissileLauncher_CooldownMod: 1
   Weapon_MissileLauncher_DamageMod: 1
+  Weapon_PhazerBeam: 1
+  Weapon_PhazerBeam_CooldownMod: 1
+  Weapon_PhazerBeam_DamageMod: 1
   Weapon_Spinner: 0
   Weapon_Spinner_AttackLengthMod: 1
   Weapon_Spinner_CooldownMod: 1
@@ -138,15 +141,22 @@ MonoBehaviour:
   Item_EnergyShield_CooldownMod: 1
   Item_EnergyShield_DamageMod: 1
   ENERGY_SHIELD_INFINITE: 0
+  Keys: 0
   PowerUp_Jump: 0
   PowerUp_Jump_Double: 0
   PowerUp_Jump_Triple: 0
-  Bombs_Current: 0
-  Bombs_Max: 0
-  BOMBS_INFINITE: 0
+  Bombs_Current: 1
+  Bombs_Max: 1
+  BOMBS_INFINITE: 1
+  Item_Bomb_AttackLengthMod: 1
+  Item_Bomb_CooldownMod: 1
+  Item_Bomb_DamageMod: 1
   Bombs_Mega_Current: 0
   Bombs_Mega_Max: 0
-  BOMBS_MEGA_INFINITE: 0
+  BOMBS_MEGA_INFINITE: 1
+  Item_Bomb_Mega_AttackLengthMod: 1
+  Item_Bomb_Mega_CooldownMod: 1
+  Item_Bomb_Mega_DamageMod: 1
   CanChangeWeapon: 1
 --- !u!114 &11475602
 MonoBehaviour:
@@ -169,7 +179,7 @@ MonoBehaviour:
   _collider: {fileID: 0}
   isFlyingEntity: 0
   jumpHeight: 3
-  timeToJumpApex: 0.6
+  timeToJumpApex: 0.5
   accelerationTimeAirbourne: 0.1
   accelerationTimeGrounded: 0.1
   hasJumped: 0

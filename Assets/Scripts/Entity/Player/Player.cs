@@ -66,6 +66,8 @@ public class Player : Entity
 					Item_EnergyShield_DamageMod = 1f;
 	public bool ENERGY_SHIELD_INFINITE = false;
 
+	public int 		Keys = 0;
+
 	[Header("PowerUps")]
 	public bool PowerUp_Jump = false;
 	public bool PowerUp_Jump_Double = false;
