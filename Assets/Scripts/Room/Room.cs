@@ -6,6 +6,11 @@ using UnityEngine.UI;
 public class Room : MonoBehaviour {
 
 	public string RoomNameLocalisationID = "LocalisationID <FIXME>";
+	public float MaxRoomZoomLevel = 7.5f, LevelZoomTime = 1f;
+
+	float t = 0.0f;
+
+	PixelPerfectCamera pixel;
 
 	[SerializeField]
 	int roomID = -1;
@@ -27,24 +32,23 @@ public class Room : MonoBehaviour {
 
 		roomID = CameraManager.GetAreaIDForRoom (gameObject);
 
+		pixel = FindObjectOfType<Camera> ().GetComponent<PixelPerfectCamera> ();
+
 	}
 	
 	// Update is called once per frame
 	protected virtual void Update () {
 
-//		This is no longer needed now that CameraManager always loads first.
-//		if (roomID < 0) {
-//
-//			roomID = CameraManager.GetAreaIDForRoom (gameObject);
-//
-//		}
-
 		isCurrentlyInThisRoom = (CameraManager.GetCurrentAreaIndex() == roomID) ? true : false;
 
 		if (isCurrentlyInThisRoom) {
 
+			//pixel.targetCameraHalfWidth = MaxRoomZoomLevel;
+			LerpZoomOverTime (LevelZoomTime);
+
 			if (!hasShownAreaName) {
-				
+
+				//pixel.adjustCameraFOV ();				
 				ShowAreaNameOnScreen (RoomNameLocalisationID); // Localisation.GetText(RoomNameLocalisationID);
 
 			}
@@ -65,6 +69,23 @@ public class Room : MonoBehaviour {
 		disable.Reset (3f);
 
 		hasShownAreaName = true;
+
+	}
+
+	void LerpZoomOverTime(float time) {
+
+		float org = pixel.targetCameraHalfWidth;
+
+		pixel.targetCameraHalfWidth = Mathf.Lerp (org, MaxRoomZoomLevel, t);
+		pixel.adjustCameraFOV ();
+
+		t += (Time.deltaTime * (1 / time));
+
+		if (t > 1) {
+
+			t = 0;
+
+		}
 
 	}
 
