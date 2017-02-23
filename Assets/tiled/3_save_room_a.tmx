@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" renderorder="left-down" width="16" height="12" tilewidth="8" tileheight="8" nextobjectid="1">
- <tileset firstgid="1" name="prototype" tilewidth="8" tileheight="8" spacing="1" margin="1" tilecount="65" columns="5">
-  <image source="../Sprites/geometry/prototype.png" width="46" height="117"/>
+ <tileset firstgid="1" name="prototype" tilewidth="8" tileheight="8" spacing="1" margin="1" tilecount="85" columns="5">
+  <image source="../Sprites/geometry/prototype.png" width="46" height="156"/>
   <tile id="0">
    <objectgroup draworder="index">
     <object id="1" x="0" y="0" width="8" height="8"/>
@@ -421,7 +421,7 @@
    </objectgroup>
   </tile>
  </tileset>
- <tileset firstgid="66" name="Zeta" tilewidth="8" tileheight="8" spacing="1" margin="1" tilecount="176" columns="4">
+ <tileset firstgid="86" name="Zeta" tilewidth="8" tileheight="8" spacing="1" margin="1" tilecount="176" columns="4">
   <image source="../Sprites/geometry/zeta_complex/zeta_complex.png" width="37" height="397"/>
   <terraintypes>
    <terrain name="Purple" tile="-1"/>
@@ -1150,7 +1150,7 @@
    </objectgroup>
   </tile>
  </tileset>
- <tileset firstgid="242" name="Starbase" tilewidth="8" tileheight="8" margin="1" tilecount="184" columns="8">
+ <tileset firstgid="262" name="Starbase" tilewidth="8" tileheight="8" margin="1" tilecount="184" columns="8">
   <image source="../Sprites/geometry/orbital_starbase/orbital_starbase_noBorder.png" width="69" height="188"/>
   <tile id="2">
    <objectgroup draworder="index">
@@ -1753,7 +1753,7 @@
    </objectgroup>
   </tile>
  </tileset>
- <tileset firstgid="426" name="Cyber" tilewidth="8" tileheight="8" spacing="1" margin="1" tilecount="164" columns="4">
+ <tileset firstgid="446" name="Cyber" tilewidth="8" tileheight="8" spacing="1" margin="1" tilecount="164" columns="4">
   <image source="../Sprites/geometry/cyber_citadel/cyber_citadel_tiles.png" width="37" height="370"/>
   <tile id="0">
    <objectgroup draworder="index">
@@ -2586,7 +2586,7 @@
    </objectgroup>
   </tile>
  </tileset>
- <tileset firstgid="590" name="Cyber2" tilewidth="64" tileheight="48" tilecount="30" columns="1">
+ <tileset firstgid="610" name="Cyber2" tilewidth="64" tileheight="48" tilecount="30" columns="1">
   <tile id="0">
    <image width="16" height="16" source="../Sprites/geometry/cyber_citadel/assembled_parts/bg_frame.png"/>
   </tile>
@@ -2678,13 +2678,13 @@
    <image width="24" height="16" source="../Sprites/geometry/cyber_citadel/assembled_parts/terrain_pipe_small_top.png"/>
   </tile>
  </tileset>
- <tileset firstgid="620" name="Saigo" tilewidth="8" tileheight="8" spacing="1" margin="1" tilecount="296" columns="4">
+ <tileset firstgid="640" name="Saigo" tilewidth="8" tileheight="8" spacing="1" margin="1" tilecount="296" columns="4">
   <image source="../Sprites/geometry/saigo_station/saigo_station.png" width="37" height="667"/>
  </tileset>
- <tileset firstgid="916" name="Clearwater" tilewidth="8" tileheight="8" spacing="1" margin="1" tilecount="124" columns="4">
+ <tileset firstgid="936" name="Clearwater" tilewidth="8" tileheight="8" spacing="1" margin="1" tilecount="124" columns="4">
   <image source="../Sprites/geometry/clearwater_cliffs/clearwater_cliffs.png" width="37" height="280"/>
  </tileset>
- <tileset firstgid="1040" name="Clearwater2" tilewidth="77" tileheight="88" tilecount="6" columns="2">
+ <tileset firstgid="1060" name="Clearwater2" tilewidth="77" tileheight="88" tilecount="6" columns="2">
   <tile id="7">
    <image width="77" height="88" source="../Sprites/geometry/clearwater_cliffs/assembled_parts/clearwater_cliff_0.png"/>
   </tile>
@@ -2711,18 +2711,18 @@
    <property name="unity:tag" value="TiledBackground"/>
   </properties>
   <data encoding="csv">
-195,190,196,195,195,197,196,190,195,196,189,197,197,197,189,190,
-197,196,196,195,196,189,189,196,189,190,190,189,189,189,190,189,
-197,195,197,189,196,190,197,196,195,197,189,195,196,190,195,196,
-195,196,195,190,189,197,190,196,189,189,197,197,189,197,197,197,
-196,195,197,195,196,189,196,190,197,195,196,195,190,195,195,196,
-196,195,190,190,195,197,189,197,197,189,189,197,195,197,189,189,
-197,197,189,197,196,196,195,195,189,196,195,195,195,197,197,195,
-195,189,197,196,195,196,189,197,196,190,189,195,190,197,190,197,
-197,197,197,189,195,189,190,195,189,196,196,190,197,195,197,190,
-196,189,190,195,190,196,189,195,189,197,196,196,195,189,197,197,
-196,190,195,190,197,190,195,196,195,189,189,189,189,196,189,197,
-189,190,195,190,196,190,197,196,190,195,190,197,189,195,196,197
+210,215,217,209,215,217,210,215,217,209,209,217,210,216,215,217,
+216,215,217,215,215,217,210,217,209,210,216,216,217,217,217,210,
+210,209,210,215,215,217,215,215,217,216,215,217,209,216,209,215,
+216,216,210,209,215,217,210,217,216,217,215,209,210,216,209,216,
+215,216,215,217,210,210,215,210,215,216,209,217,217,216,215,210,
+215,215,217,209,209,217,216,216,216,215,217,209,210,209,215,217,
+215,215,209,216,217,217,215,217,210,217,216,210,215,209,209,217,
+209,210,215,210,210,217,209,215,216,209,209,217,215,216,209,209,
+217,217,215,215,217,210,209,209,215,216,217,216,217,217,210,217,
+216,215,210,210,216,217,217,216,215,215,216,210,216,210,210,210,
+209,217,217,216,217,215,217,209,210,209,216,215,215,209,215,210,
+209,216,210,217,215,217,217,216,209,209,210,209,210,210,209,210
 </data>
  </layer>
  <layer name="ParalaxBG" width="16" height="12" visible="0">
@@ -2780,13 +2780,13 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-591,0,0,0,0,0,0,0,0,0,591,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-591,0,0,0,0,0,0,0,0,0,591,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
  <layer name="GeometryDestroyable" width="16" height="12">
@@ -2818,9 +2818,9 @@
   </properties>
   <data encoding="csv">
 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+1,1,1,36,0,0,0,0,0,0,0,0,0,0,0,0,
+1,1,36,0,0,0,0,0,0,0,0,0,0,0,0,0,
+1,36,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 1,0,0,0,0,0,0,0,0,0,0,4,1,1,1,1,
 1,0,0,0,0,0,0,0,0,0,4,1,1,1,1,1,
 1,0,0,0,0,0,0,0,0,4,1,1,1,1,1,1,
