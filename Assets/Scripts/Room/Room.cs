@@ -8,6 +8,9 @@ public class Room : MonoBehaviour {
 	public string RoomNameLocalisationID = "LocalisationID <FIXME>";
 	public float MaxRoomZoomLevel = 7.5f, LevelZoomTime = 1f;
 
+	[SerializeField]
+	float areanameDestroy = 3f;
+
 	float t = 0.0f;
 
 	PixelPerfectCamera pixel;
@@ -28,6 +31,8 @@ public class Room : MonoBehaviour {
 
 		// There's really no need to add the GameObject into the field for every room, so let's just find the GameObject itself.
 		areaNameText = GameObject.Find ("AreaName").GetComponent<Text>();
+
+		Debug.Log (this);
 		// AreaName_Panel = GameObject.Find ("AreaName_Panel");
 
 		roomID = CameraManager.GetAreaIDForRoom (gameObject);
@@ -66,7 +71,7 @@ public class Room : MonoBehaviour {
 		DisableInSeconds disable = areaNameText.GetComponent<DisableInSeconds> ();
 
 		areaNameText.text = "< " + name + " > ";
-		disable.Reset (3f);
+		disable.Reset (areanameDestroy);
 
 		hasShownAreaName = true;
 

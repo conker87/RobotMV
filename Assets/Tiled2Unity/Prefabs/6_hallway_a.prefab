@@ -458,18 +458,18 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: 0, y: -2.5}
-      - {x: 20, y: -2.5}
-      - {x: 20, y: 0}
-      - {x: 0, y: 0}
-    - - {x: 14.5, y: -7.5}
-      - {x: 20, y: -7.5}
-      - {x: 20, y: -5}
-      - {x: 12, y: -5}
-    - - {x: 0, y: -5}
-      - {x: 0, y: -7.5}
-      - {x: 11, y: -7.5}
-      - {x: 8.5, y: -5}
+    - - {x: 1.5, y: -4}
+      - {x: 21.5, y: -4}
+      - {x: 21.5, y: -1.5}
+      - {x: 1.5, y: -1.5}
+    - - {x: 16, y: -9}
+      - {x: 21.5, y: -9}
+      - {x: 21.5, y: -6.5}
+      - {x: 13.5, y: -6.5}
+    - - {x: 1.5, y: -9}
+      - {x: 12.5, y: -9}
+      - {x: 10, y: -6.5}
+      - {x: 1.5, y: -6.5}
 --- !u!114 &114254857542486974
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -498,13 +498,13 @@ MonoBehaviour:
   StaggerIndex: 0
   HexSideLength: 0
   NumLayers: 10
-  NumTilesWide: 40
-  NumTilesHigh: 15
+  NumTilesWide: 46
+  NumTilesHigh: 21
   TileWidth: 8
   TileHeight: 8
   ExportScale: 0.0625
-  MapWidthInPixels: 320
-  MapHeightInPixels: 120
+  MapWidthInPixels: 368
+  MapHeightInPixels: 168
 --- !u!114 &114732227767651932
 MonoBehaviour:
   m_ObjectHideFlags: 1

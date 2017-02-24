@@ -458,22 +458,22 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: 14, y: -6}
-      - {x: 14, y: -2.5}
-      - {x: 13.5, y: -2.5}
-      - {x: 13.5, y: -6}
-    - - {x: 2, y: -6}
-      - {x: 0.5, y: -6}
-      - {x: 0.5, y: -2.5}
-      - {x: 2, y: -2.5}
-      - {x: 3.5, y: -1}
-      - {x: 14, y: -1}
-      - {x: 14, y: 0}
-      - {x: 0, y: 0}
-      - {x: 0, y: -8.5}
-      - {x: 14, y: -8.5}
-      - {x: 14, y: -7.5}
-      - {x: 3.5, y: -7.5}
+    - - {x: 15.5, y: -7.5}
+      - {x: 15.5, y: -4}
+      - {x: 15, y: -4}
+      - {x: 15, y: -7.5}
+    - - {x: 3.5, y: -7.5}
+      - {x: 2, y: -7.5}
+      - {x: 2, y: -4}
+      - {x: 3.5, y: -4}
+      - {x: 5, y: -2.5}
+      - {x: 15.5, y: -2.5}
+      - {x: 15.5, y: -1.5}
+      - {x: 1.5, y: -1.5}
+      - {x: 1.5, y: -10}
+      - {x: 15.5, y: -10}
+      - {x: 15.5, y: -9}
+      - {x: 5, y: -9}
 --- !u!114 &114016440198294940
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -490,13 +490,13 @@ MonoBehaviour:
   StaggerIndex: 0
   HexSideLength: 0
   NumLayers: 10
-  NumTilesWide: 28
-  NumTilesHigh: 17
+  NumTilesWide: 34
+  NumTilesHigh: 23
   TileWidth: 8
   TileHeight: 8
   ExportScale: 0.0625
-  MapWidthInPixels: 224
-  MapHeightInPixels: 136
+  MapWidthInPixels: 272
+  MapHeightInPixels: 184
 --- !u!114 &114207387675475068
 MonoBehaviour:
   m_ObjectHideFlags: 1
