@@ -458,6 +458,10 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
+    - - {x: 14, y: -6}
+      - {x: 14, y: -2.5}
+      - {x: 13.5, y: -2.5}
+      - {x: 13.5, y: -6}
     - - {x: 2, y: -6}
       - {x: 0.5, y: -6}
       - {x: 0.5, y: -2.5}

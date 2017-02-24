@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--Tiled2Unity generated xml data-->
+<!--Do not modify by hand-->
+<!--Last exported: 24/02/2017 00:18:47-->
+<Tiled2Unity version="1.0.9.4">
+  <AssignMaterial mesh="mesh_0001" material="prototype" />
+  <Prefab name="length_10" orientation="Orthogonal" staggerAxis="Y" staggerIndex="Odd" hexSideLength="0" numLayers="1" numTilesWide="10" numTilesHigh="1" tileWidth="8" tileHeight="8" exportScale="0.0625" mapWidthInPixels="80" mapHeightInPixels="8">
+    <GameObject name="Geometry" x="0" y="0" z="0" layer="Geometry" tag="TiledGeometry">
+      <GameObject name="prototype" copy="mesh_0001" sortingLayerName="Geometry" sortingOrder="0" opacity="1" />
+      <GameObject name="Collision">
+        <PolygonCollider2D>
+          <Path>1,0 0.5,0 0.5,-0.5 1,-0.5</Path>
+          <Path>2,0 1.5,0 1.5,-0.5 2,-0.5</Path>
+          <Path>3,0 2.5,0 2.5,-0.5 3,-0.5</Path>
+          <Path>4,0 3.5,0 3.5,-0.5 4,-0.5</Path>
+          <Path>5,0 4.5,0 4.5,-0.5 5,-0.5</Path>
+        </PolygonCollider2D>
+      </GameObject>
+    </GameObject>
+  </Prefab>
+  <ImportMesh filename="length_10.obj">IyBXYXZlZnJvbnQgT0JKIGZpbGUgYXV0b21hdGljYWxseSBnZW5lcmF0ZWQgYnkgVGlsZWQyVW5pdHkNCg0KIyBWZXJ0aWNlcyAoQ291bnQgPSAyMCkNCnYgLTQuNSAtMC41IDANCnYgLTUgLTAuNSAwDQp2IC01IDAgMA0KdiAtNC41IDAgMA0KdiAtMy41IC0wLjUgMA0KdiAtNCAtMC41IDANCnYgLTQgMCAwDQp2IC0zLjUgMCAwDQp2IC0yLjUgLTAuNSAwDQp2IC0zIC0wLjUgMA0KdiAtMyAwIDANCnYgLTIuNSAwIDANCnYgLTEuNSAtMC41IDANCnYgLTIgLTAuNSAwDQp2IC0yIDAgMA0KdiAtMS41IDAgMA0KdiAtMC41IC0wLjUgMA0KdiAtMSAtMC41IDANCnYgLTEgMCAwDQp2IC0wLjUgMCAwDQoNCiMgVGV4dHVyZSBjb29yaWRpbmF0ZXMgKENvdW50ID0gNCkNCnZ0IDAuMDIxNzYwMzYgMC45NDIzMTQNCnZ0IDAuMTk1NjMwOSAwLjk0MjMxNA0KdnQgMC4xOTU2MzA5IDAuOTkzNTgzNQ0KdnQgMC4wMjE3NjAzNiAwLjk5MzU4MzUNCg0KIyBOb3JtYWwNCnZuIDAgMCAtMQ0KDQojIEdyb3VwcyAoQ291bnQgPSAxKQ0KCmcgbWVzaF8wMDAxCmYgMS8xLzEgMi8yLzEgMy8zLzEgNC80LzEKZiA1LzEvMSA2LzIvMSA3LzMvMSA4LzQvMQpmIDkvMS8xIDEwLzIvMSAxMS8zLzEgMTIvNC8xCmYgMTMvMS8xIDE0LzIvMSAxNS8zLzEgMTYvNC8xCmYgMTcvMS8xIDE4LzIvMSAxOS8zLzEgMjAvNC8xCg0K</ImportMesh>
+  <InternalTexture assetPath="Assets/Sprites/geometry/prototype.png" />
+</Tiled2Unity>
