@@ -16,7 +16,7 @@
   </tile>
   <tile id="2">
    <objectgroup draworder="index">
-    <object id="3" x="0" y="8">
+    <object id="4" x="0" y="8">
      <polygon points="0,0 8,0 0,-8"/>
     </object>
    </objectgroup>
@@ -268,9 +268,7 @@
   </tile>
   <tile id="38">
    <objectgroup draworder="index">
-    <object id="1" x="0" y="0">
-     <polygon points="0,0 0,8 8,8 8,0"/>
-    </object>
+    <object id="2" x="0" y="0" width="8" height="8"/>
    </objectgroup>
   </tile>
   <tile id="39">
@@ -1771,7 +1769,7 @@
   <image source="../Sprites/geometry/cyber_citadel/cyber_citadel_tiles.png" width="37" height="370"/>
   <tile id="0">
    <objectgroup draworder="index">
-    <object id="1" x="0" y="0" width="8" height="8"/>
+    <object id="2" x="0" y="0" width="8" height="8"/>
    </objectgroup>
   </tile>
   <tile id="1">
@@ -3293,10 +3291,14 @@
   </tile>
   <tile id="119">
    <objectgroup draworder="index">
-    <object id="1" x="8" y="0"/>
     <object id="3" x="8" y="0">
      <polygon points="0,0 0,8 -7,8 -7,0"/>
     </object>
+   </objectgroup>
+  </tile>
+  <tile id="123">
+   <objectgroup draworder="index">
+    <object id="2" x="0" y="0" width="8" height="8"/>
    </objectgroup>
   </tile>
   <tile id="124">
@@ -3417,7 +3419,6 @@
   <properties>
    <property name="unity:ignore" value="collision"/>
    <property name="unity:sortingLayerName" value="Background"/>
-   <property name="unity:tag" value="TiledBackground"/>
   </properties>
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -3643,7 +3644,6 @@
    <property name="unity:ignore" value="collision"/>
    <property name="unity:sortingLayerName" value="GeometryBG"/>
    <property name="unity:sortingOrder" value="-10"/>
-   <property name="unity:tag" value="TiledGeometryBG"/>
   </properties>
   <data encoding="csv">
 55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,
@@ -3718,7 +3718,6 @@
   <properties>
    <property name="unity:layer" value="Geometry"/>
    <property name="unity:sortingLayerName" value="Geometry"/>
-   <property name="unity:tag" value="TiledGeometryDestroyable"/>
   </properties>
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -3730,8 +3729,8 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,39,39,39,39,39,39,39,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,39,39,39,39,39,39,39,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -3793,7 +3792,6 @@
   <properties>
    <property name="unity:layer" value="Geometry"/>
    <property name="unity:sortingLayerName" value="Geometry"/>
-   <property name="unity:tag" value="TiledGeometry"/>
   </properties>
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -3867,8 +3865,8 @@
  <layer name="Items - HIDE ME" width="66" height="66" offsetx="-8" offsety="0">
   <properties>
    <property name="unity:layer" value="Geometry"/>
-   <property name="unity:sortingLayerName" value="Geometry"/>
-   <property name="unity:tag" value="TiledGeometry"/>
+   <property name="unity:sortingLayerName" value="Items"/>
+   <property name="unity:sortingOrder" type="int" value="-5"/>
   </properties>
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -3943,7 +3941,6 @@
   <properties>
    <property name="unity:ignore" value="collision"/>
    <property name="unity:sortingLayerName" value="Foreground"/>
-   <property name="unity:tag" value="TiledForeground"/>
   </properties>
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -4019,7 +4016,6 @@
    <property name="unity:ignore" value="collision"/>
    <property name="unity:sortingLayerName" value="Foreground"/>
    <property name="unity:sortingOrder" type="int" value="10"/>
-   <property name="unity:tag" value="TiledForeground"/>
   </properties>
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -4095,7 +4091,6 @@
    <property name="unity:ignore" value="collision"/>
    <property name="unity:sortingLayerName" value="Foreground"/>
    <property name="unity:sortingOrder" type="int" value="20"/>
-   <property name="unity:tag" value="TiledForeground"/>
   </properties>
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
