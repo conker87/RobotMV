@@ -32,7 +32,7 @@ public class Room : MonoBehaviour {
 		// There's really no need to add the GameObject into the field for every room, so let's just find the GameObject itself.
 		areaNameText = GameObject.Find ("AreaName").GetComponent<Text>();
 
-		Debug.Log (this);
+//		Debug.Log (this);
 		// AreaName_Panel = GameObject.Find ("AreaName_Panel");
 
 		roomID = CameraManager.GetAreaIDForRoom (gameObject);
