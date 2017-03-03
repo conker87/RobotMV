@@ -51,15 +51,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eacd017c52f3b8d4cb01466b14c12c22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CollectableID: SHURIKEN_SHIELD
   UsableNameLocalisationID: ITEM_SHURIKEN_SHIELD
   DescriptionLocalisationID: ITEM_SHURIKEN_SHIELD_DESC
-  AttackLength: 0
-  Cooldown: 0
-  Damage: 0
-  Level: 0
-  Charges: 0
-  cooldownTime: 0
-  attackLengthTime: 0
+  InitialAttackLength: 0
+  CurrentAttackLength: 0
+  InitialDamage: 0
+  CurrentDamage: 0
+  Level: -5
+  InitialCooldown: 0
+  CurrentCooldown: 0
+  InitialProjectileMovementSpeed: 0
   Projectiles:
   - {fileID: 114000011255479454, guid: fc3b93f6bee9398409daf4218babf7df, type: 2}
   - {fileID: 114000012293113622, guid: 811f6a9038fda08499e70c98f1800456, type: 2}

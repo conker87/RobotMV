@@ -51,10 +51,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62cf706482411084787602a92b99eb18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CollectableID: FIXME
+  CollectableID: BOMB
   UsableNameLocalisationID: ITEM_BOMB
   DescriptionLocalisationID: ITEM_BOMB_DESC
-  InitialAttackLength: 1.5
+  InitialAttackLength: 2
   CurrentAttackLength: 0
   InitialDamage: 5
   CurrentDamage: 0

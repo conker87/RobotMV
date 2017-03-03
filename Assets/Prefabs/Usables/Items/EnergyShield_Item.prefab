@@ -51,15 +51,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef0c800e704dd2a44a9a4caa6c42ddfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CollectableID: ENERGY_SHIELD
   UsableNameLocalisationID: ITEM_ENERGY_SHIELD
   DescriptionLocalisationID: ITEM_ENERGY_SHIELD_DESC
-  AttackLength: 0
-  Cooldown: 0
-  Damage: 0
-  Level: 0
-  Charges: 0
-  cooldownTime: 0
-  attackLengthTime: 0
+  InitialAttackLength: 0
+  CurrentAttackLength: 0
+  InitialDamage: 0
+  CurrentDamage: 0
+  Level: -5
+  InitialCooldown: 0
+  CurrentCooldown: 0
+  InitialProjectileMovementSpeed: 0
   Projectiles:
   - {fileID: 114000011892497020, guid: 78a1f8df8f9fe33439616f36dff3fc74, type: 2}
   projectileType: 0

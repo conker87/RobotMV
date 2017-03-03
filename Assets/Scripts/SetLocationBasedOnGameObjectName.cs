@@ -22,4 +22,10 @@ public class SetLocationBasedOnGameObjectName : MonoBehaviour {
 
 	}
 
+	void OnEnable() {
+
+		Start ();
+
+	}
+
 }
