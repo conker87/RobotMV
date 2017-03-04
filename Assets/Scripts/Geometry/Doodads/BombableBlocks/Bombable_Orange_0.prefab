@@ -16,10 +16,10 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 4000010124803418}
-  - 212: {fileID: 212000011045106034}
+  - component: {fileID: 4000010124803418}
+  - component: {fileID: 212000011045106034}
   m_Layer: 0
   m_Name: Collision
   m_TagString: Untagged
@@ -32,16 +32,16 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 4000012043420140}
-  - 114: {fileID: 114000011605484944}
-  - 212: {fileID: 212000010754852838}
-  - 61: {fileID: 61000011379581808}
-  - 50: {fileID: 50000011699943694}
+  - component: {fileID: 4000012043420140}
+  - component: {fileID: 114693684144536336}
+  - component: {fileID: 212000010754852838}
+  - component: {fileID: 61000011379581808}
+  - component: {fileID: 50000011699943694}
   m_Layer: 12
-  m_Name: BombableTest
-  m_TagString: Enemy
+  m_Name: Bombable_Orange_0
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54,11 +54,11 @@ Transform:
   m_GameObject: {fileID: 1000011545281612}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 4000012043420140}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4000012043420140
 Transform:
   m_ObjectHideFlags: 1
@@ -66,26 +66,29 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011702161650}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 22.5, y: 29.5, z: 0}
+  m_LocalPosition: {x: 7.75, y: -10, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 4000010124803418}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &50000011699943694
 Rigidbody2D:
-  serializedVersion: 2
+  serializedVersion: 4
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011702161650}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_IsKinematic: 1
+  m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -103,8 +106,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
---- !u!114 &114000011605484944
+  m_Size: {x: 0.5, y: 0.5}
+--- !u!114 &114693684144536336
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -112,36 +115,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000011702161650}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72a7940ac5955cc43a94963842889ca8, type: 3}
+  m_Script: {fileID: 11500000, guid: 90852275b639eb045b5732eaacced47f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EntityName: 
-  _DEBUG_INFINITE_HEALTH: 0
-  Health: 1
-  HealthMaximum: 1
-  HealthRegenPerTick: 0
-  HealthTanks: 0
-  HealthTanksMax: 0
-  HealthRegenOn: 0
-  dead: 0
-  _DEBUG_INFINITE_ENERGY: 0
-  Energy: 0
-  EnergyMaximum: 0
-  EnergyRegenPerTick: 0
-  EnergyTanks: 0
-  EnergyTanksMax: 0
-  EnergyRegenOn: 0
-  hasInvincibilityFrames: 0
-  invincibilityFramesLength: 0
-  isCurrentlyInInvulnerabilityFrames: 0
-  MoveSpeed: 0
-  MaximumMoveSpeed: 0
-  powerUpChance: 0
-  droppedPowerupsParent: {fileID: 0}
-  droppedPowerUpsChance: []
-  droppedPowerUpsMax: 
-  droppedPowerUps: []
-  DamageOnTouch: 0
+  wallLevel: 0
 --- !u!212 &212000010754852838
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -156,7 +133,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 0
   m_Materials:
   - {fileID: 2100000, guid: 5028263afa6af6642af47b337c6c05af, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -164,14 +143,14 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 1
+  m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1043388851
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300062, guid: 2f09508539f9fc04ab5569a835348556, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a7154baa3289b594789bceee1beb2db2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -188,8 +167,10 @@ SpriteRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
+  - {fileID: 2100000, guid: 5028263afa6af6642af47b337c6c05af, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -197,7 +178,7 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 1
+  m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89

@@ -108,6 +108,15 @@ public class ProjectileBase : MonoBehaviour {
 			return;
 
 		}
+
+		BombableWall bWall;
+
+		if ((bWall = other.GetComponentInParent<BombableWall> ()) != null && bWall.wallLevel >= WeaponLevel) {
+
+			// TODO: This needs to execute an animation or something better looking.
+			Destroy (other.gameObject);
+
+		}
 			
 		if ((e = other.GetComponentInParent<Entity> ()) != null) {
 			
