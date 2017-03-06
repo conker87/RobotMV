@@ -16247,11 +16247,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 431366, guid: 6d19e8eb38e26ad40afee1219920c204, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 3.49
+      value: -17.26
       objectReference: {fileID: 0}
     - target: {fileID: 431366, guid: 6d19e8eb38e26ad40afee1219920c204, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -4.81
+      value: -5.06
       objectReference: {fileID: 0}
     - target: {fileID: 431366, guid: 6d19e8eb38e26ad40afee1219920c204, type: 2}
       propertyPath: m_LocalPosition.z
@@ -16296,7 +16296,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11421016, guid: 6d19e8eb38e26ad40afee1219920c204, type: 2}
       propertyPath: PowerUp_Jump_Double
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11421016, guid: 6d19e8eb38e26ad40afee1219920c204, type: 2}
       propertyPath: Weapon_PhazerBeam
@@ -18681,6 +18681,7 @@ MonoBehaviour:
   - {fileID: 1739979047}
   - {fileID: 246618031}
   - {fileID: 1356996809}
+  - {fileID: 0}
 --- !u!1 &1551187401
 GameObject:
   m_ObjectHideFlags: 0

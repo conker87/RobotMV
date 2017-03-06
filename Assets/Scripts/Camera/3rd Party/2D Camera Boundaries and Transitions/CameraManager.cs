@@ -39,7 +39,7 @@ public class CameraManager : MonoBehaviour {
 
 	void Update() {
 
-		if (PauseManager.Current == null ||PauseManager.Current.checkIfCurrentlyPaused ()) {
+		if (PauseManager.Current == null || PauseManager.Current.checkIfCurrentlyPaused ()) {
 
 			return;
 
@@ -204,6 +204,13 @@ public class CameraManager : MonoBehaviour {
 
         // Draw the current selected area's bounding box
         foreach (GameObject n in listAreaNodes) {
+
+			if (n == null) {
+
+				continue;
+
+			}
+
             Transform i = n.transform;
             Transform j = n.transform.GetChild(0);
 

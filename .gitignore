@@ -38,3 +38,5 @@ Assets/TK2DROOT/tk2d_demo/
 Assets/Explosions/TexturePacker Packing/
 Assets/2DLightAsset/Examples/
 *.pdf
+*.obj
+*.pdb
