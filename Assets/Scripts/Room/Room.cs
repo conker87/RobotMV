@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[ExecuteInEditMode]
 public class Room : MonoBehaviour {
 
 	public string RoomNameLocalisationID = "LocalisationID <FIXME>";
@@ -26,7 +27,6 @@ public class Room : MonoBehaviour {
 	// GameObject AreaName_Panel;
 
 	// Use this for initialization
-	[ExecuteInEditMode]
 	protected virtual void Start () {
 
 		// There's really no need to add the GameObject into the field for every room, so let's just find the GameObject itself.
