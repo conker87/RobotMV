@@ -42,8 +42,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 186462}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.18, y: -28, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -17.25, y: -4.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4000013207597610}
@@ -120,7 +120,7 @@ MonoBehaviour:
   Weapon_MissileLauncher: 0
   Weapon_MissileLauncher_CooldownMod: 1
   Weapon_MissileLauncher_DamageMod: 1
-  Weapon_PhazerBeam: 1
+  Weapon_PhazerBeam: 0
   Weapon_PhazerBeam_CooldownMod: 1
   Weapon_PhazerBeam_DamageMod: 1
   Weapon_Spinner: 0
@@ -142,7 +142,7 @@ MonoBehaviour:
   Item_EnergyShield_DamageMod: 1
   ENERGY_SHIELD_INFINITE: 0
   Keys: 0
-  PowerUp_Jump: 0
+  PowerUp_Jump: 1
   PowerUp_Jump_Double: 0
   PowerUp_Jump_Triple: 0
   Bombs_Current: 1
@@ -179,7 +179,7 @@ MonoBehaviour:
   _collider: {fileID: 0}
   isFlyingEntity: 0
   jumpHeight: 3
-  timeToJumpApex: 0.5
+  timeToJumpApex: 0.6
   accelerationTimeAirbourne: 0.1
   accelerationTimeGrounded: 0.1
   hasJumped: 0

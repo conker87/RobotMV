@@ -29,7 +29,7 @@ public class MovementController : Controller2D {
 		gravity = -(2 * jumpHeight) / Mathf.Pow(timeToJumpApex, 2);
 		jumpVelocity = Mathf.Abs(gravity) * timeToJumpApex;
 
-		// Debug.Log (this + ": gravity: " + gravity + ", jumpVelocity: " + jumpVelocity);
+		Debug.Log (this + ": gravity: " + gravity + ", jumpVelocity: " + jumpVelocity);
 
 	}
 
