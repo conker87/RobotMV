@@ -16381,31 +16381,6 @@ Prefab:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 11421016, guid: 6d19e8eb38e26ad40afee1219920c204, type: 2}
-      propertyPath: PowerUp_Jump
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 212081354901738854, guid: 6d19e8eb38e26ad40afee1219920c204,
-        type: 2}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11421016, guid: 6d19e8eb38e26ad40afee1219920c204, type: 2}
-      propertyPath: PowerUp_Jump_Double
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11421016, guid: 6d19e8eb38e26ad40afee1219920c204, type: 2}
-      propertyPath: Weapon_PhazerBeam
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11475602, guid: 6d19e8eb38e26ad40afee1219920c204, type: 2}
-      propertyPath: jumpHeight
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 11475602, guid: 6d19e8eb38e26ad40afee1219920c204, type: 2}
-      propertyPath: timeToJumpApex
-      value: 0.6
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6d19e8eb38e26ad40afee1219920c204, type: 2}
   m_IsPrefabParent: 0
