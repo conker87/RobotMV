@@ -99,6 +99,22 @@ public class Player : Entity
 
 	}
 		
+	void OnTriggerEnter2D(Collider2D other) {
+
+		ProjectileBase p;
+
+		if ((p = other.GetComponentInParent<ProjectileBase> ()) != null) {
+
+			if (p.ProjectileType == ProjectileType.ENEMY) {
+
+				DamageHealth (p.ProjectileDamage);
+
+			}
+
+		}
+
+	}
+
 	void OnTriggerStay2D(Collider2D col) {
 
 //		Enemy e;

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!--Tiled2Unity generated xml data-->
 <!--Do not modify by hand-->
-<!--Last exported: 08/03/2017 12:18:43-->
+<!--Last exported: 14/03/2017 00:33:43-->
 <Tiled2Unity version="1.0.9.4">
   <AssignMaterial mesh="mesh_0001" material="zeta_complex" />
   <AssignMaterial mesh="mesh_0002" material="prototype" />
@@ -16,6 +16,12 @@
     <GameObject name="GeometryDestroyable" x="0" y="0" z="0" layer="Geometry" />
     <GameObject name="Geometry" x="0" y="0" z="0" layer="Geometry">
       <GameObject name="prototype" copy="mesh_0003" sortingLayerName="Geometry" sortingOrder="5" opacity="1" />
+      <GameObject name="Collision">
+        <PolygonCollider2D>
+          <Path>5.5,-3.5 7,-3.5 7,-3 10,-3 10,-2.5 15.5,-2.5 15.5,-0.5 0.5,-0.5 0.5,-5 2,-5 2,-4.5 4,-4.5 4,-4 5.5,-4</Path>
+          <Path>15.5,-4 12,-4 12,-4.5 9.5,-4.5 9.5,-5 7,-5 7,-5.5 5,-5.5 5,-6 3,-6 3,-6.5 0.5,-6.5 0.5,-9 15.5,-9</Path>
+        </PolygonCollider2D>
+      </GameObject>
     </GameObject>
     <GameObject name="Items - HIDE ME" x="0" y="0" z="0" layer="Geometry" />
     <GameObject name="Foreground" x="0" y="0" z="0" />

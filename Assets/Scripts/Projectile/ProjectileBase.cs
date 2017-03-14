@@ -90,6 +90,7 @@ public class ProjectileBase : MonoBehaviour {
 	protected virtual void OnTriggerEnter2D(Collider2D other) {
 
 		// If the collider is an EnergyShield & the type is not PLAYER then destroy the projectile as it's an Enemy's.
+		// TODO: Needs moving to the EnergyShieldProjectile class.
 		if (other.GetComponent<EnergyShieldProjectile> () != null && ProjectileType != ProjectileType.PLAYER) {
 
 			Die (true);
@@ -108,35 +109,26 @@ public class ProjectileBase : MonoBehaviour {
 			return;
 
 		}
-
-		BombableWall bWall;
-
-		if ((bWall = other.GetComponentInParent<BombableWall> ()) != null && bWall.wallLevel >= WeaponLevel) {
-
-			// TODO: This needs to execute an animation or something better looking.
-			Destroy (other.gameObject);
-
-		}
 			
-		if ((e = other.GetComponentInParent<Entity> ()) != null) {
-			
-			if (e.tag == "Geometry" && gameObject.tag != "DestroyGeometry") {
-
-				return;
-
-			}
-
-			e.DamageHealth(ProjectileDamage);
-
-			if (DestroyOnHit) {
-
-				Die (true);
-
-			}
-
-			return;
-
-		}
+//		if ((e = other.GetComponentInParent<Entity> ()) != null) {
+//			
+//			if (e.tag == "Geometry" && gameObject.tag != "DestroyGeometry") {
+//
+//				return;
+//
+//			}
+//
+//			e.DamageHealth(ProjectileDamage);
+//
+//			if (DestroyOnHit) {
+//
+//				Die (true);
+//
+//			}
+//
+//			return;
+//
+//		}
 
 		if (!IgnoreGeometry) {
 

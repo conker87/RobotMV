@@ -27,6 +27,7 @@ public class Boss : Enemy {
 
 		base.Update ();
 
+		// TODO: This needs refactoring, I do not like the whole UI aspects in this update of the boss. Maybe move it to Room?
 		if (!dead && CameraManager.GetCurrentAreaIndex () == bossRoomID) {
 
 			BossHealthBar_Parent.SetActive(true);
