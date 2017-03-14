@@ -49,36 +49,36 @@ public class RoomManager : MonoBehaviour {
 
 			}
 
-			GameObject tiledPrefab = null;
-			List<Room> rooms = new List<Room> ();
+		}
 
-			for (int i = 0; i < children.Count - 1; i++) {
+		GameObject tiledPrefab = null;
+		List<Room> rooms = new List<Room> ();
 
-				if (children [i].GetComponent<Room> () != null) {
+		for (int i = 0; i < children.Count - 1; i++) {
 
-					rooms.Add (children [i].GetComponent<Room>());
-					continue;
+			if (children [i].GetComponent<Room> () != null) {
 
-				} else {
-
-					tiledPrefab = children [i].gameObject;
-
-				}
-
-			}
-
-			if (tiledPrefab == null) {
-
+				rooms.Add (children [i].GetComponent<Room>());
 				continue;
 
-			}
+			} else {
 
-			foreach (var room in rooms) {
-
-				PrefabRooms newPrefabRoom = new PrefabRooms (tiledPrefab, room);
-				gameRooms.Add (newPrefabRoom);
+				tiledPrefab = children [i].gameObject;
 
 			}
+
+		}
+
+		if (tiledPrefab == null) {
+
+			continue;
+
+		}
+
+		foreach (var room in rooms) {
+
+			PrefabRooms newPrefabRoom = new PrefabRooms (tiledPrefab, room);
+			gameRooms.Add (newPrefabRoom);
 
 		}
 
