@@ -29,12 +29,13 @@ public class RoomManager : MonoBehaviour {
 
 		locationArray = worldParent.GetComponentsInChildren<SetLocationBasedOnGameObjectName> ();
 
+		List<Transform> children = new List<Transform>();
+
 		foreach (var item in locationArray) {
 
-			// Populate the children list to itterate through.
-			List<Transform> children = new List<Transform>();
 			children.Clear ();
 
+			// Populate the children list to itterate through.
 			foreach (Transform trans in item.transform) {
 
 				Debug.Log (item.name + ": " + trans);
@@ -49,36 +50,35 @@ public class RoomManager : MonoBehaviour {
 
 			}
 
-		}
+			GameObject tiledPrefab = null;
+			List<GameObject> rooms = new List<GameObject> ();
 
-		GameObject tiledPrefab = null;
-		List<Room> rooms = new List<Room> ();
+			foreach (var child in children) {
+				
+				if (child.GetComponent<Room> () != null) {
 
-		for (int i = 0; i < children.Count - 1; i++) {
+					rooms.Add (child.gameObject);
 
-			if (children [i].GetComponent<Room> () != null) {
+				} else {
 
-				rooms.Add (children [i].GetComponent<Room>());
-				continue;
+					tiledPrefab = child.gameObject;
 
-			} else {
-
-				tiledPrefab = children [i].gameObject;
+				}
 
 			}
 
-		}
+			if (tiledPrefab == null) {
 
-		if (tiledPrefab == null) {
+				continue;
 
-			continue;
+			}
 
-		}
+			foreach (var room in rooms) {
 
-		foreach (var room in rooms) {
+				PrefabRooms newPrefabRoom = new PrefabRooms (tiledPrefab, room.GetComponent<Room>());
+				gameRooms.Add (newPrefabRoom);
 
-			PrefabRooms newPrefabRoom = new PrefabRooms (tiledPrefab, room);
-			gameRooms.Add (newPrefabRoom);
+			}
 
 		}
 
