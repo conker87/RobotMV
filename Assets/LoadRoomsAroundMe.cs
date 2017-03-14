@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class LoadRoomsAroundMe : MonoBehaviour {
 
+	RoomManager rm;
+
 	[SerializeField]
 	float loadRange = 200f;
 
@@ -18,18 +20,44 @@ public class LoadRoomsAroundMe : MonoBehaviour {
 	Collider2D[] circleCollider;
 
 	void Start () {
-		
+
+		rm = FindObjectOfType<RoomManager> ();
+
 	}
 	
 	void Update () {
 
 		if (Time.time > timeCheckUpdate) {
 
+			Debug.Log ("Checking...");
+
 			circleCollider = Physics2D.OverlapCircleAll (transform.position, loadRange, roomLayer);
 
-			if (circleCollider.Length > 0) {
+			GameObject previousPrefab = null;
 
-				// LOAD
+			foreach (var room in rm.gameRooms) {
+
+				room.TiledPrefab.SetActive (true);
+
+				foreach (var col in circleCollider) {
+
+					if (previousPrefab != null && (previousPrefab.GetInstanceID() == room.TiledPrefab.GetInstanceID())) {
+
+						break;
+
+					}
+
+					previousPrefab = room.TiledPrefab;
+
+					Debug.Log (col.gameObject.GetInstanceID() + " checking against: " + room.Rooms.gameObject.GetInstanceID());
+
+					if (col.gameObject.GetInstanceID() != room.Rooms.gameObject.GetInstanceID()) {
+
+						room.TiledPrefab.SetActive (false);
+
+					}
+
+				}
 
 			}
 				

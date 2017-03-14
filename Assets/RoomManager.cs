@@ -38,9 +38,9 @@ public class RoomManager : MonoBehaviour {
 			// Populate the children list to itterate through.
 			foreach (Transform trans in item.transform) {
 
-				Debug.Log (item.name + ": " + trans);
+				// Debug.Log (item.name + ": " + trans);
 
-				if (trans.name == "Doodads" || trans.name == "PowerUps"){
+				if (!(trans.name.Contains("ROOM") || trans.name.Contains("TiledPrefab"))) {
 	
 					continue;
 

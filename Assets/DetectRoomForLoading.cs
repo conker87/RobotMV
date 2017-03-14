@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[ExecuteInEditMode]
 [RequireComponent(typeof(BoxCollider2D))]
 public class DetectRoomForLoading : MonoBehaviour {
 
@@ -18,10 +19,5 @@ public class DetectRoomForLoading : MonoBehaviour {
 
 		col.offset = middle;
 
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
 	}
 }
