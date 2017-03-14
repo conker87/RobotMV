@@ -24,9 +24,12 @@ public class Room : MonoBehaviour {
 
 	[SerializeField]
 	Text areaNameText;
-	// GameObject AreaName_Panel;
 
-	// Use this for initialization
+	[SerializeField]
+	bool isBossRoom = false;
+
+	public List<EnemySpawns> enemiesInRoom = new List<EnemySpawns>();
+
 	protected virtual void Start () {
 
 		// There's really no need to add the GameObject into the field for every room, so let's just find the GameObject itself.
@@ -93,5 +96,31 @@ public class Room : MonoBehaviour {
 		}
 
 	}
+
+	void OnDrawGizmos() {
+
+		if (enemiesInRoom.Count > 0) {
+
+			Gizmos.color = Color.cyan;
+			float size = .5f;
+
+			foreach (var item in enemiesInRoom) {
+
+				Vector3 position = item.spawnLocation;
+				Gizmos.DrawLine(position - Vector3.up * size, position + Vector3.up * size);
+				Gizmos.DrawLine(position - Vector3.left * size, position + Vector3.left * size);
+
+			}
+
+		}
+	}
+
+}
+
+[System.Serializable]
+public struct EnemySpawns {
+
+	public Vector3 spawnLocation;
+	public Enemy enemyToSpawn;
 
 }

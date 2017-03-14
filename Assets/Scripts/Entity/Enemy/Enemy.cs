@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using EckTechGames.FloatingCombatText;
 
-[RequireComponent(typeof(EnemyController))]
 public class Enemy : Entity {
 
 	public bool canBePermanentlyKilled = false;

@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4000013127499702}
   m_Layer: 13
-  m_Name: _DEBUG_EnemyTest_GROUND
+  m_Name: _DEBUG_Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -257,25 +257,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EntityNameLocalisationID: 
   EntityDescLocalisationID: Localisation <FIXME>
-  HealthRegenOn: 0
-  HealthRegenCooldown: 10
+  Health_Current: 3
+  Health_Max: 3
+  Health_RegenOn: 0
+  Health_RegenCooldown: 10
+  HEALTH_INFINITE: 0
   dead: 0
-  hasInvincibilityFrames: 0
-  invincibilityFramesLength: 0
-  isCurrentlyInInvulnerabilityFrames: 0
+  hasInvincibilityTime: 0
+  invincibilityTimeLength: 0
+  isCurrentlyInInvulnerabilityTime: 0
   MoveSpeed: 3
   MaximumMoveSpeed: 3
   CurrentItem: {fileID: 0}
   CurrentWeapon: {fileID: 0}
-  powerUpChance: 100
-  droppedPowerupsParent: {fileID: 0}
+  canBePermanentlyKilled: 0
+  enemyEntityID: FIXME
   droppedPowerUpsChance:
   - 10
   - 1
   droppedPowerUpsMax: 0700000001000000
   droppedPowerUps:
-  - {fileID: 1000013445478154, guid: 61f7179d513d67e4a952a82c4d65f105, type: 2}
-  - {fileID: 1000013445478154, guid: 54198a54882b2444785436dcf7612911, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  hasBeenPermanentlyKilled: 0
   DamageOnTouch: 1
 --- !u!114 &114000014112316870
 MonoBehaviour:
