@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tileset name="Clearwater" tilewidth="8" tileheight="8" spacing="1" margin="1" tilecount="124" columns="4">
- <image source="../Sprites/geometry/clearwater_cliffs/clearwater_cliffs.png" width="37" height="280"/>
+ <image source="../../Sprites/geometry/clearwater_cliffs/clearwater_cliffs.png" width="37" height="280"/>
  <tile id="0">
   <objectgroup draworder="index">
    <object id="1" x="8" y="8">
