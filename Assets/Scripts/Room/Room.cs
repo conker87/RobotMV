@@ -35,6 +35,8 @@ public class Room : MonoBehaviour {
 	public List<EnemySpawns> enemiesToSpawnInRoom = new List<EnemySpawns>();
 	public List<Enemy> enemiesInRoom = new List<Enemy>();
 
+	public List<BombableWall> bombableWalls = new List<BombableWall>();
+
 	protected virtual void Start () {
 
 		// There's really no need to add the GameObject into the field for every room, so let's just find the GameObject itself.
@@ -80,6 +82,8 @@ public class Room : MonoBehaviour {
 
 		}
 
+		EnableBombableWalls ();
+
 	}
 	
 	// Update is called once per frame
@@ -107,6 +111,7 @@ public class Room : MonoBehaviour {
 			if (hasShownAreaName && roomState == RoomState.WAITING) {
 				
 				roomState = RoomState.ENEMIES_DISABLED;
+				EnableBombableWalls();
 
 			}
 
@@ -128,6 +133,16 @@ public class Room : MonoBehaviour {
 
 	}
 
+	void EnableBombableWalls() {
+
+		for (int i = 0; i < bombableWalls.Count; i++) {
+
+			bombableWalls [i].gameObject.SetActive (true);
+
+		}
+
+	}
+
 	void EnableEnemies() {
 
 		for (int i = 0; i < enemiesInRoom.Count; i++) {
@@ -138,7 +153,7 @@ public class Room : MonoBehaviour {
 
 			}
 
-			enemiesInRoom[i].gameObject.SetActive (true);
+			enemiesInRoom [i].gameObject.SetActive (true);
 
 		}
 

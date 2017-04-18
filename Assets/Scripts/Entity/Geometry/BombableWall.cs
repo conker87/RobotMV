@@ -5,20 +5,16 @@ using UnityEngine;
 public class BombableWall : MonoBehaviour {
 
 	public int wallLevel = 0;
-	public GameObject wallObject;
 
 	void OnTriggerEnter2D(Collider2D other) {
 
 		ProjectileBase p;
 
-		if ((p = other.GetComponentInParent<ProjectileBase> ()) != null) {
+		if ((p = other.GetComponentInParent<ProjectileBase> ()) != null && 
+				p.ProjectileType == ProjectileType.PLAYER &&
+					p.WeaponLevel >= wallLevel) {
 
-			if (p.ProjectileType == ProjectileType.PLAYER && p.WeaponLevel >= wallLevel) {
-
-				wallObject.SetActive (false);
-				GetComponent<Collider2D> ().enabled = false;
-
-			}
+				gameObject.SetActive (false);
 
 		}
 
