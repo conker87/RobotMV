@@ -174,13 +174,9 @@ MonoBehaviour:
   CurrentWeapon: {fileID: 0}
   canBePermanentlyKilled: 0
   enemyEntityID: FIXME
-  droppedPowerUpsChance:
-  - 10
-  - 1
-  droppedPowerUpsMax: 0700000001000000
-  droppedPowerUps:
-  - {fileID: 0}
-  - {fileID: 0}
+  droppedPowerUpsChance: []
+  droppedPowerUpsMax: 
+  droppedPowerUps: []
   hasBeenPermanentlyKilled: 0
   DamageOnTouch: 1
 --- !u!114 &114854269937601990

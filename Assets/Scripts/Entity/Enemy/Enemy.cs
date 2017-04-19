@@ -111,8 +111,8 @@ public class Enemy : Entity {
 		// This should update the SaveFile with this data, probably using List<String>, with Enemy/BossKilled[enemyEntityID] = true;
 		hasBeenPermanentlyKilled = canBePermanentlyKilled;
 
-		//
-		Destroy (gameObject);
+		gameObject.SetActive (false);
+		// Destroy (gameObject);
 
 	}
 

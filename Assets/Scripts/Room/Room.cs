@@ -27,16 +27,19 @@ public class Room : MonoBehaviour {
 	[SerializeField]
 	Text areaNameText;
 
+	// Enemies
 	[SerializeField]
 	bool isBossRoom = false;
+
+	float disableEnemiesIn = 2f;
 
 	public Transform enemiesSpawnParent;
 
 	public List<EnemySpawns> enemiesToSpawnInRoom = new List<EnemySpawns>();
 	public List<Enemy> enemiesInRoom = new List<Enemy>();
+	bool hasAlreadyResetEnemies = false;
 
 	public List<BombableWall> bombableWalls = new List<BombableWall>();
-
 	Coroutine disableEnemies = null;
 
 	protected virtual void Start () {
@@ -93,13 +96,15 @@ public class Room : MonoBehaviour {
 
 		isCurrentlyInThisRoom = (CameraManager.GetCurrentAreaIndex() == roomID) ? true : false;
 
+		// Debug.Log (RoomNameLocalisationID + ": " + roomState.ToString());
+
 		if (isCurrentlyInThisRoom) {
 
 			if (disableEnemies != null) {
 
 				StopCoroutine (disableEnemies);
 				disableEnemies = null;
-				Debug.Log ("StopCoroutine (disableEnemies)");
+				Debug.Log ("StopCoroutine (disableEnemies) in " + RoomNameLocalisationID);
 
 			}
 
@@ -119,23 +124,32 @@ public class Room : MonoBehaviour {
 		} else {
 
 			if (hasShownAreaName && roomState == RoomState.WAITING) {
-				
+
+				hasAlreadyResetEnemies = false;
 				roomState = RoomState.ENEMIES_DISABLED;
-				EnableBombableWalls();
+
+				if (bombableWalls.Count > 0) {
+					EnableBombableWalls ();
+				}
 
 			}
 
-			if (hasShownAreaName && roomState == RoomState.ENEMIES_DISABLED) {
-
-				disableEnemies = StartCoroutine (DisableEnemies());
-
-				// DisableEnemiesImmediate ();
-
-			}
-
-			if (hasShownAreaName && roomState == RoomState.ENEMIES_RESET) {
+			if (enemiesInRoom.Count > 0) {
 				
-				ResetEnemies ();
+				if (hasShownAreaName && roomState == RoomState.ENEMIES_DISABLED) {
+
+					disableEnemies = StartCoroutine (DisableEnemies ());
+				}
+
+				if (hasShownAreaName && roomState == RoomState.ENEMIES_RESET) {
+				
+					ResetEnemies ();
+
+				}
+
+			} else {
+
+				roomState = RoomState.ENEMIES_ENABLED;
 
 			}
 
@@ -176,9 +190,9 @@ public class Room : MonoBehaviour {
 	IEnumerator DisableEnemies() {
 
 		roomState = RoomState.ENEMIES_RESET;
-		Debug.Log ("Starting: DisableEnemies::DisableEnemiesImmediate in 3 seconds.");
+		Debug.Log ("StartCoroutine (disableEnemies) in " + RoomNameLocalisationID);
 
-		yield return new WaitForSeconds(3f);
+		yield return new WaitForSeconds(disableEnemiesIn);
 		DisableEnemiesImmediate ();
 		disableEnemies = null;
 
@@ -192,8 +206,11 @@ public class Room : MonoBehaviour {
 
 		}
 
-		roomState = RoomState.ENEMIES_RESET;
+		if (!hasAlreadyResetEnemies) {
 
+			roomState = RoomState.ENEMIES_RESET;
+
+		}
 	}
 
 	void ResetEnemies() {
@@ -213,6 +230,8 @@ public class Room : MonoBehaviour {
 
 		roomState = RoomState.ENEMIES_ENABLED;
 
+		hasAlreadyResetEnemies = true;
+
 	}
 
 	void UI_ShowAreaNameOnScreen(string name) {
@@ -223,23 +242,6 @@ public class Room : MonoBehaviour {
 		disable.Reset (areanameDestroy);
 
 		hasShownAreaName = true;
-
-	}
-
-	void LerpZoomOverTime(float time) {
-
-		float org = pixel.targetCameraHalfWidth;
-
-		pixel.targetCameraHalfWidth = Mathf.Lerp (org, MaxRoomZoomLevel, t);
-		pixel.adjustCameraFOV ();
-
-		t += (Time.deltaTime * (1 / time));
-
-		if (t > 1) {
-
-			t = 0;
-
-		}
 
 	}
 
