@@ -37,6 +37,8 @@ public class Room : MonoBehaviour {
 
 	public List<BombableWall> bombableWalls = new List<BombableWall>();
 
+	Coroutine disableEnemies = null;
+
 	protected virtual void Start () {
 
 		// There's really no need to add the GameObject into the field for every room, so let's just find the GameObject itself.
@@ -93,8 +95,16 @@ public class Room : MonoBehaviour {
 
 		if (isCurrentlyInThisRoom) {
 
+			if (disableEnemies != null) {
+
+				StopCoroutine (disableEnemies);
+				disableEnemies = null;
+				Debug.Log ("StopCoroutine (disableEnemies)");
+
+			}
+
 			if (roomState == RoomState.ENEMIES_ENABLED) {
-				
+
 				EnableEnemies ();
 			}
 
@@ -117,7 +127,9 @@ public class Room : MonoBehaviour {
 
 			if (hasShownAreaName && roomState == RoomState.ENEMIES_DISABLED) {
 
-				DisableEnemies ();
+				disableEnemies = StartCoroutine (DisableEnemies());
+
+				// DisableEnemiesImmediate ();
 
 			}
 
@@ -161,7 +173,18 @@ public class Room : MonoBehaviour {
 
 	}
 
-	void DisableEnemies() {
+	IEnumerator DisableEnemies() {
+
+		roomState = RoomState.ENEMIES_RESET;
+		Debug.Log ("Starting: DisableEnemies::DisableEnemiesImmediate in 3 seconds.");
+
+		yield return new WaitForSeconds(3f);
+		DisableEnemiesImmediate ();
+		disableEnemies = null;
+
+	}
+
+	void DisableEnemiesImmediate() {
 
 		foreach (Enemy enemy in enemiesInRoom) {
 
@@ -169,7 +192,7 @@ public class Room : MonoBehaviour {
 
 		}
 
-		roomState = RoomState.ENEMIES_ENABLED;
+		roomState = RoomState.ENEMIES_RESET;
 
 	}
 
