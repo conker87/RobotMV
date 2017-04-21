@@ -12,10 +12,6 @@ public class Room : MonoBehaviour {
 	[SerializeField]
 	float areanameDestroy = 3f;
 
-	float t = 0.0f;
-
-	PixelPerfectCamera pixel;
-
 	[SerializeField]
 	int roomID = -1;
 
@@ -48,8 +44,6 @@ public class Room : MonoBehaviour {
 		areaNameText = GameObject.Find ("AreaName").GetComponent<Text>();
 
 		roomID = CameraManager.GetAreaIDForRoom (gameObject);
-
-		pixel = FindObjectOfType<Camera> ().GetComponent<PixelPerfectCamera> ();
 
 		// Find the transform of the parent.
 		if (enemiesSpawnParent == null) {

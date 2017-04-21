@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset name="Station X Parts" tilewidth="72" tileheight="64" tilecount="67" columns="5">
+<tileset name="Station X Parts" tilewidth="72" tileheight="64" tilecount="67" columns="2">
  <tile id="1">
   <image width="24" height="64" source="../../Sprites/geometry/station_x/pieces/bg_near_edge_left.png"/>
   <objectgroup draworder="index">
