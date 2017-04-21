@@ -43,6 +43,12 @@ public class Room : MonoBehaviour {
 		// There's really no need to add the GameObject into the field for every room, so let's just find the GameObject itself.
 		areaNameText = GameObject.Find ("AreaName").GetComponent<Text>();
 
+		if (gameObject.name.Equals("LocalisationID <FIXME>") || gameObject.name.Equals("")) {
+
+			RoomNameLocalisationID = gameObject.name;
+
+		}
+
 		roomID = CameraManager.GetAreaIDForRoom (gameObject);
 
 		// Find the transform of the parent.

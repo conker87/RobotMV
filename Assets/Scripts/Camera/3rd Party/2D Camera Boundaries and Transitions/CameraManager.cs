@@ -186,6 +186,7 @@ public class CameraManager : MonoBehaviour {
     // Returns a Rect form of the area given in the parameter _area
     private Rect GetAreaRect(int _area) {
         GameObject n = listAreaNodes[_area];
+
         Rect rect = new Rect(n.transform.position.x, n.transform.GetChild(0).position.y,
                 n.transform.GetChild(0).position.x - n.transform.position.x, Mathf.Abs(n.transform.GetChild(0).position.y - n.transform.position.y));
         return rect;

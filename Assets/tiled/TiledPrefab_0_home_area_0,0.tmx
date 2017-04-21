@@ -730,6 +730,7 @@
    </objectgroup>
   </tile>
  </tileset>
+ <tileset firstgid="262" source="exported_tilesets/Saigo Station.tsx"/>
  <layer name="Frame" width="32" height="19">
   <properties>
    <property name="unity:ignore" value="collision"/>
