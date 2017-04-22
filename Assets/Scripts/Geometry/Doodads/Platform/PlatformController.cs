@@ -20,6 +20,7 @@ public class PlatformController : RaycastController {
 	float nextMoveTime;
 
 	List<PassengerMovement> passengerMovement;
+
 	Dictionary<Transform,Controller2D> passengerDictionary = new Dictionary<Transform, Controller2D>();
 
 	protected override void Start () {

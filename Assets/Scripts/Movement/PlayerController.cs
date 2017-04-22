@@ -7,10 +7,10 @@ public class PlayerController : MovementController {
 	// The multiplier to the movement speed if the Entity is crouching.
 	public float crouchingMovementPenalty = 0.6f;
 
-	Vector2 Direction;
+	Vector2 lookDirection;
 
 	[SerializeField]
-	protected bool hasDoubleJumped = false, hasTripleJumped = false, isCurrentlyCrouching = false, currentlyLookingLeft = false;
+	protected bool hasDoubleJumped = false, hasTripleJumped = false, isCurrentlyCrouching = false, isCurrentlyLookingLeft = false;
 	[SerializeField]
 	Vector2 input;
 
@@ -20,9 +20,9 @@ public class PlayerController : MovementController {
 	[Header("TODO: Move this to a location on the gun sprite.")]
 	public GameObject ShootLocation;
 
-	public bool isCurrentlyLookingLeft() {
+	public bool currentlyLookingLeft() {
 
-		return currentlyLookingLeft;
+		return isCurrentlyLookingLeft;
 
 	}
 
@@ -43,25 +43,20 @@ public class PlayerController : MovementController {
 
 		}
 
-		base.Update ();
+		lookDirection = InputManager.Current.GetShootingDirection (isCurrentlyLookingLeft, isCurrentlyCrouching);
 
-		Direction = InputManager.Current.GetShootingDirection (currentlyLookingLeft, isCurrentlyCrouching);
+		input = Vector2.zero;
 
-		input = new Vector2 (0f, 0f);
+		sr.flipX = (isCurrentlyLookingLeft) ? true : false;
 
-		sr.flipX = (currentlyLookingLeft) ? true : false;
-
-		input = DoMovement ();
-
-
-		if (collisions.below && (Direction.y == -1 && Direction.x == 0f)) {
+		if (collisions.below && (lookDirection.y == -1 && lookDirection.x == 0f)) {
 
 			isCurrentlyCrouching = true;
 			// Do crouching Anim.
 
-			Direction = new Vector2 (input.x, 0f);
+			lookDirection = new Vector2 (input.x, 0f);
 
-		} else if (collisions.below && (Direction.y == -1 && Direction.x != 0f)) {
+		} else if (collisions.below && (lookDirection.y == -1 && lookDirection.x != 0f)) {
 
 			isCurrentlyCrouching = true;
 			// Do crouching Anim.
@@ -78,19 +73,23 @@ public class PlayerController : MovementController {
 
 		Jumping (input);
 
-		if (Direction != Vector2.zero) {
+		if (lookDirection != Vector2.zero) {
 
-			ShootWeapon (ShootLocation.transform.position, Direction);
+			ShootWeapon (ShootLocation.transform.position, lookDirection);
 
 		}
 
 		if (input != Vector2.zero) {
-			currentlyLookingLeft = (input.x < 0) ? true : false;
+			isCurrentlyLookingLeft = (input.x < 0) ? true : false;
 		}
 
 		UseItem ();
 
+		input = DoMovement ();
+
 		Movement (input);
+
+		base.Update ();
 	
 }
 
@@ -100,6 +99,8 @@ public class PlayerController : MovementController {
 
 		if (InputManager.Current.GetButtonDown("Jump")) {
 
+		 NO LONGER WORKS -- FIX ME
+		
 			if (!collisions.below || hasJumped) {
 
 				if (Player.Current.PowerUp_Jump_Triple && hasJumped && hasDoubleJumped && !hasTripleJumped) {
@@ -144,12 +145,12 @@ public class PlayerController : MovementController {
 			if (InputManager.Current.GetButton ("Left")) {
 
 				movement = (InputManager.Current.GetButton ("Fix Location")) ? 0f : -1f;
-				currentlyLookingLeft = true;
+				isCurrentlyLookingLeft = true;
 
 			} else if (InputManager.Current.GetButton ("Right")) {
 
 				movement = (InputManager.Current.GetButton ("Fix Location")) ? 0f : 1f;
-				currentlyLookingLeft = false;
+				isCurrentlyLookingLeft = false;
 
 			} else {
 
@@ -185,7 +186,6 @@ public class PlayerController : MovementController {
 		if (InputManager.Current.GetButtonDown ("Use Item") && Player.Current.CurrentItem != null) {
 
 			Player.Current.CurrentItem.Use();
-			//Player.Current.CurrentWeapon.ShootAfter ();
 
 		}
 

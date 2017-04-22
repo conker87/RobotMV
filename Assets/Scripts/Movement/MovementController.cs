@@ -35,12 +35,6 @@ public class MovementController : Controller2D {
 
 	protected virtual void Update () {
 		
-		if (PauseManager.Current == null ||PauseManager.Current.checkIfCurrentlyPaused ()) {
-
-			return;
-
-		}
-
 		if (connectedEntity != null) {
 
 			if (moveSpeed != connectedEntity.MoveSpeed) {
@@ -81,7 +75,7 @@ public class MovementController : Controller2D {
 
 		velocity.x = Mathf.SmoothDamp(velocity.x, targetVelocityX, ref velocityXSmoothing, (collisions.below) ? accelerationTimeGrounded : accelerationTimeAirbourne);
 
-		velocity.y = (isFlyingEntity) ? input.y * moveSpeed : velocity.y + (gravity * Time.fixedDeltaTime);
+		velocity.y = (isFlyingEntity) ? input.y * moveSpeed : velocity.y + (gravity * Time.deltaTime);
 
 		Move (velocity * Time.deltaTime);
 

@@ -70,16 +70,8 @@ public class InputManager : MonoBehaviour {
 			return false;
 
 		}
-
-		if (isUsingController) {
 			
-			return Input.GetKey(CurrentKeybindings[buttonName].ControllerBinds);
-
-		} else {
-
-			return Input.GetKey(CurrentKeybindings[buttonName].KeyboardBinds);
-
-		}
+		return isUsingController ? Input.GetKey(CurrentKeybindings[buttonName].ControllerBinds) : Input.GetKey(CurrentKeybindings[buttonName].KeyboardBinds);
 
 	}
 
@@ -93,15 +85,7 @@ public class InputManager : MonoBehaviour {
 
 		}
 
-		if (isUsingController) {
-
-			return Input.GetKeyDown(CurrentKeybindings[buttonName].ControllerBinds);
-
-		} else {
-			
-			return Input.GetKeyDown(CurrentKeybindings[buttonName].KeyboardBinds);
-
-		}
+		return isUsingController ? Input.GetKey(CurrentKeybindings[buttonName].ControllerBinds) : Input.GetKey(CurrentKeybindings[buttonName].KeyboardBinds);
 
 	}
 
@@ -115,17 +99,7 @@ public class InputManager : MonoBehaviour {
 
 		}
 
-		if (isUsingController) {
-
-			return Input.GetKeyUp(CurrentKeybindings[buttonName].ControllerBinds);
-
-		} else {
-
-
-			return Input.GetKeyUp(CurrentKeybindings[buttonName].KeyboardBinds);
-
-
-		}
+		return isUsingController ? Input.GetKey(CurrentKeybindings[buttonName].ControllerBinds) : Input.GetKey(CurrentKeybindings[buttonName].KeyboardBinds);
 
 	}
 
@@ -204,23 +178,15 @@ public class InputManager : MonoBehaviour {
 	public Vector2 GetShootingDirection(bool currentlyLookingLeft = true, bool isCurrentlyCrouching = false) {
 
 		Vector2 Direction = Vector2.zero;
-		float x, y;
+		float x = 0f, y = 0f;
 
 		if (isUsingController) {
 
 			x = GetAxis ("Horizontal");
 			y = GetAxis ("Vertical");
 
-			x = (x != 0f) ? Math.Sign(x) * 1f : 0f;
-			y = (y != 0f) ? Math.Sign(y) * 1f : 0f;
-
-			if (x == 0 && y == 0) {
-
-				x = (currentlyLookingLeft) ? -1f : 1f;
-
-			}
-
-			Direction = new Vector2 (x, y);
+			x = (x != 0f) ? Math.Sign(x) : x;
+			y = (y != 0f) ? Math.Sign(y) : y;
 
 		} else {
 
@@ -231,10 +197,6 @@ public class InputManager : MonoBehaviour {
 			} else if (GetButton ("Up")) {
 
 				y = 1f;
-
-			} else {
-
-				y = 0f;
 
 			}
 
@@ -249,20 +211,21 @@ public class InputManager : MonoBehaviour {
 			} else {
 
 				if (!GetButton ("Up") && !GetButton ("Down")) {
+					
 					x = (currentlyLookingLeft) ? -1f : 1f;
+
 				} else {
+					
 					x = 0f;
+
 				}
 
 			}
 
-			Direction = new Vector2 (x, y);
 
 		}
 
-		// Debug.Log (Direction);
-
-		return Direction;
+		return new Vector2 (x, y);
 
 	}
 

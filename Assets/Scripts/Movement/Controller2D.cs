@@ -8,6 +8,7 @@ public class Controller2D : RaycastController {
 	[SerializeField]
 	protected bool isFlyingEntity = false;
 
+	[SerializeField]
 	public CollisionInfo collisions;
 
 	public void Move(Vector3 velocity, bool standingOnPlatform = false) {
@@ -16,7 +17,7 @@ public class Controller2D : RaycastController {
 		collisions.Reset ();
 		collisions.velocityOld = velocity;
 
-		if (velocity.y < 0 && !isFlyingEntity) {
+		if (velocity.y < 0) {
 			DescendSlope(ref velocity);
 		}
 		if (velocity.x != 0) {
@@ -194,6 +195,7 @@ public class Controller2D : RaycastController {
 		}
 	}
 
+	[System.Serializable]
 	public struct CollisionInfo {
 		
 		public bool above, below;
