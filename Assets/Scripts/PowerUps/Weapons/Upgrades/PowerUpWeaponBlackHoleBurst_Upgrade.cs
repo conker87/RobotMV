@@ -8,9 +8,9 @@ public class PowerUpWeaponBlackHoleBurst_Upgrade : PowerUp {
 
 	public override void Give() {
 		
-		Player.Current.Weapon_BlackHoleBurst_AttackLengthMod 	*= AttackLengthMod;
-		Player.Current.Weapon_BlackHoleBurst_CooldownMod 		*= CooldownMod;
-		Player.Current.Weapon_BlackHoleBurst_DamageMod			*= DamageMod;
+		Player.Current.WeaponBlackHoleBurstAttackLengthMod 	*= AttackLengthMod;
+		Player.Current.WeaponBlackHoleBurstCooldownMod 		*= CooldownMod;
+		Player.Current.WeaponBlackHoleBurstDamageMod			*= DamageMod;
 
 		base.Give ();
 

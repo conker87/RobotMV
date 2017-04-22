@@ -5,7 +5,7 @@ public class PowerUpWeaponSplitter : PowerUp {
 
 	public override void Give() {
 		
-		Player.Current.Weapon_Splitter = true;
+		Player.Current.WeaponSplitter = true;
 
 		base.Give ();
 

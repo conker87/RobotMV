@@ -8,9 +8,9 @@ public class PowerUpItemBombMega_Upgrade : PowerUp {
 
 	public override void Give() {
 
-		Player.Current.Item_Bomb_Mega_AttackLengthMod 		*= AttackLengthMod;
-		Player.Current.Item_Bomb_Mega_AttackLengthMod 		*= CooldownMod;
-		Player.Current.Item_Bomb_Mega_AttackLengthMod		*= DamageMod;
+		Player.Current.ItemBombMegaAttackLengthMod 		*= AttackLengthMod;
+		Player.Current.ItemBombMegaAttackLengthMod 		*= CooldownMod;
+		Player.Current.ItemBombMegaAttackLengthMod		*= DamageMod;
 
 		base.Give ();
 

@@ -4,90 +4,92 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(PlayerController))]
-public class Player : Entity
-{
+public class Player : Entity {
 	GUIStyle style;
 	public static string ErrorMessage = "";
 
+	[Header("Player Cheats")]
+	public bool 	CHEATS = false;
+	public bool 	CHEAT_BOMBS_INFINITE = false, CHEAT_BOMBS_NO_COOLDOWN = false;
+	public bool 	CHEAT_ENERGY_SHIELD_INFINITE_HEALTH = false, CHEAT_ENERGY_SHIELD_NO_COOLDOWN = false, CHEAT_ENERGY_SHIELD_NO_DURATION_LIMIT = false;
+	public bool 	CHEAT_BOMBS_MEGA_INFINITE = false, CHEAT_BOMBS_MEGA_NO_COOLDOWN = false;
+
+
 	[Header("Weapons")]
-	public bool 	Weapon_BasicBlaster = false;
-	public float 	// Weapon_BasicBlaster_AttackLengthMod = 1f,
-					Weapon_BasicBlaster_CooldownMod = 1f,
-					Weapon_BasicBlaster_DamageMod = 1f;
+	[Header("Basic Blaster")]
+	public bool 	WeaponBasicBlaster = false;
+	public float 	WeaponBasicBlasterCooldownMod = 1f,
+					WeaponBasicBlasterDamageMod = 1f;
 
-	public bool 	Weapon_BasicBlaster_ChargedShot = false;
-	public float 	// Weapon_BasicBlaster_ChargedShot_AttackLengthMod = 1f,
-					// Weapon_BasicBlaster_ChargedShot_CooldownMod = 1f,
-					Weapon_BasicBlaster_ChargedShot_DamageMod = 1f;
+	public bool 	WeaponBasicBlasterChargedShot = false;
+	public float 	
+					WeaponBasicBlasterChargedShotDamageMod = 1f;
 
-	public bool 	Weapon_BlackHoleBurst = false;
-	public float 	Weapon_BlackHoleBurst_AttackLengthMod = 1f,
-					Weapon_BlackHoleBurst_CooldownMod = 1f,
-					Weapon_BlackHoleBurst_DamageMod = 1f;
+	[Header("Black Hole Burst")]
+	public bool 	WeaponBlackHoleBurst = false;
+	public float 	WeaponBlackHoleBurstAttackLengthMod = 1f,
+					WeaponBlackHoleBurstCooldownMod = 1f,
+					WeaponBlackHoleBurstDamageMod = 1f;
 
-	public bool 	Weapon_Laser = false;
-	public float 	Weapon_Laser_AttackLengthMod = 1f,
-					Weapon_Laser_CooldownMod = 1f,
-					Weapon_Laser_DamageMod = 1f;
+	[Header("LASER")]
+	public bool 	WeaponLaser = false;
+	public float 	WeaponLaserAttackLengthMod = 1f,
+					WeaponLaserCooldownMod = 1f,
+					WeaponLaserDamageMod = 1f;
 
-	public bool	 	Weapon_MissileLauncher = false;
+	[Header("Missile Launcher")]
+	public bool	 	WeaponMissileLauncher = false;
 	public float 	// Weapon_MissileLauncher_AttackLengthMod = 1f,
-					Weapon_MissileLauncher_CooldownMod = 1f,
-					Weapon_MissileLauncher_DamageMod = 1f;
+					WeaponMissileLauncherCooldownMod = 1f,
+					WeaponMissileLauncherDamageMod = 1f;
 
+	[Header("Phazer Beam")]
 	// TODO: Needs a PowerUp prefab
-	public bool 	Weapon_PhazerBeam = false;
-	public float 	// Weapon_PhazerBeam_AttackLengthMod = 1f,
-					Weapon_PhazerBeam_CooldownMod = 1f,
-					Weapon_PhazerBeam_DamageMod = 1f;
+	public bool 	WeaponPhazerBeam = false;
+	public float 	WeaponPhazerBeamCooldownMod = 1f,
+					WeaponPhazerBeamDamageMod = 1f;
 
-	public bool 	Weapon_Spinner = false;
-	public float 	Weapon_Spinner_AttackLengthMod = 1f,
-					Weapon_Spinner_CooldownMod = 1f,
-					Weapon_Spinner_DamageMod = 1f;
+	[Header("Spinner")]
+	public bool 	WeaponSpinner = false;
+	public float 	WeaponSpinnerAttackLengthMod = 1f,
+					WeaponSpinnerCooldownMod = 1f,
+					WeaponSpinnerDamageMod = 1f;
 
-	public bool 	Weapon_Splitter = false;
-	public float 	// Weapon_Splitter_AttackLengthMod = 1f,
-					Weapon_Splitter_CooldownMod = 1f,
-					Weapon_Splitter_DamageMod = 1f;
+	[Header("Splitter")]
+	public bool 	WeaponSplitter = false;
+	public float 	WeaponSplitterCooldownMod = 1f,
+					WeaponSplitterDamageMod = 1f;
 
 	[Header("Items")]
-	public bool		Item_Magnet = false;
+	public bool		ItemMagnet = false;
 
-	public bool 	Item_ShurikenShield = false;
-	public float 	Item_ShurikenShield_AttackLengthMod = 1f,
-					Item_ShurikenShield_CooldownMod = 1f,
-					Item_ShurikenShield_DamageMod = 1f;
-	public bool SHURIKEN_SHIELD_INFINITE = false;
-
-	public bool 	Item_EnergyShield = false;
-	public float 	Item_EnergyShield_AttackLengthMod = 1f,
-					Item_EnergyShield_CooldownMod = 1f,
-					Item_EnergyShield_DamageMod = 1f;
-	public bool ENERGY_SHIELD_INFINITE = false;
+	public bool 	ItemEnergyShield = false;
+	public float 	ItemEnergyShieldAttackLengthMod = 1f,
+					ItemEnergyShieldCooldownMod = 1f,
+					ItemEnergyShieldDamageMod = 1f;
 
 	public int 		Keys = 0;
 
-	[Header("PowerUps")]
-	public bool PowerUp_Jump = false;
-	public bool PowerUp_Jump_Double = false;
-	public bool PowerUp_Jump_Triple = false;
+	[Header("Jump")]
+	public bool		PowerUpJump = false;
+	public bool		PowerUpJumpDouble = false;
+	public bool 	PowerUpJumpTriple = false;
 
 	public static Player Current { get; protected set; }
 
 	[Header("Bombs")]
-	public int		Bombs_Current = 0;
-	public int 		Bombs_Max = 0;
-	public bool 	BOMBS_INFINITE = false;
-	public float 	Item_Bomb_AttackLengthMod = 1f,
-					Item_Bomb_CooldownMod = 1f,
-					Item_Bomb_DamageMod = 1f;
+	public int		BombsCurrent = 0;
+	public int 		BombsMax = 0;
+	public float 	ItemBombAttackLengthMod = 1f,
+					ItemBombCooldownMod = 1f,
+					ItemBombDamageMod = 1f;
 
-	public int 		Bombs_Mega_Current = 0, Bombs_Mega_Max = 0;
-	public bool 	BOMBS_MEGA_INFINITE = false;
-	public float 	Item_Bomb_Mega_AttackLengthMod = 1f,
-					Item_Bomb_Mega_CooldownMod = 1f,
-					Item_Bomb_Mega_DamageMod = 1f;
+	[Header("Mega Bombs")]
+	public int 		BombsMegaCurrent = 0;
+	public int 		BombsMegaMax = 0;
+	public float 	ItemBombMegaAttackLengthMod = 1f,
+					ItemBombMegaCooldownMod = 1f,
+					ItemBombMegaDamageMod = 1f;
 
 	float timeToNextBomb, timeToNextMegaBomb;
 
@@ -103,27 +105,11 @@ public class Player : Entity
 
 		ProjectileBase p;
 
-		if ((p = other.GetComponentInParent<ProjectileBase> ()) != null) {
+		if ((p = other.GetComponentInParent<ProjectileBase> ()) != null && p.ProjectileType == ProjectileType.ENEMY) {
 
-			if (p.ProjectileType == ProjectileType.ENEMY) {
-
-				DamageHealth (p.ProjectileDamage);
-
-			}
+			DamageHealth (p.ProjectileDamage);
 
 		}
-
-	}
-
-	void OnTriggerStay2D(Collider2D col) {
-
-//		Enemy e;
-//
-//		if ((e = col.gameObject.GetComponentInParent<Enemy> ()) != null) {
-//			
-//			DamageHealth (e.DamageOnTouch);
-//
-//		}
 
 	}
 
@@ -132,9 +118,15 @@ public class Player : Entity
 		style.normal.textColor = Color.magenta;
 
 		GUI.Label(new Rect(10, 10, 500, 20), ErrorMessage, style);
-		GUI.Label(new Rect(10, 30, 500, 20), "H: " + Health_Current + "/" + Health_Max + "|" + Health_RegenOn + ")", style);
+		GUI.Label(new Rect(10, 30, 500, 20), "H: " + HealthCurrent + "/" + HealthMax + "|" + HealthRegen + ")", style);
 		GUI.Label(new Rect(10, 50, 500, 20), "CW/I: " + (CurrentWeapon == null ? "None" : CurrentWeapon.UsableNameLocalisationID) + "|" + (CurrentItem == null ? "None" : CurrentItem.UsableNameLocalisationID), style);
 
 	}
 
 }
+
+//	public bool 	ItemShurikenShield = false;
+//	public float 	ItemShurikenShieldAttackLengthMod = 1f,
+//					ItemShurikenShieldCooldownMod = 1f,
+//					ItemShurikenShieldDamageMod = 1f;
+//	public bool 	CHEAT_SHURIKEN_SHIELD_NO_COOLDOWN = false, CHEAT_SHURIKEN_SHIELD_NO_DURATION_LIMIT = false;

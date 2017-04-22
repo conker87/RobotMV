@@ -53,21 +53,17 @@ public class GiveWeapon : MonoBehaviour {
 
 	void DoItemsDebug() {
 
-		if ((Input.GetKey (KeyCode.Equals) && Player.Current.Bombs_Current > 0) || (Input.GetKey (KeyCode.LeftShift) && Input.GetKey (KeyCode.Equals))) {
+		if ((Input.GetKey (KeyCode.Equals) && Player.Current.BombsCurrent > 0) || (Input.GetKey (KeyCode.LeftShift) && Input.GetKey (KeyCode.Equals))) {
 
 			Player.Current.CurrentItem = items [0];
 
-		} else if ((Input.GetKey (KeyCode.Minus) && Player.Current.Bombs_Mega_Current > 0) || (Input.GetKey (KeyCode.LeftShift) && Input.GetKey (KeyCode.Minus))) {
+		} else if ((Input.GetKey (KeyCode.Minus) && Player.Current.BombsMegaCurrent > 0) || (Input.GetKey (KeyCode.LeftShift) && Input.GetKey (KeyCode.Minus))) {
 
 			Player.Current.CurrentItem = items [1];
 
-		} else if ((Input.GetKey (KeyCode.Alpha0) && Player.Current.Item_ShurikenShield) ||	(Input.GetKey (KeyCode.LeftShift) && Input.GetKey (KeyCode.Alpha0))) {
+		} else if ((Input.GetKey (KeyCode.Alpha9) && Player.Current.ItemEnergyShield) || (Input.GetKey (KeyCode.LeftShift) && Input.GetKey (KeyCode.Alpha9))) {
 
 			Player.Current.CurrentItem = items [2];
-
-		} else if ((Input.GetKey (KeyCode.Alpha9) && Player.Current.Item_EnergyShield) || (Input.GetKey (KeyCode.LeftShift) && Input.GetKey (KeyCode.Alpha9))) {
-
-			Player.Current.CurrentItem = items [3];
 
 		}
 

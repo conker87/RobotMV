@@ -5,7 +5,7 @@ public class PowerUpWeaponLaser : PowerUp {
 
 	public override void Give() {
 		
-		Player.Current.Weapon_Laser = true;
+		Player.Current.WeaponLaser = true;
 
 		base.Give ();
 

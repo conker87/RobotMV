@@ -5,7 +5,7 @@ public class PowerUpItemEnergyShield : PowerUp {
 
 	public override void Give() {
 		
-		Player.Current.Item_EnergyShield = true;
+		Player.Current.ItemEnergyShield = true;
 
 		base.Give ();
 

@@ -40,13 +40,9 @@ public class Enemy : Entity {
 
 		ProjectileBase p;
 
-		if ((p = other.GetComponentInParent<ProjectileBase> ()) != null) {
+		if ((p = other.GetComponentInParent<ProjectileBase> ()) != null && p.ProjectileType == ProjectileType.PLAYER) {
 
-			if (p.ProjectileType == ProjectileType.PLAYER) {
-
-				DamageHealth (p.ProjectileDamage);
-
-			}
+			DamageHealth (p.ProjectileDamage);
 
 		}
 
@@ -76,13 +72,13 @@ public class Enemy : Entity {
 
 				}
 
-				if (droppedPowerUps[i] is PowerUpBombOrb && Player.Current.Bombs_Max == 0) {
+				if (droppedPowerUps[i] is PowerUpBombOrb && Player.Current.BombsMax == 0) {
 
 					continue;
 
 				}
 
-				if (droppedPowerUps[i] is PowerUpBombMegaOrb && Player.Current.Bombs_Mega_Max == 0) {
+				if (droppedPowerUps[i] is PowerUpBombMegaOrb && Player.Current.BombsMegaMax == 0) {
 
 					continue;
 

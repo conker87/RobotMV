@@ -7,7 +7,7 @@ public class PowerUpBombOrb : PowerUp {
 
 	public override void Give() {
 
-		Player.Current.Bombs_Current = (Player.Current.Bombs_Current == Player.Current.Bombs_Max) ? Player.Current.Bombs_Max : Player.Current.Bombs_Current + bombs;
+		Player.Current.BombsCurrent = (Player.Current.BombsCurrent == Player.Current.BombsMax) ? Player.Current.BombsMax : Player.Current.BombsCurrent + bombs;
 
 		base.Give ();
 

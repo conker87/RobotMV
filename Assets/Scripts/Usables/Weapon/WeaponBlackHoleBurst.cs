@@ -5,7 +5,7 @@ public class WeaponBlackHoleBurst : Weapon {
 
 	public override void ShootMouse(Vector3 ShootLocationPosition, Vector2 Direction) {
 
-		if (!Player.Current.Weapon_BlackHoleBurst) {
+		if (!Player.Current.WeaponBlackHoleBurst) {
 
 			return;
 
@@ -14,16 +14,16 @@ public class WeaponBlackHoleBurst : Weapon {
 		if (InputManager.Current.GetButtonDown("Fire Weapon")) {
 
 			int random = Random.Range (0, Projectiles.Length);
-			CurrentDamage = Mathf.RoundToInt (InitialDamage * Player.Current.Weapon_BlackHoleBurst_DamageMod);
+			CurrentDamage = Mathf.RoundToInt (InitialDamage * Player.Current.WeaponBlackHoleBurstDamageMod);
 
 			ProjectileBase projectile = Instantiate (Projectiles [random], ShootLocationPosition, Quaternion.identity) as ProjectileBase;
 			projectile.SetSettings (Direction, InitialProjectileMovementSpeed, false, projectileType, CurrentDamage, Level);
 
-			CurrentAttackLength = InitialAttackLength * Player.Current.Weapon_BlackHoleBurst_AttackLengthMod;
+			CurrentAttackLength = InitialAttackLength * Player.Current.WeaponBlackHoleBurstAttackLengthMod;
 			projectile.DestroyInSeconds = CurrentAttackLength;
 
 			// Prevent firing again until after cooldown time
-			CurrentCooldown = InitialCooldown * Player.Current.Weapon_BlackHoleBurst_CooldownMod;
+			CurrentCooldown = InitialCooldown * Player.Current.WeaponBlackHoleBurstCooldownMod;
 			cooldownTime = Time.time + CurrentCooldown;
 
 		}

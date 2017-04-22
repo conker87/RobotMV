@@ -5,7 +5,7 @@ public class PowerUpWeaponBasicBlaster : PowerUp {
 
 	public override void Give() {
 		
-		Player.Current.Weapon_BasicBlaster = true;
+		Player.Current.WeaponBasicBlaster = true;
 
 		base.Give ();
 

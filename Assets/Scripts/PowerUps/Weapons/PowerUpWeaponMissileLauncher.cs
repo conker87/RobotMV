@@ -5,7 +5,7 @@ public class PowerUpWeaponMissileLauncher : PowerUp {
 	
 	public override void Give() {
 		
-		Player.Current.Weapon_MissileLauncher = true;
+		Player.Current.WeaponMissileLauncher = true;
 
 		base.Give ();
 

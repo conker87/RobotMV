@@ -7,7 +7,7 @@ public class PowerUpItemBomb : PowerUp {
 
 	public override void Give() {
 
-		Player.Current.Bombs_Current = Player.Current.Bombs_Max = bombsGiven;
+		Player.Current.BombsCurrent = Player.Current.BombsMax = bombsGiven;
 
 		base.Give ();
 

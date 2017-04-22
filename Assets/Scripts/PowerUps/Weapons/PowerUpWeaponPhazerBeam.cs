@@ -5,7 +5,7 @@ public class PowerUpWeaponPhazerBeam : PowerUp {
 
 	public override void Give() {
 		
-		Player.Current.Weapon_PhazerBeam = true;
+		Player.Current.WeaponPhazerBeam = true;
 
 		base.Give ();
 

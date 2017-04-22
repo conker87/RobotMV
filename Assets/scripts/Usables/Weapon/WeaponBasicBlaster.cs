@@ -17,7 +17,7 @@ public class WeaponBasicBlaster : Weapon {
 
 	public override void ShootMouse (Vector3 ShootLocationPosition, Vector2 Direction) {
 
-		if (!Player.Current.Weapon_BasicBlaster) {
+		if (!Player.Current.WeaponBasicBlaster) {
 
 			return;
 
@@ -26,19 +26,19 @@ public class WeaponBasicBlaster : Weapon {
 		if (InputManager.Current.GetButtonDown("Fire Weapon")) {
 
 			int random = Random.Range (0, Projectiles.Length);
-			CurrentDamage	= Mathf.RoundToInt (InitialDamage * Player.Current.Weapon_BasicBlaster_DamageMod);
+			CurrentDamage	= Mathf.RoundToInt (InitialDamage * Player.Current.WeaponBasicBlasterDamageMod);
 
 			ProjectileBase projectile = Instantiate (Projectiles [random], ShootLocationPosition, Quaternion.identity) as ProjectileBase;
 			projectile.SetSettings (Direction, InitialProjectileMovementSpeed, false, projectileType, CurrentDamage, Level);
 
 			// Prevent firing again until after cooldown time
-			CurrentCooldown = InitialCooldown * Player.Current.Weapon_BasicBlaster_CooldownMod;
+			CurrentCooldown = InitialCooldown * Player.Current.WeaponBasicBlasterCooldownMod;
 			cooldownTime = Time.time + CurrentCooldown;
 
 		}
 
 		// Blaster Charged Shot
-		if (!Player.Current.Weapon_BasicBlaster_ChargedShot) {
+		if (!Player.Current.WeaponBasicBlasterChargedShot) {
 
 			return;
 
@@ -80,7 +80,7 @@ public class WeaponBasicBlaster : Weapon {
 			projectile.name = projectile.name + "_ChargedShot";
 			projectile.transform.localScale *= (ChargedShotMultiplier / 1.5f);
 
-			int currentDamage = Mathf.RoundToInt (InitialDamage * ChargedShotMultiplier * Player.Current.Weapon_BasicBlaster_DamageMod);
+			int currentDamage = Mathf.RoundToInt (InitialDamage * ChargedShotMultiplier * Player.Current.WeaponBasicBlasterDamageMod);
 
 			projectile.SetSettings (Direction, InitialProjectileMovementSpeed * (ChargedShotMultiplier / 2f), false, projectileType, currentDamage, Level * ChargedShotMultiplier);
 

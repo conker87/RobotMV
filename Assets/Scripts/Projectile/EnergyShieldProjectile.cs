@@ -4,21 +4,13 @@ using System.Collections;
 // Refactored 03/02/2017
 public class EnergyShieldProjectile : ProjectileBase {
 
-	protected override void Update () {
+	public ItemEnergyShield itemEnergyShield;
 
-		if (PauseManager.Current == null ||PauseManager.Current.checkIfCurrentlyPaused ()) {
+	protected override void Start() {
 
-			return;
+		base.Start ();
 
-		}
-
-		transform.position = Player.Current.transform.position;
-
-	}
-
-	protected override void OnTriggerEnter2D(Collider2D other) {
-
-
+		itemEnergyShield = GameObject.FindObjectOfType<ItemEnergyShield> ();
 
 	}
 

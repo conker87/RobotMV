@@ -6,7 +6,7 @@ public class PowerUpWeaponSpinner : PowerUp {
 	public override void Give()
 	{
 		
-		Player.Current.Weapon_Spinner = true;
+		Player.Current.WeaponSpinner = true;
 
 		base.Give ();
 

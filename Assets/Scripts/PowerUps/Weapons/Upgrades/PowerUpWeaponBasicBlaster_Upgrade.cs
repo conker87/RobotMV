@@ -9,8 +9,8 @@ public class PowerUpWeaponBasicBlaster_Upgrade : PowerUp {
 	public override void Give() {
 		
 		// Player.Current.Weapon_BasicBlaster_AttackLengthMod 	*= AttackLegnthMod;
-		Player.Current.Weapon_BasicBlaster_CooldownMod 		*= CooldownMod;
-		Player.Current.Weapon_BasicBlaster_DamageMod		*= DamageMod;
+		Player.Current.WeaponBasicBlasterCooldownMod 		*= CooldownMod;
+		Player.Current.WeaponBasicBlasterDamageMod		*= DamageMod;
 
 		base.Give ();
 

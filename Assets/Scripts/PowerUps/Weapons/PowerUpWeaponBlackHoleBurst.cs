@@ -5,7 +5,7 @@ public class PowerUpWeaponBlackHoleBurst : PowerUp {
 	
 	public override void Give() {
 		
-		Player.Current.Weapon_BlackHoleBurst = true;
+		Player.Current.WeaponBlackHoleBurst = true;
 
 		base.Give ();
 

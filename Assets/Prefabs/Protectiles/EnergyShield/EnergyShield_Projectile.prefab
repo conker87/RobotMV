@@ -90,16 +90,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ProjectileNameLocalisationID: PROJECTILE_ENERGY_SHIELD
   Direction: {x: 0, y: 0, z: 0}
-  MovementSpeed: 1
+  MovementSpeed: 0
   ProjectileRotatesToDirection: 0
   ProjectileType: 0
   ProjectileDamage: 0
   WeaponLevel: 0
-  IgnoreGeometry: 0
-  DestroyOnHit: 1
-  DestroyInSecondsOn: 1
-  DestroyInSeconds: 3
+  IgnoreGeometry: 1
+  DestroyOnHit: 0
+  DestroyInSecondsOn: 0
+  DestroyInSeconds: -1
   ProjectileHitAnimation: {fileID: 0}
+  itemEnergyShield: {fileID: 0}
 --- !u!212 &212000011026461778
 SpriteRenderer:
   m_ObjectHideFlags: 1

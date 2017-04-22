@@ -10,7 +10,7 @@ public class PowerUpWeaponBasicBlaster_ChargedShot_Upgrade : PowerUp {
 		
 		// Player.Current.Weapon_BasicBlaster_AttackLengthMod 	*= AttackLegnthMod;
 		// Player.Current.Weapon_BasicBlaster_CooldownMod 		*= CooldownMod;
-		Player.Current.Weapon_BasicBlaster_ChargedShot_DamageMod *= DamageMod;
+		Player.Current.WeaponBasicBlasterChargedShotDamageMod *= DamageMod;
 
 		base.Give ();
 

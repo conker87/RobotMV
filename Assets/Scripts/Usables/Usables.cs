@@ -25,7 +25,7 @@ public class Usables : MonoBehaviour {
 
 	// Cooldown & Attack Length Time.time vars.
 	protected float cooldownTime, attackLengthTime;
-	protected bool stillCoolingDown = false;
+	protected bool stillOnCooldown = false;
 
 	[Header("Spawn settings")]
 	public float 			InitialProjectileMovementSpeed;
@@ -50,11 +50,11 @@ public class Usables : MonoBehaviour {
 
 	protected virtual void Update() {
 
-		stillCoolingDown = true;
+		stillOnCooldown = true;
 
 		if (Time.time > cooldownTime) {
 
-			stillCoolingDown = false;
+			stillOnCooldown = false;
 
 		}
 			

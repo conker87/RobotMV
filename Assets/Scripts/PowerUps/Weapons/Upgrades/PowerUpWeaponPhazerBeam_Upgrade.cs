@@ -9,8 +9,8 @@ public class PowerUpWeaponPhazerBeam_Upgrade : PowerUp {
 	public override void Give() {
 		
 		// Player.Current.Weapon_PhazerBeam_AttackLengthMod 	*= AttackLengthMod;
-		Player.Current.Weapon_PhazerBeam_CooldownMod 		*= CooldownMod;
-		Player.Current.Weapon_PhazerBeam_DamageMod			*= DamageMod;
+		Player.Current.WeaponPhazerBeamCooldownMod 		*= CooldownMod;
+		Player.Current.WeaponPhazerBeamDamageMod			*= DamageMod;
 
 		base.Give ();
 

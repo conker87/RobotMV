@@ -5,7 +5,7 @@ public class PowerUpMagnet : PowerUp {
 
 	public override void Give() {
 
-		Player.Current.Item_Magnet = true;
+		Player.Current.ItemMagnet = true;
 
 		base.Give ();
 

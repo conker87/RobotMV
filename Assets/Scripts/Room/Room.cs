@@ -7,10 +7,10 @@ using UnityEngine.UI;
 public class Room : MonoBehaviour {
 
 	public string RoomNameLocalisationID = "";
-	public float MaxRoomZoomLevel = 7.5f, LevelZoomTime = 1f;
+	//public float MaxRoomZoomLevel = 7.5f, LevelZoomTime = 1f;
 
 	[SerializeField]
-	float areanameDestroy = 3f;
+	float destroyAreaNameUIInSeconds = 3f;
 
 	[SerializeField]
 	int roomID = -1;
@@ -21,7 +21,7 @@ public class Room : MonoBehaviour {
 	bool isCurrentlyInThisRoom = false, hasShownAreaName = false;
 
 	[SerializeField]
-	Text areaNameText;
+	Text UIAreaNameField;
 
 	// Enemies
 	[SerializeField]
@@ -31,17 +31,19 @@ public class Room : MonoBehaviour {
 
 	public Transform enemiesSpawnParent;
 
-	public List<EnemySpawns> enemiesToSpawnInRoom = new List<EnemySpawns>();
-	public List<Enemy> enemiesInRoom = new List<Enemy>();
+	[SerializeField]
+	List<EnemySpawns> enemiesToSpawnInRoom = new List<EnemySpawns>();
+	List<Enemy> enemiesInRoom = new List<Enemy>();
 	bool hasAlreadyResetEnemies = false;
-
-	public List<BombableWall> bombableWalls = new List<BombableWall>();
 	Coroutine disableEnemies = null;
+
+	[SerializeField]
+	List<BombableWall> bombableWalls = new List<BombableWall>();
 
 	protected virtual void Start () {
 
 		// TODO: There should be a UIManager that manages all of the UI shit.
-		areaNameText = GameObject.Find ("AreaName").GetComponent<Text>();
+		UIAreaNameField = GameObject.Find ("AreaName").GetComponent<Text>();
 
 		roomID = CameraManager.GetAreaIDForRoom (gameObject);
 		RoomNameLocalisationID = (RoomNameLocalisationID.Equals("")) ? gameObject.name : RoomNameLocalisationID;
@@ -228,8 +230,8 @@ public class Room : MonoBehaviour {
 
 	void UI_ShowAreaNameOnScreen(string name) {
 
-		areaNameText.text = name + " ";
-		areaNameText.GetComponent<DisableInSeconds> ().Reset (areanameDestroy);
+		UIAreaNameField.text = name + " ";
+		UIAreaNameField.GetComponent<DisableInSeconds> ().Reset (destroyAreaNameUIInSeconds);
 
 		hasShownAreaName = true;
 

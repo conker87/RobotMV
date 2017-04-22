@@ -34,7 +34,7 @@ public class WeaponLaser : Weapon {
 	public override void ShootMouse(Vector3 ShootLocationPosition, Vector2 Direction) {
 
 		// Prevent the weapon from being used if the Player does not have the Weapon.
-		if (!Player.Current.Weapon_Laser) {
+		if (!Player.Current.WeaponLaser) {
 
 			return;
 
@@ -43,7 +43,7 @@ public class WeaponLaser : Weapon {
 		// If the button to Fire is press down then set the attckLengthTime to the current time plus the current Attack Length modifier.
 		if (InputManager.Current.GetButtonDown("Fire Weapon")) {
 
-			CurrentAttackLength = InitialAttackLength * Player.Current.Weapon_Laser_AttackLengthMod;
+			CurrentAttackLength = InitialAttackLength * Player.Current.WeaponLaserAttackLengthMod;
 			attackLengthTime = Time.time + CurrentAttackLength;
 
 		}
@@ -80,7 +80,7 @@ public class WeaponLaser : Weapon {
 
 							if (Time.time > nextTickTime) {
 								
-								int currentDamage = Mathf.RoundToInt (InitialDamage * Player.Current.Weapon_Laser_DamageMod);
+								int currentDamage = Mathf.RoundToInt (InitialDamage * Player.Current.WeaponLaserDamageMod);
 								e.DamageHealth (currentDamage);
 
 								nextTickTime = Time.time + (CurrentAttackLength / attacksPerAttackLength);
@@ -130,7 +130,7 @@ public class WeaponLaser : Weapon {
 					Player.Current.CanChangeWeapon = true;
 
 					// Prevent firing again until after cooldown time
-					CurrentCooldown = InitialCooldown * Player.Current.Weapon_Laser_CooldownMod;
+					CurrentCooldown = InitialCooldown * Player.Current.WeaponLaserCooldownMod;
 					cooldownTime = Time.time + InitialCooldown;
 
 					hasBeenFiring = false;
@@ -148,7 +148,7 @@ public class WeaponLaser : Weapon {
 				Player.Current.CanChangeWeapon = true;
 
 				// Prevent firing again until after cooldown time
-				CurrentCooldown = InitialCooldown * Player.Current.Weapon_Laser_CooldownMod;
+				CurrentCooldown = InitialCooldown * Player.Current.WeaponLaserCooldownMod;
 				cooldownTime = Time.time + InitialCooldown;
 
 				hasBeenFiring = false;

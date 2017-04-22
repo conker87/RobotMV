@@ -11,19 +11,21 @@ public class Entity : MonoBehaviour {
 	public string EntityNameLocalisationID = "Localisation <FIXME>";
 	public string EntityDescLocalisationID = "Localisation <FIXME>";
 
+	[Header("Entity Cheats")]
+	public bool		CHEAT_HEALTH_INFINITE = false;
+
 	[Header("Health")]
-	public int		Health_Current = 3;
-	public int 		Health_Max = 3;
-	public bool  	Health_RegenOn = false;
-	public float 	Health_RegenCooldown = 10f;
-	public bool		HEALTH_INFINITE = false;
+	public int		HealthCurrent = 3;
+	public int 		HealthMax = 3;
+	public bool  	HealthRegen = false;
+	public float 	HealthRegenCooldown = 10f;
 
 	[SerializeField] protected bool dead = false;
 
 	[Header("iFrames")]
-	public bool  hasInvincibilityTime = false;
-	public float invincibilityTimeLength = 0f;
-	public bool	 isCurrentlyInInvulnerabilityTime = false;
+	public bool  HasInvincibilityFrames = false;
+	public float InvincibilityFramesLength = 0f;
+	public bool	 IsCurrentlyInInvincibilityFrames = false;
 
 	[Header("Movement")]
 	public float MoveSpeed = 3f;
@@ -35,7 +37,7 @@ public class Entity : MonoBehaviour {
 
 	protected virtual void Update() {
 
-		if (!dead && Health_Current < 1) {
+		if (!dead && HealthCurrent < 1) {
 			
 			dead = true;
 			Debug.Log (this + " has hit 0 health and has been removed. If it was an Enemy then it should spawn Health & Bombs pickups.");
@@ -50,17 +52,17 @@ public class Entity : MonoBehaviour {
 
 		}
 
-		if (Health_Current > Health_Max) {
+		if (HealthCurrent > HealthMax) {
 
-			Health_Current = Health_Max;
+			HealthCurrent = HealthMax;
 
 		}
 
-		if (hasInvincibilityTime && isCurrentlyInInvulnerabilityTime) {
+		if (HasInvincibilityFrames && IsCurrentlyInInvincibilityFrames) {
 
 			if (Time.time > iFramesRemoveTime) {
 
-				isCurrentlyInInvulnerabilityTime = false;
+				IsCurrentlyInInvincibilityFrames = false;
 				iFramesRemoveTime = 0f;
 
 			}
@@ -77,35 +79,35 @@ public class Entity : MonoBehaviour {
 
 	#region Variable Functions
 
-	public virtual void RestoreHealth(int restore) {
+	public virtual void RestoreHealth(int restoreHealthValue) {
 
-		Health_Current += restore;
+		HealthCurrent += restoreHealthValue;
 
 	}
 
 	public virtual void RestoreHealthFully() {
 
-		Health_Current = Health_Max;
+		HealthCurrent = HealthMax;
 
 	}
 
-	public virtual void DamageHealth(int damage) {
+	public virtual void DamageHealth(int damageHealthValue) {
 
-		if (isCurrentlyInInvulnerabilityTime || HEALTH_INFINITE) {
+		if (IsCurrentlyInInvincibilityFrames || CHEAT_HEALTH_INFINITE) {
 
 			return;
 
 		}
 
-		Debug.Log ("Entity -- Hitting " + this + " with damage: " + damage);
+		Debug.Log ("Entity -- Hitting " + this + " with damage: " + damageHealthValue);
 
-		Health_Current -= damage;
+		HealthCurrent -= damageHealthValue;
 
-		if (hasInvincibilityTime) {
+		if (HasInvincibilityFrames) {
 
-			isCurrentlyInInvulnerabilityTime = true;
+			IsCurrentlyInInvincibilityFrames = true;
 
-			iFramesRemoveTime = Time.time + invincibilityTimeLength;
+			iFramesRemoveTime = Time.time + InvincibilityFramesLength;
 
 		}
 

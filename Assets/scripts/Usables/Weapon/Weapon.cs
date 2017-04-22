@@ -5,7 +5,7 @@ public abstract class Weapon : Usables {
 
 	public virtual void Shoot (Vector3 ShootLocationPosition, Vector2 Direction) {
 
-		if (stillCoolingDown) {
+		if (stillOnCooldown) {
 
 			return;
 

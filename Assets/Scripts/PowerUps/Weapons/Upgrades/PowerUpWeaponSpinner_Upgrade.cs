@@ -8,9 +8,9 @@ public class PowerUpWeaponSpinner_Upgrade : PowerUp {
 
 	public override void Give() {
 		
-		Player.Current.Weapon_Laser_AttackLengthMod 	*= AttackLengthMod;
-		Player.Current.Weapon_Laser_CooldownMod 		*= CooldownMod;
-		Player.Current.Weapon_Laser_DamageMod			*= DamageMod;
+		Player.Current.WeaponLaserAttackLengthMod 	*= AttackLengthMod;
+		Player.Current.WeaponLaserCooldownMod 		*= CooldownMod;
+		Player.Current.WeaponLaserDamageMod			*= DamageMod;
 
 		base.Give ();
 

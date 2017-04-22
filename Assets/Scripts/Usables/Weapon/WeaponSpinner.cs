@@ -9,7 +9,7 @@ public class WeaponSpinner : Weapon {
 
 	public override void ShootMouse(Vector3 ShootLocationPosition, Vector2 Direction) {
 
-		if (!Player.Current.Weapon_Spinner) {
+		if (!Player.Current.WeaponSpinner) {
 
 			return;
 
@@ -35,7 +35,7 @@ public class WeaponSpinner : Weapon {
 			multiplier = 1f + spinnerTimer;
 
 			int random = Random.Range (0, Projectiles.Length);
-			CurrentDamage = Mathf.RoundToInt (InitialDamage * Player.Current.Weapon_Spinner_DamageMod);
+			CurrentDamage = Mathf.RoundToInt (InitialDamage * Player.Current.WeaponSpinnerDamageMod);
 
 			SpinnerProjectile projectile = Instantiate (Projectiles [random], ShootLocationPosition, Quaternion.identity) as SpinnerProjectile;
 
@@ -53,7 +53,7 @@ public class WeaponSpinner : Weapon {
 			projectile.GetComponent<RotateAtSpeed> ().rotationalSpeed *= (multiplier + 1f);
 
 			// Prevent firing again until after cooldown time
-			CurrentCooldown = InitialCooldown * Player.Current.Weapon_Spinner_CooldownMod;
+			CurrentCooldown = InitialCooldown * Player.Current.WeaponSpinnerCooldownMod;
 			cooldownTime = Time.time + CurrentCooldown;
 
 			spinnerTimer = 0f;

@@ -5,7 +5,7 @@ public class PowerUpJump : PowerUp {
 
 	public override void Give() {
 		
-		Player.Current.PowerUp_Jump = true;
+		Player.Current.PowerUpJump = true;
 
 		base.Give ();
 

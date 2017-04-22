@@ -45,7 +45,7 @@ public class Boss : Enemy {
 
 	void SetBossHealthBarToHealth() {
 
-		float currentPercentage = (float) Health_Current / (float) Health_Max;
+		float currentPercentage = (float) HealthCurrent / (float) HealthMax;
 
 		currentPercentage = Mathf.Clamp01 (currentPercentage);
 

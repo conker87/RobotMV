@@ -8,7 +8,7 @@ public class PowerUpItemBomb_MaxUpgrade : PowerUp {
 	public override void Give()
 	{
 
-		Player.Current.Bombs_Max += bombsGiven;
+		Player.Current.BombsMax += bombsGiven;
 
 		base.Give ();
 

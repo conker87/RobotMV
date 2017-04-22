@@ -89,11 +89,17 @@ public class ProjectileBase : MonoBehaviour {
 	// Refactored: 02/02/17
 	protected virtual void OnTriggerEnter2D(Collider2D other) {
 
+		EnergyShieldProjectile esp;
+
 		// If the collider is an EnergyShield & the type is not PLAYER then destroy the projectile as it's an Enemy's.
 		// TODO: Needs moving to the EnergyShieldProjectile class.
-		if (other.GetComponent<EnergyShieldProjectile> () != null && ProjectileType != ProjectileType.PLAYER) {
+		if ((esp = other.GetComponent<EnergyShieldProjectile> ()) != null && ProjectileType != ProjectileType.PLAYER) {
 
-			Die (true);
+			esp.itemEnergyShield.DamageHealth (ProjectileDamage);
+
+			if (!DestroyOnHit) {
+				Die (true);
+			}
 			return;
 
 		}
