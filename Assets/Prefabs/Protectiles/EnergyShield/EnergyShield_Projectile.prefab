@@ -94,7 +94,7 @@ MonoBehaviour:
   ProjectileRotatesToDirection: 0
   ProjectileType: 0
   ProjectileDamage: 0
-  WeaponLevel: 0
+  WeaponLevel: -5
   IgnoreGeometry: 1
   DestroyOnHit: 0
   DestroyInSecondsOn: 0

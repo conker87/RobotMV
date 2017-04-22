@@ -35,7 +35,7 @@ public class Room : MonoBehaviour {
 	List<EnemySpawns> enemiesToSpawnInRoom = new List<EnemySpawns>();
 	List<Enemy> enemiesInRoom = new List<Enemy>();
 	bool hasAlreadyResetEnemies = false;
-	Coroutine disableEnemies = null;
+	Coroutine disableEnemies = null, resetWalls = null;
 
 	[SerializeField]
 	List<BombableWall> bombableWalls = new List<BombableWall>();
@@ -81,7 +81,7 @@ public class Room : MonoBehaviour {
 
 		}
 
-		EnableBombableWallsInRoom ();
+		EnableBombableWallsInRoomImmediate ();
 
 	}
 	
@@ -97,6 +97,14 @@ public class Room : MonoBehaviour {
 				StopCoroutine (disableEnemies);
 				disableEnemies = null;
 				Debug.Log ("StopCoroutine (disableEnemies) in " + RoomNameLocalisationID);
+
+			}
+
+			if (resetWalls != null) {
+
+				StopCoroutine (resetWalls);
+				resetWalls = null;
+				Debug.Log ("StopCoroutine (resetWalls) in " + RoomNameLocalisationID);
 
 			}
 
@@ -151,7 +159,17 @@ public class Room : MonoBehaviour {
 
 	}
 
-	void EnableBombableWallsInRoom() {
+	IEnumerator EnableBombableWallsInRoom() {
+
+		Debug.Log ("StartCoroutine (EnableBombableWallsInRoom) in " + RoomNameLocalisationID);
+
+		yield return new WaitForSeconds(disableEnemiesIn);
+		EnableBombableWallsInRoomImmediate ();
+		resetWalls = null;
+
+	}
+
+	void EnableBombableWallsInRoomImmediate() {
 
 		for (int i = 0; i < bombableWalls.Count; i++) {
 
@@ -185,12 +203,12 @@ public class Room : MonoBehaviour {
 		Debug.Log ("StartCoroutine (disableEnemies) in " + RoomNameLocalisationID);
 
 		yield return new WaitForSeconds(disableEnemiesIn);
-		DisableEnemiesInRoom ();
+		DisableEnemiesInRoomImmediate ();
 		disableEnemies = null;
 
 	}
 
-	void DisableEnemiesInRoom() {
+	void DisableEnemiesInRoomImmediate() {
 
 		foreach (Enemy enemy in enemiesInRoom) {
 

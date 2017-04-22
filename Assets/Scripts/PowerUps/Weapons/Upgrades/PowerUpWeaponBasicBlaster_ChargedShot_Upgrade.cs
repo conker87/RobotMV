@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PowerUpWeaponBasicBlaster_ChargedShot_Upgrade : PowerUp {
 
-	// These are MULTIPLICATED modifiers!
+	[Header("These are MULTIPLICATED modifiers!")]
 	public float AttackLengthMod = 2f, CooldownMod = 0.5f, DamageMod = 2f;
 
 	public override void Give() {
