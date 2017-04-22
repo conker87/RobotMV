@@ -81,7 +81,7 @@ public class MovementController : Controller2D {
 
 	}
 
-	public virtual void Jump() {
+	protected virtual void Jump() {
 
 		velocity.y = jumpVelocity;
 

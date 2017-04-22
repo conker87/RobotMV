@@ -72,6 +72,8 @@ public class PauseManager : MonoBehaviour {
 
 	protected bool isCurrentlyPaused = false;
 
+	// TODO: THIS ENTIRE CLASS NEEDS REWORKING. IT IS A CLASS C PRIORITY!
+
 	void Start() {
 
 		// ControllerConfigToggle.isOn = InputManager.Current.isUsingController;
@@ -83,10 +85,10 @@ public class PauseManager : MonoBehaviour {
 		SoundGUI.gameObject.SetActive (false);
 
 		// Main Menu Listeners
-		MainQuitButton.onClick.AddListener(	delegate() { QuitToMainMenu("MainMenu");		} );
+		MainQuitButton.onClick.AddListener			(	delegate() { QuitToMainMenu("MainMenu");		} );
 		MainControlsButton.onClick.AddListener		(	delegate() { SetState (PauseState.CONTROL);		} );
 		MainGraphicsButton.onClick.AddListener		(	delegate() { SetState (PauseState.GRAPHICS);	} );
-		MainSoundsButton.onClick.AddListener			(	delegate() { SetState (PauseState.SOUND);		} );
+		MainSoundsButton.onClick.AddListener		(	delegate() { SetState (PauseState.SOUND);		} );
 
 		// Graphics Listeners
 		GraphicsSaveButton.onClick.AddListener		(	delegate() { GraphicsMenu_Save();		} );
@@ -125,14 +127,15 @@ public class PauseManager : MonoBehaviour {
 			// Listen for Keyboard input
 			if (Input.anyKeyDown) {
 
-				Dictionary<string, Keybinds> changableKeybindsDictionary = InputManager.Current.GetChangableKeybindings();
-
 				foreach (KeyCode code in Enum.GetValues (typeof(KeyCode))) {
 	
 					if (Input.GetKeyDown (code)) {
 
 						if (code == KeyCode.Break) {
 
+							SetState(PauseState.CONTROL);
+
+							Debug.LogWarning ("PauseManager::Update() -- Keybocde.Break cannot be used as a keybind as it is reserved.");
 							break;
 
 						}
@@ -144,12 +147,12 @@ public class PauseManager : MonoBehaviour {
 
 							// TODO: This requires further validation to prevent none JoystickButtons# from being used.
 
-							Keybinds newBind = new Keybinds (InputManager.Current.ChangingKeybindings [currentlyChangingKeybindID].key_id,
-																InputManager.Current.ChangingKeybindings [currentlyChangingKeybindID].KeyboardBinds,
+							Keybinds newBind = new Keybinds (InputManager.Current.UnsavedKeybindings [currentlyChangingKeybindID].key_id,
+																InputManager.Current.UnsavedKeybindings [currentlyChangingKeybindID].KeyboardBinds,
 																code,
-																InputManager.Current.ChangingKeybindings [currentlyChangingKeybindID].ignoreInSettings);
+																InputManager.Current.UnsavedKeybindings [currentlyChangingKeybindID].ignoreInSettings);
 
-							InputManager.Current.ChangingKeybindings [currentlyChangingKeybindID] = newBind;
+							InputManager.Current.UnsavedKeybindings [currentlyChangingKeybindID] = newBind;
 
 							CSK.ControllerBindLabel.text = code.ToString();
 
@@ -157,12 +160,12 @@ public class PauseManager : MonoBehaviour {
 
 							// TODO: This required validation to prevent Keycode.Break being used as this is our reserved Keycode.
 
-							Keybinds newBind = new Keybinds (InputManager.Current.ChangingKeybindings [currentlyChangingKeybindID].key_id,
+							Keybinds newBind = new Keybinds (InputManager.Current.UnsavedKeybindings [currentlyChangingKeybindID].key_id,
 																code,
-																InputManager.Current.ChangingKeybindings [currentlyChangingKeybindID].ControllerBinds,
-																InputManager.Current.ChangingKeybindings [currentlyChangingKeybindID].ignoreInSettings);
+																InputManager.Current.UnsavedKeybindings [currentlyChangingKeybindID].ControllerBinds,
+																InputManager.Current.UnsavedKeybindings [currentlyChangingKeybindID].ignoreInSettings);
 
-							InputManager.Current.ChangingKeybindings [currentlyChangingKeybindID] = newBind;
+							InputManager.Current.UnsavedKeybindings [currentlyChangingKeybindID] = newBind;
 
 							CSK.KeyboardBindLabel.text = code.ToString();
 
@@ -181,7 +184,7 @@ public class PauseManager : MonoBehaviour {
 
 		}
 
-		isCurrentlyPaused = (pause != PauseState.NONE) ? true : false;
+		isCurrentlyPaused = (pause != PauseState.NONE);
 
 		if (pause == PauseState.NONE) {
 
@@ -216,9 +219,7 @@ public class PauseManager : MonoBehaviour {
 
 			return;
 
-		}
-
-		if (pause != PauseState.MAIN) {
+		} else {
 
 			MainMenuGUI.gameObject.SetActive (false);
 
@@ -337,9 +338,9 @@ public class PauseManager : MonoBehaviour {
 
 	}
 
-	public void ControlsMenu_CancelChangedBindings() {
+	public void ControlsMenu_CloseMenu() {
 
-		InputManager.Current.RevertChangesToCurrent ();
+		SetState (PauseState.MAIN);
 
 	}
 

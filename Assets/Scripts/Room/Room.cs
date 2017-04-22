@@ -6,7 +6,7 @@ using UnityEngine.UI;
 [ExecuteInEditMode]
 public class Room : MonoBehaviour {
 
-	public string RoomNameLocalisationID = "LocalisationID <FIXME>";
+	public string RoomNameLocalisationID = "";
 	public float MaxRoomZoomLevel = 7.5f, LevelZoomTime = 1f;
 
 	[SerializeField]
@@ -40,23 +40,15 @@ public class Room : MonoBehaviour {
 
 	protected virtual void Start () {
 
-		// There's really no need to add the GameObject into the field for every room, so let's just find the GameObject itself.
+		// TODO: There should be a UIManager that manages all of the UI shit.
 		areaNameText = GameObject.Find ("AreaName").GetComponent<Text>();
 
-		if (gameObject.name.Equals("LocalisationID <FIXME>") || gameObject.name.Equals("")) {
-
-			RoomNameLocalisationID = gameObject.name;
-
-		}
-
 		roomID = CameraManager.GetAreaIDForRoom (gameObject);
+		RoomNameLocalisationID = (RoomNameLocalisationID.Equals("")) ? gameObject.name : RoomNameLocalisationID;
+		enemiesSpawnParent = (enemiesSpawnParent == null) ? gameObject.transform.parent : enemiesSpawnParent;
+		isCurrentlyInThisRoom = (CameraManager.GetCurrentAreaIndex() == roomID) ? true : false;
 
-		// Find the transform of the parent.
-		if (enemiesSpawnParent == null) {
-
-			enemiesSpawnParent = gameObject.transform.parent;
-
-		}
+		hasShownAreaName = false;
 
 		// We had issues in Editor mode where enemies spawned in through the following code would persist through sessions.
 		Enemy[] enemies = enemiesSpawnParent.GetComponentsInChildren<Enemy> ();
@@ -87,7 +79,7 @@ public class Room : MonoBehaviour {
 
 		}
 
-		EnableBombableWalls ();
+		EnableBombableWallsInRoom ();
 
 	}
 	
@@ -95,8 +87,6 @@ public class Room : MonoBehaviour {
 	protected virtual void Update () {
 
 		isCurrentlyInThisRoom = (CameraManager.GetCurrentAreaIndex() == roomID) ? true : false;
-
-		// Debug.Log (RoomNameLocalisationID + ": " + roomState.ToString());
 
 		if (isCurrentlyInThisRoom) {
 
@@ -110,7 +100,7 @@ public class Room : MonoBehaviour {
 
 			if (roomState == RoomState.ENEMIES_ENABLED) {
 
-				EnableEnemies ();
+				EnableEnemiesInRoom ();
 			}
 
 			//LerpZoomOverTime (LevelZoomTime);
@@ -129,7 +119,7 @@ public class Room : MonoBehaviour {
 				roomState = RoomState.ENEMIES_DISABLED;
 
 				if (bombableWalls.Count > 0) {
-					EnableBombableWalls ();
+					EnableBombableWallsInRoom ();
 				}
 
 			}
@@ -138,12 +128,12 @@ public class Room : MonoBehaviour {
 				
 				if (hasShownAreaName && roomState == RoomState.ENEMIES_DISABLED) {
 
-					disableEnemies = StartCoroutine (DisableEnemies ());
+					disableEnemies = StartCoroutine (DisableEnemiesInRoomAfter ());
 				}
 
 				if (hasShownAreaName && roomState == RoomState.ENEMIES_RESET) {
 				
-					ResetEnemies ();
+					ResetEnemyLocationsInRoom ();
 
 				}
 
@@ -159,7 +149,7 @@ public class Room : MonoBehaviour {
 
 	}
 
-	void EnableBombableWalls() {
+	void EnableBombableWallsInRoom() {
 
 		for (int i = 0; i < bombableWalls.Count; i++) {
 
@@ -169,7 +159,7 @@ public class Room : MonoBehaviour {
 
 	}
 
-	void EnableEnemies() {
+	void EnableEnemiesInRoom() {
 
 		for (int i = 0; i < enemiesInRoom.Count; i++) {
 
@@ -187,18 +177,18 @@ public class Room : MonoBehaviour {
 
 	}
 
-	IEnumerator DisableEnemies() {
+	IEnumerator DisableEnemiesInRoomAfter() {
 
 		roomState = RoomState.ENEMIES_RESET;
 		Debug.Log ("StartCoroutine (disableEnemies) in " + RoomNameLocalisationID);
 
 		yield return new WaitForSeconds(disableEnemiesIn);
-		DisableEnemiesImmediate ();
+		DisableEnemiesInRoom ();
 		disableEnemies = null;
 
 	}
 
-	void DisableEnemiesImmediate() {
+	void DisableEnemiesInRoom() {
 
 		foreach (Enemy enemy in enemiesInRoom) {
 
@@ -213,7 +203,7 @@ public class Room : MonoBehaviour {
 		}
 	}
 
-	void ResetEnemies() {
+	void ResetEnemyLocationsInRoom() {
 
 		for (int i = 0; i < enemiesInRoom.Count; i++) {
 
@@ -234,12 +224,12 @@ public class Room : MonoBehaviour {
 
 	}
 
+
+
 	void UI_ShowAreaNameOnScreen(string name) {
 
-		DisableInSeconds disable = areaNameText.GetComponent<DisableInSeconds> ();
-
 		areaNameText.text = name + " ";
-		disable.Reset (areanameDestroy);
+		areaNameText.GetComponent<DisableInSeconds> ().Reset (areanameDestroy);
 
 		hasShownAreaName = true;
 

@@ -31,15 +31,15 @@ public class InputManager : MonoBehaviour {
 
 	public List<KeyCode> bannedKeybinds = new List<KeyCode> ();
 
-	public Dictionary<string, Keybinds> CurrentKeybindings, ChangingKeybindings;
+	public Dictionary<string, Keybinds> SavedKeybindings, UnsavedKeybindings;
 
 	public bool isUsingController = false;
 
     void OnEnable() {
 		
-		CurrentKeybindings = new Dictionary<string, Keybinds> ();
+		SavedKeybindings = new Dictionary<string, Keybinds> ();
 
-		CurrentKeybindings.Clear ();
+		SavedKeybindings.Clear ();
 
 		// TODO: Load keybinds from file.
 		RevertToDefaultBindings ();
@@ -63,62 +63,44 @@ public class InputManager : MonoBehaviour {
 
 	public bool GetButton(string buttonName)  {
 		
-		if (CurrentKeybindings.ContainsKey (buttonName) == false) {
-
-			Debug.LogError ("InputManager::GetButton -- No button named: " + buttonName);
-
-			return false;
-
-		}
+		if (!SavedKeybindings.ContainsKey (buttonName)) return false;
 			
-		return isUsingController ? Input.GetKey(CurrentKeybindings[buttonName].ControllerBinds) : Input.GetKey(CurrentKeybindings[buttonName].KeyboardBinds);
+		return (isUsingController ? Input.GetKey(SavedKeybindings[buttonName].ControllerBinds) : Input.GetKey(SavedKeybindings[buttonName].KeyboardBinds));
 
 	}
 
 	public bool GetButtonDown(string buttonName) {
 
-		if (CurrentKeybindings.ContainsKey (buttonName) == false) {
+		if (!SavedKeybindings.ContainsKey (buttonName)) return false;
 
-			Debug.LogError ("InputManager::GetButton -- No button named: " + buttonName);
-
-			return false;
-
-		}
-
-		return isUsingController ? Input.GetKey(CurrentKeybindings[buttonName].ControllerBinds) : Input.GetKey(CurrentKeybindings[buttonName].KeyboardBinds);
+		return (isUsingController ? Input.GetKeyDown(SavedKeybindings[buttonName].ControllerBinds) : Input.GetKeyDown(SavedKeybindings[buttonName].KeyboardBinds));
 
 	}
 
 	public bool GetButtonUp(string buttonName)  {
 
-		if (CurrentKeybindings.ContainsKey (buttonName) == false) {
+		if (!SavedKeybindings.ContainsKey (buttonName)) return false;
 
-			Debug.LogError ("InputManager::GetButton -- No button named: " + buttonName);
-
-			return false;
-
-		}
-
-		return isUsingController ? Input.GetKey(CurrentKeybindings[buttonName].ControllerBinds) : Input.GetKey(CurrentKeybindings[buttonName].KeyboardBinds);
+		return (isUsingController ? Input.GetKeyUp(SavedKeybindings[buttonName].ControllerBinds) : Input.GetKeyUp(SavedKeybindings[buttonName].KeyboardBinds));
 
 	}
 
     public string[] GetButtonNames() {
 		
-		return CurrentKeybindings.Keys.ToArray();
+		return SavedKeybindings.Keys.ToArray();
 
     }
 
 	public string[] GetNamesForButton( string buttonName ) {
         
-		if (CurrentKeybindings.ContainsKey(buttonName) == false) {
+		if (SavedKeybindings.ContainsKey(buttonName) == false) {
 			
             Debug.LogError("InputManager::GetKeyNameForButton -- No button named: " + buttonName);
             return null;
 
         }
 
-		return new string[] { CurrentKeybindings[buttonName].KeyboardBinds.ToString(), CurrentKeybindings[buttonName].ControllerBinds.ToString() } ;
+		return new string[] { SavedKeybindings[buttonName].KeyboardBinds.ToString(), SavedKeybindings[buttonName].ControllerBinds.ToString() } ;
     }
 
 	#endregion
@@ -127,113 +109,60 @@ public class InputManager : MonoBehaviour {
 
 	public Dictionary<string, Keybinds> GetKeybindings() {
 
-		return CurrentKeybindings;
+		return SavedKeybindings;
 
 	}
 
-	public void SetKeybindings() {
+	public void SaveKeybindings() {
 
-		CurrentKeybindings = ChangingKeybindings;
-
-	}
-
-	public Dictionary<string, Keybinds> GetChangableKeybindings() {
-
-		return ChangingKeybindings;
+		SavedKeybindings = UnsavedKeybindings;
 
 	}
 
-	public void SetChangableKeybindings(Keybinds keybind) {
+	public Dictionary<string, Keybinds> GetUnsavedKeybindings() {
 
-		ChangingKeybindings[keybind.key_id] = keybind;
+		return UnsavedKeybindings;
+
+	}
+
+	// TODO: The PauseManager Controller area should probably use this?
+	public void SetUnsavedKeybindings(Keybinds keybind) {
+
+		UnsavedKeybindings[keybind.key_id] = keybind;
 
 	}
 
 	public void RevertToDefaultBindings() {
 
-		CurrentKeybindings["Up"]				= new Keybinds ("Up", KeyCode.W, KeyCode.Break, true);
-		CurrentKeybindings["Down"]				= new Keybinds ("Down", KeyCode.S, KeyCode.Break, true);
-		CurrentKeybindings["Left"]				= new Keybinds ("Left", KeyCode.A, KeyCode.Break, true);
-		CurrentKeybindings["Right"]				= new Keybinds ("Right", KeyCode.D, KeyCode.Break, true);
-		CurrentKeybindings["Jump"]				= new Keybinds ("Jump", KeyCode.Space, KeyCode.JoystickButton2,	true);				// X
-		CurrentKeybindings["Fire Weapon"]		= new Keybinds ("Fire Weapon", KeyCode.Return, KeyCode.JoystickButton0,	true);		// A
-		CurrentKeybindings["Change Weapon"]		= new Keybinds ("Change Weapon", KeyCode.Q, KeyCode.JoystickButton1,	true);		// B
-		CurrentKeybindings["Use Item"]			= new Keybinds ("Use Item", KeyCode.E, KeyCode.JoystickButton5,	true);				// RightButton
-		CurrentKeybindings["Change Item"]		= new Keybinds ("Change Item", KeyCode.R, KeyCode.JoystickButton3,	true);			// Y
-		CurrentKeybindings["Fix Location"]		= new Keybinds ("Fix Location", KeyCode.LeftShift, KeyCode.JoystickButton4,	true);	// LeftButton
+		SavedKeybindings["Up"]					= new Keybinds ("Up", KeyCode.W, KeyCode.Break, true);
+		SavedKeybindings["Down"]				= new Keybinds ("Down", KeyCode.S, KeyCode.Break, true);
+		SavedKeybindings["Left"]				= new Keybinds ("Left", KeyCode.A, KeyCode.Break, true);
+		SavedKeybindings["Right"]				= new Keybinds ("Right", KeyCode.D, KeyCode.Break, true);
+		SavedKeybindings["Jump"]				= new Keybinds ("Jump", KeyCode.Space, KeyCode.JoystickButton2,	true);				// X
+		SavedKeybindings["Fire Weapon"]			= new Keybinds ("Fire Weapon", KeyCode.Return, KeyCode.JoystickButton0,	true);		// A
+		SavedKeybindings["Change Weapon"]		= new Keybinds ("Change Weapon", KeyCode.Q, KeyCode.JoystickButton1,	true);		// B
+		SavedKeybindings["Use Item"]			= new Keybinds ("Use Item", KeyCode.E, KeyCode.JoystickButton5,	true);				// RightButton
+		SavedKeybindings["Change Item"]			= new Keybinds ("Change Item", KeyCode.R, KeyCode.JoystickButton3,	true);			// Y
+		SavedKeybindings["Fix Location"]		= new Keybinds ("Fix Location", KeyCode.LeftShift, KeyCode.JoystickButton4,	true);	// LeftButton
 
-		CurrentKeybindings["DEBUG_ResetScene"]	= new Keybinds ("DEBUG_ResetScene", 		KeyCode.P, KeyCode.Break,	true);
-		CurrentKeybindings["UIBack"]			= new Keybinds ("UIBack", KeyCode.Escape,	KeyCode.JoystickButton1,	true);		// B
-		CurrentKeybindings["Pause"]				= new Keybinds ("Pause", KeyCode.Escape, 	KeyCode.JoystickButton7,	true);
+		SavedKeybindings["DEBUG_ResetScene"]	= new Keybinds ("DEBUG_ResetScene", 		KeyCode.P, KeyCode.Break,	true);
+		SavedKeybindings["UIBack"]				= new Keybinds ("UIBack", KeyCode.Escape,	KeyCode.JoystickButton1,	true);		// B
+		SavedKeybindings["Pause"]				= new Keybinds ("Pause", KeyCode.Escape, 	KeyCode.JoystickButton7,	true);
 
 	}
 
 	public void RevertChangesToCurrent() {
 
-		ChangingKeybindings = CurrentKeybindings;
+		UnsavedKeybindings = SavedKeybindings;
 
 	}
 	#endregion
 
-	public Vector2 GetShootingDirection(bool currentlyLookingLeft = true, bool isCurrentlyCrouching = false) {
-
-		Vector2 Direction = Vector2.zero;
-		float x = 0f, y = 0f;
-
-		if (isUsingController) {
-
-			x = GetAxis ("Horizontal");
-			y = GetAxis ("Vertical");
-
-			x = (x != 0f) ? Math.Sign(x) : x;
-			y = (y != 0f) ? Math.Sign(y) : y;
-
-		} else {
-
-			if (GetButton ("Down")) {
-
-				y = -1f;
-
-			} else if (GetButton ("Up")) {
-
-				y = 1f;
-
-			}
-
-			if (GetButton ("Left")) {
-
-				x = -1f;
-
-			} else if (GetButton ("Right")) {
-
-				x = 1f;
-
-			} else {
-
-				if (!GetButton ("Up") && !GetButton ("Down")) {
-					
-					x = (currentlyLookingLeft) ? -1f : 1f;
-
-				} else {
-					
-					x = 0f;
-
-				}
-
-			}
-
-
-		}
-
-		return new Vector2 (x, y);
-
-	}
-
-	public void SetButtonForKey(string Key_ID, KeyCode KeyboardBinds, KeyCode ControllerBinds, bool IgnoreInSettings = false) {
+	public void SetButtonForKey_Unsaved(string Key_ID, KeyCode KeyboardBinds, KeyCode ControllerBinds, bool IgnoreInSettings = false) {
 
 		Keybinds newKeybinding = new Keybinds (Key_ID, KeyboardBinds, ControllerBinds, IgnoreInSettings);
 
-		ChangingKeybindings [Key_ID] = newKeybinding;
+		UnsavedKeybindings [Key_ID] = newKeybinding;
 
     }
 
