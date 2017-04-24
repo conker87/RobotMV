@@ -21,13 +21,13 @@ public class DoorBase : MonoBehaviour {
 	[Header("Door/Player Interaction")]
 
 	[Tooltip("The Layermask Collider the door checks around it's surroundings for.")]
-	public LayerMask CircleLayerMask;
+	public LayerMask PlayerLayerMask;
 	[Tooltip("The distance, in units, the door checks in.")][Range(0, 20)]
 	public float DoorCheckDistance = 2f;
 
 	protected float timeToNextCheck;
 	protected Animator anim;
-	protected Collider2D circle;
+	protected Collider2D playerOverlapCircle;
 
 	protected virtual void Start () {
 	
@@ -51,9 +51,9 @@ public class DoorBase : MonoBehaviour {
 
 		if (Time.time > timeToNextCheck) {
 
-			circle = Physics2D.OverlapCircle (transform.position, DoorCheckDistance, CircleLayerMask);
+			playerOverlapCircle = Physics2D.OverlapCircle (transform.position, DoorCheckDistance, PlayerLayerMask);
 
-			if (circle == null) {
+			if (playerOverlapCircle == null) {
 
 				if (Time.time > timeToClose && !WillDoorStayOpen) {
 

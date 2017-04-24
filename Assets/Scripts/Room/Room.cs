@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[ExecuteInEditMode]
 public class Room : MonoBehaviour {
 
 	public string RoomNameLocalisationID = "";
@@ -53,34 +52,21 @@ public class Room : MonoBehaviour {
 		hasShownAreaName = false;
 
 		// We had issues in Editor mode where enemies spawned in through the following code would persist through sessions.
-		Enemy[] enemies = enemiesSpawnParent.GetComponentsInChildren<Enemy> ();
-		foreach (Enemy enemy in enemies) {
-			
-			#if UNITY_EDITOR
-			DestroyImmediate (enemy.gameObject);
-			#else
-			Destroy(enemy.gameObject);
-			#endif
+		//	Update, 17-04-24: [ExecuteInFuckingEditor]. This is no longer needed.
+		//		Enemy[] enemies = enemiesSpawnParent.GetComponentsInChildren<Enemy> ();
+		//		foreach (Enemy enemy in enemies) {
+		//			
+		//			#if UNITY_EDITOR
+		//			DestroyImmediate (enemy.gameObject);
+		//			#else
+		//			Destroy(enemy.gameObject);
+		//			#endif
+		//
+		//		}
+		//
+		//		enemies = null;
 
-		}
-
-		enemies = null;
-
-		// Adds the enemies in the Room to the List that will take care of the enemies.
-		enemiesInRoom.Clear ();
-		foreach (EnemySpawns enemySpawn in enemiesToSpawnInRoom) {
-
-			if (enemiesSpawnParent == null) {
-
-				break;
-
-			}
-
-			Enemy current = Instantiate (enemySpawn.enemyToSpawn, enemySpawn.spawnLocation, Quaternion.identity, enemiesSpawnParent) as Enemy;
-			enemiesInRoom.Add (current);
-
-		}
-
+		SpawnEnemiesInitially ();
 		EnableBombableWallsInRoomImmediate ();
 
 	}
@@ -173,7 +159,43 @@ public class Room : MonoBehaviour {
 
 		for (int i = 0; i < bombableWalls.Count; i++) {
 
+			// If the current field in the list is null, then skip it. More than likely caused by me deleting unneeded walls and not replacing the list.
+			if (bombableWalls [i] == null) {
+
+				continue;
+
+			}
+
 			bombableWalls [i].gameObject.SetActive (true);
+
+		}
+
+	}
+
+	void SpawnEnemiesInitially() {
+
+		enemiesInRoom.Clear ();
+
+		if (enemiesToSpawnInRoom.Count > 0) {
+
+			foreach (EnemySpawns enemySpawn in enemiesToSpawnInRoom) {
+
+				if (enemiesSpawnParent == null) {
+
+					break;
+
+				}
+
+				if (enemySpawn.enemyToSpawn == null) {
+
+					continue;
+
+				}
+
+				Enemy current = Instantiate (enemySpawn.enemyToSpawn, enemySpawn.spawnLocation, Quaternion.identity, enemiesSpawnParent) as Enemy;
+				enemiesInRoom.Add (current);
+
+			}
 
 		}
 

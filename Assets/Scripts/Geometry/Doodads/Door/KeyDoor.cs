@@ -26,9 +26,9 @@ public class KeyDoor : DoorBase {
 
 		if (Time.time > timeToNextCheck) {
 
-			circle = Physics2D.OverlapCircle (transform.position, DoorCheckDistance, CircleLayerMask);
+			playerOverlapCircle = Physics2D.OverlapCircle (transform.position, DoorCheckDistance, PlayerLayerMask);
 
-			if (circle != null && Player.Current.Keys >= keysRequired) {
+			if (playerOverlapCircle != null && Player.Current.Keys >= keysRequired) {
 
 				OpenDoor ();
 

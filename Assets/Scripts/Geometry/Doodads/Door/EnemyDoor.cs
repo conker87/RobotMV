@@ -7,7 +7,7 @@ public class EnemyDoor : DoorBase {
 
 	public List<Enemy> enemies = new List<Enemy>();
 
-	int nullingEnemies = 0;
+	int disabledEnemies = 0;
 
 	[Header("")]
 	float timeUntilNextEnemyCheck;
@@ -43,19 +43,19 @@ public class EnemyDoor : DoorBase {
 
 		if (Time.time > timeUntilNextEnemyCheck) {
 
-			nullingEnemies = enemies.Count;
+			disabledEnemies = enemies.Count;
 
 			foreach (Enemy e in enemies) {
 
-				if (e == null) {
+				if (e.gameObject.activeSelf.Equals(false)) {
 
-					nullingEnemies--;
+					disabledEnemies--;
 
 				}
 
 			}
 
-			if (nullingEnemies == 0) {
+			if (disabledEnemies < 1) {
 
 				OpenDoor ();
 
