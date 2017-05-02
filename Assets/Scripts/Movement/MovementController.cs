@@ -26,15 +26,14 @@ public class MovementController : Controller2D {
 
 		connectedEntity = GetComponent<Entity> ();
 
-		gravity = -(2 * jumpHeight) / Mathf.Pow(timeToJumpApex, 2);
-		jumpVelocity = Mathf.Abs(gravity) * timeToJumpApex;
-
-		Debug.Log (this + ": gravity: " + gravity + ", jumpVelocity: " + jumpVelocity);
+		CalculateGravity ();
 
 	}
 
 	protected virtual void Update () {
 		
+		CalculateGravity ();
+
 		if (connectedEntity != null) {
 
 			if (moveSpeed != connectedEntity.MoveSpeed) {
@@ -48,6 +47,15 @@ public class MovementController : Controller2D {
 		SetVelocityToZeroOnCollisionsAboveAndBelow ();
 
 		ResetJumpingVarsOnCollisionBelow();
+
+	}
+
+	protected void CalculateGravity() {
+
+		gravity = -(2 * jumpHeight) / Mathf.Pow(timeToJumpApex, 2);
+		jumpVelocity = Mathf.Abs(gravity) * timeToJumpApex;
+
+		Debug.Log (this + ": gravity: " + gravity + ", jumpVelocity: " + jumpVelocity);
 
 	}
 
