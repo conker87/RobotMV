@@ -55,7 +55,7 @@ public class MovementController : Controller2D {
 		gravity = -(2 * jumpHeight) / Mathf.Pow(timeToJumpApex, 2);
 		jumpVelocity = Mathf.Abs(gravity) * timeToJumpApex;
 
-		Debug.Log (this + ": gravity: " + gravity + ", jumpVelocity: " + jumpVelocity);
+		// Debug.Log (this + ": gravity: " + gravity + ", jumpVelocity: " + jumpVelocity);
 
 	}
 
@@ -82,7 +82,6 @@ public class MovementController : Controller2D {
 		float targetVelocityX = input.x * moveSpeed;
 
 		velocity.x = Mathf.SmoothDamp(velocity.x, targetVelocityX, ref velocityXSmoothing, (collisions.below) ? accelerationTimeGrounded : accelerationTimeAirbourne);
-
 		velocity.y = (isFlyingEntity) ? input.y * moveSpeed : velocity.y + (gravity * Time.deltaTime);
 
 		Move (velocity * Time.deltaTime);
