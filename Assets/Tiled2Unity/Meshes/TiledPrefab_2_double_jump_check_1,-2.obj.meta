@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: e4d2fb9569747674bac8fad544dae0a4
-timeCreated: 1489505318
+timeCreated: 1496852226
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -8,13 +8,13 @@ ModelImporter:
     100000: mesh_0001
     100002: mesh_0002
     100004: mesh_0003
-    100006: //RootNode
-    100008: mesh_0004
+    100006: mesh_0004
+    100008: //RootNode
     400000: mesh_0001
     400002: mesh_0002
     400004: mesh_0003
-    400006: //RootNode
-    400008: mesh_0004
+    400006: mesh_0004
+    400008: //RootNode
     2300000: mesh_0001
     2300002: mesh_0002
     2300004: mesh_0003
@@ -41,6 +41,8 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -63,7 +65,7 @@ ModelImporter:
     generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
-    keepQuads: 0
+    keepQuads: 1
     weldVertices: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001

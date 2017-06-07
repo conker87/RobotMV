@@ -9,6 +9,9 @@ public class Room : MonoBehaviour {
 	//public float MaxRoomZoomLevel = 7.5f, LevelZoomTime = 1f;
 
 	[SerializeField]
+	bool overwriteLocalisationWithGameObjectName = false;
+
+	[SerializeField]
 	float destroyAreaNameUIInSeconds = 3f;
 
 	[SerializeField]
@@ -45,26 +48,11 @@ public class Room : MonoBehaviour {
 		UIAreaNameField = GameObject.Find ("AreaName").GetComponent<Text>();
 
 		roomID = CameraManager.GetAreaIDForRoom (gameObject);
-		RoomNameLocalisationID = (RoomNameLocalisationID.Equals("")) ? gameObject.name : RoomNameLocalisationID;
+		RoomNameLocalisationID = (overwriteLocalisationWithGameObjectName || RoomNameLocalisationID.Equals("")) ? gameObject.name : RoomNameLocalisationID;
 		enemiesSpawnParent = (enemiesSpawnParent == null) ? gameObject.transform.parent : enemiesSpawnParent;
 		isCurrentlyInThisRoom = (CameraManager.GetCurrentAreaIndex() == roomID) ? true : false;
 
 		hasShownAreaName = false;
-
-		// We had issues in Editor mode where enemies spawned in through the following code would persist through sessions.
-		//	Update, 17-04-24: [ExecuteInFuckingEditor]. This is no longer needed.
-		//		Enemy[] enemies = enemiesSpawnParent.GetComponentsInChildren<Enemy> ();
-		//		foreach (Enemy enemy in enemies) {
-		//			
-		//			#if UNITY_EDITOR
-		//			DestroyImmediate (enemy.gameObject);
-		//			#else
-		//			Destroy(enemy.gameObject);
-		//			#endif
-		//
-		//		}
-		//
-		//		enemies = null;
 
 		SpawnEnemiesInitially ();
 		EnableBombableWallsInRoomImmediate ();

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 5046a0e434f8d9446bbe39c1c2d38b85
-timeCreated: 1489505318
+timeCreated: 1496852224
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -41,6 +41,8 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -63,7 +65,7 @@ ModelImporter:
     generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
-    keepQuads: 0
+    keepQuads: 1
     weldVertices: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001

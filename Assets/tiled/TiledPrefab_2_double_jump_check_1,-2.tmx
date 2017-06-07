@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="left-down" width="32" height="19" tilewidth="8" tileheight="8" nextobjectid="1">
+<map version="1.0.0" orientation="orthogonal" renderorder="left-down" width="32" height="19" tilewidth="8" tileheight="8" nextobjectid="1">
  <tileset firstgid="1" name="prototype" tilewidth="8" tileheight="8" spacing="1" margin="1" tilecount="85" columns="5">
   <image source="../Sprites/geometry/prototype.png" width="46" height="156"/>
   <tile id="0">

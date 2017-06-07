@@ -65,7 +65,7 @@ public class WeaponLaser : Weapon {
 
 				if (hit.collider != null) {
 
-					line.numPositions = 3;
+					line.positionCount = 3;
 
 					// Set an extra position for the laser to .1 units more to make sure the laser looks like it's hitting the collider.
 					line.SetPosition (1, hit.point);
@@ -115,7 +115,7 @@ public class WeaponLaser : Weapon {
 				} else {
 
 					// Without a hit point the laser just has 2 positions, the last one being in the direction of fire times the length of the laser.
-					line.numPositions = 2;
+					line.positionCount = 2;
 
 					line.SetPosition (1, (Vector2) ShootLocationPosition + (Vector2) (Direction.normalized * laserLength));
 
